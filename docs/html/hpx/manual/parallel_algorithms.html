@@ -1,0 +1,151 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>Using Parallel Algorithms</title>
+<link rel="stylesheet" href="../../src/boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="../../index.html" title="HPX 0.9.9">
+<link rel="up" href="../manual.html" title="Manual">
+<link rel="prev" href="lcos.html" title="Using LCOs">
+<link rel="next" href="error_handling.html" title="Error Handling">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table cellpadding="2" width="100%"><tr><td valign="top"><img alt="HPX - High Performance ParalleX" width="440" height="104" src="../../images/hpx_0_9_9_draft.png"></td></tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="lcos.html"><img src="../../images/prev.png" alt="Prev"></a><a accesskey="u" href="../manual.html"><img src="../../images/up.png" alt="Up"></a><a accesskey="h" href="../../index.html"><img src="../../images/home.png" alt="Home"></a><a accesskey="n" href="error_handling.html"><img src="../../images/next.png" alt="Next"></a>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="hpx.manual.parallel_algorithms"></a><a class="link" href="parallel_algorithms.html" title="Using Parallel Algorithms">Using Parallel Algorithms</a>
+</h3></div></div></div>
+<p>
+        A parallel algorithm is a function template described by this document which
+        is declared in the (inline) namespace <code class="computeroutput"><span class="identifier">hpx</span><span class="special">::</span><span class="identifier">parallel</span><span class="special">::</span><span class="identifier">v1</span></code>.
+      </p>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="../../images/note.png"></td>
+<th align="left">Note</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+          For compilers which do not support inline namespaces, all of the <code class="computeroutput"><span class="keyword">namespace</span> <span class="identifier">v1</span></code>
+          is imported into the namespace <code class="computeroutput"><span class="identifier">hpx</span><span class="special">::</span><span class="identifier">parallel</span></code>.
+          The effect is similar to what inline namespaces would do, namely all names
+          defined in <code class="computeroutput"><span class="identifier">hpx</span><span class="special">::</span><span class="identifier">parallel</span><span class="special">::</span><span class="identifier">v1</span></code> are accessible from the namespace
+          <code class="computeroutput"><span class="identifier">hpx</span><span class="special">::</span><span class="identifier">parallel</span></code> as well.
+        </p></td></tr>
+</table></div>
+<p>
+        All parallel algorithms are very similar in semantics to their sequential
+        counterarts (as defined in the <code class="computeroutput"><span class="keyword">namespace</span>
+        <span class="identifier">std</span></code>) with a formal template parameter
+        named <code class="computeroutput"><span class="identifier">ExecutionPolicy</span></code>. The
+        execution policy is generally passed as the first argument to any of the
+        parallel algorithms and describes the manner in which the execution of these
+        algorithms may be parallelized and the manner in which they apply user-provided
+        function objects.
+      </p>
+<p>
+        The applications of function objects in parallel algorithms invoked with
+        an execution policy object of type sequential_execution_policy execute in
+        sequential order in the calling thread.
+      </p>
+<p>
+        The applications of function objects in parallel algorithms invoked with
+        an execution policy object of type <code class="computeroutput"><a class="link" href="../parallel/v1/parallel_execution_policy.html" title="Struct parallel_execution_policy">parallel_execution_policy</a></code> or
+        <code class="computeroutput"><a class="link" href="../parallel/v1/task_execution_policy.html" title="Struct task_execution_policy">task_execution_policy</a></code>
+        are permitted to execute in an unordered fashion in unspecified threads,
+        and indeterminately sequenced within each thread.
+      </p>
+<div class="important"><table border="0" summary="Important">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[Important]" src="../../images/important.png"></td>
+<th align="left">Important</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+          It is the caller's responsibility to ensure correctness, for example that
+          the invocation does not introduce data races or deadlocks.
+        </p></td></tr>
+</table></div>
+<p>
+        The applications of function objects in parallel algorithms invoked with
+        an execution policy of type <code class="computeroutput"><a class="link" href="../parallel/v1/parallel_vecto_idp19297552.html" title="Struct parallel_vector_execution_policy">parallel_vector_execution_policy</a></code>
+        is in <span class="emphasis"><em>HPX</em></span> equivalent to the use of the execution policy
+        <code class="computeroutput"><a class="link" href="../parallel/v1/parallel_execution_policy.html" title="Struct parallel_execution_policy">parallel_execution_policy</a></code>.
+      </p>
+<p>
+        Algorithms invoked with an execution policy object of type <code class="computeroutput"><a class="link" href="../parallel/v1/execution_policy.html" title="Class execution_policy">execution_policy</a></code> execute internally
+        as if invoked with the contained execution policy object. An exception is
+        when an <code class="computeroutput"><a class="link" href="../parallel/v1/execution_policy.html" title="Class execution_policy">execution_policy</a></code> contains an
+        execution policy of type <code class="computeroutput"><a class="link" href="../parallel/v1/task_execution_policy.html" title="Struct task_execution_policy">task_execution_policy</a></code> (which
+        normally turns the algorithm into its asynchronous version). In this case
+        the execution is semantically equivalent to the case of passing a <code class="computeroutput"><a class="link" href="../parallel/v1/parallel_execution_policy.html" title="Struct parallel_execution_policy">parallel_execution_policy</a></code>
+        contained in the <code class="computeroutput"><a class="link" href="../parallel/v1/execution_policy.html" title="Class execution_policy">execution_policy</a></code> object.
+      </p>
+<h5>
+<a name="hpx.manual.parallel_algorithms.h0"></a>
+        <span class="phrase"><a name="hpx.manual.parallel_algorithms.parallel_exceptions"></a></span><a class="link" href="parallel_algorithms.html#hpx.manual.parallel_algorithms.parallel_exceptions">Parallel
+        Exceptions</a>
+      </h5>
+<p>
+        During the execution of a standard parallel algorithm, if temporary memory
+        resources are required by any of the algorithms and no memory are available,
+        the algorithm throws a <code class="computeroutput"><span class="identifier">std</span><span class="special">::</span><span class="identifier">bad_alloc</span></code>
+        exception.
+      </p>
+<p>
+        During the execution of any of the parallel algorithms, if the application
+        of a function object terminates with an uncaught exception, the behavior
+        of the program is determined by the type of execution policy used to invoke
+        the algorithm:
+      </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+            If the execution policy object is of type <code class="computeroutput"><a class="link" href="../parallel/v1/parallel_vecto_idp19297552.html" title="Struct parallel_vector_execution_policy">parallel_vector_execution_policy</a></code>,
+            <code class="computeroutput"><span class="identifier">hpx</span><span class="special">::</span><span class="identifier">terminate</span></code> shall be called.
+          </li>
+<li class="listitem">
+            If the execution policy object is of type <code class="computeroutput"><a class="link" href="../parallel/v1/sequential_exe_idp19295264.html" title="Struct sequential_execution_policy">sequential_execution_policy</a></code>,
+            <code class="computeroutput"><a class="link" href="../parallel/v1/parallel_execution_policy.html" title="Struct parallel_execution_policy">parallel_execution_policy</a></code>,
+            or <code class="computeroutput"><a class="link" href="../parallel/v1/task_execution_policy.html" title="Struct task_execution_policy">task_execution_policy</a></code> the
+            execution of the algorithm terminates with an <code class="computeroutput"><a class="link" href="../exception_list.html" title="Class exception_list">exception_list</a></code> exception.
+            All uncaught exceptions thrown during the application of user-provided
+            function objects shall be contained in the <code class="computeroutput"><a class="link" href="../exception_list.html" title="Class exception_list">exception_list</a></code>.
+          </li>
+</ul></div>
+<p>
+        For example, the number of invocations of the user-provided function object
+        in for_each is unspecified. When <code class="computeroutput"><a class="link" href="../parallel/v1/for_each.html" title="Function template for_each">for_each</a></code> is executed sequentially,
+        only one exception will be contained in the <code class="computeroutput"><a class="link" href="../exception_list.html" title="Class exception_list">exception_list</a></code> object.
+      </p>
+<p>
+        These guarantees imply that, unless the algorithm has failed to allocate
+        memory and terminated with <code class="computeroutput"><span class="identifier">std</span><span class="special">::</span><span class="identifier">bad_alloc</span></code>,
+        all exceptions thrown during the execution of the algorithm are communicated
+        to the caller. It is unspecified whether an algorithm implementation will
+        "forge ahead" after encountering and capturing a user exception.
+      </p>
+<p>
+        The algorithm may terminate with the <code class="computeroutput"><span class="identifier">std</span><span class="special">::</span><span class="identifier">bad_alloc</span></code>
+        exception even if one or more user-provided function objects have terminated
+        with an exception. For example, this can happen when an algorithm fails to
+        allocate memory while creating or adding elements to the <code class="computeroutput"><a class="link" href="../exception_list.html" title="Class exception_list">exception_list</a></code> object.
+      </p>
+</div>
+<table xmlns:rev="http://www.cs.rpi.edu/~gregod/boost/tools/doc/revision" width="100%"><tr>
+<td align="left"></td>
+<td align="right"><div class="copyright-footer">Copyright &#169; 2011-2014 The
+      STE||AR Group, Louisiana State University<p>
+        Distributed under the Boost Software License, Version 1.0. (See accompanying
+        file <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">LICENSE_1_0.txt</a>
+        or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
+      </p>
+</div></td>
+</tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="lcos.html"><img src="../../images/prev.png" alt="Prev"></a><a accesskey="u" href="../manual.html"><img src="../../images/up.png" alt="Up"></a><a accesskey="h" href="../../index.html"><img src="../../images/home.png" alt="Home"></a><a accesskey="n" href="error_handling.html"><img src="../../images/next.png" alt="Next"></a>
+</div>
+</body>
+</html>
