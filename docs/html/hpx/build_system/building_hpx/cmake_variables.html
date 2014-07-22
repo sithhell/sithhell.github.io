@@ -20,143 +20,159 @@
 <a name="hpx.build_system.building_hpx.cmake_variables"></a><a class="link" href="cmake_variables.html" title="CMake Variables used to configure HPX">CMake
         Variables used to configure HPX</a>
 </h4></div></div></div>
-<pre class="programlisting"><span class="special">*</span> <span class="special">[</span><span class="identifier">link</span> <span class="identifier">Generic</span> <span class="identifier">Generic</span><span class="special">]</span>
-<span class="special">*</span> <span class="special">[</span><span class="identifier">link</span> <span class="identifier">Thread</span> <span class="identifier">Manager</span> <span class="identifier">Thread</span> <span class="identifier">Manager</span><span class="special">]</span>
-<span class="special">*</span> <span class="special">[</span><span class="identifier">link</span> <span class="identifier">AGAS</span> <span class="identifier">AGAS</span><span class="special">]</span>
-<span class="special">*</span> <span class="special">[</span><span class="identifier">link</span> <span class="identifier">Parcelport</span> <span class="identifier">Parcelport</span><span class="special">]</span>
-<span class="special">*</span> <span class="special">[</span><span class="identifier">link</span> <span class="identifier">Profiling</span> <span class="identifier">Profiling</span><span class="special">]</span>
-<span class="special">*</span> <span class="special">[</span><span class="identifier">link</span> <span class="identifier">Debugging</span> <span class="identifier">Debugging</span><span class="special">]</span>
-</pre>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+              <a class="link" href="../../../">Generic</a>
+            </li>
+<li class="listitem">
+              <a class="link" href="../../../">Thread
+              Manager</a>
+            </li>
+<li class="listitem">
+              <a class="link" href="../../../">AGAS</a>
+            </li>
+<li class="listitem">
+              <a class="link" href="../../../">Parcelport</a>
+            </li>
+<li class="listitem">
+              <a class="link" href="../../../">Profiling</a>
+            </li>
+<li class="listitem">
+<p class="simpara">
+              <a class="link" href="../../../">Debugging</a>
+            </p>
 <div class="variablelist">
 <p class="title"><b>Generic Options [#Generic]</b></p>
 <dl class="variablelist">
 <dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_AUTOMATIC_PREPROCESSING</span></code></span></dt>
 <dd><p>
-                No help, variable specified on the command line.
-              </p></dd>
+                    No help, variable specified on the command line.
+                  </p></dd>
 <dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_AUTOMATIC_SERIALIZATION_REGISTRATION</span></code></span></dt>
 <dd><p>
-                Use automatic serialization registration for actions and functions.
-                This affects compatibility between HPX applications compiled with
-                different compilers (default ON)
-              </p></dd>
+                    Use automatic serialization registration for actions and functions.
+                    This affects compatibility between HPX applications compiled
+                    with different compilers (default ON)
+                  </p></dd>
 <dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_COMPRESSION_BZIP2</span></code></span></dt>
 <dd><p>
-                Enable bzip2 compression for parcel data (default: OFF).
-              </p></dd>
+                    Enable bzip2 compression for parcel data (default: OFF).
+                  </p></dd>
 <dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_DEFAULT_BUILD_TARGETS</span></code></span></dt>
 <dd><p>
-                Associate the core HPX library with the default build target (default:
-                ON).
-              </p></dd>
+                    Associate the core HPX library with the default build target
+                    (default: ON).
+                  </p></dd>
 <dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_DOCUMENTATION</span></code></span></dt>
 <dd><p>
-                No help, variable specified on the command line.
-              </p></dd>
+                    No help, variable specified on the command line.
+                  </p></dd>
 <dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_DOCUMENTATION_SINGLEPAGE</span></code></span></dt>
 <dd><p>
-                No help, variable specified on the command line.
-              </p></dd>
+                    No help, variable specified on the command line.
+                  </p></dd>
 <dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_EXAMPLES</span></code></span></dt>
 <dd><p>
-                Build the HPX examples (default OFF)
-              </p></dd>
+                    Build the HPX examples (default OFF)
+                  </p></dd>
 <dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_FULL_RPATH</span></code></span></dt>
 <dd><p>
-                Build and link HPX libraries and executables with full RPATHs (default:
-                ON)
-              </p></dd>
+                    Build and link HPX libraries and executables with full RPATHs
+                    (default: ON)
+                  </p></dd>
 <dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_GCC_VERSION_CHECK</span></code></span></dt>
 <dd><p>
-                Ignore version reported by gcc (default: ON)
-              </p></dd>
+                    Ignore version reported by gcc (default: ON)
+                  </p></dd>
 <dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_HIDDEN_VISIBILITY</span></code></span></dt>
 <dd><p>
-                Use -fvisibility=hidden for builds on platforms which support it
-                (default ON)
-              </p></dd>
+                    Use -fvisibility=hidden for builds on platforms which support
+                    it (default ON)
+                  </p></dd>
 <dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_HWLOC</span></code></span></dt>
 <dd><p>
-                Use Hwloc for hardware topolgy information and thread pinning. If
-                disabled, performance might be reduced.
-              </p></dd>
+                    Use Hwloc for hardware topolgy information and thread pinning.
+                    If disabled, performance might be reduced.
+                  </p></dd>
 <dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_LOGGING</span></code></span></dt>
 <dd><p>
-                Build HPX with logging enabled (default: ON).
-              </p></dd>
+                    Build HPX with logging enabled (default: ON).
+                  </p></dd>
 <dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_MALLOC</span></code></span></dt>
 <dd><p>
-                Define which allocator should be linked in. Options are: system,
-                tcmalloc, jemalloc and tbbmalloc (default is: tcmalloc)
-              </p></dd>
+                    Define which allocator should be linked in. Options are: system,
+                    tcmalloc, jemalloc and tbbmalloc (default is: tcmalloc)
+                  </p></dd>
 <dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_NATIVE_TLS</span></code></span></dt>
 <dd><p>
-                Use native TLS support if available (default: ON)
-              </p></dd>
+                    Use native TLS support if available (default: ON)
+                  </p></dd>
 <dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_PREPROCESSOR_LIMIT_EXPANSION</span></code></span></dt>
 <dd><p>
-                Do not use preprocessed headers (default: OFF)
-              </p></dd>
+                    Do not use preprocessed headers (default: OFF)
+                  </p></dd>
 <dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_RUNTIME</span></code></span></dt>
 <dd><p>
-                Build HPX runtime (default: ON)
-              </p></dd>
+                    Build HPX runtime (default: ON)
+                  </p></dd>
 <dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_SECURITY</span></code></span></dt>
 <dd><p>
-                Enable security support via libsodium.
-              </p></dd>
+                    Enable security support via libsodium.
+                  </p></dd>
 <dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_STATIC_LINKING</span></code></span></dt>
 <dd><p>
-                Compile HPX staticly linked libraries (Default: OFF)
-              </p></dd>
+                    Compile HPX staticly linked libraries (Default: OFF)
+                  </p></dd>
 <dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_TESTS</span></code></span></dt>
 <dd><p>
-                Build the HPX tests (default ON)
-              </p></dd>
+                    Build the HPX tests (default ON)
+                  </p></dd>
 <dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_TESTS_BENCHMARKS</span></code></span></dt>
 <dd><p>
-                Build HPX benchmark tests (default: ON)
-              </p></dd>
+                    Build HPX benchmark tests (default: ON)
+                  </p></dd>
 <dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_TESTS_REGRESSIONS</span></code></span></dt>
 <dd><p>
-                Build HPX regression tests (default: ON)
-              </p></dd>
+                    Build HPX regression tests (default: ON)
+                  </p></dd>
 <dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_TESTS_UNIT</span></code></span></dt>
 <dd><p>
-                Build HPX unit tests (default: ON)
-              </p></dd>
+                    Build HPX unit tests (default: ON)
+                  </p></dd>
 <dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_TOOLS</span></code></span></dt>
 <dd><p>
-                Build HPX tools (default: OFF)
-              </p></dd>
+                    Build HPX tools (default: OFF)
+                  </p></dd>
 <dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_UNIQUE_FUTURE_ALIAS</span></code></span></dt>
 <dd><p>
-                HPX will defined unique_future&lt;R&gt; as a template alias to future&lt;R&gt;.
-                (default OFF).
-              </p></dd>
+                    HPX will defined unique_future&lt;R&gt; as a template alias to
+                    future&lt;R&gt;. (default OFF).
+                  </p></dd>
 <dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_UTIL_FUNCTION</span></code></span></dt>
 <dd><p>
-                Use hpx::util::function instead of boost::function or std::function
-                (default: ON)
-              </p></dd>
+                    Use hpx::util::function instead of boost::function or std::function
+                    (default: ON)
+                  </p></dd>
 <dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_UTIL_TUPLE</span></code></span></dt>
 <dd><p>
-                Use hpx::util::tuple instead of boost::tuple or std::tuple (default:
-                ON)
-              </p></dd>
+                    Use hpx::util::tuple instead of boost::tuple or std::tuple (default:
+                    ON)
+                  </p></dd>
 <dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_WARNINGS</span></code></span></dt>
 <dd><p>
-                Enable compiler warnings (default: ON)
-              </p></dd>
+                    Enable compiler warnings (default: ON)
+                  </p></dd>
 <dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_WAVE_ADDITIONAL_INCLUDE_DIRS</span></code></span></dt>
 <dd><p>
-                Additional (compiler specific) include directories for the wave preprocessing
-                tool.
-              </p></dd>
+                    Additional (compiler specific) include directories for the wave
+                    preprocessing tool.
+                  </p></dd>
 </dl>
 </div>
+</li>
+</ul></div>
 <div class="variablelist">
-<p class="title"><b>Thread Manager Options [#Thread Manager]</b></p>
+<p class="title"><b>Thread Manager Options [#Thread_Manager]</b></p>
 <dl class="variablelist">
 <dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_MAX_CPU_COUNT</span></code></span></dt>
 <dd><p>
