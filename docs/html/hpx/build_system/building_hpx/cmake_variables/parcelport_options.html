@@ -1,0 +1,66 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>Parcelport Options</title>
+<link rel="stylesheet" href="../../../../src/boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="../../../../index.html" title="HPX 0.9.9">
+<link rel="up" href="../cmake_variables.html" title="CMake Variables used to configure HPX">
+<link rel="prev" href="agas_options.html" title="AGAS Options">
+<link rel="next" href="profiling_options.html" title="Profiling Options">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table cellpadding="2" width="100%"><tr><td valign="top"><img alt="HPX - High Performance ParalleX" width="440" height="104" src="../../../../images/hpx_0_9_9_draft.png"></td></tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="agas_options.html"><img src="../../../../images/prev.png" alt="Prev"></a><a accesskey="u" href="../cmake_variables.html"><img src="../../../../images/up.png" alt="Up"></a><a accesskey="h" href="../../../../index.html"><img src="../../../../images/home.png" alt="Home"></a><a accesskey="n" href="profiling_options.html"><img src="../../../../images/next.png" alt="Next"></a>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="hpx.build_system.building_hpx.cmake_variables.parcelport_options"></a><a class="link" href="parcelport_options.html" title="Parcelport Options">Parcelport
+          Options</a>
+</h5></div></div></div>
+<pre class="programlisting"><span class="identifier">WITH_PARCELPORT_IBVERBS</span>
+   <span class="identifier">No</span> <span class="identifier">help</span><span class="special">,</span> <span class="identifier">variable</span> <span class="identifier">specified</span> <span class="identifier">on</span> <span class="identifier">the</span> <span class="identifier">command</span> <span class="identifier">line</span><span class="special">.</span>
+
+<span class="identifier">WITH_PARCELPORT_IBVERBS_IFNAME</span>
+   <span class="identifier">The</span> <span class="identifier">interface</span> <span class="identifier">name</span> <span class="identifier">of</span> <span class="identifier">the</span> <span class="identifier">ibverbs</span> <span class="identifier">capable</span> <span class="identifier">network</span> <span class="identifier">adapter</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="identifier">ib0</span><span class="special">)</span>
+
+<span class="identifier">WITH_PARCELPORT_IBVERBS_MAX_MEMORY_CHUNKS</span>
+   <span class="identifier">Maximum</span> <span class="identifier">number</span> <span class="identifier">of</span> <span class="identifier">chunks</span> <span class="identifier">that</span> <span class="identifier">can</span> <span class="identifier">be</span> <span class="identifier">allocated</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="number">100</span><span class="special">)</span>
+
+<span class="identifier">WITH_PARCELPORT_IBVERBS_MEMORY_CHUNK_SIZE</span>
+   <span class="identifier">Number</span> <span class="identifier">of</span> <span class="identifier">bytes</span> <span class="identifier">a</span> <span class="identifier">chunk</span> <span class="identifier">in</span> <span class="identifier">the</span> <span class="identifier">memory</span> <span class="identifier">pool</span> <span class="identifier">can</span> <span class="identifier">hold</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="number">64</span><span class="identifier">MB</span><span class="special">)</span>
+
+<span class="identifier">WITH_PARCELPORT_IBVERBS_MESSAGE_PAYLOAD</span>
+   <span class="identifier">Size</span> <span class="identifier">of</span> <span class="identifier">the</span> <span class="identifier">message</span> <span class="identifier">payload</span> <span class="keyword">not</span> <span class="identifier">sent</span> <span class="identifier">with</span> <span class="identifier">RDMA</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="number">512</span> <span class="identifier">byte</span><span class="special">)</span>
+
+<span class="identifier">WITH_PARCELPORT_IPC</span>
+   <span class="identifier">Enable</span> <span class="identifier">the</span> <span class="identifier">IPC</span> <span class="special">(</span><span class="identifier">inter</span> <span class="identifier">process</span> <span class="identifier">communication</span><span class="special">)</span> <span class="identifier">based</span> <span class="identifier">parcelport</span><span class="special">.</span> <span class="identifier">This</span> <span class="identifier">is</span> <span class="identifier">currently</span> <span class="identifier">an</span> <span class="identifier">experimental</span> <span class="identifier">feature</span>
+
+<span class="identifier">WITH_PARCELPORT_MPI</span>
+   <span class="identifier">No</span> <span class="identifier">help</span><span class="special">,</span> <span class="identifier">variable</span> <span class="identifier">specified</span> <span class="identifier">on</span> <span class="identifier">the</span> <span class="identifier">command</span> <span class="identifier">line</span><span class="special">.</span>
+
+<span class="identifier">WITH_PARCELPORT_MPI_ENV</span>
+   <span class="identifier">List</span> <span class="identifier">of</span> <span class="identifier">environment</span> <span class="identifier">variables</span> <span class="identifier">checked</span> <span class="identifier">to</span> <span class="identifier">detect</span> <span class="identifier">MPI</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="identifier">PMI_RANK</span><span class="special">;</span><span class="identifier">OMPI_COMM_WORLD_SIZE</span><span class="special">).</span>
+
+<span class="identifier">WITH_PARCELPORT_TCP</span>
+   <span class="identifier">Enable</span> <span class="identifier">the</span> <span class="identifier">TCP</span> <span class="identifier">based</span> <span class="identifier">parcelport</span><span class="special">.</span>
+</pre>
+</div>
+<table xmlns:rev="http://www.cs.rpi.edu/~gregod/boost/tools/doc/revision" width="100%"><tr>
+<td align="left"></td>
+<td align="right"><div class="copyright-footer">Copyright &#169; 2011-2014 The
+      STE||AR Group, Louisiana State University<p>
+        Distributed under the Boost Software License, Version 1.0. (See accompanying
+        file <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">LICENSE_1_0.txt</a>
+        or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
+      </p>
+</div></td>
+</tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="agas_options.html"><img src="../../../../images/prev.png" alt="Prev"></a><a accesskey="u" href="../cmake_variables.html"><img src="../../../../images/up.png" alt="Up"></a><a accesskey="h" href="../../../../index.html"><img src="../../../../images/home.png" alt="Home"></a><a accesskey="n" href="profiling_options.html"><img src="../../../../images/next.png" alt="Next"></a>
+</div>
+</body>
+</html>
