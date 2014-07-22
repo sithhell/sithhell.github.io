@@ -7,35 +7,338 @@
 <link rel="home" href="../../../index.html" title="HPX 0.9.9">
 <link rel="up" href="../building_hpx.html" title="Building HPX">
 <link rel="prev" href="../building_hpx.html" title="Building HPX">
-<link rel="next" href="cmake_variables/generic_options.html" title="Generic Options">
+<link rel="next" href="cmake_modules.html" title="Costum CMake Modules shipped with HPX">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
 <table cellpadding="2" width="100%"><tr><td valign="top"><img alt="HPX - High Performance ParalleX" width="440" height="104" src="../../../images/hpx_0_9_9_draft.png"></td></tr></table>
 <hr>
 <div class="spirit-nav">
-<a accesskey="p" href="../building_hpx.html"><img src="../../../images/prev.png" alt="Prev"></a><a accesskey="u" href="../building_hpx.html"><img src="../../../images/up.png" alt="Up"></a><a accesskey="h" href="../../../index.html"><img src="../../../images/home.png" alt="Home"></a><a accesskey="n" href="cmake_variables/generic_options.html"><img src="../../../images/next.png" alt="Next"></a>
+<a accesskey="p" href="../building_hpx.html"><img src="../../../images/prev.png" alt="Prev"></a><a accesskey="u" href="../building_hpx.html"><img src="../../../images/up.png" alt="Up"></a><a accesskey="h" href="../../../index.html"><img src="../../../images/home.png" alt="Home"></a><a accesskey="n" href="cmake_modules.html"><img src="../../../images/next.png" alt="Next"></a>
 </div>
 <div class="section">
 <div class="titlepage"><div><div><h4 class="title">
 <a name="hpx.build_system.building_hpx.cmake_variables"></a><a class="link" href="cmake_variables.html" title="CMake Variables used to configure HPX">CMake
         Variables used to configure HPX</a>
 </h4></div></div></div>
-<div class="toc"><dl class="toc">
-<dt><span class="section"><a href="cmake_variables/generic_options.html">Generic
-          Options</a></span></dt>
-<dt><span class="section"><a href="cmake_variables/thread_manager_options.html">Thread
-          Manager Options</a></span></dt>
-<dt><span class="section"><a href="cmake_variables/agas_options.html">AGAS
-          Options</a></span></dt>
-<dt><span class="section"><a href="cmake_variables/parcelport_options.html">Parcelport
-          Options</a></span></dt>
-<dt><span class="section"><a href="cmake_variables/profiling_options.html">Profiling
-          Options</a></span></dt>
-<dt><span class="section"><a href="cmake_variables/debugging_options.html">Debugging
-          Options</a></span></dt>
-<dt><span class="section"><a href="cmake_variables/security_options.html">Security
-          Options</a></span></dt>
-</dl></div>
+<div class="variablelist">
+<p class="title"><b>Generic Options</b></p>
+<dl class="variablelist">
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_AUTOMATIC_PREPROCESSING</span></code></span></dt>
+<dd><p>
+                No help, variable specified on the command line.
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_AUTOMATIC_SERIALIZATION_REGISTRATION</span></code></span></dt>
+<dd><p>
+                Use automatic serialization registration for actions and functions.
+                This affects compatibility between HPX applications compiled with
+                different compilers (default ON)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_COMPRESSION_BZIP2</span></code></span></dt>
+<dd><p>
+                Enable bzip2 compression for parcel data (default: OFF).
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_DEFAULT_BUILD_TARGETS</span></code></span></dt>
+<dd><p>
+                Associate the core HPX library with the default build target (default:
+                ON).
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_DOCUMENTATION</span></code></span></dt>
+<dd><p>
+                No help, variable specified on the command line.
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_DOCUMENTATION_SINGLEPAGE</span></code></span></dt>
+<dd><p>
+                No help, variable specified on the command line.
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_EXAMPLES</span></code></span></dt>
+<dd><p>
+                Build the HPX examples (default OFF)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_FULL_RPATH</span></code></span></dt>
+<dd><p>
+                Build and link HPX libraries and executables with full RPATHs (default:
+                ON)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_GCC_VERSION_CHECK</span></code></span></dt>
+<dd><p>
+                Ignore version reported by gcc (default: ON)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_HIDDEN_VISIBILITY</span></code></span></dt>
+<dd><p>
+                Use -fvisibility=hidden for builds on platforms which support it
+                (default ON)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_HWLOC</span></code></span></dt>
+<dd><p>
+                Use Hwloc for hardware topolgy information and thread pinning. If
+                disabled, performance might be reduced.
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_LOGGING</span></code></span></dt>
+<dd><p>
+                Build HPX with logging enabled (default: ON).
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_MALLOC</span></code></span></dt>
+<dd><p>
+                Define which allocator should be linked in. Options are: system,
+                tcmalloc, jemalloc and tbbmalloc (default is: tcmalloc)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_NATIVE_TLS</span></code></span></dt>
+<dd><p>
+                Use native TLS support if available (default: ON)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_PREPROCESSOR_LIMIT_EXPANSION</span></code></span></dt>
+<dd><p>
+                Do not use preprocessed headers (default: OFF)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_RUNTIME</span></code></span></dt>
+<dd><p>
+                Build HPX runtime (default: ON)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_SECURITY</span></code></span></dt>
+<dd><p>
+                Enable security support via libsodium.
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_STATIC_LINKING</span></code></span></dt>
+<dd><p>
+                Compile HPX staticly linked libraries (Default: OFF)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_TESTS</span></code></span></dt>
+<dd><p>
+                Build the HPX tests (default ON)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_TESTS_BENCHMARKS</span></code></span></dt>
+<dd><p>
+                Build HPX benchmark tests (default: ON)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_TESTS_REGRESSIONS</span></code></span></dt>
+<dd><p>
+                Build HPX regression tests (default: ON)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_TESTS_UNIT</span></code></span></dt>
+<dd><p>
+                Build HPX unit tests (default: ON)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_TOOLS</span></code></span></dt>
+<dd><p>
+                Build HPX tools (default: OFF)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_UNIQUE_FUTURE_ALIAS</span></code></span></dt>
+<dd><p>
+                HPX will defined unique_future&lt;R&gt; as a template alias to future&lt;R&gt;.
+                (default OFF).
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_UTIL_FUNCTION</span></code></span></dt>
+<dd><p>
+                Use hpx::util::function instead of boost::function or std::function
+                (default: ON)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_UTIL_TUPLE</span></code></span></dt>
+<dd><p>
+                Use hpx::util::tuple instead of boost::tuple or std::tuple (default:
+                ON)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_WARNINGS</span></code></span></dt>
+<dd><p>
+                Enable compiler warnings (default: ON)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_WAVE_ADDITIONAL_INCLUDE_DIRS</span></code></span></dt>
+<dd><p>
+                Additional (compiler specific) include directories for the wave preprocessing
+                tool.
+              </p></dd>
+</dl>
+</div>
+<div class="variablelist">
+<p class="title"><b>Thread Manager Options</b></p>
+<dl class="variablelist">
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_MAX_CPU_COUNT</span></code></span></dt>
+<dd><p>
+                HPX applications will not use more that this number of OS-Threads
+                (default: 64)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_STACKTRACES</span></code></span></dt>
+<dd><p>
+                Attach backtraces to HPX exceptions (default: ON)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_SWAP_CONTEXT_EMULATION</span></code></span></dt>
+<dd><p>
+                Emulate SwapContext API for coroutines (default: OFF)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_THREAD_BACKTRACE_ON_SUSPENSION_DEPTH</span></code></span></dt>
+<dd><p>
+                Thread stack back trace depth being captured on suspension (default:
+                5)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_THREAD_MAINTAIN_BACKTRACE_ON_SUSPENSION</span></code></span></dt>
+<dd><p>
+                Enable thread stack back trace being captured on suspension (default:
+                OFF)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_THREAD_MAINTAIN_CREATION_AND_CLEANUP_RATES</span></code></span></dt>
+<dd><p>
+                Enable measuring thread creation and cleanup times (default: OFF)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_THREAD_MAINTAIN_CUMULATIVE_COUNTS</span></code></span></dt>
+<dd><p>
+                Enable keeping track of cumulative thread counts in the schedulers
+                (default: ON)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_THREAD_MAINTAIN_FULLBACKTRACE_ON_SUSPENSION</span></code></span></dt>
+<dd><p>
+                Enable thread stack back trace being captured on suspension (default:
+                OFF)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_THREAD_MAINTAIN_IDLE_RATES</span></code></span></dt>
+<dd><p>
+                Enable measuring the percentage of overhead times spent in the scheduler
+                (default: OFF)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_THREAD_MAINTAIN_LOCAL_STORAGE</span></code></span></dt>
+<dd><p>
+                Enable thread local storage for all HPX threads (default: ON)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_THREAD_MAINTAIN_QUEUE_WAITTIME</span></code></span></dt>
+<dd><p>
+                Enable collecting queue wait times for threads (default: OFF)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_THREAD_MAINTAIN_STEALING_COUNTS</span></code></span></dt>
+<dd><p>
+                Enable keeping track of counts of thread stealing incidents in the
+                schedulers (default: ON)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_THREAD_MAINTAIN_TARGET_ADDRESS</span></code></span></dt>
+<dd><p>
+                Enable storing target address in thread for NUMA awareness (default:
+                OFF)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_THREAD_MANAGER_IDLE_BACKOFF</span></code></span></dt>
+<dd><p>
+                Use mmap for stack allocation on appropriate platforms (default:
+                OFF)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_THREAD_SCHEDULERS</span></code></span></dt>
+<dd><p>
+                Which thread schedulers are build. Options are: all, local, static-priority,
+                hierarchy, and periodic-priority. For multiple enabled schedulers,
+                separate with a semicolon (default: all)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_THREAD_STACK_MMAP</span></code></span></dt>
+<dd><p>
+                Use mmap for stack allocation on appropriate platforms
+              </p></dd>
+</dl>
+</div>
+<div class="variablelist">
+<p class="title"><b>AGAS Options</b></p>
+<dl class="variablelist">
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_AGAS_DUMP_REFCNT_ENTRIES</span></code></span></dt>
+<dd><p>
+                Enable dumps of the AGAS refcnt tables to logs (default: OFF)
+              </p></dd>
+</dl>
+</div>
+<div class="variablelist">
+<p class="title"><b>Parcelport Options</b></p>
+<dl class="variablelist">
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_PARCELPORT_IBVERBS</span></code></span></dt>
+<dd><p>
+                No help, variable specified on the command line.
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_PARCELPORT_IBVERBS_IFNAME</span></code></span></dt>
+<dd><p>
+                The interface name of the ibverbs capable network adapter (default:
+                ib0)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_PARCELPORT_IBVERBS_MAX_MEMORY_CHUNKS</span></code></span></dt>
+<dd><p>
+                Maximum number of chunks that can be allocated (default: 100)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_PARCELPORT_IBVERBS_MEMORY_CHUNK_SIZE</span></code></span></dt>
+<dd><p>
+                Number of bytes a chunk in the memory pool can hold (default: 64MB)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_PARCELPORT_IBVERBS_MESSAGE_PAYLOAD</span></code></span></dt>
+<dd><p>
+                Size of the message payload not sent with RDMA (default: 512 byte)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_PARCELPORT_IPC</span></code></span></dt>
+<dd><p>
+                Enable the IPC (inter process communication) based parcelport. This
+                is currently an experimental feature
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_PARCELPORT_MPI</span></code></span></dt>
+<dd><p>
+                No help, variable specified on the command line.
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_PARCELPORT_MPI_ENV</span></code></span></dt>
+<dd><p>
+                List of environment variables checked to detect MPI (default: PMI_RANK;OMPI_COMM_WORLD_SIZE).
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_PARCELPORT_TCP</span></code></span></dt>
+<dd><p>
+                Enable the TCP based parcelport.
+              </p></dd>
+</dl>
+</div>
+<div class="variablelist">
+<p class="title"><b>Profiling Options</b></p>
+<dl class="variablelist">
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_APEX</span></code></span></dt>
+<dd><p>
+                Enable APEX instrumentation support.
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_GOOGLE_PERFTOOLS</span></code></span></dt>
+<dd><p>
+                Enable Google Perftools instrumentation support.
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_ITTNOTIFY</span></code></span></dt>
+<dd><p>
+                Enable Amplifier (ITT) instrumentation support.
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_PAPI</span></code></span></dt>
+<dd><p>
+                No help, variable specified on the command line.
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_TAU</span></code></span></dt>
+<dd><p>
+                Enable TAU profiling support.
+              </p></dd>
+</dl>
+</div>
+<div class="variablelist">
+<p class="title"><b>Debugging Options</b></p>
+<dl class="variablelist">
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_THREAD_DEBUG_INFO</span></code></span></dt>
+<dd><p>
+                Enable thread debugging information (default: ON)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_THREAD_GUARD_PAGE</span></code></span></dt>
+<dd><p>
+                Enable thread guard page (default: ON)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_VALGRIND</span></code></span></dt>
+<dd><p>
+                Enable Valgrind instrumentation support.
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_VERIFY_LOCKS</span></code></span></dt>
+<dd><p>
+                Enable lock verification code (default: ON)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_VERIFY_LOCKS_BACKTRACE</span></code></span></dt>
+<dd><p>
+                Enable thred stack back trace being captured on lock registration
+                (to be used in combination with WITH_VERIFY_LOCKS=ON, default: OFF)
+              </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_VERIFY_LOCKS_GLOBALLY</span></code></span></dt>
+<dd><p>
+                Enable global lock verification code (default: ON)
+              </p></dd>
+</dl>
+</div>
+<div class="variablelist">
+<p class="title"><b>Security Options</b></p>
+<dl class="variablelist"></dl>
+</div>
 </div>
 <table xmlns:rev="http://www.cs.rpi.edu/~gregod/boost/tools/doc/revision" width="100%"><tr>
 <td align="left"></td>
@@ -49,7 +352,7 @@
 </tr></table>
 <hr>
 <div class="spirit-nav">
-<a accesskey="p" href="../building_hpx.html"><img src="../../../images/prev.png" alt="Prev"></a><a accesskey="u" href="../building_hpx.html"><img src="../../../images/up.png" alt="Up"></a><a accesskey="h" href="../../../index.html"><img src="../../../images/home.png" alt="Home"></a><a accesskey="n" href="cmake_variables/generic_options.html"><img src="../../../images/next.png" alt="Next"></a>
+<a accesskey="p" href="../building_hpx.html"><img src="../../../images/prev.png" alt="Prev"></a><a accesskey="u" href="../building_hpx.html"><img src="../../../images/up.png" alt="Up"></a><a accesskey="h" href="../../../index.html"><img src="../../../images/home.png" alt="Home"></a><a accesskey="n" href="cmake_modules.html"><img src="../../../images/next.png" alt="Next"></a>
 </div>
 </body>
 </html>
