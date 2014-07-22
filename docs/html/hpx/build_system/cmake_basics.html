@@ -7,13 +7,13 @@
 <link rel="home" href="../../index.html" title="HPX 0.9.9">
 <link rel="up" href="../build_system.html" title="The HPX Build System">
 <link rel="prev" href="../build_system.html" title="The HPX Build System">
-<link rel="next" href="prerequesites.html" title="Build Prerequistes">
+<link rel="next" href="prerequisites.html" title="Build Prerequisites">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
 <table cellpadding="2" width="100%"><tr><td valign="top"><img alt="HPX - High Performance ParalleX" width="440" height="104" src="../../images/hpx_0_9_9_draft.png"></td></tr></table>
 <hr>
 <div class="spirit-nav">
-<a accesskey="p" href="../build_system.html"><img src="../../images/prev.png" alt="Prev"></a><a accesskey="u" href="../build_system.html"><img src="../../images/up.png" alt="Up"></a><a accesskey="h" href="../../index.html"><img src="../../images/home.png" alt="Home"></a><a accesskey="n" href="prerequesites.html"><img src="../../images/next.png" alt="Next"></a>
+<a accesskey="p" href="../build_system.html"><img src="../../images/prev.png" alt="Prev"></a><a accesskey="u" href="../build_system.html"><img src="../../images/up.png" alt="Up"></a><a accesskey="h" href="../../index.html"><img src="../../images/home.png" alt="Home"></a><a accesskey="n" href="prerequisites.html"><img src="../../images/next.png" alt="Next"></a>
 </div>
 <div class="section">
 <div class="titlepage"><div><div><h3 class="title">
@@ -123,6 +123,39 @@ cd mybuilddir
         Useful Variables</a> for a detailed overview of specific <a href="http://www.cmake.org" target="_top">CMake</a>
         variables.
       </p>
+<h5>
+<a name="hpx.build_system.cmake_basics.h2"></a>
+        <span class="phrase"><a name="hpx.build_system.cmake_basics.options"></a></span><a class="link" href="cmake_basics.html#hpx.build_system.cmake_basics.options">Options
+        and Variables</a>
+      </h5>
+<p>
+        Variables customize how the build will be generated. Options are boolean
+        variables, with possible values ON/OFF. Options and variables are defined
+        on the CMake command line like this:
+      </p>
+<pre class="programlisting">cmake -DVARIABLE=value path/to/hpx
+</pre>
+<p>
+        You can set a variable after the initial CMake invocation for changing its
+        value. You can also undefine a variable:
+      </p>
+<pre class="programlisting">cmake -UVARIABLE path/to/hpx
+</pre>
+<p>
+        Variables are stored on the CMake cache. This is a file named CMakeCache.txt
+        on the root of the build directory. Do not hand-edit it.
+      </p>
+<p>
+        Variables are listed here appending its type after a colon. It is correct
+        to write the variable and the type on the CMake command line:
+      </p>
+<pre class="programlisting">cmake -DVARIABLE:TYPE=value path/to/llvm/source
+</pre>
+<p>
+        CMake supports the following variable types: <code class="computeroutput">BOOL</code> (options),
+        <code class="computeroutput">STRING</code> (arbitrary string), <code class="computeroutput">PATH</code> (directory name),
+        <code class="computeroutput">FILEPATH</code> (file name).
+      </p>
 </div>
 <table xmlns:rev="http://www.cs.rpi.edu/~gregod/boost/tools/doc/revision" width="100%"><tr>
 <td align="left"></td>
@@ -136,7 +169,7 @@ cd mybuilddir
 </tr></table>
 <hr>
 <div class="spirit-nav">
-<a accesskey="p" href="../build_system.html"><img src="../../images/prev.png" alt="Prev"></a><a accesskey="u" href="../build_system.html"><img src="../../images/up.png" alt="Up"></a><a accesskey="h" href="../../index.html"><img src="../../images/home.png" alt="Home"></a><a accesskey="n" href="prerequesites.html"><img src="../../images/next.png" alt="Next"></a>
+<a accesskey="p" href="../build_system.html"><img src="../../images/prev.png" alt="Prev"></a><a accesskey="u" href="../build_system.html"><img src="../../images/up.png" alt="Up"></a><a accesskey="h" href="../../index.html"><img src="../../images/home.png" alt="Home"></a><a accesskey="n" href="prerequisites.html"><img src="../../images/next.png" alt="Next"></a>
 </div>
 </body>
 </html>
