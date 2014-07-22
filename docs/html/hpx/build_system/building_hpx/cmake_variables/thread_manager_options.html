@@ -20,54 +20,86 @@
 <a name="hpx.build_system.building_hpx.cmake_variables.thread_manager_options"></a><a class="link" href="thread_manager_options.html" title="Thread Manager Options">Thread
           Manager Options</a>
 </h5></div></div></div>
-<pre class="programlisting"><span class="identifier">WITH_MAX_CPU_COUNT</span>
-   <span class="identifier">HPX</span> <span class="identifier">applications</span> <span class="identifier">will</span> <span class="keyword">not</span> <span class="identifier">use</span> <span class="identifier">more</span> <span class="identifier">that</span> <span class="keyword">this</span> <span class="identifier">number</span> <span class="identifier">of</span> <span class="identifier">OS</span><span class="special">-</span><span class="identifier">Threads</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="number">64</span><span class="special">)</span>
-
-<span class="identifier">WITH_STACKTRACES</span>
-   <span class="identifier">Attach</span> <span class="identifier">backtraces</span> <span class="identifier">to</span> <span class="identifier">HPX</span> <span class="identifier">exceptions</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="identifier">ON</span><span class="special">)</span>
-
-<span class="identifier">WITH_SWAP_CONTEXT_EMULATION</span>
-   <span class="identifier">Emulate</span> <span class="identifier">SwapContext</span> <span class="identifier">API</span> <span class="keyword">for</span> <span class="identifier">coroutines</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="identifier">OFF</span><span class="special">)</span>
-
-<span class="identifier">WITH_THREAD_BACKTRACE_ON_SUSPENSION_DEPTH</span>
-   <span class="identifier">Thread</span> <span class="identifier">stack</span> <span class="identifier">back</span> <span class="identifier">trace</span> <span class="identifier">depth</span> <span class="identifier">being</span> <span class="identifier">captured</span> <span class="identifier">on</span> <span class="identifier">suspension</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="number">5</span><span class="special">)</span>
-
-<span class="identifier">WITH_THREAD_MAINTAIN_BACKTRACE_ON_SUSPENSION</span>
-   <span class="identifier">Enable</span> <span class="identifier">thread</span> <span class="identifier">stack</span> <span class="identifier">back</span> <span class="identifier">trace</span> <span class="identifier">being</span> <span class="identifier">captured</span> <span class="identifier">on</span> <span class="identifier">suspension</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="identifier">OFF</span><span class="special">)</span>
-
-<span class="identifier">WITH_THREAD_MAINTAIN_CREATION_AND_CLEANUP_RATES</span>
-   <span class="identifier">Enable</span> <span class="identifier">measuring</span> <span class="identifier">thread</span> <span class="identifier">creation</span> <span class="keyword">and</span> <span class="identifier">cleanup</span> <span class="identifier">times</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="identifier">OFF</span><span class="special">)</span>
-
-<span class="identifier">WITH_THREAD_MAINTAIN_CUMULATIVE_COUNTS</span>
-   <span class="identifier">Enable</span> <span class="identifier">keeping</span> <span class="identifier">track</span> <span class="identifier">of</span> <span class="identifier">cumulative</span> <span class="identifier">thread</span> <span class="identifier">counts</span> <span class="identifier">in</span> <span class="identifier">the</span> <span class="identifier">schedulers</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="identifier">ON</span><span class="special">)</span>
-
-<span class="identifier">WITH_THREAD_MAINTAIN_FULLBACKTRACE_ON_SUSPENSION</span>
-   <span class="identifier">Enable</span> <span class="identifier">thread</span> <span class="identifier">stack</span> <span class="identifier">back</span> <span class="identifier">trace</span> <span class="identifier">being</span> <span class="identifier">captured</span> <span class="identifier">on</span> <span class="identifier">suspension</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="identifier">OFF</span><span class="special">)</span>
-
-<span class="identifier">WITH_THREAD_MAINTAIN_IDLE_RATES</span>
-   <span class="identifier">Enable</span> <span class="identifier">measuring</span> <span class="identifier">the</span> <span class="identifier">percentage</span> <span class="identifier">of</span> <span class="identifier">overhead</span> <span class="identifier">times</span> <span class="identifier">spent</span> <span class="identifier">in</span> <span class="identifier">the</span> <span class="identifier">scheduler</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="identifier">OFF</span><span class="special">)</span>
-
-<span class="identifier">WITH_THREAD_MAINTAIN_LOCAL_STORAGE</span>
-   <span class="identifier">Enable</span> <span class="identifier">thread</span> <span class="identifier">local</span> <span class="identifier">storage</span> <span class="keyword">for</span> <span class="identifier">all</span> <span class="identifier">HPX</span> <span class="identifier">threads</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="identifier">ON</span><span class="special">)</span>
-
-<span class="identifier">WITH_THREAD_MAINTAIN_QUEUE_WAITTIME</span>
-   <span class="identifier">Enable</span> <span class="identifier">collecting</span> <span class="identifier">queue</span> <span class="identifier">wait</span> <span class="identifier">times</span> <span class="keyword">for</span> <span class="identifier">threads</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="identifier">OFF</span><span class="special">)</span>
-
-<span class="identifier">WITH_THREAD_MAINTAIN_STEALING_COUNTS</span>
-   <span class="identifier">Enable</span> <span class="identifier">keeping</span> <span class="identifier">track</span> <span class="identifier">of</span> <span class="identifier">counts</span> <span class="identifier">of</span> <span class="identifier">thread</span> <span class="identifier">stealing</span> <span class="identifier">incidents</span> <span class="identifier">in</span> <span class="identifier">the</span> <span class="identifier">schedulers</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="identifier">ON</span><span class="special">)</span>
-
-<span class="identifier">WITH_THREAD_MAINTAIN_TARGET_ADDRESS</span>
-   <span class="identifier">Enable</span> <span class="identifier">storing</span> <span class="identifier">target</span> <span class="identifier">address</span> <span class="identifier">in</span> <span class="identifier">thread</span> <span class="keyword">for</span> <span class="identifier">NUMA</span> <span class="identifier">awareness</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="identifier">OFF</span><span class="special">)</span>
-
-<span class="identifier">WITH_THREAD_MANAGER_IDLE_BACKOFF</span>
-   <span class="identifier">Use</span> <span class="identifier">mmap</span> <span class="keyword">for</span> <span class="identifier">stack</span> <span class="identifier">allocation</span> <span class="identifier">on</span> <span class="identifier">appropriate</span> <span class="identifier">platforms</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="identifier">OFF</span><span class="special">)</span>
-
-<span class="identifier">WITH_THREAD_SCHEDULERS</span>
-   <span class="identifier">Which</span> <span class="identifier">thread</span> <span class="identifier">schedulers</span> <span class="identifier">are</span> <span class="identifier">build</span><span class="special">.</span> <span class="identifier">Options</span> <span class="identifier">are</span><span class="special">:</span> <span class="identifier">all</span><span class="special">,</span> <span class="identifier">local</span><span class="special">,</span> <span class="keyword">static</span><span class="special">-</span><span class="identifier">priority</span><span class="special">,</span> <span class="identifier">hierarchy</span><span class="special">,</span> <span class="keyword">and</span> <span class="identifier">periodic</span><span class="special">-</span><span class="identifier">priority</span><span class="special">.</span> <span class="identifier">For</span> <span class="identifier">multiple</span> <span class="identifier">enabled</span> <span class="identifier">schedulers</span><span class="special">,</span> <span class="identifier">separate</span> <span class="identifier">with</span> <span class="identifier">a</span> <span class="identifier">semicolon</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="identifier">all</span><span class="special">)</span>
-
-<span class="identifier">WITH_THREAD_STACK_MMAP</span>
-   <span class="identifier">Use</span> <span class="identifier">mmap</span> <span class="keyword">for</span> <span class="identifier">stack</span> <span class="identifier">allocation</span> <span class="identifier">on</span> <span class="identifier">appropriate</span> <span class="identifier">platforms</span>
-</pre>
+<div class="variablelist">
+<p class="title"><b>Thread Manager Options</b></p>
+<dl class="variablelist">
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_MAX_CPU_COUNT</span></code></span></dt>
+<dd><p>
+                  HPX applications will not use more that this number of OS-Threads
+                  (default: 64)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_STACKTRACES</span></code></span></dt>
+<dd><p>
+                  Attach backtraces to HPX exceptions (default: ON)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_SWAP_CONTEXT_EMULATION</span></code></span></dt>
+<dd><p>
+                  Emulate SwapContext API for coroutines (default: OFF)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_THREAD_BACKTRACE_ON_SUSPENSION_DEPTH</span></code></span></dt>
+<dd><p>
+                  Thread stack back trace depth being captured on suspension (default:
+                  5)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_THREAD_MAINTAIN_BACKTRACE_ON_SUSPENSION</span></code></span></dt>
+<dd><p>
+                  Enable thread stack back trace being captured on suspension (default:
+                  OFF)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_THREAD_MAINTAIN_CREATION_AND_CLEANUP_RATES</span></code></span></dt>
+<dd><p>
+                  Enable measuring thread creation and cleanup times (default: OFF)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_THREAD_MAINTAIN_CUMULATIVE_COUNTS</span></code></span></dt>
+<dd><p>
+                  Enable keeping track of cumulative thread counts in the schedulers
+                  (default: ON)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_THREAD_MAINTAIN_FULLBACKTRACE_ON_SUSPENSION</span></code></span></dt>
+<dd><p>
+                  Enable thread stack back trace being captured on suspension (default:
+                  OFF)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_THREAD_MAINTAIN_IDLE_RATES</span></code></span></dt>
+<dd><p>
+                  Enable measuring the percentage of overhead times spent in the
+                  scheduler (default: OFF)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_THREAD_MAINTAIN_LOCAL_STORAGE</span></code></span></dt>
+<dd><p>
+                  Enable thread local storage for all HPX threads (default: ON)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_THREAD_MAINTAIN_QUEUE_WAITTIME</span></code></span></dt>
+<dd><p>
+                  Enable collecting queue wait times for threads (default: OFF)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_THREAD_MAINTAIN_STEALING_COUNTS</span></code></span></dt>
+<dd><p>
+                  Enable keeping track of counts of thread stealing incidents in
+                  the schedulers (default: ON)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_THREAD_MAINTAIN_TARGET_ADDRESS</span></code></span></dt>
+<dd><p>
+                  Enable storing target address in thread for NUMA awareness (default:
+                  OFF)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_THREAD_MANAGER_IDLE_BACKOFF</span></code></span></dt>
+<dd><p>
+                  Use mmap for stack allocation on appropriate platforms (default:
+                  OFF)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_THREAD_SCHEDULERS</span></code></span></dt>
+<dd><p>
+                  Which thread schedulers are build. Options are: all, local, static-priority,
+                  hierarchy, and periodic-priority. For multiple enabled schedulers,
+                  separate with a semicolon (default: all)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_THREAD_STACK_MMAP</span></code></span></dt>
+<dd><p>
+                  Use mmap for stack allocation on appropriate platforms
+                </p></dd>
+</dl>
+</div>
 </div>
 <table xmlns:rev="http://www.cs.rpi.edu/~gregod/boost/tools/doc/revision" width="100%"><tr>
 <td align="left"></td>

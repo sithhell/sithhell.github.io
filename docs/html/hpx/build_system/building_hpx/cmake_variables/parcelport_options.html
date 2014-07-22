@@ -20,33 +20,49 @@
 <a name="hpx.build_system.building_hpx.cmake_variables.parcelport_options"></a><a class="link" href="parcelport_options.html" title="Parcelport Options">Parcelport
           Options</a>
 </h5></div></div></div>
-<pre class="programlisting"><span class="identifier">WITH_PARCELPORT_IBVERBS</span>
-   <span class="identifier">No</span> <span class="identifier">help</span><span class="special">,</span> <span class="identifier">variable</span> <span class="identifier">specified</span> <span class="identifier">on</span> <span class="identifier">the</span> <span class="identifier">command</span> <span class="identifier">line</span><span class="special">.</span>
-
-<span class="identifier">WITH_PARCELPORT_IBVERBS_IFNAME</span>
-   <span class="identifier">The</span> <span class="identifier">interface</span> <span class="identifier">name</span> <span class="identifier">of</span> <span class="identifier">the</span> <span class="identifier">ibverbs</span> <span class="identifier">capable</span> <span class="identifier">network</span> <span class="identifier">adapter</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="identifier">ib0</span><span class="special">)</span>
-
-<span class="identifier">WITH_PARCELPORT_IBVERBS_MAX_MEMORY_CHUNKS</span>
-   <span class="identifier">Maximum</span> <span class="identifier">number</span> <span class="identifier">of</span> <span class="identifier">chunks</span> <span class="identifier">that</span> <span class="identifier">can</span> <span class="identifier">be</span> <span class="identifier">allocated</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="number">100</span><span class="special">)</span>
-
-<span class="identifier">WITH_PARCELPORT_IBVERBS_MEMORY_CHUNK_SIZE</span>
-   <span class="identifier">Number</span> <span class="identifier">of</span> <span class="identifier">bytes</span> <span class="identifier">a</span> <span class="identifier">chunk</span> <span class="identifier">in</span> <span class="identifier">the</span> <span class="identifier">memory</span> <span class="identifier">pool</span> <span class="identifier">can</span> <span class="identifier">hold</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="number">64</span><span class="identifier">MB</span><span class="special">)</span>
-
-<span class="identifier">WITH_PARCELPORT_IBVERBS_MESSAGE_PAYLOAD</span>
-   <span class="identifier">Size</span> <span class="identifier">of</span> <span class="identifier">the</span> <span class="identifier">message</span> <span class="identifier">payload</span> <span class="keyword">not</span> <span class="identifier">sent</span> <span class="identifier">with</span> <span class="identifier">RDMA</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="number">512</span> <span class="identifier">byte</span><span class="special">)</span>
-
-<span class="identifier">WITH_PARCELPORT_IPC</span>
-   <span class="identifier">Enable</span> <span class="identifier">the</span> <span class="identifier">IPC</span> <span class="special">(</span><span class="identifier">inter</span> <span class="identifier">process</span> <span class="identifier">communication</span><span class="special">)</span> <span class="identifier">based</span> <span class="identifier">parcelport</span><span class="special">.</span> <span class="identifier">This</span> <span class="identifier">is</span> <span class="identifier">currently</span> <span class="identifier">an</span> <span class="identifier">experimental</span> <span class="identifier">feature</span>
-
-<span class="identifier">WITH_PARCELPORT_MPI</span>
-   <span class="identifier">No</span> <span class="identifier">help</span><span class="special">,</span> <span class="identifier">variable</span> <span class="identifier">specified</span> <span class="identifier">on</span> <span class="identifier">the</span> <span class="identifier">command</span> <span class="identifier">line</span><span class="special">.</span>
-
-<span class="identifier">WITH_PARCELPORT_MPI_ENV</span>
-   <span class="identifier">List</span> <span class="identifier">of</span> <span class="identifier">environment</span> <span class="identifier">variables</span> <span class="identifier">checked</span> <span class="identifier">to</span> <span class="identifier">detect</span> <span class="identifier">MPI</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="identifier">PMI_RANK</span><span class="special">;</span><span class="identifier">OMPI_COMM_WORLD_SIZE</span><span class="special">).</span>
-
-<span class="identifier">WITH_PARCELPORT_TCP</span>
-   <span class="identifier">Enable</span> <span class="identifier">the</span> <span class="identifier">TCP</span> <span class="identifier">based</span> <span class="identifier">parcelport</span><span class="special">.</span>
-</pre>
+<div class="variablelist">
+<p class="title"><b>Parcelport Options</b></p>
+<dl class="variablelist">
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_PARCELPORT_IBVERBS</span></code></span></dt>
+<dd><p>
+                  No help, variable specified on the command line.
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_PARCELPORT_IBVERBS_IFNAME</span></code></span></dt>
+<dd><p>
+                  The interface name of the ibverbs capable network adapter (default:
+                  ib0)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_PARCELPORT_IBVERBS_MAX_MEMORY_CHUNKS</span></code></span></dt>
+<dd><p>
+                  Maximum number of chunks that can be allocated (default: 100)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_PARCELPORT_IBVERBS_MEMORY_CHUNK_SIZE</span></code></span></dt>
+<dd><p>
+                  Number of bytes a chunk in the memory pool can hold (default: 64MB)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_PARCELPORT_IBVERBS_MESSAGE_PAYLOAD</span></code></span></dt>
+<dd><p>
+                  Size of the message payload not sent with RDMA (default: 512 byte)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_PARCELPORT_IPC</span></code></span></dt>
+<dd><p>
+                  Enable the IPC (inter process communication) based parcelport.
+                  This is currently an experimental feature
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_PARCELPORT_MPI</span></code></span></dt>
+<dd><p>
+                  No help, variable specified on the command line.
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_PARCELPORT_MPI_ENV</span></code></span></dt>
+<dd><p>
+                  List of environment variables checked to detect MPI (default: PMI_RANK;OMPI_COMM_WORLD_SIZE).
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_PARCELPORT_TCP</span></code></span></dt>
+<dd><p>
+                  Enable the TCP based parcelport.
+                </p></dd>
+</dl>
+</div>
 </div>
 <table xmlns:rev="http://www.cs.rpi.edu/~gregod/boost/tools/doc/revision" width="100%"><tr>
 <td align="left"></td>

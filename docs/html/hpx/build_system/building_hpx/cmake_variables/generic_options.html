@@ -20,90 +20,134 @@
 <a name="hpx.build_system.building_hpx.cmake_variables.generic_options"></a><a class="link" href="generic_options.html" title="Generic Options">Generic
           Options</a>
 </h5></div></div></div>
-<pre class="programlisting"><span class="identifier">WITH_AUTOMATIC_PREPROCESSING</span>
-   <span class="identifier">No</span> <span class="identifier">help</span><span class="special">,</span> <span class="identifier">variable</span> <span class="identifier">specified</span> <span class="identifier">on</span> <span class="identifier">the</span> <span class="identifier">command</span> <span class="identifier">line</span><span class="special">.</span>
-
-<span class="identifier">WITH_AUTOMATIC_SERIALIZATION_REGISTRATION</span>
-   <span class="identifier">Use</span> <span class="identifier">automatic</span> <span class="identifier">serialization</span> <span class="identifier">registration</span> <span class="keyword">for</span> <span class="identifier">actions</span> <span class="keyword">and</span> <span class="identifier">functions</span><span class="special">.</span> <span class="identifier">This</span> <span class="identifier">affects</span> <span class="identifier">compatibility</span> <span class="identifier">between</span> <span class="identifier">HPX</span> <span class="identifier">applications</span> <span class="identifier">compiled</span> <span class="identifier">with</span> <span class="identifier">different</span> <span class="identifier">compilers</span> <span class="special">(</span><span class="keyword">default</span> <span class="identifier">ON</span><span class="special">)</span>
-
-<span class="identifier">WITH_COMPRESSION_BZIP2</span>
-   <span class="identifier">Enable</span> <span class="identifier">bzip2</span> <span class="identifier">compression</span> <span class="keyword">for</span> <span class="identifier">parcel</span> <span class="identifier">data</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="identifier">OFF</span><span class="special">).</span>
-
-<span class="identifier">WITH_DEFAULT_BUILD_TARGETS</span>
-   <span class="identifier">Associate</span> <span class="identifier">the</span> <span class="identifier">core</span> <span class="identifier">HPX</span> <span class="identifier">library</span> <span class="identifier">with</span> <span class="identifier">the</span> <span class="keyword">default</span> <span class="identifier">build</span> <span class="identifier">target</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="identifier">ON</span><span class="special">).</span>
-
-<span class="identifier">WITH_DOCUMENTATION</span>
-   <span class="identifier">No</span> <span class="identifier">help</span><span class="special">,</span> <span class="identifier">variable</span> <span class="identifier">specified</span> <span class="identifier">on</span> <span class="identifier">the</span> <span class="identifier">command</span> <span class="identifier">line</span><span class="special">.</span>
-
-<span class="identifier">WITH_DOCUMENTATION_SINGLEPAGE</span>
-   <span class="identifier">No</span> <span class="identifier">help</span><span class="special">,</span> <span class="identifier">variable</span> <span class="identifier">specified</span> <span class="identifier">on</span> <span class="identifier">the</span> <span class="identifier">command</span> <span class="identifier">line</span><span class="special">.</span>
-
-<span class="identifier">WITH_EXAMPLES</span>
-   <span class="identifier">Build</span> <span class="identifier">the</span> <span class="identifier">HPX</span> <span class="identifier">examples</span> <span class="special">(</span><span class="keyword">default</span> <span class="identifier">OFF</span><span class="special">)</span>
-
-<span class="identifier">WITH_FULL_RPATH</span>
-   <span class="identifier">Build</span> <span class="keyword">and</span> <span class="identifier">link</span> <span class="identifier">HPX</span> <span class="identifier">libraries</span> <span class="keyword">and</span> <span class="identifier">executables</span> <span class="identifier">with</span> <span class="identifier">full</span> <span class="identifier">RPATHs</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="identifier">ON</span><span class="special">)</span>
-
-<span class="identifier">WITH_GCC_VERSION_CHECK</span>
-   <span class="identifier">Ignore</span> <span class="identifier">version</span> <span class="identifier">reported</span> <span class="identifier">by</span> <span class="identifier">gcc</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="identifier">ON</span><span class="special">)</span>
-
-<span class="identifier">WITH_HIDDEN_VISIBILITY</span>
-   <span class="identifier">Use</span> <span class="special">-</span><span class="identifier">fvisibility</span><span class="special">=</span><span class="identifier">hidden</span> <span class="keyword">for</span> <span class="identifier">builds</span> <span class="identifier">on</span> <span class="identifier">platforms</span> <span class="identifier">which</span> <span class="identifier">support</span> <span class="identifier">it</span> <span class="special">(</span><span class="keyword">default</span> <span class="identifier">ON</span><span class="special">)</span>
-
-<span class="identifier">WITH_HWLOC</span>
-   <span class="identifier">Use</span> <span class="identifier">Hwloc</span> <span class="keyword">for</span> <span class="identifier">hardware</span> <span class="identifier">topolgy</span> <span class="identifier">information</span> <span class="keyword">and</span> <span class="identifier">thread</span> <span class="identifier">pinning</span><span class="special">.</span> <span class="identifier">If</span> <span class="identifier">disabled</span><span class="special">,</span> <span class="identifier">performance</span> <span class="identifier">might</span> <span class="identifier">be</span> <span class="identifier">reduced</span><span class="special">.</span>
-
-<span class="identifier">WITH_LOGGING</span>
-   <span class="identifier">Build</span> <span class="identifier">HPX</span> <span class="identifier">with</span> <span class="identifier">logging</span> <span class="identifier">enabled</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="identifier">ON</span><span class="special">).</span>
-
-<span class="identifier">WITH_MALLOC</span>
-   <span class="identifier">Define</span> <span class="identifier">which</span> <span class="identifier">allocator</span> <span class="identifier">should</span> <span class="identifier">be</span> <span class="identifier">linked</span> <span class="identifier">in</span><span class="special">.</span> <span class="identifier">Options</span> <span class="identifier">are</span><span class="special">:</span> <span class="identifier">system</span><span class="special">,</span> <span class="identifier">tcmalloc</span><span class="special">,</span> <span class="identifier">jemalloc</span> <span class="keyword">and</span> <span class="identifier">tbbmalloc</span> <span class="special">(</span><span class="keyword">default</span> <span class="identifier">is</span><span class="special">:</span> <span class="identifier">tcmalloc</span><span class="special">)</span>
-
-<span class="identifier">WITH_NATIVE_TLS</span>
-   <span class="identifier">Use</span> <span class="identifier">native</span> <span class="identifier">TLS</span> <span class="identifier">support</span> <span class="keyword">if</span> <span class="identifier">available</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="identifier">ON</span><span class="special">)</span>
-
-<span class="identifier">WITH_PREPROCESSOR_LIMIT_EXPANSION</span>
-   <span class="identifier">Do</span> <span class="keyword">not</span> <span class="identifier">use</span> <span class="identifier">preprocessed</span> <span class="identifier">headers</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="identifier">OFF</span><span class="special">)</span>
-
-<span class="identifier">WITH_RUNTIME</span>
-   <span class="identifier">Build</span> <span class="identifier">HPX</span> <span class="identifier">runtime</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="identifier">ON</span><span class="special">)</span>
-
-<span class="identifier">WITH_SECURITY</span>
-   <span class="identifier">Enable</span> <span class="identifier">security</span> <span class="identifier">support</span> <span class="identifier">via</span> <span class="identifier">libsodium</span><span class="special">.</span>
-
-<span class="identifier">WITH_STATIC_LINKING</span>
-   <span class="identifier">Compile</span> <span class="identifier">HPX</span> <span class="identifier">staticly</span> <span class="identifier">linked</span> <span class="identifier">libraries</span> <span class="special">(</span><span class="identifier">Default</span><span class="special">:</span> <span class="identifier">OFF</span><span class="special">)</span>
-
-<span class="identifier">WITH_TESTS</span>
-   <span class="identifier">Build</span> <span class="identifier">the</span> <span class="identifier">HPX</span> <span class="identifier">tests</span> <span class="special">(</span><span class="keyword">default</span> <span class="identifier">ON</span><span class="special">)</span>
-
-<span class="identifier">WITH_TESTS_BENCHMARKS</span>
-   <span class="identifier">Build</span> <span class="identifier">HPX</span> <span class="identifier">benchmark</span> <span class="identifier">tests</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="identifier">ON</span><span class="special">)</span>
-
-<span class="identifier">WITH_TESTS_REGRESSIONS</span>
-   <span class="identifier">Build</span> <span class="identifier">HPX</span> <span class="identifier">regression</span> <span class="identifier">tests</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="identifier">ON</span><span class="special">)</span>
-
-<span class="identifier">WITH_TESTS_UNIT</span>
-   <span class="identifier">Build</span> <span class="identifier">HPX</span> <span class="identifier">unit</span> <span class="identifier">tests</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="identifier">ON</span><span class="special">)</span>
-
-<span class="identifier">WITH_TOOLS</span>
-   <span class="identifier">Build</span> <span class="identifier">HPX</span> <span class="identifier">tools</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="identifier">OFF</span><span class="special">)</span>
-
-<span class="identifier">WITH_UNIQUE_FUTURE_ALIAS</span>
-   <span class="identifier">HPX</span> <span class="identifier">will</span> <span class="identifier">defined</span> <span class="identifier">unique_future</span><span class="special">&lt;</span><span class="identifier">R</span><span class="special">&gt;</span> <span class="identifier">as</span> <span class="identifier">a</span> <span class="keyword">template</span> <span class="identifier">alias</span> <span class="identifier">to</span> <span class="identifier">future</span><span class="special">&lt;</span><span class="identifier">R</span><span class="special">&gt;.</span> <span class="special">(</span><span class="keyword">default</span> <span class="identifier">OFF</span><span class="special">).</span>
-
-<span class="identifier">WITH_UTIL_FUNCTION</span>
-   <span class="identifier">Use</span> <span class="identifier">hpx</span><span class="special">::</span><span class="identifier">util</span><span class="special">::</span><span class="identifier">function</span> <span class="identifier">instead</span> <span class="identifier">of</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">function</span> <span class="keyword">or</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">function</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="identifier">ON</span><span class="special">)</span>
-
-<span class="identifier">WITH_UTIL_TUPLE</span>
-   <span class="identifier">Use</span> <span class="identifier">hpx</span><span class="special">::</span><span class="identifier">util</span><span class="special">::</span><span class="identifier">tuple</span> <span class="identifier">instead</span> <span class="identifier">of</span> <span class="identifier">boost</span><span class="special">::</span><span class="identifier">tuple</span> <span class="keyword">or</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">tuple</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="identifier">ON</span><span class="special">)</span>
-
-<span class="identifier">WITH_WARNINGS</span>
-   <span class="identifier">Enable</span> <span class="identifier">compiler</span> <span class="identifier">warnings</span> <span class="special">(</span><span class="keyword">default</span><span class="special">:</span> <span class="identifier">ON</span><span class="special">)</span>
-
-<span class="identifier">WITH_WAVE_ADDITIONAL_INCLUDE_DIRS</span>
-   <span class="identifier">Additional</span> <span class="special">(</span><span class="identifier">compiler</span> <span class="identifier">specific</span><span class="special">)</span> <span class="identifier">include</span> <span class="identifier">directories</span> <span class="keyword">for</span> <span class="identifier">the</span> <span class="identifier">wave</span> <span class="identifier">preprocessing</span> <span class="identifier">tool</span><span class="special">.</span>
-</pre>
+<div class="variablelist">
+<p class="title"><b>Generic Options</b></p>
+<dl class="variablelist">
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_AUTOMATIC_PREPROCESSING</span></code></span></dt>
+<dd><p>
+                  No help, variable specified on the command line.
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_AUTOMATIC_SERIALIZATION_REGISTRATION</span></code></span></dt>
+<dd><p>
+                  Use automatic serialization registration for actions and functions.
+                  This affects compatibility between HPX applications compiled with
+                  different compilers (default ON)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_COMPRESSION_BZIP2</span></code></span></dt>
+<dd><p>
+                  Enable bzip2 compression for parcel data (default: OFF).
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_DEFAULT_BUILD_TARGETS</span></code></span></dt>
+<dd><p>
+                  Associate the core HPX library with the default build target (default:
+                  ON).
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_DOCUMENTATION</span></code></span></dt>
+<dd><p>
+                  No help, variable specified on the command line.
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_DOCUMENTATION_SINGLEPAGE</span></code></span></dt>
+<dd><p>
+                  No help, variable specified on the command line.
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_EXAMPLES</span></code></span></dt>
+<dd><p>
+                  Build the HPX examples (default OFF)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_FULL_RPATH</span></code></span></dt>
+<dd><p>
+                  Build and link HPX libraries and executables with full RPATHs (default:
+                  ON)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_GCC_VERSION_CHECK</span></code></span></dt>
+<dd><p>
+                  Ignore version reported by gcc (default: ON)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_HIDDEN_VISIBILITY</span></code></span></dt>
+<dd><p>
+                  Use -fvisibility=hidden for builds on platforms which support it
+                  (default ON)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_HWLOC</span></code></span></dt>
+<dd><p>
+                  Use Hwloc for hardware topolgy information and thread pinning.
+                  If disabled, performance might be reduced.
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_LOGGING</span></code></span></dt>
+<dd><p>
+                  Build HPX with logging enabled (default: ON).
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_MALLOC</span></code></span></dt>
+<dd><p>
+                  Define which allocator should be linked in. Options are: system,
+                  tcmalloc, jemalloc and tbbmalloc (default is: tcmalloc)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_NATIVE_TLS</span></code></span></dt>
+<dd><p>
+                  Use native TLS support if available (default: ON)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_PREPROCESSOR_LIMIT_EXPANSION</span></code></span></dt>
+<dd><p>
+                  Do not use preprocessed headers (default: OFF)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_RUNTIME</span></code></span></dt>
+<dd><p>
+                  Build HPX runtime (default: ON)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_SECURITY</span></code></span></dt>
+<dd><p>
+                  Enable security support via libsodium.
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_STATIC_LINKING</span></code></span></dt>
+<dd><p>
+                  Compile HPX staticly linked libraries (Default: OFF)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_TESTS</span></code></span></dt>
+<dd><p>
+                  Build the HPX tests (default ON)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_TESTS_BENCHMARKS</span></code></span></dt>
+<dd><p>
+                  Build HPX benchmark tests (default: ON)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_TESTS_REGRESSIONS</span></code></span></dt>
+<dd><p>
+                  Build HPX regression tests (default: ON)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_TESTS_UNIT</span></code></span></dt>
+<dd><p>
+                  Build HPX unit tests (default: ON)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_TOOLS</span></code></span></dt>
+<dd><p>
+                  Build HPX tools (default: OFF)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_UNIQUE_FUTURE_ALIAS</span></code></span></dt>
+<dd><p>
+                  HPX will defined unique_future&lt;R&gt; as a template alias to
+                  future&lt;R&gt;. (default OFF).
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_UTIL_FUNCTION</span></code></span></dt>
+<dd><p>
+                  Use hpx::util::function instead of boost::function or std::function
+                  (default: ON)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_UTIL_TUPLE</span></code></span></dt>
+<dd><p>
+                  Use hpx::util::tuple instead of boost::tuple or std::tuple (default:
+                  ON)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_WARNINGS</span></code></span></dt>
+<dd><p>
+                  Enable compiler warnings (default: ON)
+                </p></dd>
+<dt><span class="term"><code class="computeroutput"><span class="identifier">WITH_WAVE_ADDITIONAL_INCLUDE_DIRS</span></code></span></dt>
+<dd><p>
+                  Additional (compiler specific) include directories for the wave
+                  preprocessing tool.
+                </p></dd>
+</dl>
+</div>
 </div>
 <table xmlns:rev="http://www.cs.rpi.edu/~gregod/boost/tools/doc/revision" width="100%"><tr>
 <td align="left"></td>
