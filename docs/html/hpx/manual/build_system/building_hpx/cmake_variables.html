@@ -132,15 +132,6 @@
 <li class="listitem">
                   <a class="link" href="cmake_variables.html#build_system.cmake_variables.HPX_WITH_SECURITY">HPX_WITH_SECURITY</a>
                 </li>
-<li class="listitem">
-                  <a class="link" href="cmake_variables.html#build_system.cmake_variables.WITH_COMPRESSION_BZIP2">WITH_COMPRESSION_BZIP2</a>
-                </li>
-<li class="listitem">
-                  <a class="link" href="cmake_variables.html#build_system.cmake_variables.WITH_COMPRESSION_SNAPPY">WITH_COMPRESSION_SNAPPY</a>
-                </li>
-<li class="listitem">
-                  <a class="link" href="cmake_variables.html#build_system.cmake_variables.WITH_COMPRESSION_ZLIB">WITH_COMPRESSION_ZLIB</a>
-                </li>
 </ul></div>
 <div class="variablelist">
 <p class="title"><b></b></p>
@@ -234,18 +225,6 @@
 <dt><span class="term"> <a name="build_system.cmake_variables.HPX_WITH_SECURITY"></a><code class="computeroutput">HPX_WITH_SECURITY:</code></span></dt>
 <dd><p>
                     Enable security support via libsodium.
-                  </p></dd>
-<dt><span class="term"> <a name="build_system.cmake_variables.WITH_COMPRESSION_BZIP2"></a><code class="computeroutput">WITH_COMPRESSION_BZIP2:</code></span></dt>
-<dd><p>
-                    Enable bzip2 compression for parcel data (default: OFF).
-                  </p></dd>
-<dt><span class="term"> <a name="build_system.cmake_variables.WITH_COMPRESSION_SNAPPY"></a><code class="computeroutput">WITH_COMPRESSION_SNAPPY:</code></span></dt>
-<dd><p>
-                    Enable snappy compression for parcel data (default: OFF).
-                  </p></dd>
-<dt><span class="term"> <a name="build_system.cmake_variables.WITH_COMPRESSION_ZLIB"></a><code class="computeroutput">WITH_COMPRESSION_ZLIB:</code></span></dt>
-<dd><p>
-                    Enable zlib compression for parcel data (default: OFF).
                   </p></dd>
 </dl>
 </div>
@@ -587,21 +566,6 @@
 <li class="listitem">
                   <a class="link" href="cmake_variables.html#build_system.cmake_variables.HPX_WITH_TAU">HPX_WITH_TAU</a>
                 </li>
-<li class="listitem">
-                  <a class="link" href="cmake_variables.html#build_system.cmake_variables.WITH_APEX">WITH_APEX</a>
-                </li>
-<li class="listitem">
-                  <a class="link" href="cmake_variables.html#build_system.cmake_variables.WITH_GOOGLE_PERFTOOLS">WITH_GOOGLE_PERFTOOLS</a>
-                </li>
-<li class="listitem">
-                  <a class="link" href="cmake_variables.html#build_system.cmake_variables.WITH_ITTNOTIFY">WITH_ITTNOTIFY</a>
-                </li>
-<li class="listitem">
-                  <a class="link" href="cmake_variables.html#build_system.cmake_variables.WITH_PAPI">WITH_PAPI</a>
-                </li>
-<li class="listitem">
-                  <a class="link" href="cmake_variables.html#build_system.cmake_variables.WITH_TAU">WITH_TAU</a>
-                </li>
 </ul></div>
 <div class="variablelist">
 <p class="title"><b></b></p>
@@ -623,26 +587,6 @@
                     No help, variable specified on the command line.
                   </p></dd>
 <dt><span class="term"> <a name="build_system.cmake_variables.HPX_WITH_TAU"></a><code class="computeroutput">HPX_WITH_TAU:</code></span></dt>
-<dd><p>
-                    Enable TAU profiling support.
-                  </p></dd>
-<dt><span class="term"> <a name="build_system.cmake_variables.WITH_APEX"></a><code class="computeroutput">WITH_APEX:</code></span></dt>
-<dd><p>
-                    Enable APEX instrumentation support.
-                  </p></dd>
-<dt><span class="term"> <a name="build_system.cmake_variables.WITH_GOOGLE_PERFTOOLS"></a><code class="computeroutput">WITH_GOOGLE_PERFTOOLS:</code></span></dt>
-<dd><p>
-                    Enable Google Perftools instrumentation support.
-                  </p></dd>
-<dt><span class="term"> <a name="build_system.cmake_variables.WITH_ITTNOTIFY"></a><code class="computeroutput">WITH_ITTNOTIFY:</code></span></dt>
-<dd><p>
-                    Enable Amplifier (ITT) instrumentation support.
-                  </p></dd>
-<dt><span class="term"> <a name="build_system.cmake_variables.WITH_PAPI"></a><code class="computeroutput">WITH_PAPI:</code></span></dt>
-<dd><p>
-                    Enable the PAPI based performance counter.
-                  </p></dd>
-<dt><span class="term"> <a name="build_system.cmake_variables.WITH_TAU"></a><code class="computeroutput">WITH_TAU:</code></span></dt>
 <dd><p>
                     Enable TAU profiling support.
                   </p></dd>
@@ -672,25 +616,14 @@
 <li class="listitem">
                   <a class="link" href="cmake_variables.html#build_system.cmake_variables.HPX_WITH_VALGRIND">HPX_WITH_VALGRIND</a>
                 </li>
-<li class="listitem">
-                  <a class="link" href="cmake_variables.html#build_system.cmake_variables.WITH_VALGRIND">WITH_VALGRIND</a>
-                </li>
-<li class="listitem">
-                  <a class="link" href="cmake_variables.html#build_system.cmake_variables.WITH_VERIFY_LOCKS">WITH_VERIFY_LOCKS</a>
-                </li>
-<li class="listitem">
-                  <a class="link" href="cmake_variables.html#build_system.cmake_variables.WITH_VERIFY_LOCKS_BACKTRACE">WITH_VERIFY_LOCKS_BACKTRACE</a>
-                </li>
-<li class="listitem">
-                  <a class="link" href="cmake_variables.html#build_system.cmake_variables.WITH_VERIFY_LOCKS_GLOBALLY">WITH_VERIFY_LOCKS_GLOBALLY</a>
-                </li>
 </ul></div>
 <div class="variablelist">
 <p class="title"><b></b></p>
 <dl class="variablelist">
 <dt><span class="term"> <a name="build_system.cmake_variables.HPX_THREAD_DEBUG_INFO"></a><code class="computeroutput">HPX_THREAD_DEBUG_INFO:</code></span></dt>
 <dd><p>
-                    Enable thread debugging information (default: ON)
+                    Enable thread debugging information (default: OFF, implicitly
+                    enabled in debug builds)
                   </p></dd>
 <dt><span class="term"> <a name="build_system.cmake_variables.HPX_THREAD_GUARD_PAGE"></a><code class="computeroutput">HPX_THREAD_GUARD_PAGE:</code></span></dt>
 <dd><p>
@@ -715,24 +648,6 @@
 <dt><span class="term"> <a name="build_system.cmake_variables.HPX_WITH_VALGRIND"></a><code class="computeroutput">HPX_WITH_VALGRIND:</code></span></dt>
 <dd><p>
                     Enable Valgrind instrumentation support.
-                  </p></dd>
-<dt><span class="term"> <a name="build_system.cmake_variables.WITH_VALGRIND"></a><code class="computeroutput">WITH_VALGRIND:</code></span></dt>
-<dd><p>
-                    Enable Valgrind instrumentation support.
-                  </p></dd>
-<dt><span class="term"> <a name="build_system.cmake_variables.WITH_VERIFY_LOCKS"></a><code class="computeroutput">WITH_VERIFY_LOCKS:</code></span></dt>
-<dd><p>
-                    Enable lock verification code (default: ON)
-                  </p></dd>
-<dt><span class="term"> <a name="build_system.cmake_variables.WITH_VERIFY_LOCKS_BACKTRACE"></a><code class="computeroutput">WITH_VERIFY_LOCKS_BACKTRACE:</code></span></dt>
-<dd><p>
-                    Enable thred stack back trace being captured on lock registration
-                    (to be used in combination with WITH_VERIFY_LOCKS=ON, default:
-                    OFF)
-                  </p></dd>
-<dt><span class="term"> <a name="build_system.cmake_variables.WITH_VERIFY_LOCKS_GLOBALLY"></a><code class="computeroutput">WITH_VERIFY_LOCKS_GLOBALLY:</code></span></dt>
-<dd><p>
-                    Enable global lock verification code (default: ON)
                   </p></dd>
 </dl>
 </div>
