@@ -1,3 +1,8 @@
+# Copyright (c) 2015 Thomas Heller
+#
+# Distributed under the Boost Software License, Version 1.0. (See accompanying
+# file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
+
 import sys
 import math
 import pandas as pd
@@ -69,6 +74,7 @@ html  = '<html>\n'
 html += '<head><title>HPX OSU Microbenchmark results</title></head>\n'
 html += '<body>\n'
 html += '<h1><a name="top">HPX OSU Microbenchmark results</a></h1>\n'
+html += '<p>Generated with <a href="http://sithhell.github.io/osu_benchmarks/plot.py">plot.py</a></p>\n'
 
 html_images = ''
 html_links = '<ul>\n'
@@ -85,7 +91,7 @@ for benchmark_key in data:
         df.plot().set_title(title)
         plt.tight_layout()
         img = benchmark_key + '_window_size_{}.png'.format(window_size)
-        plt.savefig('html/' + img)
+        plt.savefig('./' + img)
         html_links += '<li><a href=#{0}>{1}</a></li>\n'.format(img, title)
         html_images += '<p>\n'
         html_images += '<a name="{0}"><img src="{0}" alt="{1}"/></a><br/>\n'.format(img, title)
@@ -98,7 +104,7 @@ html += '</body>\n'
 html += '</html>\n'
 
 f.close()
-f = open('html/osu_benchmark.html', 'w')
+f = open('./osu_benchmark.html', 'w')
 f.write(html)
 f.close()
 #plt.show()
