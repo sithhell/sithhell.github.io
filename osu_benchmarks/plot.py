@@ -88,7 +88,11 @@ for benchmark_key in data:
         plot_data['MPI'] = benchmark['MPI'][1];
         df = pd.DataFrame(plot_data)#, columns=['blubb 1', '7',  '5', '4', '2', 'MPI'])
         title = benchmark_key + ', Window Size = {}'.format(window_size)
-        df.plot().set_title(title)
+        ax = df.plot(marker = 'x')
+        ax.set_title(title)
+        ax.set_xlabel('Message Size (Bytes)')
+        ax.set_ylabel('Latency (us)')
+
         plt.tight_layout()
         img = benchmark_key + '_window_size_{}.png'.format(window_size)
         plt.savefig('./' + img)
