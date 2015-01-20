@@ -21,10 +21,6 @@ data = {}
 
 for line in f:
     line = line.replace('\n', '')
-    if line.startswith('Stop called'):
-        continue
-    if line.startswith('finished early'):
-        continue
     if line.startswith('# OSU HPX'):
         if 'Latency' in line:
             benchmark = 'latency'
@@ -39,17 +35,19 @@ for line in f:
         window_size = 'MPI'
         threads = 1
         continue
-    if line.startswith('# Size'):
-        continue
-    if line.startswith('Total '):
-        continue
-    if line.startswith('Bandwidth'):
-        continue
+
     if line.startswith('threads='):
         strings = line.split(',')
         threads = 'HPX ({} cores)'.format(strings[0].split('=')[1])
         window_size = strings[1].split('=')[1]
         continue
+
+    if len(line) < 1:
+        continue
+
+    if not line[0].isdigit():
+        continue
+
 
     if not benchmark in data:
         data[benchmark] = collections.OrderedDict()
