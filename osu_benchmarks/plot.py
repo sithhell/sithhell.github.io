@@ -77,6 +77,10 @@ html += '<p>Generated with <a href="http://sithhell.github.io/osu_benchmarks/plo
 html_images = ''
 html_links = '<ul>\n'
 
+axis = {'latency': 'Latency (us)', 'bandwidth': 'Bandwidth (MB/s)'}
+xscale = {'latency': 'linear', 'bandwidth': 'log'}
+yscale = {'latency': 'linear', 'bandwidth': 'log'}
+
 for benchmark_key in data:
     benchmark = data[benchmark_key]
     for window_size in benchmark:
@@ -89,7 +93,9 @@ for benchmark_key in data:
         ax = df.plot(marker = 'x')
         ax.set_title(title)
         ax.set_xlabel('Message Size (Bytes)')
-        ax.set_ylabel('Latency (us)')
+        ax.set_ylabel(axis[benchmark_key])
+        ax.set_xscale(xscale[benchmark_key])
+        ax.set_yscale(xscale[benchmark_key])
 
         plt.tight_layout()
         img = benchmark_key + '_window_size_{}.png'.format(window_size)
