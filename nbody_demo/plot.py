@@ -40,7 +40,7 @@ for i in os.listdir(os.getcwd()):
         p = re.compile('([0-9]+) cores')
         m = p.match(line)
         if m:
-            cores = m.group(1)
+            cores = int(m.group(1))
 
         p = re.compile('dim: \(([0-9]+), ([0-9]+), ([0-9]+)\)')
         m = p.match(line)
@@ -126,7 +126,6 @@ for cores in data:
     for stat in data[cores]['gflops']:
         if not stat in plot_data:
             plot_data[stat] = {}
-        print(data[cores]['gflops'][stat])
         plot_data[stat][cores] = data[cores]['gflops'][stat]
 
 df = pd.DataFrame(plot_data)
@@ -193,38 +192,6 @@ for counter in data[data.keys()[0]]['perfctr'].keys():
     html_images += '</p>\n'
     plt.close()
 
-#    for counter in data[cores]['perfctr']:
-#        print(counter)
-
-#axis = {'latency': 'Latency (us)', 'bandwidth': 'Bandwidth (MB/s)'}
-#xscale = {'latency': 'linear', 'bandwidth': 'log'}
-#yscale = {'latency': 'linear', 'bandwidth': 'log'}
-
-#for benchmark_key in data:
-#    benchmark = data[benchmark_key]
-#    for window_size in benchmark:
-#        if window_size == 'MPI':
-#            continue
-#        plot_data = benchmark[window_size];
-#        plot_data['MPI'] = benchmark['MPI'][1];
-#        df = pd.DataFrame(plot_data)#, columns=['blubb 1', '7',  '5', '4', '2', 'MPI'])
-#        title = benchmark_key + ', Window Size = {}'.format(window_size)
-#        ax = df.plot(marker = 'x')
-#        ax.set_title(title)
-#        ax.set_xlabel('Message Size (Bytes)')
-#        ax.set_ylabel(axis[benchmark_key])
-#        ax.set_xscale(xscale[benchmark_key])
-#        ax.set_yscale(xscale[benchmark_key])
-
-#        plt.tight_layout()
-#        img = benchmark_key + '_window_size_{}.png'.format(window_size)
-#        plt.savefig('./' + img)
-#        html_links += '<li><a href=#{0}>{1}</a></li>\n'.format(img, title)
-#        html_images += '<p>\n'
-#        html_images += '<a name="{0}"><img src="{0}" alt="{1}"/></a><br/>\n'.format(img, title)
-#        html_images += '<a href=#top>Back to top</a>\n'
-#        html_images += '</p>\n'
-
 html += html_links + '</ul>\n';
 html += html_images;
 html += '</body>\n'
@@ -234,4 +201,3 @@ f.close()
 f = open('./index.html', 'w')
 f.write(html)
 f.close()
-#plt.show()
