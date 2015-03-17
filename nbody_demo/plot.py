@@ -184,6 +184,7 @@ for counter in data[data.keys()[0]]['perfctr'].keys():
     ax.set_xlabel('cores')
     plt.tight_layout()
     img = str(counter).replace('/', '_').replace('*', '_').replace('{', '_').replace('}', '_').replace('#', '_') + '.png'
+    img = img[1:]
     plt.savefig('./' + img)
     html_links += '<li><a href=#{0}>{1}</a></li>\n'.format(img, title)
     html_images += '<p>\n'
