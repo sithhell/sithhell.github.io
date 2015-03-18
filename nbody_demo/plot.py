@@ -101,6 +101,8 @@ for i in os.listdir(os.getcwd()):
         flops = 27 * cell_size * cell_size * (3 + 6 + 1 + 6)
         return 200 * size * (flops / (time * 1000000000))
 
+    print(str(cores) + ' ' + str(gflops(time['mean'])))
+
     data[cores] = {
             'time' : time
           , 'gflops' : {'min': gflops(time['max']), 'max': gflops(time['min']), 'mean': gflops(time['mean'])}
