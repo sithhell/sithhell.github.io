@@ -20,6 +20,8 @@ num_bytes = 1
 
 data = {}
 
+gflops_peak_single = 30
+
 for i in os.listdir(os.getcwd()):
     if i.endswith('.html') or i.endswith('png'):
         continue
@@ -123,8 +125,9 @@ html += '<p>Generated with <a href="http://sithhell.github.io/nbody_demo/plot.py
 html_images = ''
 html_links = '<ul>\n'
 
-plot_data = {};
+plot_data = {'peak': {}};
 for cores in data:
+    plot_data['peak'][cores] = gflops_peak_single * cores
     for stat in data[cores]['gflops']:
         if not stat in plot_data:
             plot_data[stat] = {}
