@@ -127,20 +127,43 @@ html_links = '<ul>\n'
 
 plot_data = {'peak': {}};
 for cores in data:
-    plot_data['peak'][cores] = gflops_peak_single * cores
+    plot_data['peak'][cores] = (gflops_peak_single * cores) / 1000
     for stat in data[cores]['gflops']:
         if not stat in plot_data:
             plot_data[stat] = {}
-        plot_data[stat][cores] = data[cores]['gflops'][stat]
+        plot_data[stat][cores] = data[cores]['gflops'][stat] / 1000
 
 df = pd.DataFrame(plot_data)
-title = 'GFLOPS'
+title = 'TFLOPS'
 ax = df.plot(marker = 'x')
 #ax.set_title(title)
-ax.set_ylabel('GFLOPS')
+ax.set_ylabel('TFLOPS')
 ax.set_xlabel('cores')
 plt.tight_layout()
 img = 'gflops.png'
+plt.savefig('./' + img)
+html_links += '<li><a href=#{0}>{1}</a></li>\n'.format(img, title)
+html_images += '<p>\n'
+html_images += '<a name="{0}"><img src="{0}" alt="{1}"/></a><br/>\n'.format(img, title)
+html_images += '<a href=#top>Back to top</a>\n'
+html_images += '</p>\n'
+plt.close()
+
+plot_data = {};
+for cores in data:
+    for stat in data[cores]['gflops']:
+        if not stat in plot_data:
+            plot_data[stat] = {}
+        plot_data[stat][cores] = data[cores]['gflops'][stat] / (gflops_peak_single * cores)
+
+df = pd.DataFrame(plot_data)
+title = 'Peak percentage'
+ax = df.plot(marker = 'x')
+ax.set_title(title)
+ax.set_ylabel('percent')
+ax.set_xlabel('cores')
+plt.tight_layout()
+img = 'efficiency.png'
 plt.savefig('./' + img)
 html_links += '<li><a href=#{0}>{1}</a></li>\n'.format(img, title)
 html_images += '<p>\n'
