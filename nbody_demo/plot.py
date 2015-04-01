@@ -22,6 +22,9 @@ data = {}
 
 gflops_peak_single = 30
 
+if len(sys.argv) == 2:
+    gflops_peak_single = float(sys.argv[1])
+
 for i in os.listdir(os.getcwd()):
     if i.endswith('.html') or i.endswith('png'):
         continue
@@ -89,13 +92,13 @@ for i in os.listdir(os.getcwd()):
             patch_accepter_time['mean'] = float(m.group(3))
             patch_accepter_time['stddev'] = float(m.group(4))
 
-        p = re.compile('(/[a-z]+){locality\#[0-9]+/total}(\/[a-zA-Z\/\-_]+),[0-9]+,[0-9.]+,([\[\]a-z]+),([0-9.]+)(,([\[\]a-z]+))*')
+        p = re.compile('(/[a-z]+){locality\#[0-9]+/total}(\/[a-zA-Z\/\-_]+),[0-9]+,[0-9.e\+]+,([\[\]a-z]+),([0-9.e\+]+)(,([\[\]a-z]+))*')
         m = p.match(line)
         if m:
             name = m.group(1) + '{locality#*/total}' + m.group(2)
             if not name in perfctr:
-                perfctr[name] = {'metric': m.group(6), 'value': 0.0}
-            perfctr[name]['value'] = perfctr[name]['value'] + float(m.group(4))
+                perfctr[name] = {'metric': m.group(6), 'value': []}
+            perfctr[name]['value'].append(float(m.group(4)))
 
     def gflops(time):
         cell_size = 128
@@ -138,7 +141,7 @@ title = 'TFLOPS'
 ax = df.plot(marker = 'x')
 #ax.set_title(title)
 ax.set_ylabel('TFLOPS')
-ax.set_xlabel('cores')
+ax.set_xlabel('processing units')
 plt.tight_layout()
 img = 'gflops.png'
 plt.savefig('./' + img)
@@ -154,14 +157,14 @@ for cores in data:
     for stat in data[cores]['gflops']:
         if not stat in plot_data:
             plot_data[stat] = {}
-        plot_data[stat][cores] = data[cores]['gflops'][stat] / (gflops_peak_single * cores)
+        plot_data[stat][cores] = (data[cores]['gflops'][stat] / (gflops_peak_single * cores)) * 100
 
 df = pd.DataFrame(plot_data)
 title = 'Peak percentage'
 ax = df.plot(marker = 'x')
 ax.set_title(title)
 ax.set_ylabel('percent')
-ax.set_xlabel('cores')
+ax.set_xlabel('processing units')
 plt.tight_layout()
 img = 'efficiency.png'
 plt.savefig('./' + img)
@@ -184,7 +187,7 @@ title = 'Times'
 ax = df.plot(marker = 'x')
 ax.set_title(title)
 ax.set_ylabel('time (seconds)')
-ax.set_xlabel('cores')
+ax.set_xlabel('processing units')
 plt.tight_layout()
 img = 'times.png'
 plt.savefig('./' + img)
@@ -201,14 +204,16 @@ for counter in data[data.keys()[0]]['perfctr'].keys():
     if metric == None:
         metric = ''
     for cores in data:
-        plot_data[counter][cores] = data[cores]['perfctr'][counter]['value']
+        plot_data[counter][cores] = np.mean(data[cores]['perfctr'][counter]['value'])
+
+    print(metric)
 
     df = pd.DataFrame(plot_data)
     title = counter
     ax = df.plot(marker = 'x')
-    ax.set_title(title)
+    ax.set_title(title + ' (per locality, average)')
     ax.set_ylabel(metric)
-    ax.set_xlabel('cores')
+    ax.set_xlabel('processing units')
     plt.tight_layout()
     img = str(counter).replace('/', '_').replace('*', '_').replace('{', '_').replace('}', '_').replace('#', '_') + '.png'
     img = img[1:]
