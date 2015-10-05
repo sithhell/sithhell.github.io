@@ -60,6 +60,11 @@ html_images = ''
 html_links = '<ul>\n'
 
 for counter in sorted(counters):
+    res = 0.0;
+    for data in counters[counter]:
+        res += sum(counters[counter][data])
+    if res == 0.0:
+        continue
     img_name = counter.replace('/', '_');
     img = img_name + '.png'
     title = counter
