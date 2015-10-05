@@ -65,7 +65,7 @@ for counter in sorted(counters):
         res += sum(counters[counter][data])
     if res == 0.0:
         continue
-    img_name = counter.replace('/', '_');
+    img_name = counter.replace('/', '_')[1:];
     img = img_name + '.png'
     title = counter
     html_links += '<li><a href=#{0}>{1}</a></li>\n'.format(img, title)
