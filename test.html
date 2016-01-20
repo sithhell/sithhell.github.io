@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>CDash : HPX</title>
+        <link rel="StyleSheet" type="text/css" href="http://cdash.cscs.ch/cdash.css" />
+        <script src="http://cdash.cscs.ch/javascript/jquery-1.6.2.js" type="text/javascript" charset="utf-8"></script>
+        <script src="http://cdash.cscs.ch/javascript/jquery.flot.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="http://cdash.cscs.ch/javascript/jquery.flot.selection.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="http://cdash.cscs.ch/javascript/tooltip.js" type="text/javascript" charset="utf-8"></script>
+        <link type="text/css" rel="stylesheet" href="http://cdash.cscs.ch/javascript/jquery.qtip.min.css" />
+        <script src="http://cdash.cscs.ch/javascript/jquery.qtip.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="http://cdash.cscs.ch/javascript/jquery-ui-1.8.16.min.js" type="text/javascript" charset="utf-8"></script>
+        <link type="text/css" rel="stylesheet" href="http://cdash.cscs.ch/javascript/jquery-ui-1.8.16.css" />
+        <script src="http://cdash.cscs.ch/javascript/cdashmenu.js" type="text/javascript" charset="utf-8"></script>
+        <script src="http://cdash.cscs.ch/javascript/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+        <script src="http://cdash.cscs.ch/javascript/jquery.tablesorter.js" type="text/javascript" charset="utf-8"></script>
+        <script src="http://cdash.cscs.ch/javascript/jquery.dataTables.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="http://cdash.cscs.ch/javascript/cdashTableSorter.js" type="text/javascript" charset="utf-8"></script>
+        <script src="http://cdash.cscs.ch/javascript/jquery.metadata.js" type="text/javascript" charset="utf-8"></script>
+        <script src="http://cdash.cscs.ch/javascript/jtip.js" type="text/javascript" charset="utf-8"></script>
+        <script src="http://cdash.cscs.ch/javascript/jqModal.js" type="text/javascript" charset="utf-8"></script>
+        <link type="text/css" rel="stylesheet" media="all" href="http://cdash.cscs.ch/javascript/jqModal.css" />
+        <link type="text/css" rel="stylesheet" media="all" href="http://cdash.cscs.ch/javascript/jquery.dataTables.css" />
+        <script src="http://cdash.cscs.ch/javascript/cdashTestGraph.js" type="text/javascript" charset="utf-8"></script>
+        <script src="http://cdash.cscs.ch/javascript/jquery.mobile-1.4.0.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="http://cdash.cscs.ch/javascript/je_compare-1.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+        <link type="text/css" rel="stylesheet" href="http://cdash.cscs.ch/javascript/je_compare_style-1.0.0.css" />
+        <script type="text/javascript">
+function displaygraph_selected_blubb(buildid,testid,zoomout)
+{
+    var measurementname = 'TestTimeGraph';//$('#GraphSelection').val();
+
+    if(measurementname == 0)
+    {
+        $("#graph_holder").hide();
+        $("#graph_options").html("");
+        return;
+    }
+    else if(measurementname == 'TestTimeGraph')
+    {
+        $("#graph_holder").attr("style","width:800px;height:400px;");
+
+        //if(zoomout)
+        //{
+        //    $("#graph").load("http://cors.io/?u=http://cdash.cscs.ch/ajax/showtesttimegraph.php?testid="+testid+"&buildid="+buildid+"&zoomout=1");
+        //    return;
+        //}
+
+        $("#graph").fadeIn('slow');
+        $("#graph").html("fetching...<img src=http://cdash.cscs.ch/images/loading.gif></img>");
+
+        $("#graph_options").html("<a href=javascript:displaygraph_selected_blubb("+buildid+","+testid+",true)>Zoom out</a>");
+        $("#graph").load("http://cors.io/?u=http://cdash.cscs.ch/ajax/showtesttimegraph.php?testid="+testid+"&buildid="+buildid,{},function(){
+            $("#graph_holder").fadeIn('slow');
+            $("#graph_options").show();
+        });
+    }
+    else if(measurementname == 'TestPassingGraph')
+    {
+        $("#graph_holder").attr("style","width:800px;height:400px;");
+
+        if(zoomout)
+        {
+            $("#graph").load("http://cors.io/?u=http://cdash.cscs.ch/ajax/ajax/showtestpassinggraph.php?testid="+testid+"&buildid="+buildid+"&zoomout=1");
+            return;
+        }
+
+        $("#graph").fadeIn('slow');
+        $("#graph").html("fetching...<img src=images/loading.gif></img>");
+
+        $("#graph_options").html("<a href=javascript:displaygraph_selected_blubb("+buildid+","+testid+",true)>Zoom out</a>");
+        $("#graph").load("http://cors.io/?u=http://cdash.cscs.ch/ajax/showtestpassinggraph.php?testid="+testid+"&buildid="+buildid,{},function(){
+            $("#graph_holder").fadeIn('slow');
+            $("#graph_options").show();
+        });
+    }
+    else
+    {
+        $("#graph_holder").attr("style","width:800px;height:400px;");
+        if(zoomout)
+        {
+            $("#graph").load("http://cors.io/?u=http://cdash.cscs.ch/ajax/ajax/showtestmeasurementdatagraph.php?testid="+testid+"&buildid="+buildid+"&measurement="+measurementname+"&zoomout=1");
+            return;
+        }
+        $("#graph").fadeIn('slow');
+        $("#graph").html("fetching...<img src=http://cdash.cscs.ch/ajax/images/loading.gif></img>");
+        $("#graph_options").html("<a href=javascript:displaygraph_selected_blubb('"+buildid+"','"+testid+"','"+measurementname+"',true)>Zoom out</a> \n\
+            <br/> <a href='http://cors.io/?u=http://cdash.cscs.ch/ajax/ajax/showtestmeasurementdatagraph.php?testid="+testid+"&buildid="+buildid+"&measurement="+measurementname+"&export=csv'>Export as CSV File</a>");
+        $("#graph").load("http://cors.io/?u=http://cdash.cscs.ch/ajax/ajax/showtestmeasurementdatagraph.php?testid="+testid+"&buildid="+buildid+"&measurement="+measurementname,{},function(){
+            $("#graph_holder").fadeIn('slow');
+            $("#graph_options").show();
+        });
+    }
+}
+        </script>
+    </head>
+    <body onload="javascript:displaygraph_selected_blubb(31431,3014336,false)">
+        <div id="graph_options"></div>
+        <div id="graph"></div><div id="graph_holder"></div>
+    </body>
+</html>
