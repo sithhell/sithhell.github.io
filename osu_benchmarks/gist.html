@@ -3,14 +3,8 @@
 <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.js"></script>
 <script type="text/javascript">
-function getRandomColor() {
-    var letters = '0123456789ABCDEF'.split('');
-    var color = '#';
-    for (var i = 0; i < 6; i++ ) {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-}
+
+var colors = ["green", "red", "blue", "orange", "navy"];
 
 // set the Gist ID ...
 $(document).ready(function()
@@ -49,6 +43,7 @@ $(document).ready(function()
         files = json["files"]
         labels = [];
         datasets = [];
+        var i = 0;
         $.each(files,
             function (file) {
                 console.log(files[file]);
@@ -68,9 +63,12 @@ $(document).ready(function()
                     }
                 );
                 datasets.push({
+                    fill: false,
                     label: files[file]["filename"],
                     data: data,
+                    borderColor: colors[i]
                 });
+                i++;
             }
         );
 
@@ -80,11 +78,12 @@ $(document).ready(function()
         var chart = new Chart(ctx,
             {
                 type: 'line',
+                fill: false,
                 data:
                 {
                     labels : labels,
                     datasets: datasets
-                }
+                },
             });
 
         $("div.content").html(html);
