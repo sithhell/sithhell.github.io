@@ -1,9 +1,109 @@
 <html>
 <head><title>HPX OSU Microbenchmark results</title></head>
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.js"></script>
+<script type="text/javascript">
+function getRandomColor() {
+    var letters = '0123456789ABCDEF'.split('');
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+// set the Gist ID ...
+$(document).ready(function()
+{
+    var gist = "2b07164ee89d566e1c4302625b1c4eeb";
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    for (var i = 0; i < vars.length; i++)
+    {
+        var pair = vars[i].split("=");
+
+        if (pair[0] == "gist" && pair[1] != "")
+        {
+            gist = pair[1];
+            break;
+        }
+
+    }
+    $("input#gist").val(gist);
+
+    /*
+    $.get("https://api.github.com/gists/" + gist, function ( r ) {
+        $("div.content").html("<p>"  + r + "</p>");
+    });
+    */
+
+    $.ajax({
+        url: "https://api.github.com/gists/" + gist,
+        type: "GET",
+        dataType: "json"
+    }).done(function(json) {
+        console.log(json);
+        html = "<p>Got data from: <a href=" + json["html_url"] + ">" + json["description"] + "</a>";
+
+
+        files = json["files"]
+        labels = [];
+        datasets = [];
+        $.each(files,
+            function (file) {
+                console.log(files[file]);
+                content = files[file]["content"].split("\n");
+                data = []
+                labels = [];
+                $.each(content,
+                    function (index) {
+                        line = content[index];
+                        if (line[0] != '#')
+                        {
+                            pair = line.split(" ");
+                            labels.push(pair[0]);
+                            data.push(pair[pair.length-1]);
+                            //html += "<p>" + pair[0] + " ... " + pair[pair.length-1] + "</p>";
+                        }
+                    }
+                );
+                datasets.push({
+                    label: files[file]["filename"],
+                    data: data,
+                });
+            }
+        );
+
+        console.log(labels);
+
+        var ctx = $("#benchmark_results");
+        var chart = new Chart(ctx,
+            {
+                type: 'line',
+                data:
+                {
+                    labels : labels,
+                    datasets: datasets
+                }
+            });
+
+        $("div.content").html(html);
+    })
+
+});
+</script>
 <body>
 <h1><a name="top">HPX OSU Microbenchmark results</a></h1>
-<form>
-    <input id="gist">2b07164ee89d566e1c4302625b1c4eeb</input>
+<form method="get" id="gistform">
+    <label for="gist"> Gist Id: </label>
+    <!--input id="gist" type="text" name="gist" value="2b07164ee89d566e1c4302625b1c4eeb" /-->
+    <input id="gist" type="text" name="gist"/>
+    <button type="submit" value="gist">Update</button>
+    <button type="reset">Reset</button>
 </form>
+
+<div class="content">
+</div>
+<canvas id="benchmark_results" width="50%", height="10%"></canvas>
 </body>
 </html>
