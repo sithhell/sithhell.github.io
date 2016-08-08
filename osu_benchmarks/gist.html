@@ -84,6 +84,13 @@ $(document).ready(function()
                     labels : labels,
                     datasets: datasets
                 },
+				options: {
+                    scales: {
+                        yAxes: [{
+                            type: 'logarithmic'
+                        }]
+                    }
+                }
             });
 
         $("div.content").html(html);
