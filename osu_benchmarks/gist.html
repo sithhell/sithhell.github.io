@@ -49,16 +49,15 @@ $(document).ready(function()
                 console.log(files[file]);
                 content = files[file]["content"].split("\n");
                 data = []
-                labels = [];
                 $.each(content,
                     function (index) {
                         line = content[index];
                         if (line[0] != '#' && line[0] != "T")
                         {
                             pair = line.split(" ");
-                            labels.push(pair[0]);
+                            if ($.inArray(pair[0], labels) == -1)
+                                labels.push(pair[0]);
                             data.push(pair[pair.length-1]);
-                            //html += "<p>" + pair[0] + " ... " + pair[pair.length-1] + "</p>";
                         }
                     }
                 );
@@ -73,7 +72,10 @@ $(document).ready(function()
         );
 
         console.log(labels);
+        $("div.content").html(html);
 
+        var canvas = $("<canvas id=\"benchmark_results\" width=\"50%\", height=\"10%\"></canvas>");
+        $("body").append(canvas);
         var ctx = $("#benchmark_results");
         var chart = new Chart(ctx,
             {
@@ -84,16 +86,65 @@ $(document).ready(function()
                     labels : labels,
                     datasets: datasets
                 },
+                /*
 				options: {
                     scales: {
                         yAxes: [{
                             type: 'logarithmic'
                         }]
                     }
-                }
+                }*/
             });
 
-        $("div.content").html(html);
+        $.each(labels,
+            function (index) {
+                paragraph = $("<p>");
+                var label = labels[index];
+                paragraph.append(label + " Speedup:");
+                $("body").append(paragraph);
+
+                graph_name = "benchmark_results" + label;
+                var canvas = $("<canvas id=\""+ graph_name + "\" width=\"50%\", height=\"10%\"></canvas>");
+                $("body").append(canvas);
+                var ctx = $("#" + graph_name);
+
+                labels_ = [];
+                dataset = [{
+                    fill: false,
+                    label: label,
+                    data: []
+                }];
+
+                var base = parseFloat(datasets[0].data[index]);
+
+                $.each(datasets,
+                    function (element) {
+                        labels_.push(datasets[element].label);
+                        var v = parseFloat(datasets[element].data[index]);
+                        dataset[0].data.push((base / v));
+                    }
+                );
+
+                var chart = new Chart(ctx,
+                    {
+                        type: 'bar',
+                        fill: false,
+                        data:
+                        {
+                            labels : labels_,
+                            datasets: dataset
+                        },
+                        /*
+                        options: {
+                            scales: {
+                                yAxes: [{
+                                    type: 'logarithmic'
+                                }]
+                            }
+                        }*/
+                    });
+            }
+        );
     })
 
 });
@@ -109,7 +160,7 @@ $(document).ready(function()
 </form>
 
 <div class="content">
+
 </div>
-<canvas id="benchmark_results" width="50%", height="10%"></canvas>
 </body>
 </html>
