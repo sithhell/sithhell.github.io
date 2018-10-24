@@ -47,8 +47,10 @@ for h in header:
         counters_diff[counter_name][loc] = []
 
 
+count = 0
 for line in f:
     data = line.replace('\n', '').split(',')
+    count = count + 1
     for i in range(len(data)):
         h = header[i]
         loc = get_locality(h)
