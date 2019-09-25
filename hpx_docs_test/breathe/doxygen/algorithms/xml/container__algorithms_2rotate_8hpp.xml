@@ -1,0 +1,755 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="container__algorithms_2rotate_8hpp" kind="file" language="C++">
+    <compoundname>rotate.hpp</compoundname>
+    <includes local="no">hpx/config.hpp</includes>
+    <includes local="no">hpx/concepts/concepts.hpp</includes>
+    <includes local="no">hpx/iterator_support/is_iterator.hpp</includes>
+    <includes local="no">hpx/iterator_support/is_range.hpp</includes>
+    <includes local="no">hpx/iterator_support/range.hpp</includes>
+    <includes local="no">hpx/util/tagged_pair.hpp</includes>
+    <includes refid="algorithms_2rotate_8hpp" local="no">hpx/parallel/algorithms/rotate.hpp</includes>
+    <includes refid="tagspec_8hpp" local="no">hpx/parallel/tagspec.hpp</includes>
+    <includes refid="projected__range_8hpp" local="no">hpx/parallel/traits/projected_range.hpp</includes>
+    <includes refid="projection__identity_8hpp" local="no">hpx/parallel/util/projection_identity.hpp</includes>
+    <includes local="no">type_traits</includes>
+    <includes local="no">utility</includes>
+    <includedby refid="container__algorithms_8hpp" local="no">libs/algorithms/include/hpx/parallel/container_algorithms.hpp</includedby>
+    <incdepgraph>
+      <node id="3708">
+        <label>list</label>
+      </node>
+      <node id="3714">
+        <label>atomic</label>
+      </node>
+      <node id="3691">
+        <label>hpx/type_support/always_void.hpp</label>
+      </node>
+      <node id="3684">
+        <label>hpx/parallel/traits/vector_pack_type.hpp</label>
+      </node>
+      <node id="3715">
+        <label>functional</label>
+      </node>
+      <node id="3665">
+        <label>hpx/iterator_support/range.hpp</label>
+      </node>
+      <node id="3666">
+        <label>hpx/util/tagged_pair.hpp</label>
+      </node>
+      <node id="3717">
+        <label>hpx/parallel/util/scan_partitioner.hpp</label>
+        <link refid="scan__partitioner_8hpp_source"/>
+        <childnode refid="3661" relation="include">
+        </childnode>
+        <childnode refid="3671" relation="include">
+        </childnode>
+        <childnode refid="3668" relation="include">
+        </childnode>
+        <childnode refid="3695" relation="include">
+        </childnode>
+        <childnode refid="3696" relation="include">
+        </childnode>
+        <childnode refid="3677" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+        <childnode refid="3699" relation="include">
+        </childnode>
+        <childnode refid="3693" relation="include">
+        </childnode>
+        <childnode refid="3700" relation="include">
+        </childnode>
+        <childnode refid="3701" relation="include">
+        </childnode>
+        <childnode refid="3703" relation="include">
+        </childnode>
+        <childnode refid="3704" relation="include">
+        </childnode>
+        <childnode refid="3705" relation="include">
+        </childnode>
+        <childnode refid="3706" relation="include">
+        </childnode>
+        <childnode refid="3707" relation="include">
+        </childnode>
+        <childnode refid="3708" relation="include">
+        </childnode>
+        <childnode refid="3709" relation="include">
+        </childnode>
+        <childnode refid="3689" relation="include">
+        </childnode>
+        <childnode refid="3690" relation="include">
+        </childnode>
+        <childnode refid="3710" relation="include">
+        </childnode>
+      </node>
+      <node id="3692">
+        <label>iterator</label>
+      </node>
+      <node id="3704">
+        <label>hpx/parallel/util/detail/select_partitioner.hpp</label>
+      </node>
+      <node id="3685">
+        <label>hpx/functional/traits/is_callable.hpp</label>
+      </node>
+      <node id="3728">
+        <label>hpx/util/annotated_function.hpp</label>
+      </node>
+      <node id="3681">
+        <label>hpx/datastructures/detail/pack.hpp</label>
+      </node>
+      <node id="3660">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/rotate.hpp</label>
+        <link refid="container__algorithms_2rotate_8hpp"/>
+        <childnode refid="3661" relation="include">
+        </childnode>
+        <childnode refid="3662" relation="include">
+        </childnode>
+        <childnode refid="3663" relation="include">
+        </childnode>
+        <childnode refid="3664" relation="include">
+        </childnode>
+        <childnode refid="3665" relation="include">
+        </childnode>
+        <childnode refid="3666" relation="include">
+        </childnode>
+        <childnode refid="3667" relation="include">
+        </childnode>
+        <childnode refid="3678" relation="include">
+        </childnode>
+        <childnode refid="3731" relation="include">
+        </childnode>
+        <childnode refid="3716" relation="include">
+        </childnode>
+        <childnode refid="3689" relation="include">
+        </childnode>
+        <childnode refid="3690" relation="include">
+        </childnode>
+      </node>
+      <node id="3730">
+        <label>cstdint</label>
+      </node>
+      <node id="3688">
+        <label>hpx/type_support/decay.hpp</label>
+      </node>
+      <node id="3677">
+        <label>hpx/parallel/execution_policy.hpp</label>
+      </node>
+      <node id="3687">
+        <label>hpx/traits/segmented_iterator_traits.hpp</label>
+        <link refid="segmented__iterator__traits_8hpp_source"/>
+        <childnode refid="3661" relation="include">
+        </childnode>
+        <childnode refid="3663" relation="include">
+        </childnode>
+        <childnode refid="3688" relation="include">
+        </childnode>
+        <childnode refid="3689" relation="include">
+        </childnode>
+        <childnode refid="3690" relation="include">
+        </childnode>
+      </node>
+      <node id="3661">
+        <label>hpx/config.hpp</label>
+      </node>
+      <node id="3724">
+        <label>boost/shared_array.hpp</label>
+      </node>
+      <node id="3725">
+        <label>hpx/parallel/algorithms/reverse.hpp</label>
+        <link refid="algorithms_2reverse_8hpp"/>
+        <childnode refid="3661" relation="include">
+        </childnode>
+        <childnode refid="3662" relation="include">
+        </childnode>
+        <childnode refid="3663" relation="include">
+        </childnode>
+        <childnode refid="3666" relation="include">
+        </childnode>
+        <childnode refid="3670" relation="include">
+        </childnode>
+        <childnode refid="3673" relation="include">
+        </childnode>
+        <childnode refid="3726" relation="include">
+        </childnode>
+        <childnode refid="3677" relation="include">
+        </childnode>
+        <childnode refid="3678" relation="include">
+        </childnode>
+        <childnode refid="3693" relation="include">
+        </childnode>
+        <childnode refid="3716" relation="include">
+        </childnode>
+        <childnode refid="3721" relation="include">
+        </childnode>
+        <childnode refid="3705" relation="include">
+        </childnode>
+        <childnode refid="3692" relation="include">
+        </childnode>
+        <childnode refid="3689" relation="include">
+        </childnode>
+        <childnode refid="3690" relation="include">
+        </childnode>
+      </node>
+      <node id="3700">
+        <label>hpx/parallel/util/detail/chunk_size.hpp</label>
+      </node>
+      <node id="3707">
+        <label>exception</label>
+      </node>
+      <node id="3718">
+        <label>hpx/parallel/util/transfer.hpp</label>
+        <link refid="transfer_8hpp_source"/>
+        <childnode refid="3661" relation="include">
+        </childnode>
+        <childnode refid="3719" relation="include">
+        </childnode>
+        <childnode refid="3688" relation="include">
+        </childnode>
+        <childnode refid="3705" relation="include">
+        </childnode>
+        <childnode refid="3706" relation="include">
+        </childnode>
+        <childnode refid="3720" relation="include">
+        </childnode>
+        <childnode refid="3692" relation="include">
+        </childnode>
+        <childnode refid="3709" relation="include">
+        </childnode>
+        <childnode refid="3689" relation="include">
+        </childnode>
+        <childnode refid="3690" relation="include">
+        </childnode>
+      </node>
+      <node id="3682">
+        <label>hpx/functional/result_of.hpp</label>
+      </node>
+      <node id="3669">
+        <label>hpx/util/unwrap.hpp</label>
+      </node>
+      <node id="3672">
+        <label>hpx/functional/invoke.hpp</label>
+      </node>
+      <node id="3731">
+        <label>hpx/parallel/traits/projected_range.hpp</label>
+        <link refid="projected__range_8hpp_source"/>
+        <childnode refid="3661" relation="include">
+        </childnode>
+        <childnode refid="3682" relation="include">
+        </childnode>
+        <childnode refid="3664" relation="include">
+        </childnode>
+        <childnode refid="3688" relation="include">
+        </childnode>
+        <childnode refid="3680" relation="include">
+        </childnode>
+        <childnode refid="3692" relation="include">
+        </childnode>
+        <childnode refid="3689" relation="include">
+        </childnode>
+      </node>
+      <node id="3701">
+        <label>hpx/parallel/util/detail/handle_local_exceptions.hpp</label>
+      </node>
+      <node id="3696">
+        <label>hpx/lcos/wait_all.hpp</label>
+      </node>
+      <node id="3662">
+        <label>hpx/concepts/concepts.hpp</label>
+      </node>
+      <node id="3663">
+        <label>hpx/iterator_support/is_iterator.hpp</label>
+      </node>
+      <node id="3686">
+        <label>hpx/traits/is_execution_policy.hpp</label>
+      </node>
+      <node id="3719">
+        <label>hpx/traits/pointer_category.hpp</label>
+      </node>
+      <node id="3694">
+        <label>hpx/parallel/util/foreach_partitioner.hpp</label>
+        <link refid="foreach__partitioner_8hpp_source"/>
+        <childnode refid="3661" relation="include">
+        </childnode>
+        <childnode refid="3668" relation="include">
+        </childnode>
+        <childnode refid="3671" relation="include">
+        </childnode>
+        <childnode refid="3695" relation="include">
+        </childnode>
+        <childnode refid="3696" relation="include">
+        </childnode>
+        <childnode refid="3697" relation="include">
+        </childnode>
+        <childnode refid="3675" relation="include">
+        </childnode>
+        <childnode refid="3677" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+        <childnode refid="3699" relation="include">
+        </childnode>
+        <childnode refid="3700" relation="include">
+        </childnode>
+        <childnode refid="3701" relation="include">
+        </childnode>
+        <childnode refid="3702" relation="include">
+        </childnode>
+        <childnode refid="3703" relation="include">
+        </childnode>
+        <childnode refid="3704" relation="include">
+        </childnode>
+        <childnode refid="3705" relation="include">
+        </childnode>
+        <childnode refid="3706" relation="include">
+        </childnode>
+        <childnode refid="3707" relation="include">
+        </childnode>
+        <childnode refid="3708" relation="include">
+        </childnode>
+        <childnode refid="3709" relation="include">
+        </childnode>
+        <childnode refid="3689" relation="include">
+        </childnode>
+        <childnode refid="3690" relation="include">
+        </childnode>
+        <childnode refid="3710" relation="include">
+        </childnode>
+      </node>
+      <node id="3680">
+        <label>hpx/parallel/traits/projected.hpp</label>
+        <link refid="projected_8hpp_source"/>
+        <childnode refid="3661" relation="include">
+        </childnode>
+        <childnode refid="3681" relation="include">
+        </childnode>
+        <childnode refid="3682" relation="include">
+        </childnode>
+        <childnode refid="3663" relation="include">
+        </childnode>
+        <childnode refid="3683" relation="include">
+        </childnode>
+        <childnode refid="3684" relation="include">
+        </childnode>
+        <childnode refid="3685" relation="include">
+        </childnode>
+        <childnode refid="3686" relation="include">
+        </childnode>
+        <childnode refid="3687" relation="include">
+        </childnode>
+        <childnode refid="3691" relation="include">
+        </childnode>
+        <childnode refid="3688" relation="include">
+        </childnode>
+        <childnode refid="3692" relation="include">
+        </childnode>
+        <childnode refid="3689" relation="include">
+        </childnode>
+      </node>
+      <node id="3674">
+        <label>hpx/parallel/algorithms/detail/is_negative.hpp</label>
+      </node>
+      <node id="3716">
+        <label>hpx/parallel/util/projection_identity.hpp</label>
+        <link refid="projection__identity_8hpp_source"/>
+        <childnode refid="3661" relation="include">
+        </childnode>
+        <childnode refid="3690" relation="include">
+        </childnode>
+      </node>
+      <node id="3721">
+        <label>hpx/parallel/util/zip_iterator.hpp</label>
+        <link refid="util_2zip__iterator_8hpp_source"/>
+        <childnode refid="3661" relation="include">
+        </childnode>
+        <childnode refid="3722" relation="include">
+        </childnode>
+        <childnode refid="3666" relation="include">
+        </childnode>
+        <childnode refid="3712" relation="include">
+        </childnode>
+        <childnode refid="3723" relation="include">
+        </childnode>
+        <childnode refid="3690" relation="include">
+        </childnode>
+      </node>
+      <node id="3703">
+        <label>hpx/parallel/util/detail/scoped_executor_parameters.hpp</label>
+      </node>
+      <node id="3675">
+        <label>hpx/parallel/algorithms/detail/predicates.hpp</label>
+      </node>
+      <node id="3698">
+        <label>hpx/parallel/executors/execution.hpp</label>
+      </node>
+      <node id="3710">
+        <label>vector</label>
+      </node>
+      <node id="3670">
+        <label>hpx/parallel/algorithms/copy.hpp</label>
+        <link refid="algorithms_2copy_8hpp"/>
+        <childnode refid="3661" relation="include">
+        </childnode>
+        <childnode refid="3671" relation="include">
+        </childnode>
+        <childnode refid="3662" relation="include">
+        </childnode>
+        <childnode refid="3672" relation="include">
+        </childnode>
+        <childnode refid="3663" relation="include">
+        </childnode>
+        <childnode refid="3666" relation="include">
+        </childnode>
+        <childnode refid="3673" relation="include">
+        </childnode>
+        <childnode refid="3674" relation="include">
+        </childnode>
+        <childnode refid="3675" relation="include">
+        </childnode>
+        <childnode refid="3676" relation="include">
+        </childnode>
+        <childnode refid="3677" relation="include">
+        </childnode>
+        <childnode refid="3678" relation="include">
+        </childnode>
+        <childnode refid="3680" relation="include">
+        </childnode>
+        <childnode refid="3693" relation="include">
+        </childnode>
+        <childnode refid="3694" relation="include">
+        </childnode>
+        <childnode refid="3711" relation="include">
+        </childnode>
+        <childnode refid="3716" relation="include">
+        </childnode>
+        <childnode refid="3717" relation="include">
+        </childnode>
+        <childnode refid="3718" relation="include">
+        </childnode>
+        <childnode refid="3721" relation="include">
+        </childnode>
+        <childnode refid="3697" relation="include">
+        </childnode>
+        <childnode refid="3705" relation="include">
+        </childnode>
+        <childnode refid="3706" relation="include">
+        </childnode>
+        <childnode refid="3720" relation="include">
+        </childnode>
+        <childnode refid="3692" relation="include">
+        </childnode>
+        <childnode refid="3709" relation="include">
+        </childnode>
+        <childnode refid="3689" relation="include">
+        </childnode>
+        <childnode refid="3690" relation="include">
+        </childnode>
+        <childnode refid="3710" relation="include">
+        </childnode>
+        <childnode refid="3724" relation="include">
+        </childnode>
+      </node>
+      <node id="3673">
+        <label>hpx/parallel/algorithms/detail/dispatch.hpp</label>
+      </node>
+      <node id="3679">
+        <label>hpx/util/tagged.hpp</label>
+      </node>
+      <node id="3667">
+        <label>hpx/parallel/algorithms/rotate.hpp</label>
+        <link refid="algorithms_2rotate_8hpp"/>
+        <childnode refid="3661" relation="include">
+        </childnode>
+        <childnode refid="3668" relation="include">
+        </childnode>
+        <childnode refid="3662" relation="include">
+        </childnode>
+        <childnode refid="3663" relation="include">
+        </childnode>
+        <childnode refid="3666" relation="include">
+        </childnode>
+        <childnode refid="3669" relation="include">
+        </childnode>
+        <childnode refid="3670" relation="include">
+        </childnode>
+        <childnode refid="3673" relation="include">
+        </childnode>
+        <childnode refid="3725" relation="include">
+        </childnode>
+        <childnode refid="3677" relation="include">
+        </childnode>
+        <childnode refid="3678" relation="include">
+        </childnode>
+        <childnode refid="3693" relation="include">
+        </childnode>
+        <childnode refid="3718" relation="include">
+        </childnode>
+        <childnode refid="3705" relation="include">
+        </childnode>
+        <childnode refid="3692" relation="include">
+        </childnode>
+        <childnode refid="3689" relation="include">
+        </childnode>
+        <childnode refid="3690" relation="include">
+        </childnode>
+      </node>
+      <node id="3690">
+        <label>utility</label>
+      </node>
+      <node id="3727">
+        <label>hpx/traits/is_value_proxy.hpp</label>
+        <link refid="is__value__proxy_8hpp_source"/>
+        <childnode refid="3689" relation="include">
+        </childnode>
+      </node>
+      <node id="3695">
+        <label>hpx/errors.hpp</label>
+      </node>
+      <node id="3678">
+        <label>hpx/parallel/tagspec.hpp</label>
+        <link refid="tagspec_8hpp_source"/>
+        <childnode refid="3661" relation="include">
+        </childnode>
+        <childnode refid="3679" relation="include">
+        </childnode>
+      </node>
+      <node id="3729">
+        <label>hpx/type_support/identity.hpp</label>
+      </node>
+      <node id="3664">
+        <label>hpx/iterator_support/is_range.hpp</label>
+      </node>
+      <node id="3671">
+        <label>hpx/assertion.hpp</label>
+      </node>
+      <node id="3697">
+        <label>hpx/type_support/unused.hpp</label>
+      </node>
+      <node id="3676">
+        <label>hpx/parallel/algorithms/detail/transfer.hpp</label>
+      </node>
+      <node id="3699">
+        <label>hpx/parallel/executors/execution_parameters.hpp</label>
+      </node>
+      <node id="3706">
+        <label>cstddef</label>
+      </node>
+      <node id="3723">
+        <label>hpx/util/zip_iterator.hpp</label>
+      </node>
+      <node id="3726">
+        <label>hpx/parallel/algorithms/for_each.hpp</label>
+        <link refid="algorithms_2for__each_8hpp"/>
+        <childnode refid="3661" relation="include">
+        </childnode>
+        <childnode refid="3662" relation="include">
+        </childnode>
+        <childnode refid="3672" relation="include">
+        </childnode>
+        <childnode refid="3685" relation="include">
+        </childnode>
+        <childnode refid="3663" relation="include">
+        </childnode>
+        <childnode refid="3727" relation="include">
+        </childnode>
+        <childnode refid="3687" relation="include">
+        </childnode>
+        <childnode refid="3728" relation="include">
+        </childnode>
+        <childnode refid="3729" relation="include">
+        </childnode>
+        <childnode refid="3673" relation="include">
+        </childnode>
+        <childnode refid="3674" relation="include">
+        </childnode>
+        <childnode refid="3677" relation="include">
+        </childnode>
+        <childnode refid="3680" relation="include">
+        </childnode>
+        <childnode refid="3693" relation="include">
+        </childnode>
+        <childnode refid="3694" relation="include">
+        </childnode>
+        <childnode refid="3711" relation="include">
+        </childnode>
+        <childnode refid="3716" relation="include">
+        </childnode>
+        <childnode refid="3705" relation="include">
+        </childnode>
+        <childnode refid="3706" relation="include">
+        </childnode>
+        <childnode refid="3730" relation="include">
+        </childnode>
+        <childnode refid="3692" relation="include">
+        </childnode>
+        <childnode refid="3689" relation="include">
+        </childnode>
+        <childnode refid="3690" relation="include">
+        </childnode>
+      </node>
+      <node id="3722">
+        <label>hpx/lcos/future.hpp</label>
+      </node>
+      <node id="3689">
+        <label>type_traits</label>
+      </node>
+      <node id="3705">
+        <label>algorithm</label>
+      </node>
+      <node id="3693">
+        <label>hpx/parallel/util/detail/algorithm_result.hpp</label>
+      </node>
+      <node id="3683">
+        <label>hpx/parallel/traits/vector_pack_load_store.hpp</label>
+      </node>
+      <node id="3668">
+        <label>hpx/dataflow.hpp</label>
+      </node>
+      <node id="3711">
+        <label>hpx/parallel/util/loop.hpp</label>
+        <link refid="util_2loop_8hpp_source"/>
+        <childnode refid="3661" relation="include">
+        </childnode>
+        <childnode refid="3671" relation="include">
+        </childnode>
+        <childnode refid="3712" relation="include">
+        </childnode>
+        <childnode refid="3672" relation="include">
+        </childnode>
+        <childnode refid="3682" relation="include">
+        </childnode>
+        <childnode refid="3713" relation="include">
+        </childnode>
+        <childnode refid="3716" relation="include">
+        </childnode>
+        <childnode refid="3686" relation="include">
+        </childnode>
+        <childnode refid="3705" relation="include">
+        </childnode>
+        <childnode refid="3706" relation="include">
+        </childnode>
+        <childnode refid="3692" relation="include">
+        </childnode>
+        <childnode refid="3689" relation="include">
+        </childnode>
+        <childnode refid="3690" relation="include">
+        </childnode>
+        <childnode refid="3710" relation="include">
+        </childnode>
+      </node>
+      <node id="3720">
+        <label>cstring</label>
+      </node>
+      <node id="3702">
+        <label>hpx/parallel/util/detail/partitioner_iteration.hpp</label>
+      </node>
+      <node id="3713">
+        <label>hpx/parallel/util/cancellation_token.hpp</label>
+        <link refid="cancellation__token_8hpp_source"/>
+        <childnode refid="3661" relation="include">
+        </childnode>
+        <childnode refid="3705" relation="include">
+        </childnode>
+        <childnode refid="3714" relation="include">
+        </childnode>
+        <childnode refid="3715" relation="include">
+        </childnode>
+        <childnode refid="3709" relation="include">
+        </childnode>
+      </node>
+      <node id="3709">
+        <label>memory</label>
+      </node>
+      <node id="3712">
+        <label>hpx/datastructures/tuple.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3732">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/rotate.hpp</label>
+        <link refid="container__algorithms_2rotate_8hpp"/>
+        <childnode refid="3733" relation="include">
+        </childnode>
+      </node>
+      <node id="3733">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms.hpp</label>
+        <link refid="container__algorithms_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacehpx">hpx</innernamespace>
+    <innernamespace refid="namespacehpx_1_1parallel">hpx::parallel</innernamespace>
+    <innernamespace refid="namespacehpx_1_1parallel_1_1v1">hpx::parallel::v1</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2007-2015<sp/>Hartmut<sp/>Kaiser</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Distributed<sp/>under<sp/>the<sp/>Boost<sp/>Software<sp/>License,<sp/>Version<sp/>1.0.<sp/>(See<sp/>accompanying</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>file<sp/>LICENSE_1_0.txt<sp/>or<sp/>copy<sp/>at<sp/>http://www.boost.org/LICENSE_1_0.txt)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(HPX_PARALLEL_CONTAINER_ALGORITHM_ROTATE_DEC_22_2015_0736PM)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPX_PARALLEL_CONTAINER_ALGORITHM_ROTATE_DEC_22_2015_0736PM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/config.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/concepts/concepts.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/iterator_support/is_iterator.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/iterator_support/is_range.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/iterator_support/range.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/util/tagged_pair.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="algorithms_2rotate_8hpp" kindref="compound">hpx/parallel/algorithms/rotate.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/parallel/tagspec.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/parallel/traits/projected_range.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/parallel/util/projection_identity.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;type_traits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehpx" kindref="compound">hpx</ref><sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">parallel<sp/>{<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">v1</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ExPolicy,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Rng,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>HPX_CONCEPT_REQUIRES_(</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>execution::is_execution_policy&lt;ExPolicy&gt;::value<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::traits::is_range&lt;Rng&gt;::value)&gt;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>util::detail::algorithm_result&lt;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ExPolicy,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::util::tagged_pair&lt;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tag::begin(</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>hpx::traits::range_iterator&lt;Rng&gt;::type),</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tag::end(</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>hpx::traits::range_iterator&lt;Rng&gt;::type)</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>&gt;::type</highlight></codeline>
+<codeline lineno="84" refid="container__algorithms_2rotate_8hpp_1ab4b35e2f650c01460f25f0db0d9734ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="container__algorithms_2rotate_8hpp_1ab4b35e2f650c01460f25f0db0d9734ab" kindref="member">rotate</ref>(ExPolicy<sp/>&amp;&amp;<sp/>policy,<sp/>Rng<sp/>&amp;&amp;<sp/>rng,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>hpx::traits::range_iterator&lt;Rng&gt;::type<sp/>middle)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="container__algorithms_2rotate_8hpp_1ab4b35e2f650c01460f25f0db0d9734ab" kindref="member">rotate</ref>(std::forward&lt;ExPolicy&gt;(policy),</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::util::begin(rng),<sp/>middle,<sp/>hpx::util::end(rng));</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ExPolicy,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Rng,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>OutIter,</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>HPX_CONCEPT_REQUIRES_(</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>execution::is_execution_policy&lt;ExPolicy&gt;::value<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::traits::is_range&lt;Rng&gt;::value<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::traits::is_iterator&lt;OutIter&gt;::value)&gt;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>util::detail::algorithm_result&lt;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ExPolicy,</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::util::tagged_pair&lt;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tag::in(</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>hpx::traits::range_iterator&lt;Rng&gt;::type),</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tag::out(OutIter)</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>&gt;::type</highlight></codeline>
+<codeline lineno="150" refid="container__algorithms_2rotate_8hpp_1a00b60fccffa0c06eb6befe8913fab07a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="container__algorithms_2rotate_8hpp_1a00b60fccffa0c06eb6befe8913fab07a" kindref="member">rotate_copy</ref>(ExPolicy<sp/>&amp;&amp;<sp/>policy,<sp/>Rng<sp/>&amp;&amp;<sp/>rng,</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>hpx::traits::range_iterator&lt;Rng&gt;::type<sp/>middle,<sp/>OutIter<sp/>dest_first)</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="container__algorithms_2rotate_8hpp_1a00b60fccffa0c06eb6befe8913fab07a" kindref="member">rotate_copy</ref>(std::forward&lt;ExPolicy&gt;(policy),</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::util::begin(rng),<sp/>middle,<sp/>hpx::util::end(rng),<sp/>dest_first);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal">}}}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="libs/algorithms/include/hpx/parallel/container_algorithms/rotate.hpp"/>
+  </compounddef>
+</doxygen>

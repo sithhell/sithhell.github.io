@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structmoodycamel_1_1_concurrent_queue_1_1_implicit_producer_hash" kind="struct" language="C++" prot="private">
+    <compoundname>moodycamel::ConcurrentQueue::ImplicitProducerHash</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmoodycamel_1_1_concurrent_queue_1_1_implicit_producer_hash_1a921e5d612c3e23ec769271da7271ac9b" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t moodycamel::ConcurrentQueue&lt; T, Traits &gt;::ImplicitProducerHash::capacity</definition>
+        <argsstring></argsstring>
+        <name>capacity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="3255" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="3255" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmoodycamel_1_1_concurrent_queue_1_1_implicit_producer_hash_1af28051de6c7907cb3048284912bf8e99" prot="public" static="no" mutable="no">
+        <type>ImplicitProducerKVP *</type>
+        <definition>ImplicitProducerKVP* moodycamel::ConcurrentQueue&lt; T, Traits &gt;::ImplicitProducerHash::entries</definition>
+        <argsstring></argsstring>
+        <name>entries</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="3256" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="3256" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmoodycamel_1_1_concurrent_queue_1_1_implicit_producer_hash_1a7bf3b0ec8a195fea148d663e7e8a6c77" prot="public" static="no" mutable="no">
+        <type>ImplicitProducerHash *</type>
+        <definition>ImplicitProducerHash* moodycamel::ConcurrentQueue&lt; T, Traits &gt;::ImplicitProducerHash::prev</definition>
+        <argsstring></argsstring>
+        <name>prev</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="3257" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="3257" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="109">
+        <label>moodycamel::details::max_align_t</label>
+        <link refid="unionmoodycamel_1_1details_1_1max__align__t"/>
+      </node>
+      <node id="104">
+        <label>moodycamel::ConcurrentQueue&lt; T, Traits &gt;::ImplicitProducer</label>
+        <childnode refid="105" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="108">
+        <label>moodycamel::ConcurrentQueue&lt; T, Traits &gt;::Block</label>
+        <childnode refid="108" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="109" relation="usage">
+          <edgelabel>dummy</edgelabel>
+        </childnode>
+      </node>
+      <node id="106">
+        <label>moodycamel::details::ConcurrentQueueProducerTypelessBase</label>
+        <link refid="structmoodycamel_1_1details_1_1_concurrent_queue_producer_typeless_base"/>
+        <childnode refid="106" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="107" relation="usage">
+          <edgelabel>token</edgelabel>
+        </childnode>
+      </node>
+      <node id="105">
+        <label>moodycamel::ConcurrentQueue&lt; T, Traits &gt;::ProducerBase</label>
+        <childnode refid="106" relation="public-inheritance">
+        </childnode>
+        <childnode refid="108" relation="usage">
+          <edgelabel>tailBlock</edgelabel>
+        </childnode>
+        <childnode refid="110" relation="usage">
+          <edgelabel>parent</edgelabel>
+        </childnode>
+      </node>
+      <node id="107">
+        <label>moodycamel::ProducerToken</label>
+        <link refid="structmoodycamel_1_1_producer_token"/>
+        <childnode refid="106" relation="usage">
+          <edgelabel>producer</edgelabel>
+        </childnode>
+      </node>
+      <node id="102">
+        <label>moodycamel::ConcurrentQueue&lt; T, Traits &gt;::ImplicitProducerHash</label>
+        <childnode refid="103" relation="usage">
+          <edgelabel>entries</edgelabel>
+        </childnode>
+        <childnode refid="102" relation="usage">
+          <edgelabel>prev</edgelabel>
+        </childnode>
+      </node>
+      <node id="103">
+        <label>moodycamel::ConcurrentQueue&lt; T, Traits &gt;::ImplicitProducerKVP</label>
+        <childnode refid="104" relation="usage">
+          <edgelabel>value</edgelabel>
+        </childnode>
+      </node>
+      <node id="110">
+        <label>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</label>
+        <link refid="classmoodycamel_1_1_concurrent_queue"/>
+      </node>
+    </collaborationgraph>
+    <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="3254" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="3253" bodyend="3258"/>
+    <listofallmembers>
+      <member refid="structmoodycamel_1_1_concurrent_queue_1_1_implicit_producer_hash_1a921e5d612c3e23ec769271da7271ac9b" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue::ImplicitProducerHash</scope><name>capacity</name></member>
+      <member refid="structmoodycamel_1_1_concurrent_queue_1_1_implicit_producer_hash_1af28051de6c7907cb3048284912bf8e99" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue::ImplicitProducerHash</scope><name>entries</name></member>
+      <member refid="structmoodycamel_1_1_concurrent_queue_1_1_implicit_producer_hash_1a7bf3b0ec8a195fea148d663e7e8a6c77" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue::ImplicitProducerHash</scope><name>prev</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacehpx_1_1naming" kind="namespace" language="C++">
+    <compoundname>hpx::naming</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="unmanaged_8hpp_1a8b643a46e6d3010373f8a313ca43c5b5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>id_type</type>
+        <definition>id_type hpx::naming::unmanaged</definition>
+        <argsstring>(id_type const &amp;id)</argsstring>
+        <name>unmanaged</name>
+        <param>
+          <type>id_type const &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The helper function <emphasis>hpx::unmanaged</emphasis> can be used to generate a global identifier which does not participate in the automatic garbage collection.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The id to generated the unmanaged global id from This parameter can be itself a managed or a unmanaged global id.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function returns a new global id referencing the same object as the parameter <emphasis>id</emphasis>. The only difference is that the returned global identifier does not participate in the automatic garbage collection.</para></simplesect>
+<simplesect kind="note"><para>This function allows to apply certain optimizations to the process of memory management in HPX. It however requires the user to take full responsibility for keeping the referenced objects alive long enough. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/naming/unmanaged.hpp" line="33" column="1" bodyfile="hpx/runtime/naming/unmanaged.hpp" bodystart="33" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="hpx/runtime/naming/unmanaged.hpp" line="14" column="1"/>
+  </compounddef>
+</doxygen>

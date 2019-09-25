@@ -1,0 +1,408 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacehpx_1_1performance__counters" kind="namespace" language="C++">
+    <compoundname>hpx::performance_counters</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="manage__counter__type_8hpp_1a4145b8ec6c6b285ea708fd1ac981431f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>counter_status</type>
+        <definition>counter_status hpx::performance_counters::install_counter_type</definition>
+        <argsstring>(std::string const &amp;name, hpx::util::function_nonser&lt; std::int64_t(bool)&gt; const &amp;counter_value, std::string const &amp;helptext=&quot;&quot;, std::string const &amp;uom=&quot;&quot;, error_code &amp;ec=throws)</argsstring>
+        <name>install_counter_type</name>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>hpx::util::function_nonser&lt; std::int64_t(bool)&gt; const &amp;</type>
+          <declname>counter_value</declname>
+        </param>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>helptext</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>uom</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+<para>Install a new generic performance counter type in a way, which will uninstall it automatically during shutdown. </para>        </briefdescription>
+        <detaileddescription>
+<para>The function <emphasis>install_counter_type</emphasis> will register a new generic counter type based on the provided function. The counter type will be automatically unregistered during system shutdown. Any consumer querying any instance of this this counter type will cause the provided function to be called and the returned value to be exposed as the counter value.</para><para>The counter type is registered such that there can be one counter instance per locality. The expected naming scheme for the counter instances is: <computeroutput>&apos;/objectname{locality#&lt;*&gt;/total}/countername&apos;</computeroutput> where &apos;&lt;*&gt;&apos; is a zero based integer identifying the locality the counter is created on.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The global virtual name of the counter type. This name is expected to have the format /objectname/countername. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>counter_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The function to call whenever the counter value is requested by a consumer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>helptext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in, optional] A longer descriptive text shown to the user to explain the nature of the counters created from this type. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>uom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The unit of measure for the new performance counter type. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in,out] this represents the error status on exit, if this is pre-initialized to <emphasis>hpx::throws</emphasis> the function will throw on error instead.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>As long as <emphasis>ec</emphasis> is not pre-initialized to <emphasis>hpx::throws</emphasis> this function doesn&apos;t throw but returns the result code using the parameter <emphasis>ec</emphasis>. Otherwise it throws an instance of hpx::exception.</para></simplesect>
+<simplesect kind="return"><para>If successful, this function returns <emphasis>status_valid_data</emphasis>, otherwise it will either throw an exception or return an error_code from the enum <emphasis>counter_status</emphasis> (also, see note related to parameter <emphasis>ec</emphasis>).</para></simplesect>
+<simplesect kind="note"><para>The counter type registry is a locality based service. You will have to register each counter type on every locality where a corresponding performance counter will be created. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/performance_counters/manage_counter_type.hpp" line="67" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="manage__counter__type_8hpp_1a512827b46aa77a2aeae582d74796dcdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>counter_status</type>
+        <definition>counter_status hpx::performance_counters::install_counter_type</definition>
+        <argsstring>(std::string const &amp;name, hpx::util::function_nonser&lt; std::vector&lt; std::int64_t &gt;(bool)&gt; const &amp;counter_value, std::string const &amp;helptext=&quot;&quot;, std::string const &amp;uom=&quot;&quot;, error_code &amp;ec=throws)</argsstring>
+        <name>install_counter_type</name>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>hpx::util::function_nonser&lt; std::vector&lt; std::int64_t &gt;(bool)&gt; const &amp;</type>
+          <declname>counter_value</declname>
+        </param>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>helptext</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>uom</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Install a new generic performance counter type returning an array of values in a way, that will uninstall it automatically during shutdown.</para><para>The function <emphasis>install_counter_type</emphasis> will register a new generic counter type that returns an array of values based on the provided function. The counter type will be automatically unregistered during system shutdown. Any consumer querying any instance of this this counter type will cause the provided function to be called and the returned array value to be exposed as the counter value.</para><para>The counter type is registered such that there can be one counter instance per locality. The expected naming scheme for the counter instances is: <computeroutput>&apos;/objectname{locality#&lt;*&gt;/total}/countername&apos;</computeroutput> where &apos;&lt;*&gt;&apos; is a zero based integer identifying the locality the counter is created on.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The global virtual name of the counter type. This name is expected to have the format /objectname/countername. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>counter_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The function to call whenever the counter value (array of values) is requested by a consumer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>helptext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in, optional] A longer descriptive text shown to the user to explain the nature of the counters created from this type. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>uom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The unit of measure for the new performance counter type. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in,out] this represents the error status on exit, if this is pre-initialized to <emphasis>hpx::throws</emphasis> the function will throw on error instead.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>As long as <emphasis>ec</emphasis> is not pre-initialized to <emphasis>hpx::throws</emphasis> this function doesn&apos;t throw but returns the result code using the parameter <emphasis>ec</emphasis>. Otherwise it throws an instance of hpx::exception.</para></simplesect>
+<simplesect kind="return"><para>If successful, this function returns <emphasis>status_valid_data</emphasis>, otherwise it will either throw an exception or return an error_code from the enum <emphasis>counter_status</emphasis> (also, see note related to parameter <emphasis>ec</emphasis>).</para></simplesect>
+<simplesect kind="note"><para>The counter type registry is a locality based service. You will have to register each counter type on every locality where a corresponding performance counter will be created. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/performance_counters/manage_counter_type.hpp" line="115" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="manage__counter__type_8hpp_1a277528fe531a67c7e27f9d006a0262c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpx::performance_counters::install_counter_type</definition>
+        <argsstring>(std::string const &amp;name, counter_type type, error_code &amp;ec=throws)</argsstring>
+        <name>install_counter_type</name>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>counter_type</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+<para>Install a new performance counter type in a way, which will uninstall it automatically during shutdown. </para>        </briefdescription>
+        <detaileddescription>
+<para>The function <emphasis>install_counter_type</emphasis> will register a new counter type based on the provided <emphasis>counter_type_info</emphasis>. The counter type will be automatically unregistered during system shutdown.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The global virtual name of the counter type. This name is expected to have the format /objectname/countername. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The type of the counters of this counter_type. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in,out] this represents the error status on exit, if this is pre-initialized to <emphasis>hpx::throws</emphasis> the function will throw on error instead.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>If successful, this function returns <emphasis>status_valid_data</emphasis>, otherwise it will either throw an exception or return an error_code from the enum <emphasis>counter_status</emphasis> (also, see note related to parameter <emphasis>ec</emphasis>).</para></simplesect>
+<simplesect kind="note"><para>The counter type registry is a locality based service. You will have to register each counter type on every locality where a corresponding performance counter will be created.</para></simplesect>
+<simplesect kind="note"><para>As long as <emphasis>ec</emphasis> is not pre-initialized to <emphasis>hpx::throws</emphasis> this function doesn&apos;t throw but returns the result code using the parameter <emphasis>ec</emphasis>. Otherwise it throws an instance of hpx::exception. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/performance_counters/manage_counter_type.hpp" line="147" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="manage__counter__type_8hpp_1a0c073f0969350d0d1b69c78a2389b46c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>counter_status</type>
+        <definition>counter_status hpx::performance_counters::install_counter_type</definition>
+        <argsstring>(std::string const &amp;name, counter_type type, std::string const &amp;helptext, std::string const &amp;uom=&quot;&quot;, std::uint32_t version=HPX_PERFORMANCE_COUNTER_V1, error_code &amp;ec=throws)</argsstring>
+        <name>install_counter_type</name>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>counter_type</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>helptext</declname>
+        </param>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>uom</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>version</declname>
+          <defval>HPX_PERFORMANCE_COUNTER_V1</defval>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+<para>Install a new performance counter type in a way, which will uninstall it automatically during shutdown. </para>        </briefdescription>
+        <detaileddescription>
+<para>The function <emphasis>install_counter_type</emphasis> will register a new counter type based on the provided <emphasis>counter_type_info</emphasis>. The counter type will be automatically unregistered during system shutdown.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The global virtual name of the counter type. This name is expected to have the format /objectname/countername. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The type of the counters of this counter_type. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>helptext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] A longer descriptive text shown to the user to explain the nature of the counters created from this type. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>uom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The unit of measure for the new performance counter type. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>version</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The version of the counter type. This is currently expected to be set to HPX_PERFORMANCE_COUNTER_V1. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in,out] this represents the error status on exit, if this is pre-initialized to <emphasis>hpx::throws</emphasis> the function will throw on error instead.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>If successful, this function returns <emphasis>status_valid_data</emphasis>, otherwise it will either throw an exception or return an error_code from the enum <emphasis>counter_status</emphasis> (also, see note related to parameter <emphasis>ec</emphasis>).</para></simplesect>
+<simplesect kind="note"><para>The counter type registry is a locality based service. You will have to register each counter type on every locality where a corresponding performance counter will be created.</para></simplesect>
+<simplesect kind="note"><para>As long as <emphasis>ec</emphasis> is not pre-initialized to <emphasis>hpx::throws</emphasis> this function doesn&apos;t throw but returns the result code using the parameter <emphasis>ec</emphasis>. Otherwise it throws an instance of hpx::exception. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/performance_counters/manage_counter_type.hpp" line="183" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="manage__counter__type_8hpp_1a5ebccbe19d974595deefd7e6b89f9e11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>counter_status</type>
+        <definition>counter_status hpx::performance_counters::install_counter_type</definition>
+        <argsstring>(std::string const &amp;name, counter_type type, std::string const &amp;helptext, create_counter_func const &amp;create_counter, discover_counters_func const &amp;discover_counters, std::uint32_t version=HPX_PERFORMANCE_COUNTER_V1, std::string const &amp;uom=&quot;&quot;, error_code &amp;ec=throws)</argsstring>
+        <name>install_counter_type</name>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>counter_type</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>helptext</declname>
+        </param>
+        <param>
+          <type>create_counter_func const &amp;</type>
+          <declname>create_counter</declname>
+        </param>
+        <param>
+          <type>discover_counters_func const &amp;</type>
+          <declname>discover_counters</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>version</declname>
+          <defval>HPX_PERFORMANCE_COUNTER_V1</defval>
+        </param>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>uom</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+<para>Install a new generic performance counter type in a way, which will uninstall it automatically during shutdown. </para>        </briefdescription>
+        <detaileddescription>
+<para>The function <emphasis>install_counter_type</emphasis> will register a new generic counter type based on the provided <emphasis>counter_type_info</emphasis>. The counter type will be automatically unregistered during system shutdown.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The global virtual name of the counter type. This name is expected to have the format /objectname/countername. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The type of the counters of this counter_type. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>helptext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] A longer descriptive text shown to the user to explain the nature of the counters created from this type. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>version</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The version of the counter type. This is currently expected to be set to HPX_PERFORMANCE_COUNTER_V1. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>create_counter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The function which will be called to create a new instance of this counter type. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>discover_counters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The function will be called to discover counter instances which can be created. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>uom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The unit of measure of the counter type (default: &quot;&quot;) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in,out] this represents the error status on exit, if this is pre-initialized to <emphasis>hpx::throws</emphasis> the function will throw on error instead.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>As long as <emphasis>ec</emphasis> is not pre-initialized to <emphasis>hpx::throws</emphasis> this function doesn&apos;t throw but returns the result code using the parameter <emphasis>ec</emphasis>. Otherwise it throws an instance of hpx::exception.</para></simplesect>
+<simplesect kind="return"><para>If successful, this function returns <emphasis>status_valid_data</emphasis>, otherwise it will either throw an exception or return an error_code from the enum <emphasis>counter_status</emphasis> (also, see note related to parameter <emphasis>ec</emphasis>).</para></simplesect>
+<simplesect kind="note"><para>The counter type registry is a locality based service. You will have to register each counter type on every locality where a corresponding performance counter will be created. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/performance_counters/manage_counter_type.hpp" line="225" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="hpx/performance_counters/manage_counter_type.hpp" line="25" column="1"/>
+  </compounddef>
+</doxygen>

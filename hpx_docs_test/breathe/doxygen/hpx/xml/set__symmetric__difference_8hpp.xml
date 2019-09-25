@@ -1,0 +1,893 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="set__symmetric__difference_8hpp" kind="file" language="C++">
+    <compoundname>set_symmetric_difference.hpp</compoundname>
+    <includes local="no">hpx/config.hpp</includes>
+    <includes local="no">hpx/traits/is_iterator.hpp</includes>
+    <includes local="no">hpx/util/decay.hpp</includes>
+    <includes refid="algorithms_2copy_8hpp" local="no">hpx/parallel/algorithms/copy.hpp</includes>
+    <includes local="no">hpx/parallel/algorithms/detail/dispatch.hpp</includes>
+    <includes local="no">hpx/parallel/algorithms/detail/set_operation.hpp</includes>
+    <includes refid="execution__policy_8hpp" local="no">hpx/parallel/execution_policy.hpp</includes>
+    <includes local="no">hpx/parallel/util/detail/algorithm_result.hpp</includes>
+    <includes local="no">hpx/parallel/util/loop.hpp</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">iterator</includes>
+    <includes local="no">type_traits</includes>
+    <includes local="no">utility</includes>
+    <includedby refid="algorithm_8hpp" local="no">hpx/parallel/algorithm.hpp</includedby>
+    <incdepgraph>
+      <node id="5895">
+        <label>hpx/traits/is_execution_policy.hpp</label>
+        <link refid="is__execution__policy_8hpp"/>
+        <childnode refid="5810" relation="include">
+        </childnode>
+        <childnode refid="5812" relation="include">
+        </childnode>
+        <childnode refid="5819" relation="include">
+        </childnode>
+      </node>
+      <node id="5876">
+        <label>atomic</label>
+      </node>
+      <node id="5884">
+        <label>functional</label>
+      </node>
+      <node id="5873">
+        <label>hpx/util/register_locks.hpp</label>
+      </node>
+      <node id="5835">
+        <label>hpx/parallel/executors/post_policy_dispatch.hpp</label>
+      </node>
+      <node id="5821">
+        <label>hpx/util/tagged_pair.hpp</label>
+      </node>
+      <node id="5874">
+        <label>hpx/util/steady_clock.hpp</label>
+      </node>
+      <node id="5893">
+        <label>iterator</label>
+      </node>
+      <node id="5859">
+        <label>cstdint</label>
+      </node>
+      <node id="5847">
+        <label>hpx/throw_exception.hpp</label>
+        <link refid="throw__exception_8hpp"/>
+        <childnode refid="5810" relation="include">
+        </childnode>
+        <childnode refid="5843" relation="include">
+        </childnode>
+        <childnode refid="5846" relation="include">
+        </childnode>
+        <childnode refid="5848" relation="include">
+        </childnode>
+        <childnode refid="5849" relation="include">
+        </childnode>
+        <childnode refid="5850" relation="include">
+        </childnode>
+        <childnode refid="5851" relation="include">
+        </childnode>
+        <childnode refid="5844" relation="include">
+        </childnode>
+        <childnode refid="5852" relation="include">
+        </childnode>
+        <childnode refid="5845" relation="include">
+        </childnode>
+        <childnode refid="5853" relation="include">
+        </childnode>
+        <childnode refid="5854" relation="include">
+        </childnode>
+      </node>
+      <node id="5865">
+        <label>hpx/runtime/threads/policies/scheduler_mode.hpp</label>
+        <link refid="scheduler__mode_8hpp_source"/>
+      </node>
+      <node id="5870">
+        <label>hpx/util/function.hpp</label>
+      </node>
+      <node id="5909">
+        <label>hpx/parallel/algorithms/detail/set_operation.hpp</label>
+      </node>
+      <node id="5846">
+        <label>hpx/exception_fwd.hpp</label>
+        <link refid="exception__fwd_8hpp"/>
+        <childnode refid="5810" relation="include">
+        </childnode>
+        <childnode refid="5843" relation="include">
+        </childnode>
+        <childnode refid="5847" relation="include">
+        </childnode>
+      </node>
+      <node id="5898">
+        <label>hpx/parallel/traits/projected.hpp</label>
+      </node>
+      <node id="5817">
+        <label>hpx/util/void_guard.hpp</label>
+      </node>
+      <node id="5816">
+        <label>hpx/util/result_of.hpp</label>
+      </node>
+      <node id="5855">
+        <label>stdexcept</label>
+      </node>
+      <node id="5856">
+        <label>hpx/runtime/launch_policy.hpp</label>
+        <link refid="launch__policy_8hpp"/>
+        <childnode refid="5810" relation="include">
+        </childnode>
+        <childnode refid="5857" relation="include">
+        </childnode>
+        <childnode refid="5860" relation="include">
+        </childnode>
+        <childnode refid="5819" relation="include">
+        </childnode>
+        <childnode refid="5820" relation="include">
+        </childnode>
+      </node>
+      <node id="5845">
+        <label>string</label>
+      </node>
+      <node id="5897">
+        <label>hpx/parallel/tagspec.hpp</label>
+      </node>
+      <node id="5850">
+        <label>hpx/util/detail/pp/nargs.hpp</label>
+      </node>
+      <node id="5896">
+        <label>hpx/traits/is_launch_policy.hpp</label>
+      </node>
+      <node id="5861">
+        <label>hpx/runtime/threads/thread_helpers.hpp</label>
+        <link refid="thread__helpers_8hpp_source"/>
+        <childnode refid="5810" relation="include">
+        </childnode>
+        <childnode refid="5846" relation="include">
+        </childnode>
+        <childnode refid="5862" relation="include">
+        </childnode>
+        <childnode refid="5863" relation="include">
+        </childnode>
+        <childnode refid="5864" relation="include">
+        </childnode>
+        <childnode refid="5865" relation="include">
+        </childnode>
+        <childnode refid="5866" relation="include">
+        </childnode>
+        <childnode refid="5857" relation="include">
+        </childnode>
+        <childnode refid="5869" relation="include">
+        </childnode>
+        <childnode refid="5871" relation="include">
+        </childnode>
+        <childnode refid="5873" relation="include">
+        </childnode>
+        <childnode refid="5874" relation="include">
+        </childnode>
+        <childnode refid="5875" relation="include">
+        </childnode>
+        <childnode refid="5876" relation="include">
+        </childnode>
+        <childnode refid="5877" relation="include">
+        </childnode>
+        <childnode refid="5840" relation="include">
+        </childnode>
+        <childnode refid="5859" relation="include">
+        </childnode>
+        <childnode refid="5819" relation="include">
+        </childnode>
+        <childnode refid="5820" relation="include">
+        </childnode>
+      </node>
+      <node id="5843">
+        <label>hpx/error.hpp</label>
+        <link refid="error_8hpp"/>
+        <childnode refid="5810" relation="include">
+        </childnode>
+        <childnode refid="5844" relation="include">
+        </childnode>
+        <childnode refid="5845" relation="include">
+        </childnode>
+      </node>
+      <node id="5853">
+        <label>hpx/config/warnings_prefix.hpp</label>
+      </node>
+      <node id="5810">
+        <label>hpx/config.hpp</label>
+      </node>
+      <node id="5908">
+        <label>boost/shared_array.hpp</label>
+      </node>
+      <node id="5826">
+        <label>hpx/parallel/execution_policy.hpp</label>
+        <link refid="execution__policy_8hpp"/>
+        <childnode refid="5810" relation="include">
+        </childnode>
+        <childnode refid="5827" relation="include">
+        </childnode>
+        <childnode refid="5828" relation="include">
+        </childnode>
+        <childnode refid="5829" relation="include">
+        </childnode>
+        <childnode refid="5830" relation="include">
+        </childnode>
+        <childnode refid="5831" relation="include">
+        </childnode>
+        <childnode refid="5886" relation="include">
+        </childnode>
+        <childnode refid="5887" relation="include">
+        </childnode>
+        <childnode refid="5837" relation="include">
+        </childnode>
+        <childnode refid="5894" relation="include">
+        </childnode>
+        <childnode refid="5895" relation="include">
+        </childnode>
+        <childnode refid="5879" relation="include">
+        </childnode>
+        <childnode refid="5838" relation="include">
+        </childnode>
+        <childnode refid="5896" relation="include">
+        </childnode>
+        <childnode refid="5812" relation="include">
+        </childnode>
+        <childnode refid="5872" relation="include">
+        </childnode>
+        <childnode refid="5819" relation="include">
+        </childnode>
+        <childnode refid="5820" relation="include">
+        </childnode>
+      </node>
+      <node id="5852">
+        <label>exception</label>
+      </node>
+      <node id="5831">
+        <label>hpx/parallel/executors/parallel_executor.hpp</label>
+        <link refid="parallel__executor_8hpp"/>
+        <childnode refid="5810" relation="include">
+        </childnode>
+        <childnode refid="5832" relation="include">
+        </childnode>
+        <childnode refid="5833" relation="include">
+        </childnode>
+        <childnode refid="5834" relation="include">
+        </childnode>
+        <childnode refid="5824" relation="include">
+        </childnode>
+        <childnode refid="5835" relation="include">
+        </childnode>
+        <childnode refid="5836" relation="include">
+        </childnode>
+        <childnode refid="5841" relation="include">
+        </childnode>
+        <childnode refid="5856" relation="include">
+        </childnode>
+        <childnode refid="5837" relation="include">
+        </childnode>
+        <childnode refid="5861" relation="include">
+        </childnode>
+        <childnode refid="5878" relation="include">
+        </childnode>
+        <childnode refid="5879" relation="include">
+        </childnode>
+        <childnode refid="5880" relation="include">
+        </childnode>
+        <childnode refid="5881" relation="include">
+        </childnode>
+        <childnode refid="5882" relation="include">
+        </childnode>
+        <childnode refid="5883" relation="include">
+        </childnode>
+        <childnode refid="5840" relation="include">
+        </childnode>
+        <childnode refid="5884" relation="include">
+        </childnode>
+        <childnode refid="5819" relation="include">
+        </childnode>
+        <childnode refid="5820" relation="include">
+        </childnode>
+        <childnode refid="5885" relation="include">
+        </childnode>
+      </node>
+      <node id="5811">
+        <label>hpx/traits/is_iterator.hpp</label>
+      </node>
+      <node id="5869">
+        <label>hpx/util_fwd.hpp</label>
+      </node>
+      <node id="5900">
+        <label>hpx/parallel/util/foreach_partitioner.hpp</label>
+      </node>
+      <node id="5871">
+        <label>hpx/util/unique_function.hpp</label>
+      </node>
+      <node id="5887">
+        <label>hpx/parallel/executors/sequenced_executor.hpp</label>
+        <link refid="sequenced__executor_8hpp"/>
+        <childnode refid="5810" relation="include">
+        </childnode>
+        <childnode refid="5832" relation="include">
+        </childnode>
+        <childnode refid="5833" relation="include">
+        </childnode>
+        <childnode refid="5888" relation="include">
+        </childnode>
+        <childnode refid="5879" relation="include">
+        </childnode>
+        <childnode refid="5889" relation="include">
+        </childnode>
+        <childnode refid="5815" relation="include">
+        </childnode>
+        <childnode refid="5890" relation="include">
+        </childnode>
+        <childnode refid="5892" relation="include">
+        </childnode>
+        <childnode refid="5840" relation="include">
+        </childnode>
+        <childnode refid="5893" relation="include">
+        </childnode>
+        <childnode refid="5819" relation="include">
+        </childnode>
+        <childnode refid="5820" relation="include">
+        </childnode>
+        <childnode refid="5885" relation="include">
+        </childnode>
+      </node>
+      <node id="5851">
+        <label>boost/current_function.hpp</label>
+      </node>
+      <node id="5878">
+        <label>hpx/traits/future_traits.hpp</label>
+      </node>
+      <node id="5889">
+        <label>hpx/util/deferred_call.hpp</label>
+      </node>
+      <node id="5857">
+        <label>hpx/runtime/threads/thread_enums.hpp</label>
+        <link refid="thread__enums_8hpp"/>
+        <childnode refid="5810" relation="include">
+        </childnode>
+        <childnode refid="5858" relation="include">
+        </childnode>
+        <childnode refid="5840" relation="include">
+        </childnode>
+        <childnode refid="5859" relation="include">
+        </childnode>
+      </node>
+      <node id="5836">
+        <label>hpx/parallel/executors/static_chunk_size.hpp</label>
+        <link refid="static__chunk__size_8hpp"/>
+        <childnode refid="5810" relation="include">
+        </childnode>
+        <childnode refid="5837" relation="include">
+        </childnode>
+        <childnode refid="5838" relation="include">
+        </childnode>
+        <childnode refid="5839" relation="include">
+        </childnode>
+        <childnode refid="5840" relation="include">
+        </childnode>
+        <childnode refid="5819" relation="include">
+        </childnode>
+      </node>
+      <node id="5903">
+        <label>hpx/parallel/util/scan_partitioner.hpp</label>
+      </node>
+      <node id="5891">
+        <label>hpx/util/detail/unwrap_impl.hpp</label>
+      </node>
+      <node id="5814">
+        <label>hpx/traits/concepts.hpp</label>
+      </node>
+      <node id="5892">
+        <label>hpx/parallel/exception_list.hpp</label>
+      </node>
+      <node id="5823">
+        <label>hpx/parallel/algorithms/detail/is_negative.hpp</label>
+      </node>
+      <node id="5828">
+        <label>hpx/parallel/execution_policy_fwd.hpp</label>
+      </node>
+      <node id="5888">
+        <label>hpx/runtime/threads/thread_executor.hpp</label>
+      </node>
+      <node id="5879">
+        <label>hpx/traits/is_executor.hpp</label>
+      </node>
+      <node id="5901">
+        <label>hpx/parallel/util/loop.hpp</label>
+      </node>
+      <node id="5824">
+        <label>hpx/parallel/algorithms/detail/predicates.hpp</label>
+      </node>
+      <node id="5829">
+        <label>hpx/parallel/executors/execution.hpp</label>
+      </node>
+      <node id="5844">
+        <label>boost/system/error_code.hpp</label>
+      </node>
+      <node id="5885">
+        <label>vector</label>
+      </node>
+      <node id="5822">
+        <label>hpx/parallel/algorithms/detail/dispatch.hpp</label>
+      </node>
+      <node id="5904">
+        <label>hpx/parallel/util/transfer.hpp</label>
+      </node>
+      <node id="5868">
+        <label>hpx/runtime/threads/thread_id_type.hpp</label>
+      </node>
+      <node id="5820">
+        <label>utility</label>
+      </node>
+      <node id="5827">
+        <label>hpx/parallel/datapar/execution_policy.hpp</label>
+      </node>
+      <node id="5890">
+        <label>hpx/util/unwrap.hpp</label>
+        <link refid="unwrap_8hpp_source"/>
+        <childnode refid="5810" relation="include">
+        </childnode>
+        <childnode refid="5891" relation="include">
+        </childnode>
+        <childnode refid="5840" relation="include">
+        </childnode>
+        <childnode refid="5820" relation="include">
+        </childnode>
+      </node>
+      <node id="5854">
+        <label>hpx/config/warnings_suffix.hpp</label>
+      </node>
+      <node id="5818">
+        <label>boost/ref.hpp</label>
+      </node>
+      <node id="5858">
+        <label>hpx/runtime/threads/detail/combined_tagged_state.hpp</label>
+      </node>
+      <node id="5882">
+        <label>hpx/util/range.hpp</label>
+      </node>
+      <node id="5839">
+        <label>hpx/parallel/executors/execution_parameters_fwd.hpp</label>
+      </node>
+      <node id="5834">
+        <label>hpx/lcos/when_all_fwd.hpp</label>
+      </node>
+      <node id="5849">
+        <label>hpx/util/detail/pp/expand.hpp</label>
+      </node>
+      <node id="5825">
+        <label>hpx/parallel/algorithms/detail/transfer.hpp</label>
+      </node>
+      <node id="5830">
+        <label>hpx/parallel/executors/execution_parameters.hpp</label>
+      </node>
+      <node id="5840">
+        <label>cstddef</label>
+      </node>
+      <node id="5905">
+        <label>hpx/parallel/util/zip_iterator.hpp</label>
+      </node>
+      <node id="5862">
+        <label>hpx/runtime/naming_fwd.hpp</label>
+      </node>
+      <node id="5877">
+        <label>chrono</label>
+      </node>
+      <node id="5886">
+        <label>hpx/parallel/executors/rebind_executor.hpp</label>
+      </node>
+      <node id="5842">
+        <label>hpx/error_code.hpp</label>
+        <link refid="error__code_8hpp"/>
+        <childnode refid="5810" relation="include">
+        </childnode>
+        <childnode refid="5843" relation="include">
+        </childnode>
+        <childnode refid="5846" relation="include">
+        </childnode>
+        <childnode refid="5844" relation="include">
+        </childnode>
+        <childnode refid="5852" relation="include">
+        </childnode>
+        <childnode refid="5855" relation="include">
+        </childnode>
+        <childnode refid="5845" relation="include">
+        </childnode>
+        <childnode refid="5847" relation="include">
+        </childnode>
+      </node>
+      <node id="5832">
+        <label>hpx/async_launch_policy_dispatch.hpp</label>
+      </node>
+      <node id="5815">
+        <label>hpx/util/invoke.hpp</label>
+        <link refid="invoke_8hpp_source"/>
+        <childnode refid="5810" relation="include">
+        </childnode>
+        <childnode refid="5816" relation="include">
+        </childnode>
+        <childnode refid="5817" relation="include">
+        </childnode>
+        <childnode refid="5818" relation="include">
+        </childnode>
+        <childnode refid="5819" relation="include">
+        </childnode>
+        <childnode refid="5820" relation="include">
+        </childnode>
+      </node>
+      <node id="5863">
+        <label>hpx/runtime/threads_fwd.hpp</label>
+      </node>
+      <node id="5860">
+        <label>hpx/runtime/serialization/serialization_fwd.hpp</label>
+      </node>
+      <node id="5812">
+        <label>hpx/util/decay.hpp</label>
+      </node>
+      <node id="5867">
+        <label>hpx/runtime/threads/coroutines/coroutine_fwd.hpp</label>
+      </node>
+      <node id="5866">
+        <label>hpx/runtime/threads/thread_data_fwd.hpp</label>
+        <link refid="thread__data__fwd_8hpp"/>
+        <childnode refid="5810" relation="include">
+        </childnode>
+        <childnode refid="5846" relation="include">
+        </childnode>
+        <childnode refid="5867" relation="include">
+        </childnode>
+        <childnode refid="5857" relation="include">
+        </childnode>
+        <childnode refid="5868" relation="include">
+        </childnode>
+        <childnode refid="5869" relation="include">
+        </childnode>
+        <childnode refid="5870" relation="include">
+        </childnode>
+        <childnode refid="5871" relation="include">
+        </childnode>
+        <childnode refid="5840" relation="include">
+        </childnode>
+        <childnode refid="5859" relation="include">
+        </childnode>
+        <childnode refid="5820" relation="include">
+        </childnode>
+        <childnode refid="5872" relation="include">
+        </childnode>
+      </node>
+      <node id="5833">
+        <label>hpx/lcos/future.hpp</label>
+      </node>
+      <node id="5819">
+        <label>type_traits</label>
+      </node>
+      <node id="5894">
+        <label>hpx/traits/executor_traits.hpp</label>
+      </node>
+      <node id="5809">
+        <label>hpx/parallel/algorithms/set_symmetric_difference.hpp</label>
+        <link refid="set__symmetric__difference_8hpp"/>
+        <childnode refid="5810" relation="include">
+        </childnode>
+        <childnode refid="5811" relation="include">
+        </childnode>
+        <childnode refid="5812" relation="include">
+        </childnode>
+        <childnode refid="5813" relation="include">
+        </childnode>
+        <childnode refid="5822" relation="include">
+        </childnode>
+        <childnode refid="5909" relation="include">
+        </childnode>
+        <childnode refid="5826" relation="include">
+        </childnode>
+        <childnode refid="5899" relation="include">
+        </childnode>
+        <childnode refid="5901" relation="include">
+        </childnode>
+        <childnode refid="5883" relation="include">
+        </childnode>
+        <childnode refid="5893" relation="include">
+        </childnode>
+        <childnode refid="5819" relation="include">
+        </childnode>
+        <childnode refid="5820" relation="include">
+        </childnode>
+      </node>
+      <node id="5838">
+        <label>hpx/traits/is_executor_parameters.hpp</label>
+      </node>
+      <node id="5883">
+        <label>algorithm</label>
+      </node>
+      <node id="5837">
+        <label>hpx/runtime/serialization/serialize.hpp</label>
+      </node>
+      <node id="5899">
+        <label>hpx/parallel/util/detail/algorithm_result.hpp</label>
+      </node>
+      <node id="5881">
+        <label>hpx/util/bind.hpp</label>
+      </node>
+      <node id="5907">
+        <label>cstring</label>
+      </node>
+      <node id="5813">
+        <label>hpx/parallel/algorithms/copy.hpp</label>
+        <link refid="algorithms_2copy_8hpp"/>
+        <childnode refid="5810" relation="include">
+        </childnode>
+        <childnode refid="5814" relation="include">
+        </childnode>
+        <childnode refid="5811" relation="include">
+        </childnode>
+        <childnode refid="5815" relation="include">
+        </childnode>
+        <childnode refid="5821" relation="include">
+        </childnode>
+        <childnode refid="5822" relation="include">
+        </childnode>
+        <childnode refid="5823" relation="include">
+        </childnode>
+        <childnode refid="5824" relation="include">
+        </childnode>
+        <childnode refid="5825" relation="include">
+        </childnode>
+        <childnode refid="5826" relation="include">
+        </childnode>
+        <childnode refid="5897" relation="include">
+        </childnode>
+        <childnode refid="5898" relation="include">
+        </childnode>
+        <childnode refid="5899" relation="include">
+        </childnode>
+        <childnode refid="5900" relation="include">
+        </childnode>
+        <childnode refid="5901" relation="include">
+        </childnode>
+        <childnode refid="5902" relation="include">
+        </childnode>
+        <childnode refid="5903" relation="include">
+        </childnode>
+        <childnode refid="5904" relation="include">
+        </childnode>
+        <childnode refid="5905" relation="include">
+        </childnode>
+        <childnode refid="5906" relation="include">
+        </childnode>
+        <childnode refid="5883" relation="include">
+        </childnode>
+        <childnode refid="5840" relation="include">
+        </childnode>
+        <childnode refid="5907" relation="include">
+        </childnode>
+        <childnode refid="5893" relation="include">
+        </childnode>
+        <childnode refid="5872" relation="include">
+        </childnode>
+        <childnode refid="5819" relation="include">
+        </childnode>
+        <childnode refid="5820" relation="include">
+        </childnode>
+        <childnode refid="5885" relation="include">
+        </childnode>
+        <childnode refid="5908" relation="include">
+        </childnode>
+      </node>
+      <node id="5880">
+        <label>hpx/util/assert.hpp</label>
+      </node>
+      <node id="5902">
+        <label>hpx/parallel/util/projection_identity.hpp</label>
+      </node>
+      <node id="5841">
+        <label>hpx/runtime/get_worker_thread_num.hpp</label>
+        <link refid="get__worker__thread__num_8hpp"/>
+        <childnode refid="5810" relation="include">
+        </childnode>
+        <childnode refid="5842" relation="include">
+        </childnode>
+        <childnode refid="5840" relation="include">
+        </childnode>
+      </node>
+      <node id="5872">
+        <label>memory</label>
+      </node>
+      <node id="5864">
+        <label>hpx/runtime/thread_pool_helpers.hpp</label>
+      </node>
+      <node id="5906">
+        <label>hpx/util/unused.hpp</label>
+      </node>
+      <node id="5848">
+        <label>hpx/util/detail/pp/cat.hpp</label>
+      </node>
+      <node id="5875">
+        <label>hpx/util/thread_description.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5911">
+        <label>hpx/parallel/algorithm.hpp</label>
+        <link refid="algorithm_8hpp_source"/>
+      </node>
+      <node id="5910">
+        <label>hpx/parallel/algorithms/set_symmetric_difference.hpp</label>
+        <link refid="set__symmetric__difference_8hpp"/>
+        <childnode refid="5911" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacehpx">hpx</innernamespace>
+    <innernamespace refid="namespacehpx_1_1parallel">hpx::parallel</innernamespace>
+    <innernamespace refid="namespacehpx_1_1parallel_1_1v1">hpx::parallel::v1</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2007-2017<sp/>Hartmut<sp/>Kaiser</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Distributed<sp/>under<sp/>the<sp/>Boost<sp/>Software<sp/>License,<sp/>Version<sp/>1.0.<sp/>(See<sp/>accompanying</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>file<sp/>LICENSE_1_0.txt<sp/>or<sp/>copy<sp/>at<sp/>http://www.boost.org/LICENSE_1_0.txt)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(HPX_PARALLEL_ALGORITHM_SET_SYMMETRIC_DIFFERENCE_MAR_10_2015_0204PM)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPX_PARALLEL_ALGORITHM_SET_SYMMETRIC_DIFFERENCE_MAR_10_2015_0204PM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/config.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/traits/is_iterator.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/util/decay.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="algorithms_2copy_8hpp" kindref="compound">hpx/parallel/algorithms/copy.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/parallel/algorithms/detail/dispatch.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/parallel/algorithms/detail/set_operation.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="execution__policy_8hpp" kindref="compound">hpx/parallel/execution_policy.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/parallel/util/detail/algorithm_result.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/parallel/util/loop.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iterator&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;type_traits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehpx" kindref="compound">hpx</ref><sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">parallel<sp/>{<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">v1</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set_symmetric_difference</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">detail</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>FwdIter&gt;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="set__symmetric__difference_8hpp_1a522afd8e53771d027e0c98f940986587" kindref="member">set_symmetric_difference</ref></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>detail::algorithm&lt;set_symmetric_difference&lt;FwdIter&gt;,<sp/>FwdIter&gt;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="set__symmetric__difference_8hpp_1a522afd8e53771d027e0c98f940986587" kindref="member">set_symmetric_difference</ref>()</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="set__symmetric__difference_8hpp_1a522afd8e53771d027e0c98f940986587" kindref="member">set_symmetric_difference</ref>::algorithm(</highlight><highlight class="stringliteral">&quot;set_symmetric_difference&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ExPolicy,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>InIter1,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>InIter2,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>OutIter,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>F&gt;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>FwdIter</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sequential(ExPolicy,<sp/>InIter1<sp/>first1,<sp/>InIter1<sp/>last1,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InIter2<sp/>first2,<sp/>InIter2<sp/>last2,<sp/>OutIter<sp/>dest,<sp/>F<sp/>&amp;&amp;<sp/>f)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::set_symmetric_difference(first1,<sp/>last1,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>first2,<sp/>last2,<sp/>dest,<sp/>std::forward&lt;F&gt;(f));</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ExPolicy,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>RanIter1,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>RanIter2,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>F&gt;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>util::detail::algorithm_result&lt;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ExPolicy,<sp/>FwdIter</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::type</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parallel(ExPolicy<sp/>&amp;&amp;<sp/>policy,<sp/>RanIter1<sp/>first1,<sp/>RanIter1<sp/>last1,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RanIter2<sp/>first2,<sp/>RanIter2<sp/>last2,<sp/>FwdIter<sp/>dest,<sp/>F<sp/>&amp;&amp;<sp/>f)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>std::iterator_traits&lt;RanIter1&gt;::difference_type</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>difference_type1;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>std::iterator_traits&lt;RanIter2&gt;::difference_type</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>difference_type2;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(first1<sp/>==<sp/>last1)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>util::detail::convert_to_result(</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>detail::copy&lt;std::pair&lt;RanIter2,<sp/>FwdIter&gt;<sp/>&gt;()</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.call(</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::forward&lt;ExPolicy&gt;(policy),</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::false_type(),<sp/>first2,<sp/>last2,<sp/>dest</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](std::pair&lt;RanIter2,<sp/>FwdIter&gt;<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>p)<sp/>-&gt;<sp/>FwdIter</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p.second;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(first2<sp/>==<sp/>last2)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>util::detail::convert_to_result(</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>detail::copy&lt;std::pair&lt;RanIter1,<sp/>FwdIter&gt;<sp/>&gt;()</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.call(</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::forward&lt;ExPolicy&gt;(policy),</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::false_type(),<sp/>first1,<sp/>last1,<sp/>dest</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](std::pair&lt;RanIter1,<sp/>FwdIter&gt;<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>p)<sp/>-&gt;<sp/>FwdIter</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p.second;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>set_operations_buffer&lt;FwdIter&gt;::type<sp/>buffer_type;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>hpx::util::decay&lt;F&gt;::type<sp/>func_type;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>set_operation(std::forward&lt;ExPolicy&gt;(policy),</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>first1,<sp/>last1,<sp/>first2,<sp/>last2,<sp/>dest,<sp/>std::forward&lt;F&gt;(f),</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>calculate<sp/>approximate<sp/>destination<sp/>index</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](difference_type1<sp/>idx1,<sp/>difference_type2<sp/>idx2)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;<sp/><sp/>difference_type1</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>idx1<sp/>+<sp/>idx2;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>perform<sp/>required<sp/>set<sp/>operation<sp/>for<sp/>one<sp/>chunk</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](RanIter1<sp/>part_first1,<sp/>RanIter1<sp/>part_last1,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RanIter2<sp/>part_first2,<sp/>RanIter2<sp/>part_last2,</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer_type*<sp/>dest,<sp/>func_type<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>f)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;<sp/><sp/>buffer_type*</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::set_symmetric_difference(</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>part_first1,<sp/>part_last1,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>part_first2,<sp/>part_last2,<sp/>dest,<sp/>f);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ExPolicy,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>FwdIter1,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>FwdIter2,</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>FwdIter3,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Pred<sp/>=<sp/>detail::less&gt;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>std::enable_if&lt;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>execution::is_execution_policy&lt;ExPolicy&gt;::value,</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>util::detail::algorithm_result&lt;ExPolicy,<sp/>FwdIter3&gt;::type</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>&gt;::type</highlight></codeline>
+<codeline lineno="215" refid="set__symmetric__difference_8hpp_1a522afd8e53771d027e0c98f940986587" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="set__symmetric__difference_8hpp_1a522afd8e53771d027e0c98f940986587" kindref="member">set_symmetric_difference</ref>(ExPolicy<sp/>&amp;&amp;<sp/>policy,<sp/>FwdIter1<sp/>first1,<sp/>FwdIter1<sp/>last1,</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FwdIter2<sp/>first2,<sp/>FwdIter2<sp/>last2,<sp/>FwdIter3<sp/>dest,<sp/>Pred<sp/>&amp;&amp;<sp/>op<sp/>=<sp/>Pred())</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(HPX_HAVE_ALGORITHM_INPUT_ITERATOR_SUPPORT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>static_assert(</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(hpx::traits::is_input_iterator&lt;FwdIter1&gt;::value),</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Requires<sp/>at<sp/>least<sp/>input<sp/>iterator.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>static_assert(</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(hpx::traits::is_input_iterator&lt;FwdIter2&gt;::value),</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Requires<sp/>at<sp/>least<sp/>input<sp/>iterator.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>static_assert(</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(hpx::traits::is_output_iterator&lt;FwdIter3&gt;::value<sp/>||</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::traits::is_forward_iterator&lt;FwdIter3&gt;::value),</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Requires<sp/>at<sp/>least<sp/>output<sp/>iterator.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>static_assert(</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(hpx::traits::is_forward_iterator&lt;FwdIter1&gt;::value),</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Requires<sp/>at<sp/>least<sp/>forward<sp/>iterator.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>static_assert(</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(hpx::traits::is_forward_iterator&lt;FwdIter2&gt;::value),</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Requires<sp/>at<sp/>least<sp/>forward<sp/>iterator.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>static_assert(</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(hpx::traits::is_forward_iterator&lt;FwdIter3&gt;::value),</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Requires<sp/>at<sp/>least<sp/>forward<sp/>iterator.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::integral_constant&lt;bool,</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structhpx_1_1parallel_1_1execution_1_1is__sequenced__execution__policy" kindref="compound">execution::is_sequenced_execution_policy&lt;ExPolicy&gt;::value</ref><sp/>||</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>!hpx::traits::is_random_access_iterator&lt;FwdIter1&gt;::value<sp/>||</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>!hpx::traits::is_random_access_iterator&lt;FwdIter2&gt;::value</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;<sp/>is_seq;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>detail::set_symmetric_difference&lt;FwdIter3&gt;().call(</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::forward&lt;ExPolicy&gt;(policy),<sp/>is_seq(),</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>first1,<sp/>last1,<sp/>first2,<sp/>last2,<sp/>dest,<sp/>std::forward&lt;Pred&gt;(op));</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="251"><highlight class="normal">}}}</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="hpx/parallel/algorithms/set_symmetric_difference.hpp"/>
+  </compounddef>
+</doxygen>

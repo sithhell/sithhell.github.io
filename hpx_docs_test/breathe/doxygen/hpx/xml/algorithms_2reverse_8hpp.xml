@@ -1,0 +1,1019 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="algorithms_2reverse_8hpp" kind="file" language="C++">
+    <compoundname>reverse.hpp</compoundname>
+    <includes local="no">hpx/config.hpp</includes>
+    <includes local="no">hpx/traits/concepts.hpp</includes>
+    <includes local="no">hpx/traits/is_iterator.hpp</includes>
+    <includes local="no">hpx/util/tagged_pair.hpp</includes>
+    <includes refid="algorithms_2copy_8hpp" local="no">hpx/parallel/algorithms/copy.hpp</includes>
+    <includes local="no">hpx/parallel/algorithms/detail/dispatch.hpp</includes>
+    <includes refid="algorithms_2for__each_8hpp" local="no">hpx/parallel/algorithms/for_each.hpp</includes>
+    <includes refid="execution__policy_8hpp" local="no">hpx/parallel/execution_policy.hpp</includes>
+    <includes local="no">hpx/parallel/tagspec.hpp</includes>
+    <includes local="no">hpx/parallel/util/detail/algorithm_result.hpp</includes>
+    <includes local="no">hpx/parallel/util/projection_identity.hpp</includes>
+    <includes local="no">hpx/parallel/util/zip_iterator.hpp</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">iterator</includes>
+    <includes local="no">type_traits</includes>
+    <includes local="no">utility</includes>
+    <includedby refid="algorithm_8hpp" local="no">hpx/parallel/algorithm.hpp</includedby>
+    <includedby refid="algorithms_2rotate_8hpp" local="no">hpx/parallel/algorithms/rotate.hpp</includedby>
+    <includedby refid="container__algorithms_2reverse_8hpp" local="no">hpx/parallel/container_algorithms/reverse.hpp</includedby>
+    <incdepgraph>
+      <node id="5039">
+        <label>hpx/traits/is_execution_policy.hpp</label>
+        <link refid="is__execution__policy_8hpp"/>
+        <childnode refid="4955" relation="include">
+        </childnode>
+        <childnode refid="5040" relation="include">
+        </childnode>
+        <childnode refid="4964" relation="include">
+        </childnode>
+      </node>
+      <node id="5020">
+        <label>atomic</label>
+      </node>
+      <node id="5028">
+        <label>functional</label>
+      </node>
+      <node id="5059">
+        <label>hpx/util/identity.hpp</label>
+      </node>
+      <node id="5017">
+        <label>hpx/util/register_locks.hpp</label>
+      </node>
+      <node id="4979">
+        <label>hpx/parallel/executors/post_policy_dispatch.hpp</label>
+      </node>
+      <node id="4958">
+        <label>hpx/util/tagged_pair.hpp</label>
+      </node>
+      <node id="5018">
+        <label>hpx/util/steady_clock.hpp</label>
+      </node>
+      <node id="5037">
+        <label>iterator</label>
+      </node>
+      <node id="5058">
+        <label>hpx/util/annotated_function.hpp</label>
+      </node>
+      <node id="5056">
+        <label>hpx/traits/is_value_proxy.hpp</label>
+      </node>
+      <node id="5003">
+        <label>cstdint</label>
+      </node>
+      <node id="4991">
+        <label>hpx/throw_exception.hpp</label>
+        <link refid="throw__exception_8hpp"/>
+        <childnode refid="4955" relation="include">
+        </childnode>
+        <childnode refid="4987" relation="include">
+        </childnode>
+        <childnode refid="4990" relation="include">
+        </childnode>
+        <childnode refid="4992" relation="include">
+        </childnode>
+        <childnode refid="4993" relation="include">
+        </childnode>
+        <childnode refid="4994" relation="include">
+        </childnode>
+        <childnode refid="4995" relation="include">
+        </childnode>
+        <childnode refid="4988" relation="include">
+        </childnode>
+        <childnode refid="4996" relation="include">
+        </childnode>
+        <childnode refid="4989" relation="include">
+        </childnode>
+        <childnode refid="4997" relation="include">
+        </childnode>
+        <childnode refid="4998" relation="include">
+        </childnode>
+      </node>
+      <node id="5009">
+        <label>hpx/runtime/threads/policies/scheduler_mode.hpp</label>
+        <link refid="scheduler__mode_8hpp_source"/>
+      </node>
+      <node id="5014">
+        <label>hpx/util/function.hpp</label>
+      </node>
+      <node id="4990">
+        <label>hpx/exception_fwd.hpp</label>
+        <link refid="exception__fwd_8hpp"/>
+        <childnode refid="4955" relation="include">
+        </childnode>
+        <childnode refid="4987" relation="include">
+        </childnode>
+        <childnode refid="4991" relation="include">
+        </childnode>
+      </node>
+      <node id="5057">
+        <label>hpx/traits/segmented_iterator_traits.hpp</label>
+      </node>
+      <node id="5043">
+        <label>hpx/parallel/traits/projected.hpp</label>
+      </node>
+      <node id="4962">
+        <label>hpx/util/void_guard.hpp</label>
+      </node>
+      <node id="4961">
+        <label>hpx/util/result_of.hpp</label>
+      </node>
+      <node id="4999">
+        <label>stdexcept</label>
+      </node>
+      <node id="5000">
+        <label>hpx/runtime/launch_policy.hpp</label>
+        <link refid="launch__policy_8hpp"/>
+        <childnode refid="4955" relation="include">
+        </childnode>
+        <childnode refid="5001" relation="include">
+        </childnode>
+        <childnode refid="5004" relation="include">
+        </childnode>
+        <childnode refid="4964" relation="include">
+        </childnode>
+        <childnode refid="4965" relation="include">
+        </childnode>
+      </node>
+      <node id="4989">
+        <label>string</label>
+      </node>
+      <node id="5042">
+        <label>hpx/parallel/tagspec.hpp</label>
+      </node>
+      <node id="4994">
+        <label>hpx/util/detail/pp/nargs.hpp</label>
+      </node>
+      <node id="5041">
+        <label>hpx/traits/is_launch_policy.hpp</label>
+      </node>
+      <node id="5005">
+        <label>hpx/runtime/threads/thread_helpers.hpp</label>
+        <link refid="thread__helpers_8hpp_source"/>
+        <childnode refid="4955" relation="include">
+        </childnode>
+        <childnode refid="4990" relation="include">
+        </childnode>
+        <childnode refid="5006" relation="include">
+        </childnode>
+        <childnode refid="5007" relation="include">
+        </childnode>
+        <childnode refid="5008" relation="include">
+        </childnode>
+        <childnode refid="5009" relation="include">
+        </childnode>
+        <childnode refid="5010" relation="include">
+        </childnode>
+        <childnode refid="5001" relation="include">
+        </childnode>
+        <childnode refid="5013" relation="include">
+        </childnode>
+        <childnode refid="5015" relation="include">
+        </childnode>
+        <childnode refid="5017" relation="include">
+        </childnode>
+        <childnode refid="5018" relation="include">
+        </childnode>
+        <childnode refid="5019" relation="include">
+        </childnode>
+        <childnode refid="5020" relation="include">
+        </childnode>
+        <childnode refid="5021" relation="include">
+        </childnode>
+        <childnode refid="4984" relation="include">
+        </childnode>
+        <childnode refid="5003" relation="include">
+        </childnode>
+        <childnode refid="4964" relation="include">
+        </childnode>
+        <childnode refid="4965" relation="include">
+        </childnode>
+      </node>
+      <node id="4987">
+        <label>hpx/error.hpp</label>
+        <link refid="error_8hpp"/>
+        <childnode refid="4955" relation="include">
+        </childnode>
+        <childnode refid="4988" relation="include">
+        </childnode>
+        <childnode refid="4989" relation="include">
+        </childnode>
+      </node>
+      <node id="4997">
+        <label>hpx/config/warnings_prefix.hpp</label>
+      </node>
+      <node id="4955">
+        <label>hpx/config.hpp</label>
+      </node>
+      <node id="5053">
+        <label>boost/shared_array.hpp</label>
+      </node>
+      <node id="4970">
+        <label>hpx/parallel/execution_policy.hpp</label>
+        <link refid="execution__policy_8hpp"/>
+        <childnode refid="4955" relation="include">
+        </childnode>
+        <childnode refid="4971" relation="include">
+        </childnode>
+        <childnode refid="4972" relation="include">
+        </childnode>
+        <childnode refid="4973" relation="include">
+        </childnode>
+        <childnode refid="4974" relation="include">
+        </childnode>
+        <childnode refid="4975" relation="include">
+        </childnode>
+        <childnode refid="5030" relation="include">
+        </childnode>
+        <childnode refid="5031" relation="include">
+        </childnode>
+        <childnode refid="4981" relation="include">
+        </childnode>
+        <childnode refid="5038" relation="include">
+        </childnode>
+        <childnode refid="5039" relation="include">
+        </childnode>
+        <childnode refid="5023" relation="include">
+        </childnode>
+        <childnode refid="4982" relation="include">
+        </childnode>
+        <childnode refid="5041" relation="include">
+        </childnode>
+        <childnode refid="5040" relation="include">
+        </childnode>
+        <childnode refid="5016" relation="include">
+        </childnode>
+        <childnode refid="4964" relation="include">
+        </childnode>
+        <childnode refid="4965" relation="include">
+        </childnode>
+      </node>
+      <node id="4996">
+        <label>exception</label>
+      </node>
+      <node id="4954">
+        <label>hpx/parallel/algorithms/reverse.hpp</label>
+        <link refid="algorithms_2reverse_8hpp"/>
+        <childnode refid="4955" relation="include">
+        </childnode>
+        <childnode refid="4956" relation="include">
+        </childnode>
+        <childnode refid="4957" relation="include">
+        </childnode>
+        <childnode refid="4958" relation="include">
+        </childnode>
+        <childnode refid="4959" relation="include">
+        </childnode>
+        <childnode refid="4966" relation="include">
+        </childnode>
+        <childnode refid="5054" relation="include">
+        </childnode>
+        <childnode refid="4970" relation="include">
+        </childnode>
+        <childnode refid="5042" relation="include">
+        </childnode>
+        <childnode refid="5044" relation="include">
+        </childnode>
+        <childnode refid="5047" relation="include">
+        </childnode>
+        <childnode refid="5050" relation="include">
+        </childnode>
+        <childnode refid="5027" relation="include">
+        </childnode>
+        <childnode refid="5037" relation="include">
+        </childnode>
+        <childnode refid="4964" relation="include">
+        </childnode>
+        <childnode refid="4965" relation="include">
+        </childnode>
+      </node>
+      <node id="4975">
+        <label>hpx/parallel/executors/parallel_executor.hpp</label>
+        <link refid="parallel__executor_8hpp"/>
+        <childnode refid="4955" relation="include">
+        </childnode>
+        <childnode refid="4976" relation="include">
+        </childnode>
+        <childnode refid="4977" relation="include">
+        </childnode>
+        <childnode refid="4978" relation="include">
+        </childnode>
+        <childnode refid="4968" relation="include">
+        </childnode>
+        <childnode refid="4979" relation="include">
+        </childnode>
+        <childnode refid="4980" relation="include">
+        </childnode>
+        <childnode refid="4985" relation="include">
+        </childnode>
+        <childnode refid="5000" relation="include">
+        </childnode>
+        <childnode refid="4981" relation="include">
+        </childnode>
+        <childnode refid="5005" relation="include">
+        </childnode>
+        <childnode refid="5022" relation="include">
+        </childnode>
+        <childnode refid="5023" relation="include">
+        </childnode>
+        <childnode refid="5024" relation="include">
+        </childnode>
+        <childnode refid="5025" relation="include">
+        </childnode>
+        <childnode refid="5026" relation="include">
+        </childnode>
+        <childnode refid="5027" relation="include">
+        </childnode>
+        <childnode refid="4984" relation="include">
+        </childnode>
+        <childnode refid="5028" relation="include">
+        </childnode>
+        <childnode refid="4964" relation="include">
+        </childnode>
+        <childnode refid="4965" relation="include">
+        </childnode>
+        <childnode refid="5029" relation="include">
+        </childnode>
+      </node>
+      <node id="4957">
+        <label>hpx/traits/is_iterator.hpp</label>
+      </node>
+      <node id="5013">
+        <label>hpx/util_fwd.hpp</label>
+      </node>
+      <node id="5045">
+        <label>hpx/parallel/util/foreach_partitioner.hpp</label>
+      </node>
+      <node id="5015">
+        <label>hpx/util/unique_function.hpp</label>
+      </node>
+      <node id="5031">
+        <label>hpx/parallel/executors/sequenced_executor.hpp</label>
+        <link refid="sequenced__executor_8hpp"/>
+        <childnode refid="4955" relation="include">
+        </childnode>
+        <childnode refid="4976" relation="include">
+        </childnode>
+        <childnode refid="4977" relation="include">
+        </childnode>
+        <childnode refid="5032" relation="include">
+        </childnode>
+        <childnode refid="5023" relation="include">
+        </childnode>
+        <childnode refid="5033" relation="include">
+        </childnode>
+        <childnode refid="4960" relation="include">
+        </childnode>
+        <childnode refid="5034" relation="include">
+        </childnode>
+        <childnode refid="5036" relation="include">
+        </childnode>
+        <childnode refid="4984" relation="include">
+        </childnode>
+        <childnode refid="5037" relation="include">
+        </childnode>
+        <childnode refid="4964" relation="include">
+        </childnode>
+        <childnode refid="4965" relation="include">
+        </childnode>
+        <childnode refid="5029" relation="include">
+        </childnode>
+      </node>
+      <node id="4995">
+        <label>boost/current_function.hpp</label>
+      </node>
+      <node id="5022">
+        <label>hpx/traits/future_traits.hpp</label>
+      </node>
+      <node id="5033">
+        <label>hpx/util/deferred_call.hpp</label>
+      </node>
+      <node id="5001">
+        <label>hpx/runtime/threads/thread_enums.hpp</label>
+        <link refid="thread__enums_8hpp"/>
+        <childnode refid="4955" relation="include">
+        </childnode>
+        <childnode refid="5002" relation="include">
+        </childnode>
+        <childnode refid="4984" relation="include">
+        </childnode>
+        <childnode refid="5003" relation="include">
+        </childnode>
+      </node>
+      <node id="4980">
+        <label>hpx/parallel/executors/static_chunk_size.hpp</label>
+        <link refid="static__chunk__size_8hpp"/>
+        <childnode refid="4955" relation="include">
+        </childnode>
+        <childnode refid="4981" relation="include">
+        </childnode>
+        <childnode refid="4982" relation="include">
+        </childnode>
+        <childnode refid="4983" relation="include">
+        </childnode>
+        <childnode refid="4984" relation="include">
+        </childnode>
+        <childnode refid="4964" relation="include">
+        </childnode>
+      </node>
+      <node id="5048">
+        <label>hpx/parallel/util/scan_partitioner.hpp</label>
+      </node>
+      <node id="5035">
+        <label>hpx/util/detail/unwrap_impl.hpp</label>
+      </node>
+      <node id="4956">
+        <label>hpx/traits/concepts.hpp</label>
+      </node>
+      <node id="5036">
+        <label>hpx/parallel/exception_list.hpp</label>
+      </node>
+      <node id="4967">
+        <label>hpx/parallel/algorithms/detail/is_negative.hpp</label>
+      </node>
+      <node id="4972">
+        <label>hpx/parallel/execution_policy_fwd.hpp</label>
+      </node>
+      <node id="5032">
+        <label>hpx/runtime/threads/thread_executor.hpp</label>
+      </node>
+      <node id="5023">
+        <label>hpx/traits/is_executor.hpp</label>
+      </node>
+      <node id="5046">
+        <label>hpx/parallel/util/loop.hpp</label>
+      </node>
+      <node id="4968">
+        <label>hpx/parallel/algorithms/detail/predicates.hpp</label>
+      </node>
+      <node id="4973">
+        <label>hpx/parallel/executors/execution.hpp</label>
+      </node>
+      <node id="4988">
+        <label>boost/system/error_code.hpp</label>
+      </node>
+      <node id="5029">
+        <label>vector</label>
+      </node>
+      <node id="4966">
+        <label>hpx/parallel/algorithms/detail/dispatch.hpp</label>
+      </node>
+      <node id="5049">
+        <label>hpx/parallel/util/transfer.hpp</label>
+      </node>
+      <node id="5012">
+        <label>hpx/runtime/threads/thread_id_type.hpp</label>
+      </node>
+      <node id="5054">
+        <label>hpx/parallel/algorithms/for_each.hpp</label>
+        <link refid="algorithms_2for__each_8hpp"/>
+        <childnode refid="4955" relation="include">
+        </childnode>
+        <childnode refid="4956" relation="include">
+        </childnode>
+        <childnode refid="5055" relation="include">
+        </childnode>
+        <childnode refid="4957" relation="include">
+        </childnode>
+        <childnode refid="5056" relation="include">
+        </childnode>
+        <childnode refid="5057" relation="include">
+        </childnode>
+        <childnode refid="5058" relation="include">
+        </childnode>
+        <childnode refid="5059" relation="include">
+        </childnode>
+        <childnode refid="4960" relation="include">
+        </childnode>
+        <childnode refid="4966" relation="include">
+        </childnode>
+        <childnode refid="4967" relation="include">
+        </childnode>
+        <childnode refid="4970" relation="include">
+        </childnode>
+        <childnode refid="5043" relation="include">
+        </childnode>
+        <childnode refid="5044" relation="include">
+        </childnode>
+        <childnode refid="5045" relation="include">
+        </childnode>
+        <childnode refid="5046" relation="include">
+        </childnode>
+        <childnode refid="5047" relation="include">
+        </childnode>
+        <childnode refid="5027" relation="include">
+        </childnode>
+        <childnode refid="4984" relation="include">
+        </childnode>
+        <childnode refid="5003" relation="include">
+        </childnode>
+        <childnode refid="5037" relation="include">
+        </childnode>
+        <childnode refid="4964" relation="include">
+        </childnode>
+        <childnode refid="4965" relation="include">
+        </childnode>
+      </node>
+      <node id="4965">
+        <label>utility</label>
+      </node>
+      <node id="4971">
+        <label>hpx/parallel/datapar/execution_policy.hpp</label>
+      </node>
+      <node id="5034">
+        <label>hpx/util/unwrap.hpp</label>
+        <link refid="unwrap_8hpp_source"/>
+        <childnode refid="4955" relation="include">
+        </childnode>
+        <childnode refid="5035" relation="include">
+        </childnode>
+        <childnode refid="4984" relation="include">
+        </childnode>
+        <childnode refid="4965" relation="include">
+        </childnode>
+      </node>
+      <node id="4998">
+        <label>hpx/config/warnings_suffix.hpp</label>
+      </node>
+      <node id="4963">
+        <label>boost/ref.hpp</label>
+      </node>
+      <node id="5002">
+        <label>hpx/runtime/threads/detail/combined_tagged_state.hpp</label>
+      </node>
+      <node id="5026">
+        <label>hpx/util/range.hpp</label>
+      </node>
+      <node id="4983">
+        <label>hpx/parallel/executors/execution_parameters_fwd.hpp</label>
+      </node>
+      <node id="4978">
+        <label>hpx/lcos/when_all_fwd.hpp</label>
+      </node>
+      <node id="4993">
+        <label>hpx/util/detail/pp/expand.hpp</label>
+      </node>
+      <node id="4969">
+        <label>hpx/parallel/algorithms/detail/transfer.hpp</label>
+      </node>
+      <node id="4974">
+        <label>hpx/parallel/executors/execution_parameters.hpp</label>
+      </node>
+      <node id="4984">
+        <label>cstddef</label>
+      </node>
+      <node id="5050">
+        <label>hpx/parallel/util/zip_iterator.hpp</label>
+      </node>
+      <node id="5006">
+        <label>hpx/runtime/naming_fwd.hpp</label>
+      </node>
+      <node id="5021">
+        <label>chrono</label>
+      </node>
+      <node id="5030">
+        <label>hpx/parallel/executors/rebind_executor.hpp</label>
+      </node>
+      <node id="4986">
+        <label>hpx/error_code.hpp</label>
+        <link refid="error__code_8hpp"/>
+        <childnode refid="4955" relation="include">
+        </childnode>
+        <childnode refid="4987" relation="include">
+        </childnode>
+        <childnode refid="4990" relation="include">
+        </childnode>
+        <childnode refid="4988" relation="include">
+        </childnode>
+        <childnode refid="4996" relation="include">
+        </childnode>
+        <childnode refid="4999" relation="include">
+        </childnode>
+        <childnode refid="4989" relation="include">
+        </childnode>
+        <childnode refid="4991" relation="include">
+        </childnode>
+      </node>
+      <node id="4976">
+        <label>hpx/async_launch_policy_dispatch.hpp</label>
+      </node>
+      <node id="4960">
+        <label>hpx/util/invoke.hpp</label>
+        <link refid="invoke_8hpp_source"/>
+        <childnode refid="4955" relation="include">
+        </childnode>
+        <childnode refid="4961" relation="include">
+        </childnode>
+        <childnode refid="4962" relation="include">
+        </childnode>
+        <childnode refid="4963" relation="include">
+        </childnode>
+        <childnode refid="4964" relation="include">
+        </childnode>
+        <childnode refid="4965" relation="include">
+        </childnode>
+      </node>
+      <node id="5007">
+        <label>hpx/runtime/threads_fwd.hpp</label>
+      </node>
+      <node id="5004">
+        <label>hpx/runtime/serialization/serialization_fwd.hpp</label>
+      </node>
+      <node id="5040">
+        <label>hpx/util/decay.hpp</label>
+      </node>
+      <node id="5011">
+        <label>hpx/runtime/threads/coroutines/coroutine_fwd.hpp</label>
+      </node>
+      <node id="5010">
+        <label>hpx/runtime/threads/thread_data_fwd.hpp</label>
+        <link refid="thread__data__fwd_8hpp"/>
+        <childnode refid="4955" relation="include">
+        </childnode>
+        <childnode refid="4990" relation="include">
+        </childnode>
+        <childnode refid="5011" relation="include">
+        </childnode>
+        <childnode refid="5001" relation="include">
+        </childnode>
+        <childnode refid="5012" relation="include">
+        </childnode>
+        <childnode refid="5013" relation="include">
+        </childnode>
+        <childnode refid="5014" relation="include">
+        </childnode>
+        <childnode refid="5015" relation="include">
+        </childnode>
+        <childnode refid="4984" relation="include">
+        </childnode>
+        <childnode refid="5003" relation="include">
+        </childnode>
+        <childnode refid="4965" relation="include">
+        </childnode>
+        <childnode refid="5016" relation="include">
+        </childnode>
+      </node>
+      <node id="4977">
+        <label>hpx/lcos/future.hpp</label>
+      </node>
+      <node id="4964">
+        <label>type_traits</label>
+      </node>
+      <node id="5038">
+        <label>hpx/traits/executor_traits.hpp</label>
+      </node>
+      <node id="5055">
+        <label>hpx/traits/is_callable.hpp</label>
+      </node>
+      <node id="4982">
+        <label>hpx/traits/is_executor_parameters.hpp</label>
+      </node>
+      <node id="5027">
+        <label>algorithm</label>
+      </node>
+      <node id="4981">
+        <label>hpx/runtime/serialization/serialize.hpp</label>
+      </node>
+      <node id="5044">
+        <label>hpx/parallel/util/detail/algorithm_result.hpp</label>
+      </node>
+      <node id="5025">
+        <label>hpx/util/bind.hpp</label>
+      </node>
+      <node id="5052">
+        <label>cstring</label>
+      </node>
+      <node id="4959">
+        <label>hpx/parallel/algorithms/copy.hpp</label>
+        <link refid="algorithms_2copy_8hpp"/>
+        <childnode refid="4955" relation="include">
+        </childnode>
+        <childnode refid="4956" relation="include">
+        </childnode>
+        <childnode refid="4957" relation="include">
+        </childnode>
+        <childnode refid="4960" relation="include">
+        </childnode>
+        <childnode refid="4958" relation="include">
+        </childnode>
+        <childnode refid="4966" relation="include">
+        </childnode>
+        <childnode refid="4967" relation="include">
+        </childnode>
+        <childnode refid="4968" relation="include">
+        </childnode>
+        <childnode refid="4969" relation="include">
+        </childnode>
+        <childnode refid="4970" relation="include">
+        </childnode>
+        <childnode refid="5042" relation="include">
+        </childnode>
+        <childnode refid="5043" relation="include">
+        </childnode>
+        <childnode refid="5044" relation="include">
+        </childnode>
+        <childnode refid="5045" relation="include">
+        </childnode>
+        <childnode refid="5046" relation="include">
+        </childnode>
+        <childnode refid="5047" relation="include">
+        </childnode>
+        <childnode refid="5048" relation="include">
+        </childnode>
+        <childnode refid="5049" relation="include">
+        </childnode>
+        <childnode refid="5050" relation="include">
+        </childnode>
+        <childnode refid="5051" relation="include">
+        </childnode>
+        <childnode refid="5027" relation="include">
+        </childnode>
+        <childnode refid="4984" relation="include">
+        </childnode>
+        <childnode refid="5052" relation="include">
+        </childnode>
+        <childnode refid="5037" relation="include">
+        </childnode>
+        <childnode refid="5016" relation="include">
+        </childnode>
+        <childnode refid="4964" relation="include">
+        </childnode>
+        <childnode refid="4965" relation="include">
+        </childnode>
+        <childnode refid="5029" relation="include">
+        </childnode>
+        <childnode refid="5053" relation="include">
+        </childnode>
+      </node>
+      <node id="5024">
+        <label>hpx/util/assert.hpp</label>
+      </node>
+      <node id="5047">
+        <label>hpx/parallel/util/projection_identity.hpp</label>
+      </node>
+      <node id="4985">
+        <label>hpx/runtime/get_worker_thread_num.hpp</label>
+        <link refid="get__worker__thread__num_8hpp"/>
+        <childnode refid="4955" relation="include">
+        </childnode>
+        <childnode refid="4986" relation="include">
+        </childnode>
+        <childnode refid="4984" relation="include">
+        </childnode>
+      </node>
+      <node id="5016">
+        <label>memory</label>
+      </node>
+      <node id="5008">
+        <label>hpx/runtime/thread_pool_helpers.hpp</label>
+      </node>
+      <node id="5051">
+        <label>hpx/util/unused.hpp</label>
+      </node>
+      <node id="4992">
+        <label>hpx/util/detail/pp/cat.hpp</label>
+      </node>
+      <node id="5019">
+        <label>hpx/util/thread_description.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5061">
+        <label>hpx/parallel/algorithm.hpp</label>
+        <link refid="algorithm_8hpp_source"/>
+      </node>
+      <node id="5060">
+        <label>hpx/parallel/algorithms/reverse.hpp</label>
+        <link refid="algorithms_2reverse_8hpp"/>
+        <childnode refid="5061" relation="include">
+        </childnode>
+        <childnode refid="5062" relation="include">
+        </childnode>
+        <childnode refid="5064" relation="include">
+        </childnode>
+      </node>
+      <node id="5063">
+        <label>hpx/parallel/container_algorithms/rotate.hpp</label>
+        <link refid="container__algorithms_2rotate_8hpp"/>
+      </node>
+      <node id="5064">
+        <label>hpx/parallel/container_algorithms/reverse.hpp</label>
+        <link refid="container__algorithms_2reverse_8hpp"/>
+      </node>
+      <node id="5062">
+        <label>hpx/parallel/algorithms/rotate.hpp</label>
+        <link refid="algorithms_2rotate_8hpp"/>
+        <childnode refid="5061" relation="include">
+        </childnode>
+        <childnode refid="5063" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacehpx">hpx</innernamespace>
+    <innernamespace refid="namespacehpx_1_1parallel">hpx::parallel</innernamespace>
+    <innernamespace refid="namespacehpx_1_1parallel_1_1v1">hpx::parallel::v1</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2007-2017<sp/>Hartmut<sp/>Kaiser</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Distributed<sp/>under<sp/>the<sp/>Boost<sp/>Software<sp/>License,<sp/>Version<sp/>1.0.<sp/>(See<sp/>accompanying</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>file<sp/>LICENSE_1_0.txt<sp/>or<sp/>copy<sp/>at<sp/>http://www.boost.org/LICENSE_1_0.txt)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(HPX_PARALLEL_DETAIL_REVERSE_JUL_29_2014_0432PM)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPX_PARALLEL_DETAIL_REVERSE_JUL_29_2014_0432PM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/config.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/traits/concepts.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/traits/is_iterator.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/util/tagged_pair.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="algorithms_2copy_8hpp" kindref="compound">hpx/parallel/algorithms/copy.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/parallel/algorithms/detail/dispatch.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="algorithms_2for__each_8hpp" kindref="compound">hpx/parallel/algorithms/for_each.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="execution__policy_8hpp" kindref="compound">hpx/parallel/execution_policy.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/parallel/tagspec.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/parallel/util/detail/algorithm_result.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/parallel/util/projection_identity.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/parallel/util/zip_iterator.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iterator&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;type_traits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehpx" kindref="compound">hpx</ref><sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">parallel<sp/>{<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">v1</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>reverse</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">detail</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Iter&gt;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="algorithms_2reverse_8hpp_1a967582e2015a58617a450103228c2830" kindref="member">reverse</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>detail::algorithm&lt;reverse&lt;Iter&gt;,<sp/>Iter&gt;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="algorithms_2reverse_8hpp_1a967582e2015a58617a450103228c2830" kindref="member">reverse</ref>()</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="algorithms_2reverse_8hpp_1a967582e2015a58617a450103228c2830" kindref="member">reverse</ref>::algorithm(</highlight><highlight class="stringliteral">&quot;reverse&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ExPolicy,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>B</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">irIter&gt;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>BidirIter</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sequential(ExPolicy,<sp/>BidirIter<sp/>first,<sp/>BidirIter<sp/>last)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::reverse(first,<sp/>last);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>last;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ExPolicy,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>B</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">irIter&gt;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>util::detail::algorithm_result&lt;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ExPolicy,<sp/>BidirIter</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::type</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parallel(ExPolicy<sp/>&amp;&amp;<sp/>policy,<sp/>BidirIter<sp/>first,<sp/>BidirIter<sp/>last)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::reverse_iterator&lt;BidirIter&gt;<sp/>destination_iterator;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>hpx::util::zip_iterator&lt;BidirIter,<sp/>destination_iterator&gt;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>zip_iterator;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>zip_iterator::reference<sp/>reference;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>util::detail::convert_to_result(</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for_each_n&lt;zip_iterator&gt;().call(</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::forward&lt;ExPolicy&gt;(policy),<sp/>std::false_type(),</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::util::make_zip_iterator(</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>first,<sp/>destination_iterator(last)),</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::distance(first,<sp/>last)<sp/>/<sp/>2,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](reference<sp/>t)<sp/>-&gt;<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>hpx::util::get;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::swap(get&lt;0&gt;(t),<sp/>get&lt;1&gt;(t));</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>util::projection_identity()),</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[last](zip_iterator<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;)<sp/>-&gt;<sp/>BidirIter</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>last;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ExPolicy,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>BidirIter,</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>HPX_CONCEPT_REQUIRES_(</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>execution::is_execution_policy&lt;ExPolicy&gt;::value<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::traits::is_iterator&lt;BidirIter&gt;::value)&gt;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>util::detail::algorithm_result&lt;ExPolicy,<sp/>BidirIter&gt;::type</highlight></codeline>
+<codeline lineno="127" refid="algorithms_2reverse_8hpp_1a967582e2015a58617a450103228c2830" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="algorithms_2reverse_8hpp_1a967582e2015a58617a450103228c2830" kindref="member">reverse</ref>(ExPolicy<sp/>&amp;&amp;<sp/>policy,<sp/>BidirIter<sp/>first,<sp/>BidirIter<sp/>last)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>static_assert(</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(hpx::traits::is_bidirectional_iterator&lt;BidirIter&gt;::value),</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Requires<sp/>at<sp/>least<sp/>bidirectional<sp/>iterator.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structhpx_1_1parallel_1_1execution_1_1is__sequenced__execution__policy" kindref="compound">execution::is_sequenced_execution_policy&lt;ExPolicy&gt;</ref><sp/>is_seq;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>detail::reverse&lt;BidirIter&gt;().call(</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::forward&lt;ExPolicy&gt;(policy),<sp/>is_seq(),<sp/>first,<sp/>last);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>reverse_copy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">detail</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sequential<sp/>reverse_copy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>B</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">irIt,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>OutIter&gt;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>std::pair&lt;BidirIt,<sp/>OutIter&gt;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sequential_reverse_copy(BidirIt<sp/>first,<sp/>BidirIt<sp/>last,<sp/>OutIter<sp/>dest)</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BidirIt<sp/>iter<sp/>=<sp/>last;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(first<sp/>!=<sp/>iter)</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*dest++<sp/>=<sp/>*--iter;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::make_pair(last,<sp/>dest);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>IterPair&gt;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="algorithms_2reverse_8hpp_1a540985b828bcf4b522c9a9df67fcb29b" kindref="member">reverse_copy</ref></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>detail::algorithm&lt;reverse_copy&lt;IterPair&gt;,<sp/>IterPair&gt;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="algorithms_2reverse_8hpp_1a540985b828bcf4b522c9a9df67fcb29b" kindref="member">reverse_copy</ref>()</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>reverse_copy::algorithm(</highlight><highlight class="stringliteral">&quot;reverse_copy&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ExPolicy,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>B</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">irIter,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>OutIter&gt;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::pair&lt;BidirIter,<sp/>OutIter&gt;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sequential(ExPolicy,<sp/>BidirIter<sp/>first,<sp/>BidirIter<sp/>last,</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OutIter<sp/>dest_first)</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sequential_reverse_copy(first,<sp/>last,<sp/>dest_first);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ExPolicy,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>B</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">irIter,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>FwdIter&gt;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>util::detail::algorithm_result&lt;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ExPolicy,<sp/>std::pair&lt;BidirIter,<sp/>FwdIter&gt;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::type</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parallel(ExPolicy<sp/>&amp;&amp;<sp/>policy,<sp/>BidirIter<sp/>first,<sp/>BidirIter<sp/>last,</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FwdIter<sp/>dest_first)</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::reverse_iterator&lt;BidirIter&gt;<sp/>iterator;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>util::detail::convert_to_result(</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>detail::copy&lt;std::pair&lt;iterator,<sp/>FwdIter&gt;<sp/>&gt;().call(</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::forward&lt;ExPolicy&gt;(policy),<sp/>std::false_type(),</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>iterator(last),<sp/>iterator(first),<sp/>dest_first</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](std::pair&lt;iterator,<sp/>FwdIter&gt;<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>p)</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;<sp/>std::pair&lt;BidirIter,<sp/>FwdIter&gt;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::make_pair(p.first.base(),<sp/>p.second);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ExPolicy,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>BidirIter,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>FwdIter,</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/>HPX_CONCEPT_REQUIRES_(</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::traits::is_iterator&lt;BidirIter&gt;::value<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structhpx_1_1parallel_1_1execution_1_1is__execution__policy" kindref="compound">execution::is_execution_policy&lt;ExPolicy&gt;::value</ref><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::traits::is_iterator&lt;FwdIter&gt;::value)&gt;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>util::detail::algorithm_result&lt;</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ExPolicy,<sp/>hpx::util::tagged_pair&lt;tag::in(BidirIter),<sp/>tag::out(FwdIter)&gt;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/>&gt;::type</highlight></codeline>
+<codeline lineno="261" refid="algorithms_2reverse_8hpp_1a540985b828bcf4b522c9a9df67fcb29b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="algorithms_2reverse_8hpp_1a540985b828bcf4b522c9a9df67fcb29b" kindref="member">reverse_copy</ref>(ExPolicy<sp/>&amp;&amp;<sp/>policy,<sp/>BidirIter<sp/>first,<sp/>BidirIter<sp/>last,</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FwdIter<sp/>dest_first)</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>static_assert(</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(hpx::traits::is_bidirectional_iterator&lt;BidirIter&gt;::value),</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Requires<sp/>at<sp/>least<sp/>bidirectional<sp/>iterator.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(HPX_HAVE_ALGORITHM_INPUT_ITERATOR_SUPPORT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>static_assert(</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(hpx::traits::is_output_iterator&lt;FwdIter&gt;::value<sp/>||</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::traits::is_forward_iterator&lt;FwdIter&gt;::value),</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Requires<sp/>at<sp/>least<sp/>output<sp/>iterator.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::integral_constant&lt;bool,</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structhpx_1_1parallel_1_1execution_1_1is__sequenced__execution__policy" kindref="compound">execution::is_sequenced_execution_policy&lt;ExPolicy&gt;::value</ref><sp/>||</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>!hpx::traits::is_forward_iterator&lt;FwdIter&gt;::value</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;<sp/>is_seq;</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>static_assert(</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(hpx::traits::is_forward_iterator&lt;FwdIter&gt;::value),</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Requires<sp/>at<sp/>least<sp/>forward<sp/>iterator.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structhpx_1_1parallel_1_1execution_1_1is__sequenced__execution__policy" kindref="compound">execution::is_sequenced_execution_policy&lt;ExPolicy&gt;</ref><sp/>is_seq;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>hpx::util::make_tagged_pair&lt;tag::in,<sp/>tag::out&gt;(</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>detail::reverse_copy&lt;std::pair&lt;BidirIter,<sp/>FwdIter&gt;<sp/>&gt;().call(</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::forward&lt;ExPolicy&gt;(policy),<sp/>is_seq(),</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>first,<sp/>last,<sp/>dest_first));</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="290"><highlight class="normal">}}}</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="hpx/parallel/algorithms/reverse.hpp"/>
+  </compounddef>
+</doxygen>

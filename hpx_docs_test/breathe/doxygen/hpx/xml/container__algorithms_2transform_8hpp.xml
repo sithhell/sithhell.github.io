@@ -1,0 +1,834 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="container__algorithms_2transform_8hpp" kind="file" language="C++">
+    <compoundname>transform.hpp</compoundname>
+    <includes local="no">hpx/config.hpp</includes>
+    <includes local="no">hpx/traits/concepts.hpp</includes>
+    <includes local="no">hpx/traits/is_iterator.hpp</includes>
+    <includes local="no">hpx/traits/is_range.hpp</includes>
+    <includes local="no">hpx/util/range.hpp</includes>
+    <includes local="no">hpx/util/tagged_pair.hpp</includes>
+    <includes local="no">hpx/util/tagged_tuple.hpp</includes>
+    <includes refid="algorithms_2transform_8hpp" local="no">hpx/parallel/algorithms/transform.hpp</includes>
+    <includes local="no">hpx/parallel/tagspec.hpp</includes>
+    <includes local="no">hpx/parallel/traits/projected_range.hpp</includes>
+    <includes local="no">hpx/parallel/util/projection_identity.hpp</includes>
+    <includes local="no">type_traits</includes>
+    <includes local="no">utility</includes>
+    <incdepgraph>
+      <node id="6587">
+        <label>hpx/traits/is_execution_policy.hpp</label>
+        <link refid="is__execution__policy_8hpp"/>
+        <childnode refid="6499" relation="include">
+        </childnode>
+        <childnode refid="6588" relation="include">
+        </childnode>
+        <childnode refid="6514" relation="include">
+        </childnode>
+      </node>
+      <node id="6569">
+        <label>atomic</label>
+      </node>
+      <node id="6576">
+        <label>functional</label>
+      </node>
+      <node id="6566">
+        <label>hpx/util/register_locks.hpp</label>
+      </node>
+      <node id="6528">
+        <label>hpx/parallel/executors/post_policy_dispatch.hpp</label>
+      </node>
+      <node id="6504">
+        <label>hpx/util/tagged_pair.hpp</label>
+      </node>
+      <node id="6567">
+        <label>hpx/util/steady_clock.hpp</label>
+      </node>
+      <node id="6585">
+        <label>iterator</label>
+      </node>
+      <node id="6509">
+        <label>hpx/util/annotated_function.hpp</label>
+      </node>
+      <node id="6552">
+        <label>cstdint</label>
+      </node>
+      <node id="6540">
+        <label>hpx/throw_exception.hpp</label>
+        <link refid="throw__exception_8hpp"/>
+        <childnode refid="6499" relation="include">
+        </childnode>
+        <childnode refid="6536" relation="include">
+        </childnode>
+        <childnode refid="6539" relation="include">
+        </childnode>
+        <childnode refid="6541" relation="include">
+        </childnode>
+        <childnode refid="6542" relation="include">
+        </childnode>
+        <childnode refid="6543" relation="include">
+        </childnode>
+        <childnode refid="6544" relation="include">
+        </childnode>
+        <childnode refid="6537" relation="include">
+        </childnode>
+        <childnode refid="6545" relation="include">
+        </childnode>
+        <childnode refid="6538" relation="include">
+        </childnode>
+        <childnode refid="6546" relation="include">
+        </childnode>
+        <childnode refid="6547" relation="include">
+        </childnode>
+      </node>
+      <node id="6505">
+        <label>hpx/util/tagged_tuple.hpp</label>
+      </node>
+      <node id="6558">
+        <label>hpx/runtime/threads/policies/scheduler_mode.hpp</label>
+        <link refid="scheduler__mode_8hpp_source"/>
+      </node>
+      <node id="6563">
+        <label>hpx/util/function.hpp</label>
+      </node>
+      <node id="6539">
+        <label>hpx/exception_fwd.hpp</label>
+        <link refid="exception__fwd_8hpp"/>
+        <childnode refid="6499" relation="include">
+        </childnode>
+        <childnode refid="6536" relation="include">
+        </childnode>
+        <childnode refid="6540" relation="include">
+        </childnode>
+      </node>
+      <node id="6508">
+        <label>hpx/traits/segmented_iterator_traits.hpp</label>
+      </node>
+      <node id="6516">
+        <label>hpx/util/tuple.hpp</label>
+      </node>
+      <node id="6506">
+        <label>hpx/parallel/algorithms/transform.hpp</label>
+        <link refid="algorithms_2transform_8hpp"/>
+        <childnode refid="6499" relation="include">
+        </childnode>
+        <childnode refid="6500" relation="include">
+        </childnode>
+        <childnode refid="6507" relation="include">
+        </childnode>
+        <childnode refid="6501" relation="include">
+        </childnode>
+        <childnode refid="6508" relation="include">
+        </childnode>
+        <childnode refid="6509" relation="include">
+        </childnode>
+        <childnode refid="6510" relation="include">
+        </childnode>
+        <childnode refid="6504" relation="include">
+        </childnode>
+        <childnode refid="6505" relation="include">
+        </childnode>
+        <childnode refid="6516" relation="include">
+        </childnode>
+        <childnode refid="6517" relation="include">
+        </childnode>
+        <childnode refid="6518" relation="include">
+        </childnode>
+        <childnode refid="6590" relation="include">
+        </childnode>
+        <childnode refid="6591" relation="include">
+        </childnode>
+        <childnode refid="6592" relation="include">
+        </childnode>
+        <childnode refid="6593" relation="include">
+        </childnode>
+        <childnode refid="6594" relation="include">
+        </childnode>
+        <childnode refid="6595" relation="include">
+        </childnode>
+        <childnode refid="6596" relation="include">
+        </childnode>
+        <childnode refid="6575" relation="include">
+        </childnode>
+        <childnode refid="6533" relation="include">
+        </childnode>
+        <childnode refid="6552" relation="include">
+        </childnode>
+        <childnode refid="6585" relation="include">
+        </childnode>
+        <childnode refid="6514" relation="include">
+        </childnode>
+        <childnode refid="6515" relation="include">
+        </childnode>
+      </node>
+      <node id="6591">
+        <label>hpx/parallel/traits/projected.hpp</label>
+      </node>
+      <node id="6597">
+        <label>hpx/parallel/traits/projected_range.hpp</label>
+      </node>
+      <node id="6512">
+        <label>hpx/util/void_guard.hpp</label>
+      </node>
+      <node id="6511">
+        <label>hpx/util/result_of.hpp</label>
+      </node>
+      <node id="6548">
+        <label>stdexcept</label>
+      </node>
+      <node id="6549">
+        <label>hpx/runtime/launch_policy.hpp</label>
+        <link refid="launch__policy_8hpp"/>
+        <childnode refid="6499" relation="include">
+        </childnode>
+        <childnode refid="6550" relation="include">
+        </childnode>
+        <childnode refid="6553" relation="include">
+        </childnode>
+        <childnode refid="6514" relation="include">
+        </childnode>
+        <childnode refid="6515" relation="include">
+        </childnode>
+      </node>
+      <node id="6538">
+        <label>string</label>
+      </node>
+      <node id="6590">
+        <label>hpx/parallel/tagspec.hpp</label>
+      </node>
+      <node id="6543">
+        <label>hpx/util/detail/pp/nargs.hpp</label>
+      </node>
+      <node id="6589">
+        <label>hpx/traits/is_launch_policy.hpp</label>
+      </node>
+      <node id="6554">
+        <label>hpx/runtime/threads/thread_helpers.hpp</label>
+        <link refid="thread__helpers_8hpp_source"/>
+        <childnode refid="6499" relation="include">
+        </childnode>
+        <childnode refid="6539" relation="include">
+        </childnode>
+        <childnode refid="6555" relation="include">
+        </childnode>
+        <childnode refid="6556" relation="include">
+        </childnode>
+        <childnode refid="6557" relation="include">
+        </childnode>
+        <childnode refid="6558" relation="include">
+        </childnode>
+        <childnode refid="6559" relation="include">
+        </childnode>
+        <childnode refid="6550" relation="include">
+        </childnode>
+        <childnode refid="6562" relation="include">
+        </childnode>
+        <childnode refid="6564" relation="include">
+        </childnode>
+        <childnode refid="6566" relation="include">
+        </childnode>
+        <childnode refid="6567" relation="include">
+        </childnode>
+        <childnode refid="6568" relation="include">
+        </childnode>
+        <childnode refid="6569" relation="include">
+        </childnode>
+        <childnode refid="6570" relation="include">
+        </childnode>
+        <childnode refid="6533" relation="include">
+        </childnode>
+        <childnode refid="6552" relation="include">
+        </childnode>
+        <childnode refid="6514" relation="include">
+        </childnode>
+        <childnode refid="6515" relation="include">
+        </childnode>
+      </node>
+      <node id="6536">
+        <label>hpx/error.hpp</label>
+        <link refid="error_8hpp"/>
+        <childnode refid="6499" relation="include">
+        </childnode>
+        <childnode refid="6537" relation="include">
+        </childnode>
+        <childnode refid="6538" relation="include">
+        </childnode>
+      </node>
+      <node id="6546">
+        <label>hpx/config/warnings_prefix.hpp</label>
+      </node>
+      <node id="6499">
+        <label>hpx/config.hpp</label>
+      </node>
+      <node id="6518">
+        <label>hpx/parallel/execution_policy.hpp</label>
+        <link refid="execution__policy_8hpp"/>
+        <childnode refid="6499" relation="include">
+        </childnode>
+        <childnode refid="6519" relation="include">
+        </childnode>
+        <childnode refid="6520" relation="include">
+        </childnode>
+        <childnode refid="6521" relation="include">
+        </childnode>
+        <childnode refid="6522" relation="include">
+        </childnode>
+        <childnode refid="6523" relation="include">
+        </childnode>
+        <childnode refid="6578" relation="include">
+        </childnode>
+        <childnode refid="6579" relation="include">
+        </childnode>
+        <childnode refid="6530" relation="include">
+        </childnode>
+        <childnode refid="6586" relation="include">
+        </childnode>
+        <childnode refid="6587" relation="include">
+        </childnode>
+        <childnode refid="6572" relation="include">
+        </childnode>
+        <childnode refid="6531" relation="include">
+        </childnode>
+        <childnode refid="6589" relation="include">
+        </childnode>
+        <childnode refid="6588" relation="include">
+        </childnode>
+        <childnode refid="6565" relation="include">
+        </childnode>
+        <childnode refid="6514" relation="include">
+        </childnode>
+        <childnode refid="6515" relation="include">
+        </childnode>
+      </node>
+      <node id="6545">
+        <label>exception</label>
+      </node>
+      <node id="6523">
+        <label>hpx/parallel/executors/parallel_executor.hpp</label>
+        <link refid="parallel__executor_8hpp"/>
+        <childnode refid="6499" relation="include">
+        </childnode>
+        <childnode refid="6524" relation="include">
+        </childnode>
+        <childnode refid="6525" relation="include">
+        </childnode>
+        <childnode refid="6526" relation="include">
+        </childnode>
+        <childnode refid="6527" relation="include">
+        </childnode>
+        <childnode refid="6528" relation="include">
+        </childnode>
+        <childnode refid="6529" relation="include">
+        </childnode>
+        <childnode refid="6534" relation="include">
+        </childnode>
+        <childnode refid="6549" relation="include">
+        </childnode>
+        <childnode refid="6530" relation="include">
+        </childnode>
+        <childnode refid="6554" relation="include">
+        </childnode>
+        <childnode refid="6571" relation="include">
+        </childnode>
+        <childnode refid="6572" relation="include">
+        </childnode>
+        <childnode refid="6573" relation="include">
+        </childnode>
+        <childnode refid="6574" relation="include">
+        </childnode>
+        <childnode refid="6503" relation="include">
+        </childnode>
+        <childnode refid="6575" relation="include">
+        </childnode>
+        <childnode refid="6533" relation="include">
+        </childnode>
+        <childnode refid="6576" relation="include">
+        </childnode>
+        <childnode refid="6514" relation="include">
+        </childnode>
+        <childnode refid="6515" relation="include">
+        </childnode>
+        <childnode refid="6577" relation="include">
+        </childnode>
+      </node>
+      <node id="6501">
+        <label>hpx/traits/is_iterator.hpp</label>
+      </node>
+      <node id="6562">
+        <label>hpx/util_fwd.hpp</label>
+      </node>
+      <node id="6593">
+        <label>hpx/parallel/util/foreach_partitioner.hpp</label>
+      </node>
+      <node id="6564">
+        <label>hpx/util/unique_function.hpp</label>
+      </node>
+      <node id="6579">
+        <label>hpx/parallel/executors/sequenced_executor.hpp</label>
+        <link refid="sequenced__executor_8hpp"/>
+        <childnode refid="6499" relation="include">
+        </childnode>
+        <childnode refid="6524" relation="include">
+        </childnode>
+        <childnode refid="6525" relation="include">
+        </childnode>
+        <childnode refid="6580" relation="include">
+        </childnode>
+        <childnode refid="6572" relation="include">
+        </childnode>
+        <childnode refid="6581" relation="include">
+        </childnode>
+        <childnode refid="6510" relation="include">
+        </childnode>
+        <childnode refid="6582" relation="include">
+        </childnode>
+        <childnode refid="6584" relation="include">
+        </childnode>
+        <childnode refid="6533" relation="include">
+        </childnode>
+        <childnode refid="6585" relation="include">
+        </childnode>
+        <childnode refid="6514" relation="include">
+        </childnode>
+        <childnode refid="6515" relation="include">
+        </childnode>
+        <childnode refid="6577" relation="include">
+        </childnode>
+      </node>
+      <node id="6544">
+        <label>boost/current_function.hpp</label>
+      </node>
+      <node id="6571">
+        <label>hpx/traits/future_traits.hpp</label>
+      </node>
+      <node id="6581">
+        <label>hpx/util/deferred_call.hpp</label>
+      </node>
+      <node id="6550">
+        <label>hpx/runtime/threads/thread_enums.hpp</label>
+        <link refid="thread__enums_8hpp"/>
+        <childnode refid="6499" relation="include">
+        </childnode>
+        <childnode refid="6551" relation="include">
+        </childnode>
+        <childnode refid="6533" relation="include">
+        </childnode>
+        <childnode refid="6552" relation="include">
+        </childnode>
+      </node>
+      <node id="6529">
+        <label>hpx/parallel/executors/static_chunk_size.hpp</label>
+        <link refid="static__chunk__size_8hpp"/>
+        <childnode refid="6499" relation="include">
+        </childnode>
+        <childnode refid="6530" relation="include">
+        </childnode>
+        <childnode refid="6531" relation="include">
+        </childnode>
+        <childnode refid="6532" relation="include">
+        </childnode>
+        <childnode refid="6533" relation="include">
+        </childnode>
+        <childnode refid="6514" relation="include">
+        </childnode>
+      </node>
+      <node id="6583">
+        <label>hpx/util/detail/unwrap_impl.hpp</label>
+      </node>
+      <node id="6500">
+        <label>hpx/traits/concepts.hpp</label>
+      </node>
+      <node id="6584">
+        <label>hpx/parallel/exception_list.hpp</label>
+      </node>
+      <node id="6520">
+        <label>hpx/parallel/execution_policy_fwd.hpp</label>
+      </node>
+      <node id="6580">
+        <label>hpx/runtime/threads/thread_executor.hpp</label>
+      </node>
+      <node id="6572">
+        <label>hpx/traits/is_executor.hpp</label>
+      </node>
+      <node id="6527">
+        <label>hpx/parallel/algorithms/detail/predicates.hpp</label>
+      </node>
+      <node id="6521">
+        <label>hpx/parallel/executors/execution.hpp</label>
+      </node>
+      <node id="6537">
+        <label>boost/system/error_code.hpp</label>
+      </node>
+      <node id="6577">
+        <label>vector</label>
+      </node>
+      <node id="6498">
+        <label>hpx/parallel/container_algorithms/transform.hpp</label>
+        <link refid="container__algorithms_2transform_8hpp"/>
+        <childnode refid="6499" relation="include">
+        </childnode>
+        <childnode refid="6500" relation="include">
+        </childnode>
+        <childnode refid="6501" relation="include">
+        </childnode>
+        <childnode refid="6502" relation="include">
+        </childnode>
+        <childnode refid="6503" relation="include">
+        </childnode>
+        <childnode refid="6504" relation="include">
+        </childnode>
+        <childnode refid="6505" relation="include">
+        </childnode>
+        <childnode refid="6506" relation="include">
+        </childnode>
+        <childnode refid="6590" relation="include">
+        </childnode>
+        <childnode refid="6597" relation="include">
+        </childnode>
+        <childnode refid="6594" relation="include">
+        </childnode>
+        <childnode refid="6514" relation="include">
+        </childnode>
+        <childnode refid="6515" relation="include">
+        </childnode>
+      </node>
+      <node id="6517">
+        <label>hpx/parallel/algorithms/detail/dispatch.hpp</label>
+      </node>
+      <node id="6561">
+        <label>hpx/runtime/threads/thread_id_type.hpp</label>
+      </node>
+      <node id="6515">
+        <label>utility</label>
+      </node>
+      <node id="6519">
+        <label>hpx/parallel/datapar/execution_policy.hpp</label>
+      </node>
+      <node id="6582">
+        <label>hpx/util/unwrap.hpp</label>
+        <link refid="unwrap_8hpp_source"/>
+        <childnode refid="6499" relation="include">
+        </childnode>
+        <childnode refid="6583" relation="include">
+        </childnode>
+        <childnode refid="6533" relation="include">
+        </childnode>
+        <childnode refid="6515" relation="include">
+        </childnode>
+      </node>
+      <node id="6547">
+        <label>hpx/config/warnings_suffix.hpp</label>
+      </node>
+      <node id="6513">
+        <label>boost/ref.hpp</label>
+      </node>
+      <node id="6551">
+        <label>hpx/runtime/threads/detail/combined_tagged_state.hpp</label>
+      </node>
+      <node id="6503">
+        <label>hpx/util/range.hpp</label>
+      </node>
+      <node id="6532">
+        <label>hpx/parallel/executors/execution_parameters_fwd.hpp</label>
+      </node>
+      <node id="6526">
+        <label>hpx/lcos/when_all_fwd.hpp</label>
+      </node>
+      <node id="6502">
+        <label>hpx/traits/is_range.hpp</label>
+      </node>
+      <node id="6542">
+        <label>hpx/util/detail/pp/expand.hpp</label>
+      </node>
+      <node id="6522">
+        <label>hpx/parallel/executors/execution_parameters.hpp</label>
+      </node>
+      <node id="6533">
+        <label>cstddef</label>
+      </node>
+      <node id="6596">
+        <label>hpx/parallel/util/zip_iterator.hpp</label>
+      </node>
+      <node id="6595">
+        <label>hpx/parallel/util/transform_loop.hpp</label>
+      </node>
+      <node id="6555">
+        <label>hpx/runtime/naming_fwd.hpp</label>
+      </node>
+      <node id="6570">
+        <label>chrono</label>
+      </node>
+      <node id="6578">
+        <label>hpx/parallel/executors/rebind_executor.hpp</label>
+      </node>
+      <node id="6535">
+        <label>hpx/error_code.hpp</label>
+        <link refid="error__code_8hpp"/>
+        <childnode refid="6499" relation="include">
+        </childnode>
+        <childnode refid="6536" relation="include">
+        </childnode>
+        <childnode refid="6539" relation="include">
+        </childnode>
+        <childnode refid="6537" relation="include">
+        </childnode>
+        <childnode refid="6545" relation="include">
+        </childnode>
+        <childnode refid="6548" relation="include">
+        </childnode>
+        <childnode refid="6538" relation="include">
+        </childnode>
+        <childnode refid="6540" relation="include">
+        </childnode>
+      </node>
+      <node id="6524">
+        <label>hpx/async_launch_policy_dispatch.hpp</label>
+      </node>
+      <node id="6510">
+        <label>hpx/util/invoke.hpp</label>
+        <link refid="invoke_8hpp_source"/>
+        <childnode refid="6499" relation="include">
+        </childnode>
+        <childnode refid="6511" relation="include">
+        </childnode>
+        <childnode refid="6512" relation="include">
+        </childnode>
+        <childnode refid="6513" relation="include">
+        </childnode>
+        <childnode refid="6514" relation="include">
+        </childnode>
+        <childnode refid="6515" relation="include">
+        </childnode>
+      </node>
+      <node id="6556">
+        <label>hpx/runtime/threads_fwd.hpp</label>
+      </node>
+      <node id="6553">
+        <label>hpx/runtime/serialization/serialization_fwd.hpp</label>
+      </node>
+      <node id="6588">
+        <label>hpx/util/decay.hpp</label>
+      </node>
+      <node id="6560">
+        <label>hpx/runtime/threads/coroutines/coroutine_fwd.hpp</label>
+      </node>
+      <node id="6559">
+        <label>hpx/runtime/threads/thread_data_fwd.hpp</label>
+        <link refid="thread__data__fwd_8hpp"/>
+        <childnode refid="6499" relation="include">
+        </childnode>
+        <childnode refid="6539" relation="include">
+        </childnode>
+        <childnode refid="6560" relation="include">
+        </childnode>
+        <childnode refid="6550" relation="include">
+        </childnode>
+        <childnode refid="6561" relation="include">
+        </childnode>
+        <childnode refid="6562" relation="include">
+        </childnode>
+        <childnode refid="6563" relation="include">
+        </childnode>
+        <childnode refid="6564" relation="include">
+        </childnode>
+        <childnode refid="6533" relation="include">
+        </childnode>
+        <childnode refid="6552" relation="include">
+        </childnode>
+        <childnode refid="6515" relation="include">
+        </childnode>
+        <childnode refid="6565" relation="include">
+        </childnode>
+      </node>
+      <node id="6525">
+        <label>hpx/lcos/future.hpp</label>
+      </node>
+      <node id="6514">
+        <label>type_traits</label>
+      </node>
+      <node id="6586">
+        <label>hpx/traits/executor_traits.hpp</label>
+      </node>
+      <node id="6507">
+        <label>hpx/traits/is_callable.hpp</label>
+      </node>
+      <node id="6531">
+        <label>hpx/traits/is_executor_parameters.hpp</label>
+      </node>
+      <node id="6575">
+        <label>algorithm</label>
+      </node>
+      <node id="6530">
+        <label>hpx/runtime/serialization/serialize.hpp</label>
+      </node>
+      <node id="6592">
+        <label>hpx/parallel/util/detail/algorithm_result.hpp</label>
+      </node>
+      <node id="6574">
+        <label>hpx/util/bind.hpp</label>
+      </node>
+      <node id="6573">
+        <label>hpx/util/assert.hpp</label>
+      </node>
+      <node id="6594">
+        <label>hpx/parallel/util/projection_identity.hpp</label>
+      </node>
+      <node id="6534">
+        <label>hpx/runtime/get_worker_thread_num.hpp</label>
+        <link refid="get__worker__thread__num_8hpp"/>
+        <childnode refid="6499" relation="include">
+        </childnode>
+        <childnode refid="6535" relation="include">
+        </childnode>
+        <childnode refid="6533" relation="include">
+        </childnode>
+      </node>
+      <node id="6565">
+        <label>memory</label>
+      </node>
+      <node id="6557">
+        <label>hpx/runtime/thread_pool_helpers.hpp</label>
+      </node>
+      <node id="6541">
+        <label>hpx/util/detail/pp/cat.hpp</label>
+      </node>
+      <node id="6568">
+        <label>hpx/util/thread_description.hpp</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacehpx">hpx</innernamespace>
+    <innernamespace refid="namespacehpx_1_1parallel">hpx::parallel</innernamespace>
+    <innernamespace refid="namespacehpx_1_1parallel_1_1v1">hpx::parallel::v1</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2015<sp/>Hartmut<sp/>Kaiser</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Distributed<sp/>under<sp/>the<sp/>Boost<sp/>Software<sp/>License,<sp/>Version<sp/>1.0.<sp/>(See<sp/>accompanying</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>file<sp/>LICENSE_1_0.txt<sp/>or<sp/>copy<sp/>at<sp/>http://www.boost.org/LICENSE_1_0.txt)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(HPX_PARALLEL_CONTAINER_ALGORITHM_TRANSFORM_JUL_18_2015_0804PM)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPX_PARALLEL_CONTAINER_ALGORITHM_TRANSFORM_JUL_18_2015_0804PM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/config.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/traits/concepts.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/traits/is_iterator.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/traits/is_range.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/util/range.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/util/tagged_pair.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/util/tagged_tuple.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="algorithms_2transform_8hpp" kindref="compound">hpx/parallel/algorithms/transform.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/parallel/tagspec.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/parallel/traits/projected_range.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/parallel/util/projection_identity.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;type_traits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehpx" kindref="compound">hpx</ref><sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">parallel<sp/>{<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">v1</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ExPolicy,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Rng,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>OutIter,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>F,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Proj<sp/>=<sp/>util::projection_identity,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>HPX_CONCEPT_REQUIRES_(</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>execution::is_execution_policy&lt;ExPolicy&gt;::value<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::traits::is_range&lt;Rng&gt;::value<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::traits::is_iterator&lt;OutIter&gt;::value<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>traits::is_projected_range&lt;Proj,<sp/>Rng&gt;::value<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>traits::is_indirect_callable&lt;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ExPolicy,<sp/>F,<sp/>traits::projected_range&lt;Proj,<sp/>Rng&gt;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::value)&gt;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>util::detail::algorithm_result&lt;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ExPolicy,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::util::tagged_pair&lt;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tag::in(</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>hpx::traits::range_iterator&lt;Rng&gt;::type),</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tag::out(OutIter)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>&gt;::type</highlight></codeline>
+<codeline lineno="115" refid="container__algorithms_2transform_8hpp_1a3f7902dd44eace6467f72702ff78c3d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="algorithms_2transform_8hpp_1afe123e60433fe2243f7245caf6a56776" kindref="member">transform</ref>(ExPolicy<sp/>&amp;&amp;<sp/>policy,<sp/>Rng<sp/>&amp;&amp;<sp/>rng,<sp/>OutIter<sp/>dest,<sp/>F<sp/>&amp;&amp;<sp/>f,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Proj<sp/>&amp;&amp;<sp/>proj<sp/>=<sp/>Proj())</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="algorithms_2transform_8hpp_1afe123e60433fe2243f7245caf6a56776" kindref="member">transform</ref>(std::forward&lt;ExPolicy&gt;(policy),</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::util::begin(rng),<sp/>hpx::util::end(rng),<sp/>std::move(dest),</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::forward&lt;F&gt;(f),<sp/>std::forward&lt;Proj&gt;(proj));</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ExPolicy,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Rng,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>InIter2,</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>OutIter,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>F,</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Proj1<sp/>=<sp/>util::projection_identity,</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Proj2<sp/>=<sp/>util::projection_identity,</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>HPX_CONCEPT_REQUIRES_(</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structhpx_1_1parallel_1_1execution_1_1is__execution__policy" kindref="compound">execution::is_execution_policy&lt;ExPolicy&gt;::value</ref><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::traits::is_range&lt;Rng&gt;::value<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::traits::is_iterator&lt;InIter2&gt;::value<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::traits::is_iterator&lt;OutIter&gt;::value<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>traits::is_projected_range&lt;Proj1,<sp/>Rng&gt;::value<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>traits::is_projected&lt;Proj2,<sp/>InIter2&gt;::value<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>traits::is_indirect_callable&lt;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ExPolicy,<sp/>F,</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>traits::projected_range&lt;Proj1,<sp/>Rng&gt;,</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>traits::projected&lt;Proj2,<sp/>InIter2&gt;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::value)&gt;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>util::detail::algorithm_result&lt;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ExPolicy,</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::util::tagged_tuple&lt;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tag::in1(</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>hpx::traits::range_iterator&lt;Rng&gt;::type),</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tag::in2(InIter2),<sp/>tag::out(OutIter)</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>&gt;::type</highlight></codeline>
+<codeline lineno="234" refid="container__algorithms_2transform_8hpp_1a296e7e5773d39e6c8b4a9a9ce38b00cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="algorithms_2transform_8hpp_1afe123e60433fe2243f7245caf6a56776" kindref="member">transform</ref>(ExPolicy<sp/>&amp;&amp;<sp/>policy,<sp/>Rng<sp/>&amp;&amp;<sp/>rng,<sp/>InIter2<sp/>first2,<sp/>OutIter<sp/>dest,</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>F<sp/>&amp;&amp;<sp/>f,<sp/>Proj1<sp/>&amp;&amp;<sp/>proj1<sp/>=<sp/>Proj1(),<sp/>Proj2<sp/>&amp;&amp;<sp/>proj2<sp/>=<sp/>Proj2())</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="algorithms_2transform_8hpp_1afe123e60433fe2243f7245caf6a56776" kindref="member">transform</ref>(std::forward&lt;ExPolicy&gt;(policy),</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::util::begin(rng),<sp/>hpx::util::end(rng),<sp/>std::move(first2),</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::move(dest),<sp/>std::forward&lt;F&gt;(f),</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::forward&lt;Proj1&gt;(proj1),<sp/>std::forward&lt;Proj2&gt;(proj2));</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ExPolicy,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Rng1,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Rng2,</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>OutIter,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>F,</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Proj1<sp/>=<sp/>util::projection_identity,</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Proj2<sp/>=<sp/>util::projection_identity,</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/>HPX_CONCEPT_REQUIRES_(</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structhpx_1_1parallel_1_1execution_1_1is__execution__policy" kindref="compound">execution::is_execution_policy&lt;ExPolicy&gt;::value</ref><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::traits::is_range&lt;Rng1&gt;::value<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::traits::is_range&lt;Rng2&gt;::value<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::traits::is_iterator&lt;OutIter&gt;::value<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>traits::is_projected_range&lt;Proj1,<sp/>Rng1&gt;::value<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>traits::is_projected_range&lt;Proj2,<sp/>Rng2&gt;::value<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>traits::is_indirect_callable&lt;</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ExPolicy,<sp/>F,</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>traits::projected_range&lt;Proj1,<sp/>Rng1&gt;,</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>traits::projected_range&lt;Proj2,<sp/>Rng2&gt;</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::value)&gt;</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>util::detail::algorithm_result&lt;</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ExPolicy,</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::util::tagged_tuple&lt;</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tag::in1(</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>hpx::traits::range_iterator&lt;Rng1&gt;::type),</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tag::in2(</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>hpx::traits::range_iterator&lt;Rng2&gt;::type),</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tag::out(OutIter)</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/>&gt;::type</highlight></codeline>
+<codeline lineno="358" refid="container__algorithms_2transform_8hpp_1a45593fc520cb2631a4957718bcf0450c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="algorithms_2transform_8hpp_1afe123e60433fe2243f7245caf6a56776" kindref="member">transform</ref>(ExPolicy<sp/>&amp;&amp;<sp/>policy,<sp/>Rng1<sp/>&amp;&amp;<sp/>rng1,<sp/>Rng2<sp/>&amp;&amp;<sp/>rng2,<sp/>OutIter<sp/>dest,</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>F<sp/>&amp;&amp;<sp/>f,<sp/>Proj1<sp/>&amp;&amp;<sp/>proj1<sp/>=<sp/>Proj1(),<sp/>Proj2<sp/>&amp;&amp;<sp/>proj2<sp/>=<sp/>Proj2())</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="algorithms_2transform_8hpp_1afe123e60433fe2243f7245caf6a56776" kindref="member">transform</ref>(std::forward&lt;ExPolicy&gt;(policy),</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::util::begin(rng1),<sp/>hpx::util::end(rng1),</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::util::begin(rng2),<sp/>hpx::util::end(rng2),</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::move(dest),<sp/>std::forward&lt;F&gt;(f),</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::forward&lt;Proj1&gt;(proj1),<sp/>std::forward&lt;Proj2&gt;(proj2));</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="367"><highlight class="normal">}}}</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"></highlight></codeline>
+<codeline lineno="371"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="hpx/parallel/container_algorithms/transform.hpp"/>
+  </compounddef>
+</doxygen>

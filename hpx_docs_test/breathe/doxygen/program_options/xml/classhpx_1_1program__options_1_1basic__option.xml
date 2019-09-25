@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classhpx_1_1program__options_1_1basic__option" kind="class" language="C++" prot="public">
+    <compoundname>hpx::program_options::basic_option</compoundname>
+    <includes refid="option_8hpp" local="no">option.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>class Char</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classhpx_1_1program__options_1_1basic__option_1a6a958c9e4833a1890dbf05b8b0b386c3" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hpx::program_options::basic_option&lt; Char &gt;::string_key</definition>
+        <argsstring></argsstring>
+        <name>string_key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String key of this option. Intentionally independent of the template parameter. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/option.hpp" line="61" column="1" bodyfile="libs/program_options/include/hpx/program_options/option.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhpx_1_1program__options_1_1basic__option_1a4e99c5c5ee822b287fc016b97cae15ff" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int hpx::program_options::basic_option&lt; Char &gt;::position_key</definition>
+        <argsstring></argsstring>
+        <name>position_key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Position key of this option. All options without an explicit name are sequentially numbered starting from 0. If an option has explicit name, &apos;position_key&apos; is equal to -1. It is possible that both position_key and string_key is specified, in case name is implicitly added. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/option.hpp" line="68" column="1" bodyfile="libs/program_options/include/hpx/program_options/option.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhpx_1_1program__options_1_1basic__option_1a73f4bffd91cc0a295d98bc66ff3c1d17" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; std::basic_string&lt; Char &gt; &gt;</type>
+        <definition>std::vector&lt;std::basic_string&lt;Char&gt; &gt; hpx::program_options::basic_option&lt; Char &gt;::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Option&apos;s value </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/option.hpp" line="70" column="1" bodyfile="libs/program_options/include/hpx/program_options/option.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhpx_1_1program__options_1_1basic__option_1ab8cc539025ac4b1628db9768af20e3af" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; std::basic_string&lt; Char &gt; &gt;</type>
+        <definition>std::vector&lt;std::basic_string&lt;Char&gt; &gt; hpx::program_options::basic_option&lt; Char &gt;::original_tokens</definition>
+        <argsstring></argsstring>
+        <name>original_tokens</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The original unchanged tokens this option was created from. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/option.hpp" line="73" column="1" bodyfile="libs/program_options/include/hpx/program_options/option.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhpx_1_1program__options_1_1basic__option_1a54a8f1992de31c02e5e8c460f2ee7e16" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hpx::program_options::basic_option&lt; Char &gt;::unregistered</definition>
+        <argsstring></argsstring>
+        <name>unregistered</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>True if option was not recognized. In that case, &apos;string_key&apos; and &apos;value&apos; are results of purely syntactic parsing of source. The original tokens can be recovered from the &quot;original_tokens&quot; member. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/option.hpp" line="79" column="1" bodyfile="libs/program_options/include/hpx/program_options/option.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhpx_1_1program__options_1_1basic__option_1a2cfc34a492e3c6a05c923cde4915d096" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hpx::program_options::basic_option&lt; Char &gt;::case_insensitive</definition>
+        <argsstring></argsstring>
+        <name>case_insensitive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>True if string_key has to be handled case insensitive. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/option.hpp" line="83" column="1" bodyfile="libs/program_options/include/hpx/program_options/option.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1basic__option_1a5f2261a21944bdc0bc89ca56ee7414c5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::program_options::basic_option&lt; Char &gt;::basic_option</definition>
+        <argsstring>()</argsstring>
+        <name>basic_option</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/option.hpp" line="43" column="1" bodyfile="libs/program_options/include/hpx/program_options/option.hpp" bodystart="43" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1basic__option_1ab17f6524c4130209f3ada820e4e0a9b4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::program_options::basic_option&lt; Char &gt;::basic_option</definition>
+        <argsstring>(const std::string &amp;xstring_key, const std::vector&lt; std::string &gt; &amp;xvalue)</argsstring>
+        <name>basic_option</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>xstring_key</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>xvalue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/option.hpp" line="49" column="1" bodyfile="libs/program_options/include/hpx/program_options/option.hpp" bodystart="49" bodyend="57"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Option found in input source. Contains a key and a value. The key, in turn, can be a string (name of an option), or an integer (position in input source) -- in case no name is specified. The latter is only possible for command line. The template parameter specifies the type of char used for storing the option&apos;s value. </para>    </detaileddescription>
+    <location file="libs/program_options/include/hpx/program_options/option.hpp" line="41" column="1" bodyfile="libs/program_options/include/hpx/program_options/option.hpp" bodystart="40" bodyend="84"/>
+    <listofallmembers>
+      <member refid="classhpx_1_1program__options_1_1basic__option_1a5f2261a21944bdc0bc89ca56ee7414c5" prot="public" virt="non-virtual"><scope>hpx::program_options::basic_option</scope><name>basic_option</name></member>
+      <member refid="classhpx_1_1program__options_1_1basic__option_1ab17f6524c4130209f3ada820e4e0a9b4" prot="public" virt="non-virtual"><scope>hpx::program_options::basic_option</scope><name>basic_option</name></member>
+      <member refid="classhpx_1_1program__options_1_1basic__option_1a2cfc34a492e3c6a05c923cde4915d096" prot="public" virt="non-virtual"><scope>hpx::program_options::basic_option</scope><name>case_insensitive</name></member>
+      <member refid="classhpx_1_1program__options_1_1basic__option_1ab8cc539025ac4b1628db9768af20e3af" prot="public" virt="non-virtual"><scope>hpx::program_options::basic_option</scope><name>original_tokens</name></member>
+      <member refid="classhpx_1_1program__options_1_1basic__option_1a4e99c5c5ee822b287fc016b97cae15ff" prot="public" virt="non-virtual"><scope>hpx::program_options::basic_option</scope><name>position_key</name></member>
+      <member refid="classhpx_1_1program__options_1_1basic__option_1a6a958c9e4833a1890dbf05b8b0b386c3" prot="public" virt="non-virtual"><scope>hpx::program_options::basic_option</scope><name>string_key</name></member>
+      <member refid="classhpx_1_1program__options_1_1basic__option_1a54a8f1992de31c02e5e8c460f2ee7e16" prot="public" virt="non-virtual"><scope>hpx::program_options::basic_option</scope><name>unregistered</name></member>
+      <member refid="classhpx_1_1program__options_1_1basic__option_1a73f4bffd91cc0a295d98bc66ff3c1d17" prot="public" virt="non-virtual"><scope>hpx::program_options::basic_option</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

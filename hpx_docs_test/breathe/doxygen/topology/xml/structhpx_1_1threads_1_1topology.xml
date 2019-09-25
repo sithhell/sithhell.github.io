@@ -1,0 +1,1511 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structhpx_1_1threads_1_1topology" kind="struct" language="C++" prot="public">
+    <compoundname>hpx::threads::topology</compoundname>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="structhpx_1_1threads_1_1topology_1a786c208670738086742f5ee33c1d724f" prot="private" static="no">
+        <type>hpx::util::spinlock</type>
+        <definition>using hpx::threads::topology::mutex_type =  hpx::util::spinlock</definition>
+        <argsstring></argsstring>
+        <name>mutex_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="381" column="1" bodyfile="libs/topology/include/hpx/topology/topology.hpp" bodystart="381" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="structhpx_1_1threads_1_1topology_1ab102572675687725f03644245bd6de9f" prot="private" static="yes" mutable="no">
+        <type>mask_type</type>
+        <definition>mask_type hpx::threads::topology::empty_mask</definition>
+        <argsstring></argsstring>
+        <name>empty_mask</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="320" column="1" bodyfile="libs/topology/include/hpx/topology/topology.hpp" bodystart="320" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhpx_1_1threads_1_1topology_1a1c9166acec26c0a06222ecc17b71efe4" prot="private" static="yes" mutable="no">
+        <type>std::size_t</type>
+        <definition>std::size_t hpx::threads::topology::memory_page_size_</definition>
+        <argsstring></argsstring>
+        <name>memory_page_size_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="321" column="1" bodyfile="libs/topology/include/hpx/topology/topology.hpp" bodystart="321" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhpx_1_1threads_1_1topology_1ae50b3c2cc0a6bb70acd24a5f53c2ce4b" prot="private" static="yes" mutable="no">
+        <type>const std::size_t</type>
+        <definition>const std::size_t hpx::threads::topology::pu_offset</definition>
+        <argsstring></argsstring>
+        <name>pu_offset</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="372" column="1" bodyfile="libs/topology/include/hpx/topology/topology.hpp" bodystart="372" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhpx_1_1threads_1_1topology_1a69c2afd1a1771750597fd48168f8687c" prot="private" static="yes" mutable="no">
+        <type>const std::size_t</type>
+        <definition>const std::size_t hpx::threads::topology::core_offset</definition>
+        <argsstring></argsstring>
+        <name>core_offset</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="373" column="1" bodyfile="libs/topology/include/hpx/topology/topology.hpp" bodystart="373" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structhpx_1_1threads_1_1topology_1ae40c77484b6970d9dea7ba551e2bb1ee" prot="private" static="no" mutable="no">
+        <type>hwloc_topology_t</type>
+        <definition>hwloc_topology_t hpx::threads::topology::topo</definition>
+        <argsstring></argsstring>
+        <name>topo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="366" column="1" bodyfile="libs/topology/include/hpx/topology/topology.hpp" bodystart="366" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhpx_1_1threads_1_1topology_1ae3b2e43416ba0ef73ab36f58de7eaf30" prot="private" static="no" mutable="no">
+        <type>std::size_t</type>
+        <definition>std::size_t hpx::threads::topology::num_of_pus_</definition>
+        <argsstring></argsstring>
+        <name>num_of_pus_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="379" column="1" bodyfile="libs/topology/include/hpx/topology/topology.hpp" bodystart="379" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhpx_1_1threads_1_1topology_1a2cd893c09f122fdb1350290eed92608b" prot="private" static="no" mutable="yes">
+        <type>mutex_type</type>
+        <definition>mutex_type hpx::threads::topology::topo_mtx</definition>
+        <argsstring></argsstring>
+        <name>topo_mtx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="382" column="1" bodyfile="libs/topology/include/hpx/topology/topology.hpp" bodystart="382" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhpx_1_1threads_1_1topology_1a54c0bde87d70b8ed6d312d35996884c4" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::size_t &gt;</type>
+        <definition>std::vector&lt;std::size_t&gt; hpx::threads::topology::socket_numbers_</definition>
+        <argsstring></argsstring>
+        <name>socket_numbers_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="389" column="1" bodyfile="libs/topology/include/hpx/topology/topology.hpp" bodystart="389" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhpx_1_1threads_1_1topology_1a33f0a5462f46ed0bc742cadf2f5fe509" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::size_t &gt;</type>
+        <definition>std::vector&lt;std::size_t&gt; hpx::threads::topology::numa_node_numbers_</definition>
+        <argsstring></argsstring>
+        <name>numa_node_numbers_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="390" column="1" bodyfile="libs/topology/include/hpx/topology/topology.hpp" bodystart="390" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhpx_1_1threads_1_1topology_1a09f9d6aa8a2111bc694a1ab0f53fabdd" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::size_t &gt;</type>
+        <definition>std::vector&lt;std::size_t&gt; hpx::threads::topology::core_numbers_</definition>
+        <argsstring></argsstring>
+        <name>core_numbers_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="391" column="1" bodyfile="libs/topology/include/hpx/topology/topology.hpp" bodystart="391" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhpx_1_1threads_1_1topology_1ac1a7045655f97eb61a8cc9de207ff63d" prot="private" static="no" mutable="no">
+        <type>mask_type</type>
+        <definition>mask_type hpx::threads::topology::machine_affinity_mask_</definition>
+        <argsstring></argsstring>
+        <name>machine_affinity_mask_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="401" column="1" bodyfile="libs/topology/include/hpx/topology/topology.hpp" bodystart="401" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhpx_1_1threads_1_1topology_1a0ba87c1a996e445fe39db70c285e8ef5" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; mask_type &gt;</type>
+        <definition>std::vector&lt;mask_type&gt; hpx::threads::topology::socket_affinity_masks_</definition>
+        <argsstring></argsstring>
+        <name>socket_affinity_masks_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="402" column="1" bodyfile="libs/topology/include/hpx/topology/topology.hpp" bodystart="402" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhpx_1_1threads_1_1topology_1af02c1489e78df7440e9b99937d679224" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; mask_type &gt;</type>
+        <definition>std::vector&lt;mask_type&gt; hpx::threads::topology::numa_node_affinity_masks_</definition>
+        <argsstring></argsstring>
+        <name>numa_node_affinity_masks_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="403" column="1" bodyfile="libs/topology/include/hpx/topology/topology.hpp" bodystart="403" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhpx_1_1threads_1_1topology_1a3144e3f10b5272651243361d9a3880d3" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; mask_type &gt;</type>
+        <definition>std::vector&lt;mask_type&gt; hpx::threads::topology::core_affinity_masks_</definition>
+        <argsstring></argsstring>
+        <name>core_affinity_masks_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="404" column="1" bodyfile="libs/topology/include/hpx/topology/topology.hpp" bodystart="404" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhpx_1_1threads_1_1topology_1aaa9b407f26d33439026cd2b40f6b752d" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; mask_type &gt;</type>
+        <definition>std::vector&lt;mask_type&gt; hpx::threads::topology::thread_affinity_masks_</definition>
+        <argsstring></argsstring>
+        <name>thread_affinity_masks_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="405" column="1" bodyfile="libs/topology/include/hpx/topology/topology.hpp" bodystart="405" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a1f8e5bb59dbc9f713acf50bc05f8bd52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hpx::threads::topology::topology</definition>
+        <argsstring>()</argsstring>
+        <name>topology</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="103" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1abc0088b3ef774b6f79b92c4dd6830cb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hpx::threads::topology::~topology</definition>
+        <argsstring>()</argsstring>
+        <name>~topology</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="104" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a19a9dabfd85e47c8c2670bd154339305" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t hpx::threads::topology::get_socket_number</definition>
+        <argsstring>(std::size_t num_thread, error_code &amp;=throws) const</argsstring>
+        <name>get_socket_number</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>num_thread</declname>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+<para>Return the Socket number of the processing unit the given thread is running on. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in,out] this represents the error status on exit, if this is pre-initialized to <emphasis>hpx::throws</emphasis> the function will throw on error instead. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="112" column="1" bodyfile="libs/topology/include/hpx/topology/topology.hpp" bodystart="112" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1af99d27cc69b7eae0cccd012f416a2e8d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t hpx::threads::topology::get_numa_node_number</definition>
+        <argsstring>(std::size_t num_thread, error_code &amp;=throws) const</argsstring>
+        <name>get_numa_node_number</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>num_thread</declname>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+<para>Return the NUMA node number of the processing unit the given thread is running on. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in,out] this represents the error status on exit, if this is pre-initialized to <emphasis>hpx::throws</emphasis> the function will throw on error instead. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="124" column="1" bodyfile="libs/topology/include/hpx/topology/topology.hpp" bodystart="124" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a1d362ffedd8e89ea479f11c597cfe0c3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>mask_cref_type</type>
+        <definition>mask_cref_type hpx::threads::topology::get_machine_affinity_mask</definition>
+        <argsstring>(error_code &amp;ec=throws) const</argsstring>
+        <name>get_machine_affinity_mask</name>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+<para>Return a bit mask where each set bit corresponds to a processing unit available to the application. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in,out] this represents the error status on exit, if this is pre-initialized to <emphasis>hpx::throws</emphasis> the function will throw on error instead. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="136" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a9f0786c5c16ca3dac8d5555451ebf793" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>mask_type</type>
+        <definition>mask_type hpx::threads::topology::get_service_affinity_mask</definition>
+        <argsstring>(mask_cref_type used_processing_units, error_code &amp;ec=throws) const</argsstring>
+        <name>get_service_affinity_mask</name>
+        <param>
+          <type>mask_cref_type</type>
+          <declname>used_processing_units</declname>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+<para>Return a bit mask where each set bit corresponds to a processing unit available to the service threads in the application. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>used_processing_units</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] This is the mask of processing units which are not available for service threads. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in,out] this represents the error status on exit, if this is pre-initialized to <emphasis>hpx::throws</emphasis> the function will throw on error instead. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="147" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a31616c9d31ea6b9da6b17b102e7733ae" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>mask_cref_type</type>
+        <definition>mask_cref_type hpx::threads::topology::get_socket_affinity_mask</definition>
+        <argsstring>(std::size_t num_thread, error_code &amp;ec=throws) const</argsstring>
+        <name>get_socket_affinity_mask</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>num_thread</declname>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+<para>Return a bit mask where each set bit corresponds to a processing unit available to the given thread inside the socket it is running on. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in,out] this represents the error status on exit, if this is pre-initialized to <emphasis>hpx::throws</emphasis> the function will throw on error instead. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="158" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a83911e0b9597400fc980ce4b5f64d291" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>mask_cref_type</type>
+        <definition>mask_cref_type hpx::threads::topology::get_numa_node_affinity_mask</definition>
+        <argsstring>(std::size_t num_thread, error_code &amp;ec=throws) const</argsstring>
+        <name>get_numa_node_affinity_mask</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>num_thread</declname>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+<para>Return a bit mask where each set bit corresponds to a processing unit available to the given thread inside the NUMA domain it is running on. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in,out] this represents the error status on exit, if this is pre-initialized to <emphasis>hpx::throws</emphasis> the function will throw on error instead. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="168" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a7c167c0995615e8fdb15c4a2b4448ab2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>mask_type</type>
+        <definition>mask_type hpx::threads::topology::get_numa_node_affinity_mask_from_numa_node</definition>
+        <argsstring>(std::size_t num_node) const</argsstring>
+        <name>get_numa_node_affinity_mask_from_numa_node</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>num_node</declname>
+        </param>
+        <briefdescription>
+<para>Return a bit mask where each set bit corresponds to a processing unit associated with the given NUMA node. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in,out] this represents the error status on exit, if this is pre-initialized to <emphasis>hpx::throws</emphasis> the function will throw on error instead. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="177" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a26040cb446fc31ea0e870fb674c2772a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>mask_cref_type</type>
+        <definition>mask_cref_type hpx::threads::topology::get_core_affinity_mask</definition>
+        <argsstring>(std::size_t num_thread, error_code &amp;ec=throws) const</argsstring>
+        <name>get_core_affinity_mask</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>num_thread</declname>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+<para>Return a bit mask where each set bit corresponds to a processing unit available to the given thread inside the core it is running on. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in,out] this represents the error status on exit, if this is pre-initialized to <emphasis>hpx::throws</emphasis> the function will throw on error instead. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="187" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a1d7ba473481582a84f5550c1aa1aecac" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>mask_cref_type</type>
+        <definition>mask_cref_type hpx::threads::topology::get_thread_affinity_mask</definition>
+        <argsstring>(std::size_t num_thread, error_code &amp;ec=throws) const</argsstring>
+        <name>get_thread_affinity_mask</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>num_thread</declname>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+<para>Return a bit mask where each set bit corresponds to a processing unit available to the given thread. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in,out] this represents the error status on exit, if this is pre-initialized to <emphasis>hpx::throws</emphasis> the function will throw on error instead. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="196" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1ad1b2af859359248cf913d02e7fc82e84" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpx::threads::topology::set_thread_affinity_mask</definition>
+        <argsstring>(mask_cref_type mask, error_code &amp;ec=throws) const</argsstring>
+        <name>set_thread_affinity_mask</name>
+        <param>
+          <type>mask_cref_type</type>
+          <declname>mask</declname>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+<para>Use the given bit mask to set the affinity of the given thread. Each set bit corresponds to a processing unit the thread will be allowed to run on. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in,out] this represents the error status on exit, if this is pre-initialized to <emphasis>hpx::throws</emphasis> the function will throw on error instead.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>Use this function on systems where the affinity must be set from inside the thread itself. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="209" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a17c9e09e457c9a2a9b0cb051196c2588" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>mask_type</type>
+        <definition>mask_type hpx::threads::topology::get_thread_affinity_mask_from_lva</definition>
+        <argsstring>(void const *lva, error_code &amp;ec=throws) const</argsstring>
+        <name>get_thread_affinity_mask_from_lva</name>
+        <param>
+          <type>void const *</type>
+          <declname>lva</declname>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+<para>Return a bit mask where each set bit corresponds to a processing unit co-located with the memory the given address is currently allocated on. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in,out] this represents the error status on exit, if this is pre-initialized to <emphasis>hpx::throws</emphasis> the function will throw on error instead. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="219" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a0bee02b91738002b5fa6d47f96fefc79" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpx::threads::topology::print_affinity_mask</definition>
+        <argsstring>(std::ostream &amp;os, std::size_t num_thread, mask_cref_type m, const std::string &amp;pool_name) const</argsstring>
+        <name>print_affinity_mask</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>num_thread</declname>
+        </param>
+        <param>
+          <type>mask_cref_type</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pool_name</declname>
+        </param>
+        <briefdescription>
+<para>Prints the. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>to os in a human readable form </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="223" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a3752f213bc1a82cc001736ecdcdcc675" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hpx::threads::topology::reduce_thread_priority</definition>
+        <argsstring>(error_code &amp;ec=throws) const</argsstring>
+        <name>reduce_thread_priority</name>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+<para>Reduce thread priority of the current thread. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in,out] this represents the error status on exit, if this is pre-initialized to <emphasis>hpx::throws</emphasis> the function will throw on error instead. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="231" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a39fed3fac2d530cd05dafd7757a6acc0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t hpx::threads::topology::get_number_of_sockets</definition>
+        <argsstring>() const</argsstring>
+        <name>get_number_of_sockets</name>
+        <briefdescription>
+<para>Return the number of available NUMA domains. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="234" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a9668edda13825dee424e42f57e9a67eb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t hpx::threads::topology::get_number_of_numa_nodes</definition>
+        <argsstring>() const</argsstring>
+        <name>get_number_of_numa_nodes</name>
+        <briefdescription>
+<para>Return the number of available NUMA domains. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="237" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1aef677602c5cf87c19276da4e7faab32f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t hpx::threads::topology::get_number_of_cores</definition>
+        <argsstring>() const</argsstring>
+        <name>get_number_of_cores</name>
+        <briefdescription>
+<para>Return the number of available cores. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="240" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a29f7ee66117cc4c46995b26d938990a8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t hpx::threads::topology::get_number_of_pus</definition>
+        <argsstring>() const</argsstring>
+        <name>get_number_of_pus</name>
+        <briefdescription>
+<para>Return the number of available hardware processing units. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="243" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a56a1e84bc042f5b5eeb58a7ae02e9d17" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t hpx::threads::topology::get_number_of_numa_node_cores</definition>
+        <argsstring>(std::size_t numa) const</argsstring>
+        <name>get_number_of_numa_node_cores</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>numa</declname>
+        </param>
+        <briefdescription>
+<para>Return number of cores in given numa domain. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="246" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1aacd2c1576931da07e7014115715ed445" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t hpx::threads::topology::get_number_of_numa_node_pus</definition>
+        <argsstring>(std::size_t numa) const</argsstring>
+        <name>get_number_of_numa_node_pus</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>numa</declname>
+        </param>
+        <briefdescription>
+<para>Return number of processing units in a given numa domain. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="249" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a298a4d32f0ddbf98869a2be2b00d8fde" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t hpx::threads::topology::get_number_of_socket_pus</definition>
+        <argsstring>(std::size_t socket) const</argsstring>
+        <name>get_number_of_socket_pus</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>socket</declname>
+        </param>
+        <briefdescription>
+<para>Return number of processing units in a given socket. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="252" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a24ad5efe327a19ea5870303bfa5a3834" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t hpx::threads::topology::get_number_of_core_pus</definition>
+        <argsstring>(std::size_t core) const</argsstring>
+        <name>get_number_of_core_pus</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>core</declname>
+        </param>
+        <briefdescription>
+<para>Return number of processing units in given core. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="255" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1afb1f47adb493e9e3ff92660b732add02" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t hpx::threads::topology::get_number_of_socket_cores</definition>
+        <argsstring>(std::size_t socket) const</argsstring>
+        <name>get_number_of_socket_cores</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>socket</declname>
+        </param>
+        <briefdescription>
+<para>Return number of cores units in given socket. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="258" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1aef38685fb561430ed12e9eafe85ba46c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t hpx::threads::topology::get_core_number</definition>
+        <argsstring>(std::size_t num_thread, error_code &amp;=throws) const</argsstring>
+        <name>get_core_number</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>num_thread</declname>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="260" column="1" bodyfile="libs/topology/include/hpx/topology/topology.hpp" bodystart="260" bodyend="264"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a3acf7b3e700ad6dae929c26dee1fa64f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t hpx::threads::topology::get_pu_number</definition>
+        <argsstring>(std::size_t num_core, std::size_t num_pu, error_code &amp;ec=throws) const</argsstring>
+        <name>get_pu_number</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>num_core</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>num_pu</declname>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="266" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1ac50fddf7a98015e674b59873475782f2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>mask_type</type>
+        <definition>mask_type hpx::threads::topology::get_cpubind_mask</definition>
+        <argsstring>(error_code &amp;ec=throws) const</argsstring>
+        <name>get_cpubind_mask</name>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="269" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1aa8b6beba948fcbb17f6d12388746acbb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>mask_type</type>
+        <definition>mask_type hpx::threads::topology::get_cpubind_mask</definition>
+        <argsstring>(std::thread &amp;handle, error_code &amp;ec=throws) const</argsstring>
+        <name>get_cpubind_mask</name>
+        <param>
+          <type>std::thread &amp;</type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="270" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a8977c9a1f034b329efbf3bae0955c28c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>hwloc_bitmap_ptr</type>
+        <definition>hwloc_bitmap_ptr hpx::threads::topology::cpuset_to_nodeset</definition>
+        <argsstring>(mask_cref_type cpuset) const</argsstring>
+        <name>cpuset_to_nodeset</name>
+        <param>
+          <type>mask_cref_type</type>
+          <declname>cpuset</declname>
+        </param>
+        <briefdescription>
+<para>convert a cpu mask into a numa node mask in hwloc bitmap form </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="274" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a2ac517ebcec8d23c0a625a777b240399" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpx::threads::topology::write_to_log</definition>
+        <argsstring>() const</argsstring>
+        <name>write_to_log</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="276" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1ac30338b16e01abba2e75f3d32f07ff2d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* hpx::threads::topology::allocate</definition>
+        <argsstring>(std::size_t len) const</argsstring>
+        <name>allocate</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is equivalent to malloc(), except that it tries to allocate page-aligned memory from the OS. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="280" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a9fd4e2b15b96c577513398a9a7825302" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* hpx::threads::topology::allocate_membind</definition>
+        <argsstring>(std::size_t len, hwloc_bitmap_ptr bitmap, hpx_hwloc_membind_policy policy, int flags) const</argsstring>
+        <name>allocate_membind</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>hwloc_bitmap_ptr</type>
+          <declname>bitmap</declname>
+        </param>
+        <param>
+          <type>hpx_hwloc_membind_policy</type>
+          <declname>policy</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>allocate memory with binding to a numa node set as specified by the policy and flags (see hwloc docs) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="284" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a0e3955e652f93176056f089367caa498" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>threads::mask_type</type>
+        <definition>threads::mask_type hpx::threads::topology::get_area_membind_nodeset</definition>
+        <argsstring>(const void *addr, std::size_t len) const</argsstring>
+        <name>get_area_membind_nodeset</name>
+        <param>
+          <type>const void *</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="287" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1ac0dbae38f2c50decc3c19b31031e22e5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hpx::threads::topology::set_area_membind_nodeset</definition>
+        <argsstring>(const void *addr, std::size_t len, void *nodeset) const</argsstring>
+        <name>set_area_membind_nodeset</name>
+        <param>
+          <type>const void *</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>nodeset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="290" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a12fe62e177c50e0329f875ad73ad1ae7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hpx::threads::topology::get_numa_domain</definition>
+        <argsstring>(const void *addr) const</argsstring>
+        <name>get_numa_domain</name>
+        <param>
+          <type>const void *</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="293" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1af829f0d496fb508d56881130add4357e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpx::threads::topology::deallocate</definition>
+        <argsstring>(void *addr, std::size_t len) const</argsstring>
+        <name>deallocate</name>
+        <param>
+          <type>void *</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Free memory that was previously allocated by allocate. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="296" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1ac844636c4ac225a95a96e27da6bf2531" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpx::threads::topology::print_vector</definition>
+        <argsstring>(std::ostream &amp;os, std::vector&lt; std::size_t &gt; const &amp;v) const</argsstring>
+        <name>print_vector</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::size_t &gt; const &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="298" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a3081513fbdca3be3325c92552c3e910e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpx::threads::topology::print_mask_vector</definition>
+        <argsstring>(std::ostream &amp;os, std::vector&lt; mask_type &gt; const &amp;v) const</argsstring>
+        <name>print_mask_vector</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; mask_type &gt; const &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="300" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1ae4ed70873782cb1cd7cd2d586755a66b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpx::threads::topology::print_hwloc</definition>
+        <argsstring>(std::ostream &amp;) const</argsstring>
+        <name>print_hwloc</name>
+        <param>
+          <type>std::ostream &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="302" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a7d2e55d67f471c01f57ae55fd73f20a9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>mask_type</type>
+        <definition>mask_type hpx::threads::topology::init_socket_affinity_mask_from_socket</definition>
+        <argsstring>(std::size_t num_socket) const</argsstring>
+        <name>init_socket_affinity_mask_from_socket</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>num_socket</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="304" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a3738f6db8f49967f1b199da555ecfe53" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>mask_type</type>
+        <definition>mask_type hpx::threads::topology::init_numa_node_affinity_mask_from_numa_node</definition>
+        <argsstring>(std::size_t num_numa_node) const</argsstring>
+        <name>init_numa_node_affinity_mask_from_numa_node</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>num_numa_node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="306" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1ad13d877640640775325e6f78d7f94618" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>mask_type</type>
+        <definition>mask_type hpx::threads::topology::init_core_affinity_mask_from_core</definition>
+        <argsstring>(std::size_t num_core, mask_cref_type default_mask=empty_mask) const</argsstring>
+        <name>init_core_affinity_mask_from_core</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>num_core</declname>
+        </param>
+        <param>
+          <type>mask_cref_type</type>
+          <declname>default_mask</declname>
+          <defval>empty_mask</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="308" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a5a0c7567120d45c880faae553c089e05" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>mask_type</type>
+        <definition>mask_type hpx::threads::topology::init_thread_affinity_mask</definition>
+        <argsstring>(std::size_t num_thread) const</argsstring>
+        <name>init_thread_affinity_mask</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>num_thread</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="310" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a2816018d0de56d06c46b8ad11282bd50" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>mask_type</type>
+        <definition>mask_type hpx::threads::topology::init_thread_affinity_mask</definition>
+        <argsstring>(std::size_t num_core, std::size_t num_pu) const</argsstring>
+        <name>init_thread_affinity_mask</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>num_core</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>num_pu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="311" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a4ad550c846ba9ec3e55650b8f060df31" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>hwloc_bitmap_t</type>
+        <definition>hwloc_bitmap_t hpx::threads::topology::mask_to_bitmap</definition>
+        <argsstring>(mask_cref_type mask, hwloc_obj_type_t htype) const</argsstring>
+        <name>mask_to_bitmap</name>
+        <param>
+          <type>mask_cref_type</type>
+          <declname>mask</declname>
+        </param>
+        <param>
+          <type>hwloc_obj_type_t</type>
+          <declname>htype</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="314" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a355af363ed290f7310f75fbeabdfe08b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>mask_type</type>
+        <definition>mask_type hpx::threads::topology::bitmap_to_mask</definition>
+        <argsstring>(hwloc_bitmap_t bitmap, hwloc_obj_type_t htype) const</argsstring>
+        <name>bitmap_to_mask</name>
+        <param>
+          <type>hwloc_bitmap_t</type>
+          <declname>bitmap</declname>
+        </param>
+        <param>
+          <type>hwloc_obj_type_t</type>
+          <declname>htype</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="316" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="structhpx_1_1threads_1_1topology_1a7fb95bcf8d10facb7ab641755253ccd1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::size_t</type>
+        <definition>std::size_t get_memory_page_size</definition>
+        <argsstring>()</argsstring>
+        <name>get_memory_page_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="322" column="1" bodyfile="libs/topology/include/hpx/topology/topology.hpp" bodystart="426" bodyend="429"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a5a9e4c3f39820d979ba4e59d6e5ae71b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t hpx::threads::topology::init_node_number</definition>
+        <argsstring>(std::size_t num_thread, hwloc_obj_type_t type)</argsstring>
+        <name>init_node_number</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>num_thread</declname>
+        </param>
+        <param>
+          <type>hwloc_obj_type_t</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="324" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1aa755c9a208b5a6f83f7ed765e40acea7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t hpx::threads::topology::init_socket_number</definition>
+        <argsstring>(std::size_t num_thread)</argsstring>
+        <name>init_socket_number</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>num_thread</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="327" column="1" bodyfile="libs/topology/include/hpx/topology/topology.hpp" bodystart="327" bodyend="330"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1ac78d4e77f8d998edcbfd03f56cb6f1c6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t hpx::threads::topology::init_numa_node_number</definition>
+        <argsstring>(std::size_t num_thread)</argsstring>
+        <name>init_numa_node_number</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>num_thread</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="332" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1abd98d2af19aad52dd4c86c7ffb38bfc9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t hpx::threads::topology::init_core_number</definition>
+        <argsstring>(std::size_t num_thread)</argsstring>
+        <name>init_core_number</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>num_thread</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="334" column="1" bodyfile="libs/topology/include/hpx/topology/topology.hpp" bodystart="334" bodyend="337"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1af85ab6c8c67d3370b1a161211ecef40c" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpx::threads::topology::extract_node_mask</definition>
+        <argsstring>(hwloc_obj_t parent, mask_type &amp;mask) const</argsstring>
+        <name>extract_node_mask</name>
+        <param>
+          <type>hwloc_obj_t</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>mask_type &amp;</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="339" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a88ecb35ec33b99828881023f0c70bac8" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t hpx::threads::topology::extract_node_count</definition>
+        <argsstring>(hwloc_obj_t parent, hwloc_obj_type_t type, std::size_t count) const</argsstring>
+        <name>extract_node_count</name>
+        <param>
+          <type>hwloc_obj_t</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>hwloc_obj_type_t</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="341" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a72ba2f8fead36d97b8a1a08e48a301f5" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>mask_type</type>
+        <definition>mask_type hpx::threads::topology::init_machine_affinity_mask</definition>
+        <argsstring>() const</argsstring>
+        <name>init_machine_affinity_mask</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="344" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1aadf587315f4fbf2e8648ee6bf89a1353" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>mask_type</type>
+        <definition>mask_type hpx::threads::topology::init_socket_affinity_mask</definition>
+        <argsstring>(std::size_t num_thread) const</argsstring>
+        <name>init_socket_affinity_mask</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>num_thread</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="345" column="1" bodyfile="libs/topology/include/hpx/topology/topology.hpp" bodystart="345" bodyend="349"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a91244c3207273ff03161a97db38a2b83" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>mask_type</type>
+        <definition>mask_type hpx::threads::topology::init_numa_node_affinity_mask</definition>
+        <argsstring>(std::size_t num_thread) const</argsstring>
+        <name>init_numa_node_affinity_mask</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>num_thread</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="351" column="1" bodyfile="libs/topology/include/hpx/topology/topology.hpp" bodystart="351" bodyend="355"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1a316db0c99cdf530b38fa945d8cc0a930" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>mask_type</type>
+        <definition>mask_type hpx::threads::topology::init_core_affinity_mask</definition>
+        <argsstring>(std::size_t num_thread) const</argsstring>
+        <name>init_core_affinity_mask</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>num_thread</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="357" column="1" bodyfile="libs/topology/include/hpx/topology/topology.hpp" bodystart="357" bodyend="362"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1threads_1_1topology_1af577a5084be29830e23aa030619da25f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpx::threads::topology::init_num_of_pus</definition>
+        <argsstring>()</argsstring>
+        <name>init_num_of_pus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/topology/include/hpx/topology/topology.hpp" line="364" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libs/topology/include/hpx/topology/topology.hpp" line="102" column="1" bodyfile="libs/topology/include/hpx/topology/topology.hpp" bodystart="101" bodyend="406"/>
+    <listofallmembers>
+      <member refid="structhpx_1_1threads_1_1topology_1ac30338b16e01abba2e75f3d32f07ff2d" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>allocate</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a9fd4e2b15b96c577513398a9a7825302" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>allocate_membind</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a355af363ed290f7310f75fbeabdfe08b" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>bitmap_to_mask</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a3144e3f10b5272651243361d9a3880d3" prot="private" virt="non-virtual"><scope>hpx::threads::topology</scope><name>core_affinity_masks_</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a09f9d6aa8a2111bc694a1ab0f53fabdd" prot="private" virt="non-virtual"><scope>hpx::threads::topology</scope><name>core_numbers_</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a69c2afd1a1771750597fd48168f8687c" prot="private" virt="non-virtual"><scope>hpx::threads::topology</scope><name>core_offset</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a8977c9a1f034b329efbf3bae0955c28c" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>cpuset_to_nodeset</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1af829f0d496fb508d56881130add4357e" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>deallocate</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1ab102572675687725f03644245bd6de9f" prot="private" virt="non-virtual"><scope>hpx::threads::topology</scope><name>empty_mask</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a88ecb35ec33b99828881023f0c70bac8" prot="private" virt="non-virtual"><scope>hpx::threads::topology</scope><name>extract_node_count</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1af85ab6c8c67d3370b1a161211ecef40c" prot="private" virt="non-virtual"><scope>hpx::threads::topology</scope><name>extract_node_mask</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a0e3955e652f93176056f089367caa498" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>get_area_membind_nodeset</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a26040cb446fc31ea0e870fb674c2772a" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>get_core_affinity_mask</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1aef38685fb561430ed12e9eafe85ba46c" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>get_core_number</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1ac50fddf7a98015e674b59873475782f2" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>get_cpubind_mask</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1aa8b6beba948fcbb17f6d12388746acbb" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>get_cpubind_mask</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a1d362ffedd8e89ea479f11c597cfe0c3" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>get_machine_affinity_mask</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a7fb95bcf8d10facb7ab641755253ccd1" prot="private" virt="non-virtual"><scope>hpx::threads::topology</scope><name>get_memory_page_size</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a12fe62e177c50e0329f875ad73ad1ae7" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>get_numa_domain</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a83911e0b9597400fc980ce4b5f64d291" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>get_numa_node_affinity_mask</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a7c167c0995615e8fdb15c4a2b4448ab2" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>get_numa_node_affinity_mask_from_numa_node</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1af99d27cc69b7eae0cccd012f416a2e8d" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>get_numa_node_number</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a24ad5efe327a19ea5870303bfa5a3834" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>get_number_of_core_pus</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1aef677602c5cf87c19276da4e7faab32f" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>get_number_of_cores</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a56a1e84bc042f5b5eeb58a7ae02e9d17" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>get_number_of_numa_node_cores</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1aacd2c1576931da07e7014115715ed445" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>get_number_of_numa_node_pus</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a9668edda13825dee424e42f57e9a67eb" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>get_number_of_numa_nodes</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a29f7ee66117cc4c46995b26d938990a8" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>get_number_of_pus</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1afb1f47adb493e9e3ff92660b732add02" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>get_number_of_socket_cores</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a298a4d32f0ddbf98869a2be2b00d8fde" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>get_number_of_socket_pus</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a39fed3fac2d530cd05dafd7757a6acc0" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>get_number_of_sockets</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a3acf7b3e700ad6dae929c26dee1fa64f" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>get_pu_number</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a9f0786c5c16ca3dac8d5555451ebf793" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>get_service_affinity_mask</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a31616c9d31ea6b9da6b17b102e7733ae" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>get_socket_affinity_mask</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a19a9dabfd85e47c8c2670bd154339305" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>get_socket_number</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a1d7ba473481582a84f5550c1aa1aecac" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>get_thread_affinity_mask</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a17c9e09e457c9a2a9b0cb051196c2588" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>get_thread_affinity_mask_from_lva</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a316db0c99cdf530b38fa945d8cc0a930" prot="private" virt="non-virtual"><scope>hpx::threads::topology</scope><name>init_core_affinity_mask</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1ad13d877640640775325e6f78d7f94618" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>init_core_affinity_mask_from_core</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1abd98d2af19aad52dd4c86c7ffb38bfc9" prot="private" virt="non-virtual"><scope>hpx::threads::topology</scope><name>init_core_number</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a72ba2f8fead36d97b8a1a08e48a301f5" prot="private" virt="non-virtual"><scope>hpx::threads::topology</scope><name>init_machine_affinity_mask</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a5a9e4c3f39820d979ba4e59d6e5ae71b" prot="private" virt="non-virtual"><scope>hpx::threads::topology</scope><name>init_node_number</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1af577a5084be29830e23aa030619da25f" prot="private" virt="non-virtual"><scope>hpx::threads::topology</scope><name>init_num_of_pus</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a91244c3207273ff03161a97db38a2b83" prot="private" virt="non-virtual"><scope>hpx::threads::topology</scope><name>init_numa_node_affinity_mask</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a3738f6db8f49967f1b199da555ecfe53" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>init_numa_node_affinity_mask_from_numa_node</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1ac78d4e77f8d998edcbfd03f56cb6f1c6" prot="private" virt="non-virtual"><scope>hpx::threads::topology</scope><name>init_numa_node_number</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1aadf587315f4fbf2e8648ee6bf89a1353" prot="private" virt="non-virtual"><scope>hpx::threads::topology</scope><name>init_socket_affinity_mask</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a7d2e55d67f471c01f57ae55fd73f20a9" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>init_socket_affinity_mask_from_socket</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1aa755c9a208b5a6f83f7ed765e40acea7" prot="private" virt="non-virtual"><scope>hpx::threads::topology</scope><name>init_socket_number</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a5a0c7567120d45c880faae553c089e05" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>init_thread_affinity_mask</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a2816018d0de56d06c46b8ad11282bd50" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>init_thread_affinity_mask</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1ac1a7045655f97eb61a8cc9de207ff63d" prot="private" virt="non-virtual"><scope>hpx::threads::topology</scope><name>machine_affinity_mask_</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a4ad550c846ba9ec3e55650b8f060df31" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>mask_to_bitmap</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a1c9166acec26c0a06222ecc17b71efe4" prot="private" virt="non-virtual"><scope>hpx::threads::topology</scope><name>memory_page_size_</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a786c208670738086742f5ee33c1d724f" prot="private" virt="non-virtual"><scope>hpx::threads::topology</scope><name>mutex_type</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1ae3b2e43416ba0ef73ab36f58de7eaf30" prot="private" virt="non-virtual"><scope>hpx::threads::topology</scope><name>num_of_pus_</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1af02c1489e78df7440e9b99937d679224" prot="private" virt="non-virtual"><scope>hpx::threads::topology</scope><name>numa_node_affinity_masks_</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a33f0a5462f46ed0bc742cadf2f5fe509" prot="private" virt="non-virtual"><scope>hpx::threads::topology</scope><name>numa_node_numbers_</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a0bee02b91738002b5fa6d47f96fefc79" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>print_affinity_mask</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1ae4ed70873782cb1cd7cd2d586755a66b" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>print_hwloc</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a3081513fbdca3be3325c92552c3e910e" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>print_mask_vector</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1ac844636c4ac225a95a96e27da6bf2531" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>print_vector</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1ae50b3c2cc0a6bb70acd24a5f53c2ce4b" prot="private" virt="non-virtual"><scope>hpx::threads::topology</scope><name>pu_offset</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a3752f213bc1a82cc001736ecdcdcc675" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>reduce_thread_priority</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1ac0dbae38f2c50decc3c19b31031e22e5" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>set_area_membind_nodeset</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1ad1b2af859359248cf913d02e7fc82e84" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>set_thread_affinity_mask</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a0ba87c1a996e445fe39db70c285e8ef5" prot="private" virt="non-virtual"><scope>hpx::threads::topology</scope><name>socket_affinity_masks_</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a54c0bde87d70b8ed6d312d35996884c4" prot="private" virt="non-virtual"><scope>hpx::threads::topology</scope><name>socket_numbers_</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1aaa9b407f26d33439026cd2b40f6b752d" prot="private" virt="non-virtual"><scope>hpx::threads::topology</scope><name>thread_affinity_masks_</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1ae40c77484b6970d9dea7ba551e2bb1ee" prot="private" virt="non-virtual"><scope>hpx::threads::topology</scope><name>topo</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a2cd893c09f122fdb1350290eed92608b" prot="private" virt="non-virtual"><scope>hpx::threads::topology</scope><name>topo_mtx</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a1f8e5bb59dbc9f713acf50bc05f8bd52" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>topology</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1a2ac517ebcec8d23c0a625a777b240399" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>write_to_log</name></member>
+      <member refid="structhpx_1_1threads_1_1topology_1abc0088b3ef774b6f79b92c4dd6830cb9" prot="public" virt="non-virtual"><scope>hpx::threads::topology</scope><name>~topology</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

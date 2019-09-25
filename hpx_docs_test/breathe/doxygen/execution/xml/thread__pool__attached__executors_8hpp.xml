@@ -1,0 +1,934 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="thread__pool__attached__executors_8hpp" kind="file" language="C++">
+    <compoundname>thread_pool_attached_executors.hpp</compoundname>
+    <includes local="no">hpx/config.hpp</includes>
+    <includes refid="execution__parameters_8hpp" local="no">hpx/parallel/executors/execution_parameters.hpp</includes>
+    <includes refid="thread__execution_8hpp" local="no">hpx/parallel/executors/thread_execution.hpp</includes>
+    <includes refid="thread__execution__information_8hpp" local="no">hpx/parallel/executors/thread_execution_information.hpp</includes>
+    <includes refid="thread__timed__execution_8hpp" local="no">hpx/parallel/executors/thread_timed_execution.hpp</includes>
+    <includes local="no">hpx/runtime/threads/executors/thread_pool_attached_executors.hpp</includes>
+    <includedby refid="executors_8hpp" local="no">libs/execution/include/hpx/parallel/executors.hpp</includedby>
+    <incdepgraph>
+      <node id="1524">
+        <label>hpx/runtime/get_worker_thread_num.hpp</label>
+      </node>
+      <node id="1494">
+        <label>hpx/lcos/local/futures_factory.hpp</label>
+      </node>
+      <node id="1507">
+        <label>hpx/lcos/local/packaged_task.hpp</label>
+      </node>
+      <node id="1463">
+        <label>hpx/type_support/always_void.hpp</label>
+      </node>
+      <node id="1516">
+        <label>hpx/parallel/executors/parallel_executor.hpp</label>
+        <link refid="parallel__executor_8hpp"/>
+        <childnode refid="1451" relation="include">
+        </childnode>
+        <childnode refid="1517" relation="include">
+        </childnode>
+        <childnode refid="1518" relation="include">
+        </childnode>
+        <childnode refid="1519" relation="include">
+        </childnode>
+        <childnode refid="1477" relation="include">
+        </childnode>
+        <childnode refid="1520" relation="include">
+        </childnode>
+        <childnode refid="1478" relation="include">
+        </childnode>
+        <childnode refid="1453" relation="include">
+        </childnode>
+        <childnode refid="1521" relation="include">
+        </childnode>
+        <childnode refid="1522" relation="include">
+        </childnode>
+        <childnode refid="1481" relation="include">
+        </childnode>
+        <childnode refid="1523" relation="include">
+        </childnode>
+        <childnode refid="1528" relation="include">
+        </childnode>
+        <childnode refid="1524" relation="include">
+        </childnode>
+        <childnode refid="1525" relation="include">
+        </childnode>
+        <childnode refid="1529" relation="include">
+        </childnode>
+        <childnode refid="1497" relation="include">
+        </childnode>
+        <childnode refid="1487" relation="include">
+        </childnode>
+        <childnode refid="1459" relation="include">
+        </childnode>
+        <childnode refid="1476" relation="include">
+        </childnode>
+        <childnode refid="1483" relation="include">
+        </childnode>
+        <childnode refid="1488" relation="include">
+        </childnode>
+        <childnode refid="1498" relation="include">
+        </childnode>
+        <childnode refid="1473" relation="include">
+        </childnode>
+        <childnode refid="1461" relation="include">
+        </childnode>
+        <childnode refid="1470" relation="include">
+        </childnode>
+        <childnode refid="1484" relation="include">
+        </childnode>
+      </node>
+      <node id="1476">
+        <label>hpx/functional/bind_back.hpp</label>
+      </node>
+      <node id="1464">
+        <label>functional</label>
+      </node>
+      <node id="1478">
+        <label>hpx/iterator_support/range.hpp</label>
+      </node>
+      <node id="1485">
+        <label>hpx/traits/future_access.hpp</label>
+      </node>
+      <node id="1523">
+        <label>hpx/parallel/executors/post_policy_dispatch.hpp</label>
+        <link refid="post__policy__dispatch_8hpp_source"/>
+        <childnode refid="1451" relation="include">
+        </childnode>
+        <childnode refid="1524" relation="include">
+        </childnode>
+        <childnode refid="1525" relation="include">
+        </childnode>
+        <childnode refid="1505" relation="include">
+        </childnode>
+        <childnode refid="1526" relation="include">
+        </childnode>
+        <childnode refid="1497" relation="include">
+        </childnode>
+        <childnode refid="1483" relation="include">
+        </childnode>
+        <childnode refid="1527" relation="include">
+        </childnode>
+        <childnode refid="1470" relation="include">
+        </childnode>
+      </node>
+      <node id="1501">
+        <label>hpx/runtime/threads/policies/scheduler_mode.hpp</label>
+      </node>
+      <node id="1521">
+        <label>hpx/lcos/local/latch.hpp</label>
+      </node>
+      <node id="1489">
+        <label>iterator</label>
+      </node>
+      <node id="1472">
+        <label>hpx/type_support/detected.hpp</label>
+      </node>
+      <node id="1460">
+        <label>hpx/datastructures/detail/pack.hpp</label>
+      </node>
+      <node id="1469">
+        <label>hpx/parallel/executors/execution_fwd.hpp</label>
+        <link refid="execution__fwd_8hpp_source"/>
+        <childnode refid="1470" relation="include">
+        </childnode>
+        <childnode refid="1461" relation="include">
+        </childnode>
+        <childnode refid="1451" relation="include">
+        </childnode>
+        <childnode refid="1471" relation="include">
+        </childnode>
+      </node>
+      <node id="1527">
+        <label>cstdint</label>
+      </node>
+      <node id="1515">
+        <label>hpx/parallel/execution_policy_fwd.hpp</label>
+        <link refid="execution__policy__fwd_8hpp_source"/>
+        <childnode refid="1451" relation="include">
+        </childnode>
+      </node>
+      <node id="1454">
+        <label>hpx/preprocessor/cat.hpp</label>
+      </node>
+      <node id="1539">
+        <label>hpx/runtime/threads/executors/thread_pool_attached_executors.hpp</label>
+      </node>
+      <node id="1506">
+        <label>hpx/parallel/executors/thread_timed_execution.hpp</label>
+        <link refid="thread__timed__execution_8hpp_source"/>
+        <childnode refid="1451" relation="include">
+        </childnode>
+        <childnode refid="1453" relation="include">
+        </childnode>
+        <childnode refid="1507" relation="include">
+        </childnode>
+        <childnode refid="1466" relation="include">
+        </childnode>
+        <childnode refid="1483" relation="include">
+        </childnode>
+        <childnode refid="1508" relation="include">
+        </childnode>
+        <childnode refid="1509" relation="include">
+        </childnode>
+        <childnode refid="1461" relation="include">
+        </childnode>
+        <childnode refid="1470" relation="include">
+        </childnode>
+        <childnode refid="1484" relation="include">
+        </childnode>
+      </node>
+      <node id="1526">
+        <label>hpx/runtime/threads/thread_enums.hpp</label>
+      </node>
+      <node id="1492">
+        <label>hpx/parallel/executors/thread_execution.hpp</label>
+        <link refid="thread__execution_8hpp"/>
+        <childnode refid="1451" relation="include">
+        </childnode>
+        <childnode refid="1479" relation="include">
+        </childnode>
+        <childnode refid="1460" relation="include">
+        </childnode>
+        <childnode refid="1474" relation="include">
+        </childnode>
+        <childnode refid="1493" relation="include">
+        </childnode>
+        <childnode refid="1476" relation="include">
+        </childnode>
+        <childnode refid="1483" relation="include">
+        </childnode>
+        <childnode refid="1478" relation="include">
+        </childnode>
+        <childnode refid="1453" relation="include">
+        </childnode>
+        <childnode refid="1494" relation="include">
+        </childnode>
+        <childnode refid="1468" relation="include">
+        </childnode>
+        <childnode refid="1481" relation="include">
+        </childnode>
+        <childnode refid="1495" relation="include">
+        </childnode>
+        <childnode refid="1496" relation="include">
+        </childnode>
+        <childnode refid="1497" relation="include">
+        </childnode>
+        <childnode refid="1485" relation="include">
+        </childnode>
+        <childnode refid="1466" relation="include">
+        </childnode>
+        <childnode refid="1488" relation="include">
+        </childnode>
+        <childnode refid="1498" relation="include">
+        </childnode>
+        <childnode refid="1461" relation="include">
+        </childnode>
+        <childnode refid="1470" relation="include">
+        </childnode>
+        <childnode refid="1484" relation="include">
+        </childnode>
+      </node>
+      <node id="1467">
+        <label>hpx/type_support/decay.hpp</label>
+      </node>
+      <node id="1503">
+        <label>hpx/parallel/executors/execution_information.hpp</label>
+        <link refid="execution__information_8hpp_source"/>
+        <childnode refid="1451" relation="include">
+        </childnode>
+        <childnode refid="1502" relation="include">
+        </childnode>
+        <childnode refid="1471" relation="include">
+        </childnode>
+        <childnode refid="1459" relation="include">
+        </childnode>
+        <childnode refid="1457" relation="include">
+        </childnode>
+        <childnode refid="1468" relation="include">
+        </childnode>
+        <childnode refid="1504" relation="include">
+        </childnode>
+        <childnode refid="1473" relation="include">
+        </childnode>
+        <childnode refid="1461" relation="include">
+        </childnode>
+        <childnode refid="1470" relation="include">
+        </childnode>
+      </node>
+      <node id="1490">
+        <label>stdexcept</label>
+      </node>
+      <node id="1450">
+        <label>libs/execution/include/hpx/parallel/executors/thread_pool_attached_executors.hpp</label>
+        <link refid="thread__pool__attached__executors_8hpp"/>
+        <childnode refid="1451" relation="include">
+        </childnode>
+        <childnode refid="1452" relation="include">
+        </childnode>
+        <childnode refid="1492" relation="include">
+        </childnode>
+        <childnode refid="1499" relation="include">
+        </childnode>
+        <childnode refid="1506" relation="include">
+        </childnode>
+        <childnode refid="1539" relation="include">
+        </childnode>
+      </node>
+      <node id="1466">
+        <label>hpx/traits/is_launch_policy.hpp</label>
+      </node>
+      <node id="1451">
+        <label>hpx/config.hpp</label>
+      </node>
+      <node id="1458">
+        <label>hpx/concepts/has_member_xxx.hpp</label>
+      </node>
+      <node id="1513">
+        <label>hpx/parallel/execution_policy.hpp</label>
+        <link refid="execution__policy_8hpp"/>
+        <childnode refid="1451" relation="include">
+        </childnode>
+        <childnode refid="1514" relation="include">
+        </childnode>
+        <childnode refid="1515" relation="include">
+        </childnode>
+        <childnode refid="1468" relation="include">
+        </childnode>
+        <childnode refid="1452" relation="include">
+        </childnode>
+        <childnode refid="1516" relation="include">
+        </childnode>
+        <childnode refid="1530" relation="include">
+        </childnode>
+        <childnode refid="1531" relation="include">
+        </childnode>
+        <childnode refid="1529" relation="include">
+        </childnode>
+        <childnode refid="1471" relation="include">
+        </childnode>
+        <childnode refid="1536" relation="include">
+        </childnode>
+        <childnode refid="1459" relation="include">
+        </childnode>
+        <childnode refid="1462" relation="include">
+        </childnode>
+        <childnode refid="1466" relation="include">
+        </childnode>
+        <childnode refid="1467" relation="include">
+        </childnode>
+        <childnode refid="1537" relation="include">
+        </childnode>
+        <childnode refid="1461" relation="include">
+        </childnode>
+        <childnode refid="1470" relation="include">
+        </childnode>
+      </node>
+      <node id="1452">
+        <label>hpx/parallel/executors/execution_parameters.hpp</label>
+        <link refid="execution__parameters_8hpp_source"/>
+        <childnode refid="1451" relation="include">
+        </childnode>
+        <childnode refid="1453" relation="include">
+        </childnode>
+        <childnode refid="1454" relation="include">
+        </childnode>
+        <childnode refid="1455" relation="include">
+        </childnode>
+        <childnode refid="1456" relation="include">
+        </childnode>
+        <childnode refid="1457" relation="include">
+        </childnode>
+        <childnode refid="1458" relation="include">
+        </childnode>
+        <childnode refid="1459" relation="include">
+        </childnode>
+        <childnode refid="1462" relation="include">
+        </childnode>
+        <childnode refid="1466" relation="include">
+        </childnode>
+        <childnode refid="1467" relation="include">
+        </childnode>
+        <childnode refid="1460" relation="include">
+        </childnode>
+        <childnode refid="1468" relation="include">
+        </childnode>
+        <childnode refid="1491" relation="include">
+        </childnode>
+        <childnode refid="1465" relation="include">
+        </childnode>
+        <childnode refid="1473" relation="include">
+        </childnode>
+        <childnode refid="1464" relation="include">
+        </childnode>
+        <childnode refid="1461" relation="include">
+        </childnode>
+        <childnode refid="1470" relation="include">
+        </childnode>
+        <childnode refid="1484" relation="include">
+        </childnode>
+      </node>
+      <node id="1535">
+        <label>exception</label>
+      </node>
+      <node id="1532">
+        <label>hpx/sync_launch_policy_dispatch.hpp</label>
+      </node>
+      <node id="1471">
+        <label>hpx/traits/executor_traits.hpp</label>
+        <link refid="executor__traits_8hpp_source"/>
+        <childnode refid="1451" relation="include">
+        </childnode>
+        <childnode refid="1458" relation="include">
+        </childnode>
+        <childnode refid="1472" relation="include">
+        </childnode>
+        <childnode refid="1473" relation="include">
+        </childnode>
+        <childnode refid="1461" relation="include">
+        </childnode>
+        <childnode refid="1470" relation="include">
+        </childnode>
+      </node>
+      <node id="1488">
+        <label>hpx/util/unwrap.hpp</label>
+      </node>
+      <node id="1479">
+        <label>hpx/lcos/dataflow.hpp</label>
+      </node>
+      <node id="1502">
+        <label>hpx/topology/topology.hpp</label>
+      </node>
+      <node id="1493">
+        <label>hpx/functional/bind.hpp</label>
+      </node>
+      <node id="1477">
+        <label>hpx/functional/invoke.hpp</label>
+      </node>
+      <node id="1499">
+        <label>hpx/parallel/executors/thread_execution_information.hpp</label>
+        <link refid="thread__execution__information_8hpp_source"/>
+        <childnode refid="1451" relation="include">
+        </childnode>
+        <childnode refid="1500" relation="include">
+        </childnode>
+        <childnode refid="1501" relation="include">
+        </childnode>
+        <childnode refid="1496" relation="include">
+        </childnode>
+        <childnode refid="1502" relation="include">
+        </childnode>
+        <childnode refid="1466" relation="include">
+        </childnode>
+        <childnode refid="1503" relation="include">
+        </childnode>
+        <childnode refid="1473" relation="include">
+        </childnode>
+        <childnode refid="1461" relation="include">
+        </childnode>
+        <childnode refid="1470" relation="include">
+        </childnode>
+      </node>
+      <node id="1495">
+        <label>hpx/runtime/threads/executors/current_executor.hpp</label>
+      </node>
+      <node id="1487">
+        <label>hpx/traits/future_traits.hpp</label>
+      </node>
+      <node id="1505">
+        <label>hpx/runtime/threads/thread_data_fwd.hpp</label>
+      </node>
+      <node id="1512">
+        <label>hpx/runtime/threads/thread.hpp</label>
+      </node>
+      <node id="1480">
+        <label>hpx/lcos/wait_all.hpp</label>
+      </node>
+      <node id="1457">
+        <label>hpx/type_support/detail/wrap_int.hpp</label>
+      </node>
+      <node id="1462">
+        <label>hpx/traits/is_executor_parameters.hpp</label>
+        <link refid="is__executor__parameters_8hpp_source"/>
+        <childnode refid="1451" relation="include">
+        </childnode>
+        <childnode refid="1463" relation="include">
+        </childnode>
+        <childnode refid="1464" relation="include">
+        </childnode>
+        <childnode refid="1461" relation="include">
+        </childnode>
+        <childnode refid="1465" relation="include">
+        </childnode>
+      </node>
+      <node id="1533">
+        <label>hpx/parallel/exception_list.hpp</label>
+        <link refid="exception__list_8hpp_source"/>
+        <childnode refid="1451" relation="include">
+        </childnode>
+        <childnode refid="1517" relation="include">
+        </childnode>
+        <childnode refid="1475" relation="include">
+        </childnode>
+        <childnode refid="1534" relation="include">
+        </childnode>
+        <childnode refid="1453" relation="include">
+        </childnode>
+        <childnode refid="1467" relation="include">
+        </childnode>
+        <childnode refid="1515" relation="include">
+        </childnode>
+        <childnode refid="1535" relation="include">
+        </childnode>
+        <childnode refid="1470" relation="include">
+        </childnode>
+      </node>
+      <node id="1468">
+        <label>hpx/parallel/executors/execution.hpp</label>
+        <link refid="executors_2execution_8hpp"/>
+        <childnode refid="1451" relation="include">
+        </childnode>
+        <childnode refid="1469" relation="include">
+        </childnode>
+        <childnode refid="1460" relation="include">
+        </childnode>
+        <childnode refid="1474" relation="include">
+        </childnode>
+        <childnode refid="1475" relation="include">
+        </childnode>
+        <childnode refid="1476" relation="include">
+        </childnode>
+        <childnode refid="1477" relation="include">
+        </childnode>
+        <childnode refid="1478" relation="include">
+        </childnode>
+        <childnode refid="1479" relation="include">
+        </childnode>
+        <childnode refid="1453" relation="include">
+        </childnode>
+        <childnode refid="1480" relation="include">
+        </childnode>
+        <childnode refid="1481" relation="include">
+        </childnode>
+        <childnode refid="1471" relation="include">
+        </childnode>
+        <childnode refid="1485" relation="include">
+        </childnode>
+        <childnode refid="1486" relation="include">
+        </childnode>
+        <childnode refid="1487" relation="include">
+        </childnode>
+        <childnode refid="1459" relation="include">
+        </childnode>
+        <childnode refid="1457" relation="include">
+        </childnode>
+        <childnode refid="1483" relation="include">
+        </childnode>
+        <childnode refid="1488" relation="include">
+        </childnode>
+        <childnode refid="1473" relation="include">
+        </childnode>
+        <childnode refid="1489" relation="include">
+        </childnode>
+        <childnode refid="1464" relation="include">
+        </childnode>
+        <childnode refid="1490" relation="include">
+        </childnode>
+        <childnode refid="1461" relation="include">
+        </childnode>
+        <childnode refid="1470" relation="include">
+        </childnode>
+        <childnode refid="1484" relation="include">
+        </childnode>
+      </node>
+      <node id="1528">
+        <label>hpx/parallel/executors/static_chunk_size.hpp</label>
+        <link refid="static__chunk__size_8hpp"/>
+        <childnode refid="1451" relation="include">
+        </childnode>
+        <childnode refid="1529" relation="include">
+        </childnode>
+        <childnode refid="1462" relation="include">
+        </childnode>
+        <childnode refid="1491" relation="include">
+        </childnode>
+        <childnode refid="1473" relation="include">
+        </childnode>
+        <childnode refid="1461" relation="include">
+        </childnode>
+      </node>
+      <node id="1530">
+        <label>hpx/parallel/executors/rebind_executor.hpp</label>
+        <link refid="rebind__executor_8hpp_source"/>
+        <childnode refid="1451" relation="include">
+        </childnode>
+        <childnode refid="1469" relation="include">
+        </childnode>
+        <childnode refid="1471" relation="include">
+        </childnode>
+        <childnode refid="1466" relation="include">
+        </childnode>
+        <childnode refid="1467" relation="include">
+        </childnode>
+        <childnode refid="1461" relation="include">
+        </childnode>
+      </node>
+      <node id="1496">
+        <label>hpx/runtime/threads/thread_executor.hpp</label>
+      </node>
+      <node id="1497">
+        <label>hpx/runtime/threads/thread_helpers.hpp</label>
+      </node>
+      <node id="1522">
+        <label>hpx/parallel/algorithms/detail/predicates.hpp</label>
+      </node>
+      <node id="1481">
+        <label>hpx/parallel/executors/fused_bulk_execute.hpp</label>
+        <link refid="fused__bulk__execute_8hpp_source"/>
+        <childnode refid="1451" relation="include">
+        </childnode>
+        <childnode refid="1469" relation="include">
+        </childnode>
+        <childnode refid="1482" relation="include">
+        </childnode>
+        <childnode refid="1483" relation="include">
+        </childnode>
+        <childnode refid="1460" relation="include">
+        </childnode>
+        <childnode refid="1478" relation="include">
+        </childnode>
+        <childnode refid="1474" relation="include">
+        </childnode>
+        <childnode refid="1473" relation="include">
+        </childnode>
+        <childnode refid="1461" relation="include">
+        </childnode>
+        <childnode refid="1470" relation="include">
+        </childnode>
+        <childnode refid="1484" relation="include">
+        </childnode>
+      </node>
+      <node id="1484">
+        <label>vector</label>
+      </node>
+      <node id="1534">
+        <label>hpx/hpx_finalize.hpp</label>
+      </node>
+      <node id="1455">
+        <label>hpx/preprocessor/stringize.hpp</label>
+      </node>
+      <node id="1531">
+        <label>hpx/parallel/executors/sequenced_executor.hpp</label>
+        <link refid="sequenced__executor_8hpp"/>
+        <childnode refid="1451" relation="include">
+        </childnode>
+        <childnode refid="1518" relation="include">
+        </childnode>
+        <childnode refid="1453" relation="include">
+        </childnode>
+        <childnode refid="1496" relation="include">
+        </childnode>
+        <childnode refid="1532" relation="include">
+        </childnode>
+        <childnode refid="1459" relation="include">
+        </childnode>
+        <childnode refid="1483" relation="include">
+        </childnode>
+        <childnode refid="1477" relation="include">
+        </childnode>
+        <childnode refid="1488" relation="include">
+        </childnode>
+        <childnode refid="1533" relation="include">
+        </childnode>
+        <childnode refid="1473" relation="include">
+        </childnode>
+        <childnode refid="1489" relation="include">
+        </childnode>
+        <childnode refid="1461" relation="include">
+        </childnode>
+        <childnode refid="1470" relation="include">
+        </childnode>
+        <childnode refid="1484" relation="include">
+        </childnode>
+      </node>
+      <node id="1470">
+        <label>utility</label>
+      </node>
+      <node id="1475">
+        <label>hpx/errors.hpp</label>
+      </node>
+      <node id="1525">
+        <label>hpx/runtime/launch_policy.hpp</label>
+      </node>
+      <node id="1459">
+        <label>hpx/traits/is_executor.hpp</label>
+        <link refid="is__executor_8hpp_source"/>
+        <childnode refid="1451" relation="include">
+        </childnode>
+        <childnode refid="1460" relation="include">
+        </childnode>
+        <childnode refid="1461" relation="include">
+        </childnode>
+      </node>
+      <node id="1519">
+        <label>hpx/allocator_support/internal_allocator.hpp</label>
+      </node>
+      <node id="1465">
+        <label>boost/ref.hpp</label>
+      </node>
+      <node id="1536">
+        <label>hpx/traits/is_execution_policy.hpp</label>
+        <link refid="is__execution__policy_8hpp"/>
+        <childnode refid="1451" relation="include">
+        </childnode>
+        <childnode refid="1467" relation="include">
+        </childnode>
+        <childnode refid="1461" relation="include">
+        </childnode>
+      </node>
+      <node id="1482">
+        <label>hpx/iterator_support/is_range.hpp</label>
+      </node>
+      <node id="1500">
+        <label>hpx/runtime/get_os_thread_count.hpp</label>
+      </node>
+      <node id="1517">
+        <label>hpx/assertion.hpp</label>
+      </node>
+      <node id="1473">
+        <label>cstddef</label>
+      </node>
+      <node id="1514">
+        <label>hpx/parallel/datapar/execution_policy.hpp</label>
+        <link refid="datapar_2execution__policy_8hpp_source"/>
+        <childnode refid="1451" relation="include">
+        </childnode>
+      </node>
+      <node id="1538">
+        <label>chrono</label>
+      </node>
+      <node id="1508">
+        <label>hpx/timing/steady_clock.hpp</label>
+      </node>
+      <node id="1491">
+        <label>hpx/parallel/executors/execution_parameters_fwd.hpp</label>
+        <link refid="execution__parameters__fwd_8hpp_source"/>
+        <childnode refid="1451" relation="include">
+        </childnode>
+        <childnode refid="1469" relation="include">
+        </childnode>
+        <childnode refid="1471" relation="include">
+        </childnode>
+        <childnode refid="1467" relation="include">
+        </childnode>
+        <childnode refid="1473" relation="include">
+        </childnode>
+        <childnode refid="1470" relation="include">
+        </childnode>
+      </node>
+      <node id="1518">
+        <label>hpx/async_launch_policy_dispatch.hpp</label>
+      </node>
+      <node id="1483">
+        <label>hpx/functional/deferred_call.hpp</label>
+      </node>
+      <node id="1511">
+        <label>hpx/parallel/executors/timed_executors.hpp</label>
+        <link refid="timed__executors_8hpp_source"/>
+        <childnode refid="1451" relation="include">
+        </childnode>
+        <childnode refid="1493" relation="include">
+        </childnode>
+        <childnode refid="1453" relation="include">
+        </childnode>
+        <childnode refid="1512" relation="include">
+        </childnode>
+        <childnode refid="1457" relation="include">
+        </childnode>
+        <childnode refid="1471" relation="include">
+        </childnode>
+        <childnode refid="1466" relation="include">
+        </childnode>
+        <childnode refid="1508" relation="include">
+        </childnode>
+        <childnode refid="1467" relation="include">
+        </childnode>
+        <childnode refid="1513" relation="include">
+        </childnode>
+        <childnode refid="1468" relation="include">
+        </childnode>
+        <childnode refid="1516" relation="include">
+        </childnode>
+        <childnode refid="1531" relation="include">
+        </childnode>
+        <childnode refid="1538" relation="include">
+        </childnode>
+        <childnode refid="1464" relation="include">
+        </childnode>
+        <childnode refid="1461" relation="include">
+        </childnode>
+        <childnode refid="1470" relation="include">
+        </childnode>
+        <childnode refid="1509" relation="include">
+        </childnode>
+        <childnode refid="1506" relation="include">
+        </childnode>
+      </node>
+      <node id="1504">
+        <label>hpx/parallel/executors/execution_information_fwd.hpp</label>
+        <link refid="execution__information__fwd_8hpp_source"/>
+        <childnode refid="1451" relation="include">
+        </childnode>
+        <childnode refid="1469" relation="include">
+        </childnode>
+        <childnode refid="1505" relation="include">
+        </childnode>
+        <childnode refid="1471" relation="include">
+        </childnode>
+        <childnode refid="1473" relation="include">
+        </childnode>
+        <childnode refid="1461" relation="include">
+        </childnode>
+        <childnode refid="1470" relation="include">
+        </childnode>
+      </node>
+      <node id="1453">
+        <label>hpx/lcos/future.hpp</label>
+      </node>
+      <node id="1461">
+        <label>type_traits</label>
+      </node>
+      <node id="1486">
+        <label>hpx/traits/future_then_result.hpp</label>
+      </node>
+      <node id="1509">
+        <label>hpx/parallel/executors/timed_execution.hpp</label>
+        <link refid="timed__execution_8hpp_source"/>
+        <childnode refid="1451" relation="include">
+        </childnode>
+        <childnode refid="1510" relation="include">
+        </childnode>
+        <childnode refid="1453" relation="include">
+        </childnode>
+        <childnode refid="1457" relation="include">
+        </childnode>
+        <childnode refid="1471" relation="include">
+        </childnode>
+        <childnode refid="1459" relation="include">
+        </childnode>
+        <childnode refid="1508" relation="include">
+        </childnode>
+        <childnode refid="1468" relation="include">
+        </childnode>
+        <childnode refid="1511" relation="include">
+        </childnode>
+        <childnode refid="1461" relation="include">
+        </childnode>
+        <childnode refid="1470" relation="include">
+        </childnode>
+      </node>
+      <node id="1498">
+        <label>algorithm</label>
+      </node>
+      <node id="1529">
+        <label>hpx/runtime/serialization/serialize.hpp</label>
+      </node>
+      <node id="1510">
+        <label>hpx/parallel/executors/timed_execution_fwd.hpp</label>
+        <link refid="timed__execution__fwd_8hpp_source"/>
+        <childnode refid="1451" relation="include">
+        </childnode>
+        <childnode refid="1469" relation="include">
+        </childnode>
+        <childnode refid="1511" relation="include">
+        </childnode>
+        <childnode refid="1471" relation="include">
+        </childnode>
+        <childnode refid="1461" relation="include">
+        </childnode>
+        <childnode refid="1470" relation="include">
+        </childnode>
+      </node>
+      <node id="1456">
+        <label>hpx/runtime/serialization/base_object.hpp</label>
+      </node>
+      <node id="1520">
+        <label>hpx/functional/one_shot.hpp</label>
+      </node>
+      <node id="1537">
+        <label>memory</label>
+      </node>
+      <node id="1474">
+        <label>hpx/datastructures/tuple.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1540">
+        <label>libs/execution/include/hpx/parallel/executors/thread_pool_attached_executors.hpp</label>
+        <link refid="thread__pool__attached__executors_8hpp"/>
+        <childnode refid="1541" relation="include">
+        </childnode>
+      </node>
+      <node id="1542">
+        <label>libs/execution/include/hpx/parallel/execution.hpp</label>
+        <link refid="execution_8hpp_source"/>
+      </node>
+      <node id="1541">
+        <label>libs/execution/include/hpx/parallel/executors.hpp</label>
+        <link refid="executors_8hpp_source"/>
+        <childnode refid="1542" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacehpx">hpx</innernamespace>
+    <innernamespace refid="namespacehpx_1_1parallel">hpx::parallel</innernamespace>
+    <innernamespace refid="namespacehpx_1_1parallel_1_1execution">hpx::parallel::execution</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2007-2017<sp/>Hartmut<sp/>Kaiser</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Distributed<sp/>under<sp/>the<sp/>Boost<sp/>Software<sp/>License,<sp/>Version<sp/>1.0.<sp/>(See<sp/>accompanying</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>file<sp/>LICENSE_1_0.txt<sp/>or<sp/>copy<sp/>at<sp/>http://www.boost.org/LICENSE_1_0.txt)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(HPX_PARALLEL_EXECUTORS_THREAD_POOL_ATTACHED_EXECUTORS_AUG_28_2015_0511PM)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPX_PARALLEL_EXECUTORS_THREAD_POOL_ATTACHED_EXECUTORS_AUG_28_2015_0511PM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/config.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/parallel/executors/execution_parameters.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="thread__execution_8hpp" kindref="compound">hpx/parallel/executors/thread_execution.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/parallel/executors/thread_execution_information.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/parallel/executors/thread_timed_execution.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/runtime/threads/executors/thread_pool_attached_executors.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehpx" kindref="compound">hpx</ref><sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">parallel<sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">execution</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor">#if<sp/>defined(HPX_HAVE_LOCAL_SCHEDULER)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>local_queue_attached_executor<sp/>=</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>threads::executors::local_queue_attached_executor;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(HPX_HAVE_STATIC_SCHEDULER)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>static_queue_attached_executor<sp/>=</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>threads::executors::static_queue_attached_executor;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>local_priority_queue_attached_executor<sp/>=</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>threads::executors::local_priority_queue_attached_executor;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(HPX_HAVE_STATIC_PRIORITY_SCHEDULER)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>static_priority_queue_attached_executor<sp/>=</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>threads::executors::static_priority_queue_attached_executor;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}}}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="libs/execution/include/hpx/parallel/executors/thread_pool_attached_executors.hpp"/>
+  </compounddef>
+</doxygen>

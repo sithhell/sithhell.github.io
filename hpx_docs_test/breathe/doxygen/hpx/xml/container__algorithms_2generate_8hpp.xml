@@ -1,0 +1,761 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="container__algorithms_2generate_8hpp" kind="file" language="C++">
+    <compoundname>generate.hpp</compoundname>
+    <includes local="no">hpx/config.hpp</includes>
+    <includes local="no">hpx/traits/concepts.hpp</includes>
+    <includes local="no">hpx/traits/is_range.hpp</includes>
+    <includes local="no">hpx/util/range.hpp</includes>
+    <includes refid="algorithms_2generate_8hpp" local="no">hpx/parallel/algorithms/generate.hpp</includes>
+    <includes local="no">hpx/parallel/traits/projected_range.hpp</includes>
+    <includes local="no">hpx/parallel/util/projection_identity.hpp</includes>
+    <includes local="no">type_traits</includes>
+    <includes local="no">utility</includes>
+    <incdepgraph>
+      <node id="2676">
+        <label>hpx/traits/is_execution_policy.hpp</label>
+        <link refid="is__execution__policy_8hpp"/>
+        <childnode refid="2587" relation="include">
+        </childnode>
+        <childnode refid="2677" relation="include">
+        </childnode>
+        <childnode refid="2605" relation="include">
+        </childnode>
+      </node>
+      <node id="2658">
+        <label>atomic</label>
+      </node>
+      <node id="2665">
+        <label>functional</label>
+      </node>
+      <node id="2600">
+        <label>hpx/util/identity.hpp</label>
+      </node>
+      <node id="2655">
+        <label>hpx/util/register_locks.hpp</label>
+      </node>
+      <node id="2617">
+        <label>hpx/parallel/executors/post_policy_dispatch.hpp</label>
+      </node>
+      <node id="2656">
+        <label>hpx/util/steady_clock.hpp</label>
+      </node>
+      <node id="2674">
+        <label>iterator</label>
+      </node>
+      <node id="2599">
+        <label>hpx/util/annotated_function.hpp</label>
+      </node>
+      <node id="2598">
+        <label>hpx/traits/is_value_proxy.hpp</label>
+      </node>
+      <node id="2641">
+        <label>cstdint</label>
+      </node>
+      <node id="2629">
+        <label>hpx/throw_exception.hpp</label>
+        <link refid="throw__exception_8hpp"/>
+        <childnode refid="2587" relation="include">
+        </childnode>
+        <childnode refid="2625" relation="include">
+        </childnode>
+        <childnode refid="2628" relation="include">
+        </childnode>
+        <childnode refid="2630" relation="include">
+        </childnode>
+        <childnode refid="2631" relation="include">
+        </childnode>
+        <childnode refid="2632" relation="include">
+        </childnode>
+        <childnode refid="2633" relation="include">
+        </childnode>
+        <childnode refid="2626" relation="include">
+        </childnode>
+        <childnode refid="2634" relation="include">
+        </childnode>
+        <childnode refid="2627" relation="include">
+        </childnode>
+        <childnode refid="2635" relation="include">
+        </childnode>
+        <childnode refid="2636" relation="include">
+        </childnode>
+      </node>
+      <node id="2647">
+        <label>hpx/runtime/threads/policies/scheduler_mode.hpp</label>
+        <link refid="scheduler__mode_8hpp_source"/>
+      </node>
+      <node id="2652">
+        <label>hpx/util/function.hpp</label>
+      </node>
+      <node id="2628">
+        <label>hpx/exception_fwd.hpp</label>
+        <link refid="exception__fwd_8hpp"/>
+        <childnode refid="2587" relation="include">
+        </childnode>
+        <childnode refid="2625" relation="include">
+        </childnode>
+        <childnode refid="2629" relation="include">
+        </childnode>
+      </node>
+      <node id="2593">
+        <label>hpx/traits/segmented_iterator_traits.hpp</label>
+      </node>
+      <node id="2679">
+        <label>hpx/parallel/traits/projected.hpp</label>
+      </node>
+      <node id="2684">
+        <label>hpx/parallel/traits/projected_range.hpp</label>
+      </node>
+      <node id="2603">
+        <label>hpx/util/void_guard.hpp</label>
+      </node>
+      <node id="2602">
+        <label>hpx/util/result_of.hpp</label>
+      </node>
+      <node id="2637">
+        <label>stdexcept</label>
+      </node>
+      <node id="2638">
+        <label>hpx/runtime/launch_policy.hpp</label>
+        <link refid="launch__policy_8hpp"/>
+        <childnode refid="2587" relation="include">
+        </childnode>
+        <childnode refid="2639" relation="include">
+        </childnode>
+        <childnode refid="2642" relation="include">
+        </childnode>
+        <childnode refid="2605" relation="include">
+        </childnode>
+        <childnode refid="2606" relation="include">
+        </childnode>
+      </node>
+      <node id="2627">
+        <label>string</label>
+      </node>
+      <node id="2632">
+        <label>hpx/util/detail/pp/nargs.hpp</label>
+      </node>
+      <node id="2678">
+        <label>hpx/traits/is_launch_policy.hpp</label>
+      </node>
+      <node id="2643">
+        <label>hpx/runtime/threads/thread_helpers.hpp</label>
+        <link refid="thread__helpers_8hpp_source"/>
+        <childnode refid="2587" relation="include">
+        </childnode>
+        <childnode refid="2628" relation="include">
+        </childnode>
+        <childnode refid="2644" relation="include">
+        </childnode>
+        <childnode refid="2645" relation="include">
+        </childnode>
+        <childnode refid="2646" relation="include">
+        </childnode>
+        <childnode refid="2647" relation="include">
+        </childnode>
+        <childnode refid="2648" relation="include">
+        </childnode>
+        <childnode refid="2639" relation="include">
+        </childnode>
+        <childnode refid="2651" relation="include">
+        </childnode>
+        <childnode refid="2653" relation="include">
+        </childnode>
+        <childnode refid="2655" relation="include">
+        </childnode>
+        <childnode refid="2656" relation="include">
+        </childnode>
+        <childnode refid="2657" relation="include">
+        </childnode>
+        <childnode refid="2658" relation="include">
+        </childnode>
+        <childnode refid="2659" relation="include">
+        </childnode>
+        <childnode refid="2622" relation="include">
+        </childnode>
+        <childnode refid="2641" relation="include">
+        </childnode>
+        <childnode refid="2605" relation="include">
+        </childnode>
+        <childnode refid="2606" relation="include">
+        </childnode>
+      </node>
+      <node id="2625">
+        <label>hpx/error.hpp</label>
+        <link refid="error_8hpp"/>
+        <childnode refid="2587" relation="include">
+        </childnode>
+        <childnode refid="2626" relation="include">
+        </childnode>
+        <childnode refid="2627" relation="include">
+        </childnode>
+      </node>
+      <node id="2635">
+        <label>hpx/config/warnings_prefix.hpp</label>
+      </node>
+      <node id="2587">
+        <label>hpx/config.hpp</label>
+      </node>
+      <node id="2607">
+        <label>hpx/parallel/execution_policy.hpp</label>
+        <link refid="execution__policy_8hpp"/>
+        <childnode refid="2587" relation="include">
+        </childnode>
+        <childnode refid="2608" relation="include">
+        </childnode>
+        <childnode refid="2609" relation="include">
+        </childnode>
+        <childnode refid="2610" relation="include">
+        </childnode>
+        <childnode refid="2611" relation="include">
+        </childnode>
+        <childnode refid="2612" relation="include">
+        </childnode>
+        <childnode refid="2667" relation="include">
+        </childnode>
+        <childnode refid="2668" relation="include">
+        </childnode>
+        <childnode refid="2619" relation="include">
+        </childnode>
+        <childnode refid="2675" relation="include">
+        </childnode>
+        <childnode refid="2676" relation="include">
+        </childnode>
+        <childnode refid="2661" relation="include">
+        </childnode>
+        <childnode refid="2620" relation="include">
+        </childnode>
+        <childnode refid="2678" relation="include">
+        </childnode>
+        <childnode refid="2677" relation="include">
+        </childnode>
+        <childnode refid="2654" relation="include">
+        </childnode>
+        <childnode refid="2605" relation="include">
+        </childnode>
+        <childnode refid="2606" relation="include">
+        </childnode>
+      </node>
+      <node id="2634">
+        <label>exception</label>
+      </node>
+      <node id="2612">
+        <label>hpx/parallel/executors/parallel_executor.hpp</label>
+        <link refid="parallel__executor_8hpp"/>
+        <childnode refid="2587" relation="include">
+        </childnode>
+        <childnode refid="2613" relation="include">
+        </childnode>
+        <childnode refid="2614" relation="include">
+        </childnode>
+        <childnode refid="2615" relation="include">
+        </childnode>
+        <childnode refid="2616" relation="include">
+        </childnode>
+        <childnode refid="2617" relation="include">
+        </childnode>
+        <childnode refid="2618" relation="include">
+        </childnode>
+        <childnode refid="2623" relation="include">
+        </childnode>
+        <childnode refid="2638" relation="include">
+        </childnode>
+        <childnode refid="2619" relation="include">
+        </childnode>
+        <childnode refid="2643" relation="include">
+        </childnode>
+        <childnode refid="2660" relation="include">
+        </childnode>
+        <childnode refid="2661" relation="include">
+        </childnode>
+        <childnode refid="2662" relation="include">
+        </childnode>
+        <childnode refid="2663" relation="include">
+        </childnode>
+        <childnode refid="2590" relation="include">
+        </childnode>
+        <childnode refid="2664" relation="include">
+        </childnode>
+        <childnode refid="2622" relation="include">
+        </childnode>
+        <childnode refid="2665" relation="include">
+        </childnode>
+        <childnode refid="2605" relation="include">
+        </childnode>
+        <childnode refid="2606" relation="include">
+        </childnode>
+        <childnode refid="2666" relation="include">
+        </childnode>
+      </node>
+      <node id="2592">
+        <label>hpx/traits/is_iterator.hpp</label>
+      </node>
+      <node id="2651">
+        <label>hpx/util_fwd.hpp</label>
+      </node>
+      <node id="2681">
+        <label>hpx/parallel/util/foreach_partitioner.hpp</label>
+      </node>
+      <node id="2653">
+        <label>hpx/util/unique_function.hpp</label>
+      </node>
+      <node id="2668">
+        <label>hpx/parallel/executors/sequenced_executor.hpp</label>
+        <link refid="sequenced__executor_8hpp"/>
+        <childnode refid="2587" relation="include">
+        </childnode>
+        <childnode refid="2613" relation="include">
+        </childnode>
+        <childnode refid="2614" relation="include">
+        </childnode>
+        <childnode refid="2669" relation="include">
+        </childnode>
+        <childnode refid="2661" relation="include">
+        </childnode>
+        <childnode refid="2670" relation="include">
+        </childnode>
+        <childnode refid="2601" relation="include">
+        </childnode>
+        <childnode refid="2671" relation="include">
+        </childnode>
+        <childnode refid="2673" relation="include">
+        </childnode>
+        <childnode refid="2622" relation="include">
+        </childnode>
+        <childnode refid="2674" relation="include">
+        </childnode>
+        <childnode refid="2605" relation="include">
+        </childnode>
+        <childnode refid="2606" relation="include">
+        </childnode>
+        <childnode refid="2666" relation="include">
+        </childnode>
+      </node>
+      <node id="2633">
+        <label>boost/current_function.hpp</label>
+      </node>
+      <node id="2660">
+        <label>hpx/traits/future_traits.hpp</label>
+      </node>
+      <node id="2670">
+        <label>hpx/util/deferred_call.hpp</label>
+      </node>
+      <node id="2639">
+        <label>hpx/runtime/threads/thread_enums.hpp</label>
+        <link refid="thread__enums_8hpp"/>
+        <childnode refid="2587" relation="include">
+        </childnode>
+        <childnode refid="2640" relation="include">
+        </childnode>
+        <childnode refid="2622" relation="include">
+        </childnode>
+        <childnode refid="2641" relation="include">
+        </childnode>
+      </node>
+      <node id="2618">
+        <label>hpx/parallel/executors/static_chunk_size.hpp</label>
+        <link refid="static__chunk__size_8hpp"/>
+        <childnode refid="2587" relation="include">
+        </childnode>
+        <childnode refid="2619" relation="include">
+        </childnode>
+        <childnode refid="2620" relation="include">
+        </childnode>
+        <childnode refid="2621" relation="include">
+        </childnode>
+        <childnode refid="2622" relation="include">
+        </childnode>
+        <childnode refid="2605" relation="include">
+        </childnode>
+      </node>
+      <node id="2672">
+        <label>hpx/util/detail/unwrap_impl.hpp</label>
+      </node>
+      <node id="2588">
+        <label>hpx/traits/concepts.hpp</label>
+      </node>
+      <node id="2673">
+        <label>hpx/parallel/exception_list.hpp</label>
+      </node>
+      <node id="2595">
+        <label>hpx/parallel/algorithms/detail/is_negative.hpp</label>
+      </node>
+      <node id="2609">
+        <label>hpx/parallel/execution_policy_fwd.hpp</label>
+      </node>
+      <node id="2669">
+        <label>hpx/runtime/threads/thread_executor.hpp</label>
+      </node>
+      <node id="2661">
+        <label>hpx/traits/is_executor.hpp</label>
+      </node>
+      <node id="2682">
+        <label>hpx/parallel/util/loop.hpp</label>
+      </node>
+      <node id="2616">
+        <label>hpx/parallel/algorithms/detail/predicates.hpp</label>
+      </node>
+      <node id="2610">
+        <label>hpx/parallel/executors/execution.hpp</label>
+      </node>
+      <node id="2626">
+        <label>boost/system/error_code.hpp</label>
+      </node>
+      <node id="2666">
+        <label>vector</label>
+      </node>
+      <node id="2591">
+        <label>hpx/parallel/algorithms/generate.hpp</label>
+        <link refid="algorithms_2generate_8hpp"/>
+        <childnode refid="2587" relation="include">
+        </childnode>
+        <childnode refid="2588" relation="include">
+        </childnode>
+        <childnode refid="2592" relation="include">
+        </childnode>
+        <childnode refid="2593" relation="include">
+        </childnode>
+        <childnode refid="2594" relation="include">
+        </childnode>
+        <childnode refid="2595" relation="include">
+        </childnode>
+        <childnode refid="2596" relation="include">
+        </childnode>
+        <childnode refid="2607" relation="include">
+        </childnode>
+        <childnode refid="2680" relation="include">
+        </childnode>
+        <childnode refid="2683" relation="include">
+        </childnode>
+        <childnode refid="2664" relation="include">
+        </childnode>
+        <childnode refid="2622" relation="include">
+        </childnode>
+        <childnode refid="2674" relation="include">
+        </childnode>
+        <childnode refid="2605" relation="include">
+        </childnode>
+        <childnode refid="2606" relation="include">
+        </childnode>
+      </node>
+      <node id="2594">
+        <label>hpx/parallel/algorithms/detail/dispatch.hpp</label>
+      </node>
+      <node id="2650">
+        <label>hpx/runtime/threads/thread_id_type.hpp</label>
+      </node>
+      <node id="2596">
+        <label>hpx/parallel/algorithms/for_each.hpp</label>
+        <link refid="algorithms_2for__each_8hpp"/>
+        <childnode refid="2587" relation="include">
+        </childnode>
+        <childnode refid="2588" relation="include">
+        </childnode>
+        <childnode refid="2597" relation="include">
+        </childnode>
+        <childnode refid="2592" relation="include">
+        </childnode>
+        <childnode refid="2598" relation="include">
+        </childnode>
+        <childnode refid="2593" relation="include">
+        </childnode>
+        <childnode refid="2599" relation="include">
+        </childnode>
+        <childnode refid="2600" relation="include">
+        </childnode>
+        <childnode refid="2601" relation="include">
+        </childnode>
+        <childnode refid="2594" relation="include">
+        </childnode>
+        <childnode refid="2595" relation="include">
+        </childnode>
+        <childnode refid="2607" relation="include">
+        </childnode>
+        <childnode refid="2679" relation="include">
+        </childnode>
+        <childnode refid="2680" relation="include">
+        </childnode>
+        <childnode refid="2681" relation="include">
+        </childnode>
+        <childnode refid="2682" relation="include">
+        </childnode>
+        <childnode refid="2683" relation="include">
+        </childnode>
+        <childnode refid="2664" relation="include">
+        </childnode>
+        <childnode refid="2622" relation="include">
+        </childnode>
+        <childnode refid="2641" relation="include">
+        </childnode>
+        <childnode refid="2674" relation="include">
+        </childnode>
+        <childnode refid="2605" relation="include">
+        </childnode>
+        <childnode refid="2606" relation="include">
+        </childnode>
+      </node>
+      <node id="2606">
+        <label>utility</label>
+      </node>
+      <node id="2608">
+        <label>hpx/parallel/datapar/execution_policy.hpp</label>
+      </node>
+      <node id="2671">
+        <label>hpx/util/unwrap.hpp</label>
+        <link refid="unwrap_8hpp_source"/>
+        <childnode refid="2587" relation="include">
+        </childnode>
+        <childnode refid="2672" relation="include">
+        </childnode>
+        <childnode refid="2622" relation="include">
+        </childnode>
+        <childnode refid="2606" relation="include">
+        </childnode>
+      </node>
+      <node id="2636">
+        <label>hpx/config/warnings_suffix.hpp</label>
+      </node>
+      <node id="2604">
+        <label>boost/ref.hpp</label>
+      </node>
+      <node id="2640">
+        <label>hpx/runtime/threads/detail/combined_tagged_state.hpp</label>
+      </node>
+      <node id="2590">
+        <label>hpx/util/range.hpp</label>
+      </node>
+      <node id="2621">
+        <label>hpx/parallel/executors/execution_parameters_fwd.hpp</label>
+      </node>
+      <node id="2615">
+        <label>hpx/lcos/when_all_fwd.hpp</label>
+      </node>
+      <node id="2589">
+        <label>hpx/traits/is_range.hpp</label>
+      </node>
+      <node id="2586">
+        <label>hpx/parallel/container_algorithms/generate.hpp</label>
+        <link refid="container__algorithms_2generate_8hpp"/>
+        <childnode refid="2587" relation="include">
+        </childnode>
+        <childnode refid="2588" relation="include">
+        </childnode>
+        <childnode refid="2589" relation="include">
+        </childnode>
+        <childnode refid="2590" relation="include">
+        </childnode>
+        <childnode refid="2591" relation="include">
+        </childnode>
+        <childnode refid="2684" relation="include">
+        </childnode>
+        <childnode refid="2683" relation="include">
+        </childnode>
+        <childnode refid="2605" relation="include">
+        </childnode>
+        <childnode refid="2606" relation="include">
+        </childnode>
+      </node>
+      <node id="2631">
+        <label>hpx/util/detail/pp/expand.hpp</label>
+      </node>
+      <node id="2611">
+        <label>hpx/parallel/executors/execution_parameters.hpp</label>
+      </node>
+      <node id="2622">
+        <label>cstddef</label>
+      </node>
+      <node id="2644">
+        <label>hpx/runtime/naming_fwd.hpp</label>
+      </node>
+      <node id="2659">
+        <label>chrono</label>
+      </node>
+      <node id="2667">
+        <label>hpx/parallel/executors/rebind_executor.hpp</label>
+      </node>
+      <node id="2624">
+        <label>hpx/error_code.hpp</label>
+        <link refid="error__code_8hpp"/>
+        <childnode refid="2587" relation="include">
+        </childnode>
+        <childnode refid="2625" relation="include">
+        </childnode>
+        <childnode refid="2628" relation="include">
+        </childnode>
+        <childnode refid="2626" relation="include">
+        </childnode>
+        <childnode refid="2634" relation="include">
+        </childnode>
+        <childnode refid="2637" relation="include">
+        </childnode>
+        <childnode refid="2627" relation="include">
+        </childnode>
+        <childnode refid="2629" relation="include">
+        </childnode>
+      </node>
+      <node id="2613">
+        <label>hpx/async_launch_policy_dispatch.hpp</label>
+      </node>
+      <node id="2601">
+        <label>hpx/util/invoke.hpp</label>
+        <link refid="invoke_8hpp_source"/>
+        <childnode refid="2587" relation="include">
+        </childnode>
+        <childnode refid="2602" relation="include">
+        </childnode>
+        <childnode refid="2603" relation="include">
+        </childnode>
+        <childnode refid="2604" relation="include">
+        </childnode>
+        <childnode refid="2605" relation="include">
+        </childnode>
+        <childnode refid="2606" relation="include">
+        </childnode>
+      </node>
+      <node id="2645">
+        <label>hpx/runtime/threads_fwd.hpp</label>
+      </node>
+      <node id="2642">
+        <label>hpx/runtime/serialization/serialization_fwd.hpp</label>
+      </node>
+      <node id="2677">
+        <label>hpx/util/decay.hpp</label>
+      </node>
+      <node id="2649">
+        <label>hpx/runtime/threads/coroutines/coroutine_fwd.hpp</label>
+      </node>
+      <node id="2648">
+        <label>hpx/runtime/threads/thread_data_fwd.hpp</label>
+        <link refid="thread__data__fwd_8hpp"/>
+        <childnode refid="2587" relation="include">
+        </childnode>
+        <childnode refid="2628" relation="include">
+        </childnode>
+        <childnode refid="2649" relation="include">
+        </childnode>
+        <childnode refid="2639" relation="include">
+        </childnode>
+        <childnode refid="2650" relation="include">
+        </childnode>
+        <childnode refid="2651" relation="include">
+        </childnode>
+        <childnode refid="2652" relation="include">
+        </childnode>
+        <childnode refid="2653" relation="include">
+        </childnode>
+        <childnode refid="2622" relation="include">
+        </childnode>
+        <childnode refid="2641" relation="include">
+        </childnode>
+        <childnode refid="2606" relation="include">
+        </childnode>
+        <childnode refid="2654" relation="include">
+        </childnode>
+      </node>
+      <node id="2614">
+        <label>hpx/lcos/future.hpp</label>
+      </node>
+      <node id="2605">
+        <label>type_traits</label>
+      </node>
+      <node id="2675">
+        <label>hpx/traits/executor_traits.hpp</label>
+      </node>
+      <node id="2597">
+        <label>hpx/traits/is_callable.hpp</label>
+      </node>
+      <node id="2620">
+        <label>hpx/traits/is_executor_parameters.hpp</label>
+      </node>
+      <node id="2664">
+        <label>algorithm</label>
+      </node>
+      <node id="2619">
+        <label>hpx/runtime/serialization/serialize.hpp</label>
+      </node>
+      <node id="2680">
+        <label>hpx/parallel/util/detail/algorithm_result.hpp</label>
+      </node>
+      <node id="2663">
+        <label>hpx/util/bind.hpp</label>
+      </node>
+      <node id="2662">
+        <label>hpx/util/assert.hpp</label>
+      </node>
+      <node id="2683">
+        <label>hpx/parallel/util/projection_identity.hpp</label>
+      </node>
+      <node id="2623">
+        <label>hpx/runtime/get_worker_thread_num.hpp</label>
+        <link refid="get__worker__thread__num_8hpp"/>
+        <childnode refid="2587" relation="include">
+        </childnode>
+        <childnode refid="2624" relation="include">
+        </childnode>
+        <childnode refid="2622" relation="include">
+        </childnode>
+      </node>
+      <node id="2654">
+        <label>memory</label>
+      </node>
+      <node id="2646">
+        <label>hpx/runtime/thread_pool_helpers.hpp</label>
+      </node>
+      <node id="2630">
+        <label>hpx/util/detail/pp/cat.hpp</label>
+      </node>
+      <node id="2657">
+        <label>hpx/util/thread_description.hpp</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacehpx">hpx</innernamespace>
+    <innernamespace refid="namespacehpx_1_1parallel">hpx::parallel</innernamespace>
+    <innernamespace refid="namespacehpx_1_1parallel_1_1v1">hpx::parallel::v1</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2014<sp/>Grant<sp/>Mercer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2014-2016<sp/>Hartmut<sp/>Kaiser</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Distributed<sp/>under<sp/>the<sp/>Boost<sp/>Software<sp/>License,<sp/>Version<sp/>1.0.<sp/>(See<sp/>accompanying</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>file<sp/>LICENSE_1_0.txt<sp/>or<sp/>copy<sp/>at<sp/>http://www.boost.org/LICENSE_1_0.txt)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(HPX_PARALLEL_CONTAINER_ALGORITHM_GENERATE_JAN_25_2016_0622PM)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPX_PARALLEL_CONTAINER_ALGORITHM_GENERATE_JAN_25_2016_0622PM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/config.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/traits/concepts.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/traits/is_range.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/util/range.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="algorithms_2generate_8hpp" kindref="compound">hpx/parallel/algorithms/generate.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/parallel/traits/projected_range.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/parallel/util/projection_identity.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;type_traits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehpx" kindref="compound">hpx</ref><sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">parallel<sp/>{<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">v1</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ExPolicy,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Rng,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>F,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>HPX_CONCEPT_REQUIRES_(</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>execution::is_execution_policy&lt;ExPolicy&gt;::value<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::traits::is_range&lt;Rng&gt;::value)&gt;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>util::detail::algorithm_result&lt;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ExPolicy,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>hpx::traits::range_iterator&lt;Rng&gt;::type</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>&gt;::type</highlight></codeline>
+<codeline lineno="81" refid="container__algorithms_2generate_8hpp_1aed290ad93f522e69befe1628b71f4e8d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="algorithms_2generate_8hpp_1a8b4e673fc690318448e989c780055d17" kindref="member">generate</ref>(ExPolicy<sp/>&amp;&amp;<sp/>policy,<sp/>Rng<sp/>&amp;&amp;<sp/>rng,<sp/>F<sp/>&amp;&amp;<sp/>f)</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="algorithms_2generate_8hpp_1a8b4e673fc690318448e989c780055d17" kindref="member">generate</ref>(std::forward&lt;ExPolicy&gt;(policy),</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::util::begin(rng),<sp/>hpx::util::end(rng),<sp/>std::forward&lt;F&gt;(f));</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}}}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="hpx/parallel/container_algorithms/generate.hpp"/>
+  </compounddef>
+</doxygen>

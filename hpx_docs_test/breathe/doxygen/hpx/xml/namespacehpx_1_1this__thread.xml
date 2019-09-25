@@ -1,0 +1,330 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacehpx_1_1this__thread" kind="namespace" language="C++">
+    <compoundname>hpx::this_thread</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="thread__helpers_8hpp_1aca220026fb3014c0881d129fe31c0073" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="thread__enums_8hpp_1aa55297caca57a2d7beaa2e818bf5f147" kindref="member">threads::thread_state_ex_enum</ref></type>
+        <definition>threads::thread_state_ex_enum hpx::this_thread::suspend</definition>
+        <argsstring>(threads::thread_state_enum state, threads::thread_id_type const &amp;id, util::thread_description const &amp;description=util::thread_description(&quot;this_thread::suspend&quot;), error_code &amp;ec=throws)</argsstring>
+        <name>suspend</name>
+        <param>
+          <type><ref refid="thread__enums_8hpp_1a2b4f23e851fbe362ea23cbd39233ae48" kindref="member">threads::thread_state_enum</ref></type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>threads::thread_id_type const &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>util::thread_description const &amp;</type>
+          <declname>description</declname>
+          <defval>util::thread_description(&quot;this_thread::suspend&quot;)</defval>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The function <emphasis>suspend</emphasis> will return control to the thread manager (suspends the current thread). It sets the new state of this thread to the thread state passed as the parameter.</para><para><simplesect kind="note"><para>Must be called from within a HPX-thread.</para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>If</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>&amp;ec != &amp;throws</computeroutput>, never throws, but will set <emphasis>ec</emphasis> to an appropriate value when an error occurs. Otherwise, this function will throw an <emphasis>hpx::exception</emphasis> with an error code of <emphasis>hpx::yield_aborted</emphasis> if it is signaled with <emphasis>wait_aborted</emphasis>. If called outside of a HPX-thread, this function will throw an <emphasis>hpx::exception</emphasis> with an error code of <emphasis>hpx::null_thread_id</emphasis>. If this function is called while the thread-manager is not running, it will throw an <emphasis>hpx::exception</emphasis> with an error code of <emphasis>hpx::invalid_status</emphasis>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_helpers.hpp" line="524" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__helpers_8hpp_1a13faad4167a300676b16c76733aac1df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="thread__enums_8hpp_1aa55297caca57a2d7beaa2e818bf5f147" kindref="member">threads::thread_state_ex_enum</ref></type>
+        <definition>threads::thread_state_ex_enum hpx::this_thread::suspend</definition>
+        <argsstring>(threads::thread_state_enum state=threads::pending, util::thread_description const &amp;description=util::thread_description(&quot;this_thread::suspend&quot;), error_code &amp;ec=throws)</argsstring>
+        <name>suspend</name>
+        <param>
+          <type><ref refid="thread__enums_8hpp_1a2b4f23e851fbe362ea23cbd39233ae48" kindref="member">threads::thread_state_enum</ref></type>
+          <declname>state</declname>
+          <defval>threads::pending</defval>
+        </param>
+        <param>
+          <type>util::thread_description const &amp;</type>
+          <declname>description</declname>
+          <defval>util::thread_description(&quot;this_thread::suspend&quot;)</defval>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The function <emphasis>suspend</emphasis> will return control to the thread manager (suspends the current thread). It sets the new state of this thread to the thread state passed as the parameter.</para><para><simplesect kind="note"><para>Must be called from within a HPX-thread.</para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>If</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>&amp;ec != &amp;throws</computeroutput>, never throws, but will set <emphasis>ec</emphasis> to an appropriate value when an error occurs. Otherwise, this function will throw an <emphasis>hpx::exception</emphasis> with an error code of <emphasis>hpx::yield_aborted</emphasis> if it is signaled with <emphasis>wait_aborted</emphasis>. If called outside of a HPX-thread, this function will throw an <emphasis>hpx::exception</emphasis> with an error code of <emphasis>hpx::null_thread_id</emphasis>. If this function is called while the thread-manager is not running, it will throw an <emphasis>hpx::exception</emphasis> with an error code of <emphasis>hpx::invalid_status</emphasis>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_helpers.hpp" line="546" column="1" bodyfile="hpx/runtime/threads/thread_helpers.hpp" bodystart="546" bodyend="553"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__helpers_8hpp_1ad047e81948ed186b6d6eca879e825e1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="thread__enums_8hpp_1aa55297caca57a2d7beaa2e818bf5f147" kindref="member">threads::thread_state_ex_enum</ref></type>
+        <definition>threads::thread_state_ex_enum hpx::this_thread::suspend</definition>
+        <argsstring>(util::steady_time_point const &amp;abs_time, threads::thread_id_type const &amp;id, util::thread_description const &amp;description=util::thread_description(&quot;this_thread::suspend&quot;), error_code &amp;ec=throws)</argsstring>
+        <name>suspend</name>
+        <param>
+          <type>util::steady_time_point const &amp;</type>
+          <declname>abs_time</declname>
+        </param>
+        <param>
+          <type>threads::thread_id_type const &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>util::thread_description const &amp;</type>
+          <declname>description</declname>
+          <defval>util::thread_description(&quot;this_thread::suspend&quot;)</defval>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The function <emphasis>suspend</emphasis> will return control to the thread manager (suspends the current thread). It sets the new state of this thread to <emphasis>suspended</emphasis> and schedules a wakeup for this threads at the given time.</para><para><simplesect kind="note"><para>Must be called from within a HPX-thread.</para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>If</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>&amp;ec != &amp;throws</computeroutput>, never throws, but will set <emphasis>ec</emphasis> to an appropriate value when an error occurs. Otherwise, this function will throw an <emphasis>hpx::exception</emphasis> with an error code of <emphasis>hpx::yield_aborted</emphasis> if it is signaled with <emphasis>wait_aborted</emphasis>. If called outside of a HPX-thread, this function will throw an <emphasis>hpx::exception</emphasis> with an error code of <emphasis>hpx::null_thread_id</emphasis>. If this function is called while the thread-manager is not running, it will throw an <emphasis>hpx::exception</emphasis> with an error code of <emphasis>hpx::invalid_status</emphasis>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_helpers.hpp" line="572" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__helpers_8hpp_1ab62e88f72590367154ea6d9b1f625541" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="thread__enums_8hpp_1aa55297caca57a2d7beaa2e818bf5f147" kindref="member">threads::thread_state_ex_enum</ref></type>
+        <definition>threads::thread_state_ex_enum hpx::this_thread::suspend</definition>
+        <argsstring>(util::steady_time_point const &amp;abs_time, util::thread_description const &amp;description=util::thread_description(&quot;this_thread::suspend&quot;), error_code &amp;ec=throws)</argsstring>
+        <name>suspend</name>
+        <param>
+          <type>util::steady_time_point const &amp;</type>
+          <declname>abs_time</declname>
+        </param>
+        <param>
+          <type>util::thread_description const &amp;</type>
+          <declname>description</declname>
+          <defval>util::thread_description(&quot;this_thread::suspend&quot;)</defval>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The function <emphasis>suspend</emphasis> will return control to the thread manager (suspends the current thread). It sets the new state of this thread to <emphasis>suspended</emphasis> and schedules a wakeup for this threads at the given time.</para><para><simplesect kind="note"><para>Must be called from within a HPX-thread.</para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>If</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>&amp;ec != &amp;throws</computeroutput>, never throws, but will set <emphasis>ec</emphasis> to an appropriate value when an error occurs. Otherwise, this function will throw an <emphasis>hpx::exception</emphasis> with an error code of <emphasis>hpx::yield_aborted</emphasis> if it is signaled with <emphasis>wait_aborted</emphasis>. If called outside of a HPX-thread, this function will throw an <emphasis>hpx::exception</emphasis> with an error code of <emphasis>hpx::null_thread_id</emphasis>. If this function is called while the thread-manager is not running, it will throw an <emphasis>hpx::exception</emphasis> with an error code of <emphasis>hpx::invalid_status</emphasis>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_helpers.hpp" line="596" column="1" bodyfile="hpx/runtime/threads/thread_helpers.hpp" bodystart="596" bodyend="603"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__helpers_8hpp_1ab42360039c42a2cb413ae51a06f3ffb2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="thread__enums_8hpp_1aa55297caca57a2d7beaa2e818bf5f147" kindref="member">threads::thread_state_ex_enum</ref></type>
+        <definition>threads::thread_state_ex_enum hpx::this_thread::suspend</definition>
+        <argsstring>(util::steady_duration const &amp;rel_time, util::thread_description const &amp;description=util::thread_description(&quot;this_thread::suspend&quot;), error_code &amp;ec=throws)</argsstring>
+        <name>suspend</name>
+        <param>
+          <type>util::steady_duration const &amp;</type>
+          <declname>rel_time</declname>
+        </param>
+        <param>
+          <type>util::thread_description const &amp;</type>
+          <declname>description</declname>
+          <defval>util::thread_description(&quot;this_thread::suspend&quot;)</defval>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The function <emphasis>suspend</emphasis> will return control to the thread manager (suspends the current thread). It sets the new state of this thread to <emphasis>suspended</emphasis> and schedules a wakeup for this threads after the given duration.</para><para><simplesect kind="note"><para>Must be called from within a HPX-thread.</para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>If</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>&amp;ec != &amp;throws</computeroutput>, never throws, but will set <emphasis>ec</emphasis> to an appropriate value when an error occurs. Otherwise, this function will throw an <emphasis>hpx::exception</emphasis> with an error code of <emphasis>hpx::yield_aborted</emphasis> if it is signaled with <emphasis>wait_aborted</emphasis>. If called outside of a HPX-thread, this function will throw an <emphasis>hpx::exception</emphasis> with an error code of <emphasis>hpx::null_thread_id</emphasis>. If this function is called while the thread-manager is not running, it will throw an <emphasis>hpx::exception</emphasis> with an error code of <emphasis>hpx::invalid_status</emphasis>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_helpers.hpp" line="622" column="1" bodyfile="hpx/runtime/threads/thread_helpers.hpp" bodystart="622" bodyend="630"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__helpers_8hpp_1a9d53eeb0788cf47b0881c89965d51b14" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="thread__enums_8hpp_1aa55297caca57a2d7beaa2e818bf5f147" kindref="member">threads::thread_state_ex_enum</ref></type>
+        <definition>threads::thread_state_ex_enum hpx::this_thread::suspend</definition>
+        <argsstring>(util::steady_duration const &amp;rel_time, threads::thread_id_type const &amp;id, util::thread_description const &amp;description=util::thread_description(&quot;this_thread::suspend&quot;), error_code &amp;ec=throws)</argsstring>
+        <name>suspend</name>
+        <param>
+          <type>util::steady_duration const &amp;</type>
+          <declname>rel_time</declname>
+        </param>
+        <param>
+          <type>threads::thread_id_type const &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>util::thread_description const &amp;</type>
+          <declname>description</declname>
+          <defval>util::thread_description(&quot;this_thread::suspend&quot;)</defval>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The function <emphasis>suspend</emphasis> will return control to the thread manager (suspends the current thread). It sets the new state of this thread to <emphasis>suspended</emphasis> and schedules a wakeup for this threads after the given duration.</para><para><simplesect kind="note"><para>Must be called from within a HPX-thread.</para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>If</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>&amp;ec != &amp;throws</computeroutput>, never throws, but will set <emphasis>ec</emphasis> to an appropriate value when an error occurs. Otherwise, this function will throw an <emphasis>hpx::exception</emphasis> with an error code of <emphasis>hpx::yield_aborted</emphasis> if it is signaled with <emphasis>wait_aborted</emphasis>. If called outside of a HPX-thread, this function will throw an <emphasis>hpx::exception</emphasis> with an error code of <emphasis>hpx::null_thread_id</emphasis>. If this function is called while the thread-manager is not running, it will throw an <emphasis>hpx::exception</emphasis> with an error code of <emphasis>hpx::invalid_status</emphasis>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_helpers.hpp" line="649" column="1" bodyfile="hpx/runtime/threads/thread_helpers.hpp" bodystart="649" bodyend="657"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__helpers_8hpp_1a15c12bd6b0b99c9a65e1a3669492805d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="thread__enums_8hpp_1aa55297caca57a2d7beaa2e818bf5f147" kindref="member">threads::thread_state_ex_enum</ref></type>
+        <definition>threads::thread_state_ex_enum hpx::this_thread::suspend</definition>
+        <argsstring>(std::uint64_t ms, util::thread_description const &amp;description=util::thread_description(&quot;this_thread::suspend&quot;), error_code &amp;ec=throws)</argsstring>
+        <name>suspend</name>
+        <param>
+          <type>std::uint64_t</type>
+          <declname>ms</declname>
+        </param>
+        <param>
+          <type>util::thread_description const &amp;</type>
+          <declname>description</declname>
+          <defval>util::thread_description(&quot;this_thread::suspend&quot;)</defval>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The function <emphasis>suspend</emphasis> will return control to the thread manager (suspends the current thread). It sets the new state of this thread to <emphasis>suspended</emphasis> and schedules a wakeup for this threads after the given time (specified in milliseconds).</para><para><simplesect kind="note"><para>Must be called from within a HPX-thread.</para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>If</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>&amp;ec != &amp;throws</computeroutput>, never throws, but will set <emphasis>ec</emphasis> to an appropriate value when an error occurs. Otherwise, this function will throw an <emphasis>hpx::exception</emphasis> with an error code of <emphasis>hpx::yield_aborted</emphasis> if it is signaled with <emphasis>wait_aborted</emphasis>. If called outside of a HPX-thread, this function will throw an <emphasis>hpx::exception</emphasis> with an error code of <emphasis>hpx::null_thread_id</emphasis>. If this function is called while the thread-manager is not running, it will throw an <emphasis>hpx::exception</emphasis> with an error code of <emphasis>hpx::invalid_status</emphasis>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_helpers.hpp" line="676" column="1" bodyfile="hpx/runtime/threads/thread_helpers.hpp" bodystart="676" bodyend="683"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__helpers_8hpp_1a7e846a11cf19a7079c98c1e1ae24a61d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>threads::executors::current_executor</type>
+        <definition>threads::executors::current_executor hpx::this_thread::get_executor</definition>
+        <argsstring>(error_code &amp;ec=throws)</argsstring>
+        <name>get_executor</name>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a reference to the executor which was used to create the current thread.</para><para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>If</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>&amp;ec != &amp;throws</computeroutput>, never throws, but will set <emphasis>ec</emphasis> to an appropriate value when an error occurs. Otherwise, this function will throw an <emphasis>hpx::exception</emphasis> with an error code of <emphasis>hpx::yield_aborted</emphasis> if it is signaled with <emphasis>wait_aborted</emphasis>. If called outside of a HPX-thread, this function will throw an <emphasis>hpx::exception</emphasis> with an error code of <emphasis>hpx::null_thread_id</emphasis>. If this function is called while the thread-manager is not running, it will throw an <emphasis>hpx::exception</emphasis> with an error code of <emphasis>hpx::invalid_status</emphasis>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_helpers.hpp" line="699" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__helpers_8hpp_1a09e41b8f250c72e5d192524c4f9cbc8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classhpx_1_1threads_1_1thread__pool__base" kindref="compound">threads::thread_pool_base</ref> *</type>
+        <definition>threads::thread_pool_base* hpx::this_thread::get_pool</definition>
+        <argsstring>(error_code &amp;ec=throws)</argsstring>
+        <name>get_pool</name>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a pointer to the pool that was used to run the current thread</para><para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>If</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>&amp;ec != &amp;throws</computeroutput>, never throws, but will set <emphasis>ec</emphasis> to an appropriate value when an error occurs. Otherwise, this function will throw an <emphasis>hpx::exception</emphasis> with an error code of <emphasis>hpx::yield_aborted</emphasis> if it is signaled with <emphasis>wait_aborted</emphasis>. If called outside of a HPX-thread, this function will throw an <emphasis>hpx::exception</emphasis> with an error code of <emphasis>hpx::null_thread_id</emphasis>. If this function is called while the thread-manager is not running, it will throw an <emphasis>hpx::exception</emphasis> with an error code of <emphasis>hpx::invalid_status</emphasis>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_helpers.hpp" line="712" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="hpx/runtime/threads/thread_helpers.hpp" line="506" column="1"/>
+  </compounddef>
+</doxygen>

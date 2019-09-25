@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classhpx_1_1exception__list" kind="class" language="C++" prot="public">
+    <compoundname>hpx::exception_list</compoundname>
+    <basecompoundref refid="classhpx_1_1exception" prot="public" virt="non-virtual">hpx::exception</basecompoundref>
+    <includes refid="hpx_2errors_2exception__list_8hpp" local="no">exception_list.hpp</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classhpx_1_1exception__list_1a8b10bc1bf19137d747777817e53627f0" prot="private" static="no">
+        <type>boost::detail::spinlock</type>
+        <definition>typedef boost::detail::spinlock hpx::exception_list::mutex_type</definition>
+        <argsstring></argsstring>
+        <name>mutex_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/errors/include/hpx/errors/exception_list.hpp" line="40" column="1" bodyfile="libs/errors/include/hpx/errors/exception_list.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classhpx_1_1exception__list_1acd236cdeb27c48c1e3a126adf95f2201" prot="private" static="no">
+        <type>std::list&lt; std::exception_ptr &gt;</type>
+        <definition>typedef std::list&lt;std::exception_ptr&gt; hpx::exception_list::exception_list_type</definition>
+        <argsstring></argsstring>
+        <name>exception_list_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/errors/include/hpx/errors/exception_list.hpp" line="42" column="1" bodyfile="libs/errors/include/hpx/errors/exception_list.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classhpx_1_1exception__list_1ae0b75a125a76c3156ce3315e86596716" prot="public" static="no">
+        <type>exception_list_type::const_iterator</type>
+        <definition>typedef exception_list_type::const_iterator hpx::exception_list::iterator</definition>
+        <argsstring></argsstring>
+        <name>iterator</name>
+        <briefdescription>
+<para>bidirectional iterator </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/errors/include/hpx/errors/exception_list.hpp" line="48" column="1" bodyfile="libs/errors/include/hpx/errors/exception_list.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhpx_1_1exception__list_1afc8c518f8677ae103839eb4f119e5959" prot="private" static="no" mutable="no">
+        <type>exception_list_type</type>
+        <definition>exception_list_type hpx::exception_list::exceptions_</definition>
+        <argsstring></argsstring>
+        <name>exceptions_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/errors/include/hpx/errors/exception_list.hpp" line="43" column="1" bodyfile="libs/errors/include/hpx/errors/exception_list.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhpx_1_1exception__list_1ae0639af297017767265b9da164a4faac" prot="private" static="no" mutable="yes">
+        <type>mutex_type</type>
+        <definition>mutex_type hpx::exception_list::mtx_</definition>
+        <argsstring></argsstring>
+        <name>mtx_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/errors/include/hpx/errors/exception_list.hpp" line="44" column="1" bodyfile="libs/errors/include/hpx/errors/exception_list.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhpx_1_1exception__list_1ae4e3e1b70e8185033656d891749a234e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t hpx::exception_list::size</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The number of exception_ptr objects contained within the <ref refid="classhpx_1_1exception__list" kindref="compound">exception_list</ref>.</para><para><simplesect kind="note"><para>Complexity: Constant time. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/errors/include/hpx/errors/exception_list.hpp" line="72" column="1" bodyfile="libs/errors/include/hpx/errors/exception_list.hpp" bodystart="72" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1exception__list_1a94a921543c170e5fa21278613e60599a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>exception_list_type::const_iterator</type>
+        <definition>exception_list_type::const_iterator hpx::exception_list::begin</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>begin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>An iterator referring to the first exception_ptr object contained within the <ref refid="classhpx_1_1exception__list" kindref="compound">exception_list</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/errors/include/hpx/errors/exception_list.hpp" line="80" column="1" bodyfile="libs/errors/include/hpx/errors/exception_list.hpp" bodystart="80" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1exception__list_1a0ecc17888e5ec79776b45c872bf76584" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>exception_list_type::const_iterator</type>
+        <definition>exception_list_type::const_iterator hpx::exception_list::end</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>end</name>
+        <briefdescription>
+<para>An iterator which is the past-the-end value for the <ref refid="classhpx_1_1exception__list" kindref="compound">exception_list</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/errors/include/hpx/errors/exception_list.hpp" line="87" column="1" bodyfile="libs/errors/include/hpx/errors/exception_list.hpp" bodystart="87" bodyend="91"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The class <ref refid="classhpx_1_1exception__list" kindref="compound">exception_list</ref> is a container of exception_ptr objects parallel algorithms may use to communicate uncaught exceptions encountered during parallel execution to the caller of the algorithm</para><para>The type exception_list::const_iterator fulfills the requirements of a forward iterator. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="17">
+        <label>boost::system::system_error</label>
+      </node>
+      <node id="15">
+        <label>hpx::exception_list</label>
+        <link refid="classhpx_1_1exception__list"/>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>hpx::exception</label>
+        <link refid="classhpx_1_1exception"/>
+        <childnode refid="17" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="20">
+        <label>boost::system::system_error</label>
+      </node>
+      <node id="18">
+        <label>hpx::exception_list</label>
+        <link refid="classhpx_1_1exception__list"/>
+        <childnode refid="19" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>hpx::exception</label>
+        <link refid="classhpx_1_1exception"/>
+        <childnode refid="20" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libs/errors/include/hpx/errors/exception_list.hpp" line="35" column="1" bodyfile="libs/errors/include/hpx/errors/exception_list.hpp" bodystart="34" bodyend="98"/>
+    <listofallmembers>
+      <member refid="classhpx_1_1exception__list_1a94a921543c170e5fa21278613e60599a" prot="public" virt="non-virtual"><scope>hpx::exception_list</scope><name>begin</name></member>
+      <member refid="classhpx_1_1exception__list_1a0ecc17888e5ec79776b45c872bf76584" prot="public" virt="non-virtual"><scope>hpx::exception_list</scope><name>end</name></member>
+      <member refid="classhpx_1_1exception_1a13610d02885fc91e014fdb58debe996b" prot="public" virt="non-virtual"><scope>hpx::exception_list</scope><name>exception</name></member>
+      <member refid="classhpx_1_1exception_1afa51e14009dcdcd574b86794771314f3" prot="public" virt="non-virtual"><scope>hpx::exception_list</scope><name>exception</name></member>
+      <member refid="classhpx_1_1exception_1afbf231449a2ee653cb03ad3efed381e8" prot="public" virt="non-virtual"><scope>hpx::exception_list</scope><name>exception</name></member>
+      <member refid="classhpx_1_1exception_1a06bc6239c2b0a4222d72e088a56c6146" prot="public" virt="non-virtual"><scope>hpx::exception_list</scope><name>exception</name></member>
+      <member refid="classhpx_1_1exception_1a25070a178aea9151b3ee9c853112a900" prot="public" virt="non-virtual"><scope>hpx::exception_list</scope><name>exception</name></member>
+      <member refid="classhpx_1_1exception__list_1acd236cdeb27c48c1e3a126adf95f2201" prot="private" virt="non-virtual"><scope>hpx::exception_list</scope><name>exception_list_type</name></member>
+      <member refid="classhpx_1_1exception__list_1afc8c518f8677ae103839eb4f119e5959" prot="private" virt="non-virtual"><scope>hpx::exception_list</scope><name>exceptions_</name></member>
+      <member refid="classhpx_1_1exception_1a24a553bfeb6e4a31090d81cde1cd0834" prot="public" virt="non-virtual"><scope>hpx::exception_list</scope><name>get_error</name></member>
+      <member refid="classhpx_1_1exception_1af1e2fd7574114a23cb9cd4d366d5ad30" prot="public" virt="non-virtual"><scope>hpx::exception_list</scope><name>get_error_code</name></member>
+      <member refid="classhpx_1_1exception__list_1ae0b75a125a76c3156ce3315e86596716" prot="public" virt="non-virtual"><scope>hpx::exception_list</scope><name>iterator</name></member>
+      <member refid="classhpx_1_1exception__list_1ae0639af297017767265b9da164a4faac" prot="private" virt="non-virtual"><scope>hpx::exception_list</scope><name>mtx_</name></member>
+      <member refid="classhpx_1_1exception__list_1a8b10bc1bf19137d747777817e53627f0" prot="private" virt="non-virtual"><scope>hpx::exception_list</scope><name>mutex_type</name></member>
+      <member refid="classhpx_1_1exception__list_1ae4e3e1b70e8185033656d891749a234e" prot="public" virt="non-virtual"><scope>hpx::exception_list</scope><name>size</name></member>
+      <member refid="classhpx_1_1exception_1a46c5fc788045ba94e8e03d7d88db7440" prot="public" virt="non-virtual"><scope>hpx::exception_list</scope><name>~exception</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

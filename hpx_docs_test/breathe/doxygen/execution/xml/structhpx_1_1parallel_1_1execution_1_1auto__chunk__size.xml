@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structhpx_1_1parallel_1_1execution_1_1auto__chunk__size" kind="struct" language="C++" prot="public">
+    <compoundname>hpx::parallel::execution::auto_chunk_size</compoundname>
+    <includes refid="auto__chunk__size_8hpp" local="no">auto_chunk_size.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structhpx_1_1parallel_1_1execution_1_1auto__chunk__size_1aa410db9d8687294175a35d59a7b7aef1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::parallel::execution::auto_chunk_size::auto_chunk_size</definition>
+        <argsstring>()</argsstring>
+        <name>auto_chunk_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct an <emphasis><ref refid="structhpx_1_1parallel_1_1execution_1_1auto__chunk__size" kindref="compound">auto_chunk_size</ref></emphasis> executor parameters object</para><para><simplesect kind="note"><para>Default constructed <emphasis><ref refid="structhpx_1_1parallel_1_1execution_1_1auto__chunk__size" kindref="compound">auto_chunk_size</ref></emphasis> executor parameter types will use 80 microseconds as the minimal time for which any of the scheduled chunks should run. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/executors/auto_chunk_size.hpp" line="43" column="1" bodyfile="libs/execution/include/hpx/parallel/executors/auto_chunk_size.hpp" bodystart="43" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1parallel_1_1execution_1_1auto__chunk__size_1a6e15ec4087b2b3847bb9c50e82866e20" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::parallel::execution::auto_chunk_size::auto_chunk_size</definition>
+        <argsstring>(hpx::util::steady_duration const &amp;rel_time)</argsstring>
+        <name>auto_chunk_size</name>
+        <param>
+          <type>hpx::util::steady_duration const &amp;</type>
+          <declname>rel_time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct an <emphasis><ref refid="structhpx_1_1parallel_1_1execution_1_1auto__chunk__size" kindref="compound">auto_chunk_size</ref></emphasis> executor parameters object</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rel_time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The time duration to use as the minimum to decide how many loop iterations should be combined. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/executors/auto_chunk_size.hpp" line="53" column="1" bodyfile="libs/execution/include/hpx/parallel/executors/auto_chunk_size.hpp" bodystart="53" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Loop iterations are divided into pieces and then assigned to threads. The number of loop iterations combined is determined based on measurements of how long the execution of 1% of the overall number of iterations takes. This executor parameters type makes sure that as many loop iterations are combined as necessary to run for the amount of time specified. </para>    </detaileddescription>
+    <location file="libs/execution/include/hpx/parallel/executors/auto_chunk_size.hpp" line="35" column="1" bodyfile="libs/execution/include/hpx/parallel/executors/auto_chunk_size.hpp" bodystart="34" bodyend="100"/>
+    <listofallmembers>
+      <member refid="structhpx_1_1parallel_1_1execution_1_1auto__chunk__size_1aa410db9d8687294175a35d59a7b7aef1" prot="public" virt="non-virtual"><scope>hpx::parallel::execution::auto_chunk_size</scope><name>auto_chunk_size</name></member>
+      <member refid="structhpx_1_1parallel_1_1execution_1_1auto__chunk__size_1a6e15ec4087b2b3847bb9c50e82866e20" prot="public" virt="non-virtual"><scope>hpx::parallel::execution::auto_chunk_size</scope><name>auto_chunk_size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

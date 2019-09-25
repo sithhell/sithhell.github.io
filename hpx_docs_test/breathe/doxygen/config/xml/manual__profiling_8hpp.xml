@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="manual__profiling_8hpp" kind="file" language="C++">
+    <compoundname>manual_profiling.hpp</compoundname>
+    <includedby refid="config_8hpp" local="no">libs/config/include/hpx/config.hpp</includedby>
+    <invincdepgraph>
+      <node id="81">
+        <label>libs/config/include/hpx/config.hpp</label>
+        <link refid="config_8hpp_source"/>
+      </node>
+      <node id="80">
+        <label>libs/config/include/hpx/config/manual_profiling.hpp</label>
+        <link refid="manual__profiling_8hpp"/>
+        <childnode refid="81" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="manual__profiling_8hpp_1a63cd3108df490518a33da21f0a390a40" prot="public" static="no">
+        <name>HPX_SUPER_PURE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/config/include/hpx/config/manual_profiling.hpp" line="17" column="12" bodyfile="libs/config/include/hpx/config/manual_profiling.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="manual__profiling_8hpp_1a34979eb87dc38dd9605c6ce44fc8bc93" prot="public" static="no">
+        <name>HPX_PURE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/config/include/hpx/config/manual_profiling.hpp" line="18" column="11" bodyfile="libs/config/include/hpx/config/manual_profiling.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="manual__profiling_8hpp_1abe86cf4bc9ac4f20dba2d0ae46d356ea" prot="public" static="no">
+        <name>HPX_HOT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/config/include/hpx/config/manual_profiling.hpp" line="19" column="11" bodyfile="libs/config/include/hpx/config/manual_profiling.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="manual__profiling_8hpp_1a6ff44a2b36c6540dce6f494e924bcf93" prot="public" static="no">
+        <name>HPX_COLD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/config/include/hpx/config/manual_profiling.hpp" line="20" column="11" bodyfile="libs/config/include/hpx/config/manual_profiling.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2011<sp/>Bryce<sp/>Lelbach</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Distributed<sp/>under<sp/>the<sp/>Boost<sp/>Software<sp/>License,<sp/>Version<sp/>1.0.<sp/>(See<sp/>accompanying</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>file<sp/>LICENSE_1_0.txt<sp/>or<sp/>copy<sp/>at<sp/>http://www.boost.org/LICENSE_1_0.txt)</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(HPX_8877B5FB_1967_43B9_AF98_1A01F162B725)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPX_8877B5FB_1967_43B9_AF98_1A01F162B725</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__GNUC__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>HPX_SUPER_PURE<sp/><sp/>__attribute__((const))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>HPX_PURE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((pure))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>HPX_HOT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((hot))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>HPX_COLD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__((cold))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>HPX_SUPER_PURE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>HPX_PURE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>HPX_HOT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>HPX_COLD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>HPX_8877B5FB_1967_43B9_AF98_1A01F162B725</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="libs/config/include/hpx/config/manual_profiling.hpp"/>
+  </compounddef>
+</doxygen>

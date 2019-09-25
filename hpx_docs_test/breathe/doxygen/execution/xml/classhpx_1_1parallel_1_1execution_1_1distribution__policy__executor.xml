@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classhpx_1_1parallel_1_1execution_1_1distribution__policy__executor" kind="class" language="C++" prot="public">
+    <compoundname>hpx::parallel::execution::distribution_policy_executor</compoundname>
+    <includes refid="distribution__policy__executor_8hpp" local="no">distribution_policy_executor.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename DistPolicy</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhpx_1_1parallel_1_1execution_1_1distribution__policy__executor_1a60f7ca264a837890fa154f61dab4dbbb" prot="private" static="no" mutable="no">
+        <type>DistPolicy</type>
+        <definition>DistPolicy hpx::parallel::execution::distribution_policy_executor&lt; DistPolicy &gt;::policy_</definition>
+        <argsstring></argsstring>
+        <name>policy_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/executors/distribution_policy_executor.hpp" line="181" column="1" bodyfile="libs/execution/include/hpx/parallel/executors/distribution_policy_executor.hpp" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhpx_1_1parallel_1_1execution_1_1distribution__policy__executor_1a94756630eb69d5fda08b8983fb31db33" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename DistPolicy_</type>
+          </param>
+          <param>
+            <type>typename Enable</type>
+            <defval>typename std::enable_if&lt;!std::is_same&lt;<ref refid="classhpx_1_1parallel_1_1execution_1_1distribution__policy__executor" kindref="compound">distribution_policy_executor</ref>,                typename hpx::util::decay&lt;DistPolicy_&gt;::type&gt;::value&gt;::type</defval>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>hpx::parallel::execution::distribution_policy_executor&lt; DistPolicy &gt;::distribution_policy_executor</definition>
+        <argsstring>(DistPolicy_ &amp;&amp;policy)</argsstring>
+        <name>distribution_policy_executor</name>
+        <param>
+          <type>DistPolicy_ &amp;&amp;</type>
+          <declname>policy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new distribution_policy executor from the given distribution policy</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>policy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The distribution_policy to create an executor from </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/executors/distribution_policy_executor.hpp" line="130" column="1" bodyfile="libs/execution/include/hpx/parallel/executors/distribution_policy_executor.hpp" bodystart="130" bodyend="132"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A <emphasis><ref refid="classhpx_1_1parallel_1_1execution_1_1distribution__policy__executor" kindref="compound">distribution_policy_executor</ref></emphasis> creates groups of parallel execution agents which execute in threads implicitly created by the executor and placed on any of the associated localities.</para><para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>DistPolicy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The distribution policy type for which an executor should be created. The expression <emphasis>hpx::traits::is_distribution_policy&lt;DistPolicy&gt;::value</emphasis> must evaluate to true. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <location file="libs/execution/include/hpx/parallel/executors/distribution_policy_executor.hpp" line="64" column="1" bodyfile="libs/execution/include/hpx/parallel/executors/distribution_policy_executor.hpp" bodystart="63" bodyend="182"/>
+    <listofallmembers>
+      <member refid="classhpx_1_1parallel_1_1execution_1_1distribution__policy__executor_1a94756630eb69d5fda08b8983fb31db33" prot="public" virt="non-virtual"><scope>hpx::parallel::execution::distribution_policy_executor</scope><name>distribution_policy_executor</name></member>
+      <member refid="classhpx_1_1parallel_1_1execution_1_1distribution__policy__executor_1a60f7ca264a837890fa154f61dab4dbbb" prot="private" virt="non-virtual"><scope>hpx::parallel::execution::distribution_policy_executor</scope><name>policy_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classhpx_1_1program__options_1_1error__with__no__option__name" kind="class" language="C++" prot="public">
+    <compoundname>hpx::program_options::error_with_no_option_name</compoundname>
+    <basecompoundref refid="classhpx_1_1program__options_1_1error__with__option__name" prot="public" virt="non-virtual">hpx::program_options::error_with_option_name</basecompoundref>
+    <derivedcompoundref refid="classhpx_1_1program__options_1_1ambiguous__option" prot="public" virt="non-virtual">hpx::program_options::ambiguous_option</derivedcompoundref>
+    <derivedcompoundref refid="classhpx_1_1program__options_1_1unknown__option" prot="public" virt="non-virtual">hpx::program_options::unknown_option</derivedcompoundref>
+    <includes refid="errors_8hpp" local="no">errors.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1error__with__no__option__name_1a7708cfd092038b056c56b3543810db22" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::program_options::error_with_no_option_name::error_with_no_option_name</definition>
+        <argsstring>(const std::string &amp;template_, const std::string &amp;original_token=&quot;&quot;)</argsstring>
+        <name>error_with_no_option_name</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>template_</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>original_token</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/errors.hpp" line="291" column="1" bodyfile="libs/program_options/include/hpx/program_options/errors.hpp" bodystart="291" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1error__with__no__option__name_1ab87e47fb0d7ff919d0bd761d02daa5fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void hpx::program_options::error_with_no_option_name::set_option_name</definition>
+        <argsstring>(const std::string &amp;) override</argsstring>
+        <name>set_option_name</name>
+        <reimplements refid="classhpx_1_1program__options_1_1error__with__option__name_1af6e1934eb1358195fe96fa37a5410b55">set_option_name</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Does NOT set option name, because no option name makes sense </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/errors.hpp" line="298" column="1" bodyfile="libs/program_options/include/hpx/program_options/errors.hpp" bodystart="298" bodyend="298"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1error__with__no__option__name_1afd17adcce42fbcfa687be178fb5a24cc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::program_options::error_with_no_option_name::~error_with_no_option_name</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>~error_with_no_option_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/errors.hpp" line="300" column="1" bodyfile="libs/program_options/include/hpx/program_options/errors.hpp" bodystart="300" bodyend="300"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Base class of un-parsable options, when the desired option cannot be identified.</para><para>It makes no sense to have an option name, when we can&apos;t match an option to the parameter</para><para>Having this a part of the <ref refid="classhpx_1_1program__options_1_1error__with__option__name" kindref="compound">error_with_option_name</ref> hierarchy makes error handling a lot easier, even if the name indicates some sort of conceptual dissonance! </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="66">
+        <label>std::logic_error</label>
+      </node>
+      <node id="65">
+        <label>hpx::program_options::error</label>
+        <link refid="classhpx_1_1program__options_1_1error"/>
+        <childnode refid="66" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="64">
+        <label>hpx::program_options::error_with_option_name</label>
+        <link refid="classhpx_1_1program__options_1_1error__with__option__name"/>
+        <childnode refid="65" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>hpx::program_options::unknown_option</label>
+        <link refid="classhpx_1_1program__options_1_1unknown__option"/>
+        <childnode refid="63" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="63">
+        <label>hpx::program_options::error_with_no_option_name</label>
+        <link refid="classhpx_1_1program__options_1_1error__with__no__option__name"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="67">
+        <label>hpx::program_options::ambiguous_option</label>
+        <link refid="classhpx_1_1program__options_1_1ambiguous__option"/>
+        <childnode refid="63" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="72">
+        <label>std::logic_error</label>
+      </node>
+      <node id="71">
+        <label>hpx::program_options::error</label>
+        <link refid="classhpx_1_1program__options_1_1error"/>
+        <childnode refid="72" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>hpx::program_options::error_with_option_name</label>
+        <link refid="classhpx_1_1program__options_1_1error__with__option__name"/>
+        <childnode refid="71" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="69">
+        <label>hpx::program_options::error_with_no_option_name</label>
+        <link refid="classhpx_1_1program__options_1_1error__with__no__option__name"/>
+        <childnode refid="70" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libs/program_options/include/hpx/program_options/errors.hpp" line="289" column="1" bodyfile="libs/program_options/include/hpx/program_options/errors.hpp" bodystart="287" bodyend="301"/>
+    <listofallmembers>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1a6fb7db39524adc2e646769a505fbd073" prot="public" virt="non-virtual"><scope>hpx::program_options::error_with_no_option_name</scope><name>add_context</name></member>
+      <member refid="classhpx_1_1program__options_1_1error_1ab26c4ac8097f493326e797cb5e49ce60" prot="public" virt="non-virtual"><scope>hpx::program_options::error_with_no_option_name</scope><name>error</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__no__option__name_1a7708cfd092038b056c56b3543810db22" prot="public" virt="non-virtual"><scope>hpx::program_options::error_with_no_option_name</scope><name>error_with_no_option_name</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1ade012afab216c2fc9459acc43eaec793" prot="public" virt="non-virtual"><scope>hpx::program_options::error_with_no_option_name</scope><name>error_with_option_name</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1a0b65fb289c649b71e52d0581173a0c8e" prot="protected" virt="non-virtual"><scope>hpx::program_options::error_with_no_option_name</scope><name>get_canonical_option_name</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1ab62af4c0675cc19fbf04f6ac9b7402ff" prot="protected" virt="non-virtual"><scope>hpx::program_options::error_with_no_option_name</scope><name>get_canonical_option_prefix</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1a8562ba15ccf457f4ac5e609337ff916d" prot="public" virt="non-virtual"><scope>hpx::program_options::error_with_no_option_name</scope><name>get_option_name</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1a134f824d91347da4b0b2761e1297a0cd" prot="public" virt="non-virtual"><scope>hpx::program_options::error_with_no_option_name</scope><name>m_error_template</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1ac8adc037b1f8683c8f2b97752d8417fa" prot="protected" virt="non-virtual"><scope>hpx::program_options::error_with_no_option_name</scope><name>m_message</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1ad08d9687c8511639fd73615fb1c5c7e5" prot="protected" virt="non-virtual"><scope>hpx::program_options::error_with_no_option_name</scope><name>m_option_style</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1a98f723108458e193563832e3df1f07ab" prot="protected" virt="non-virtual"><scope>hpx::program_options::error_with_no_option_name</scope><name>m_substitution_defaults</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1a8d9c3efa92db291b0e0f8a22249e4864" prot="protected" virt="non-virtual"><scope>hpx::program_options::error_with_no_option_name</scope><name>m_substitutions</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1a8a8e92acfe74094edc3a09c57376974d" prot="protected" virt="non-virtual"><scope>hpx::program_options::error_with_no_option_name</scope><name>replace_token</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__no__option__name_1ab87e47fb0d7ff919d0bd761d02daa5fa" prot="public" virt="virtual"><scope>hpx::program_options::error_with_no_option_name</scope><name>set_option_name</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1ad4b6ea7facfabaf9024568954ff1b46a" prot="public" virt="non-virtual"><scope>hpx::program_options::error_with_no_option_name</scope><name>set_original_token</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1aafaa36fc2ddb43600cb5058b4cca8c64" prot="public" virt="non-virtual"><scope>hpx::program_options::error_with_no_option_name</scope><name>set_prefix</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1ae31197640118ca6108a31b90a38b684e" prot="public" virt="non-virtual"><scope>hpx::program_options::error_with_no_option_name</scope><name>set_substitute</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1a8fb32fc5333a833f7f2c2a0f8cec09de" prot="public" virt="non-virtual"><scope>hpx::program_options::error_with_no_option_name</scope><name>set_substitute_default</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1ad3a23ca94f6fb77cab3e171afbe63e23" prot="protected" virt="non-virtual"><scope>hpx::program_options::error_with_no_option_name</scope><name>string_pair</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1a372829ce0ee974d480b2cce57ea1db73" prot="protected" virt="virtual"><scope>hpx::program_options::error_with_no_option_name</scope><name>substitute_placeholders</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1a0fcfa7271ddc04650f36445463ab23db" prot="public" virt="non-virtual"><scope>hpx::program_options::error_with_no_option_name</scope><name>what</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__no__option__name_1afd17adcce42fbcfa687be178fb5a24cc" prot="public" virt="non-virtual"><scope>hpx::program_options::error_with_no_option_name</scope><name>~error_with_no_option_name</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1a9ad92bead5bb8545653682ad675fc1f0" prot="public" virt="non-virtual"><scope>hpx::program_options::error_with_no_option_name</scope><name>~error_with_option_name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

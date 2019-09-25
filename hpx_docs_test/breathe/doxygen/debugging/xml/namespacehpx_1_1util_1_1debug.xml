@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacehpx_1_1util_1_1debug" kind="namespace" language="C++">
+    <compoundname>hpx::util::debug</compoundname>
+    <innerclass refid="structhpx_1_1util_1_1debug_1_1demangle__helper" prot="public">hpx::util::debug::demangle_helper</innerclass>
+    <innerclass refid="structhpx_1_1util_1_1debug_1_1type__id" prot="public">hpx::util::debug::type_id</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="hpx_2debugging_2demangle__helper_8hpp_1aab1bd62908f2f0ce9822b4ea9970cf16" prot="public" static="no">
+        <type><ref refid="structhpx_1_1util_1_1debug_1_1demangle__helper" kindref="compound">demangle_helper</ref>&lt; T &gt;</type>
+        <definition>using hpx::util::debug::cxxabi_demangle_helper = typedef demangle_helper&lt;T&gt;</definition>
+        <argsstring></argsstring>
+        <name>cxxabi_demangle_helper</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/debugging/include/hpx/debugging/demangle_helper.hpp" line="69" column="1" bodyfile="libs/debugging/include/hpx/debugging/demangle_helper.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="hpx_2debugging_2demangle__helper_8hpp_1a7d38e334a54aa67dc5f9a27344e80b83" prot="public" static="no">
+        <type><ref refid="structhpx_1_1util_1_1debug_1_1type__id" kindref="compound">type_id</ref>&lt; T &gt;</type>
+        <definition>using hpx::util::debug::cxx_type_id = typedef type_id&lt;T&gt;</definition>
+        <argsstring></argsstring>
+        <name>cxx_type_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/debugging/include/hpx/debugging/demangle_helper.hpp" line="97" column="1" bodyfile="libs/debugging/include/hpx/debugging/demangle_helper.hpp" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="hpx_2debugging_2demangle__helper_8hpp_1ae5cb939e2dcf3e2beb8d894ee6505a30" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+            <defval>void</defval>
+          </param>
+        </templateparamlist>
+        <type>std::string</type>
+        <definition>std::string hpx::util::debug::print_type</definition>
+        <argsstring>(const char *delim=&quot;&quot;)</argsstring>
+        <name>print_type</name>
+        <param>
+          <type>const char *</type>
+          <declname>delim</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/debugging/include/hpx/debugging/demangle_helper.hpp" line="106" column="1" bodyfile="libs/debugging/include/hpx/debugging/demangle_helper.hpp" bodystart="106" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="hpx_2debugging_2demangle__helper_8hpp_1ac3e46cd537606468d3f7f352497773f9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>std::string</type>
+        <definition>std::string hpx::util::debug::print_type</definition>
+        <argsstring>(const char *)</argsstring>
+        <name>print_type</name>
+        <param>
+          <type>const char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/debugging/include/hpx/debugging/demangle_helper.hpp" line="112" column="1" bodyfile="libs/debugging/include/hpx/debugging/demangle_helper.hpp" bodystart="112" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="hpx_2debugging_2demangle__helper_8hpp_1adcc151c17f2e9a3838c58ae5ef3b6adc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; sizeof...(Args)!=0, std::string &gt;::type</type>
+        <definition>std::enable_if&lt;sizeof...(Args)!=0, std::string&gt;::type hpx::util::debug::print_type</definition>
+        <argsstring>(const char *delim=&quot;&quot;)</argsstring>
+        <name>print_type</name>
+        <param>
+          <type>const char *</type>
+          <declname>delim</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/debugging/include/hpx/debugging/demangle_helper.hpp" line="119" column="1" bodyfile="libs/debugging/include/hpx/debugging/demangle_helper.hpp" bodystart="119" bodyend="123"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libs/debugging/include/hpx/debugging/demangle_helper.hpp" line="20" column="1"/>
+  </compounddef>
+</doxygen>

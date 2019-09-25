@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="hpx_2plugin_2dll_8hpp" kind="file" language="C++">
+    <compoundname>dll.hpp</compoundname>
+    <includes refid="hpx_2plugin_2config_8hpp" local="no">hpx/plugin/config.hpp</includes>
+    <includes local="no">hpx/plugin/detail/dll_dlopen.hpp</includes>
+    <includedby refid="hpx_2plugin_8hpp" local="no">libs/plugin/include/hpx/plugin.hpp</includedby>
+    <includedby refid="hpx_2plugin_2plugin__factory_8hpp" local="no">libs/plugin/include/hpx/plugin/plugin_factory.hpp</includedby>
+    <includedby refid="compatibility_2hpx_2util_2plugin_2dll_8hpp" local="no">libs/plugin/include_compatibility/hpx/util/plugin/dll.hpp</includedby>
+    <incdepgraph>
+      <node id="169">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="166">
+        <label>hpx/config.hpp</label>
+      </node>
+      <node id="167">
+        <label>hpx/plugin/config/defines.hpp</label>
+      </node>
+      <node id="164">
+        <label>libs/plugin/include/hpx/plugin/dll.hpp</label>
+        <link refid="hpx_2plugin_2dll_8hpp"/>
+        <childnode refid="165" relation="include">
+        </childnode>
+        <childnode refid="170" relation="include">
+        </childnode>
+      </node>
+      <node id="168">
+        <label>hpx/preprocessor/stringize.hpp</label>
+      </node>
+      <node id="165">
+        <label>hpx/plugin/config.hpp</label>
+        <link refid="hpx_2plugin_2config_8hpp_source"/>
+        <childnode refid="166" relation="include">
+        </childnode>
+        <childnode refid="167" relation="include">
+        </childnode>
+        <childnode refid="168" relation="include">
+        </childnode>
+        <childnode refid="169" relation="include">
+        </childnode>
+      </node>
+      <node id="170">
+        <label>hpx/plugin/detail/dll_dlopen.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="176">
+        <label>libs/plugin/include_compatibility/hpx/util/plugin/dll.hpp</label>
+        <link refid="compatibility_2hpx_2util_2plugin_2dll_8hpp_source"/>
+      </node>
+      <node id="174">
+        <label>libs/plugin/include/hpx/plugin/plugin_factory.hpp</label>
+        <link refid="hpx_2plugin_2plugin__factory_8hpp_source"/>
+        <childnode refid="172" relation="include">
+        </childnode>
+        <childnode refid="175" relation="include">
+        </childnode>
+      </node>
+      <node id="173">
+        <label>libs/plugin/include_compatibility/hpx/util/plugin.hpp</label>
+        <link refid="compatibility_2hpx_2util_2plugin_8hpp_source"/>
+      </node>
+      <node id="175">
+        <label>libs/plugin/include_compatibility/hpx/util/plugin/plugin_factory.hpp</label>
+        <link refid="compatibility_2hpx_2util_2plugin_2plugin__factory_8hpp_source"/>
+      </node>
+      <node id="171">
+        <label>libs/plugin/include/hpx/plugin/dll.hpp</label>
+        <link refid="hpx_2plugin_2dll_8hpp"/>
+        <childnode refid="172" relation="include">
+        </childnode>
+        <childnode refid="174" relation="include">
+        </childnode>
+        <childnode refid="176" relation="include">
+        </childnode>
+      </node>
+      <node id="172">
+        <label>libs/plugin/include/hpx/plugin.hpp</label>
+        <link refid="hpx_2plugin_8hpp_source"/>
+        <childnode refid="173" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="hpx_2plugin_2dll_8hpp_1a44ed7f3eb97d329db955d4ae0c3f4dfa" prot="public" static="no">
+        <name>HPX_HAS_DLOPEN</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/plugin/include/hpx/plugin/dll.hpp" line="13" column="9" bodyfile="libs/plugin/include/hpx/plugin/dll.hpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2005-2013<sp/>Hartmut<sp/>Kaiser</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Distributed<sp/>under<sp/>the<sp/>Boost<sp/>Software<sp/>License,<sp/>Version<sp/>1.0.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(See<sp/>accompanying<sp/>file<sp/>LICENSE_1_0.txt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>or<sp/>copy<sp/>at<sp/>http://www.boost.org/LICENSE_1_0.txt)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>HPX_UTIL_PLUGIN_DLL_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPX_UTIL_PLUGIN_DLL_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/plugin/config.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>HPX_MSVC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>HPX_HAS_DLOPEN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPX_HAS_DLOPEN<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(HPX_MSVC)<sp/>||<sp/>defined(HPX_MINGW)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/plugin/detail/dll_windows.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(HPX_HAS_DLOPEN)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/plugin/detail/dll_dlopen.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>&quot;Hpx.Plugin:<sp/>your<sp/>platform<sp/>is<sp/>not<sp/>supported<sp/>by<sp/>this<sp/>library.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*HPX_UTIL_PLUGIN_DLL_HPP*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="libs/plugin/include/hpx/plugin/dll.hpp"/>
+  </compounddef>
+</doxygen>

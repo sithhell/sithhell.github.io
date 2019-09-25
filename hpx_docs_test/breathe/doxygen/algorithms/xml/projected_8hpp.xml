@@ -1,0 +1,873 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="projected_8hpp" kind="file" language="C++">
+    <compoundname>projected.hpp</compoundname>
+    <includes local="no">hpx/config.hpp</includes>
+    <includes local="no">hpx/datastructures/detail/pack.hpp</includes>
+    <includes local="no">hpx/functional/result_of.hpp</includes>
+    <includes local="no">hpx/iterator_support/is_iterator.hpp</includes>
+    <includes local="no">hpx/parallel/traits/vector_pack_load_store.hpp</includes>
+    <includes local="no">hpx/parallel/traits/vector_pack_type.hpp</includes>
+    <includes local="no">hpx/functional/traits/is_callable.hpp</includes>
+    <includes local="no">hpx/traits/is_execution_policy.hpp</includes>
+    <includes refid="segmented__iterator__traits_8hpp" local="no">hpx/traits/segmented_iterator_traits.hpp</includes>
+    <includes local="no">hpx/type_support/always_void.hpp</includes>
+    <includes local="no">hpx/type_support/decay.hpp</includes>
+    <includes local="no">iterator</includes>
+    <includes local="no">type_traits</includes>
+    <includedby refid="container__algorithms_2merge_8hpp" local="no">libs/algorithms/include/hpx/parallel/container_algorithms/merge.hpp</includedby>
+    <includedby refid="container__algorithms_2search_8hpp" local="no">libs/algorithms/include/hpx/parallel/container_algorithms/search.hpp</includedby>
+    <includedby refid="container__algorithms_2minmax_8hpp" local="no">libs/algorithms/include/hpx/parallel/container_algorithms/minmax.hpp</includedby>
+    <includedby refid="container__algorithms_2remove_8hpp" local="no">libs/algorithms/include/hpx/parallel/container_algorithms/remove.hpp</includedby>
+    <includedby refid="container__algorithms_2find_8hpp" local="no">libs/algorithms/include/hpx/parallel/container_algorithms/find.hpp</includedby>
+    <includedby refid="container__algorithms_2partition_8hpp" local="no">libs/algorithms/include/hpx/parallel/container_algorithms/partition.hpp</includedby>
+    <includedby refid="container__algorithms_2copy_8hpp" local="no">libs/algorithms/include/hpx/parallel/container_algorithms/copy.hpp</includedby>
+    <includedby refid="container__algorithms_2unique_8hpp" local="no">libs/algorithms/include/hpx/parallel/container_algorithms/unique.hpp</includedby>
+    <includedby refid="container__algorithms_2remove__copy_8hpp" local="no">libs/algorithms/include/hpx/parallel/container_algorithms/remove_copy.hpp</includedby>
+    <includedby refid="algorithms_2all__any__none_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/all_any_none.hpp</includedby>
+    <includedby refid="algorithms_2merge_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/merge.hpp</includedby>
+    <includedby refid="algorithms_2for__each_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/for_each.hpp</includedby>
+    <includedby refid="algorithms_2minmax_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/minmax.hpp</includedby>
+    <includedby refid="algorithms_2transform_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/transform.hpp</includedby>
+    <includedby refid="algorithms_2is__heap_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/is_heap.hpp</includedby>
+    <includedby refid="algorithms_2remove_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/remove.hpp</includedby>
+    <includedby refid="algorithms_2sort_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/sort.hpp</includedby>
+    <includedby refid="algorithms_2find_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/find.hpp</includedby>
+    <includedby refid="algorithms_2count_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/count.hpp</includedby>
+    <includedby refid="algorithms_2partition_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/partition.hpp</includedby>
+    <includedby refid="algorithms_2copy_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/copy.hpp</includedby>
+    <includedby refid="algorithms_2unique_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/unique.hpp</includedby>
+    <includedby refid="algorithms_2replace_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/replace.hpp</includedby>
+    <includedby refid="projected__range_8hpp" local="no">libs/algorithms/include/hpx/parallel/traits/projected_range.hpp</includedby>
+    <incdepgraph>
+      <node id="4440">
+        <label>hpx/type_support/always_void.hpp</label>
+      </node>
+      <node id="4433">
+        <label>hpx/parallel/traits/vector_pack_type.hpp</label>
+      </node>
+      <node id="4441">
+        <label>iterator</label>
+      </node>
+      <node id="4434">
+        <label>hpx/functional/traits/is_callable.hpp</label>
+      </node>
+      <node id="4429">
+        <label>hpx/datastructures/detail/pack.hpp</label>
+      </node>
+      <node id="4437">
+        <label>hpx/type_support/decay.hpp</label>
+      </node>
+      <node id="4436">
+        <label>hpx/traits/segmented_iterator_traits.hpp</label>
+        <link refid="segmented__iterator__traits_8hpp_source"/>
+        <childnode refid="4428" relation="include">
+        </childnode>
+        <childnode refid="4431" relation="include">
+        </childnode>
+        <childnode refid="4437" relation="include">
+        </childnode>
+        <childnode refid="4438" relation="include">
+        </childnode>
+        <childnode refid="4439" relation="include">
+        </childnode>
+      </node>
+      <node id="4428">
+        <label>hpx/config.hpp</label>
+      </node>
+      <node id="4430">
+        <label>hpx/functional/result_of.hpp</label>
+      </node>
+      <node id="4431">
+        <label>hpx/iterator_support/is_iterator.hpp</label>
+      </node>
+      <node id="4435">
+        <label>hpx/traits/is_execution_policy.hpp</label>
+      </node>
+      <node id="4427">
+        <label>libs/algorithms/include/hpx/parallel/traits/projected.hpp</label>
+        <link refid="projected_8hpp"/>
+        <childnode refid="4428" relation="include">
+        </childnode>
+        <childnode refid="4429" relation="include">
+        </childnode>
+        <childnode refid="4430" relation="include">
+        </childnode>
+        <childnode refid="4431" relation="include">
+        </childnode>
+        <childnode refid="4432" relation="include">
+        </childnode>
+        <childnode refid="4433" relation="include">
+        </childnode>
+        <childnode refid="4434" relation="include">
+        </childnode>
+        <childnode refid="4435" relation="include">
+        </childnode>
+        <childnode refid="4436" relation="include">
+        </childnode>
+        <childnode refid="4440" relation="include">
+        </childnode>
+        <childnode refid="4437" relation="include">
+        </childnode>
+        <childnode refid="4441" relation="include">
+        </childnode>
+        <childnode refid="4438" relation="include">
+        </childnode>
+      </node>
+      <node id="4439">
+        <label>utility</label>
+      </node>
+      <node id="4438">
+        <label>type_traits</label>
+      </node>
+      <node id="4432">
+        <label>hpx/parallel/traits/vector_pack_load_store.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4449">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/partition.hpp</label>
+        <link refid="container__algorithms_2partition_8hpp"/>
+        <childnode refid="4444" relation="include">
+        </childnode>
+      </node>
+      <node id="4465">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/lexicographical_compare.hpp</label>
+        <link refid="lexicographical__compare_8hpp"/>
+        <childnode refid="4454" relation="include">
+        </childnode>
+      </node>
+      <node id="4488">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/set_symmetric_difference.hpp</label>
+        <link refid="set__symmetric__difference_8hpp"/>
+        <childnode refid="4454" relation="include">
+        </childnode>
+      </node>
+      <node id="4461">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/fill.hpp</label>
+        <link refid="algorithms_2fill_8hpp"/>
+        <childnode refid="4454" relation="include">
+        </childnode>
+        <childnode refid="4462" relation="include">
+        </childnode>
+      </node>
+      <node id="4447">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/remove.hpp</label>
+        <link refid="container__algorithms_2remove_8hpp"/>
+        <childnode refid="4444" relation="include">
+        </childnode>
+      </node>
+      <node id="4453">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/all_any_none.hpp</label>
+        <link refid="algorithms_2all__any__none_8hpp"/>
+        <childnode refid="4454" relation="include">
+        </childnode>
+        <childnode refid="4455" relation="include">
+        </childnode>
+      </node>
+      <node id="4483">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/count.hpp</label>
+        <link refid="algorithms_2count_8hpp"/>
+        <childnode refid="4454" relation="include">
+        </childnode>
+        <childnode refid="4484" relation="include">
+        </childnode>
+      </node>
+      <node id="4482">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/find.hpp</label>
+        <link refid="algorithms_2find_8hpp"/>
+        <childnode refid="4454" relation="include">
+        </childnode>
+        <childnode refid="4448" relation="include">
+        </childnode>
+      </node>
+      <node id="4489">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/set_difference.hpp</label>
+        <link refid="set__difference_8hpp"/>
+        <childnode refid="4454" relation="include">
+        </childnode>
+      </node>
+      <node id="4473">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/minmax.hpp</label>
+        <link refid="algorithms_2minmax_8hpp"/>
+        <childnode refid="4454" relation="include">
+        </childnode>
+        <childnode refid="4446" relation="include">
+        </childnode>
+      </node>
+      <node id="4470">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/rotate.hpp</label>
+        <link refid="container__algorithms_2rotate_8hpp"/>
+        <childnode refid="4444" relation="include">
+        </childnode>
+      </node>
+      <node id="4479">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/sort.hpp</label>
+        <link refid="algorithms_2sort_8hpp_source"/>
+        <childnode refid="4454" relation="include">
+        </childnode>
+        <childnode refid="4480" relation="include">
+        </childnode>
+        <childnode refid="4463" relation="include">
+        </childnode>
+        <childnode refid="4481" relation="include">
+        </childnode>
+      </node>
+      <node id="4463">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/reduce_by_key.hpp</label>
+        <link refid="reduce__by__key_8hpp"/>
+      </node>
+      <node id="4475">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/transform.hpp</label>
+        <link refid="container__algorithms_2transform_8hpp"/>
+        <childnode refid="4444" relation="include">
+        </childnode>
+      </node>
+      <node id="4454">
+        <label>libs/algorithms/include/hpx/parallel/algorithm.hpp</label>
+        <link refid="algorithm_8hpp_source"/>
+        <childnode refid="4444" relation="include">
+        </childnode>
+      </node>
+      <node id="4446">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/minmax.hpp</label>
+        <link refid="container__algorithms_2minmax_8hpp"/>
+        <childnode refid="4444" relation="include">
+        </childnode>
+      </node>
+      <node id="4481">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/sort_by_key.hpp</label>
+        <link refid="sort__by__key_8hpp_source"/>
+      </node>
+      <node id="4464">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/search.hpp</label>
+        <link refid="algorithms_2search_8hpp"/>
+        <childnode refid="4454" relation="include">
+        </childnode>
+        <childnode refid="4445" relation="include">
+        </childnode>
+      </node>
+      <node id="4478">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/remove.hpp</label>
+        <link refid="algorithms_2remove_8hpp"/>
+        <childnode refid="4454" relation="include">
+        </childnode>
+        <childnode refid="4447" relation="include">
+        </childnode>
+      </node>
+      <node id="4484">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/count.hpp</label>
+        <link refid="container__algorithms_2count_8hpp"/>
+        <childnode refid="4444" relation="include">
+        </childnode>
+      </node>
+      <node id="4467">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/reverse.hpp</label>
+        <link refid="algorithms_2reverse_8hpp"/>
+        <childnode refid="4454" relation="include">
+        </childnode>
+        <childnode refid="4468" relation="include">
+        </childnode>
+        <childnode refid="4469" relation="include">
+        </childnode>
+      </node>
+      <node id="4491">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/remove_copy.hpp</label>
+        <link refid="algorithms_2remove__copy_8hpp"/>
+        <childnode refid="4454" relation="include">
+        </childnode>
+        <childnode refid="4452" relation="include">
+        </childnode>
+      </node>
+      <node id="4448">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/find.hpp</label>
+        <link refid="container__algorithms_2find_8hpp"/>
+        <childnode refid="4444" relation="include">
+        </childnode>
+      </node>
+      <node id="4477">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/is_heap.hpp</label>
+        <link refid="container__algorithms_2is__heap_8hpp"/>
+        <childnode refid="4444" relation="include">
+        </childnode>
+      </node>
+      <node id="4451">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/unique.hpp</label>
+        <link refid="container__algorithms_2unique_8hpp"/>
+        <childnode refid="4444" relation="include">
+        </childnode>
+      </node>
+      <node id="4462">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/fill.hpp</label>
+        <link refid="container__algorithms_2fill_8hpp"/>
+        <childnode refid="4444" relation="include">
+        </childnode>
+      </node>
+      <node id="4445">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/search.hpp</label>
+        <link refid="container__algorithms_2search_8hpp"/>
+        <childnode refid="4444" relation="include">
+        </childnode>
+      </node>
+      <node id="4459">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/generate.hpp</label>
+        <link refid="algorithms_2generate_8hpp"/>
+        <childnode refid="4454" relation="include">
+        </childnode>
+        <childnode refid="4460" relation="include">
+        </childnode>
+      </node>
+      <node id="4493">
+        <label>libs/algorithms/include/hpx/parallel/traits/projected_range.hpp</label>
+        <link refid="projected__range_8hpp_source"/>
+        <childnode refid="4460" relation="include">
+        </childnode>
+        <childnode refid="4455" relation="include">
+        </childnode>
+        <childnode refid="4470" relation="include">
+        </childnode>
+        <childnode refid="4443" relation="include">
+        </childnode>
+        <childnode refid="4458" relation="include">
+        </childnode>
+        <childnode refid="4445" relation="include">
+        </childnode>
+        <childnode refid="4446" relation="include">
+        </childnode>
+        <childnode refid="4475" relation="include">
+        </childnode>
+        <childnode refid="4477" relation="include">
+        </childnode>
+        <childnode refid="4447" relation="include">
+        </childnode>
+        <childnode refid="4480" relation="include">
+        </childnode>
+        <childnode refid="4448" relation="include">
+        </childnode>
+        <childnode refid="4468" relation="include">
+        </childnode>
+        <childnode refid="4484" relation="include">
+        </childnode>
+        <childnode refid="4449" relation="include">
+        </childnode>
+        <childnode refid="4450" relation="include">
+        </childnode>
+        <childnode refid="4451" relation="include">
+        </childnode>
+        <childnode refid="4472" relation="include">
+        </childnode>
+        <childnode refid="4452" relation="include">
+        </childnode>
+      </node>
+      <node id="4472">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/replace.hpp</label>
+        <link refid="container__algorithms_2replace_8hpp"/>
+        <childnode refid="4444" relation="include">
+        </childnode>
+      </node>
+      <node id="4474">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/transform.hpp</label>
+        <link refid="algorithms_2transform_8hpp"/>
+        <childnode refid="4475" relation="include">
+        </childnode>
+      </node>
+      <node id="4456">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/merge.hpp</label>
+        <link refid="algorithms_2merge_8hpp_source"/>
+        <childnode refid="4454" relation="include">
+        </childnode>
+        <childnode refid="4443" relation="include">
+        </childnode>
+      </node>
+      <node id="4450">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/copy.hpp</label>
+        <link refid="container__algorithms_2copy_8hpp"/>
+        <childnode refid="4444" relation="include">
+        </childnode>
+      </node>
+      <node id="4442">
+        <label>libs/algorithms/include/hpx/parallel/traits/projected.hpp</label>
+        <link refid="projected_8hpp"/>
+        <childnode refid="4443" relation="include">
+        </childnode>
+        <childnode refid="4445" relation="include">
+        </childnode>
+        <childnode refid="4446" relation="include">
+        </childnode>
+        <childnode refid="4447" relation="include">
+        </childnode>
+        <childnode refid="4448" relation="include">
+        </childnode>
+        <childnode refid="4449" relation="include">
+        </childnode>
+        <childnode refid="4450" relation="include">
+        </childnode>
+        <childnode refid="4451" relation="include">
+        </childnode>
+        <childnode refid="4452" relation="include">
+        </childnode>
+        <childnode refid="4453" relation="include">
+        </childnode>
+        <childnode refid="4456" relation="include">
+        </childnode>
+        <childnode refid="4457" relation="include">
+        </childnode>
+        <childnode refid="4473" relation="include">
+        </childnode>
+        <childnode refid="4474" relation="include">
+        </childnode>
+        <childnode refid="4476" relation="include">
+        </childnode>
+        <childnode refid="4478" relation="include">
+        </childnode>
+        <childnode refid="4479" relation="include">
+        </childnode>
+        <childnode refid="4482" relation="include">
+        </childnode>
+        <childnode refid="4483" relation="include">
+        </childnode>
+        <childnode refid="4485" relation="include">
+        </childnode>
+        <childnode refid="4486" relation="include">
+        </childnode>
+        <childnode refid="4492" relation="include">
+        </childnode>
+        <childnode refid="4471" relation="include">
+        </childnode>
+        <childnode refid="4493" relation="include">
+        </childnode>
+      </node>
+      <node id="4486">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/copy.hpp</label>
+        <link refid="algorithms_2copy_8hpp"/>
+        <childnode refid="4454" relation="include">
+        </childnode>
+        <childnode refid="4450" relation="include">
+        </childnode>
+        <childnode refid="4469" relation="include">
+        </childnode>
+        <childnode refid="4487" relation="include">
+        </childnode>
+        <childnode refid="4463" relation="include">
+        </childnode>
+        <childnode refid="4488" relation="include">
+        </childnode>
+        <childnode refid="4489" relation="include">
+        </childnode>
+        <childnode refid="4467" relation="include">
+        </childnode>
+        <childnode refid="4490" relation="include">
+        </childnode>
+        <childnode refid="4491" relation="include">
+        </childnode>
+      </node>
+      <node id="4469">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/rotate.hpp</label>
+        <link refid="algorithms_2rotate_8hpp"/>
+        <childnode refid="4454" relation="include">
+        </childnode>
+        <childnode refid="4470" relation="include">
+        </childnode>
+      </node>
+      <node id="4485">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/partition.hpp</label>
+        <link refid="algorithms_2partition_8hpp_source"/>
+        <childnode refid="4454" relation="include">
+        </childnode>
+        <childnode refid="4449" relation="include">
+        </childnode>
+      </node>
+      <node id="4471">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/replace.hpp</label>
+        <link refid="algorithms_2replace_8hpp"/>
+        <childnode refid="4454" relation="include">
+        </childnode>
+        <childnode refid="4472" relation="include">
+        </childnode>
+      </node>
+      <node id="4468">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/reverse.hpp</label>
+        <link refid="container__algorithms_2reverse_8hpp"/>
+        <childnode refid="4444" relation="include">
+        </childnode>
+      </node>
+      <node id="4492">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/unique.hpp</label>
+        <link refid="algorithms_2unique_8hpp_source"/>
+        <childnode refid="4454" relation="include">
+        </childnode>
+        <childnode refid="4451" relation="include">
+        </childnode>
+      </node>
+      <node id="4490">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/set_intersection.hpp</label>
+        <link refid="set__intersection_8hpp"/>
+        <childnode refid="4454" relation="include">
+        </childnode>
+      </node>
+      <node id="4458">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/for_each.hpp</label>
+        <link refid="container__algorithms_2for__each_8hpp"/>
+        <childnode refid="4444" relation="include">
+        </childnode>
+      </node>
+      <node id="4480">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/sort.hpp</label>
+        <link refid="container__algorithms_2sort_8hpp"/>
+        <childnode refid="4444" relation="include">
+        </childnode>
+      </node>
+      <node id="4457">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/for_each.hpp</label>
+        <link refid="algorithms_2for__each_8hpp"/>
+        <childnode refid="4454" relation="include">
+        </childnode>
+        <childnode refid="4458" relation="include">
+        </childnode>
+        <childnode refid="4459" relation="include">
+        </childnode>
+        <childnode refid="4461" relation="include">
+        </childnode>
+        <childnode refid="4463" relation="include">
+        </childnode>
+        <childnode refid="4464" relation="include">
+        </childnode>
+        <childnode refid="4465" relation="include">
+        </childnode>
+        <childnode refid="4466" relation="include">
+        </childnode>
+        <childnode refid="4467" relation="include">
+        </childnode>
+        <childnode refid="4471" relation="include">
+        </childnode>
+      </node>
+      <node id="4460">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/generate.hpp</label>
+        <link refid="container__algorithms_2generate_8hpp"/>
+        <childnode refid="4444" relation="include">
+        </childnode>
+      </node>
+      <node id="4444">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms.hpp</label>
+        <link refid="container__algorithms_8hpp_source"/>
+      </node>
+      <node id="4466">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/swap_ranges.hpp</label>
+        <link refid="swap__ranges_8hpp"/>
+        <childnode refid="4454" relation="include">
+        </childnode>
+      </node>
+      <node id="4443">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/merge.hpp</label>
+        <link refid="container__algorithms_2merge_8hpp"/>
+        <childnode refid="4444" relation="include">
+        </childnode>
+      </node>
+      <node id="4455">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/all_any_none.hpp</label>
+        <link refid="container__algorithms_2all__any__none_8hpp"/>
+        <childnode refid="4444" relation="include">
+        </childnode>
+      </node>
+      <node id="4452">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/remove_copy.hpp</label>
+        <link refid="container__algorithms_2remove__copy_8hpp"/>
+        <childnode refid="4444" relation="include">
+        </childnode>
+      </node>
+      <node id="4487">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/set_union.hpp</label>
+        <link refid="set__union_8hpp"/>
+        <childnode refid="4454" relation="include">
+        </childnode>
+      </node>
+      <node id="4476">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/is_heap.hpp</label>
+        <link refid="algorithms_2is__heap_8hpp_source"/>
+        <childnode refid="4454" relation="include">
+        </childnode>
+        <childnode refid="4477" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structhpx_1_1traits_1_1projected__iterator" prot="public">hpx::traits::projected_iterator</innerclass>
+    <innerclass refid="structhpx_1_1traits_1_1projected__iterator_3_01_iterator_00_01typename_01std_1_1enable__if_3_01i1e6d339d5108c0c57364600f01a8c124" prot="public">hpx::traits::projected_iterator&lt; Iterator, typename std::enable_if&lt; is_segmented_iterator&lt; Iterator &gt;::value &gt;::type &gt;</innerclass>
+    <innerclass refid="structhpx_1_1traits_1_1projected__iterator_3_01_iterator_00_01typename_01hpx_1_1util_1_1always__ec1097b680ec94a68e9c1a9aefe34c52" prot="public">hpx::traits::projected_iterator&lt; Iterator, typename hpx::util::always_void&lt; typename hpx::util::decay&lt; Iterator &gt;::type::proxy_type &gt;::type &gt;</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1traits_1_1projected__result__of" prot="public">hpx::parallel::traits::projected_result_of</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1traits_1_1is__projected" prot="public">hpx::parallel::traits::is_projected</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1traits_1_1projected" prot="public">hpx::parallel::traits::projected</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1traits_1_1is__projected__indirect" prot="public">hpx::parallel::traits::is_projected_indirect</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1traits_1_1is__projected__zip__iterator" prot="public">hpx::parallel::traits::is_projected_zip_iterator</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1traits_1_1is__projected__zip__iterator_3_01_projected_00_01typename_01hce74e417fa80e7dadecbb39b0aa5f361" prot="public">hpx::parallel::traits::is_projected_zip_iterator&lt; Projected, typename hpx::util::always_void&lt; typename Projected::iterator_type &gt;::type &gt;</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1traits_1_1is__indirect__callable" prot="public">hpx::parallel::traits::is_indirect_callable</innerclass>
+    <innernamespace refid="namespacehpx">hpx</innernamespace>
+    <innernamespace refid="namespacehpx_1_1traits">hpx::traits</innernamespace>
+    <innernamespace refid="namespacehpx_1_1parallel">hpx::parallel</innernamespace>
+    <innernamespace refid="namespacehpx_1_1parallel_1_1traits">hpx::parallel::traits</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2007-2016<sp/>Hartmut<sp/>Kaiser</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Distributed<sp/>under<sp/>the<sp/>Boost<sp/>Software<sp/>License,<sp/>Version<sp/>1.0.<sp/>(See<sp/>accompanying</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>file<sp/>LICENSE_1_0.txt<sp/>or<sp/>copy<sp/>at<sp/>http://www.boost.org/LICENSE_1_0.txt)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(HPX_PARALLEL_TRAITS_PROJECTED_JUL_18_2015_1001PM)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPX_PARALLEL_TRAITS_PROJECTED_JUL_18_2015_1001PM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/config.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/datastructures/detail/pack.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/functional/result_of.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/iterator_support/is_iterator.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/parallel/traits/vector_pack_load_store.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/parallel/traits/vector_pack_type.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/functional/traits/is_callable.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/traits/is_execution_policy.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/traits/segmented_iterator_traits.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/type_support/always_void.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/type_support/decay.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iterator&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;type_traits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehpx" kindref="compound">hpx</ref><sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">traits</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Enable<sp/>=<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="29" refid="structhpx_1_1traits_1_1projected__iterator" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhpx_1_1traits_1_1projected__iterator" kindref="compound">projected_iterator</ref></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>hpx::util::decay&lt;T&gt;::type<sp/>type;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>segmented<sp/>iterators,<sp/>we<sp/>consider<sp/>the<sp/>local_raw_iterator<sp/>instead<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>given<sp/>one.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Iterator&gt;</highlight></codeline>
+<codeline lineno="37" refid="structhpx_1_1traits_1_1projected__iterator_3_01_iterator_00_01typename_01std_1_1enable__if_3_01i1e6d339d5108c0c57364600f01a8c124" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhpx_1_1traits_1_1projected__iterator" kindref="compound">projected_iterator</ref>&lt;Iterator,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>std::enable_if&lt;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>is_segmented_iterator&lt;Iterator&gt;::value</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::type&gt;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="structhpx_1_1traits_1_1segmented__iterator__traits" kindref="compound">segmented_iterator_traits</ref>&lt;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Iterator</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::local_iterator<sp/>local_iterator;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="structhpx_1_1traits_1_1segmented__local__iterator__traits" kindref="compound">segmented_local_iterator_traits</ref>&lt;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>local_iterator</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::local_raw_iterator<sp/>type;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Iterator&gt;</highlight></codeline>
+<codeline lineno="52" refid="structhpx_1_1traits_1_1projected__iterator_3_01_iterator_00_01typename_01hpx_1_1util_1_1always__ec1097b680ec94a68e9c1a9aefe34c52" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhpx_1_1traits_1_1projected__iterator" kindref="compound">projected_iterator</ref>&lt;Iterator,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/><ref refid="namespacehpx" kindref="compound">hpx</ref>::util::always_void&lt;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>hpx::util::decay&lt;Iterator&gt;::type::proxy_type</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::type&gt;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>hpx::util::decay&lt;Iterator&gt;::type::proxy_type</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>type;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehpx" kindref="compound">hpx</ref><sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">parallel<sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">traits</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">detail</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>F,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Iter,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Enable<sp/>=<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">projected_result_of;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Proj,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Iter&gt;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">projected_result_of&lt;Proj,<sp/>Iter,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>std::enable_if&lt;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::traits::is_iterator&lt;Iter&gt;::value</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::type&gt;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>hpx::util::invoke_result&lt;Proj,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>std::iterator_traits&lt;Iter&gt;::reference</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{};</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Projected&gt;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">projected_result_of_indirect</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>projected_result_of&lt;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>Projected::projector_type,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>Projected::iterator_type&gt;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{};</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(HPX_HAVE_DATAPAR)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>being<sp/>instantiated<sp/>if<sp/>a<sp/>vector<sp/>pack<sp/>execution<sp/>policy<sp/>is<sp/>used</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>with<sp/>a<sp/>zip_iterator.<sp/>In<sp/>this<sp/>case<sp/>the<sp/>function<sp/>object<sp/>is<sp/>invoked</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>with<sp/>a<sp/>tuple&lt;datapar&lt;T&gt;...&gt;<sp/>instead<sp/>of<sp/>just<sp/>a<sp/>tuple&lt;T...&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Proj,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ValueType,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Enable<sp/>=<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">projected_result_of_vector_pack_</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>hpx::util::invoke_result&lt;Proj,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>hpx::parallel::traits::vector_pack_load&lt;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>hpx::parallel::traits::vector_pack_type&lt;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ValueType</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::type,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ValueType</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::value_type&amp;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{};</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Projected,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Enable<sp/>=<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">projected_result_of_vector_pack;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Projected&gt;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">projected_result_of_vector_pack&lt;Projected,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>hpx::util::always_void&lt;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>Projected::iterator_type</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::type&gt;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>projected_result_of_vector_pack_&lt;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>Projected::projector_type,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>std::iterator_traits&lt;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>Projected::iterator_type</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::value_type&gt;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{};</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>F,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Iter,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Enable<sp/>=<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="121" refid="structhpx_1_1parallel_1_1traits_1_1projected__result__of" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhpx_1_1parallel_1_1traits_1_1projected__result__of" kindref="compound">projected_result_of</ref></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>detail::projected_result_of&lt;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>hpx::util::decay&lt;F&gt;::type,</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>hpx::util::decay&lt;Iter&gt;::type&gt;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>{};</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">detail</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>F,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Iter,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Enable<sp/>=<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhpx_1_1parallel_1_1traits_1_1is__projected" kindref="compound">is_projected</ref></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>std::false_type</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{};</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Proj,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Iter&gt;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhpx_1_1parallel_1_1traits_1_1is__projected" kindref="compound">is_projected</ref>&lt;Proj,<sp/>Iter,</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>std::enable_if&lt;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::traits::is_iterator&lt;Iter&gt;::value</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::type&gt;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>hpx::traits::is_invocable&lt;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Proj,<sp/>typename<sp/>std::iterator_traits&lt;Iter&gt;::reference</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{};</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Projected,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Enable<sp/>=<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhpx_1_1parallel_1_1traits_1_1is__projected__indirect" kindref="compound">is_projected_indirect</ref></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>std::false_type</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{};</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Projected&gt;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhpx_1_1parallel_1_1traits_1_1is__projected__indirect" kindref="compound">is_projected_indirect</ref>&lt;Projected,</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>hpx::util::always_void&lt;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>Projected::projector_type</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::type&gt;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>detail::is_projected&lt;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>Projected::projector_type,</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>Projected::iterator_type&gt;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{};</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>F,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Iter,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Enable<sp/>=<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="162" refid="structhpx_1_1parallel_1_1traits_1_1is__projected" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhpx_1_1parallel_1_1traits_1_1is__projected" kindref="compound">is_projected</ref></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>detail::is_projected&lt;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>hpx::util::decay&lt;F&gt;::type,</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>hpx::traits::projected_iterator&lt;Iter&gt;::type&gt;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>{};</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Proj,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Iter&gt;</highlight></codeline>
+<codeline lineno="170" refid="structhpx_1_1parallel_1_1traits_1_1projected" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhpx_1_1parallel_1_1traits_1_1projected" kindref="compound">projected</ref></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>hpx::util::decay&lt;Proj&gt;::type<sp/>projector_type;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>hpx::traits::projected_iterator&lt;Iter&gt;::type</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>iterator_type;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Projected,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Enable<sp/>=<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="178" refid="structhpx_1_1parallel_1_1traits_1_1is__projected__indirect" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhpx_1_1parallel_1_1traits_1_1is__projected__indirect" kindref="compound">is_projected_indirect</ref></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>detail::is_projected_indirect&lt;Projected&gt;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>{};</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Projected,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Enable<sp/>=<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="183" refid="structhpx_1_1parallel_1_1traits_1_1is__projected__zip__iterator" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhpx_1_1parallel_1_1traits_1_1is__projected__zip__iterator" kindref="compound">is_projected_zip_iterator</ref></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>std::false_type</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>{};</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Projected&gt;</highlight></codeline>
+<codeline lineno="188" refid="structhpx_1_1parallel_1_1traits_1_1is__projected__zip__iterator_3_01_projected_00_01typename_01hce74e417fa80e7dadecbb39b0aa5f361" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhpx_1_1parallel_1_1traits_1_1is__projected__zip__iterator" kindref="compound">is_projected_zip_iterator</ref>&lt;Projected,</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/><ref refid="namespacehpx" kindref="compound">hpx</ref>::util::always_void&lt;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>Projected::iterator_type</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::type&gt;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>hpx::traits::is_zip_iterator&lt;typename<sp/>Projected::iterator_type&gt;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>{};</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">detail</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>F,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>...Args&gt;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">is_indirect_callable_impl</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>hpx::traits::is_invocable&lt;F,<sp/>Args...&gt;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{};</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ExPolicy,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>F,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ProjectedPack,</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Enable<sp/>=<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhpx_1_1parallel_1_1traits_1_1is__indirect__callable" kindref="compound">is_indirect_callable</ref></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>std::false_type</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{};</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ExPolicy,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>F,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>...Projected&gt;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhpx_1_1parallel_1_1traits_1_1is__indirect__callable" kindref="compound">is_indirect_callable</ref>&lt;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ExPolicy,<sp/>F,<sp/>hpx::util::detail::pack&lt;Projected...&gt;,</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>std::enable_if&lt;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::util::detail::all_of&lt;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>is_projected_indirect&lt;Projected&gt;...</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::value<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/><sp/>!hpx::parallel::execution::is_vectorpack_execution_policy&lt;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ExPolicy</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::value<sp/>||</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>!hpx::util::detail::all_of&lt;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>is_projected_zip_iterator&lt;Projected&gt;...</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::value</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::type&gt;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>is_indirect_callable_impl&lt;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>F,<sp/>typename<sp/>projected_result_of_indirect&lt;Projected&gt;::type...&gt;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{};</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(HPX_HAVE_DATAPAR)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Vector<sp/>pack<sp/>execution<sp/>policies<sp/>used<sp/>with<sp/>zip-iterators<sp/>require</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>special<sp/>handling<sp/>because<sp/>zip_iterator&lt;&gt;::reference<sp/>is<sp/>not<sp/>a<sp/>real</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>reference<sp/>type.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ExPolicy,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>F,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>...Projected&gt;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhpx_1_1parallel_1_1traits_1_1is__indirect__callable" kindref="compound">is_indirect_callable</ref>&lt;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ExPolicy,<sp/>F,<sp/>hpx::util::detail::pack&lt;Projected...&gt;,</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>std::enable_if&lt;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::util::detail::all_of&lt;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>is_projected_indirect&lt;Projected&gt;...</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::value<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::parallel::execution::is_vectorpack_execution_policy&lt;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ExPolicy</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::value<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::util::detail::all_of&lt;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>is_projected_zip_iterator&lt;Projected&gt;...</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::value</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::type&gt;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>is_indirect_callable_impl&lt;</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>F,<sp/>typename<sp/>projected_result_of_vector_pack&lt;Projected&gt;::type...&gt;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{};</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ExPolicy,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>F,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>...Projected&gt;</highlight></codeline>
+<codeline lineno="253" refid="structhpx_1_1parallel_1_1traits_1_1is__indirect__callable" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhpx_1_1parallel_1_1traits_1_1is__indirect__callable" kindref="compound">is_indirect_callable</ref></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>detail::is_indirect_callable&lt;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>hpx::util::decay&lt;ExPolicy&gt;::type,</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>hpx::util::decay&lt;F&gt;::type,</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::util::detail::pack&lt;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typename<sp/>hpx::util::decay&lt;Projected&gt;::type...</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;<sp/>&gt;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/>{};</highlight></codeline>
+<codeline lineno="261"><highlight class="normal">}}}</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="libs/algorithms/include/hpx/parallel/traits/projected.hpp"/>
+  </compounddef>
+</doxygen>

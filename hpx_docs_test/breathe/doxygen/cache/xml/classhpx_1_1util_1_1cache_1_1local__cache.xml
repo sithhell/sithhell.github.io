@@ -1,0 +1,1000 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classhpx_1_1util_1_1cache_1_1local__cache" kind="class" language="C++" prot="public">
+    <compoundname>hpx::util::cache::local_cache</compoundname>
+    <includes refid="compatibility_2hpx_2util_2cache_2local__cache_8hpp" local="no">hpx/cache/local_cache.hpp</includes>
+    <innerclass refid="structhpx_1_1util_1_1cache_1_1local__cache_1_1adapt" prot="private">hpx::util::cache::local_cache::adapt</innerclass>
+    <templateparamlist>
+      <param>
+        <type>typename Key</type>
+      </param>
+      <param>
+        <type>typename Entry</type>
+      </param>
+      <param>
+        <type>typename UpdatePolicy</type>
+        <defval>std::less&lt;Entry&gt;</defval>
+      </param>
+      <param>
+        <type>typename InsertPolicy</type>
+        <defval><ref refid="structhpx_1_1util_1_1cache_1_1policies_1_1always" kindref="compound">policies::always</ref>&lt;Entry&gt;</defval>
+      </param>
+      <param>
+        <type>typename CacheStorage</type>
+        <defval>std::map&lt;Key, Entry&gt;</defval>
+      </param>
+      <param>
+        <type>typename Statistics</type>
+        <defval><ref refid="classhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics" kindref="compound">statistics::no_statistics</ref></defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classhpx_1_1util_1_1cache_1_1local__cache_1ac9e60d1c5e468610c7312c3d81c2aa24" prot="public" static="no">
+        <type>Key</type>
+        <definition>typedef Key hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::key_type</definition>
+        <argsstring></argsstring>
+        <name>key_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="91" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classhpx_1_1util_1_1cache_1_1local__cache_1ab197b05a6ae86c3497e413fa5fdbf274" prot="public" static="no">
+        <type>Entry</type>
+        <definition>typedef Entry hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::entry_type</definition>
+        <argsstring></argsstring>
+        <name>entry_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="92" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classhpx_1_1util_1_1cache_1_1local__cache_1ab993db36e6f261d499ec30929c27508f" prot="public" static="no">
+        <type>UpdatePolicy</type>
+        <definition>typedef UpdatePolicy hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::update_policy_type</definition>
+        <argsstring></argsstring>
+        <name>update_policy_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="93" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classhpx_1_1util_1_1cache_1_1local__cache_1a856bdb153ea8f178817259fbfdf4b31f" prot="public" static="no">
+        <type>InsertPolicy</type>
+        <definition>typedef InsertPolicy hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::insert_policy_type</definition>
+        <argsstring></argsstring>
+        <name>insert_policy_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="94" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classhpx_1_1util_1_1cache_1_1local__cache_1a5850e39702ded106f898953d7dafff09" prot="public" static="no">
+        <type>CacheStorage</type>
+        <definition>typedef CacheStorage hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::storage_type</definition>
+        <argsstring></argsstring>
+        <name>storage_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="95" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classhpx_1_1util_1_1cache_1_1local__cache_1ab3af6a28073202cd8591f67c8ba363ff" prot="public" static="no">
+        <type>Statistics</type>
+        <definition>typedef Statistics hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::statistics_type</definition>
+        <argsstring></argsstring>
+        <name>statistics_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="96" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classhpx_1_1util_1_1cache_1_1local__cache_1a8045e26114f14f0ecf21f30a99cb7008" prot="public" static="no">
+        <type>entry_type::value_type</type>
+        <definition>typedef entry_type::value_type hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::value_type</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="98" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classhpx_1_1util_1_1cache_1_1local__cache_1a03265eb4a27c7d0991d11750825d9e40" prot="public" static="no">
+        <type>storage_type::size_type</type>
+        <definition>typedef storage_type::size_type hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::size_type</definition>
+        <argsstring></argsstring>
+        <name>size_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="99" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classhpx_1_1util_1_1cache_1_1local__cache_1a4eb8d0e0c6831fd6c82fb90c74f4451d" prot="public" static="no">
+        <type>storage_type::value_type</type>
+        <definition>typedef storage_type::value_type hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::storage_value_type</definition>
+        <argsstring></argsstring>
+        <name>storage_value_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="100" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classhpx_1_1util_1_1cache_1_1local__cache_1aa65b4f581476c115d0d5bcc6da18af24" prot="private" static="no">
+        <type>storage_type::iterator</type>
+        <definition>typedef storage_type::iterator hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::iterator</definition>
+        <argsstring></argsstring>
+        <name>iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="103" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classhpx_1_1util_1_1cache_1_1local__cache_1ae3bf6462ca5bf57c32ee4a74dc77607a" prot="private" static="no">
+        <type>storage_type::const_iterator</type>
+        <definition>typedef storage_type::const_iterator hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::const_iterator</definition>
+        <argsstring></argsstring>
+        <name>const_iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="104" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classhpx_1_1util_1_1cache_1_1local__cache_1aa2078ba012bfa798fed8b7ce845e58f3" prot="private" static="no">
+        <type>std::deque&lt; iterator &gt;</type>
+        <definition>typedef std::deque&lt;iterator&gt; hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::heap_type</definition>
+        <argsstring></argsstring>
+        <name>heap_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="106" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classhpx_1_1util_1_1cache_1_1local__cache_1a7add736720454bccbc10ac52209fabd0" prot="private" static="no">
+        <type>heap_type::iterator</type>
+        <definition>typedef heap_type::iterator hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::heap_iterator</definition>
+        <argsstring></argsstring>
+        <name>heap_iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="107" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classhpx_1_1util_1_1cache_1_1local__cache_1a08a8073d987ecfe6a3bfc23f9bc1e27e" prot="private" static="no">
+        <type>adapt&lt; UpdatePolicy, iterator &gt;</type>
+        <definition>typedef adapt&lt;UpdatePolicy, iterator&gt; hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::adapted_update_policy_type</definition>
+        <argsstring></argsstring>
+        <name>adapted_update_policy_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="109" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classhpx_1_1util_1_1cache_1_1local__cache_1a0df20cbf5c773c1e51811cd79a908b1b" prot="private" static="no">
+        <type>statistics_type::update_on_exit</type>
+        <definition>typedef statistics_type::update_on_exit hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::update_on_exit</definition>
+        <argsstring></argsstring>
+        <name>update_on_exit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="111" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhpx_1_1util_1_1cache_1_1local__cache_1ab636716ffa8669640a80c1dffeea7530" prot="private" static="no" mutable="no">
+        <type>size_type</type>
+        <definition>size_type hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::max_size_</definition>
+        <argsstring></argsstring>
+        <name>max_size_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="747" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="747" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhpx_1_1util_1_1cache_1_1local__cache_1a07e956adac277a87e3595466a9c44e9d" prot="private" static="no" mutable="no">
+        <type>size_type</type>
+        <definition>size_type hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::current_size_</definition>
+        <argsstring></argsstring>
+        <name>current_size_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="748" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="748" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhpx_1_1util_1_1cache_1_1local__cache_1acbe1d563398b2b3f06dc844f96afcea4" prot="private" static="no" mutable="no">
+        <type>storage_type</type>
+        <definition>storage_type hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::store_</definition>
+        <argsstring></argsstring>
+        <name>store_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="749" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="749" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhpx_1_1util_1_1cache_1_1local__cache_1a6dee8f72bb639bed98382dd5b0e5a5e8" prot="private" static="no" mutable="no">
+        <type>heap_type</type>
+        <definition>heap_type hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::entry_heap_</definition>
+        <argsstring></argsstring>
+        <name>entry_heap_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="753" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="753" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhpx_1_1util_1_1cache_1_1local__cache_1a730c15f812fc8344a4086a72e81cd64c" prot="private" static="no" mutable="no">
+        <type>adapted_update_policy_type</type>
+        <definition>adapted_update_policy_type hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::update_policy_</definition>
+        <argsstring></argsstring>
+        <name>update_policy_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="755" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="755" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhpx_1_1util_1_1cache_1_1local__cache_1aad2fc96d8e5efddd7696dd53f13b6107" prot="private" static="no" mutable="no">
+        <type>insert_policy_type</type>
+        <definition>insert_policy_type hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::insert_policy_</definition>
+        <argsstring></argsstring>
+        <name>insert_policy_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="756" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="756" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhpx_1_1util_1_1cache_1_1local__cache_1a880f641fad5a9542129f01707338dac6" prot="private" static="no" mutable="no">
+        <type>statistics_type</type>
+        <definition>statistics_type hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::statistics_</definition>
+        <argsstring></argsstring>
+        <name>statistics_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="758" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="758" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1local__cache_1a077a294b191af52f942260e0a34e6065" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::local_cache</definition>
+        <argsstring>(size_type max_size=0, update_policy_type const &amp;up=update_policy_type(), insert_policy_type const &amp;ip=insert_policy_type())</argsstring>
+        <name>local_cache</name>
+        <param>
+          <type>size_type</type>
+          <declname>max_size</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>update_policy_type const &amp;</type>
+          <declname>up</declname>
+          <defval>update_policy_type()</defval>
+        </param>
+        <param>
+          <type>insert_policy_type const &amp;</type>
+          <declname>ip</declname>
+          <defval>insert_policy_type()</defval>
+        </param>
+        <briefdescription>
+<para>Construct an instance of a <ref refid="classhpx_1_1util_1_1cache_1_1local__cache" kindref="compound">local_cache</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>max_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The maximal size this cache is allowed to reach any time. The default is zero (no size limitation). The unit of this value is usually determined by the unit of the values returned by the entry&apos;s <emphasis>get_size</emphasis> function. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>up</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] An instance of the <emphasis>UpdatePolicy</emphasis> to use for this cache. The default is to use a default constructed instance of the type as defined by the <emphasis>UpdatePolicy</emphasis> template parameter. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ip</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] An instance of the <emphasis>InsertPolicy</emphasis> to use for this cache. The default is to use a default constructed instance of the type as defined by the <emphasis>InsertPolicy</emphasis> template parameter. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="131" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="131" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1local__cache_1abae6f595f001e4886673ef5cf3ee4077" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::local_cache</definition>
+        <argsstring>(local_cache &amp;&amp;other)</argsstring>
+        <name>local_cache</name>
+        <param>
+          <type><ref refid="classhpx_1_1util_1_1cache_1_1local__cache" kindref="compound">local_cache</ref> &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="138" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="138" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1local__cache_1a6d5a44e650f9f5ff701e2d571edc0fbc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_type</type>
+        <definition>size_type hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <briefdescription>
+<para>Return current size of the cache. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The current size of this cache instance. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="152" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="152" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1local__cache_1a01860730d39a409dd6bfd74e3fc62ab6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_type</type>
+        <definition>size_type hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::capacity</definition>
+        <argsstring>() const</argsstring>
+        <name>capacity</name>
+        <briefdescription>
+<para>Access the maximum size the cache is allowed to grow to. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The unit of this value is usually determined by the unit of the return values of the entry&apos;s function <emphasis>entry::get_size</emphasis>.</para></simplesect>
+<simplesect kind="return"><para>The maximum size this cache instance is currently allowed to reach. If this number is zero the cache has no limitation with regard to a maximum size. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="167" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="167" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1local__cache_1a0f633ccdb1bf77cbcc9ed440ca70265e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::reserve</definition>
+        <argsstring>(size_type max_size)</argsstring>
+        <name>reserve</name>
+        <param>
+          <type>size_type</type>
+          <declname>max_size</declname>
+        </param>
+        <briefdescription>
+<para>Change the maximum size this cache can grow to. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>max_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The new maximum size this cache will be allowed to grow to.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function returns <emphasis>true</emphasis> if successful. It returns <emphasis>false</emphasis> if the new <emphasis>max_size</emphasis> is smaller than the current limit and the cache could not be shrinked to the new maximum size. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="182" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="182" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1local__cache_1a7e5d50cb245617368203b3acfdd7e1d0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::holds_key</definition>
+        <argsstring>(key_type const &amp;k) const</argsstring>
+        <name>holds_key</name>
+        <param>
+          <type>key_type const &amp;</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+<para>Check whether the cache currently holds an entry identified by the given key. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The key for the entry which should be looked up in the cache.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This function does not call the entry&apos;s function <emphasis>entry::touch</emphasis>. It just checks if the cache contains an entry corresponding to the given key.</para></simplesect>
+<simplesect kind="return"><para>This function returns <emphasis>true</emphasis> if the cache holds the referenced entry, otherwise it returns <emphasis>false</emphasis>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="210" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="210" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1local__cache_1a9195a948e76c0ecb5d8dfcc6c09da064" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::get_entry</definition>
+        <argsstring>(key_type const &amp;k, key_type &amp;realkey, entry_type &amp;val)</argsstring>
+        <name>get_entry</name>
+        <param>
+          <type>key_type const &amp;</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>key_type &amp;</type>
+          <declname>realkey</declname>
+        </param>
+        <param>
+          <type>entry_type &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Get a specific entry identified by the given key. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The key for the entry which should be retrieved from the cache. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[out] If the entry indexed by the key is found in the cache this value on successful return will be a copy of the corresponding entry.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The function will call the entry&apos;s <emphasis>entry::touch</emphasis> function if the value corresponding to the provided key is found in the cache.</para></simplesect>
+<simplesect kind="return"><para>This function returns <emphasis>true</emphasis> if the cache holds the referenced entry, otherwise it returns <emphasis>false</emphasis>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="230" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="230" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1local__cache_1a08581062f01e41847dd996a2bcbb2687" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::get_entry</definition>
+        <argsstring>(key_type const &amp;k, entry_type &amp;val)</argsstring>
+        <name>get_entry</name>
+        <param>
+          <type>key_type const &amp;</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>entry_type &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Get a specific entry identified by the given key. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The key for the entry which should be retrieved from the cache. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[out] If the entry indexed by the key is found in the cache this value on successful return will be a copy of the corresponding entry.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The function will call the entry&apos;s <emphasis>entry::touch</emphasis> function if the value corresponding to the provided key is found in the cache.</para></simplesect>
+<simplesect kind="return"><para>This function returns <emphasis>true</emphasis> if the cache holds the referenced entry, otherwise it returns <emphasis>false</emphasis>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="271" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="271" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1local__cache_1abd6dd01f32706e1f7f81882424b87c77" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::get_entry</definition>
+        <argsstring>(key_type const &amp;k, value_type &amp;val)</argsstring>
+        <name>get_entry</name>
+        <param>
+          <type>key_type const &amp;</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>value_type &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Get a specific entry identified by the given key. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The key for the entry which should be retrieved from the cache </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[out] If the entry indexed by the key is found in the cache this value on successful return will be a copy of the corresponding value.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The function will call the entry&apos;s <emphasis>entry::touch</emphasis> function if the value corresponding to the provided is found in the cache.</para></simplesect>
+<simplesect kind="return"><para>This function returns <emphasis>true</emphasis> if the cache holds the referenced entry, otherwise it returns <emphasis>false</emphasis>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="311" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="311" bodyend="335"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1local__cache_1a9ae669671b8e9535d2f40ce314db6c0c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::insert</definition>
+        <argsstring>(key_type const &amp;k, value_type const &amp;val)</argsstring>
+        <name>insert</name>
+        <param>
+          <type>key_type const &amp;</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>value_type const &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Insert a new element into this cache. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The key for the entry which should be added to the cache. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The value which should be added to the cache.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This function invokes both, the insert policy as provided to the constructor and the function <emphasis>entry::insert</emphasis> of the newly constructed entry instance. If either of these functions returns false the key/value pair doesn&apos;t get inserted into the cache and the <emphasis>insert</emphasis> function will return <emphasis>false</emphasis>. Other reasons for this function to fail (return <emphasis>false</emphasis>) are a) the key/value pair is already held in the cache or b) inserting the new value into the cache maxed out its capacity and it was not possible to free any of the existing entries.</para></simplesect>
+<simplesect kind="return"><para>This function returns <emphasis>true</emphasis> if the entry has been successfully added to the cache, otherwise it returns <emphasis>false</emphasis>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="360" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="360" bodyend="364"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1local__cache_1a164b687f9b63e40eb0efc9dff2ca4e76" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::insert</definition>
+        <argsstring>(key_type const &amp;k, entry_type &amp;e)</argsstring>
+        <name>insert</name>
+        <param>
+          <type>key_type const &amp;</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>entry_type &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Insert a new entry into this cache. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The key for the entry which should be added to the cache. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The entry which should be added to the cache.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This function invokes both, the insert policy as provided to the constructor and the function <emphasis>entry::insert</emphasis> of the provided entry instance. If either of these functions returns false the key/value pair doesn&apos;t get inserted into the cache and the <emphasis>insert</emphasis> function will return <emphasis>false</emphasis>. Other reasons for this function to fail (return <emphasis>false</emphasis>) are a) the key/value pair is already held in the cache or b) inserting the new value into the cache maxed out its capacity and it was not possible to free any of the existing entries.</para></simplesect>
+<simplesect kind="return"><para>This function returns <emphasis>true</emphasis> if the entry has been successfully added to the cache, otherwise it returns <emphasis>false</emphasis>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="388" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="388" bodyend="421"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1local__cache_1ac0411cb5e31466edd42fa22796adba4b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::update</definition>
+        <argsstring>(key_type const &amp;k, value_type const &amp;val)</argsstring>
+        <name>update</name>
+        <param>
+          <type>key_type const &amp;</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>value_type const &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Update an existing element in this cache. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The key for the value which should be updated in the cache. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The value which should be used as a replacement for the existing value in the cache. Any existing cache entry is not changed except for its value.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The function will call the entry&apos;s <emphasis>entry::touch</emphasis> function if the indexed value is found in the cache. </para></simplesect>
+<simplesect kind="note"><para>The difference to the other overload of the <emphasis>insert</emphasis> function is that this overload replaces the cached value only, while the other overload replaces the whole cache entry, updating the cache entry properties.</para></simplesect>
+<simplesect kind="return"><para>This function returns <emphasis>true</emphasis> if the entry has been successfully updated, otherwise it returns <emphasis>false</emphasis>. If the entry currently is not held by the cache it is added and the return value reflects the outcome of the corresponding insert operation. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="445" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="445" bodyend="470"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1local__cache_1a65dd7011d1a0560d53c703f8ca738510" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::update_if</definition>
+        <argsstring>(key_type const &amp;k, value_type const &amp;val, F f)</argsstring>
+        <name>update_if</name>
+        <param>
+          <type>key_type const &amp;</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>value_type const &amp;</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>F</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+<para>Update an existing element in this cache. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The key for the value which should be updated in the cache. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The value which should be used as a replacement for the existing value in the cache. Any existing cache entry is not changed except for its value. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] A callable taking two arguments, <emphasis>k</emphasis> and the key found in the cache (in that order). If <emphasis>f</emphasis> returns true, then the update will continue. If <emphasis>f</emphasis> returns false, then the update will not succeed.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The function will call the entry&apos;s <emphasis>entry::touch</emphasis> function if the indexed value is found in the cache. </para></simplesect>
+<simplesect kind="note"><para>The difference to the other overload of the <emphasis>insert</emphasis> function is that this overload replaces the cached value only, while the other overload replaces the whole cache entry, updating the cache entry properties.</para></simplesect>
+<simplesect kind="return"><para>This function returns <emphasis>true</emphasis> if the entry has been successfully updated, otherwise it returns <emphasis>false</emphasis>. If the entry currently is not held by the cache it is added and the return value reflects the outcome of the corresponding insert operation. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="501" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="501" bodyend="529"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1local__cache_1aefc44eb2716ec5837b1b535fd116c4c9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::update</definition>
+        <argsstring>(key_type const &amp;k, entry_type &amp;e)</argsstring>
+        <name>update</name>
+        <param>
+          <type>key_type const &amp;</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>entry_type &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Update an existing entry in this cache. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The key for the entry which should be updated in the cache. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The entry which should be used as a replacement for the existing entry in the cache. Any existing entry is first removed and then this entry is added.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The function will call the entry&apos;s <emphasis>entry::touch</emphasis> function if the indexed value is found in the cache. </para></simplesect>
+<simplesect kind="note"><para>The difference to the other overload of the <emphasis>insert</emphasis> function is that this overload replaces the whole cache entry, while the other overload retplaces the cached value only, leaving the cache entry properties untouched.</para></simplesect>
+<simplesect kind="return"><para>This function returns <emphasis>true</emphasis> if the entry has been successfully updated, otherwise it returns <emphasis>false</emphasis>. If the entry currently is not held by the cache it is added and the return value reflects the outcome of the corresponding insert operation. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="552" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="552" bodyend="585"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1local__cache_1aa905ae311904f062e894d07f2dbb7c41" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Func</type>
+          </param>
+        </templateparamlist>
+        <type>size_type</type>
+        <definition>size_type hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::erase</definition>
+        <argsstring>(Func const &amp;ep=policies::always&lt; storage_value_type &gt;())</argsstring>
+        <name>erase</name>
+        <param>
+          <type>Func const &amp;</type>
+          <declname>ep</declname>
+          <defval><ref refid="structhpx_1_1util_1_1cache_1_1policies_1_1always" kindref="compound">policies::always</ref>&lt; storage_value_type &gt;()</defval>
+        </param>
+        <briefdescription>
+<para>Remove stored entries from the cache for which the supplied function object returns true. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ep</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] This parameter has to be a (unary) function object. It is invoked for each of the entries currently held in the cache. An entry is considered for removal from the cache whenever the value returned from this invocation is <emphasis>true</emphasis>. Even then the entry might not be removed from the cache as its <emphasis>entry::remove</emphasis> function might return false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function returns the overall size of the removed entries (which is the sum of the values returned by the <emphasis>entry::get_size</emphasis> functions of the removed entries). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="604" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="604" bodyend="646"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1local__cache_1ad6bd1a72f40ed4b0e1fd9b7d86b511ab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_type</type>
+        <definition>size_type hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::erase</definition>
+        <argsstring>()</argsstring>
+        <name>erase</name>
+        <briefdescription>
+<para>Remove all stored entries from the cache. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>All entries are considered for removal, but in the end an entry might not be removed from the cache as its <emphasis>entry::remove</emphasis> function might return false. This function is very useful for instance in conjunction with an entry&apos;s <emphasis>entry::remove</emphasis> function enforcing additional criteria like entry expiration, etc.</para></simplesect>
+<simplesect kind="return"><para>This function returns the overall size of the removed entries (which is the sum of the values returned by the <emphasis>entry::get_size</emphasis> functions of the removed entries). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="662" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="662" bodyend="665"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1local__cache_1a2d47a431d7f0824d195a77983fe14832" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+<para>Clear the cache. </para>        </briefdescription>
+        <detaileddescription>
+<para>Unconditionally removes all stored entries from the cache. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="670" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="670" bodyend="676"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1local__cache_1a0cb7419f73b94cc591b987411082857e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>statistics_type const  &amp;</type>
+        <definition>statistics_type const&amp; hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::get_statistics</definition>
+        <argsstring>() const</argsstring>
+        <name>get_statistics</name>
+        <briefdescription>
+<para>Allow to access the embedded statistics instance. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>This function returns a reference to the statistics instance embedded inside this cache </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="683" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="683" bodyend="686"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1local__cache_1aab7300a1927d19eb969a8ab47f5d6797" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>statistics_type &amp;</type>
+        <definition>statistics_type&amp; hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::get_statistics</definition>
+        <argsstring>()</argsstring>
+        <name>get_statistics</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="688" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="688" bodyend="691"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1local__cache_1ade545064292b0e53bde4adc34e6d679a" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hpx::util::cache::local_cache&lt; Key, Entry, UpdatePolicy, InsertPolicy, CacheStorage, Statistics &gt;::free_space</definition>
+        <argsstring>(long num_free)</argsstring>
+        <name>free_space</name>
+        <param>
+          <type>long</type>
+          <declname>num_free</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="696" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="696" bodyend="744"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <emphasis><ref refid="classhpx_1_1util_1_1cache_1_1local__cache" kindref="compound">local_cache</ref></emphasis> implements the basic functionality needed for a local (non-distributed) cache. </para>    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the keys to use to identify the entries stored in the cache </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Entry</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the items to be held in the cache, must model the CacheEntry concept </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>UpdatePolicy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A (optional) type specifying a (binary) function object used to sort the cache entries based on their &apos;age&apos;. The &apos;oldest&apos; entries (according to this sorting criteria) will be discarded first if the maximum capacity of the cache is reached. The default is std::less&lt;Entry&gt;. The function object will be invoked using 2 entry instances of the type <emphasis>Entry</emphasis>. This type must model the UpdatePolicy model. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>InsertPolicy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A (optional) type specifying a (unary) function object used to allow global decisions whether a particular entry should be added to the cache or not. The default is <emphasis><ref refid="structhpx_1_1util_1_1cache_1_1policies_1_1always" kindref="compound">policies::always</ref></emphasis>, imposing no global insert related criteria on the cache. The function object will be invoked using the entry instance to be inserted into the cache. This type must model the InsertPolicy model. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>CacheStorage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A (optional) container type used to store the cache items. The container must be an associative and STL compatible container.The default is a std::map&lt;Key, Entry&gt;. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Statistics</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A (optional) type allowing to collect some basic statistics about the operation of the cache instance. The type must conform to the CacheStatistics concept. The default value is the type <emphasis><ref refid="classhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics" kindref="compound">statistics::no_statistics</ref></emphasis> which does not collect any numbers, but provides empty stubs allowing the code to compile. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <location file="libs/cache/include/hpx/cache/local_cache.hpp" line="68" column="1" bodyfile="libs/cache/include/hpx/cache/local_cache.hpp" bodystart="67" bodyend="759"/>
+    <listofallmembers>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1a08a8073d987ecfe6a3bfc23f9bc1e27e" prot="private" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>adapted_update_policy_type</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1a01860730d39a409dd6bfd74e3fc62ab6" prot="public" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>capacity</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1a2d47a431d7f0824d195a77983fe14832" prot="public" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>clear</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1ae3bf6462ca5bf57c32ee4a74dc77607a" prot="private" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>const_iterator</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1a07e956adac277a87e3595466a9c44e9d" prot="private" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>current_size_</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1a6dee8f72bb639bed98382dd5b0e5a5e8" prot="private" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>entry_heap_</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1ab197b05a6ae86c3497e413fa5fdbf274" prot="public" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>entry_type</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1aa905ae311904f062e894d07f2dbb7c41" prot="public" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>erase</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1ad6bd1a72f40ed4b0e1fd9b7d86b511ab" prot="public" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>erase</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1ade545064292b0e53bde4adc34e6d679a" prot="protected" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>free_space</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1a9195a948e76c0ecb5d8dfcc6c09da064" prot="public" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>get_entry</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1a08581062f01e41847dd996a2bcbb2687" prot="public" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>get_entry</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1abd6dd01f32706e1f7f81882424b87c77" prot="public" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>get_entry</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1a0cb7419f73b94cc591b987411082857e" prot="public" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>get_statistics</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1aab7300a1927d19eb969a8ab47f5d6797" prot="public" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>get_statistics</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1a7add736720454bccbc10ac52209fabd0" prot="private" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>heap_iterator</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1aa2078ba012bfa798fed8b7ce845e58f3" prot="private" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>heap_type</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1a7e5d50cb245617368203b3acfdd7e1d0" prot="public" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>holds_key</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1a9ae669671b8e9535d2f40ce314db6c0c" prot="public" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>insert</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1a164b687f9b63e40eb0efc9dff2ca4e76" prot="public" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>insert</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1aad2fc96d8e5efddd7696dd53f13b6107" prot="private" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>insert_policy_</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1a856bdb153ea8f178817259fbfdf4b31f" prot="public" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>insert_policy_type</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1aa65b4f581476c115d0d5bcc6da18af24" prot="private" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>iterator</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1ac9e60d1c5e468610c7312c3d81c2aa24" prot="public" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>key_type</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1a077a294b191af52f942260e0a34e6065" prot="public" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>local_cache</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1abae6f595f001e4886673ef5cf3ee4077" prot="public" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>local_cache</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1ab636716ffa8669640a80c1dffeea7530" prot="private" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>max_size_</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1a0f633ccdb1bf77cbcc9ed440ca70265e" prot="public" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>reserve</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1a6d5a44e650f9f5ff701e2d571edc0fbc" prot="public" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>size</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1a03265eb4a27c7d0991d11750825d9e40" prot="public" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>size_type</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1a880f641fad5a9542129f01707338dac6" prot="private" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>statistics_</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1ab3af6a28073202cd8591f67c8ba363ff" prot="public" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>statistics_type</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1a5850e39702ded106f898953d7dafff09" prot="public" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>storage_type</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1a4eb8d0e0c6831fd6c82fb90c74f4451d" prot="public" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>storage_value_type</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1acbe1d563398b2b3f06dc844f96afcea4" prot="private" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>store_</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1ac0411cb5e31466edd42fa22796adba4b" prot="public" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>update</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1aefc44eb2716ec5837b1b535fd116c4c9" prot="public" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>update</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1a65dd7011d1a0560d53c703f8ca738510" prot="public" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>update_if</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1a0df20cbf5c773c1e51811cd79a908b1b" prot="private" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>update_on_exit</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1a730c15f812fc8344a4086a72e81cd64c" prot="private" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>update_policy_</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1ab993db36e6f261d499ec30929c27508f" prot="public" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>update_policy_type</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1local__cache_1a8045e26114f14f0ecf21f30a99cb7008" prot="public" virt="non-virtual"><scope>hpx::util::cache::local_cache</scope><name>value_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

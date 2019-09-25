@@ -1,0 +1,1692 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classmoodycamel_1_1_concurrent_queue" kind="class" language="C++" prot="public">
+    <compoundname>moodycamel::ConcurrentQueue</compoundname>
+    <innerclass refid="structmoodycamel_1_1_concurrent_queue_1_1_block" prot="private">moodycamel::ConcurrentQueue::Block</innerclass>
+    <innerclass refid="structmoodycamel_1_1_concurrent_queue_1_1_explicit_producer" prot="private">moodycamel::ConcurrentQueue::ExplicitProducer</innerclass>
+    <innerclass refid="structmoodycamel_1_1_concurrent_queue_1_1_free_list" prot="private">moodycamel::ConcurrentQueue::FreeList</innerclass>
+    <innerclass refid="structmoodycamel_1_1_concurrent_queue_1_1_free_list_node" prot="private">moodycamel::ConcurrentQueue::FreeListNode</innerclass>
+    <innerclass refid="structmoodycamel_1_1_concurrent_queue_1_1_implicit_producer" prot="private">moodycamel::ConcurrentQueue::ImplicitProducer</innerclass>
+    <innerclass refid="structmoodycamel_1_1_concurrent_queue_1_1_implicit_producer_hash" prot="private">moodycamel::ConcurrentQueue::ImplicitProducerHash</innerclass>
+    <innerclass refid="structmoodycamel_1_1_concurrent_queue_1_1_implicit_producer_k_v_p" prot="private">moodycamel::ConcurrentQueue::ImplicitProducerKVP</innerclass>
+    <innerclass refid="structmoodycamel_1_1_concurrent_queue_1_1_producer_base" prot="private">moodycamel::ConcurrentQueue::ProducerBase</innerclass>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+      <param>
+        <type>typename</type>
+        <declname>Traits</declname>
+        <defname>Traits</defname>
+        <defval><ref refid="structmoodycamel_1_1_concurrent_queue_default_traits" kindref="compound">ConcurrentQueueDefaultTraits</ref></defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classmoodycamel_1_1_concurrent_queue_1ad59a292a76c2276b4d1c2b1bcd5904a9" prot="private" static="no">
+        <name>AllocationMode</name>
+        <enumvalue id="classmoodycamel_1_1_concurrent_queue_1ad59a292a76c2276b4d1c2b1bcd5904a9acda4d931ae1de06621b36aa194699f02" prot="private">
+          <name>CanAlloc</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmoodycamel_1_1_concurrent_queue_1ad59a292a76c2276b4d1c2b1bcd5904a9a29feb32c1113d549e7bce98c9dd5e208" prot="private">
+          <name>CannotAlloc</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="1291" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="1291" bodyend="1291"/>
+      </memberdef>
+      <memberdef kind="enum" id="classmoodycamel_1_1_concurrent_queue_1a2724abbb38a8122bb745726a7e6d483b" prot="private" static="no">
+        <name>InnerQueueContext</name>
+        <enumvalue id="classmoodycamel_1_1_concurrent_queue_1a2724abbb38a8122bb745726a7e6d483ba1b48db1da9c93f2a40de672e8d8ee221" prot="private">
+          <name>implicit_context</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmoodycamel_1_1_concurrent_queue_1a2724abbb38a8122bb745726a7e6d483bacb4dd0ba896fb72f996845b65b637996" prot="private">
+          <name>explicit_context</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="1489" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="1489" bodyend="1489"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classmoodycamel_1_1_concurrent_queue_1a741ef2316bcd1e8cbdeafdc36ad90d83" prot="public" static="no">
+        <type>::<ref refid="structmoodycamel_1_1_producer_token" kindref="compound">moodycamel::ProducerToken</ref></type>
+        <definition>typedef ::moodycamel::ProducerToken moodycamel::ConcurrentQueue&lt; T, Traits &gt;::producer_token_t</definition>
+        <argsstring></argsstring>
+        <name>producer_token_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="702" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="702" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classmoodycamel_1_1_concurrent_queue_1acbd2c9d220d40f51177cfad5754aa7b5" prot="public" static="no">
+        <type>::<ref refid="structmoodycamel_1_1_consumer_token" kindref="compound">moodycamel::ConsumerToken</ref></type>
+        <definition>typedef ::moodycamel::ConsumerToken moodycamel::ConcurrentQueue&lt; T, Traits &gt;::consumer_token_t</definition>
+        <argsstring></argsstring>
+        <name>consumer_token_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="703" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="703" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classmoodycamel_1_1_concurrent_queue_1ad68d536c896de4e839dd95225e7deea3" prot="public" static="no">
+        <type>Traits::index_t</type>
+        <definition>typedef Traits::index_t moodycamel::ConcurrentQueue&lt; T, Traits &gt;::index_t</definition>
+        <argsstring></argsstring>
+        <name>index_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="705" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="705" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classmoodycamel_1_1_concurrent_queue_1ac0b73313ed107d313b55c8a77be19b28" prot="public" static="no">
+        <type>Traits::size_t</type>
+        <definition>typedef Traits::size_t moodycamel::ConcurrentQueue&lt; T, Traits &gt;::size_t</definition>
+        <argsstring></argsstring>
+        <name>size_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="706" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="706" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classmoodycamel_1_1_concurrent_queue_1ae555aae96010307e7991b1028b41cfb8" prot="public" static="yes" mutable="no">
+        <type>const size_t</type>
+        <definition>const size_t moodycamel::ConcurrentQueue&lt; T, Traits &gt;::BLOCK_SIZE</definition>
+        <argsstring></argsstring>
+        <name>BLOCK_SIZE</name>
+        <initializer>= static_cast&lt;size_t&gt;(Traits::BLOCK_SIZE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="708" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="708" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmoodycamel_1_1_concurrent_queue_1aaadd55fc6ac80c277225977fe9bdecee" prot="public" static="yes" mutable="no">
+        <type>const size_t</type>
+        <definition>const size_t moodycamel::ConcurrentQueue&lt; T, Traits &gt;::EXPLICIT_BLOCK_EMPTY_COUNTER_THRESHOLD</definition>
+        <argsstring></argsstring>
+        <name>EXPLICIT_BLOCK_EMPTY_COUNTER_THRESHOLD</name>
+        <initializer>= static_cast&lt;size_t&gt;(Traits::EXPLICIT_BLOCK_EMPTY_COUNTER_THRESHOLD)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="709" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="709" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmoodycamel_1_1_concurrent_queue_1ae29231222f904afacd0c9ed55d67cd09" prot="public" static="yes" mutable="no">
+        <type>const size_t</type>
+        <definition>const size_t moodycamel::ConcurrentQueue&lt; T, Traits &gt;::EXPLICIT_INITIAL_INDEX_SIZE</definition>
+        <argsstring></argsstring>
+        <name>EXPLICIT_INITIAL_INDEX_SIZE</name>
+        <initializer>= static_cast&lt;size_t&gt;(Traits::EXPLICIT_INITIAL_INDEX_SIZE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="710" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="710" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmoodycamel_1_1_concurrent_queue_1a9a25b761a75bd2c3cd1f58037f9da89f" prot="public" static="yes" mutable="no">
+        <type>const size_t</type>
+        <definition>const size_t moodycamel::ConcurrentQueue&lt; T, Traits &gt;::IMPLICIT_INITIAL_INDEX_SIZE</definition>
+        <argsstring></argsstring>
+        <name>IMPLICIT_INITIAL_INDEX_SIZE</name>
+        <initializer>= static_cast&lt;size_t&gt;(Traits::IMPLICIT_INITIAL_INDEX_SIZE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="711" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="711" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmoodycamel_1_1_concurrent_queue_1a52f4615c06da9bca3be093123c7cc160" prot="public" static="yes" mutable="no">
+        <type>const size_t</type>
+        <definition>const size_t moodycamel::ConcurrentQueue&lt; T, Traits &gt;::INITIAL_IMPLICIT_PRODUCER_HASH_SIZE</definition>
+        <argsstring></argsstring>
+        <name>INITIAL_IMPLICIT_PRODUCER_HASH_SIZE</name>
+        <initializer>= static_cast&lt;size_t&gt;(Traits::INITIAL_IMPLICIT_PRODUCER_HASH_SIZE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="712" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="712" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmoodycamel_1_1_concurrent_queue_1a8593fb32003144c034323c8fe353c359" prot="public" static="yes" mutable="no">
+        <type>const std::uint32_t</type>
+        <definition>const std::uint32_t moodycamel::ConcurrentQueue&lt; T, Traits &gt;::EXPLICIT_CONSUMER_CONSUMPTION_QUOTA_BEFORE_ROTATE</definition>
+        <argsstring></argsstring>
+        <name>EXPLICIT_CONSUMER_CONSUMPTION_QUOTA_BEFORE_ROTATE</name>
+        <initializer>= static_cast&lt;std::uint32_t&gt;(Traits::EXPLICIT_CONSUMER_CONSUMPTION_QUOTA_BEFORE_ROTATE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="713" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="713" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmoodycamel_1_1_concurrent_queue_1a2302943ed9b7579ec9b9f6863c57f10a" prot="public" static="yes" mutable="no">
+        <type>const size_t</type>
+        <definition>const size_t moodycamel::ConcurrentQueue&lt; T, Traits &gt;::MAX_SUBQUEUE_SIZE</definition>
+        <argsstring></argsstring>
+        <name>MAX_SUBQUEUE_SIZE</name>
+        <initializer>= (<ref refid="structmoodycamel_1_1details_1_1const__numeric__max" kindref="compound">details::const_numeric_max</ref>&lt;size_t&gt;::value - static_cast&lt;size_t&gt;(Traits::MAX_SUBQUEUE_SIZE) &lt; BLOCK_SIZE) ? <ref refid="structmoodycamel_1_1details_1_1const__numeric__max" kindref="compound">details::const_numeric_max</ref>&lt;size_t&gt;::value : ((static_cast&lt;size_t&gt;(Traits::MAX_SUBQUEUE_SIZE) + (BLOCK_SIZE - 1)) / BLOCK_SIZE * BLOCK_SIZE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="719" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="719" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classmoodycamel_1_1_concurrent_queue_1acfb3304f9d64003d203b0d2dbc3fbc41" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend struct</type>
+        <definition>friend struct ProducerToken</definition>
+        <argsstring></argsstring>
+        <name>ProducerToken</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="1283" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="1283" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classmoodycamel_1_1_concurrent_queue_1a81aed503980c50c35b8447926e2581ec" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend struct</type>
+        <definition>friend struct ConsumerToken</definition>
+        <argsstring></argsstring>
+        <name>ConsumerToken</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="1284" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="1284" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classmoodycamel_1_1_concurrent_queue_1a7bebbfc18b6ad306d5837467e9c05323" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend struct</type>
+        <definition>friend struct ExplicitProducer</definition>
+        <argsstring></argsstring>
+        <name>ExplicitProducer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="1286" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="1285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classmoodycamel_1_1_concurrent_queue_1ab79e82aa1a04eb71ff8297700ff94d58" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend struct</type>
+        <definition>friend struct ImplicitProducer</definition>
+        <argsstring></argsstring>
+        <name>ImplicitProducer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="1288" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="1287" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classmoodycamel_1_1_concurrent_queue_1a680d9a9301a3c7bb2380209214ace21e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class ConcurrentQueueTests</definition>
+        <argsstring></argsstring>
+        <name>ConcurrentQueueTests</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="1289" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="1289" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classmoodycamel_1_1_concurrent_queue_1ad65cc3887b8b356dff18ac235c21d6fa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename XT</type>
+          </param>
+          <param>
+            <type>typename XTraits</type>
+          </param>
+        </templateparamlist>
+        <type>friend void</type>
+        <definition>void moodycamel::swap</definition>
+        <argsstring>(typename ConcurrentQueue&lt; XT, XTraits &gt;::ImplicitProducerKVP &amp;, typename ConcurrentQueue&lt; XT, XTraits &gt;::ImplicitProducerKVP &amp;) MOODYCAMEL_NOEXCEPT</argsstring>
+        <name>moodycamel::swap</name>
+        <param>
+          <type>typename <ref refid="classmoodycamel_1_1_concurrent_queue" kindref="compound">ConcurrentQueue</ref>&lt; XT, XTraits &gt;::ImplicitProducerKVP &amp;</type>
+        </param>
+        <param>
+          <type>typename <ref refid="classmoodycamel_1_1_concurrent_queue" kindref="compound">ConcurrentQueue</ref>&lt; XT, XTraits &gt;::ImplicitProducerKVP &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="3251" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmoodycamel_1_1_concurrent_queue_1a83df636bb50cc9e2bdaec981c9ac571f" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; ProducerBase * &gt;</type>
+        <definition>std::atomic&lt;ProducerBase*&gt; moodycamel::ConcurrentQueue&lt; T, Traits &gt;::producerListTail</definition>
+        <argsstring></argsstring>
+        <name>producerListTail</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="3558" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="3558" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmoodycamel_1_1_concurrent_queue_1a4355f555d5548c8a20bd7354cd713ff3" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; std::uint32_t &gt;</type>
+        <definition>std::atomic&lt;std::uint32_t&gt; moodycamel::ConcurrentQueue&lt; T, Traits &gt;::producerCount</definition>
+        <argsstring></argsstring>
+        <name>producerCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="3559" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="3559" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmoodycamel_1_1_concurrent_queue_1aa499de692b70d71ae73479eda8a0ed3f" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; size_t &gt;</type>
+        <definition>std::atomic&lt;size_t&gt; moodycamel::ConcurrentQueue&lt; T, Traits &gt;::initialBlockPoolIndex</definition>
+        <argsstring></argsstring>
+        <name>initialBlockPoolIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="3561" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="3561" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmoodycamel_1_1_concurrent_queue_1a90f66db25719961fa59546e8c1081c11" prot="private" static="no" mutable="no">
+        <type>Block *</type>
+        <definition>Block* moodycamel::ConcurrentQueue&lt; T, Traits &gt;::initialBlockPool</definition>
+        <argsstring></argsstring>
+        <name>initialBlockPool</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="3562" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="3562" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmoodycamel_1_1_concurrent_queue_1a25397df70b1ff07b8218cd09fcc09f28" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t moodycamel::ConcurrentQueue&lt; T, Traits &gt;::initialBlockPoolSize</definition>
+        <argsstring></argsstring>
+        <name>initialBlockPoolSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="3563" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="3563" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmoodycamel_1_1_concurrent_queue_1a3d77f5061363683dd498c53df7d92374" prot="private" static="no" mutable="no">
+        <type>FreeList&lt; Block &gt;</type>
+        <definition>FreeList&lt;Block&gt; moodycamel::ConcurrentQueue&lt; T, Traits &gt;::freeList</definition>
+        <argsstring></argsstring>
+        <name>freeList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="3566" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="3566" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmoodycamel_1_1_concurrent_queue_1ab8a9cee6575e355bcc9a97262a9133a7" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; ImplicitProducerHash * &gt;</type>
+        <definition>std::atomic&lt;ImplicitProducerHash*&gt; moodycamel::ConcurrentQueue&lt; T, Traits &gt;::implicitProducerHash</definition>
+        <argsstring></argsstring>
+        <name>implicitProducerHash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="3571" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="3571" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmoodycamel_1_1_concurrent_queue_1a7e0bb03f210872a5023f86469b73a098" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; size_t &gt;</type>
+        <definition>std::atomic&lt;size_t&gt; moodycamel::ConcurrentQueue&lt; T, Traits &gt;::implicitProducerHashCount</definition>
+        <argsstring></argsstring>
+        <name>implicitProducerHashCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="3572" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="3572" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmoodycamel_1_1_concurrent_queue_1a667b505facefc3f2b67fe03754aa471a" prot="private" static="no" mutable="no">
+        <type>ImplicitProducerHash</type>
+        <definition>ImplicitProducerHash moodycamel::ConcurrentQueue&lt; T, Traits &gt;::initialImplicitProducerHash</definition>
+        <argsstring></argsstring>
+        <name>initialImplicitProducerHash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="3573" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="3573" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmoodycamel_1_1_concurrent_queue_1a52785bfec690380ff78d651a16e14ecc" prot="private" static="no" mutable="no">
+        <type>std::array&lt; ImplicitProducerKVP, INITIAL_IMPLICIT_PRODUCER_HASH_SIZE &gt;</type>
+        <definition>std::array&lt;ImplicitProducerKVP, INITIAL_IMPLICIT_PRODUCER_HASH_SIZE&gt; moodycamel::ConcurrentQueue&lt; T, Traits &gt;::initialImplicitProducerHashEntries</definition>
+        <argsstring></argsstring>
+        <name>initialImplicitProducerHashEntries</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="3574" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="3574" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmoodycamel_1_1_concurrent_queue_1abb675e5c403e8e746f5bf39f01f07985" prot="private" static="no" mutable="no">
+        <type>std::atomic_flag</type>
+        <definition>std::atomic_flag moodycamel::ConcurrentQueue&lt; T, Traits &gt;::implicitProducerHashResizeInProgress</definition>
+        <argsstring></argsstring>
+        <name>implicitProducerHashResizeInProgress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="3575" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="3575" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmoodycamel_1_1_concurrent_queue_1acefb81bbc15ab1ce7fadfc554bc7266f" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; std::uint32_t &gt;</type>
+        <definition>std::atomic&lt;std::uint32_t&gt; moodycamel::ConcurrentQueue&lt; T, Traits &gt;::nextExplicitConsumerId</definition>
+        <argsstring></argsstring>
+        <name>nextExplicitConsumerId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="3577" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="3577" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmoodycamel_1_1_concurrent_queue_1a594833a3c8cc9be773c76467be743e28" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; std::uint32_t &gt;</type>
+        <definition>std::atomic&lt;std::uint32_t&gt; moodycamel::ConcurrentQueue&lt; T, Traits &gt;::globalExplicitConsumerOffset</definition>
+        <argsstring></argsstring>
+        <name>globalExplicitConsumerOffset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="3578" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="3578" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a2c07fb51a9cd1baaec9d0f1a079d83cd" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>moodycamel::ConcurrentQueue&lt; T, Traits &gt;::ConcurrentQueue</definition>
+        <argsstring>(size_t capacity=6 *BLOCK_SIZE)</argsstring>
+        <name>ConcurrentQueue</name>
+        <param>
+          <type>size_t</type>
+          <declname>capacity</declname>
+          <defval>6 *BLOCK_SIZE</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="745" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="745" bodyend="764"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1ad327feb7a7e861051d1dfd61e2ffa1df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>moodycamel::ConcurrentQueue&lt; T, Traits &gt;::ConcurrentQueue</definition>
+        <argsstring>(size_t minCapacity, size_t maxExplicitProducers, size_t maxImplicitProducers)</argsstring>
+        <name>ConcurrentQueue</name>
+        <param>
+          <type>size_t</type>
+          <declname>minCapacity</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>maxExplicitProducers</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>maxImplicitProducers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="769" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="769" bodyend="785"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1add203e2137970f317f16cf347471b2f7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>moodycamel::ConcurrentQueue&lt; T, Traits &gt;::~ConcurrentQueue</definition>
+        <argsstring>()</argsstring>
+        <name>~ConcurrentQueue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="790" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="790" bodyend="831"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a1b4b08c6b6db7bf0df041619d133171c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>moodycamel::ConcurrentQueue&lt; T, Traits &gt;::ConcurrentQueue</definition>
+        <argsstring>(ConcurrentQueue const &amp;) MOODYCAMEL_DELETE_FUNCTION</argsstring>
+        <name>ConcurrentQueue</name>
+        <param>
+          <type><ref refid="classmoodycamel_1_1_concurrent_queue" kindref="compound">ConcurrentQueue</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="834" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a1053a6931119c1896026601846434969" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmoodycamel_1_1_concurrent_queue" kindref="compound">ConcurrentQueue</ref> &amp;</type>
+        <definition>ConcurrentQueue&amp; moodycamel::ConcurrentQueue&lt; T, Traits &gt;::operator=</definition>
+        <argsstring>(ConcurrentQueue const &amp;) MOODYCAMEL_DELETE_FUNCTION</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classmoodycamel_1_1_concurrent_queue" kindref="compound">ConcurrentQueue</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="835" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1ae908c026d0eb0591ca6f8f5518f7ffdf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>moodycamel::ConcurrentQueue&lt; T, Traits &gt;::ConcurrentQueue</definition>
+        <argsstring>(ConcurrentQueue &amp;&amp;other) MOODYCAMEL_NOEXCEPT</argsstring>
+        <name>ConcurrentQueue</name>
+        <param>
+          <type><ref refid="classmoodycamel_1_1_concurrent_queue" kindref="compound">ConcurrentQueue</ref> &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="843" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="843" bodyend="875"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a9986a5835abd1cdbdea2e5c7baf3fb66" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classmoodycamel_1_1_concurrent_queue" kindref="compound">ConcurrentQueue</ref> &amp;</type>
+        <definition>ConcurrentQueue&amp; moodycamel::ConcurrentQueue&lt; T, Traits &gt;::operator=</definition>
+        <argsstring>(ConcurrentQueue &amp;&amp;other) MOODYCAMEL_NOEXCEPT</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classmoodycamel_1_1_concurrent_queue" kindref="compound">ConcurrentQueue</ref> &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="877" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="877" bodyend="880"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a7c1c42c76a8218896a4d76efed142b2c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void moodycamel::ConcurrentQueue&lt; T, Traits &gt;::swap</definition>
+        <argsstring>(ConcurrentQueue &amp;other) MOODYCAMEL_NOEXCEPT</argsstring>
+        <name>swap</name>
+        <param>
+          <type><ref refid="classmoodycamel_1_1_concurrent_queue" kindref="compound">ConcurrentQueue</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="887" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="887" bodyend="890"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1aceaa7271014aa901829e3ed1b1005d65" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool moodycamel::ConcurrentQueue&lt; T, Traits &gt;::enqueue</definition>
+        <argsstring>(T const &amp;item)</argsstring>
+        <name>enqueue</name>
+        <param>
+          <type>T const &amp;</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="927" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="927" bodyend="931"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a4a36bd689aeaffd635416a4279566198" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool moodycamel::ConcurrentQueue&lt; T, Traits &gt;::enqueue</definition>
+        <argsstring>(T &amp;&amp;item)</argsstring>
+        <name>enqueue</name>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="938" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="938" bodyend="942"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a0b5882e6e7a053e27427709f11094dae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool moodycamel::ConcurrentQueue&lt; T, Traits &gt;::enqueue</definition>
+        <argsstring>(producer_token_t const &amp;token, T const &amp;item)</argsstring>
+        <name>enqueue</name>
+        <param>
+          <type><ref refid="structmoodycamel_1_1_producer_token" kindref="compound">producer_token_t</ref> const &amp;</type>
+          <declname>token</declname>
+        </param>
+        <param>
+          <type>T const &amp;</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="948" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="948" bodyend="951"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a0e27b67c2aa7b4fc2eb0777fa6bd7cbc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool moodycamel::ConcurrentQueue&lt; T, Traits &gt;::enqueue</definition>
+        <argsstring>(producer_token_t const &amp;token, T &amp;&amp;item)</argsstring>
+        <name>enqueue</name>
+        <param>
+          <type><ref refid="structmoodycamel_1_1_producer_token" kindref="compound">producer_token_t</ref> const &amp;</type>
+          <declname>token</declname>
+        </param>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="957" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="957" bodyend="960"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a57b0aa33a19538a7c97d839fbf0d8459" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename It</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool moodycamel::ConcurrentQueue&lt; T, Traits &gt;::enqueue_bulk</definition>
+        <argsstring>(It itemFirst, size_t count)</argsstring>
+        <name>enqueue_bulk</name>
+        <param>
+          <type>It</type>
+          <declname>itemFirst</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="969" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="969" bodyend="973"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a61a4b16a77535cc57fa3c76fb5ee3fba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename It</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool moodycamel::ConcurrentQueue&lt; T, Traits &gt;::enqueue_bulk</definition>
+        <argsstring>(producer_token_t const &amp;token, It itemFirst, size_t count)</argsstring>
+        <name>enqueue_bulk</name>
+        <param>
+          <type><ref refid="structmoodycamel_1_1_producer_token" kindref="compound">producer_token_t</ref> const &amp;</type>
+          <declname>token</declname>
+        </param>
+        <param>
+          <type>It</type>
+          <declname>itemFirst</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="982" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="982" bodyend="985"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1aaab76643a98e1094cecdd213fbb6e75d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool moodycamel::ConcurrentQueue&lt; T, Traits &gt;::try_enqueue</definition>
+        <argsstring>(T const &amp;item)</argsstring>
+        <name>try_enqueue</name>
+        <param>
+          <type>T const &amp;</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="992" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="992" bodyend="996"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1af63a4f51a8b8b6c59ea883ed97fff7a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool moodycamel::ConcurrentQueue&lt; T, Traits &gt;::try_enqueue</definition>
+        <argsstring>(T &amp;&amp;item)</argsstring>
+        <name>try_enqueue</name>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="1003" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="1003" bodyend="1007"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1ad04237577ca981e18e23190773cf1644" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool moodycamel::ConcurrentQueue&lt; T, Traits &gt;::try_enqueue</definition>
+        <argsstring>(producer_token_t const &amp;token, T const &amp;item)</argsstring>
+        <name>try_enqueue</name>
+        <param>
+          <type><ref refid="structmoodycamel_1_1_producer_token" kindref="compound">producer_token_t</ref> const &amp;</type>
+          <declname>token</declname>
+        </param>
+        <param>
+          <type>T const &amp;</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="1012" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="1012" bodyend="1015"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a049a33d4127c66a614b717cf20bba330" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool moodycamel::ConcurrentQueue&lt; T, Traits &gt;::try_enqueue</definition>
+        <argsstring>(producer_token_t const &amp;token, T &amp;&amp;item)</argsstring>
+        <name>try_enqueue</name>
+        <param>
+          <type><ref refid="structmoodycamel_1_1_producer_token" kindref="compound">producer_token_t</ref> const &amp;</type>
+          <declname>token</declname>
+        </param>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="1020" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="1020" bodyend="1023"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1aecbe38c03c23ea980d1bc1f9445d26c2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename It</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool moodycamel::ConcurrentQueue&lt; T, Traits &gt;::try_enqueue_bulk</definition>
+        <argsstring>(It itemFirst, size_t count)</argsstring>
+        <name>try_enqueue_bulk</name>
+        <param>
+          <type>It</type>
+          <declname>itemFirst</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="1033" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="1033" bodyend="1037"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a359380c0d6952e61f3ef4811808eb573" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename It</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool moodycamel::ConcurrentQueue&lt; T, Traits &gt;::try_enqueue_bulk</definition>
+        <argsstring>(producer_token_t const &amp;token, It itemFirst, size_t count)</argsstring>
+        <name>try_enqueue_bulk</name>
+        <param>
+          <type><ref refid="structmoodycamel_1_1_producer_token" kindref="compound">producer_token_t</ref> const &amp;</type>
+          <declname>token</declname>
+        </param>
+        <param>
+          <type>It</type>
+          <declname>itemFirst</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="1045" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="1045" bodyend="1048"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a1895c8a6120aef578fe01db53879517b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool moodycamel::ConcurrentQueue&lt; T, Traits &gt;::try_dequeue</definition>
+        <argsstring>(U &amp;item)</argsstring>
+        <name>try_dequeue</name>
+        <param>
+          <type>U &amp;</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="1057" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="1057" bodyend="1088"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1ad9f25d247543755bdc1b477f2678455f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool moodycamel::ConcurrentQueue&lt; T, Traits &gt;::try_dequeue_non_interleaved</definition>
+        <argsstring>(U &amp;item)</argsstring>
+        <name>try_dequeue_non_interleaved</name>
+        <param>
+          <type>U &amp;</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="1100" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="1100" bodyend="1108"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a67d5a2377539808015044acbb34216d1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool moodycamel::ConcurrentQueue&lt; T, Traits &gt;::try_dequeue</definition>
+        <argsstring>(consumer_token_t &amp;token, U &amp;item)</argsstring>
+        <name>try_dequeue</name>
+        <param>
+          <type><ref refid="structmoodycamel_1_1_consumer_token" kindref="compound">consumer_token_t</ref> &amp;</type>
+          <declname>token</declname>
+        </param>
+        <param>
+          <type>U &amp;</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="1115" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="1115" bodyend="1155"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a816450a4b774c374ef8ee0234e7c4518" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename It</type>
+          </param>
+        </templateparamlist>
+        <type>size_t</type>
+        <definition>size_t moodycamel::ConcurrentQueue&lt; T, Traits &gt;::try_dequeue_bulk</definition>
+        <argsstring>(It itemFirst, size_t max)</argsstring>
+        <name>try_dequeue_bulk</name>
+        <param>
+          <type>It</type>
+          <declname>itemFirst</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>max</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="1163" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="1163" bodyend="1173"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a57e6b02051baed9cc1b3fb5e46743c03" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename It</type>
+          </param>
+        </templateparamlist>
+        <type>size_t</type>
+        <definition>size_t moodycamel::ConcurrentQueue&lt; T, Traits &gt;::try_dequeue_bulk</definition>
+        <argsstring>(consumer_token_t &amp;token, It itemFirst, size_t max)</argsstring>
+        <name>try_dequeue_bulk</name>
+        <param>
+          <type><ref refid="structmoodycamel_1_1_consumer_token" kindref="compound">consumer_token_t</ref> &amp;</type>
+          <declname>token</declname>
+        </param>
+        <param>
+          <type>It</type>
+          <declname>itemFirst</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>max</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="1181" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="1181" bodyend="1221"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a609358c281fb44c88088f229c47e424d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool moodycamel::ConcurrentQueue&lt; T, Traits &gt;::try_dequeue_from_producer</definition>
+        <argsstring>(producer_token_t const &amp;producer, U &amp;item)</argsstring>
+        <name>try_dequeue_from_producer</name>
+        <param>
+          <type><ref refid="structmoodycamel_1_1_producer_token" kindref="compound">producer_token_t</ref> const &amp;</type>
+          <declname>producer</declname>
+        </param>
+        <param>
+          <type>U &amp;</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="1232" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="1232" bodyend="1235"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a1cfc50210d50dba266431ff82b908da7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename It</type>
+          </param>
+        </templateparamlist>
+        <type>size_t</type>
+        <definition>size_t moodycamel::ConcurrentQueue&lt; T, Traits &gt;::try_dequeue_bulk_from_producer</definition>
+        <argsstring>(producer_token_t const &amp;producer, It itemFirst, size_t max)</argsstring>
+        <name>try_dequeue_bulk_from_producer</name>
+        <param>
+          <type><ref refid="structmoodycamel_1_1_producer_token" kindref="compound">producer_token_t</ref> const &amp;</type>
+          <declname>producer</declname>
+        </param>
+        <param>
+          <type>It</type>
+          <declname>itemFirst</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>max</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="1245" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="1245" bodyend="1248"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1aecab179b995f119c89da71f62b2d21a5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t moodycamel::ConcurrentQueue&lt; T, Traits &gt;::size_approx</definition>
+        <argsstring>() const</argsstring>
+        <name>size_approx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="1257" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="1257" bodyend="1264"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1ab2432d151da5a3d552cf65070952714c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classmoodycamel_1_1_concurrent_queue" kindref="compound">ConcurrentQueue</ref> &amp;</type>
+        <definition>ConcurrentQueue&amp; moodycamel::ConcurrentQueue&lt; T, Traits &gt;::swap_internal</definition>
+        <argsstring>(ConcurrentQueue &amp;other)</argsstring>
+        <name>swap_internal</name>
+        <param>
+          <type><ref refid="classmoodycamel_1_1_concurrent_queue" kindref="compound">ConcurrentQueue</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="893" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="893" bodyend="919"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1af6549d05e1d7a8ce20145618e2c18e92" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>AllocationMode</type>
+            <declname>canAlloc</declname>
+            <defname>canAlloc</defname>
+          </param>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool moodycamel::ConcurrentQueue&lt; T, Traits &gt;::inner_enqueue</definition>
+        <argsstring>(producer_token_t const &amp;token, U &amp;&amp;element)</argsstring>
+        <name>inner_enqueue</name>
+        <param>
+          <type><ref refid="structmoodycamel_1_1_producer_token" kindref="compound">producer_token_t</ref> const &amp;</type>
+          <declname>token</declname>
+        </param>
+        <param>
+          <type>U &amp;&amp;</type>
+          <declname>element</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="1299" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="1299" bodyend="1302"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a7e67aff66f97f95b2e5037b4ff234799" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>AllocationMode</type>
+            <declname>canAlloc</declname>
+            <defname>canAlloc</defname>
+          </param>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool moodycamel::ConcurrentQueue&lt; T, Traits &gt;::inner_enqueue</definition>
+        <argsstring>(U &amp;&amp;element)</argsstring>
+        <name>inner_enqueue</name>
+        <param>
+          <type>U &amp;&amp;</type>
+          <declname>element</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="1305" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="1305" bodyend="1309"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1abcdc7d44735e3911b859da42e0143fff" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>AllocationMode</type>
+            <declname>canAlloc</declname>
+            <defname>canAlloc</defname>
+          </param>
+          <param>
+            <type>typename It</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool moodycamel::ConcurrentQueue&lt; T, Traits &gt;::inner_enqueue_bulk</definition>
+        <argsstring>(producer_token_t const &amp;token, It itemFirst, size_t count)</argsstring>
+        <name>inner_enqueue_bulk</name>
+        <param>
+          <type><ref refid="structmoodycamel_1_1_producer_token" kindref="compound">producer_token_t</ref> const &amp;</type>
+          <declname>token</declname>
+        </param>
+        <param>
+          <type>It</type>
+          <declname>itemFirst</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="1312" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="1312" bodyend="1315"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a3b904c66ff844ba1b11c548d24dfec5d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>AllocationMode</type>
+            <declname>canAlloc</declname>
+            <defname>canAlloc</defname>
+          </param>
+          <param>
+            <type>typename It</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool moodycamel::ConcurrentQueue&lt; T, Traits &gt;::inner_enqueue_bulk</definition>
+        <argsstring>(It itemFirst, size_t count)</argsstring>
+        <name>inner_enqueue_bulk</name>
+        <param>
+          <type>It</type>
+          <declname>itemFirst</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="1318" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="1318" bodyend="1322"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a28714fc92138059523f3376af2f41572" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool moodycamel::ConcurrentQueue&lt; T, Traits &gt;::update_current_producer_after_rotation</definition>
+        <argsstring>(consumer_token_t &amp;token)</argsstring>
+        <name>update_current_producer_after_rotation</name>
+        <param>
+          <type><ref refid="structmoodycamel_1_1_consumer_token" kindref="compound">consumer_token_t</ref> &amp;</type>
+          <declname>token</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="1324" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="1324" bodyend="1362"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a76fcd9cecc4d9e4400b714fed362964c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void moodycamel::ConcurrentQueue&lt; T, Traits &gt;::populate_initial_block_list</definition>
+        <argsstring>(size_t blockCount)</argsstring>
+        <name>populate_initial_block_list</name>
+        <param>
+          <type>size_t</type>
+          <declname>blockCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="2965" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="2965" bodyend="2980"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a3756e2e7e8bfefb2d2042724fc4cf063" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Block *</type>
+        <definition>Block* moodycamel::ConcurrentQueue&lt; T, Traits &gt;::try_get_block_from_initial_pool</definition>
+        <argsstring>()</argsstring>
+        <name>try_get_block_from_initial_pool</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="2982" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="2982" bodyend="2991"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a6c7ea19979bdc48733f942f6dba1512f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void moodycamel::ConcurrentQueue&lt; T, Traits &gt;::add_block_to_free_list</definition>
+        <argsstring>(Block *block)</argsstring>
+        <name>add_block_to_free_list</name>
+        <param>
+          <type>Block *</type>
+          <declname>block</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="2993" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="2993" bodyend="2999"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a619e82afd7acedbb2fb4fc26420cc1e1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void moodycamel::ConcurrentQueue&lt; T, Traits &gt;::add_blocks_to_free_list</definition>
+        <argsstring>(Block *block)</argsstring>
+        <name>add_blocks_to_free_list</name>
+        <param>
+          <type>Block *</type>
+          <declname>block</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="3001" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="3001" bodyend="3008"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a2c6bc98e7510750513f69603ed4d23d8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Block *</type>
+        <definition>Block* moodycamel::ConcurrentQueue&lt; T, Traits &gt;::try_get_block_from_free_list</definition>
+        <argsstring>()</argsstring>
+        <name>try_get_block_from_free_list</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="3010" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="3010" bodyend="3013"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a9d20374051ff718e2f1dae487b9e2874" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>AllocationMode</type>
+            <declname>canAlloc</declname>
+            <defname>canAlloc</defname>
+          </param>
+        </templateparamlist>
+        <type>Block *</type>
+        <definition>Block* moodycamel::ConcurrentQueue&lt; T, Traits &gt;::requisition_block</definition>
+        <argsstring>()</argsstring>
+        <name>requisition_block</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="3017" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="3017" bodyend="3034"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a6d60e24f86e19d0bf527a3f5afe5927c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ProducerBase *</type>
+        <definition>ProducerBase* moodycamel::ConcurrentQueue&lt; T, Traits &gt;::recycle_or_create_producer</definition>
+        <argsstring>(bool isExplicit)</argsstring>
+        <name>recycle_or_create_producer</name>
+        <param>
+          <type>bool</type>
+          <declname>isExplicit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="3147" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="3147" bodyend="3151"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a42a07d2a0fe3d572c9ab38a5d8fa4d74" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ProducerBase *</type>
+        <definition>ProducerBase* moodycamel::ConcurrentQueue&lt; T, Traits &gt;::recycle_or_create_producer</definition>
+        <argsstring>(bool isExplicit, bool &amp;recycled)</argsstring>
+        <name>recycle_or_create_producer</name>
+        <param>
+          <type>bool</type>
+          <declname>isExplicit</declname>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+          <declname>recycled</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="3153" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="3153" bodyend="3172"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a69149fd52699c1a3366b77c6b95ba1e8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ProducerBase *</type>
+        <definition>ProducerBase* moodycamel::ConcurrentQueue&lt; T, Traits &gt;::add_producer</definition>
+        <argsstring>(ProducerBase *producer)</argsstring>
+        <name>add_producer</name>
+        <param>
+          <type>ProducerBase *</type>
+          <declname>producer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="3174" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="3174" bodyend="3205"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a861c0700e2b3578d7d3b3838c8fe3d4d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void moodycamel::ConcurrentQueue&lt; T, Traits &gt;::reown_producers</definition>
+        <argsstring>()</argsstring>
+        <name>reown_producers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="3207" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="3207" bodyend="3215"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a18214a0fe743effb7a8fb8aa4b7e38d1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void moodycamel::ConcurrentQueue&lt; T, Traits &gt;::populate_initial_implicit_producer_hash</definition>
+        <argsstring>()</argsstring>
+        <name>populate_initial_implicit_producer_hash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="3260" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="3260" bodyend="3273"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1ab6ea9b2c5b8461c638cf90d16d54d24b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void moodycamel::ConcurrentQueue&lt; T, Traits &gt;::swap_implicit_producer_hashes</definition>
+        <argsstring>(ConcurrentQueue &amp;other)</argsstring>
+        <name>swap_implicit_producer_hashes</name>
+        <param>
+          <type><ref refid="classmoodycamel_1_1_concurrent_queue" kindref="compound">ConcurrentQueue</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="3275" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="3275" bodyend="3307"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a17885691af459115f817ab618f63137c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ImplicitProducer *</type>
+        <definition>ImplicitProducer* moodycamel::ConcurrentQueue&lt; T, Traits &gt;::get_or_add_implicit_producer</definition>
+        <argsstring>()</argsstring>
+        <name>get_or_add_implicit_producer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="3310" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="3310" bodyend="3458"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1acf52b5f16906d4bd1d2cfee05dd0b517" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool moodycamel::ConcurrentQueue&lt; T, Traits &gt;::is_lock_free</definition>
+        <argsstring>()</argsstring>
+        <name>is_lock_free</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="1270" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="1270" bodyend="1279"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a19c3657a5c77c1851a9ffdc1d9d59175" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type>U *</type>
+        <definition>static U* moodycamel::ConcurrentQueue&lt; T, Traits &gt;::create_array</definition>
+        <argsstring>(size_t count)</argsstring>
+        <name>create_array</name>
+        <param>
+          <type>size_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="3508" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="3508" bodyend="3520"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a4dee0841f9dc7792cb819f008a3d1759" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void moodycamel::ConcurrentQueue&lt; T, Traits &gt;::destroy_array</definition>
+        <argsstring>(U *p, size_t count)</argsstring>
+        <name>destroy_array</name>
+        <param>
+          <type>U *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="3523" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="3523" bodyend="3532"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a989e90a8f0750c5ebce6f0be9cda584f" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type>U *</type>
+        <definition>static U* moodycamel::ConcurrentQueue&lt; T, Traits &gt;::create</definition>
+        <argsstring>()</argsstring>
+        <name>create</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="3535" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="3535" bodyend="3539"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a5fba26cbc20a4e9e38ed609a557f2a78" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename U</type>
+          </param>
+          <param>
+            <type>typename A1</type>
+          </param>
+        </templateparamlist>
+        <type>U *</type>
+        <definition>static U* moodycamel::ConcurrentQueue&lt; T, Traits &gt;::create</definition>
+        <argsstring>(A1 &amp;&amp;a1)</argsstring>
+        <name>create</name>
+        <param>
+          <type>A1 &amp;&amp;</type>
+          <declname>a1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="3542" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="3542" bodyend="3546"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoodycamel_1_1_concurrent_queue_1a1681b1d4ea2e042410f97e045a26b149" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void moodycamel::ConcurrentQueue&lt; T, Traits &gt;::destroy</definition>
+        <argsstring>(U *p)</argsstring>
+        <name>destroy</name>
+        <param>
+          <type>U *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="3549" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="3549" bodyend="3555"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" line="369" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/concurrentqueue.hpp" bodystart="369" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a6c7ea19979bdc48733f942f6dba1512f" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>add_block_to_free_list</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a619e82afd7acedbb2fb4fc26420cc1e1" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>add_blocks_to_free_list</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a69149fd52699c1a3366b77c6b95ba1e8" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>add_producer</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1ad59a292a76c2276b4d1c2b1bcd5904a9" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>AllocationMode</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1ae555aae96010307e7991b1028b41cfb8" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>BLOCK_SIZE</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1ad59a292a76c2276b4d1c2b1bcd5904a9acda4d931ae1de06621b36aa194699f02" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>CanAlloc</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1ad59a292a76c2276b4d1c2b1bcd5904a9a29feb32c1113d549e7bce98c9dd5e208" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>CannotAlloc</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a2c07fb51a9cd1baaec9d0f1a079d83cd" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>ConcurrentQueue</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1ad327feb7a7e861051d1dfd61e2ffa1df" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>ConcurrentQueue</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a1b4b08c6b6db7bf0df041619d133171c" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>ConcurrentQueue</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1ae908c026d0eb0591ca6f8f5518f7ffdf" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>ConcurrentQueue</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a680d9a9301a3c7bb2380209214ace21e" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>ConcurrentQueueTests</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1acbd2c9d220d40f51177cfad5754aa7b5" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>consumer_token_t</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a81aed503980c50c35b8447926e2581ec" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>ConsumerToken</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a989e90a8f0750c5ebce6f0be9cda584f" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>create</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a5fba26cbc20a4e9e38ed609a557f2a78" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>create</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a19c3657a5c77c1851a9ffdc1d9d59175" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>create_array</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a1681b1d4ea2e042410f97e045a26b149" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>destroy</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a4dee0841f9dc7792cb819f008a3d1759" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>destroy_array</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1aceaa7271014aa901829e3ed1b1005d65" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>enqueue</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a4a36bd689aeaffd635416a4279566198" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>enqueue</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a0b5882e6e7a053e27427709f11094dae" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>enqueue</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a0e27b67c2aa7b4fc2eb0777fa6bd7cbc" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>enqueue</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a57b0aa33a19538a7c97d839fbf0d8459" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>enqueue_bulk</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a61a4b16a77535cc57fa3c76fb5ee3fba" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>enqueue_bulk</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1aaadd55fc6ac80c277225977fe9bdecee" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>EXPLICIT_BLOCK_EMPTY_COUNTER_THRESHOLD</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a8593fb32003144c034323c8fe353c359" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>EXPLICIT_CONSUMER_CONSUMPTION_QUOTA_BEFORE_ROTATE</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a2724abbb38a8122bb745726a7e6d483bacb4dd0ba896fb72f996845b65b637996" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>explicit_context</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1ae29231222f904afacd0c9ed55d67cd09" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>EXPLICIT_INITIAL_INDEX_SIZE</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a7bebbfc18b6ad306d5837467e9c05323" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>ExplicitProducer</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a3d77f5061363683dd498c53df7d92374" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>freeList</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a17885691af459115f817ab618f63137c" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>get_or_add_implicit_producer</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a594833a3c8cc9be773c76467be743e28" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>globalExplicitConsumerOffset</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a2724abbb38a8122bb745726a7e6d483ba1b48db1da9c93f2a40de672e8d8ee221" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>implicit_context</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a9a25b761a75bd2c3cd1f58037f9da89f" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>IMPLICIT_INITIAL_INDEX_SIZE</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1ab79e82aa1a04eb71ff8297700ff94d58" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>ImplicitProducer</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1ab8a9cee6575e355bcc9a97262a9133a7" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>implicitProducerHash</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a7e0bb03f210872a5023f86469b73a098" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>implicitProducerHashCount</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1abb675e5c403e8e746f5bf39f01f07985" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>implicitProducerHashResizeInProgress</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1ad68d536c896de4e839dd95225e7deea3" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>index_t</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a52f4615c06da9bca3be093123c7cc160" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>INITIAL_IMPLICIT_PRODUCER_HASH_SIZE</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a90f66db25719961fa59546e8c1081c11" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>initialBlockPool</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1aa499de692b70d71ae73479eda8a0ed3f" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>initialBlockPoolIndex</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a25397df70b1ff07b8218cd09fcc09f28" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>initialBlockPoolSize</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a667b505facefc3f2b67fe03754aa471a" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>initialImplicitProducerHash</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a52785bfec690380ff78d651a16e14ecc" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>initialImplicitProducerHashEntries</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1af6549d05e1d7a8ce20145618e2c18e92" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>inner_enqueue</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a7e67aff66f97f95b2e5037b4ff234799" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>inner_enqueue</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1abcdc7d44735e3911b859da42e0143fff" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>inner_enqueue_bulk</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a3b904c66ff844ba1b11c548d24dfec5d" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>inner_enqueue_bulk</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a2724abbb38a8122bb745726a7e6d483b" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>InnerQueueContext</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1acf52b5f16906d4bd1d2cfee05dd0b517" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>is_lock_free</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a2302943ed9b7579ec9b9f6863c57f10a" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>MAX_SUBQUEUE_SIZE</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1ad65cc3887b8b356dff18ac235c21d6fa" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>moodycamel::swap</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1acefb81bbc15ab1ce7fadfc554bc7266f" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>nextExplicitConsumerId</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a1053a6931119c1896026601846434969" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>operator=</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a9986a5835abd1cdbdea2e5c7baf3fb66" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>operator=</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a76fcd9cecc4d9e4400b714fed362964c" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>populate_initial_block_list</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a18214a0fe743effb7a8fb8aa4b7e38d1" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>populate_initial_implicit_producer_hash</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a741ef2316bcd1e8cbdeafdc36ad90d83" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>producer_token_t</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a4355f555d5548c8a20bd7354cd713ff3" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>producerCount</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a83df636bb50cc9e2bdaec981c9ac571f" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>producerListTail</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1acfb3304f9d64003d203b0d2dbc3fbc41" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>ProducerToken</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a6d60e24f86e19d0bf527a3f5afe5927c" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>recycle_or_create_producer</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a42a07d2a0fe3d572c9ab38a5d8fa4d74" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>recycle_or_create_producer</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a861c0700e2b3578d7d3b3838c8fe3d4d" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>reown_producers</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a9d20374051ff718e2f1dae487b9e2874" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>requisition_block</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1aecab179b995f119c89da71f62b2d21a5" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>size_approx</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1ac0b73313ed107d313b55c8a77be19b28" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>size_t</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a7c1c42c76a8218896a4d76efed142b2c" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>swap</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1ab6ea9b2c5b8461c638cf90d16d54d24b" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>swap_implicit_producer_hashes</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1ab2432d151da5a3d552cf65070952714c" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>swap_internal</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a1895c8a6120aef578fe01db53879517b" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>try_dequeue</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a67d5a2377539808015044acbb34216d1" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>try_dequeue</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a816450a4b774c374ef8ee0234e7c4518" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>try_dequeue_bulk</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a57e6b02051baed9cc1b3fb5e46743c03" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>try_dequeue_bulk</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a1cfc50210d50dba266431ff82b908da7" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>try_dequeue_bulk_from_producer</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a609358c281fb44c88088f229c47e424d" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>try_dequeue_from_producer</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1ad9f25d247543755bdc1b477f2678455f" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>try_dequeue_non_interleaved</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1aaab76643a98e1094cecdd213fbb6e75d" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>try_enqueue</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1af63a4f51a8b8b6c59ea883ed97fff7a2" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>try_enqueue</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1ad04237577ca981e18e23190773cf1644" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>try_enqueue</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a049a33d4127c66a614b717cf20bba330" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>try_enqueue</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1aecbe38c03c23ea980d1bc1f9445d26c2" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>try_enqueue_bulk</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a359380c0d6952e61f3ef4811808eb573" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>try_enqueue_bulk</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a2c6bc98e7510750513f69603ed4d23d8" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>try_get_block_from_free_list</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a3756e2e7e8bfefb2d2042724fc4cf063" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>try_get_block_from_initial_pool</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1a28714fc92138059523f3376af2f41572" prot="private" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>update_current_producer_after_rotation</name></member>
+      <member refid="classmoodycamel_1_1_concurrent_queue_1add203e2137970f317f16cf347471b2f7" prot="public" virt="non-virtual"><scope>moodycamel::ConcurrentQueue</scope><name>~ConcurrentQueue</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

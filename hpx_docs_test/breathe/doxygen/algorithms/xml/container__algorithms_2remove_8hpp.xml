@@ -1,0 +1,629 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="container__algorithms_2remove_8hpp" kind="file" language="C++">
+    <compoundname>remove.hpp</compoundname>
+    <includes local="no">hpx/config.hpp</includes>
+    <includes local="no">hpx/concepts/concepts.hpp</includes>
+    <includes local="no">hpx/iterator_support/is_iterator.hpp</includes>
+    <includes local="no">hpx/iterator_support/is_range.hpp</includes>
+    <includes local="no">hpx/iterator_support/range.hpp</includes>
+    <includes local="no">hpx/util/tagged_pair.hpp</includes>
+    <includes refid="algorithms_2remove_8hpp" local="no">hpx/parallel/algorithms/remove.hpp</includes>
+    <includes refid="tagspec_8hpp" local="no">hpx/parallel/tagspec.hpp</includes>
+    <includes refid="projected_8hpp" local="no">hpx/parallel/traits/projected.hpp</includes>
+    <includes refid="projected__range_8hpp" local="no">hpx/parallel/traits/projected_range.hpp</includes>
+    <includes local="no">type_traits</includes>
+    <includes local="no">utility</includes>
+    <includedby refid="container__algorithms_8hpp" local="no">libs/algorithms/include/hpx/parallel/container_algorithms.hpp</includedby>
+    <incdepgraph>
+      <node id="3170">
+        <label>list</label>
+      </node>
+      <node id="3177">
+        <label>atomic</label>
+      </node>
+      <node id="3152">
+        <label>hpx/type_support/always_void.hpp</label>
+      </node>
+      <node id="3124">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/remove.hpp</label>
+        <link refid="container__algorithms_2remove_8hpp"/>
+        <childnode refid="3125" relation="include">
+        </childnode>
+        <childnode refid="3126" relation="include">
+        </childnode>
+        <childnode refid="3127" relation="include">
+        </childnode>
+        <childnode refid="3128" relation="include">
+        </childnode>
+        <childnode refid="3129" relation="include">
+        </childnode>
+        <childnode refid="3130" relation="include">
+        </childnode>
+        <childnode refid="3131" relation="include">
+        </childnode>
+        <childnode refid="3139" relation="include">
+        </childnode>
+        <childnode refid="3141" relation="include">
+        </childnode>
+        <childnode refid="3188" relation="include">
+        </childnode>
+        <childnode refid="3150" relation="include">
+        </childnode>
+        <childnode refid="3151" relation="include">
+        </childnode>
+      </node>
+      <node id="3145">
+        <label>hpx/parallel/traits/vector_pack_type.hpp</label>
+      </node>
+      <node id="3178">
+        <label>functional</label>
+      </node>
+      <node id="3129">
+        <label>hpx/iterator_support/range.hpp</label>
+      </node>
+      <node id="3130">
+        <label>hpx/util/tagged_pair.hpp</label>
+      </node>
+      <node id="3180">
+        <label>hpx/parallel/util/scan_partitioner.hpp</label>
+        <link refid="scan__partitioner_8hpp_source"/>
+        <childnode refid="3125" relation="include">
+        </childnode>
+        <childnode refid="3157" relation="include">
+        </childnode>
+        <childnode refid="3156" relation="include">
+        </childnode>
+        <childnode refid="3158" relation="include">
+        </childnode>
+        <childnode refid="3159" relation="include">
+        </childnode>
+        <childnode refid="3138" relation="include">
+        </childnode>
+        <childnode refid="3160" relation="include">
+        </childnode>
+        <childnode refid="3161" relation="include">
+        </childnode>
+        <childnode refid="3154" relation="include">
+        </childnode>
+        <childnode refid="3162" relation="include">
+        </childnode>
+        <childnode refid="3163" relation="include">
+        </childnode>
+        <childnode refid="3165" relation="include">
+        </childnode>
+        <childnode refid="3166" relation="include">
+        </childnode>
+        <childnode refid="3167" relation="include">
+        </childnode>
+        <childnode refid="3168" relation="include">
+        </childnode>
+        <childnode refid="3169" relation="include">
+        </childnode>
+        <childnode refid="3170" relation="include">
+        </childnode>
+        <childnode refid="3171" relation="include">
+        </childnode>
+        <childnode refid="3150" relation="include">
+        </childnode>
+        <childnode refid="3151" relation="include">
+        </childnode>
+        <childnode refid="3172" relation="include">
+        </childnode>
+      </node>
+      <node id="3153">
+        <label>iterator</label>
+      </node>
+      <node id="3166">
+        <label>hpx/parallel/util/detail/select_partitioner.hpp</label>
+      </node>
+      <node id="3146">
+        <label>hpx/functional/traits/is_callable.hpp</label>
+      </node>
+      <node id="3142">
+        <label>hpx/datastructures/detail/pack.hpp</label>
+      </node>
+      <node id="3149">
+        <label>hpx/type_support/decay.hpp</label>
+      </node>
+      <node id="3138">
+        <label>hpx/parallel/execution_policy.hpp</label>
+      </node>
+      <node id="3148">
+        <label>hpx/traits/segmented_iterator_traits.hpp</label>
+        <link refid="segmented__iterator__traits_8hpp_source"/>
+        <childnode refid="3125" relation="include">
+        </childnode>
+        <childnode refid="3127" relation="include">
+        </childnode>
+        <childnode refid="3149" relation="include">
+        </childnode>
+        <childnode refid="3150" relation="include">
+        </childnode>
+        <childnode refid="3151" relation="include">
+        </childnode>
+      </node>
+      <node id="3125">
+        <label>hpx/config.hpp</label>
+      </node>
+      <node id="3131">
+        <label>hpx/parallel/algorithms/remove.hpp</label>
+        <link refid="algorithms_2remove_8hpp"/>
+        <childnode refid="3125" relation="include">
+        </childnode>
+        <childnode refid="3126" relation="include">
+        </childnode>
+        <childnode refid="3132" relation="include">
+        </childnode>
+        <childnode refid="3127" relation="include">
+        </childnode>
+        <childnode refid="3133" relation="include">
+        </childnode>
+        <childnode refid="3130" relation="include">
+        </childnode>
+        <childnode refid="3134" relation="include">
+        </childnode>
+        <childnode refid="3135" relation="include">
+        </childnode>
+        <childnode refid="3136" relation="include">
+        </childnode>
+        <childnode refid="3137" relation="include">
+        </childnode>
+        <childnode refid="3138" relation="include">
+        </childnode>
+        <childnode refid="3139" relation="include">
+        </childnode>
+        <childnode refid="3141" relation="include">
+        </childnode>
+        <childnode refid="3154" relation="include">
+        </childnode>
+        <childnode refid="3155" relation="include">
+        </childnode>
+        <childnode refid="3173" relation="include">
+        </childnode>
+        <childnode refid="3174" relation="include">
+        </childnode>
+        <childnode refid="3179" relation="include">
+        </childnode>
+        <childnode refid="3180" relation="include">
+        </childnode>
+        <childnode refid="3181" relation="include">
+        </childnode>
+        <childnode refid="3184" relation="include">
+        </childnode>
+        <childnode refid="3167" relation="include">
+        </childnode>
+        <childnode refid="3168" relation="include">
+        </childnode>
+        <childnode refid="3183" relation="include">
+        </childnode>
+        <childnode refid="3153" relation="include">
+        </childnode>
+        <childnode refid="3171" relation="include">
+        </childnode>
+        <childnode refid="3150" relation="include">
+        </childnode>
+        <childnode refid="3151" relation="include">
+        </childnode>
+        <childnode refid="3172" relation="include">
+        </childnode>
+        <childnode refid="3187" relation="include">
+        </childnode>
+      </node>
+      <node id="3187">
+        <label>boost/shared_array.hpp</label>
+      </node>
+      <node id="3162">
+        <label>hpx/parallel/util/detail/chunk_size.hpp</label>
+      </node>
+      <node id="3169">
+        <label>exception</label>
+      </node>
+      <node id="3181">
+        <label>hpx/parallel/util/transfer.hpp</label>
+        <link refid="transfer_8hpp_source"/>
+        <childnode refid="3125" relation="include">
+        </childnode>
+        <childnode refid="3182" relation="include">
+        </childnode>
+        <childnode refid="3149" relation="include">
+        </childnode>
+        <childnode refid="3167" relation="include">
+        </childnode>
+        <childnode refid="3168" relation="include">
+        </childnode>
+        <childnode refid="3183" relation="include">
+        </childnode>
+        <childnode refid="3153" relation="include">
+        </childnode>
+        <childnode refid="3171" relation="include">
+        </childnode>
+        <childnode refid="3150" relation="include">
+        </childnode>
+        <childnode refid="3151" relation="include">
+        </childnode>
+      </node>
+      <node id="3143">
+        <label>hpx/functional/result_of.hpp</label>
+      </node>
+      <node id="3132">
+        <label>hpx/functional/invoke.hpp</label>
+      </node>
+      <node id="3188">
+        <label>hpx/parallel/traits/projected_range.hpp</label>
+        <link refid="projected__range_8hpp_source"/>
+        <childnode refid="3125" relation="include">
+        </childnode>
+        <childnode refid="3143" relation="include">
+        </childnode>
+        <childnode refid="3128" relation="include">
+        </childnode>
+        <childnode refid="3149" relation="include">
+        </childnode>
+        <childnode refid="3141" relation="include">
+        </childnode>
+        <childnode refid="3153" relation="include">
+        </childnode>
+        <childnode refid="3150" relation="include">
+        </childnode>
+      </node>
+      <node id="3163">
+        <label>hpx/parallel/util/detail/handle_local_exceptions.hpp</label>
+      </node>
+      <node id="3159">
+        <label>hpx/lcos/wait_all.hpp</label>
+      </node>
+      <node id="3126">
+        <label>hpx/concepts/concepts.hpp</label>
+      </node>
+      <node id="3127">
+        <label>hpx/iterator_support/is_iterator.hpp</label>
+      </node>
+      <node id="3147">
+        <label>hpx/traits/is_execution_policy.hpp</label>
+      </node>
+      <node id="3182">
+        <label>hpx/traits/pointer_category.hpp</label>
+      </node>
+      <node id="3155">
+        <label>hpx/parallel/util/foreach_partitioner.hpp</label>
+        <link refid="foreach__partitioner_8hpp_source"/>
+        <childnode refid="3125" relation="include">
+        </childnode>
+        <childnode refid="3156" relation="include">
+        </childnode>
+        <childnode refid="3157" relation="include">
+        </childnode>
+        <childnode refid="3158" relation="include">
+        </childnode>
+        <childnode refid="3159" relation="include">
+        </childnode>
+        <childnode refid="3133" relation="include">
+        </childnode>
+        <childnode refid="3136" relation="include">
+        </childnode>
+        <childnode refid="3138" relation="include">
+        </childnode>
+        <childnode refid="3160" relation="include">
+        </childnode>
+        <childnode refid="3161" relation="include">
+        </childnode>
+        <childnode refid="3162" relation="include">
+        </childnode>
+        <childnode refid="3163" relation="include">
+        </childnode>
+        <childnode refid="3164" relation="include">
+        </childnode>
+        <childnode refid="3165" relation="include">
+        </childnode>
+        <childnode refid="3166" relation="include">
+        </childnode>
+        <childnode refid="3167" relation="include">
+        </childnode>
+        <childnode refid="3168" relation="include">
+        </childnode>
+        <childnode refid="3169" relation="include">
+        </childnode>
+        <childnode refid="3170" relation="include">
+        </childnode>
+        <childnode refid="3171" relation="include">
+        </childnode>
+        <childnode refid="3150" relation="include">
+        </childnode>
+        <childnode refid="3151" relation="include">
+        </childnode>
+        <childnode refid="3172" relation="include">
+        </childnode>
+      </node>
+      <node id="3141">
+        <label>hpx/parallel/traits/projected.hpp</label>
+        <link refid="projected_8hpp_source"/>
+        <childnode refid="3125" relation="include">
+        </childnode>
+        <childnode refid="3142" relation="include">
+        </childnode>
+        <childnode refid="3143" relation="include">
+        </childnode>
+        <childnode refid="3127" relation="include">
+        </childnode>
+        <childnode refid="3144" relation="include">
+        </childnode>
+        <childnode refid="3145" relation="include">
+        </childnode>
+        <childnode refid="3146" relation="include">
+        </childnode>
+        <childnode refid="3147" relation="include">
+        </childnode>
+        <childnode refid="3148" relation="include">
+        </childnode>
+        <childnode refid="3152" relation="include">
+        </childnode>
+        <childnode refid="3149" relation="include">
+        </childnode>
+        <childnode refid="3153" relation="include">
+        </childnode>
+        <childnode refid="3150" relation="include">
+        </childnode>
+      </node>
+      <node id="3135">
+        <label>hpx/parallel/algorithms/detail/is_negative.hpp</label>
+      </node>
+      <node id="3179">
+        <label>hpx/parallel/util/projection_identity.hpp</label>
+        <link refid="projection__identity_8hpp_source"/>
+        <childnode refid="3125" relation="include">
+        </childnode>
+        <childnode refid="3151" relation="include">
+        </childnode>
+      </node>
+      <node id="3184">
+        <label>hpx/parallel/util/zip_iterator.hpp</label>
+        <link refid="util_2zip__iterator_8hpp_source"/>
+        <childnode refid="3125" relation="include">
+        </childnode>
+        <childnode refid="3185" relation="include">
+        </childnode>
+        <childnode refid="3130" relation="include">
+        </childnode>
+        <childnode refid="3175" relation="include">
+        </childnode>
+        <childnode refid="3186" relation="include">
+        </childnode>
+        <childnode refid="3151" relation="include">
+        </childnode>
+      </node>
+      <node id="3165">
+        <label>hpx/parallel/util/detail/scoped_executor_parameters.hpp</label>
+      </node>
+      <node id="3136">
+        <label>hpx/parallel/algorithms/detail/predicates.hpp</label>
+      </node>
+      <node id="3160">
+        <label>hpx/parallel/executors/execution.hpp</label>
+      </node>
+      <node id="3172">
+        <label>vector</label>
+      </node>
+      <node id="3134">
+        <label>hpx/parallel/algorithms/detail/dispatch.hpp</label>
+      </node>
+      <node id="3140">
+        <label>hpx/util/tagged.hpp</label>
+      </node>
+      <node id="3151">
+        <label>utility</label>
+      </node>
+      <node id="3158">
+        <label>hpx/errors.hpp</label>
+      </node>
+      <node id="3139">
+        <label>hpx/parallel/tagspec.hpp</label>
+        <link refid="tagspec_8hpp_source"/>
+        <childnode refid="3125" relation="include">
+        </childnode>
+        <childnode refid="3140" relation="include">
+        </childnode>
+      </node>
+      <node id="3128">
+        <label>hpx/iterator_support/is_range.hpp</label>
+      </node>
+      <node id="3157">
+        <label>hpx/assertion.hpp</label>
+      </node>
+      <node id="3133">
+        <label>hpx/type_support/unused.hpp</label>
+      </node>
+      <node id="3137">
+        <label>hpx/parallel/algorithms/detail/transfer.hpp</label>
+      </node>
+      <node id="3161">
+        <label>hpx/parallel/executors/execution_parameters.hpp</label>
+      </node>
+      <node id="3168">
+        <label>cstddef</label>
+      </node>
+      <node id="3186">
+        <label>hpx/util/zip_iterator.hpp</label>
+      </node>
+      <node id="3173">
+        <label>hpx/parallel/util/invoke_projected.hpp</label>
+        <link refid="invoke__projected_8hpp_source"/>
+        <childnode refid="3125" relation="include">
+        </childnode>
+        <childnode refid="3132" relation="include">
+        </childnode>
+        <childnode refid="3149" relation="include">
+        </childnode>
+        <childnode refid="3151" relation="include">
+        </childnode>
+      </node>
+      <node id="3185">
+        <label>hpx/lcos/future.hpp</label>
+      </node>
+      <node id="3150">
+        <label>type_traits</label>
+      </node>
+      <node id="3167">
+        <label>algorithm</label>
+      </node>
+      <node id="3154">
+        <label>hpx/parallel/util/detail/algorithm_result.hpp</label>
+      </node>
+      <node id="3144">
+        <label>hpx/parallel/traits/vector_pack_load_store.hpp</label>
+      </node>
+      <node id="3156">
+        <label>hpx/dataflow.hpp</label>
+      </node>
+      <node id="3174">
+        <label>hpx/parallel/util/loop.hpp</label>
+        <link refid="util_2loop_8hpp_source"/>
+        <childnode refid="3125" relation="include">
+        </childnode>
+        <childnode refid="3157" relation="include">
+        </childnode>
+        <childnode refid="3175" relation="include">
+        </childnode>
+        <childnode refid="3132" relation="include">
+        </childnode>
+        <childnode refid="3143" relation="include">
+        </childnode>
+        <childnode refid="3176" relation="include">
+        </childnode>
+        <childnode refid="3179" relation="include">
+        </childnode>
+        <childnode refid="3147" relation="include">
+        </childnode>
+        <childnode refid="3167" relation="include">
+        </childnode>
+        <childnode refid="3168" relation="include">
+        </childnode>
+        <childnode refid="3153" relation="include">
+        </childnode>
+        <childnode refid="3150" relation="include">
+        </childnode>
+        <childnode refid="3151" relation="include">
+        </childnode>
+        <childnode refid="3172" relation="include">
+        </childnode>
+      </node>
+      <node id="3183">
+        <label>cstring</label>
+      </node>
+      <node id="3164">
+        <label>hpx/parallel/util/detail/partitioner_iteration.hpp</label>
+      </node>
+      <node id="3176">
+        <label>hpx/parallel/util/cancellation_token.hpp</label>
+        <link refid="cancellation__token_8hpp_source"/>
+        <childnode refid="3125" relation="include">
+        </childnode>
+        <childnode refid="3167" relation="include">
+        </childnode>
+        <childnode refid="3177" relation="include">
+        </childnode>
+        <childnode refid="3178" relation="include">
+        </childnode>
+        <childnode refid="3171" relation="include">
+        </childnode>
+      </node>
+      <node id="3171">
+        <label>memory</label>
+      </node>
+      <node id="3175">
+        <label>hpx/datastructures/tuple.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3189">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/remove.hpp</label>
+        <link refid="container__algorithms_2remove_8hpp"/>
+        <childnode refid="3190" relation="include">
+        </childnode>
+      </node>
+      <node id="3190">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms.hpp</label>
+        <link refid="container__algorithms_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacehpx">hpx</innernamespace>
+    <innernamespace refid="namespacehpx_1_1parallel">hpx::parallel</innernamespace>
+    <innernamespace refid="namespacehpx_1_1parallel_1_1v1">hpx::parallel::v1</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2017<sp/>Taeguk<sp/>Kwon</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Distributed<sp/>under<sp/>the<sp/>Boost<sp/>Software<sp/>License,<sp/>Version<sp/>1.0.<sp/>(See<sp/>accompanying</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>file<sp/>LICENSE_1_0.txt<sp/>or<sp/>copy<sp/>at<sp/>http://www.boost.org/LICENSE_1_0.txt)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(HPX_PARALLEL_CONTAINER_ALGORITHM_REMOVE_DEC_24_2017_0918PM)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPX_PARALLEL_CONTAINER_ALGORITHM_REMOVE_DEC_24_2017_0918PM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/config.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/concepts/concepts.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/iterator_support/is_iterator.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/iterator_support/is_range.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/iterator_support/range.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/util/tagged_pair.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="algorithms_2remove_8hpp" kindref="compound">hpx/parallel/algorithms/remove.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/parallel/tagspec.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/parallel/traits/projected.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/parallel/traits/projected_range.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;type_traits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehpx" kindref="compound">hpx</ref><sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">parallel<sp/>{<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">v1</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ExPolicy,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Rng,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Proj<sp/>=<sp/>util::projection_identity,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>HPX_CONCEPT_REQUIRES_(</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>execution::is_execution_policy&lt;ExPolicy&gt;::value<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::traits::is_range&lt;Rng&gt;::value<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>traits::is_projected_range&lt;Proj,<sp/>Rng&gt;::value)&gt;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>util::detail::algorithm_result&lt;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ExPolicy,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>hpx::traits::range_iterator&lt;Rng&gt;::type</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>&gt;::type</highlight></codeline>
+<codeline lineno="87" refid="container__algorithms_2remove_8hpp_1ac79b147d283a89405322c1ea937ed28a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">remove</highlight><highlight class="normal">(ExPolicy<sp/>&amp;&amp;<sp/>policy,<sp/>Rng<sp/>&amp;&amp;<sp/>rng,<sp/>T<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>value,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Proj<sp/>&amp;&amp;<sp/>proj<sp/>=<sp/>Proj())</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">remove</highlight><highlight class="normal">(std::forward&lt;ExPolicy&gt;(policy),</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::util::begin(rng),<sp/>hpx::util::end(rng),</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value,<sp/>std::forward&lt;Proj&gt;(proj));</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ExPolicy,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Rng,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Pred,</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Proj<sp/>=<sp/><ref refid="structhpx_1_1parallel_1_1util_1_1projection__identity" kindref="compound">util::projection_identity</ref>,</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>HPX_CONCEPT_REQUIRES_(</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>execution::is_execution_policy&lt;ExPolicy&gt;::value<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::traits::is_range&lt;Rng&gt;::value<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structhpx_1_1parallel_1_1traits_1_1is__projected__range" kindref="compound">traits::is_projected_range&lt;Proj, Rng&gt;::value</ref><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structhpx_1_1parallel_1_1traits_1_1is__indirect__callable" kindref="compound">traits::is_indirect_callable</ref>&lt;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ExPolicy,<sp/>Pred,</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structhpx_1_1parallel_1_1traits_1_1projected__range" kindref="compound">traits::projected_range&lt;Proj, Rng&gt;</ref></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::value)&gt;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>util::detail::algorithm_result&lt;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ExPolicy,</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>hpx::traits::range_iterator&lt;Rng&gt;::type</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>&gt;::type</highlight></codeline>
+<codeline lineno="172" refid="container__algorithms_2remove_8hpp_1a1aa784b5211d2deeb7e72f53d86f64fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="container__algorithms_2remove_8hpp_1a1aa784b5211d2deeb7e72f53d86f64fe" kindref="member">remove_if</ref>(ExPolicy<sp/>&amp;&amp;<sp/>policy,<sp/>Rng<sp/>&amp;&amp;<sp/>rng,<sp/>Pred<sp/>&amp;&amp;<sp/>pred,</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Proj<sp/>&amp;&amp;<sp/>proj<sp/>=<sp/>Proj())</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="container__algorithms_2remove_8hpp_1a1aa784b5211d2deeb7e72f53d86f64fe" kindref="member">remove_if</ref>(std::forward&lt;ExPolicy&gt;(policy),</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::util::begin(rng),<sp/>hpx::util::end(rng),</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::forward&lt;Pred&gt;(pred),</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::forward&lt;Proj&gt;(proj));</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal">}}}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="libs/algorithms/include/hpx/parallel/container_algorithms/remove.hpp"/>
+  </compounddef>
+</doxygen>

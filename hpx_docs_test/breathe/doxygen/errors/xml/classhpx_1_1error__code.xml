@@ -1,0 +1,662 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classhpx_1_1error__code" kind="class" language="C++" prot="public">
+    <compoundname>hpx::error_code</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">error_code</basecompoundref>
+    <includes refid="hpx_2errors_2error__code_8hpp" local="no">error_code.hpp</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classhpx_1_1error__code_1a7e1c03d201209aef6b9f2b9c43c8abcf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class exception</definition>
+        <argsstring></argsstring>
+        <name>exception</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/errors/include/hpx/errors/error_code.hpp" line="237" column="1" bodyfile="libs/errors/include/hpx/errors/error_code.hpp" bodystart="237" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classhpx_1_1error__code_1a19a5be892df2ca236ddee7d7e8c002fc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="classhpx_1_1error__code" kindref="compound">error_code</ref></type>
+        <definition>error_code make_error_code</definition>
+        <argsstring>(std::exception_ptr const &amp;)</argsstring>
+        <name>make_error_code</name>
+        <param>
+          <type>std::exception_ptr const &amp;</type>
+          <defname>e</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/errors/include/hpx/errors/error_code.hpp" line="238" column="1" bodyfile="libs/errors/include/hpx/errors/error_code.hpp" bodystart="281" bodyend="284"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhpx_1_1error__code_1adf90d2edb601c4e9405870761e8922db" prot="private" static="no" mutable="no">
+        <type>std::exception_ptr</type>
+        <definition>std::exception_ptr hpx::error_code::exception_</definition>
+        <argsstring></argsstring>
+        <name>exception_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/errors/include/hpx/errors/error_code.hpp" line="243" column="1" bodyfile="libs/errors/include/hpx/errors/error_code.hpp" bodystart="243" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhpx_1_1error__code_1ab10fcf6785420832f8cae2aef8f01f83" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::error_code::error_code</definition>
+        <argsstring>(throwmode mode=plain)</argsstring>
+        <name>error_code</name>
+        <param>
+          <type>throwmode</type>
+          <declname>mode</declname>
+          <defval>plain</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct an object of type <ref refid="classhpx_1_1error__code" kindref="compound">error_code</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameter <computeroutput>mode</computeroutput> specifies whether the constructed <ref refid="classhpx_1_1error__code" kindref="compound">hpx::error_code</ref> belongs to the error category <emphasis>hpx_category</emphasis> (if mode is <emphasis>plain</emphasis>, this is the default) or to the category <emphasis>hpx_category_rethrow</emphasis> (if mode is <emphasis>rethrow</emphasis>).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>nothing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/errors/include/hpx/errors/error_code.hpp" line="97" column="1" bodyfile="libs/errors/include/hpx/errors/error_code.hpp" bodystart="97" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1error__code_1a6c75f772a727844e82acc4bda0478be1" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hpx::error_code::error_code</definition>
+        <argsstring>(error e, throwmode mode=plain)</argsstring>
+        <name>error_code</name>
+        <param>
+          <type>error</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>throwmode</type>
+          <declname>mode</declname>
+          <defval>plain</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct an object of type <ref refid="classhpx_1_1error__code" kindref="compound">error_code</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameter <computeroutput>e</computeroutput> holds the hpx::error code the new exception should encapsulate. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameter <computeroutput>mode</computeroutput> specifies whether the constructed <ref refid="classhpx_1_1error__code" kindref="compound">hpx::error_code</ref> belongs to the error category <emphasis>hpx_category</emphasis> (if mode is <emphasis>plain</emphasis>, this is the default) or to the category <emphasis>hpx_category_rethrow</emphasis> (if mode is <emphasis>rethrow</emphasis>).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>nothing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/errors/include/hpx/errors/error_code.hpp" line="113" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1error__code_1a4ebfe4584be67357aab6d957a4ae7ebf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hpx::error_code::error_code</definition>
+        <argsstring>(error e, char const *func, char const *file, long line, throwmode mode=plain)</argsstring>
+        <name>error_code</name>
+        <param>
+          <type>error</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>func</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>throwmode</type>
+          <declname>mode</declname>
+          <defval>plain</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct an object of type <ref refid="classhpx_1_1error__code" kindref="compound">error_code</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameter <computeroutput>e</computeroutput> holds the hpx::error code the new exception should encapsulate. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>func</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the function where the error was raised. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The file name of the code where the error was raised. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The line number of the code line where the error was raised. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameter <computeroutput>mode</computeroutput> specifies whether the constructed <ref refid="classhpx_1_1error__code" kindref="compound">hpx::error_code</ref> belongs to the error category <emphasis>hpx_category</emphasis> (if mode is <emphasis>plain</emphasis>, this is the default) or to the category <emphasis>hpx_category_rethrow</emphasis> (if mode is <emphasis>rethrow</emphasis>).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>nothing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/errors/include/hpx/errors/error_code.hpp" line="130" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1error__code_1a68c0bf863140a6eac301f2019db5e3d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hpx::error_code::error_code</definition>
+        <argsstring>(error e, char const *msg, throwmode mode=plain)</argsstring>
+        <name>error_code</name>
+        <param>
+          <type>error</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>throwmode</type>
+          <declname>mode</declname>
+          <defval>plain</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct an object of type <ref refid="classhpx_1_1error__code" kindref="compound">error_code</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameter <computeroutput>e</computeroutput> holds the hpx::error code the new exception should encapsulate. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameter <computeroutput>msg</computeroutput> holds the error message the new exception should encapsulate. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameter <computeroutput>mode</computeroutput> specifies whether the constructed <ref refid="classhpx_1_1error__code" kindref="compound">hpx::error_code</ref> belongs to the error category <emphasis>hpx_category</emphasis> (if mode is <emphasis>plain</emphasis>, this is the default) or to the category <emphasis>hpx_category_rethrow</emphasis> (if mode is <emphasis>rethrow</emphasis>).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::bad_alloc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(if allocation of a copy of the passed string fails). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/errors/include/hpx/errors/error_code.hpp" line="147" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1error__code_1a1361ff69783e482003e267bd5976c1b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hpx::error_code::error_code</definition>
+        <argsstring>(error e, char const *msg, char const *func, char const *file, long line, throwmode mode=plain)</argsstring>
+        <name>error_code</name>
+        <param>
+          <type>error</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>func</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>throwmode</type>
+          <declname>mode</declname>
+          <defval>plain</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct an object of type <ref refid="classhpx_1_1error__code" kindref="compound">error_code</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameter <computeroutput>e</computeroutput> holds the hpx::error code the new exception should encapsulate. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameter <computeroutput>msg</computeroutput> holds the error message the new exception should encapsulate. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>func</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the function where the error was raised. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The file name of the code where the error was raised. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The line number of the code line where the error was raised. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameter <computeroutput>mode</computeroutput> specifies whether the constructed <ref refid="classhpx_1_1error__code" kindref="compound">hpx::error_code</ref> belongs to the error category <emphasis>hpx_category</emphasis> (if mode is <emphasis>plain</emphasis>, this is the default) or to the category <emphasis>hpx_category_rethrow</emphasis> (if mode is <emphasis>rethrow</emphasis>).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::bad_alloc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(if allocation of a copy of the passed string fails). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/errors/include/hpx/errors/error_code.hpp" line="167" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1error__code_1a9d5013aac9d3038b3519bcfece5afea9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hpx::error_code::error_code</definition>
+        <argsstring>(error e, std::string const &amp;msg, throwmode mode=plain)</argsstring>
+        <name>error_code</name>
+        <param>
+          <type>error</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>throwmode</type>
+          <declname>mode</declname>
+          <defval>plain</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct an object of type <ref refid="classhpx_1_1error__code" kindref="compound">error_code</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameter <computeroutput>e</computeroutput> holds the hpx::error code the new exception should encapsulate. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameter <computeroutput>msg</computeroutput> holds the error message the new exception should encapsulate. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameter <computeroutput>mode</computeroutput> specifies whether the constructed <ref refid="classhpx_1_1error__code" kindref="compound">hpx::error_code</ref> belongs to the error category <emphasis>hpx_category</emphasis> (if mode is <emphasis>plain</emphasis>, this is the default) or to the category <emphasis>hpx_category_rethrow</emphasis> (if mode is <emphasis>rethrow</emphasis>).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::bad_alloc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(if allocation of a copy of the passed string fails). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/errors/include/hpx/errors/error_code.hpp" line="184" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1error__code_1ae935c2ac12b6424073bb293514fe8c87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hpx::error_code::error_code</definition>
+        <argsstring>(error e, std::string const &amp;msg, char const *func, char const *file, long line, throwmode mode=plain)</argsstring>
+        <name>error_code</name>
+        <param>
+          <type>error</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>func</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>throwmode</type>
+          <declname>mode</declname>
+          <defval>plain</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct an object of type <ref refid="classhpx_1_1error__code" kindref="compound">error_code</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameter <computeroutput>e</computeroutput> holds the hpx::error code the new exception should encapsulate. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameter <computeroutput>msg</computeroutput> holds the error message the new exception should encapsulate. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>func</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the function where the error was raised. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The file name of the code where the error was raised. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The line number of the code line where the error was raised. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameter <computeroutput>mode</computeroutput> specifies whether the constructed <ref refid="classhpx_1_1error__code" kindref="compound">hpx::error_code</ref> belongs to the error category <emphasis>hpx_category</emphasis> (if mode is <emphasis>plain</emphasis>, this is the default) or to the category <emphasis>hpx_category_rethrow</emphasis> (if mode is <emphasis>rethrow</emphasis>).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::bad_alloc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(if allocation of a copy of the passed string fails). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/errors/include/hpx/errors/error_code.hpp" line="205" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1error__code_1a70ab613bf2dfd57edc658b4acc680a63" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string hpx::error_code::get_message</definition>
+        <argsstring>() const</argsstring>
+        <name>get_message</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return a reference to the error message stored in the <ref refid="classhpx_1_1error__code" kindref="compound">hpx::error_code</ref>.</para><para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>nothing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/errors/include/hpx/errors/error_code.hpp" line="211" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1error__code_1acf2bd6fd25e912167159e3afbac4a398" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpx::error_code::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+<para>Clear this <ref refid="classhpx_1_1error__code" kindref="compound">error_code</ref> object. The postconditions of invoking this method are. </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>value() == hpx::success and category() == hpx::get_hpx_category() </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/errors/include/hpx/errors/error_code.hpp" line="216" column="1" bodyfile="libs/errors/include/hpx/errors/error_code.hpp" bodystart="216" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1error__code_1a1cc8fc457beca29e2de171251d910cdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hpx::error_code::error_code</definition>
+        <argsstring>(error_code const &amp;rhs)</argsstring>
+        <name>error_code</name>
+        <param>
+          <type><ref refid="classhpx_1_1error__code" kindref="compound">error_code</ref> const &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copy constructor for <ref refid="classhpx_1_1error__code" kindref="compound">error_code</ref></para><para><simplesect kind="note"><para>This function maintains the error category of the left hand side if the right hand side is a success code. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/errors/include/hpx/errors/error_code.hpp" line="227" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1error__code_1a38d7458f1d451ba5d8ce57df3cbc3be4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classhpx_1_1error__code" kindref="compound">error_code</ref> &amp;</type>
+        <definition>error_code&amp; hpx::error_code::operator=</definition>
+        <argsstring>(error_code const &amp;rhs)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classhpx_1_1error__code" kindref="compound">error_code</ref> const &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assignment operator for <ref refid="classhpx_1_1error__code" kindref="compound">error_code</ref></para><para><simplesect kind="note"><para>This function maintains the error category of the left hand side if the right hand side is a success code. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/errors/include/hpx/errors/error_code.hpp" line="233" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhpx_1_1error__code_1aed65f44e5d9bb9b5ce01583c41da77fa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hpx::error_code::error_code</definition>
+        <argsstring>(int err, hpx::exception const &amp;e)</argsstring>
+        <name>error_code</name>
+        <param>
+          <type>int</type>
+          <declname>err</declname>
+        </param>
+        <param>
+          <type><ref refid="classhpx_1_1exception" kindref="compound">hpx::exception</ref> const &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/errors/include/hpx/errors/error_code.hpp" line="240" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1error__code_1a4fa6bca898b113f181188373722227cf" prot="private" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hpx::error_code::error_code</definition>
+        <argsstring>(std::exception_ptr const &amp;e)</argsstring>
+        <name>error_code</name>
+        <param>
+          <type>std::exception_ptr const &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/errors/include/hpx/errors/error_code.hpp" line="241" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A <ref refid="classhpx_1_1error__code" kindref="compound">hpx::error_code</ref> represents an arbitrary error condition. </para>    </briefdescription>
+    <detaileddescription>
+<para>The class <ref refid="classhpx_1_1error__code" kindref="compound">hpx::error_code</ref> describes an object used to hold error code values, such as those originating from the operating system or other low-level application program interfaces.</para><para><simplesect kind="note"><para>Class <ref refid="classhpx_1_1error__code" kindref="compound">hpx::error_code</ref> is an adjunct to error reporting by exception </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>boost::system::error_code</label>
+      </node>
+      <node id="0">
+        <label>hpx::error_code</label>
+        <link refid="classhpx_1_1error__code"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>boost::system::error_code</label>
+      </node>
+      <node id="2">
+        <label>hpx::error_code</label>
+        <link refid="classhpx_1_1error__code"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libs/errors/include/hpx/errors/error_code.hpp" line="86" column="1" bodyfile="libs/errors/include/hpx/errors/error_code.hpp" bodystart="85" bodyend="244"/>
+    <listofallmembers>
+      <member refid="classhpx_1_1error__code_1acf2bd6fd25e912167159e3afbac4a398" prot="public" virt="non-virtual"><scope>hpx::error_code</scope><name>clear</name></member>
+      <member refid="classhpx_1_1error__code_1ab10fcf6785420832f8cae2aef8f01f83" prot="public" virt="non-virtual"><scope>hpx::error_code</scope><name>error_code</name></member>
+      <member refid="classhpx_1_1error__code_1a6c75f772a727844e82acc4bda0478be1" prot="public" virt="non-virtual"><scope>hpx::error_code</scope><name>error_code</name></member>
+      <member refid="classhpx_1_1error__code_1a4ebfe4584be67357aab6d957a4ae7ebf" prot="public" virt="non-virtual"><scope>hpx::error_code</scope><name>error_code</name></member>
+      <member refid="classhpx_1_1error__code_1a68c0bf863140a6eac301f2019db5e3d7" prot="public" virt="non-virtual"><scope>hpx::error_code</scope><name>error_code</name></member>
+      <member refid="classhpx_1_1error__code_1a1361ff69783e482003e267bd5976c1b6" prot="public" virt="non-virtual"><scope>hpx::error_code</scope><name>error_code</name></member>
+      <member refid="classhpx_1_1error__code_1a9d5013aac9d3038b3519bcfece5afea9" prot="public" virt="non-virtual"><scope>hpx::error_code</scope><name>error_code</name></member>
+      <member refid="classhpx_1_1error__code_1ae935c2ac12b6424073bb293514fe8c87" prot="public" virt="non-virtual"><scope>hpx::error_code</scope><name>error_code</name></member>
+      <member refid="classhpx_1_1error__code_1a1cc8fc457beca29e2de171251d910cdf" prot="public" virt="non-virtual"><scope>hpx::error_code</scope><name>error_code</name></member>
+      <member refid="classhpx_1_1error__code_1aed65f44e5d9bb9b5ce01583c41da77fa" prot="private" virt="non-virtual"><scope>hpx::error_code</scope><name>error_code</name></member>
+      <member refid="classhpx_1_1error__code_1a4fa6bca898b113f181188373722227cf" prot="private" virt="non-virtual"><scope>hpx::error_code</scope><name>error_code</name></member>
+      <member refid="classhpx_1_1error__code_1a7e1c03d201209aef6b9f2b9c43c8abcf" prot="private" virt="non-virtual"><scope>hpx::error_code</scope><name>exception</name></member>
+      <member refid="classhpx_1_1error__code_1adf90d2edb601c4e9405870761e8922db" prot="private" virt="non-virtual"><scope>hpx::error_code</scope><name>exception_</name></member>
+      <member refid="classhpx_1_1error__code_1a70ab613bf2dfd57edc658b4acc680a63" prot="public" virt="non-virtual"><scope>hpx::error_code</scope><name>get_message</name></member>
+      <member refid="classhpx_1_1error__code_1a19a5be892df2ca236ddee7d7e8c002fc" prot="private" virt="non-virtual"><scope>hpx::error_code</scope><name>make_error_code</name></member>
+      <member refid="classhpx_1_1error__code_1a38d7458f1d451ba5d8ce57df3cbc3be4" prot="public" virt="non-virtual"><scope>hpx::error_code</scope><name>operator=</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

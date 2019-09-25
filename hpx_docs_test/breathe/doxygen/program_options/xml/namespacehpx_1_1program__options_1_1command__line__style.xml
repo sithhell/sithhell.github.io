@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacehpx_1_1program__options_1_1command__line__style" kind="namespace" language="C++">
+    <compoundname>hpx::program_options::command_line_style</compoundname>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="cmdline_8hpp_1ac56eb4dfe32199084d80c3b0b781d504" prot="public" static="no">
+        <name>style_t</name>
+        <enumvalue id="cmdline_8hpp_1ac56eb4dfe32199084d80c3b0b781d504a4b41117f5e179673effefcfe233ae4f3" prot="public">
+          <name>allow_long</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>Allow &quot;--long_name&quot; style. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="cmdline_8hpp_1ac56eb4dfe32199084d80c3b0b781d504a2f7336c6511a4d5d66875bb06e361d4e" prot="public">
+          <name>allow_short</name>
+          <initializer>= allow_long &lt;&lt; 1</initializer>
+          <briefdescription>
+<para>Allow &quot;-&lt;single character&quot; style. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="cmdline_8hpp_1ac56eb4dfe32199084d80c3b0b781d504abf816377a4eece1e1e394eb3d1c09346" prot="public">
+          <name>allow_dash_for_short</name>
+          <initializer>= allow_short &lt;&lt; 1</initializer>
+          <briefdescription>
+<para>Allow &quot;-&quot; in short options. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="cmdline_8hpp_1ac56eb4dfe32199084d80c3b0b781d504ad050b1ea23c2c5f3504e6201e189b558" prot="public">
+          <name>allow_slash_for_short</name>
+          <initializer>= allow_dash_for_short &lt;&lt; 1</initializer>
+          <briefdescription>
+<para>Allow &quot;/&quot; in short options. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="cmdline_8hpp_1ac56eb4dfe32199084d80c3b0b781d504ac285b221c37c46b711aa4a89e095f96d" prot="public">
+          <name>long_allow_adjacent</name>
+          <initializer>= allow_slash_for_short &lt;&lt; 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Allow option parameter in the same token for long option, like in <verbatim>        --foo=10</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="cmdline_8hpp_1ac56eb4dfe32199084d80c3b0b781d504a22e0400f3e16135240696bdda5c89e57" prot="public">
+          <name>long_allow_next</name>
+          <initializer>= long_allow_adjacent &lt;&lt; 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Allow option parameter in the next token for long options. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="cmdline_8hpp_1ac56eb4dfe32199084d80c3b0b781d504ae3cbf481e7d68e572c27dd828b5a6128" prot="public">
+          <name>short_allow_adjacent</name>
+          <initializer>= long_allow_next &lt;&lt; 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Allow option parameter in the same token for short options. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="cmdline_8hpp_1ac56eb4dfe32199084d80c3b0b781d504a2069e4ced7767c81a0fd25e30abd6556" prot="public">
+          <name>short_allow_next</name>
+          <initializer>= short_allow_adjacent &lt;&lt; 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Allow option parameter in the next token for short options. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="cmdline_8hpp_1ac56eb4dfe32199084d80c3b0b781d504a08f19bccb4852f19f2f1dbec5d6081c5" prot="public">
+          <name>allow_sticky</name>
+          <initializer>= short_allow_next &lt;&lt; 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Allow to merge several short options together, so that &quot;-s -k&quot; become &quot;-sk&quot;. All of the options but last should accept no parameter. For example, if &quot;-s&quot; accept a parameter, then &quot;k&quot; will be taken as parameter, not another short option. Dos-style short options cannot be sticky. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="cmdline_8hpp_1ac56eb4dfe32199084d80c3b0b781d504af89a5bd45830f8ac5f3d23b1effe1fc7" prot="public">
+          <name>allow_guessing</name>
+          <initializer>= allow_sticky &lt;&lt; 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Allow abbreviated spellings for long options, if they unambiguously identify long option. No long option name should be prefix of other long option name if guessing is in effect. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="cmdline_8hpp_1ac56eb4dfe32199084d80c3b0b781d504a66ed8bb9b1f9ac38d58c613cca2e1896" prot="public">
+          <name>long_case_insensitive</name>
+          <initializer>= allow_guessing &lt;&lt; 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Ignore the difference in case for long options. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="cmdline_8hpp_1ac56eb4dfe32199084d80c3b0b781d504ae078a5e28cb862ee66e60717c581d959" prot="public">
+          <name>short_case_insensitive</name>
+          <initializer>= long_case_insensitive &lt;&lt; 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Ignore the difference in case for short options. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="cmdline_8hpp_1ac56eb4dfe32199084d80c3b0b781d504a9ff409ef9eb65f4d6ca65f56c2b4df7f" prot="public">
+          <name>case_insensitive</name>
+          <initializer>= (long_case_insensitive | short_case_insensitive)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Ignore the difference in case for all options. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="cmdline_8hpp_1ac56eb4dfe32199084d80c3b0b781d504acab4ca95f1eedef5802e0149510713f7" prot="public">
+          <name>allow_long_disguise</name>
+          <initializer>= short_case_insensitive &lt;&lt; 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Allow long options with single option starting character, e.g <computeroutput>-foo=10</computeroutput> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="cmdline_8hpp_1ac56eb4dfe32199084d80c3b0b781d504af26a3bd52207076ea20287a8e085bbc6" prot="public">
+          <name>unix_style</name>
+          <initializer>= (allow_short | short_allow_adjacent | short_allow_next |
+            allow_long | long_allow_adjacent | long_allow_next | allow_sticky |
+            allow_guessing | allow_dash_for_short)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The more-or-less traditional unix style. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="cmdline_8hpp_1ac56eb4dfe32199084d80c3b0b781d504ac191276b66737684aed348eb8a72610e" prot="public">
+          <name>default_style</name>
+          <initializer>= unix_style</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The default style. </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Various possible styles of options.</para><para>There are &quot;long&quot; options, which start with &quot;--&quot; and &quot;short&quot;, which start with either &quot;-&quot; or &quot;/&quot;. Both kinds can be allowed or disallowed, see allow_long and allow_short. The allowed character for short options is also configurable.</para><para>Option&apos;s value can be specified in the same token as name (&quot;--foo=bar&quot;), or in the next token.</para><para>It&apos;s possible to introduce long options by the same character as short options, see allow_long_disguise.</para><para>Finally, guessing (specifying only prefix of option) and case insensitive processing are supported. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/cmdline.hpp" line="45" column="1" bodyfile="libs/program_options/include/hpx/program_options/cmdline.hpp" bodystart="44" bodyend="103"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libs/program_options/include/hpx/program_options/cmdline.hpp" line="26" column="1"/>
+  </compounddef>
+</doxygen>

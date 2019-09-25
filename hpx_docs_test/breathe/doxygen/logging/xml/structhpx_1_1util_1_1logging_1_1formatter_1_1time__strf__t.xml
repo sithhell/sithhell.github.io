@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structhpx_1_1util_1_1logging_1_1formatter_1_1time__strf__t" kind="struct" language="C++" prot="public">
+    <compoundname>hpx::util::logging::formatter::time_strf_t</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">is_generic</basecompoundref>
+    <includes refid="hpx_2logging_2format_2formatter_2time__strf_8hpp" local="no">time_strf.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>class convert</type>
+        <defval><ref refid="structhpx_1_1util_1_1logging_1_1formatter_1_1do__convert__format_1_1prepend" kindref="compound">do_convert_format::prepend</ref></defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structhpx_1_1util_1_1logging_1_1formatter_1_1time__strf__t_1a35689fe194640aef5e7a69c4e5b87f13" prot="public" static="no">
+        <type>convert</type>
+        <definition>typedef convert hpx::util::logging::formatter::time_strf_t&lt; convert &gt;::convert_type</definition>
+        <argsstring></argsstring>
+        <name>convert_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging/format/formatter/time_strf.hpp" line="42" column="1" bodyfile="libs/logging/include/hpx/logging/format/formatter/time_strf.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structhpx_1_1util_1_1logging_1_1formatter_1_1time__strf__t_1abbb49158ef812bd06b4bae4d36027566" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hpx::util::logging::formatter::time_strf_t&lt; convert &gt;::m_format</definition>
+        <argsstring></argsstring>
+        <name>m_format</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging/format/formatter/time_strf.hpp" line="72" column="1" bodyfile="libs/logging/include/hpx/logging/format/formatter/time_strf.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhpx_1_1util_1_1logging_1_1formatter_1_1time__strf__t_1a443319b29e4414e65e9e7c02e7acb148" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hpx::util::logging::formatter::time_strf_t&lt; convert &gt;::m_localtime</definition>
+        <argsstring></argsstring>
+        <name>m_localtime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging/format/formatter/time_strf.hpp" line="73" column="1" bodyfile="libs/logging/include/hpx/logging/format/formatter/time_strf.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structhpx_1_1util_1_1logging_1_1formatter_1_1time__strf__t_1a8336bbe17714674dec4335985911dc32" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::util::logging::formatter::time_strf_t&lt; convert &gt;::time_strf_t</definition>
+        <argsstring>(const std::string &amp;format, bool localtime)</argsstring>
+        <name>time_strf_t</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>localtime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>constructs a time_strf object</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the time format , strftime-like </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>localtime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if true, use localtime, otherwise global time </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging/format/formatter/time_strf.hpp" line="50" column="1" bodyfile="libs/logging/include/hpx/logging/format/formatter/time_strf.hpp" bodystart="50" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1util_1_1logging_1_1formatter_1_1time__strf__t_1a22703f21419282c875fc87c3f3c36000" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpx::util::logging::formatter::time_strf_t&lt; convert &gt;::operator()</definition>
+        <argsstring>(msg_type &amp;msg) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>msg_type &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging/format/formatter/time_strf.hpp" line="56" column="1" bodyfile="libs/logging/include/hpx/logging/format/formatter/time_strf.hpp" bodystart="56" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1util_1_1logging_1_1formatter_1_1time__strf__t_1a55c58e898c9ec5cd58be2771e0e4c41e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hpx::util::logging::formatter::time_strf_t&lt; convert &gt;::operator==</definition>
+        <argsstring>(const time_strf_t &amp;other) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="structhpx_1_1util_1_1logging_1_1formatter_1_1time__strf__t" kindref="compound">time_strf_t</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging/format/formatter/time_strf.hpp" line="66" column="1" bodyfile="libs/logging/include/hpx/logging/format/formatter/time_strf.hpp" bodystart="66" bodyend="69"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Prefixes the message with the time, by using strftime function. You pass the format string at construction. </para>    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type that holds your logged message.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>convert</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[optional] In case there needs to be a conversion between std::(w)string and the string that holds your logged message. See convert_format. For instance, you might use <ref refid="structhpx_1_1util_1_1logging_1_1optimize_1_1cache__string__one__str" kindref="compound">a cached_string class</ref> (see <ref refid="namespacehpx_1_1util_1_1logging_1_1optimize" kindref="compound">optimize namespace</ref>). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="112">
+        <label>is_generic</label>
+      </node>
+      <node id="111">
+        <label>hpx::util::logging::formatter::time_strf_t&lt; convert &gt;</label>
+        <link refid="structhpx_1_1util_1_1logging_1_1formatter_1_1time__strf__t"/>
+        <childnode refid="112" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="114">
+        <label>is_generic</label>
+      </node>
+      <node id="113">
+        <label>hpx::util::logging::formatter::time_strf_t&lt; convert &gt;</label>
+        <link refid="structhpx_1_1util_1_1logging_1_1formatter_1_1time__strf__t"/>
+        <childnode refid="114" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libs/logging/include/hpx/logging/format/formatter/time_strf.hpp" line="41" column="1" bodyfile="libs/logging/include/hpx/logging/format/formatter/time_strf.hpp" bodystart="40" bodyend="74"/>
+    <listofallmembers>
+      <member refid="structhpx_1_1util_1_1logging_1_1formatter_1_1time__strf__t_1a35689fe194640aef5e7a69c4e5b87f13" prot="public" virt="non-virtual"><scope>hpx::util::logging::formatter::time_strf_t</scope><name>convert_type</name></member>
+      <member refid="structhpx_1_1util_1_1logging_1_1formatter_1_1time__strf__t_1abbb49158ef812bd06b4bae4d36027566" prot="private" virt="non-virtual"><scope>hpx::util::logging::formatter::time_strf_t</scope><name>m_format</name></member>
+      <member refid="structhpx_1_1util_1_1logging_1_1formatter_1_1time__strf__t_1a443319b29e4414e65e9e7c02e7acb148" prot="private" virt="non-virtual"><scope>hpx::util::logging::formatter::time_strf_t</scope><name>m_localtime</name></member>
+      <member refid="structhpx_1_1util_1_1logging_1_1formatter_1_1time__strf__t_1a22703f21419282c875fc87c3f3c36000" prot="public" virt="non-virtual"><scope>hpx::util::logging::formatter::time_strf_t</scope><name>operator()</name></member>
+      <member refid="structhpx_1_1util_1_1logging_1_1formatter_1_1time__strf__t_1a55c58e898c9ec5cd58be2771e0e4c41e" prot="public" virt="non-virtual"><scope>hpx::util::logging::formatter::time_strf_t</scope><name>operator==</name></member>
+      <member refid="structhpx_1_1util_1_1logging_1_1formatter_1_1time__strf__t_1a8336bbe17714674dec4335985911dc32" prot="public" virt="non-virtual"><scope>hpx::util::logging::formatter::time_strf_t</scope><name>time_strf_t</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

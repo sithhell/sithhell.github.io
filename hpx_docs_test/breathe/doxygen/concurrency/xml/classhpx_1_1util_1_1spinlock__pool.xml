@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classhpx_1_1util_1_1spinlock__pool" kind="class" language="C++" prot="public">
+    <compoundname>hpx::util::spinlock_pool</compoundname>
+    <innerclass refid="classhpx_1_1util_1_1spinlock__pool_1_1scoped__lock" prot="public">hpx::util::spinlock_pool::scoped_lock</innerclass>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>Tag</declname>
+        <defname>Tag</defname>
+      </param>
+      <param>
+        <type>std::size_t</type>
+        <declname>N</declname>
+        <defname>N</defname>
+        <defval>HPX_HAVE_SPINLOCK_POOL_NUM</defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classhpx_1_1util_1_1spinlock__pool_1a18c75909883374ebce4a7962ce49c586" prot="private" static="yes" mutable="no">
+        <type><ref refid="structhpx_1_1util_1_1cache__aligned__data" kindref="compound">cache_aligned_data</ref>&lt; boost::detail::spinlock &gt;</type>
+        <definition>cache_aligned_data&lt; boost::detail::spinlock &gt; hpx::util::spinlock_pool&lt; Tag, N &gt;::pool_</definition>
+        <argsstring>[N]</argsstring>
+        <name>pool_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/spinlock_pool.hpp" line="49" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/spinlock_pool.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhpx_1_1util_1_1spinlock__pool_1a56367aefd08d08a3f646b9da721784bb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boost::detail::spinlock &amp;</type>
+        <definition>static boost::detail::spinlock&amp; hpx::util::spinlock_pool&lt; Tag, N &gt;::spinlock_for</definition>
+        <argsstring>(void const *pv)</argsstring>
+        <name>spinlock_for</name>
+        <param>
+          <type>void const *</type>
+          <declname>pv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/spinlock_pool.hpp" line="55" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/spinlock_pool.hpp" bodystart="55" bodyend="59"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libs/concurrency/include/hpx/concurrency/spinlock_pool.hpp" line="47" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/spinlock_pool.hpp" bodystart="46" bodyend="97"/>
+    <listofallmembers>
+      <member refid="classhpx_1_1util_1_1spinlock__pool_1a18c75909883374ebce4a7962ce49c586" prot="private" virt="non-virtual"><scope>hpx::util::spinlock_pool</scope><name>pool_</name></member>
+      <member refid="classhpx_1_1util_1_1spinlock__pool_1a56367aefd08d08a3f646b9da721784bb" prot="public" virt="non-virtual"><scope>hpx::util::spinlock_pool</scope><name>spinlock_for</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

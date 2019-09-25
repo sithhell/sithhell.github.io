@@ -1,0 +1,666 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="hpx_2logging_8hpp" kind="file" language="C++">
+    <compoundname>logging.hpp</compoundname>
+    <includes local="no">hpx/config.hpp</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="compatibility_2hpx_2util_2logging_8hpp" local="no">libs/logging/include_compatibility/hpx/util/logging.hpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="0">
+        <label>libs/logging/include/hpx/logging.hpp</label>
+        <link refid="hpx_2logging_8hpp"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>hpx/config.hpp</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>libs/logging/include/hpx/logging.hpp</label>
+        <link refid="hpx_2logging_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>libs/logging/include_compatibility/hpx/util/logging.hpp</label>
+        <link refid="compatibility_2hpx_2util_2logging_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structbootstrap__logging" prot="public">bootstrap_logging</innerclass>
+    <innernamespace refid="namespacehpx">hpx</innernamespace>
+    <innernamespace refid="namespacehpx_1_1util">hpx::util</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="hpx_2logging_8hpp_1a742eedb64ba94cfc6a265d78ada6c13d" prot="public" static="no">
+        <name>LAGAS_</name>
+        <param><defname>lvl</defname></param>
+        <initializer>if(true) {} else hpx::util::detail::dummy_log</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging.hpp" line="198" column="13" bodyfile="libs/logging/include/hpx/logging.hpp" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpx_2logging_8hpp_1a68733d17de2bd8a399eb01e0a9eab576" prot="public" static="no">
+        <name>LPT_</name>
+        <param><defname>lvl</defname></param>
+        <initializer>if(true) {} else hpx::util::detail::dummy_log</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging.hpp" line="199" column="13" bodyfile="libs/logging/include/hpx/logging.hpp" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpx_2logging_8hpp_1a933a472aedcd80b65015832ae14a5345" prot="public" static="no">
+        <name>LTIM_</name>
+        <param><defname>lvl</defname></param>
+        <initializer>if(true) {} else hpx::util::detail::dummy_log</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging.hpp" line="200" column="13" bodyfile="libs/logging/include/hpx/logging.hpp" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpx_2logging_8hpp_1af28f56be09b79be8c5711333b7250362" prot="public" static="no">
+        <name>LPROGRESS_</name>
+        <initializer>if(true) {} else hpx::util::detail::dummy_log</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging.hpp" line="201" column="13" bodyfile="libs/logging/include/hpx/logging.hpp" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpx_2logging_8hpp_1a770aec0d0fbf25f9428fc178e2717ff8" prot="public" static="no">
+        <name>LHPX_</name>
+        <param><defname>lvl</defname></param>
+        <param><defname>cat</defname></param>
+        <initializer>if(true) {} else hpx::util::detail::dummy_log</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging.hpp" line="202" column="13" bodyfile="libs/logging/include/hpx/logging.hpp" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpx_2logging_8hpp_1a4259c4c0dfd30dd9276ad70da09a820a" prot="public" static="no">
+        <name>LAPP_</name>
+        <param><defname>lvl</defname></param>
+        <initializer>if(true) {} else hpx::util::detail::dummy_log</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging.hpp" line="203" column="13" bodyfile="libs/logging/include/hpx/logging.hpp" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpx_2logging_8hpp_1ae5a49ad0514bb9c0953dfa3edd61234f" prot="public" static="no">
+        <name>LDEB_</name>
+        <initializer>if(true) {} else hpx::util::detail::dummy_log</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging.hpp" line="204" column="13" bodyfile="libs/logging/include/hpx/logging.hpp" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpx_2logging_8hpp_1a47c3908913d5d2756c6c9da62d5ce685" prot="public" static="no">
+        <name>LTM_</name>
+        <param><defname>lvl</defname></param>
+        <initializer>if(true) {} else hpx::util::detail::dummy_log</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging.hpp" line="206" column="13" bodyfile="libs/logging/include/hpx/logging.hpp" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpx_2logging_8hpp_1a2c70a35cf859d0cb3fe4b75cc16c63c6" prot="public" static="no">
+        <name>LRT_</name>
+        <param><defname>lvl</defname></param>
+        <initializer>if(true) {} else hpx::util::detail::dummy_log</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging.hpp" line="207" column="13" bodyfile="libs/logging/include/hpx/logging.hpp" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpx_2logging_8hpp_1a5a60bff2cba8bcee8d3763ac63ef57e9" prot="public" static="no">
+        <name>LOSH_</name>
+        <param><defname>lvl</defname></param>
+        <initializer>if(true) {} else hpx::util::detail::dummy_log</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging.hpp" line="208" column="13" bodyfile="libs/logging/include/hpx/logging.hpp" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpx_2logging_8hpp_1aeaefb0a2e3eaa73d217532cde038047c" prot="public" static="no">
+        <name>LERR_</name>
+        <param><defname>lvl</defname></param>
+        <initializer>if(true) {} else hpx::util::detail::dummy_log</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging.hpp" line="209" column="13" bodyfile="libs/logging/include/hpx/logging.hpp" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpx_2logging_8hpp_1aa897990f0168e39fd94fd9d4d9a0967c" prot="public" static="no">
+        <name>LLCO_</name>
+        <param><defname>lvl</defname></param>
+        <initializer>if(true) {} else hpx::util::detail::dummy_log</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging.hpp" line="210" column="13" bodyfile="libs/logging/include/hpx/logging.hpp" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpx_2logging_8hpp_1ab188bfe5200f48f1479e023cac02c1f6" prot="public" static="no">
+        <name>LPCS_</name>
+        <param><defname>lvl</defname></param>
+        <initializer>if(true) {} else hpx::util::detail::dummy_log</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging.hpp" line="211" column="13" bodyfile="libs/logging/include/hpx/logging.hpp" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpx_2logging_8hpp_1a203de60572e50e3bfc70f4d2f1954e07" prot="public" static="no">
+        <name>LAS_</name>
+        <param><defname>lvl</defname></param>
+        <initializer>if(true) {} else hpx::util::detail::dummy_log</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging.hpp" line="212" column="13" bodyfile="libs/logging/include/hpx/logging.hpp" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpx_2logging_8hpp_1a77f09f337957e792a05a9dcd0c3c40cb" prot="public" static="no">
+        <name>LBT_</name>
+        <param><defname>lvl</defname></param>
+        <initializer>if(true) {} else hpx::util::detail::dummy_log</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging.hpp" line="213" column="13" bodyfile="libs/logging/include/hpx/logging.hpp" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpx_2logging_8hpp_1afcaebbc1b897372115c2e8d07b99ffb7" prot="public" static="no">
+        <name>LFATAL_</name>
+        <initializer>if(true) {} else hpx::util::detail::dummy_log</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging.hpp" line="215" column="13" bodyfile="libs/logging/include/hpx/logging.hpp" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpx_2logging_8hpp_1a6f6c3bb89dcefb6aaae09325bf005329" prot="public" static="no">
+        <name>LAGAS_CONSOLE_</name>
+        <param><defname>lvl</defname></param>
+        <initializer>if(true) {} else hpx::util::detail::dummy_log</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging.hpp" line="217" column="13" bodyfile="libs/logging/include/hpx/logging.hpp" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpx_2logging_8hpp_1a5a593dff91ccdc59ddcffb31e4593dc0" prot="public" static="no">
+        <name>LPT_CONSOLE_</name>
+        <param><defname>lvl</defname></param>
+        <initializer>if(true) {} else hpx::util::detail::dummy_log</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging.hpp" line="218" column="13" bodyfile="libs/logging/include/hpx/logging.hpp" bodystart="218" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpx_2logging_8hpp_1a4b7eb2029ad04e0bf32a88e45e11c846" prot="public" static="no">
+        <name>LTIM_CONSOLE_</name>
+        <param><defname>lvl</defname></param>
+        <initializer>if(true) {} else hpx::util::detail::dummy_log</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging.hpp" line="219" column="13" bodyfile="libs/logging/include/hpx/logging.hpp" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpx_2logging_8hpp_1a897d0731b4fc6be78db376b81fd59def" prot="public" static="no">
+        <name>LHPX_CONSOLE_</name>
+        <param><defname>lvl</defname></param>
+        <initializer>if(true) {} else hpx::util::detail::dummy_log</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging.hpp" line="220" column="13" bodyfile="libs/logging/include/hpx/logging.hpp" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpx_2logging_8hpp_1a5a14dc7c0cd0607564ae8e1390cd60c8" prot="public" static="no">
+        <name>LAPP_CONSOLE_</name>
+        <param><defname>lvl</defname></param>
+        <initializer>if(true) {} else hpx::util::detail::dummy_log</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging.hpp" line="221" column="13" bodyfile="libs/logging/include/hpx/logging.hpp" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpx_2logging_8hpp_1a4a13b1cbae5c0fd474f138cd789ce232" prot="public" static="no">
+        <name>LDEB_CONSOLE_</name>
+        <initializer>if(true) {} else hpx::util::detail::dummy_log</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging.hpp" line="222" column="13" bodyfile="libs/logging/include/hpx/logging.hpp" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpx_2logging_8hpp_1a58af2cadc889a683599ba18102723e69" prot="public" static="no">
+        <name>LAGAS_ENABLED</name>
+        <param><defname>lvl</defname></param>
+        <initializer>(false)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging.hpp" line="224" column="13" bodyfile="libs/logging/include/hpx/logging.hpp" bodystart="224" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpx_2logging_8hpp_1abf25fc9ee4c0258cce10bb01992f654b" prot="public" static="no">
+        <name>LPT_ENABLED</name>
+        <param><defname>lvl</defname></param>
+        <initializer>(false)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging.hpp" line="225" column="13" bodyfile="libs/logging/include/hpx/logging.hpp" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpx_2logging_8hpp_1a063eb274f7f46a9007048df3ec023398" prot="public" static="no">
+        <name>LTIM_ENABLED</name>
+        <param><defname>lvl</defname></param>
+        <initializer>(false)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging.hpp" line="226" column="13" bodyfile="libs/logging/include/hpx/logging.hpp" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpx_2logging_8hpp_1ac68158f1363de3f8eeb79454e23e61d1" prot="public" static="no">
+        <name>LHPX_ENABLED</name>
+        <param><defname>lvl</defname></param>
+        <initializer>(false)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging.hpp" line="227" column="13" bodyfile="libs/logging/include/hpx/logging.hpp" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpx_2logging_8hpp_1a6d47a5b8ee3a84e41fd982546c6eb2ae" prot="public" static="no">
+        <name>LAPP_ENABLED</name>
+        <param><defname>lvl</defname></param>
+        <initializer>(false)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging.hpp" line="228" column="13" bodyfile="libs/logging/include/hpx/logging.hpp" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hpx_2logging_8hpp_1aec4159a44db597c6047378f3256315d7" prot="public" static="no">
+        <name>LDEB_ENABLED</name>
+        <initializer>(false)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging.hpp" line="229" column="13" bodyfile="libs/logging/include/hpx/logging.hpp" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="hpx_2logging_8hpp_1af2e30e01c5a48959f5554eacd4e45f21" prot="public" static="no" mutable="no">
+        <type>constexpr <ref refid="structbootstrap__logging" kindref="compound">bootstrap_logging</ref></type>
+        <definition>constexpr bootstrap_logging lbt_</definition>
+        <argsstring></argsstring>
+        <name>lbt_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging.hpp" line="239" column="1" bodyfile="libs/logging/include/hpx/logging.hpp" bodystart="239" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="hpx_2logging_8hpp_1aef2c913d6dffd4f51f064c49bee7c0e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structbootstrap__logging" kindref="compound">bootstrap_logging</ref> const  &amp;</type>
+        <definition>bootstrap_logging const&amp; operator&lt;&lt;</definition>
+        <argsstring>(bootstrap_logging const &amp;l, T &amp;&amp;)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="structbootstrap__logging" kindref="compound">bootstrap_logging</ref> const &amp;</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>T &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging.hpp" line="242" column="1" bodyfile="libs/logging/include/hpx/logging.hpp" bodystart="242" bodyend="245"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2007-2017<sp/>Hartmut<sp/>Kaiser</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Distributed<sp/>under<sp/>the<sp/>Boost<sp/>Software<sp/>License,<sp/>Version<sp/>1.0.<sp/>(See<sp/>accompanying</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>file<sp/>LICENSE_1_0.txt<sp/>or<sp/>copy<sp/>at<sp/>http://www.boost.org/LICENSE_1_0.txt)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(HPX_UTIL_AGAS_LOGGING_APR_10_2008_1032AM)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPX_UTIL_AGAS_LOGGING_APR_10_2008_1032AM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/config.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(HPX_HAVE_LOGGING)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/logging/format_fwd.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="hpx_2logging_2logging_8hpp" kindref="compound">hpx/logging/logging.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/current_function.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="comment">//<sp/>specific<sp/>logging</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LTM_(lvl)<sp/>LHPX_(lvl,<sp/>&quot;<sp/><sp/>[TM]<sp/>&quot;)<sp/><sp/></highlight><highlight class="comment">/*<sp/>thread<sp/>manager<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LRT_(lvl)<sp/>LHPX_(lvl,<sp/>&quot;<sp/><sp/>[RT]<sp/>&quot;)<sp/><sp/></highlight><highlight class="comment">/*<sp/>runtime<sp/>support<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOSH_(lvl)<sp/>LHPX_(lvl,<sp/>&quot;<sp/>[OSH]<sp/>&quot;)<sp/></highlight><highlight class="comment">/*<sp/>one<sp/>size<sp/>heap<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LERR_(lvl)<sp/>LHPX_(lvl,<sp/>&quot;<sp/>[ERR]<sp/>&quot;)<sp/></highlight><highlight class="comment">/*<sp/>exceptions<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LLCO_(lvl)<sp/>LHPX_(lvl,<sp/>&quot;<sp/>[LCO]<sp/>&quot;)<sp/></highlight><highlight class="comment">/*<sp/>lcos<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LPCS_(lvl)<sp/>LHPX_(lvl,<sp/>&quot;<sp/>[PCS]<sp/>&quot;)<sp/></highlight><highlight class="comment">/*<sp/>performance<sp/>counters<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LAS_(lvl)<sp/>LHPX_(lvl,<sp/>&quot;<sp/><sp/>[AS]<sp/>&quot;)<sp/><sp/></highlight><highlight class="comment">/*<sp/>addressing<sp/>service<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LBT_(lvl)<sp/>LHPX_(lvl,<sp/>&quot;<sp/><sp/>[BT]<sp/>&quot;)<sp/><sp/></highlight><highlight class="comment">/*<sp/>bootstrap<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehpx" kindref="compound">hpx</ref><sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">util<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>HPX_API_EXPORT<sp/>std::string<sp/>levelname(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>level);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">detail<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HPX_API_EXPORT<sp/>hpx::util::logging::level::type<sp/>get_log_level(</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>env,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>allow_always<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>HPX_EXPORT<sp/>HPX_DECLARE_LOG(agas)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LAGAS_(lvl)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>HPX_LOG_USE_LOG(hpx::util::agas,<sp/>::hpx::util::logging::level::lvl)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>hpx::util::levelname(::hpx::util::logging::level::lvl)<sp/>&lt;&lt;<sp/>&quot;<sp/>&quot;<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LAGAS_ENABLED(lvl)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="50"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>hpx::util::agas_logger()-&gt;is_enabled(::hpx::util::logging::level::lvl)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HPX_EXPORT<sp/>HPX_DECLARE_LOG(parcel)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LPT_(lvl)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>HPX_LOG_USE_LOG(hpx::util::parcel,<sp/>::hpx::util::logging::level::lvl)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="57"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>hpx::util::levelname(::hpx::util::logging::level::lvl)<sp/>&lt;&lt;<sp/>&quot;<sp/>&quot;<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LPT_ENABLED(lvl)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="60"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>hpx::util::parcel_logger()-&gt;is_enabled(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="61"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::hpx::util::logging::level::lvl)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HPX_EXPORT<sp/>HPX_DECLARE_LOG(timing)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LTIM_(lvl)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="67"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>HPX_LOG_USE_LOG(hpx::util::timing,<sp/>::hpx::util::logging::level::lvl)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="68"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>hpx::util::levelname(::hpx::util::logging::level::lvl)<sp/>&lt;&lt;<sp/>&quot;<sp/>&quot;<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LPROGRESS_<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="70"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>HPX_LOG_USE_LOG(hpx::util::timing,<sp/>::hpx::util::logging::level::fatal)<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="71"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>&quot;<sp/>&quot;<sp/>&lt;&lt;<sp/>__FILE__<sp/>&lt;&lt;<sp/>&quot;:&quot;<sp/>&lt;&lt;<sp/>__LINE__<sp/>&lt;&lt;<sp/>&quot;<sp/>&quot;<sp/>&lt;&lt;<sp/>BOOST_CURRENT_FUNCTION<sp/>\</highlight></codeline>
+<codeline lineno="72"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>&quot;<sp/>&quot;<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LTIM_ENABLED(lvl)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="75"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>hpx::util::timing_logger()-&gt;is_enabled(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="76"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::hpx::util::logging::level::lvl)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HPX_EXPORT<sp/>HPX_DECLARE_LOG(<ref refid="namespacehpx" kindref="compound">hpx</ref>)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LHPX_(lvl,<sp/>cat)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="82"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>HPX_LOG_USE_LOG(hpx::util::hpx,<sp/>::hpx::util::logging::level::lvl)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="83"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>hpx::util::levelname(::hpx::util::logging::level::lvl)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="84"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>(cat)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LHPX_ENABLED(lvl)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="87"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>hpx::util::hpx_logger()-&gt;is_enabled(::hpx::util::logging::level::lvl)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HPX_EXPORT<sp/>HPX_DECLARE_LOG(app)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LAPP_(lvl)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="93"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>HPX_LOG_USE_LOG(hpx::util::app,<sp/>::hpx::util::logging::level::lvl)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="94"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>hpx::util::levelname(::hpx::util::logging::level::lvl)<sp/>&lt;&lt;<sp/>&quot;<sp/>&quot;<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LAPP_ENABLED(lvl)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="97"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>hpx::util::app_logger()-&gt;is_enabled(::hpx::util::logging::level::lvl)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>special<sp/>debug<sp/>logging<sp/>channel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HPX_EXPORT<sp/>HPX_DECLARE_LOG(debuglog)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LDEB_<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="104"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>HPX_LOG_USE_LOG(hpx::util::debuglog,<sp/>::hpx::util::logging::level::error)<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="105"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>hpx::util::levelname(::hpx::util::logging::level::error)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="106"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>&quot;<sp/>&quot;<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LDEB_ENABLED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="109"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>hpx::util::debuglog_logger()-&gt;is_enabled(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="110"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::hpx::util::logging::level::error)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>errors<sp/>are<sp/>logged<sp/>in<sp/>a<sp/>special<sp/>manner<sp/>(always<sp/>to<sp/>cerr<sp/>and<sp/>additionally,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>enabled<sp/>to<sp/>&apos;normal&apos;<sp/>logging<sp/>destination<sp/>as<sp/>well)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HPX_EXPORT<sp/>HPX_DECLARE_LOG(hpx_error)</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LFATAL_<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="118"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>HPX_LOG_USE_LOG(hpx::util::hpx_error,<sp/>::hpx::util::logging::level::fatal)<sp/><sp/>\</highlight></codeline>
+<codeline lineno="119"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>hpx::util::levelname(::hpx::util::logging::level::fatal)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="120"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>(&quot;<sp/>[ERR]<sp/>&quot;)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HPX_EXPORT<sp/>HPX_DECLARE_LOG(agas_console)<sp/>HPX_EXPORT</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HPX_DECLARE_LOG(parcel_console)<sp/>HPX_EXPORT</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HPX_DECLARE_LOG(timing_console)<sp/>HPX_EXPORT</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HPX_DECLARE_LOG(hpx_console)<sp/>HPX_EXPORT<sp/>HPX_DECLARE_LOG(app_console)</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>special<sp/>debug<sp/>logging<sp/>channel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HPX_EXPORT<sp/>HPX_DECLARE_LOG(debuglog_console)</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">}}<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>hpx::util</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="preprocessor">#define<sp/>LAGAS_CONSOLE_(lvl)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="133"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>HPX_LOG_USE_LOG(hpx::util::agas_console,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="134"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>static_cast&lt;::hpx::util::logging::level::type&gt;(lvl))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="135"><highlight class="preprocessor"><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LPT_CONSOLE_(lvl)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="138"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>HPX_LOG_USE_LOG(hpx::util::parcel_console,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="139"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>static_cast&lt;::hpx::util::logging::level::type&gt;(lvl))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="140"><highlight class="preprocessor"><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LTIM_CONSOLE_(lvl)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="143"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>HPX_LOG_USE_LOG(hpx::util::timing_console,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="144"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>static_cast&lt;::hpx::util::logging::level::type&gt;(lvl))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="145"><highlight class="preprocessor"><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LHPX_CONSOLE_(lvl)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="148"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>HPX_LOG_USE_LOG(hpx::util::hpx_console,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="149"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>static_cast&lt;::hpx::util::logging::level::type&gt;(lvl))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="150"><highlight class="preprocessor"><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LAPP_CONSOLE_(lvl)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="153"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>HPX_LOG_USE_LOG(hpx::util::app_console,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="154"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>static_cast&lt;::hpx::util::logging::level::type&gt;(lvl))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="155"><highlight class="preprocessor"><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LDEB_CONSOLE_<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="158"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>HPX_LOG_USE_LOG(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="159"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::util::debuglog_console,<sp/>::hpx::util::logging::level::error)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="160"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="comment">//<sp/>helper<sp/>type<sp/>to<sp/>forward<sp/>logging<sp/>during<sp/>bootstrap<sp/>to<sp/>two<sp/>destinations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbootstrap__logging" kindref="compound">bootstrap_logging</ref></highlight></codeline>
+<codeline lineno="164"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/><ref refid="structbootstrap__logging" kindref="compound">bootstrap_logging</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><ref refid="structbootstrap__logging" kindref="compound">bootstrap_logging</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>operator&lt;&lt;(<ref refid="structbootstrap__logging" kindref="compound">bootstrap_logging</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>l,<sp/>T<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>t)</highlight></codeline>
+<codeline lineno="170"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>LBT_(info)<sp/>&lt;&lt;<sp/>t;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>LPROGRESS_<sp/>&lt;&lt;<sp/>t;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>l;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal">constexpr<sp/><ref refid="structbootstrap__logging" kindref="compound">bootstrap_logging</ref><sp/>lbt_;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="comment">//<sp/>logging<sp/>is<sp/>disabled<sp/>all<sp/>together</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehpx" kindref="compound">hpx</ref><sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">util<sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">detail<sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">dummy_log_impl</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>constexpr<sp/>dummy_log_impl()<sp/>{}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>constexpr<sp/>dummy_log_impl<sp/>dummy_log;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dummy_log_impl<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>operator&lt;&lt;(dummy_log_impl<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>l,<sp/>T&amp;&amp;)</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>l;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>detail</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>clang-format<sp/>off</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LAGAS_(lvl)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(true)<sp/>{}<sp/>else<sp/>hpx::util::detail::dummy_log</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LPT_(lvl)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(true)<sp/>{}<sp/>else<sp/>hpx::util::detail::dummy_log</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LTIM_(lvl)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(true)<sp/>{}<sp/>else<sp/>hpx::util::detail::dummy_log</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LPROGRESS_<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(true)<sp/>{}<sp/>else<sp/>hpx::util::detail::dummy_log</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LHPX_(lvl,<sp/>cat)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(true)<sp/>{}<sp/>else<sp/>hpx::util::detail::dummy_log</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LAPP_(lvl)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(true)<sp/>{}<sp/>else<sp/>hpx::util::detail::dummy_log</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LDEB_<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(true)<sp/>{}<sp/>else<sp/>hpx::util::detail::dummy_log</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LTM_(lvl)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(true)<sp/>{}<sp/>else<sp/>hpx::util::detail::dummy_log</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LRT_(lvl)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(true)<sp/>{}<sp/>else<sp/>hpx::util::detail::dummy_log</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LOSH_(lvl)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(true)<sp/>{}<sp/>else<sp/>hpx::util::detail::dummy_log</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LERR_(lvl)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(true)<sp/>{}<sp/>else<sp/>hpx::util::detail::dummy_log</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LLCO_(lvl)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(true)<sp/>{}<sp/>else<sp/>hpx::util::detail::dummy_log</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LPCS_(lvl)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(true)<sp/>{}<sp/>else<sp/>hpx::util::detail::dummy_log</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LAS_(lvl)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(true)<sp/>{}<sp/>else<sp/>hpx::util::detail::dummy_log</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LBT_(lvl)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(true)<sp/>{}<sp/>else<sp/>hpx::util::detail::dummy_log</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LFATAL_<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(true)<sp/>{}<sp/>else<sp/>hpx::util::detail::dummy_log</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LAGAS_CONSOLE_(lvl)<sp/><sp/><sp/>if(true)<sp/>{}<sp/>else<sp/>hpx::util::detail::dummy_log</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LPT_CONSOLE_(lvl)<sp/><sp/><sp/><sp/><sp/>if(true)<sp/>{}<sp/>else<sp/>hpx::util::detail::dummy_log</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LTIM_CONSOLE_(lvl)<sp/><sp/><sp/><sp/>if(true)<sp/>{}<sp/>else<sp/>hpx::util::detail::dummy_log</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LHPX_CONSOLE_(lvl)<sp/><sp/><sp/><sp/>if(true)<sp/>{}<sp/>else<sp/>hpx::util::detail::dummy_log</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LAPP_CONSOLE_(lvl)<sp/><sp/><sp/><sp/>if(true)<sp/>{}<sp/>else<sp/>hpx::util::detail::dummy_log</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LDEB_CONSOLE_<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(true)<sp/>{}<sp/>else<sp/>hpx::util::detail::dummy_log</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LAGAS_ENABLED(lvl)<sp/><sp/><sp/><sp/>(false)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LPT_ENABLED(lvl)<sp/><sp/><sp/><sp/><sp/><sp/>(false)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LTIM_ENABLED(lvl)<sp/><sp/><sp/><sp/><sp/>(false)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LHPX_ENABLED(lvl)<sp/><sp/><sp/><sp/><sp/>(false)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LAPP_ENABLED(lvl)<sp/><sp/><sp/><sp/><sp/>(false)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LDEB_ENABLED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(false)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>clang-format<sp/>on</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal">}}<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>hpx::util</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235" refid="structbootstrap__logging" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbootstrap__logging" kindref="compound">bootstrap_logging</ref></highlight></codeline>
+<codeline lineno="236"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/><ref refid="structbootstrap__logging" kindref="compound">bootstrap_logging</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="238"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="239"><highlight class="normal">constexpr<sp/><ref refid="structbootstrap__logging" kindref="compound">bootstrap_logging</ref><sp/>lbt_;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><ref refid="structbootstrap__logging" kindref="compound">bootstrap_logging</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>operator&lt;&lt;(<ref refid="structbootstrap__logging" kindref="compound">bootstrap_logging</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>l,<sp/>T&amp;&amp;)</highlight></codeline>
+<codeline lineno="243"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>l;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="libs/logging/include/hpx/logging.hpp"/>
+  </compounddef>
+</doxygen>

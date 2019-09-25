@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacehpx_1_1threads_1_1policies" kind="namespace" language="C++">
+    <compoundname>hpx::threads::policies</compoundname>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="scheduler__mode_8hpp_1a69bdc4ea03e29d7326c155278b0fc386" prot="public" static="no">
+        <name>scheduler_mode</name>
+        <enumvalue id="scheduler__mode_8hpp_1a69bdc4ea03e29d7326c155278b0fc386aaa96d91611607d9efc031d528bd74f3a" prot="public">
+          <name>nothing_special</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>can be used to disable all other options. </para>          </briefdescription>
+          <detaileddescription>
+<para>As the name suggests, this option </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scheduler__mode_8hpp_1a69bdc4ea03e29d7326c155278b0fc386a9b9907ef13cfd847a7e29d07bcdff6f5" prot="public">
+          <name>do_background_work</name>
+          <initializer>= 0x1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The scheduler will periodically call a provided callback function from a special HPX thread to enable performing background-work, for instance driving networking progress or garbage-collect AGAS. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scheduler__mode_8hpp_1a69bdc4ea03e29d7326c155278b0fc386a48da50256881295935d9bb119daa440b" prot="public">
+          <name>reduce_thread_priority</name>
+          <initializer>= 0x02</initializer>
+          <briefdescription>
+<para>os-thread driving the scheduler will be reduced below normal. </para>          </briefdescription>
+          <detaileddescription>
+<para>The kernel priority of the </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scheduler__mode_8hpp_1a69bdc4ea03e29d7326c155278b0fc386a11874dbf45cd476d0f3053b8c1c9cfd1" prot="public">
+          <name>delay_exit</name>
+          <initializer>= 0x04</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The scheduler will wait for some unspecified amount of time before exiting the scheduling loop while being terminated to make sure no other work is being scheduled during processing the shutdown request. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scheduler__mode_8hpp_1a69bdc4ea03e29d7326c155278b0fc386acd086983ec6f845ab7a1597e38850451" prot="public">
+          <name>fast_idle_mode</name>
+          <initializer>= 0x08</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Some schedulers have the capability to act as &apos;embedded&apos; schedulers. In this case it needs to periodically invoke a provided callback into the outer scheduler more frequently than normal. This option enables this behavior. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scheduler__mode_8hpp_1a69bdc4ea03e29d7326c155278b0fc386a4f494c1a6b130fa4d79673a0fe753208" prot="public">
+          <name>enable_elasticity</name>
+          <initializer>= 0x10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>This option allows for the scheduler to dynamically increase and reduce the number of processing units it runs on. Setting this value not succeed for schedulers that do not support this functionality. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scheduler__mode_8hpp_1a69bdc4ea03e29d7326c155278b0fc386ac37e78af6ef8c9ad7e9185ece931877f" prot="public">
+          <name>enable_stealing</name>
+          <initializer>= 0x20</initializer>
+          <briefdescription>
+<para>schedulers to explicitly disable thread stealing </para>          </briefdescription>
+          <detaileddescription>
+<para>This option allows for certain </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scheduler__mode_8hpp_1a69bdc4ea03e29d7326c155278b0fc386aafcf3581db370004531dff89038e8439" prot="public">
+          <name>enable_idle_backoff</name>
+          <initializer>= 0x40</initializer>
+          <briefdescription>
+<para>schedulers to explicitly disable exponential idle-back off </para>          </briefdescription>
+          <detaileddescription>
+<para>This option allows for certain </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scheduler__mode_8hpp_1a69bdc4ea03e29d7326c155278b0fc386aa98d9e6e0d3dae3e20c4828935bc600f" prot="public">
+          <name>default_mode</name>
+          <initializer>=
+                do_background_work |
+                reduce_thread_priority |
+                delay_exit |
+                enable_stealing |
+                enable_idle_backoff</initializer>
+          <briefdescription>
+<para>This option represents the default mode. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="scheduler__mode_8hpp_1a69bdc4ea03e29d7326c155278b0fc386a4ae6537464c47b24789e5d7c56ce7789" prot="public">
+          <name>all_flags</name>
+          <initializer>=
+                do_background_work |
+                reduce_thread_priority |
+                delay_exit |
+                fast_idle_mode |
+                enable_elasticity |
+                enable_stealing |
+                enable_idle_backoff</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>This enumeration describes the possible modes of a scheduler. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/policies/scheduler_mode.hpp" line="13" column="1" bodyfile="hpx/runtime/threads/policies/scheduler_mode.hpp" bodystart="12" bodyend="54"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="hpx/runtime/threads/policies/scheduler_mode.hpp" line="10" column="1"/>
+  </compounddef>
+</doxygen>

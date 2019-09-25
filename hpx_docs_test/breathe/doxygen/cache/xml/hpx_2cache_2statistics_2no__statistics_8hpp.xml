@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="hpx_2cache_2statistics_2no__statistics_8hpp" kind="file" language="C++">
+    <compoundname>no_statistics.hpp</compoundname>
+    <includes local="no">hpx/config.hpp</includes>
+    <includes local="no">cstdint</includes>
+    <includedby refid="hpx_2cache_2local__cache_8hpp" local="no">libs/cache/include/hpx/cache/local_cache.hpp</includedby>
+    <includedby refid="hpx_2cache_2lru__cache_8hpp" local="no">libs/cache/include/hpx/cache/lru_cache.hpp</includedby>
+    <includedby refid="hpx_2cache_2statistics_2local__statistics_8hpp" local="no">libs/cache/include/hpx/cache/statistics/local_statistics.hpp</includedby>
+    <includedby refid="compatibility_2hpx_2util_2cache_2statistics_2no__statistics_8hpp" local="no">libs/cache/include_compatibility/hpx/util/cache/statistics/no_statistics.hpp</includedby>
+    <incdepgraph>
+      <node id="182">
+        <label>cstdint</label>
+      </node>
+      <node id="181">
+        <label>hpx/config.hpp</label>
+      </node>
+      <node id="180">
+        <label>libs/cache/include/hpx/cache/statistics/no_statistics.hpp</label>
+        <link refid="hpx_2cache_2statistics_2no__statistics_8hpp"/>
+        <childnode refid="181" relation="include">
+        </childnode>
+        <childnode refid="182" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="188">
+        <label>libs/cache/include/hpx/cache/statistics/local_statistics.hpp</label>
+        <link refid="hpx_2cache_2statistics_2local__statistics_8hpp_source"/>
+        <childnode refid="189" relation="include">
+        </childnode>
+        <childnode refid="191" relation="include">
+        </childnode>
+      </node>
+      <node id="185">
+        <label>libs/cache/include_compatibility/hpx/util/cache/local_cache.hpp</label>
+        <link refid="compatibility_2hpx_2util_2cache_2local__cache_8hpp_source"/>
+      </node>
+      <node id="187">
+        <label>libs/cache/include_compatibility/hpx/util/cache/lru_cache.hpp</label>
+        <link refid="compatibility_2hpx_2util_2cache_2lru__cache_8hpp_source"/>
+      </node>
+      <node id="192">
+        <label>libs/cache/include_compatibility/hpx/util/cache/statistics/no_statistics.hpp</label>
+        <link refid="compatibility_2hpx_2util_2cache_2statistics_2no__statistics_8hpp_source"/>
+      </node>
+      <node id="190">
+        <label>libs/cache/include_compatibility/hpx/util/cache/statistics/local_full_statistics.hpp</label>
+        <link refid="compatibility_2hpx_2util_2cache_2statistics_2local__full__statistics_8hpp_source"/>
+      </node>
+      <node id="186">
+        <label>libs/cache/include/hpx/cache/lru_cache.hpp</label>
+        <link refid="hpx_2cache_2lru__cache_8hpp_source"/>
+        <childnode refid="187" relation="include">
+        </childnode>
+      </node>
+      <node id="189">
+        <label>libs/cache/include/hpx/cache/statistics/local_full_statistics.hpp</label>
+        <link refid="hpx_2cache_2statistics_2local__full__statistics_8hpp_source"/>
+        <childnode refid="190" relation="include">
+        </childnode>
+      </node>
+      <node id="191">
+        <label>libs/cache/include_compatibility/hpx/util/cache/statistics/local_statistics.hpp</label>
+        <link refid="compatibility_2hpx_2util_2cache_2statistics_2local__statistics_8hpp_source"/>
+      </node>
+      <node id="184">
+        <label>libs/cache/include/hpx/cache/local_cache.hpp</label>
+        <link refid="hpx_2cache_2local__cache_8hpp_source"/>
+        <childnode refid="185" relation="include">
+        </childnode>
+      </node>
+      <node id="183">
+        <label>libs/cache/include/hpx/cache/statistics/no_statistics.hpp</label>
+        <link refid="hpx_2cache_2statistics_2no__statistics_8hpp"/>
+        <childnode refid="184" relation="include">
+        </childnode>
+        <childnode refid="186" relation="include">
+        </childnode>
+        <childnode refid="188" relation="include">
+        </childnode>
+        <childnode refid="192" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics" prot="public">hpx::util::cache::statistics::no_statistics</innerclass>
+    <innerclass refid="structhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics_1_1update__on__exit" prot="public">hpx::util::cache::statistics::no_statistics::update_on_exit</innerclass>
+    <innernamespace refid="namespacehpx">hpx</innernamespace>
+    <innernamespace refid="namespacehpx_1_1util">hpx::util</innernamespace>
+    <innernamespace refid="namespacehpx_1_1util_1_1cache">hpx::util::cache</innernamespace>
+    <innernamespace refid="namespacehpx_1_1util_1_1cache_1_1statistics">hpx::util::cache::statistics</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2007-2016<sp/>Hartmut<sp/>Kaiser</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Distributed<sp/>under<sp/>the<sp/>Boost<sp/>Software<sp/>License,<sp/>Version<sp/>1.0.<sp/>(See<sp/>accompanying</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>file<sp/>LICENSE_1_0.txt<sp/>or<sp/>copy<sp/>at<sp/>http://www.boost.org/LICENSE_1_0.txt)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(HPX_UTIL_CACHE_NO_STATISTICS_NOV_20_2008_1229PM)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPX_UTIL_CACHE_NO_STATISTICS_NOV_20_2008_1229PM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/config.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehpx" kindref="compound">hpx</ref><sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">util<sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">cache<sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">statistics</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>method</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>method_get_entry<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>method_insert_entry<sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>method_update_entry<sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>method_erase_entry<sp/>=<sp/>3</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="classhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics" kindref="compound">no_statistics</ref></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="31" refid="classhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics_1a96deba61db7953e59c6645293109ba3f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics_1a96deba61db7953e59c6645293109ba3f" kindref="member">got_hit</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="classhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics_1a3a2f55c959797aa399ad9ce136240ae9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics_1a3a2f55c959797aa399ad9ce136240ae9" kindref="member">got_miss</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="classhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics_1ae5a3b80a61a2f3d4505e09b96ca83f65" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics_1ae5a3b80a61a2f3d4505e09b96ca83f65" kindref="member">got_insertion</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="classhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics_1aadc7c358631d14e536fbfd1366276bb6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics_1aadc7c358631d14e536fbfd1366276bb6" kindref="member">got_eviction</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="classhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics_1abd0a14a9ec6013bf3dab97e6a09c22d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics_1abd0a14a9ec6013bf3dab97e6a09c22d8" kindref="member">clear</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="structhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics_1_1update__on__exit" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics_1_1update__on__exit" kindref="compound">update_on_exit</ref></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics_1_1update__on__exit" kindref="compound">update_on_exit</ref>(<ref refid="classhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics" kindref="compound">no_statistics</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;,<sp/>method)<sp/>{}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="classhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics_1a12774877ad7800d36b201072f9620d75" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::int64_t<sp/><ref refid="classhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics_1a12774877ad7800d36b201072f9620d75" kindref="member">get_get_entry_count</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="classhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics_1a03cb03a4be2054733004394492e52b99" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::int64_t<sp/><ref refid="classhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics_1a03cb03a4be2054733004394492e52b99" kindref="member">get_insert_entry_count</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="classhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics_1a6e96c610181c70853e4ceb2925969ab5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::int64_t<sp/><ref refid="classhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics_1a6e96c610181c70853e4ceb2925969ab5" kindref="member">get_update_entry_count</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="classhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics_1a64c93a4d748f7f85cf61d996b1331e34" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::int64_t<sp/><ref refid="classhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics_1a64c93a4d748f7f85cf61d996b1331e34" kindref="member">get_erase_entry_count</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="classhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics_1a31651d1baeee2d265bc164821f31058f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::int64_t<sp/><ref refid="classhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics_1a31651d1baeee2d265bc164821f31058f" kindref="member">get_get_entry_time</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="classhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics_1a69beb17792a8b46a0d8e798e2da6da43" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::int64_t<sp/><ref refid="classhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics_1a69beb17792a8b46a0d8e798e2da6da43" kindref="member">get_insert_entry_time</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="classhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics_1a4ed980ae645c834f14822b444e25a6a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::int64_t<sp/><ref refid="classhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics_1a4ed980ae645c834f14822b444e25a6a1" kindref="member">get_update_entry_time</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="classhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics_1abc61cda73f7b2198d41c224b972073be" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::int64_t<sp/><ref refid="classhpx_1_1util_1_1cache_1_1statistics_1_1no__statistics_1abc61cda73f7b2198d41c224b972073be" kindref="member">get_erase_entry_time</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">}}}}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="libs/cache/include/hpx/cache/statistics/no_statistics.hpp"/>
+  </compounddef>
+</doxygen>

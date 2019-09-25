@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classhpx_1_1program__options_1_1value__semantic__codecvt__helper_3_01wchar__t_01_4" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>hpx::program_options::value_semantic_codecvt_helper&lt; wchar_t &gt;</compoundname>
+    <basecompoundref refid="classhpx_1_1program__options_1_1value__semantic" prot="public" virt="non-virtual">hpx::program_options::value_semantic</basecompoundref>
+    <includes refid="value__semantic_8hpp" local="no">value_semantic.hpp</includes>
+    <templateparamlist>
+    </templateparamlist>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1value__semantic__codecvt__helper_3_01wchar__t_01_4_1a7c2ea6f0bb7209f5a932f7d365c729ed" prot="private" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void hpx::program_options::value_semantic_codecvt_helper&lt; wchar_t &gt;::parse</definition>
+        <argsstring>(hpx::util::any_nonser &amp;value_store, const std::vector&lt; std::string &gt; &amp;new_tokens, bool utf8) const override</argsstring>
+        <name>parse</name>
+        <reimplements refid="classhpx_1_1program__options_1_1value__semantic_1a4483d8f19525a323309eeebe6a1cc701">parse</reimplements>
+        <param>
+          <type>hpx::util::any_nonser &amp;</type>
+          <declname>value_store</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>new_tokens</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>utf8</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parses a group of tokens that specify a value of option. Stores the result in &apos;value_store&apos;, using whatever representation is desired. May be be called several times if value of the same option is specified more than once. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/value_semantic.hpp" line="155" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1value__semantic__codecvt__helper_3_01wchar__t_01_4_1a03957a209f15dce08ed310dd2a11ceb8" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void hpx::program_options::value_semantic_codecvt_helper&lt; wchar_t &gt;::xparse</definition>
+        <argsstring>(hpx::util::any_nonser &amp;value_store, const std::vector&lt; std::wstring &gt; &amp;new_tokens) const =0</argsstring>
+        <name>xparse</name>
+        <param>
+          <type>hpx::util::any_nonser &amp;</type>
+          <declname>value_store</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::wstring &gt; &amp;</type>
+          <declname>new_tokens</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/value_semantic.hpp" line="160" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Helper conversion class for values that accept ascii strings as input. Overrides the &apos;parse&apos; method and defines new &apos;xparse&apos; method taking std::wstring. Depending on whether input to parse is ascii or UTF8, will recode input to Unicode, or pass it unmodified. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="244">
+        <label>hpx::program_options::value_semantic_codecvt_helper&lt; wchar_t &gt;</label>
+        <link refid="classhpx_1_1program__options_1_1value__semantic__codecvt__helper_3_01wchar__t_01_4"/>
+        <childnode refid="245" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="245">
+        <label>hpx::program_options::value_semantic</label>
+        <link refid="classhpx_1_1program__options_1_1value__semantic"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="246">
+        <label>hpx::program_options::value_semantic_codecvt_helper&lt; wchar_t &gt;</label>
+        <link refid="classhpx_1_1program__options_1_1value__semantic__codecvt__helper_3_01wchar__t_01_4"/>
+        <childnode refid="247" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="247">
+        <label>hpx::program_options::value_semantic</label>
+        <link refid="classhpx_1_1program__options_1_1value__semantic"/>
+      </node>
+    </collaborationgraph>
+    <location file="libs/program_options/include/hpx/program_options/value_semantic.hpp" line="153" column="1" bodyfile="libs/program_options/include/hpx/program_options/value_semantic.hpp" bodystart="151" bodyend="162"/>
+    <listofallmembers>
+      <member refid="classhpx_1_1program__options_1_1value__semantic_1a0d689252b6d6a961a885782934e274bc" prot="public" virt="pure-virtual"><scope>hpx::program_options::value_semantic_codecvt_helper&lt; wchar_t &gt;</scope><name>apply_default</name></member>
+      <member refid="classhpx_1_1program__options_1_1value__semantic_1a1c306c41e05017df2bffaa8795a9708a" prot="public" virt="pure-virtual"><scope>hpx::program_options::value_semantic_codecvt_helper&lt; wchar_t &gt;</scope><name>is_composing</name></member>
+      <member refid="classhpx_1_1program__options_1_1value__semantic_1aa2f3dd57bfe625dbe76bb707be256220" prot="public" virt="pure-virtual"><scope>hpx::program_options::value_semantic_codecvt_helper&lt; wchar_t &gt;</scope><name>is_required</name></member>
+      <member refid="classhpx_1_1program__options_1_1value__semantic_1a77b9c569a8b0177748cdc8456d96cf49" prot="public" virt="pure-virtual"><scope>hpx::program_options::value_semantic_codecvt_helper&lt; wchar_t &gt;</scope><name>max_tokens</name></member>
+      <member refid="classhpx_1_1program__options_1_1value__semantic_1a167bc134dd276a4bec508bba48a5c8a4" prot="public" virt="pure-virtual"><scope>hpx::program_options::value_semantic_codecvt_helper&lt; wchar_t &gt;</scope><name>min_tokens</name></member>
+      <member refid="classhpx_1_1program__options_1_1value__semantic_1ad80cff54dd5b853fd030391e3039cb5b" prot="public" virt="pure-virtual"><scope>hpx::program_options::value_semantic_codecvt_helper&lt; wchar_t &gt;</scope><name>name</name></member>
+      <member refid="classhpx_1_1program__options_1_1value__semantic_1aa72fb034c6ae89b6c73ee2e4b7fc0172" prot="public" virt="pure-virtual"><scope>hpx::program_options::value_semantic_codecvt_helper&lt; wchar_t &gt;</scope><name>notify</name></member>
+      <member refid="classhpx_1_1program__options_1_1value__semantic__codecvt__helper_3_01wchar__t_01_4_1a7c2ea6f0bb7209f5a932f7d365c729ed" prot="private" virt="virtual"><scope>hpx::program_options::value_semantic_codecvt_helper&lt; wchar_t &gt;</scope><name>parse</name></member>
+      <member refid="classhpx_1_1program__options_1_1value__semantic__codecvt__helper_3_01wchar__t_01_4_1a03957a209f15dce08ed310dd2a11ceb8" prot="protected" virt="pure-virtual"><scope>hpx::program_options::value_semantic_codecvt_helper&lt; wchar_t &gt;</scope><name>xparse</name></member>
+      <member refid="classhpx_1_1program__options_1_1value__semantic_1a65e85d853ce018535bc7f4d249c14659" prot="public" virt="virtual"><scope>hpx::program_options::value_semantic_codecvt_helper&lt; wchar_t &gt;</scope><name>~value_semantic</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

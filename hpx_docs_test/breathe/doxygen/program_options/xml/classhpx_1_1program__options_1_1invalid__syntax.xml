@@ -1,0 +1,280 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classhpx_1_1program__options_1_1invalid__syntax" kind="class" language="C++" prot="public">
+    <compoundname>hpx::program_options::invalid_syntax</compoundname>
+    <basecompoundref refid="classhpx_1_1program__options_1_1error__with__option__name" prot="public" virt="non-virtual">hpx::program_options::error_with_option_name</basecompoundref>
+    <derivedcompoundref refid="classhpx_1_1program__options_1_1invalid__command__line__syntax" prot="public" virt="non-virtual">hpx::program_options::invalid_command_line_syntax</derivedcompoundref>
+    <derivedcompoundref refid="classhpx_1_1program__options_1_1invalid__config__file__syntax" prot="public" virt="non-virtual">hpx::program_options::invalid_config_file_syntax</derivedcompoundref>
+    <includes refid="errors_8hpp" local="no">errors.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classhpx_1_1program__options_1_1invalid__syntax_1ae858a2bfbc7899c162ee6c8ac263f33a" prot="public" static="no">
+        <name>kind_t</name>
+        <enumvalue id="classhpx_1_1program__options_1_1invalid__syntax_1ae858a2bfbc7899c162ee6c8ac263f33aaafc2d25003ff0b7d40d11daa03da55d9" prot="public">
+          <name>long_not_allowed</name>
+          <initializer>= 30</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classhpx_1_1program__options_1_1invalid__syntax_1ae858a2bfbc7899c162ee6c8ac263f33aae3fec0be00159bbd1e3fc60dfdd5c659" prot="public">
+          <name>long_adjacent_not_allowed</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classhpx_1_1program__options_1_1invalid__syntax_1ae858a2bfbc7899c162ee6c8ac263f33aa0d4d85f621581014cd7f695cbd6bc6dc" prot="public">
+          <name>short_adjacent_not_allowed</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classhpx_1_1program__options_1_1invalid__syntax_1ae858a2bfbc7899c162ee6c8ac263f33aa4de951876a9c0f314486ab557c8f8ec6" prot="public">
+          <name>empty_adjacent_parameter</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classhpx_1_1program__options_1_1invalid__syntax_1ae858a2bfbc7899c162ee6c8ac263f33aa2059db86e3fe1366d3ec3efde4825763" prot="public">
+          <name>missing_parameter</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classhpx_1_1program__options_1_1invalid__syntax_1ae858a2bfbc7899c162ee6c8ac263f33aae117fc178991dbef357695c703854107" prot="public">
+          <name>extra_parameter</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classhpx_1_1program__options_1_1invalid__syntax_1ae858a2bfbc7899c162ee6c8ac263f33aa6d8c9bf20abd6ab22b6c4a390c960bc4" prot="public">
+          <name>unrecognized_line</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/errors.hpp" line="351" column="1" bodyfile="libs/program_options/include/hpx/program_options/errors.hpp" bodystart="350" bodyend="359"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classhpx_1_1program__options_1_1invalid__syntax_1ae4f388be528500e5a1616773109e8a50" prot="protected" static="no" mutable="no">
+        <type>kind_t</type>
+        <definition>kind_t hpx::program_options::invalid_syntax::m_kind</definition>
+        <argsstring></argsstring>
+        <name>m_kind</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/errors.hpp" line="385" column="1" bodyfile="libs/program_options/include/hpx/program_options/errors.hpp" bodystart="385" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1invalid__syntax_1a8c38dd2c9798045b11dd3de02c0d294b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::program_options::invalid_syntax::invalid_syntax</definition>
+        <argsstring>(kind_t kind, const std::string &amp;option_name=&quot;&quot;, const std::string &amp;original_token=&quot;&quot;, int option_style=0)</argsstring>
+        <name>invalid_syntax</name>
+        <param>
+          <type>kind_t</type>
+          <declname>kind</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>option_name</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>original_token</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>option_style</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/errors.hpp" line="361" column="1" bodyfile="libs/program_options/include/hpx/program_options/errors.hpp" bodystart="361" bodyend="367"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1invalid__syntax_1a3d0132aa3e367921057ac656dce7495a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::program_options::invalid_syntax::~invalid_syntax</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>~invalid_syntax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/errors.hpp" line="369" column="1" bodyfile="libs/program_options/include/hpx/program_options/errors.hpp" bodystart="369" bodyend="369"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1invalid__syntax_1a5f274d6594a5e54e5d9aff3b6cb5a779" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>kind_t</type>
+        <definition>kind_t hpx::program_options::invalid_syntax::kind</definition>
+        <argsstring>() const</argsstring>
+        <name>kind</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/errors.hpp" line="371" column="1" bodyfile="libs/program_options/include/hpx/program_options/errors.hpp" bodystart="371" bodyend="374"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1invalid__syntax_1aca1eb13d9c752b2d9ca2ecae4535f374" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>virtual std::string hpx::program_options::invalid_syntax::tokens</definition>
+        <argsstring>() const</argsstring>
+        <name>tokens</name>
+        <reimplementedby refid="classhpx_1_1program__options_1_1invalid__config__file__syntax_1aa2cad9f7969dead4fb8e20b3bf950b03">tokens</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convenience functions for backwards compatibility </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/errors.hpp" line="377" column="1" bodyfile="libs/program_options/include/hpx/program_options/errors.hpp" bodystart="377" bodyend="380"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1invalid__syntax_1a6811399a7c6a1b1ffff3283379e089cc" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string hpx::program_options::invalid_syntax::get_template</definition>
+        <argsstring>(kind_t kind)</argsstring>
+        <name>get_template</name>
+        <param>
+          <type>kind_t</type>
+          <declname>kind</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Used to convert kind_t to a related error text </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/errors.hpp" line="384" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class thrown when there&apos;s syntax error either for command line or config file options. See derived children for concrete classes. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="145">
+        <label>std::logic_error</label>
+      </node>
+      <node id="144">
+        <label>hpx::program_options::error</label>
+        <link refid="classhpx_1_1program__options_1_1error"/>
+        <childnode refid="145" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="146">
+        <label>hpx::program_options::invalid_command_line_syntax</label>
+        <link refid="classhpx_1_1program__options_1_1invalid__command__line__syntax"/>
+        <childnode refid="142" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="143">
+        <label>hpx::program_options::error_with_option_name</label>
+        <link refid="classhpx_1_1program__options_1_1error__with__option__name"/>
+        <childnode refid="144" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="147">
+        <label>hpx::program_options::invalid_config_file_syntax</label>
+        <link refid="classhpx_1_1program__options_1_1invalid__config__file__syntax"/>
+        <childnode refid="142" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="142">
+        <label>hpx::program_options::invalid_syntax</label>
+        <link refid="classhpx_1_1program__options_1_1invalid__syntax"/>
+        <childnode refid="143" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="151">
+        <label>std::logic_error</label>
+      </node>
+      <node id="150">
+        <label>hpx::program_options::error</label>
+        <link refid="classhpx_1_1program__options_1_1error"/>
+        <childnode refid="151" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="149">
+        <label>hpx::program_options::error_with_option_name</label>
+        <link refid="classhpx_1_1program__options_1_1error__with__option__name"/>
+        <childnode refid="150" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="148">
+        <label>hpx::program_options::invalid_syntax</label>
+        <link refid="classhpx_1_1program__options_1_1invalid__syntax"/>
+        <childnode refid="149" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libs/program_options/include/hpx/program_options/errors.hpp" line="348" column="1" bodyfile="libs/program_options/include/hpx/program_options/errors.hpp" bodystart="347" bodyend="386"/>
+    <listofallmembers>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1a6fb7db39524adc2e646769a505fbd073" prot="public" virt="non-virtual"><scope>hpx::program_options::invalid_syntax</scope><name>add_context</name></member>
+      <member refid="classhpx_1_1program__options_1_1invalid__syntax_1ae858a2bfbc7899c162ee6c8ac263f33aa4de951876a9c0f314486ab557c8f8ec6" prot="public" virt="non-virtual"><scope>hpx::program_options::invalid_syntax</scope><name>empty_adjacent_parameter</name></member>
+      <member refid="classhpx_1_1program__options_1_1error_1ab26c4ac8097f493326e797cb5e49ce60" prot="public" virt="non-virtual"><scope>hpx::program_options::invalid_syntax</scope><name>error</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1ade012afab216c2fc9459acc43eaec793" prot="public" virt="non-virtual"><scope>hpx::program_options::invalid_syntax</scope><name>error_with_option_name</name></member>
+      <member refid="classhpx_1_1program__options_1_1invalid__syntax_1ae858a2bfbc7899c162ee6c8ac263f33aae117fc178991dbef357695c703854107" prot="public" virt="non-virtual"><scope>hpx::program_options::invalid_syntax</scope><name>extra_parameter</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1a0b65fb289c649b71e52d0581173a0c8e" prot="protected" virt="non-virtual"><scope>hpx::program_options::invalid_syntax</scope><name>get_canonical_option_name</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1ab62af4c0675cc19fbf04f6ac9b7402ff" prot="protected" virt="non-virtual"><scope>hpx::program_options::invalid_syntax</scope><name>get_canonical_option_prefix</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1a8562ba15ccf457f4ac5e609337ff916d" prot="public" virt="non-virtual"><scope>hpx::program_options::invalid_syntax</scope><name>get_option_name</name></member>
+      <member refid="classhpx_1_1program__options_1_1invalid__syntax_1a6811399a7c6a1b1ffff3283379e089cc" prot="protected" virt="non-virtual"><scope>hpx::program_options::invalid_syntax</scope><name>get_template</name></member>
+      <member refid="classhpx_1_1program__options_1_1invalid__syntax_1a8c38dd2c9798045b11dd3de02c0d294b" prot="public" virt="non-virtual"><scope>hpx::program_options::invalid_syntax</scope><name>invalid_syntax</name></member>
+      <member refid="classhpx_1_1program__options_1_1invalid__syntax_1a5f274d6594a5e54e5d9aff3b6cb5a779" prot="public" virt="non-virtual"><scope>hpx::program_options::invalid_syntax</scope><name>kind</name></member>
+      <member refid="classhpx_1_1program__options_1_1invalid__syntax_1ae858a2bfbc7899c162ee6c8ac263f33a" prot="public" virt="non-virtual"><scope>hpx::program_options::invalid_syntax</scope><name>kind_t</name></member>
+      <member refid="classhpx_1_1program__options_1_1invalid__syntax_1ae858a2bfbc7899c162ee6c8ac263f33aae3fec0be00159bbd1e3fc60dfdd5c659" prot="public" virt="non-virtual"><scope>hpx::program_options::invalid_syntax</scope><name>long_adjacent_not_allowed</name></member>
+      <member refid="classhpx_1_1program__options_1_1invalid__syntax_1ae858a2bfbc7899c162ee6c8ac263f33aaafc2d25003ff0b7d40d11daa03da55d9" prot="public" virt="non-virtual"><scope>hpx::program_options::invalid_syntax</scope><name>long_not_allowed</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1a134f824d91347da4b0b2761e1297a0cd" prot="public" virt="non-virtual"><scope>hpx::program_options::invalid_syntax</scope><name>m_error_template</name></member>
+      <member refid="classhpx_1_1program__options_1_1invalid__syntax_1ae4f388be528500e5a1616773109e8a50" prot="protected" virt="non-virtual"><scope>hpx::program_options::invalid_syntax</scope><name>m_kind</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1ac8adc037b1f8683c8f2b97752d8417fa" prot="protected" virt="non-virtual"><scope>hpx::program_options::invalid_syntax</scope><name>m_message</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1ad08d9687c8511639fd73615fb1c5c7e5" prot="protected" virt="non-virtual"><scope>hpx::program_options::invalid_syntax</scope><name>m_option_style</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1a98f723108458e193563832e3df1f07ab" prot="protected" virt="non-virtual"><scope>hpx::program_options::invalid_syntax</scope><name>m_substitution_defaults</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1a8d9c3efa92db291b0e0f8a22249e4864" prot="protected" virt="non-virtual"><scope>hpx::program_options::invalid_syntax</scope><name>m_substitutions</name></member>
+      <member refid="classhpx_1_1program__options_1_1invalid__syntax_1ae858a2bfbc7899c162ee6c8ac263f33aa2059db86e3fe1366d3ec3efde4825763" prot="public" virt="non-virtual"><scope>hpx::program_options::invalid_syntax</scope><name>missing_parameter</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1a8a8e92acfe74094edc3a09c57376974d" prot="protected" virt="non-virtual"><scope>hpx::program_options::invalid_syntax</scope><name>replace_token</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1af6e1934eb1358195fe96fa37a5410b55" prot="public" virt="virtual"><scope>hpx::program_options::invalid_syntax</scope><name>set_option_name</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1ad4b6ea7facfabaf9024568954ff1b46a" prot="public" virt="non-virtual"><scope>hpx::program_options::invalid_syntax</scope><name>set_original_token</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1aafaa36fc2ddb43600cb5058b4cca8c64" prot="public" virt="non-virtual"><scope>hpx::program_options::invalid_syntax</scope><name>set_prefix</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1ae31197640118ca6108a31b90a38b684e" prot="public" virt="non-virtual"><scope>hpx::program_options::invalid_syntax</scope><name>set_substitute</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1a8fb32fc5333a833f7f2c2a0f8cec09de" prot="public" virt="non-virtual"><scope>hpx::program_options::invalid_syntax</scope><name>set_substitute_default</name></member>
+      <member refid="classhpx_1_1program__options_1_1invalid__syntax_1ae858a2bfbc7899c162ee6c8ac263f33aa0d4d85f621581014cd7f695cbd6bc6dc" prot="public" virt="non-virtual"><scope>hpx::program_options::invalid_syntax</scope><name>short_adjacent_not_allowed</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1ad3a23ca94f6fb77cab3e171afbe63e23" prot="protected" virt="non-virtual"><scope>hpx::program_options::invalid_syntax</scope><name>string_pair</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1a372829ce0ee974d480b2cce57ea1db73" prot="protected" virt="virtual"><scope>hpx::program_options::invalid_syntax</scope><name>substitute_placeholders</name></member>
+      <member refid="classhpx_1_1program__options_1_1invalid__syntax_1aca1eb13d9c752b2d9ca2ecae4535f374" prot="public" virt="virtual"><scope>hpx::program_options::invalid_syntax</scope><name>tokens</name></member>
+      <member refid="classhpx_1_1program__options_1_1invalid__syntax_1ae858a2bfbc7899c162ee6c8ac263f33aa6d8c9bf20abd6ab22b6c4a390c960bc4" prot="public" virt="non-virtual"><scope>hpx::program_options::invalid_syntax</scope><name>unrecognized_line</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1a0fcfa7271ddc04650f36445463ab23db" prot="public" virt="non-virtual"><scope>hpx::program_options::invalid_syntax</scope><name>what</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1a9ad92bead5bb8545653682ad675fc1f0" prot="public" virt="non-virtual"><scope>hpx::program_options::invalid_syntax</scope><name>~error_with_option_name</name></member>
+      <member refid="classhpx_1_1program__options_1_1invalid__syntax_1a3d0132aa3e367921057ac656dce7495a" prot="public" virt="non-virtual"><scope>hpx::program_options::invalid_syntax</scope><name>~invalid_syntax</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

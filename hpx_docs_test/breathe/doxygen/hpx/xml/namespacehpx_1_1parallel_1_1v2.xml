@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacehpx_1_1parallel_1_1v2" kind="namespace" language="C++">
+    <compoundname>hpx::parallel::v2</compoundname>
+    <innerclass refid="classhpx_1_1parallel_1_1v2_1_1task__block" prot="public">hpx::parallel::v2::task_block</innerclass>
+    <innerclass refid="classhpx_1_1parallel_1_1v2_1_1task__canceled__exception" prot="public">hpx::parallel::v2::task_canceled_exception</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="task__block_8hpp_1a542a6d325f132739dbda97b8f09dce4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ExPolicy</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type>util::detail::algorithm_result&lt; ExPolicy &gt;::type</type>
+        <definition>util::detail::algorithm_result&lt;ExPolicy&gt;::type hpx::parallel::v2::define_task_block</definition>
+        <argsstring>(ExPolicy &amp;&amp;policy, F &amp;&amp;f)</argsstring>
+        <name>define_task_block</name>
+        <param>
+          <type>ExPolicy &amp;&amp;</type>
+          <declname>policy</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a <emphasis><ref refid="classhpx_1_1parallel_1_1v2_1_1task__block" kindref="compound">task_block</ref></emphasis>, <emphasis>tr</emphasis>, using the given execution policy <emphasis>policy</emphasis>,and invokes the expression <emphasis>f(tr)</emphasis> on the user-provided object, <emphasis>f</emphasis>.</para><para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>ExPolicy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the execution policy to use (deduced). It describes the manner in which the execution of the task block may be parallelized. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>F</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the user defined function to invoke inside the define_task_block (deduced). <emphasis>F</emphasis> shall be MoveConstructible.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>policy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The execution policy to use for the scheduling of the iterations. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The user defined function to invoke inside the task block. Given an lvalue <emphasis>tr</emphasis> of type <emphasis><ref refid="classhpx_1_1parallel_1_1v2_1_1task__block" kindref="compound">task_block</ref></emphasis>, the expression, (void)f(tr), shall be well-formed.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Postcondition: All tasks spawned from <emphasis>f</emphasis> have finished execution. A call to define_task_block may return on a different thread than that on which it was called.</para><para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>An</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>exception_list</emphasis>, as specified in Exception Handling.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>It is expected (but not mandated) that f will (directly or indirectly) call tr.run(<emphasis>callable_object</emphasis>). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/parallel/task_block.hpp" line="406" column="1" bodyfile="hpx/parallel/task_block.hpp" bodystart="406" bodyend="426"/>
+      </memberdef>
+      <memberdef kind="function" id="task__block_8hpp_1aa62d599bbcb85dfa6737f36a80b5555c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void hpx::parallel::v2::define_task_block</definition>
+        <argsstring>(F &amp;&amp;f)</argsstring>
+        <name>define_task_block</name>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a <emphasis><ref refid="classhpx_1_1parallel_1_1v2_1_1task__block" kindref="compound">task_block</ref></emphasis>, tr, and invokes the expression <emphasis>f(tr)</emphasis> on the user-provided object, <emphasis>f</emphasis>. This version uses <emphasis>parallel_policy</emphasis> for task scheduling.</para><para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>F</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the user defined function to invoke inside the define_task_block (deduced). <emphasis>F</emphasis> shall be MoveConstructible.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The user defined function to invoke inside the task block. Given an lvalue <emphasis>tr</emphasis> of type <emphasis><ref refid="classhpx_1_1parallel_1_1v2_1_1task__block" kindref="compound">task_block</ref></emphasis>, the expression, (void)f(tr), shall be well-formed.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Postcondition: All tasks spawned from <emphasis>f</emphasis> have finished execution. A call to define_task_block may return on a different thread than that on which it was called.</para><para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>An</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>exception_list</emphasis>, as specified in Exception Handling.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>It is expected (but not mandated) that f will (directly or indirectly) call tr.run(<emphasis>callable_object</emphasis>). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/parallel/task_block.hpp" line="449" column="1" bodyfile="hpx/parallel/task_block.hpp" bodystart="449" bodyend="452"/>
+      </memberdef>
+      <memberdef kind="function" id="task__block_8hpp_1af89e67c431f71a9ae28e9e80c399c621" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ExPolicy</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type>util::detail::algorithm_result&lt; ExPolicy &gt;::type</type>
+        <definition>util::detail::algorithm_result&lt;ExPolicy&gt;::type hpx::parallel::v2::define_task_block_restore_thread</definition>
+        <argsstring>(ExPolicy &amp;&amp;policy, F &amp;&amp;f)</argsstring>
+        <name>define_task_block_restore_thread</name>
+        <param>
+          <type>ExPolicy &amp;&amp;</type>
+          <declname>policy</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a <emphasis><ref refid="classhpx_1_1parallel_1_1v2_1_1task__block" kindref="compound">task_block</ref></emphasis>, tr, and invokes the expression <emphasis>f(tr)</emphasis> on the user-provided object, <emphasis>f</emphasis>.</para><para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>ExPolicy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the execution policy to use (deduced). It describes the manner in which the execution of the task block may be parallelized. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>F</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the user defined function to invoke inside the define_task_block (deduced). <emphasis>F</emphasis> shall be MoveConstructible.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>policy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The execution policy to use for the scheduling of the iterations. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The user defined function to invoke inside the define_task_block. Given an lvalue <emphasis>tr</emphasis> of type <emphasis><ref refid="classhpx_1_1parallel_1_1v2_1_1task__block" kindref="compound">task_block</ref></emphasis>, the expression, (void)f(tr), shall be well-formed.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>An</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>exception_list</emphasis>, as specified in Exception Handling.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Postcondition: All tasks spawned from <emphasis>f</emphasis> have finished execution. A call to <emphasis>define_task_block_restore_thread</emphasis> always returns on the same thread as that on which it was called.</para><para><simplesect kind="note"><para>It is expected (but not mandated) that f will (directly or indirectly) call tr.run(<emphasis>callable_object</emphasis>). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/parallel/task_block.hpp" line="481" column="1" bodyfile="hpx/parallel/task_block.hpp" bodystart="481" bodyend="491"/>
+      </memberdef>
+      <memberdef kind="function" id="task__block_8hpp_1ab676349ec457ff94ce4224d3792b72a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void hpx::parallel::v2::define_task_block_restore_thread</definition>
+        <argsstring>(F &amp;&amp;f)</argsstring>
+        <name>define_task_block_restore_thread</name>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a <emphasis><ref refid="classhpx_1_1parallel_1_1v2_1_1task__block" kindref="compound">task_block</ref></emphasis>, tr, and invokes the expression <emphasis>f(tr)</emphasis> on the user-provided object, <emphasis>f</emphasis>. This version uses <emphasis>parallel_policy</emphasis> for task scheduling.</para><para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>F</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the user defined function to invoke inside the define_task_block (deduced). <emphasis>F</emphasis> shall be MoveConstructible.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The user defined function to invoke inside the define_task_block. Given an lvalue <emphasis>tr</emphasis> of type <emphasis><ref refid="classhpx_1_1parallel_1_1v2_1_1task__block" kindref="compound">task_block</ref></emphasis>, the expression, (void)f(tr), shall be well-formed.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>An</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><emphasis>exception_list</emphasis>, as specified in Exception Handling.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Postcondition: All tasks spawned from <emphasis>f</emphasis> have finished execution. A call to <emphasis>define_task_block_restore_thread</emphasis> always returns on the same thread as that on which it was called.</para><para><simplesect kind="note"><para>It is expected (but not mandated) that f will (directly or indirectly) call tr.run(<emphasis>callable_object</emphasis>). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/parallel/task_block.hpp" line="515" column="1" bodyfile="hpx/parallel/task_block.hpp" bodystart="515" bodyend="521"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="hpx/parallel/task_block.hpp" line="38" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structhpx_1_1thread__interrupted" kind="struct" language="C++" prot="public">
+    <compoundname>hpx::thread_interrupted</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">exception</basecompoundref>
+    <includes refid="exception_8hpp" local="no">exception.hpp</includes>
+    <briefdescription>
+<para>A <ref refid="structhpx_1_1thread__interrupted" kindref="compound">hpx::thread_interrupted</ref> is the exception type used by HPX to interrupt a running HPX thread. </para>    </briefdescription>
+    <detaileddescription>
+<para>The <emphasis><ref refid="structhpx_1_1thread__interrupted" kindref="compound">hpx::thread_interrupted</ref></emphasis> type is the exception type used by HPX to interrupt a running thread.</para><para>A running thread can be interrupted by invoking the interrupt() member function of the corresponding hpx::thread object. When the interrupted thread next executes one of the specified interruption points (or if it is currently blocked whilst executing one) with interruption enabled, then a <ref refid="structhpx_1_1thread__interrupted" kindref="compound">hpx::thread_interrupted</ref> exception will be thrown in the interrupted thread. If not caught, this will cause the execution of the interrupted thread to terminate. As with any other exception, the stack will be unwound, and destructors for objects of automatic storage duration will be executed.</para><para>If a thread wishes to avoid being interrupted, it can create an instance of <emphasis>hpx::this_thread::disable_interruption</emphasis>. Objects of this class disable interruption for the thread that created them on construction, and restore the interruption state to whatever it was before on destruction.</para><para><programlisting><codeline><highlight class="normal">void<sp/>f()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>interruption<sp/>enabled<sp/>here</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::this_thread::disable_interruption<sp/>di;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>interruption<sp/>disabled</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::this_thread::disable_interruption<sp/>di2;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>interruption<sp/>still<sp/>disabled</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>//<sp/>di2<sp/>destroyed,<sp/>interruption<sp/>state<sp/>restored</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>interruption<sp/>still<sp/>disabled</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>//<sp/>di<sp/>destroyed,<sp/>interruption<sp/>state<sp/>restored</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>interruption<sp/>now<sp/>enabled</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para><para>The effects of an instance of <emphasis>hpx::this_thread::disable_interruption</emphasis> can be temporarily reversed by constructing an instance of <emphasis>hpx::this_thread::restore_interruption</emphasis>, passing in the <emphasis>hpx::this_thread::disable_interruption</emphasis> object in question. This will restore the interruption state to what it was when the <emphasis>hpx::this_thread::disable_interruption</emphasis> object was constructed, and then disable interruption again when the <emphasis>hpx::this_thread::restore_interruption</emphasis> object is destroyed.</para><para><programlisting><codeline><highlight class="normal">void<sp/>g()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>interruption<sp/>enabled<sp/>here</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::this_thread::disable_interruption<sp/>di;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>interruption<sp/>disabled</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::this_thread::restore_interruption<sp/>ri(di);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>interruption<sp/>now<sp/>enabled</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>//<sp/>ri<sp/>destroyed,<sp/>interruption<sp/>disable<sp/>again</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>//<sp/>di<sp/>destroyed,<sp/>interruption<sp/>state<sp/>restored</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>interruption<sp/>now<sp/>enabled</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para><para>At any point, the interruption state for the current thread can be queried by calling <emphasis>hpx::this_thread::interruption_enabled()</emphasis>. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="130">
+        <label>hpx::thread_interrupted</label>
+        <link refid="structhpx_1_1thread__interrupted"/>
+        <childnode refid="131" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="131">
+        <label>std::exception</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="132">
+        <label>hpx::thread_interrupted</label>
+        <link refid="structhpx_1_1thread__interrupted"/>
+        <childnode refid="133" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="133">
+        <label>std::exception</label>
+      </node>
+    </collaborationgraph>
+    <location file="hpx/exception.hpp" line="175" column="1" bodyfile="hpx/exception.hpp" bodystart="175" bodyend="175"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

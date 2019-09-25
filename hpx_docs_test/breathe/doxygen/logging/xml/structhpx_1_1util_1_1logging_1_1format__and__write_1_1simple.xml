@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structhpx_1_1util_1_1logging_1_1format__and__write_1_1simple" kind="struct" language="C++" prot="public">
+    <compoundname>hpx::util::logging::format_and_write::simple</compoundname>
+    <includes refid="hpx_2logging_2format_8hpp" local="no">format.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="structhpx_1_1util_1_1logging_1_1format__and__write_1_1simple_1a59924ae688584e7f139c050ef076481f" prot="protected" static="no" mutable="no">
+        <type>msg_type &amp;</type>
+        <definition>msg_type&amp; hpx::util::logging::format_and_write::simple::m_msg</definition>
+        <argsstring></argsstring>
+        <name>m_msg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging/format.hpp" line="122" column="1" bodyfile="libs/logging/include/hpx/logging/format.hpp" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structhpx_1_1util_1_1logging_1_1format__and__write_1_1simple_1a32fd4942f86e071778995cab8da5cc04" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::util::logging::format_and_write::simple::simple</definition>
+        <argsstring>(msg_type &amp;msg)</argsstring>
+        <name>simple</name>
+        <param>
+          <type>msg_type &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging/format.hpp" line="104" column="1" bodyfile="libs/logging/include/hpx/logging/format.hpp" bodystart="104" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1util_1_1logging_1_1format__and__write_1_1simple_1ac3a79cf8fe4ed321d19fd8984db0cd98" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class formatter_ptr</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void hpx::util::logging::format_and_write::simple::format</definition>
+        <argsstring>(const formatter_ptr &amp;fmt)</argsstring>
+        <name>format</name>
+        <param>
+          <type>const formatter_ptr &amp;</type>
+          <declname>fmt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging/format.hpp" line="110" column="1" bodyfile="libs/logging/include/hpx/logging/format.hpp" bodystart="110" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1util_1_1logging_1_1format__and__write_1_1simple_1ae21a455f698e5ef329af1181ece1b216" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class destination_ptr</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void hpx::util::logging::format_and_write::simple::write</definition>
+        <argsstring>(const destination_ptr &amp;dest)</argsstring>
+        <name>write</name>
+        <param>
+          <type>const destination_ptr &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging/format.hpp" line="115" column="1" bodyfile="libs/logging/include/hpx/logging/format.hpp" bodystart="115" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1util_1_1logging_1_1format__and__write_1_1simple_1a671db909bc38495768066db7baf210c2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpx::util::logging::format_and_write::simple::clear_format</definition>
+        <argsstring>()</argsstring>
+        <name>clear_format</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging/format.hpp" line="119" column="1" bodyfile="libs/logging/include/hpx/logging/format.hpp" bodystart="119" bodyend="119"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Formats the message, and writes it to destinations. </para>    </briefdescription>
+    <detaileddescription>
+<para><itemizedlist>
+<listitem><para>calls <computeroutput>operator()</computeroutput> on the formatters , and <computeroutput>operator()</computeroutput> on the destinations. Ignores <computeroutput>clear_format()</computeroutput> commands.</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message to pass to the formatter. This is the type that is passed to the formatter objects and to the destination objects. Thus, it needs to be convertible to the argument to be sent to the formatter objects and to the argument to be sent to the destination objects. Usually, it&apos;s the argument you pass on to your destination classes.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+If you derive from <computeroutput>destination::base</computeroutput>, this type can be <computeroutput>destination::base::raw_param</computeroutput> (see below).</para><para>Example:</para><para><programlisting><codeline><highlight class="normal">typedef<sp/>destination::base&lt;const<sp/>std::string<sp/>&amp;&gt;<sp/>dest_base;</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>in<sp/>this<sp/>case<sp/>:<sp/>msg_type<sp/>=<sp/>std::string<sp/>=<sp/>dest_base::raw_param</highlight></codeline>
+<codeline><highlight class="normal">struct<sp/>write_to_cout<sp/>:<sp/>dest_base<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>operator()(param<sp/>msg)<sp/>const<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>msg<sp/>;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">typedef<sp/>destination::base&lt;const<sp/>std::string<sp/>&amp;&gt;<sp/>dest_base;</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>in<sp/>this<sp/>case<sp/>:<sp/>msg_type<sp/>=<sp/>cache_string<sp/>=<sp/>dest_base::raw_param</highlight></codeline>
+<codeline><highlight class="normal">struct<sp/>write_to_file<sp/>:<sp/>dest_base,<sp/>...<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>operator()(param<sp/>msg)<sp/>const<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>context()<sp/>&lt;&lt;<sp/>msg<sp/>;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+</programlisting> </para>    </detaileddescription>
+    <location file="libs/logging/include/hpx/logging/format.hpp" line="103" column="1" bodyfile="libs/logging/include/hpx/logging/format.hpp" bodystart="102" bodyend="123"/>
+    <listofallmembers>
+      <member refid="structhpx_1_1util_1_1logging_1_1format__and__write_1_1simple_1a671db909bc38495768066db7baf210c2" prot="public" virt="non-virtual"><scope>hpx::util::logging::format_and_write::simple</scope><name>clear_format</name></member>
+      <member refid="structhpx_1_1util_1_1logging_1_1format__and__write_1_1simple_1ac3a79cf8fe4ed321d19fd8984db0cd98" prot="public" virt="non-virtual"><scope>hpx::util::logging::format_and_write::simple</scope><name>format</name></member>
+      <member refid="structhpx_1_1util_1_1logging_1_1format__and__write_1_1simple_1a59924ae688584e7f139c050ef076481f" prot="protected" virt="non-virtual"><scope>hpx::util::logging::format_and_write::simple</scope><name>m_msg</name></member>
+      <member refid="structhpx_1_1util_1_1logging_1_1format__and__write_1_1simple_1a32fd4942f86e071778995cab8da5cc04" prot="public" virt="non-virtual"><scope>hpx::util::logging::format_and_write::simple</scope><name>simple</name></member>
+      <member refid="structhpx_1_1util_1_1logging_1_1format__and__write_1_1simple_1ae21a455f698e5ef329af1181ece1b216" prot="public" virt="non-virtual"><scope>hpx::util::logging::format_and_write::simple</scope><name>write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classhpx_1_1threads_1_1thread__pool__base" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>hpx::threads::thread_pool_base</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">manage_executor</basecompoundref>
+    <includes refid="thread__pool__base_8hpp" local="no">thread_pool_base.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhpx_1_1threads_1_1thread__pool__base_1a3b112989fe624f00b8e809cdac2411c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void hpx::threads::thread_pool_base::suspend_processing_unit_direct</definition>
+        <argsstring>(std::size_t virt_core, error_code &amp;ec=throws)=0</argsstring>
+        <name>suspend_processing_unit_direct</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>virt_core</declname>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Suspends the given processing unit. Blocks until the processing unit has been suspended.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>virt_core</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The processing unit on the the pool to be suspended. The processing units are indexed starting from 0. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_pool_base.hpp" line="135" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1threads_1_1thread__pool__base_1a9bc13c64b07587ae12816de32dcce8e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void hpx::threads::thread_pool_base::resume_processing_unit_direct</definition>
+        <argsstring>(std::size_t virt_core, error_code &amp;ec=throws)=0</argsstring>
+        <name>resume_processing_unit_direct</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>virt_core</declname>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Resumes the given processing unit. Blocks until the processing unit has been resumed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>virt_core</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The processing unit on the the pool to be resumed. The processing units are indexed starting from 0. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_pool_base.hpp" line="143" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1threads_1_1thread__pool__base_1a3f1472693c67bf8f57ef57dcc048c42e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void hpx::threads::thread_pool_base::resume_direct</definition>
+        <argsstring>(error_code &amp;ec=throws)=0</argsstring>
+        <name>resume_direct</name>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Resumes the thread pool. Blocks until all OS threads on the thread pool have been resumed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in,out] this represents the error status on exit, if this is pre-initialized to <emphasis>hpx::throws</emphasis> the function will throw on error instead. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_pool_base.hpp" line="152" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1threads_1_1thread__pool__base_1a19fe3f5cfbe6e5257873b53936c03b98" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void hpx::threads::thread_pool_base::suspend_direct</definition>
+        <argsstring>(error_code &amp;ec=throws)=0</argsstring>
+        <name>suspend_direct</name>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Suspends the thread pool. Blocks until all OS threads on the thread pool have been suspended.</para><para><simplesect kind="note"><para>A thread pool cannot be suspended from an HPX thread running on the pool itself.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in,out] this represents the error status on exit, if this is pre-initialized to <emphasis>hpx::throws</emphasis> the function will throw on error instead.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>hpx::exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if called from an HPX thread which is running on the pool itself. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_pool_base.hpp" line="166" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The base class used to manage a pool of OS threads. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="33">
+        <label>detail::manage_executor</label>
+      </node>
+      <node id="32">
+        <label>hpx::threads::thread_pool_base</label>
+        <link refid="classhpx_1_1threads_1_1thread__pool__base"/>
+        <childnode refid="33" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="35">
+        <label>detail::manage_executor</label>
+      </node>
+      <node id="34">
+        <label>hpx::threads::thread_pool_base</label>
+        <link refid="classhpx_1_1threads_1_1thread__pool__base"/>
+        <childnode refid="35" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="hpx/runtime/threads/thread_pool_base.hpp" line="106" column="1" bodyfile="hpx/runtime/threads/thread_pool_base.hpp" bodystart="105" bodyend="430"/>
+    <listofallmembers>
+      <member refid="classhpx_1_1threads_1_1thread__pool__base_1a3f1472693c67bf8f57ef57dcc048c42e" prot="public" virt="pure-virtual"><scope>hpx::threads::thread_pool_base</scope><name>resume_direct</name></member>
+      <member refid="classhpx_1_1threads_1_1thread__pool__base_1a9bc13c64b07587ae12816de32dcce8e7" prot="public" virt="pure-virtual"><scope>hpx::threads::thread_pool_base</scope><name>resume_processing_unit_direct</name></member>
+      <member refid="classhpx_1_1threads_1_1thread__pool__base_1a19fe3f5cfbe6e5257873b53936c03b98" prot="public" virt="pure-virtual"><scope>hpx::threads::thread_pool_base</scope><name>suspend_direct</name></member>
+      <member refid="classhpx_1_1threads_1_1thread__pool__base_1a3b112989fe624f00b8e809cdac2411c7" prot="public" virt="pure-virtual"><scope>hpx::threads::thread_pool_base</scope><name>suspend_processing_unit_direct</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,246 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classhpx_1_1util_1_1cache_1_1entries_1_1entry" kind="class" language="C++" prot="public">
+    <compoundname>hpx::util::cache::entries::entry</compoundname>
+    <basecompoundref prot="private" virt="non-virtual">boost::less_than_comparable&lt; detail::derived&lt; Value, Derived &gt;::type &gt;</basecompoundref>
+    <includes refid="compatibility_2hpx_2util_2cache_2entries_2entry_8hpp" local="no">hpx/cache/entries/entry.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>Value</declname>
+        <defname>Value</defname>
+      </param>
+      <param>
+        <type>typename</type>
+        <declname>Derived</declname>
+        <defname>Derived</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1a10da7304c1370f938043761b34bbf2b1" prot="public" static="no">
+        <type>Value</type>
+        <definition>typedef Value hpx::util::cache::entries::entry&lt; Value, Derived &gt;::value_type</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/entries/entry.hpp" line="54" column="1" bodyfile="libs/cache/include/hpx/cache/entries/entry.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1ac09bd85bae69998fcc3978c0fa0cc122" prot="private" static="no" mutable="no">
+        <type>value_type</type>
+        <definition>value_type hpx::util::cache::entries::entry&lt; Value, Derived &gt;::value_</definition>
+        <argsstring></argsstring>
+        <name>value_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/entries/entry.hpp" line="136" column="1" bodyfile="libs/cache/include/hpx/cache/entries/entry.hpp" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1ad33554c8722a0fb843afb12e943609b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::util::cache::entries::entry&lt; Value, Derived &gt;::entry</definition>
+        <argsstring>()</argsstring>
+        <name>entry</name>
+        <briefdescription>
+<para>Any cache entry has to be default constructible. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/entries/entry.hpp" line="58" column="1" bodyfile="libs/cache/include/hpx/cache/entries/entry.hpp" bodystart="58" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1a405f37290c9f41020b08d2f24167ecfa" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::util::cache::entries::entry&lt; Value, Derived &gt;::entry</definition>
+        <argsstring>(value_type const &amp;val)</argsstring>
+        <name>entry</name>
+        <param>
+          <type>value_type const &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new instance of a cache entry holding the given value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/entries/entry.hpp" line="63" column="1" bodyfile="libs/cache/include/hpx/cache/entries/entry.hpp" bodystart="63" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1a6a848ae96ddd2658215209a8b03a63f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hpx::util::cache::entries::entry&lt; Value, Derived &gt;::touch</definition>
+        <argsstring>()</argsstring>
+        <name>touch</name>
+        <briefdescription>
+<para>The function <emphasis>touch</emphasis> is called by a cache holding this instance whenever it has been requested (touched). </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>It is possible to change the entry in a way influencing the sort criteria mandated by the UpdatePolicy. In this case the function should return <emphasis>true</emphasis> to indicate this to the cache, forcing to reorder the cache entries. </para></simplesect>
+<simplesect kind="note"><para>This function is part of the CacheEntry concept</para></simplesect>
+<simplesect kind="return"><para>This function should return true if the cache needs to update it&apos;s internal heap. Usually this is needed if the entry has been changed by <ref refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1a6a848ae96ddd2658215209a8b03a63f4" kindref="member">touch()</ref> in a way influencing the sort order as mandated by the cache&apos;s UpdatePolicy </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/entries/entry.hpp" line="80" column="1" bodyfile="libs/cache/include/hpx/cache/entries/entry.hpp" bodystart="80" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1a026fd85734913784d85672bbcada8ead" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hpx::util::cache::entries::entry&lt; Value, Derived &gt;::insert</definition>
+        <argsstring>()</argsstring>
+        <name>insert</name>
+        <briefdescription>
+<para>The function <emphasis>insert</emphasis> is called by a cache whenever it is about to be inserted into the cache. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function is part of the CacheEntry concept</para></simplesect>
+<simplesect kind="return"><para>This function should return <emphasis>true</emphasis> if the entry should be added to the cache, otherwise it should return <emphasis>false</emphasis>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/entries/entry.hpp" line="93" column="1" bodyfile="libs/cache/include/hpx/cache/entries/entry.hpp" bodystart="93" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1ad339d17e0b9f7b7b61d862fff48bd117" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hpx::util::cache::entries::entry&lt; Value, Derived &gt;::remove</definition>
+        <argsstring>()</argsstring>
+        <name>remove</name>
+        <briefdescription>
+<para>The function <emphasis>remove</emphasis> is called by a cache holding this instance whenever it is about to be removed from the cache. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function is part of the CacheEntry concept</para></simplesect>
+<simplesect kind="return"><para>The return value can be used to avoid removing this instance from the cache. If the value is <emphasis>true</emphasis> it is ok to remove the entry, other wise it will stay in the cache. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/entries/entry.hpp" line="108" column="1" bodyfile="libs/cache/include/hpx/cache/entries/entry.hpp" bodystart="108" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1a52aaa2be737145552d7f045821db96c3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t hpx::util::cache::entries::entry&lt; Value, Derived &gt;::get_size</definition>
+        <argsstring>() const</argsstring>
+        <name>get_size</name>
+        <briefdescription>
+<para>Return the &apos;size&apos; of this entry. By default the size of each entry is just one (1), which is sensible if the cache has a limit (capacity) measured in number of entries. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/entries/entry.hpp" line="117" column="1" bodyfile="libs/cache/include/hpx/cache/entries/entry.hpp" bodystart="117" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1a3261dc3551b8beb6a15d768da078309e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>value_type &amp;</type>
+        <definition>value_type&amp; hpx::util::cache::entries::entry&lt; Value, Derived &gt;::get</definition>
+        <argsstring>()</argsstring>
+        <name>get</name>
+        <briefdescription>
+<para>Get a reference to the stored data value. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function is part of the CacheEntry concept </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/entries/entry.hpp" line="132" column="1" bodyfile="libs/cache/include/hpx/cache/entries/entry.hpp" bodystart="132" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1a2f225802808b6b9f6680fe089af8b1dd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>value_type const  &amp;</type>
+        <definition>value_type const&amp; hpx::util::cache::entries::entry&lt; Value, Derived &gt;::get</definition>
+        <argsstring>() const</argsstring>
+        <name>get</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/entries/entry.hpp" line="133" column="1" bodyfile="libs/cache/include/hpx/cache/entries/entry.hpp" bodystart="133" bodyend="133"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1aeac7b08bc90fc655da24f702f1d508b9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>friend bool</type>
+        <definition>bool operator&lt;</definition>
+        <argsstring>(entry const &amp;lhs, entry const &amp;rhs)</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type><ref refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry" kindref="compound">entry</ref> const &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type><ref refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry" kindref="compound">entry</ref> const &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Forwarding operator&lt; allowing to compare entries in stead of the values. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/entries/entry.hpp" line="124" column="1" bodyfile="libs/cache/include/hpx/cache/entries/entry.hpp" bodystart="124" bodyend="127"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data type to be stored in a cache. It has to be default constructible, copy constructible and less_than_comparable. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Derived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The (optional) type for which this type is used as a base class. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="7">
+        <label>boost::less_than_comparable&lt; detail::derived&lt; Value, Derived &gt;::type &gt;</label>
+      </node>
+      <node id="6">
+        <label>hpx::util::cache::entries::entry&lt; Value, Derived &gt;</label>
+        <link refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry"/>
+        <childnode refid="7" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="9">
+        <label>boost::less_than_comparable&lt; detail::derived&lt; Value, Derived &gt;::type &gt;</label>
+      </node>
+      <node id="8">
+        <label>hpx::util::cache::entries::entry&lt; Value, Derived &gt;</label>
+        <link refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry"/>
+        <childnode refid="9" relation="private-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libs/cache/include/hpx/cache/entries/entry.hpp" line="20" column="1" bodyfile="libs/cache/include/hpx/cache/entries/entry.hpp" bodystart="20" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1ad33554c8722a0fb843afb12e943609b7" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::entry</scope><name>entry</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1a405f37290c9f41020b08d2f24167ecfa" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::entry</scope><name>entry</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1a3261dc3551b8beb6a15d768da078309e" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::entry</scope><name>get</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1a2f225802808b6b9f6680fe089af8b1dd" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::entry</scope><name>get</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1a52aaa2be737145552d7f045821db96c3" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::entry</scope><name>get_size</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1a026fd85734913784d85672bbcada8ead" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::entry</scope><name>insert</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1aeac7b08bc90fc655da24f702f1d508b9" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::entry</scope><name>operator&lt;</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1ad339d17e0b9f7b7b61d862fff48bd117" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::entry</scope><name>remove</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1a6a848ae96ddd2658215209a8b03a63f4" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::entry</scope><name>touch</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1ac09bd85bae69998fcc3978c0fa0cc122" prot="private" virt="non-virtual"><scope>hpx::util::cache::entries::entry</scope><name>value_</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1a10da7304c1370f938043761b34bbf2b1" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::entry</scope><name>value_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

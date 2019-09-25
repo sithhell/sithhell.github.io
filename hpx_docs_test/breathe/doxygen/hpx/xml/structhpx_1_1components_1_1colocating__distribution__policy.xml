@@ -1,0 +1,437 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structhpx_1_1components_1_1colocating__distribution__policy" kind="struct" language="C++" prot="public">
+    <compoundname>hpx::components::colocating_distribution_policy</compoundname>
+    <includes refid="colocating__distribution__policy_8hpp" local="no">colocating_distribution_policy.hpp</includes>
+    <innerclass refid="structhpx_1_1components_1_1colocating__distribution__policy_1_1async__result" prot="public">hpx::components::colocating_distribution_policy::async_result</innerclass>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structhpx_1_1components_1_1colocating__distribution__policy_1a48d6e52cd2ad764554955ecd074e343c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::components::colocating_distribution_policy::colocating_distribution_policy</definition>
+        <argsstring>()</argsstring>
+        <name>colocating_distribution_policy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default-construct a new instance of a <emphasis><ref refid="structhpx_1_1components_1_1colocating__distribution__policy" kindref="compound">colocating_distribution_policy</ref></emphasis>. This policy will represent the local locality. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/components/colocating_distribution_policy.hpp" line="46" column="1" bodyfile="hpx/runtime/components/colocating_distribution_policy.hpp" bodystart="46" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1components_1_1colocating__distribution__policy_1af6ca19c711527555c2e6baeabc2087d3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structhpx_1_1components_1_1colocating__distribution__policy" kindref="compound">colocating_distribution_policy</ref></type>
+        <definition>colocating_distribution_policy hpx::components::colocating_distribution_policy::operator()</definition>
+        <argsstring>(id_type const &amp;id) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>id_type const &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new <emphasis><ref refid="structhpx_1_1components_1_1colocating__distribution__policy" kindref="compound">colocating_distribution_policy</ref></emphasis> representing the locality where the given object os current located</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The global address of the object with which the new instances should be colocated on </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/components/colocating_distribution_policy.hpp" line="55" column="1" bodyfile="hpx/runtime/components/colocating_distribution_policy.hpp" bodystart="55" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1components_1_1colocating__distribution__policy_1a8fbe3b618901efaa4587c99816046793" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Client</type>
+          </param>
+          <param>
+            <type>typename Stub</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structhpx_1_1components_1_1colocating__distribution__policy" kindref="compound">colocating_distribution_policy</ref></type>
+        <definition>colocating_distribution_policy hpx::components::colocating_distribution_policy::operator()</definition>
+        <argsstring>(client_base&lt; Client, Stub &gt; const &amp;client) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>client_base&lt; Client, Stub &gt; const &amp;</type>
+          <declname>client</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new <emphasis><ref refid="structhpx_1_1components_1_1colocating__distribution__policy" kindref="compound">colocating_distribution_policy</ref></emphasis> representing the locality where the given object os current located</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>client</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The client side representation of the object with which the new instances should be colocated on </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/components/colocating_distribution_policy.hpp" line="67" column="1" bodyfile="hpx/runtime/components/colocating_distribution_policy.hpp" bodystart="67" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1components_1_1colocating__distribution__policy_1ad42527e98056824f346ec839e7218d17" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Component</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>hpx::future&lt; hpx::id_type &gt;</type>
+        <definition>hpx::future&lt;hpx::id_type&gt; hpx::components::colocating_distribution_policy::create</definition>
+        <argsstring>(Ts &amp;&amp;... vs) const</argsstring>
+        <name>create</name>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>vs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create one object on the locality of the object this distribution policy instance is associated with</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The arguments which will be forwarded to the constructor of the new object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This function is part of the placement policy implemented by this class</para></simplesect>
+<simplesect kind="return"><para>A future holding the global address which represents the newly created object </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/components/colocating_distribution_policy.hpp" line="86" column="1" bodyfile="hpx/runtime/components/colocating_distribution_policy.hpp" bodystart="86" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1components_1_1colocating__distribution__policy_1a194bc8cf80fab8143ab23b85358ca6a0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Component</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>hpx::future&lt; std::vector&lt; bulk_locality_result &gt; &gt;</type>
+        <definition>hpx::future&lt;std::vector&lt;bulk_locality_result&gt; &gt; hpx::components::colocating_distribution_policy::bulk_create</definition>
+        <argsstring>(std::size_t count, Ts &amp;&amp;... vs) const</argsstring>
+        <name>bulk_create</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>vs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create multiple objects colocated with the object represented by this policy instance</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The number of objects to create </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The arguments which will be forwarded to the constructors of the new objects.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This function is part of the placement policy implemented by this class</para></simplesect>
+<simplesect kind="return"><para>A future holding the list of global addresses which represent the newly created objects </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/components/colocating_distribution_policy.hpp" line="117" column="1" bodyfile="hpx/runtime/components/colocating_distribution_policy.hpp" bodystart="117" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1components_1_1colocating__distribution__policy_1ac71a3f3986b8029c09ac28d905b529e5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Action</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structhpx_1_1components_1_1colocating__distribution__policy_1_1async__result" kindref="compound">async_result</ref>&lt; Action &gt;::type</type>
+        <definition>async_result&lt;Action&gt;::type hpx::components::colocating_distribution_policy::async</definition>
+        <argsstring>(launch policy, Ts &amp;&amp;... vs) const</argsstring>
+        <name>async</name>
+        <param>
+          <type><ref refid="structhpx_1_1launch" kindref="compound">launch</ref></type>
+          <declname>policy</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>vs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/components/colocating_distribution_policy.hpp" line="160" column="1" bodyfile="hpx/runtime/components/colocating_distribution_policy.hpp" bodystart="160" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1components_1_1colocating__distribution__policy_1a1a3dc11e340f487ca5a18563e6725e9b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Action</type>
+          </param>
+          <param>
+            <type>typename Callback</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structhpx_1_1components_1_1colocating__distribution__policy_1_1async__result" kindref="compound">async_result</ref>&lt; Action &gt;::type</type>
+        <definition>async_result&lt;Action&gt;::type hpx::components::colocating_distribution_policy::async_cb</definition>
+        <argsstring>(launch policy, Callback &amp;&amp;cb, Ts &amp;&amp;... vs) const</argsstring>
+        <name>async_cb</name>
+        <param>
+          <type><ref refid="structhpx_1_1launch" kindref="compound">launch</ref></type>
+          <declname>policy</declname>
+        </param>
+        <param>
+          <type>Callback &amp;&amp;</type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>vs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function is part of the invocation policy implemented by this class </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/components/colocating_distribution_policy.hpp" line="176" column="1" bodyfile="hpx/runtime/components/colocating_distribution_policy.hpp" bodystart="176" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1components_1_1colocating__distribution__policy_1a7c8155da7c40e908fe35764a08946372" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Action</type>
+          </param>
+          <param>
+            <type>typename Continuation</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool hpx::components::colocating_distribution_policy::apply</definition>
+        <argsstring>(Continuation &amp;&amp;c, threads::thread_priority priority, Ts &amp;&amp;... vs) const</argsstring>
+        <name>apply</name>
+        <param>
+          <type>Continuation &amp;&amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type><ref refid="thread__enums_8hpp_1ac9ea71df1a6e7c564da9d1724432790a" kindref="member">threads::thread_priority</ref></type>
+          <declname>priority</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>vs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function is part of the invocation policy implemented by this class </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/components/colocating_distribution_policy.hpp" line="192" column="1" bodyfile="hpx/runtime/components/colocating_distribution_policy.hpp" bodystart="192" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1components_1_1colocating__distribution__policy_1aa7ed4f511c51292bf1db16ff7c3f9181" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Action</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool hpx::components::colocating_distribution_policy::apply</definition>
+        <argsstring>(threads::thread_priority priority, Ts &amp;&amp;... vs) const</argsstring>
+        <name>apply</name>
+        <param>
+          <type><ref refid="thread__enums_8hpp_1ac9ea71df1a6e7c564da9d1724432790a" kindref="member">threads::thread_priority</ref></type>
+          <declname>priority</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>vs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/components/colocating_distribution_policy.hpp" line="206" column="1" bodyfile="hpx/runtime/components/colocating_distribution_policy.hpp" bodystart="206" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1components_1_1colocating__distribution__policy_1acf906ebacd8a91ebb40f07e9ab9a4cae" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Action</type>
+          </param>
+          <param>
+            <type>typename Continuation</type>
+          </param>
+          <param>
+            <type>typename Callback</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool hpx::components::colocating_distribution_policy::apply_cb</definition>
+        <argsstring>(Continuation &amp;&amp;c, threads::thread_priority priority, Callback &amp;&amp;cb, Ts &amp;&amp;... vs) const</argsstring>
+        <name>apply_cb</name>
+        <param>
+          <type>Continuation &amp;&amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type><ref refid="thread__enums_8hpp_1ac9ea71df1a6e7c564da9d1724432790a" kindref="member">threads::thread_priority</ref></type>
+          <declname>priority</declname>
+        </param>
+        <param>
+          <type>Callback &amp;&amp;</type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>vs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function is part of the invocation policy implemented by this class </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/components/colocating_distribution_policy.hpp" line="222" column="1" bodyfile="hpx/runtime/components/colocating_distribution_policy.hpp" bodystart="222" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1components_1_1colocating__distribution__policy_1ab73bd0903f043ed86a8ec3e6b5ba2f4f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Action</type>
+          </param>
+          <param>
+            <type>typename Callback</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool hpx::components::colocating_distribution_policy::apply_cb</definition>
+        <argsstring>(threads::thread_priority priority, Callback &amp;&amp;cb, Ts &amp;&amp;... vs) const</argsstring>
+        <name>apply_cb</name>
+        <param>
+          <type><ref refid="thread__enums_8hpp_1ac9ea71df1a6e7c564da9d1724432790a" kindref="member">threads::thread_priority</ref></type>
+          <declname>priority</declname>
+        </param>
+        <param>
+          <type>Callback &amp;&amp;</type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>vs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/components/colocating_distribution_policy.hpp" line="239" column="1" bodyfile="hpx/runtime/components/colocating_distribution_policy.hpp" bodystart="239" bodyend="250"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1components_1_1colocating__distribution__policy_1aced5ed3e34aad0b1a77772e9fcd3175b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t hpx::components::colocating_distribution_policy::get_num_localities</definition>
+        <argsstring>() const</argsstring>
+        <name>get_num_localities</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of associated localities for this distribution policy</para><para><simplesect kind="note"><para>This function is part of the creation policy implemented by this class </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/components/colocating_distribution_policy.hpp" line="258" column="1" bodyfile="hpx/runtime/components/colocating_distribution_policy.hpp" bodystart="258" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1components_1_1colocating__distribution__policy_1aac00cb18a85c3868e72d9327cab06bf7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>hpx::id_type</type>
+        <definition>hpx::id_type hpx::components::colocating_distribution_policy::get_next_target</definition>
+        <argsstring>() const</argsstring>
+        <name>get_next_target</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the locality which is anticipated to be used for the next async operation </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/components/colocating_distribution_policy.hpp" line="265" column="1" bodyfile="hpx/runtime/components/colocating_distribution_policy.hpp" bodystart="265" bodyend="268"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class specifies the parameters for a distribution policy to use for creating a given number of items on the locality where a given object is currently placed. </para>    </detaileddescription>
+    <location file="hpx/runtime/components/colocating_distribution_policy.hpp" line="42" column="1" bodyfile="hpx/runtime/components/colocating_distribution_policy.hpp" bodystart="41" bodyend="287"/>
+    <listofallmembers>
+      <member refid="structhpx_1_1components_1_1colocating__distribution__policy_1a7c8155da7c40e908fe35764a08946372" prot="public" virt="non-virtual"><scope>hpx::components::colocating_distribution_policy</scope><name>apply</name></member>
+      <member refid="structhpx_1_1components_1_1colocating__distribution__policy_1aa7ed4f511c51292bf1db16ff7c3f9181" prot="public" virt="non-virtual"><scope>hpx::components::colocating_distribution_policy</scope><name>apply</name></member>
+      <member refid="structhpx_1_1components_1_1colocating__distribution__policy_1acf906ebacd8a91ebb40f07e9ab9a4cae" prot="public" virt="non-virtual"><scope>hpx::components::colocating_distribution_policy</scope><name>apply_cb</name></member>
+      <member refid="structhpx_1_1components_1_1colocating__distribution__policy_1ab73bd0903f043ed86a8ec3e6b5ba2f4f" prot="public" virt="non-virtual"><scope>hpx::components::colocating_distribution_policy</scope><name>apply_cb</name></member>
+      <member refid="structhpx_1_1components_1_1colocating__distribution__policy_1ac71a3f3986b8029c09ac28d905b529e5" prot="public" virt="non-virtual"><scope>hpx::components::colocating_distribution_policy</scope><name>async</name></member>
+      <member refid="structhpx_1_1components_1_1colocating__distribution__policy_1a1a3dc11e340f487ca5a18563e6725e9b" prot="public" virt="non-virtual"><scope>hpx::components::colocating_distribution_policy</scope><name>async_cb</name></member>
+      <member refid="structhpx_1_1components_1_1colocating__distribution__policy_1a194bc8cf80fab8143ab23b85358ca6a0" prot="public" virt="non-virtual"><scope>hpx::components::colocating_distribution_policy</scope><name>bulk_create</name></member>
+      <member refid="structhpx_1_1components_1_1colocating__distribution__policy_1a48d6e52cd2ad764554955ecd074e343c" prot="public" virt="non-virtual"><scope>hpx::components::colocating_distribution_policy</scope><name>colocating_distribution_policy</name></member>
+      <member refid="structhpx_1_1components_1_1colocating__distribution__policy_1ad42527e98056824f346ec839e7218d17" prot="public" virt="non-virtual"><scope>hpx::components::colocating_distribution_policy</scope><name>create</name></member>
+      <member refid="structhpx_1_1components_1_1colocating__distribution__policy_1aac00cb18a85c3868e72d9327cab06bf7" prot="public" virt="non-virtual"><scope>hpx::components::colocating_distribution_policy</scope><name>get_next_target</name></member>
+      <member refid="structhpx_1_1components_1_1colocating__distribution__policy_1aced5ed3e34aad0b1a77772e9fcd3175b" prot="public" virt="non-virtual"><scope>hpx::components::colocating_distribution_policy</scope><name>get_num_localities</name></member>
+      <member refid="structhpx_1_1components_1_1colocating__distribution__policy_1af6ca19c711527555c2e6baeabc2087d3" prot="public" virt="non-virtual"><scope>hpx::components::colocating_distribution_policy</scope><name>operator()</name></member>
+      <member refid="structhpx_1_1components_1_1colocating__distribution__policy_1a8fbe3b618901efaa4587c99816046793" prot="public" virt="non-virtual"><scope>hpx::components::colocating_distribution_policy</scope><name>operator()</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

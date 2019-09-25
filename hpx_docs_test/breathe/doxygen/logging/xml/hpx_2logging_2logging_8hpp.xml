@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="hpx_2logging_2logging_8hpp" kind="file" language="C++">
+    <compoundname>logging.hpp</compoundname>
+    <includes local="no">hpx/logging/detail/fwd.hpp</includes>
+    <includes local="no">hpx/logging/detail/level.hpp</includes>
+    <includes local="no">hpx/logging/detail/logger.hpp</includes>
+    <includes local="no">hpx/logging/detail/macros.hpp</includes>
+    <includedby refid="compatibility_2hpx_2util_2logging_2logging_8hpp" local="no">libs/logging/include_compatibility/hpx/util/logging/logging.hpp</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>libs/logging/include/hpx/logging/logging.hpp</label>
+        <link refid="hpx_2logging_2logging_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>hpx/logging/detail/macros.hpp</label>
+      </node>
+      <node id="7">
+        <label>hpx/logging/detail/fwd.hpp</label>
+      </node>
+      <node id="9">
+        <label>hpx/logging/detail/logger.hpp</label>
+      </node>
+      <node id="8">
+        <label>hpx/logging/detail/level.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="11">
+        <label>libs/logging/include/hpx/logging/logging.hpp</label>
+        <link refid="hpx_2logging_2logging_8hpp"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>libs/logging/include_compatibility/hpx/util/logging/logging.hpp</label>
+        <link refid="compatibility_2hpx_2util_2logging_2logging_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacehpx">hpx</innernamespace>
+    <innernamespace refid="namespacehpx_1_1util">hpx::util</innernamespace>
+    <innernamespace refid="namespacehpx_1_1util_1_1logging">hpx::util::logging</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Include this file when you&apos;re using the logging lib, but don&apos;t necessarily want to use formatters and destinations. If you want to use formatters and destinations, then you can include this one instead:</para><para><programlisting><codeline><highlight class="normal">#include<sp/>&lt;hpx/logging/format_fwd.hpp&gt;</highlight></codeline>
+</programlisting> </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>logging.hpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Boost<sp/>Logging<sp/>library</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/>John<sp/>Torjo,<sp/>www.torjo.com</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>2007<sp/>John<sp/>Torjo<sp/>(see<sp/>www.torjo.com<sp/>for<sp/>email)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Distributed<sp/>under<sp/>the<sp/>Boost<sp/>Software<sp/>License,<sp/>Version<sp/>1.0.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>(See<sp/>accompanying<sp/>file<sp/>LICENSE_1_0.txt<sp/>or<sp/>copy<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>http://www.boost.org/LICENSE_1_0.txt)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>http://www.boost.org<sp/>for<sp/>updates,<sp/>documentation,<sp/>and<sp/>revision<sp/>history.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>http://www.torjo.com/log2/<sp/>for<sp/>more<sp/>details</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>JT28092007_logging_HPP_DEFINED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JT28092007_logging_HPP_DEFINED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/logging/detail/fwd.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/logging/detail/level.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/logging/detail/logger.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/logging/detail/macros.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehpx" kindref="compound">hpx</ref><sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">util<sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">logging<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}}}<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>hpx::util::logging</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="libs/logging/include/hpx/logging/logging.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structhpx_1_1parallel_1_1execution_1_1dynamic__chunk__size" kind="struct" language="C++" prot="public">
+    <compoundname>hpx::parallel::execution::dynamic_chunk_size</compoundname>
+    <includes refid="dynamic__chunk__size_8hpp" local="no">dynamic_chunk_size.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structhpx_1_1parallel_1_1execution_1_1dynamic__chunk__size_1a3d8a82deaae276c811a3c9e95849e59b" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::parallel::execution::dynamic_chunk_size::dynamic_chunk_size</definition>
+        <argsstring>(std::size_t chunk_size=1)</argsstring>
+        <name>dynamic_chunk_size</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>chunk_size</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct a <emphasis><ref refid="structhpx_1_1parallel_1_1execution_1_1dynamic__chunk__size" kindref="compound">dynamic_chunk_size</ref></emphasis> executor parameters object</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>chunk_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The optional chunk size to use as the number of loop iterations to schedule together. The default chunk size is 1. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/executors/dynamic_chunk_size.hpp" line="37" column="1" bodyfile="libs/execution/include/hpx/parallel/executors/dynamic_chunk_size.hpp" bodystart="37" bodyend="39"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Loop iterations are divided into pieces of size <emphasis>chunk_size</emphasis> and then dynamically scheduled among the threads; when a thread finishes one chunk, it is dynamically assigned another If <emphasis>chunk_size</emphasis> is not specified, the default chunk size is 1.</para><para><simplesect kind="note"><para>This executor parameters type is equivalent to OpenMP&apos;s DYNAMIC scheduling directive. </para></simplesect>
+</para>    </detaileddescription>
+    <location file="libs/execution/include/hpx/parallel/executors/dynamic_chunk_size.hpp" line="30" column="1" bodyfile="libs/execution/include/hpx/parallel/executors/dynamic_chunk_size.hpp" bodystart="29" bodyend="65"/>
+    <listofallmembers>
+      <member refid="structhpx_1_1parallel_1_1execution_1_1dynamic__chunk__size_1a3d8a82deaae276c811a3c9e95849e59b" prot="public" virt="non-virtual"><scope>hpx::parallel::execution::dynamic_chunk_size</scope><name>dynamic_chunk_size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

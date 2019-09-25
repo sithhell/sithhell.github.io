@@ -1,0 +1,547 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="util_2zip__iterator_8hpp" kind="file" language="C++">
+    <compoundname>zip_iterator.hpp</compoundname>
+    <includes local="no">hpx/config.hpp</includes>
+    <includes local="no">hpx/lcos/future.hpp</includes>
+    <includes local="no">hpx/util/tagged_pair.hpp</includes>
+    <includes local="no">hpx/datastructures/tuple.hpp</includes>
+    <includes local="no">hpx/util/zip_iterator.hpp</includes>
+    <includes local="no">utility</includes>
+    <includedby refid="algorithms_2move_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/move.hpp</includedby>
+    <includedby refid="uninitialized__fill_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/uninitialized_fill.hpp</includedby>
+    <includedby refid="uninitialized__move_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/uninitialized_move.hpp</includedby>
+    <includedby refid="adjacent__find_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/adjacent_find.hpp</includedby>
+    <includedby refid="mismatch_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/mismatch.hpp</includedby>
+    <includedby refid="reduce__by__key_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/reduce_by_key.hpp</includedby>
+    <includedby refid="algorithms_2search_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/search.hpp</includedby>
+    <includedby refid="equal_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/equal.hpp</includedby>
+    <includedby refid="lexicographical__compare_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/lexicographical_compare.hpp</includedby>
+    <includedby refid="uninitialized__copy_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/uninitialized_copy.hpp</includedby>
+    <includedby refid="algorithms_2transform_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/transform.hpp</includedby>
+    <includedby refid="swap__ranges_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/swap_ranges.hpp</includedby>
+    <includedby refid="algorithms_2remove_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/remove.hpp</includedby>
+    <includedby refid="uninitialized__value__construct_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/uninitialized_value_construct.hpp</includedby>
+    <includedby refid="algorithms_2reverse_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/reverse.hpp</includedby>
+    <includedby refid="uninitialized__default__construct_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/uninitialized_default_construct.hpp</includedby>
+    <includedby refid="algorithms_2partition_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/partition.hpp</includedby>
+    <includedby refid="algorithms_2copy_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/copy.hpp</includedby>
+    <includedby refid="algorithms_2unique_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/unique.hpp</includedby>
+    <includedby refid="algorithms_2replace_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/replace.hpp</includedby>
+    <includedby refid="sort__by__key_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/sort_by_key.hpp</includedby>
+    <incdepgraph>
+      <node id="5111">
+        <label>hpx/util/tagged_pair.hpp</label>
+      </node>
+      <node id="5109">
+        <label>hpx/config.hpp</label>
+      </node>
+      <node id="5108">
+        <label>libs/algorithms/include/hpx/parallel/util/zip_iterator.hpp</label>
+        <link refid="util_2zip__iterator_8hpp"/>
+        <childnode refid="5109" relation="include">
+        </childnode>
+        <childnode refid="5110" relation="include">
+        </childnode>
+        <childnode refid="5111" relation="include">
+        </childnode>
+        <childnode refid="5112" relation="include">
+        </childnode>
+        <childnode refid="5113" relation="include">
+        </childnode>
+        <childnode refid="5114" relation="include">
+        </childnode>
+      </node>
+      <node id="5114">
+        <label>utility</label>
+      </node>
+      <node id="5113">
+        <label>hpx/util/zip_iterator.hpp</label>
+      </node>
+      <node id="5110">
+        <label>hpx/lcos/future.hpp</label>
+      </node>
+      <node id="5112">
+        <label>hpx/datastructures/tuple.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5143">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/partition.hpp</label>
+        <link refid="container__algorithms_2partition_8hpp"/>
+        <childnode refid="5118" relation="include">
+        </childnode>
+      </node>
+      <node id="5125">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/lexicographical_compare.hpp</label>
+        <link refid="lexicographical__compare_8hpp"/>
+        <childnode refid="5117" relation="include">
+        </childnode>
+      </node>
+      <node id="5121">
+        <label>libs/algorithms/include/hpx/parallel/memory.hpp</label>
+        <link refid="memory_8hpp_source"/>
+      </node>
+      <node id="5147">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/set_symmetric_difference.hpp</label>
+        <link refid="set__symmetric__difference_8hpp"/>
+        <childnode refid="5117" relation="include">
+        </childnode>
+      </node>
+      <node id="5135">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/remove.hpp</label>
+        <link refid="container__algorithms_2remove_8hpp"/>
+        <childnode refid="5118" relation="include">
+        </childnode>
+      </node>
+      <node id="5129">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/equal.hpp</label>
+        <link refid="equal_8hpp"/>
+        <childnode refid="5117" relation="include">
+        </childnode>
+      </node>
+      <node id="5148">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/set_difference.hpp</label>
+        <link refid="set__difference_8hpp"/>
+        <childnode refid="5117" relation="include">
+        </childnode>
+      </node>
+      <node id="5140">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/rotate.hpp</label>
+        <link refid="container__algorithms_2rotate_8hpp"/>
+        <childnode refid="5118" relation="include">
+        </childnode>
+      </node>
+      <node id="5124">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/mismatch.hpp</label>
+        <link refid="mismatch_8hpp"/>
+        <childnode refid="5117" relation="include">
+        </childnode>
+        <childnode refid="5125" relation="include">
+        </childnode>
+      </node>
+      <node id="5119">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/move.hpp</label>
+        <link refid="container__algorithms_2move_8hpp"/>
+        <childnode refid="5118" relation="include">
+        </childnode>
+      </node>
+      <node id="5126">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/reduce_by_key.hpp</label>
+        <link refid="reduce__by__key_8hpp"/>
+      </node>
+      <node id="5132">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/transform.hpp</label>
+        <link refid="container__algorithms_2transform_8hpp"/>
+        <childnode refid="5118" relation="include">
+        </childnode>
+      </node>
+      <node id="5117">
+        <label>libs/algorithms/include/hpx/parallel/algorithm.hpp</label>
+        <link refid="algorithm_8hpp_source"/>
+        <childnode refid="5118" relation="include">
+        </childnode>
+      </node>
+      <node id="5156">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/sort_by_key.hpp</label>
+        <link refid="sort__by__key_8hpp_source"/>
+      </node>
+      <node id="5130">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/uninitialized_copy.hpp</label>
+        <link refid="uninitialized__copy_8hpp"/>
+        <childnode refid="5121" relation="include">
+        </childnode>
+      </node>
+      <node id="5127">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/search.hpp</label>
+        <link refid="algorithms_2search_8hpp"/>
+        <childnode refid="5117" relation="include">
+        </childnode>
+        <childnode refid="5128" relation="include">
+        </childnode>
+      </node>
+      <node id="5134">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/remove.hpp</label>
+        <link refid="algorithms_2remove_8hpp"/>
+        <childnode refid="5117" relation="include">
+        </childnode>
+        <childnode refid="5135" relation="include">
+        </childnode>
+      </node>
+      <node id="5122">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/uninitialized_move.hpp</label>
+        <link refid="uninitialized__move_8hpp"/>
+        <childnode refid="5121" relation="include">
+        </childnode>
+      </node>
+      <node id="5137">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/reverse.hpp</label>
+        <link refid="algorithms_2reverse_8hpp"/>
+        <childnode refid="5117" relation="include">
+        </childnode>
+        <childnode refid="5138" relation="include">
+        </childnode>
+        <childnode refid="5139" relation="include">
+        </childnode>
+      </node>
+      <node id="5123">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/adjacent_find.hpp</label>
+        <link refid="adjacent__find_8hpp"/>
+        <childnode refid="5117" relation="include">
+        </childnode>
+      </node>
+      <node id="5150">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/remove_copy.hpp</label>
+        <link refid="algorithms_2remove__copy_8hpp"/>
+        <childnode refid="5117" relation="include">
+        </childnode>
+        <childnode refid="5151" relation="include">
+        </childnode>
+      </node>
+      <node id="5153">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/unique.hpp</label>
+        <link refid="container__algorithms_2unique_8hpp"/>
+        <childnode refid="5118" relation="include">
+        </childnode>
+      </node>
+      <node id="5128">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/search.hpp</label>
+        <link refid="container__algorithms_2search_8hpp"/>
+        <childnode refid="5118" relation="include">
+        </childnode>
+      </node>
+      <node id="5120">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/uninitialized_fill.hpp</label>
+        <link refid="uninitialized__fill_8hpp"/>
+        <childnode refid="5121" relation="include">
+        </childnode>
+      </node>
+      <node id="5155">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/replace.hpp</label>
+        <link refid="container__algorithms_2replace_8hpp"/>
+        <childnode refid="5118" relation="include">
+        </childnode>
+      </node>
+      <node id="5131">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/transform.hpp</label>
+        <link refid="algorithms_2transform_8hpp"/>
+        <childnode refid="5132" relation="include">
+        </childnode>
+      </node>
+      <node id="5145">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/copy.hpp</label>
+        <link refid="container__algorithms_2copy_8hpp"/>
+        <childnode refid="5118" relation="include">
+        </childnode>
+      </node>
+      <node id="5115">
+        <label>libs/algorithms/include/hpx/parallel/util/zip_iterator.hpp</label>
+        <link refid="util_2zip__iterator_8hpp"/>
+        <childnode refid="5116" relation="include">
+        </childnode>
+        <childnode refid="5120" relation="include">
+        </childnode>
+        <childnode refid="5122" relation="include">
+        </childnode>
+        <childnode refid="5123" relation="include">
+        </childnode>
+        <childnode refid="5124" relation="include">
+        </childnode>
+        <childnode refid="5126" relation="include">
+        </childnode>
+        <childnode refid="5127" relation="include">
+        </childnode>
+        <childnode refid="5129" relation="include">
+        </childnode>
+        <childnode refid="5125" relation="include">
+        </childnode>
+        <childnode refid="5130" relation="include">
+        </childnode>
+        <childnode refid="5131" relation="include">
+        </childnode>
+        <childnode refid="5133" relation="include">
+        </childnode>
+        <childnode refid="5134" relation="include">
+        </childnode>
+        <childnode refid="5136" relation="include">
+        </childnode>
+        <childnode refid="5137" relation="include">
+        </childnode>
+        <childnode refid="5141" relation="include">
+        </childnode>
+        <childnode refid="5142" relation="include">
+        </childnode>
+        <childnode refid="5144" relation="include">
+        </childnode>
+        <childnode refid="5152" relation="include">
+        </childnode>
+        <childnode refid="5154" relation="include">
+        </childnode>
+        <childnode refid="5156" relation="include">
+        </childnode>
+      </node>
+      <node id="5144">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/copy.hpp</label>
+        <link refid="algorithms_2copy_8hpp"/>
+        <childnode refid="5117" relation="include">
+        </childnode>
+        <childnode refid="5145" relation="include">
+        </childnode>
+        <childnode refid="5139" relation="include">
+        </childnode>
+        <childnode refid="5146" relation="include">
+        </childnode>
+        <childnode refid="5126" relation="include">
+        </childnode>
+        <childnode refid="5147" relation="include">
+        </childnode>
+        <childnode refid="5148" relation="include">
+        </childnode>
+        <childnode refid="5137" relation="include">
+        </childnode>
+        <childnode refid="5149" relation="include">
+        </childnode>
+        <childnode refid="5150" relation="include">
+        </childnode>
+      </node>
+      <node id="5139">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/rotate.hpp</label>
+        <link refid="algorithms_2rotate_8hpp"/>
+        <childnode refid="5117" relation="include">
+        </childnode>
+        <childnode refid="5140" relation="include">
+        </childnode>
+      </node>
+      <node id="5142">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/partition.hpp</label>
+        <link refid="algorithms_2partition_8hpp_source"/>
+        <childnode refid="5117" relation="include">
+        </childnode>
+        <childnode refid="5143" relation="include">
+        </childnode>
+      </node>
+      <node id="5116">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/move.hpp</label>
+        <link refid="algorithms_2move_8hpp"/>
+        <childnode refid="5117" relation="include">
+        </childnode>
+        <childnode refid="5119" relation="include">
+        </childnode>
+      </node>
+      <node id="5154">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/replace.hpp</label>
+        <link refid="algorithms_2replace_8hpp"/>
+        <childnode refid="5117" relation="include">
+        </childnode>
+        <childnode refid="5155" relation="include">
+        </childnode>
+      </node>
+      <node id="5138">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/reverse.hpp</label>
+        <link refid="container__algorithms_2reverse_8hpp"/>
+        <childnode refid="5118" relation="include">
+        </childnode>
+      </node>
+      <node id="5152">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/unique.hpp</label>
+        <link refid="algorithms_2unique_8hpp_source"/>
+        <childnode refid="5117" relation="include">
+        </childnode>
+        <childnode refid="5153" relation="include">
+        </childnode>
+      </node>
+      <node id="5149">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/set_intersection.hpp</label>
+        <link refid="set__intersection_8hpp"/>
+        <childnode refid="5117" relation="include">
+        </childnode>
+      </node>
+      <node id="5118">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms.hpp</label>
+        <link refid="container__algorithms_8hpp_source"/>
+      </node>
+      <node id="5133">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/swap_ranges.hpp</label>
+        <link refid="swap__ranges_8hpp"/>
+        <childnode refid="5117" relation="include">
+        </childnode>
+      </node>
+      <node id="5136">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/uninitialized_value_construct.hpp</label>
+        <link refid="uninitialized__value__construct_8hpp"/>
+        <childnode refid="5121" relation="include">
+        </childnode>
+      </node>
+      <node id="5141">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/uninitialized_default_construct.hpp</label>
+        <link refid="uninitialized__default__construct_8hpp"/>
+        <childnode refid="5121" relation="include">
+        </childnode>
+      </node>
+      <node id="5151">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/remove_copy.hpp</label>
+        <link refid="container__algorithms_2remove__copy_8hpp"/>
+        <childnode refid="5118" relation="include">
+        </childnode>
+      </node>
+      <node id="5146">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/set_union.hpp</label>
+        <link refid="set__union_8hpp"/>
+        <childnode refid="5117" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacehpx">hpx</innernamespace>
+    <innernamespace refid="namespacehpx_1_1parallel">hpx::parallel</innernamespace>
+    <innernamespace refid="namespacehpx_1_1parallel_1_1v1">hpx::parallel::v1</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2007-2015<sp/>Hartmut<sp/>Kaiser</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2014<sp/>Agustin<sp/>Berge</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Distributed<sp/>under<sp/>the<sp/>Boost<sp/>Software<sp/>License,<sp/>Version<sp/>1.0.<sp/>(See<sp/>accompanying</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>file<sp/>LICENSE_1_0.txt<sp/>or<sp/>copy<sp/>at<sp/>http://www.boost.org/LICENSE_1_0.txt)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(HPX_PARALLEL_UTIL_ZIP_ITERATOR_MAY_29_2014_0852PM)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPX_PARALLEL_UTIL_ZIP_ITERATOR_MAY_29_2014_0852PM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/config.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/lcos/future.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/util/tagged_pair.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/datastructures/tuple.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/util/zip_iterator.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehpx" kindref="compound">hpx</ref><sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">parallel<sp/>{<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">v1<sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">detail</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>R,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ZipIter&gt;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>R<sp/>get_iter(ZipIter<sp/>&amp;&amp;<sp/>zipiter)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>hpx::util::get&lt;N&gt;(zipiter.get_iterator_tuple());</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>R,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ZipIter&gt;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>R<sp/>get_iter(hpx::future&lt;ZipIter&gt;<sp/>&amp;&amp;<sp/>zipiter)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>hpx::util::tuple_element&lt;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>N,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ZipIter::iterator_tuple_type</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::type<sp/>result_type;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>lcos::make_future&lt;result_type&gt;(std::move(zipiter),</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](ZipIter<sp/>zipiter)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>get_iter&lt;N,<sp/>result_type&gt;(std::move(zipiter));</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ZipIter&gt;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ZipIter::iterator_tuple_type</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>get_iter_tuple(ZipIter<sp/>&amp;&amp;<sp/>zipiter)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>zipiter.get_iterator_tuple();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ZipIter&gt;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>hpx::future&lt;typename<sp/>ZipIter::iterator_tuple_type&gt;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>get_iter_tuple(hpx::future&lt;ZipIter&gt;<sp/>&amp;&amp;<sp/>zipiter)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ZipIter::iterator_tuple_type<sp/>result_type;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>lcos::make_future&lt;result_type&gt;(std::move(zipiter),</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](ZipIter<sp/>zipiter)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>get_iter_tuple(std::move(zipiter));</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ZipIter&gt;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>std::pair&lt;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>hpx::util::tuple_element&lt;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ZipIter::iterator_tuple_type</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::type,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>hpx::util::tuple_element&lt;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ZipIter::iterator_tuple_type</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::type</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>&gt;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>get_iter_pair(ZipIter<sp/>&amp;&amp;<sp/>zipiter)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ZipIter::iterator_tuple_type<sp/>iterator_tuple_type;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>iterator_tuple_type<sp/>t<sp/>=<sp/>zipiter.get_iterator_tuple();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::make_pair(hpx::util::get&lt;0&gt;(t),<sp/>hpx::util::get&lt;1&gt;(t));</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ZipIter&gt;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>hpx::future&lt;std::pair&lt;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>hpx::util::tuple_element&lt;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ZipIter::iterator_tuple_type</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::type,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>hpx::util::tuple_element&lt;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ZipIter::iterator_tuple_type</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::type</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>&gt;<sp/>&gt;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>get_iter_pair(hpx::future&lt;ZipIter&gt;<sp/>&amp;&amp;<sp/>zipiter)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ZipIter::iterator_tuple_type<sp/>iterator_tuple_type;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::pair&lt;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>hpx::util::tuple_element&lt;0,<sp/>iterator_tuple_type&gt;::type,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>hpx::util::tuple_element&lt;1,<sp/>iterator_tuple_type&gt;::type</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;<sp/>result_type;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>lcos::make_future&lt;result_type&gt;(std::move(zipiter),</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](ZipIter<sp/>zipiter)</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>get_iter_pair(std::move(zipiter));</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Tag1,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Tag2,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ZipIter&gt;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>hpx::util::tagged_pair&lt;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Tag1(</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>hpx::util::tuple_element&lt;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ZipIter::iterator_tuple_type</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::type),</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Tag2(</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>hpx::util::tuple_element&lt;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ZipIter::iterator_tuple_type</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::type)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>&gt;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>get_iter_tagged_pair(ZipIter<sp/>&amp;&amp;<sp/>zipiter)</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>hpx::util::make_tagged_pair&lt;Tag1,<sp/>Tag2&gt;(</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>zipiter.get_iterator_tuple());</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Tag1,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Tag2,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ZipIter&gt;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>hpx::future&lt;hpx::util::tagged_pair&lt;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Tag1(</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>hpx::util::tuple_element&lt;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ZipIter::iterator_tuple_type</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::type),</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Tag2(</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>hpx::util::tuple_element&lt;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ZipIter::iterator_tuple_type</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::type)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>&gt;<sp/>&gt;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>get_iter_tagged_pair(hpx::future&lt;ZipIter&gt;<sp/>&amp;&amp;<sp/>zipiter)</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ZipIter::iterator_tuple_type<sp/>iterator_tuple_type;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>hpx::util::tagged_pair&lt;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Tag1(</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>hpx::util::tuple_element&lt;0,<sp/>iterator_tuple_type&gt;::type),</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Tag2(</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>hpx::util::tuple_element&lt;1,<sp/>iterator_tuple_type&gt;::type)</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;<sp/>result_type;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>lcos::make_future&lt;result_type&gt;(std::move(zipiter),</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](ZipIter<sp/>&amp;&amp;<sp/>zipiter)</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>get_iter_tagged_pair&lt;Tag1,<sp/>Tag2&gt;(std::move(zipiter));</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">}}}}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="libs/algorithms/include/hpx/parallel/util/zip_iterator.hpp"/>
+  </compounddef>
+</doxygen>

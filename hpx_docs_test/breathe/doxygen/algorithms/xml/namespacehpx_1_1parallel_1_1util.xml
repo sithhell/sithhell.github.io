@@ -1,0 +1,1248 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacehpx_1_1parallel_1_1util" kind="namespace" language="C++">
+    <compoundname>hpx::parallel::util</compoundname>
+    <innerclass refid="classhpx_1_1parallel_1_1util_1_1cancellation__token" prot="public">hpx::parallel::util::cancellation_token</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1util_1_1compare__projected" prot="public">hpx::parallel::util::compare_projected</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1util_1_1compare__projected_3_01_compare_00_01_proj_01_4" prot="public">hpx::parallel::util::compare_projected&lt; Compare, Proj &gt;</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1util_1_1compare__projected_3_01_compare_00_01_proj1_00_01_proj2_01_4" prot="public">hpx::parallel::util::compare_projected&lt; Compare, Proj1, Proj2 &gt;</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1util_1_1foreach__partitioner" prot="public">hpx::parallel::util::foreach_partitioner</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1util_1_1invoke__projected" prot="public">hpx::parallel::util::invoke_projected</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1util_1_1partitioner" prot="public">hpx::parallel::util::partitioner</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1util_1_1partitioner__with__cleanup" prot="public">hpx::parallel::util::partitioner_with_cleanup</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1util_1_1projection__identity" prot="public">hpx::parallel::util::projection_identity</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1util_1_1scan__partitioner" prot="public">hpx::parallel::util::scan_partitioner</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1util_1_1scan__partitioner__normal__tag" prot="public">hpx::parallel::util::scan_partitioner_normal_tag</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1util_1_1scan__partitioner__sequential__f3__tag" prot="public">hpx::parallel::util::scan_partitioner_sequential_f3_tag</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="transfer_8hpp_1ad69f6bb9f156a8fb6cc16d3b5bfb9e78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename InIter</type>
+          </param>
+          <param>
+            <type>typename OutIter</type>
+          </param>
+        </templateparamlist>
+        <type>std::pair&lt; InIter, OutIter &gt;</type>
+        <definition>std::pair&lt;InIter, OutIter&gt; hpx::parallel::util::copy</definition>
+        <argsstring>(InIter first, InIter last, OutIter dest)</argsstring>
+        <name>copy</name>
+        <param>
+          <type>InIter</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type>InIter</type>
+          <declname>last</declname>
+        </param>
+        <param>
+          <type>OutIter</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/util/transfer.hpp" line="93" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/transfer.hpp" bodystart="93" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="transfer_8hpp_1a06da13d80744f31fd4ab003231988262" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename InIter</type>
+          </param>
+          <param>
+            <type>typename OutIter</type>
+          </param>
+        </templateparamlist>
+        <type>HPX_HOST_DEVICE std::pair&lt; InIter, OutIter &gt;</type>
+        <definition>HPX_HOST_DEVICE std::pair&lt;InIter, OutIter&gt; hpx::parallel::util::copy_n</definition>
+        <argsstring>(InIter first, std::size_t count, OutIter dest)</argsstring>
+        <name>copy_n</name>
+        <param>
+          <type>InIter</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>OutIter</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/util/transfer.hpp" line="141" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/transfer.hpp" bodystart="141" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="transfer_8hpp_1ab52998b9593cc0db1e41e0ce0298fa40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename InIter</type>
+          </param>
+          <param>
+            <type>typename OutIter</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void hpx::parallel::util::copy_synchronize</definition>
+        <argsstring>(InIter const &amp;first, OutIter const &amp;dest)</argsstring>
+        <name>copy_synchronize</name>
+        <param>
+          <type>InIter const &amp;</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type>OutIter const &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/util/transfer.hpp" line="173" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/transfer.hpp" bodystart="173" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="transfer_8hpp_1a7eda87a35256ecea75cd7f57c0f33159" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename InIter</type>
+          </param>
+          <param>
+            <type>typename OutIter</type>
+          </param>
+        </templateparamlist>
+        <type>std::pair&lt; InIter, OutIter &gt;</type>
+        <definition>std::pair&lt;InIter, OutIter&gt; hpx::parallel::util::move</definition>
+        <argsstring>(InIter first, InIter last, OutIter dest)</argsstring>
+        <name>move</name>
+        <param>
+          <type>InIter</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type>InIter</type>
+          <declname>last</declname>
+        </param>
+        <param>
+          <type>OutIter</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/util/transfer.hpp" line="217" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/transfer.hpp" bodystart="217" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="transfer_8hpp_1ab00328e830d1e1ae888956cfdc39bd8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename InIter</type>
+          </param>
+          <param>
+            <type>typename OutIter</type>
+          </param>
+        </templateparamlist>
+        <type>std::pair&lt; InIter, OutIter &gt;</type>
+        <definition>std::pair&lt;InIter, OutIter&gt; hpx::parallel::util::move_n</definition>
+        <argsstring>(InIter first, std::size_t count, OutIter dest)</argsstring>
+        <name>move_n</name>
+        <param>
+          <type>InIter</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>OutIter</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/util/transfer.hpp" line="261" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/transfer.hpp" bodystart="261" bodyend="270"/>
+      </memberdef>
+      <memberdef kind="function" id="util_2transform__loop_8hpp_1a46af9f9a8e9d8c4bd05c969f38e1a693" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ExPolicy</type>
+          </param>
+          <param>
+            <type>typename Iter</type>
+          </param>
+          <param>
+            <type>typename OutIter</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type>HPX_HOST_DEVICE std::pair&lt; Iter, OutIter &gt;</type>
+        <definition>HPX_HOST_DEVICE std::pair&lt;Iter, OutIter&gt; hpx::parallel::util::transform_loop</definition>
+        <argsstring>(ExPolicy &amp;&amp;, Iter it, Iter end, OutIter dest, F &amp;&amp;f)</argsstring>
+        <name>transform_loop</name>
+        <param>
+          <type>ExPolicy &amp;&amp;</type>
+        </param>
+        <param>
+          <type>Iter</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>Iter</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>OutIter</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/util/transform_loop.hpp" line="46" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/transform_loop.hpp" bodystart="46" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="util_2transform__loop_8hpp_1a69096d1eb55630ba5045d82429a25d13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ExPolicy</type>
+          </param>
+          <param>
+            <type>typename InIter1</type>
+          </param>
+          <param>
+            <type>typename InIter2</type>
+          </param>
+          <param>
+            <type>typename OutIter</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type>HPX_HOST_DEVICE std::enable_if&lt; !execution::is_vectorpack_execution_policy&lt; ExPolicy &gt;::value, hpx::util::tuple&lt; InIter1, InIter2, OutIter &gt; &gt;::type</type>
+        <definition>HPX_HOST_DEVICE std::enable_if&lt; !execution::is_vectorpack_execution_policy&lt;ExPolicy&gt;::value, hpx::util::tuple&lt;InIter1, InIter2, OutIter&gt; &gt;::type hpx::parallel::util::transform_binary_loop</definition>
+        <argsstring>(InIter1 first1, InIter1 last1, InIter2 first2, OutIter dest, F &amp;&amp;f)</argsstring>
+        <name>transform_binary_loop</name>
+        <param>
+          <type>InIter1</type>
+          <declname>first1</declname>
+        </param>
+        <param>
+          <type>InIter1</type>
+          <declname>last1</declname>
+        </param>
+        <param>
+          <type>InIter2</type>
+          <declname>first2</declname>
+        </param>
+        <param>
+          <type>OutIter</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/util/transform_loop.hpp" line="97" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/transform_loop.hpp" bodystart="97" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="util_2transform__loop_8hpp_1a90b4b612f181184671ca6fff15f89264" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ExPolicy</type>
+          </param>
+          <param>
+            <type>typename InIter1</type>
+          </param>
+          <param>
+            <type>typename InIter2</type>
+          </param>
+          <param>
+            <type>typename OutIter</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type>HPX_HOST_DEVICE std::enable_if&lt; !execution::is_vectorpack_execution_policy&lt; ExPolicy &gt;::value, hpx::util::tuple&lt; InIter1, InIter2, OutIter &gt; &gt;::type</type>
+        <definition>HPX_HOST_DEVICE std::enable_if&lt; !execution::is_vectorpack_execution_policy&lt;ExPolicy&gt;::value, hpx::util::tuple&lt;InIter1, InIter2, OutIter&gt; &gt;::type hpx::parallel::util::transform_binary_loop</definition>
+        <argsstring>(InIter1 first1, InIter1 last1, InIter2 first2, InIter2 last2, OutIter dest, F &amp;&amp;f)</argsstring>
+        <name>transform_binary_loop</name>
+        <param>
+          <type>InIter1</type>
+          <declname>first1</declname>
+        </param>
+        <param>
+          <type>InIter1</type>
+          <declname>last1</declname>
+        </param>
+        <param>
+          <type>InIter2</type>
+          <declname>first2</declname>
+        </param>
+        <param>
+          <type>InIter2</type>
+          <declname>last2</declname>
+        </param>
+        <param>
+          <type>OutIter</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/util/transform_loop.hpp" line="111" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/transform_loop.hpp" bodystart="111" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="util_2transform__loop_8hpp_1a63735f20564a958bacebdf3cf48c35a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ExPolicy</type>
+          </param>
+          <param>
+            <type>typename Iter</type>
+          </param>
+          <param>
+            <type>typename OutIter</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type>HPX_HOST_DEVICE std::enable_if&lt; !execution::is_vectorpack_execution_policy&lt; ExPolicy &gt;::value, std::pair&lt; Iter, OutIter &gt; &gt;::type</type>
+        <definition>HPX_HOST_DEVICE std::enable_if&lt; !execution::is_vectorpack_execution_policy&lt;ExPolicy&gt;::value, std::pair&lt;Iter, OutIter&gt; &gt;::type hpx::parallel::util::transform_loop_n</definition>
+        <argsstring>(Iter it, std::size_t count, OutIter dest, F &amp;&amp;f)</argsstring>
+        <name>transform_loop_n</name>
+        <param>
+          <type>Iter</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>OutIter</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/util/transform_loop.hpp" line="143" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/transform_loop.hpp" bodystart="143" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="util_2transform__loop_8hpp_1a640edede89f322cc9479b4079c40a3e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ExPolicy</type>
+          </param>
+          <param>
+            <type>typename InIter1</type>
+          </param>
+          <param>
+            <type>typename InIter2</type>
+          </param>
+          <param>
+            <type>typename OutIter</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type>HPX_HOST_DEVICE std::enable_if&lt; !execution::is_vectorpack_execution_policy&lt; ExPolicy &gt;::value, hpx::util::tuple&lt; InIter1, InIter2, OutIter &gt; &gt;::type</type>
+        <definition>HPX_HOST_DEVICE std::enable_if&lt; !execution::is_vectorpack_execution_policy&lt;ExPolicy&gt;::value, hpx::util::tuple&lt;InIter1, InIter2, OutIter&gt; &gt;::type hpx::parallel::util::transform_binary_loop_n</definition>
+        <argsstring>(InIter1 first1, std::size_t count, InIter2 first2, OutIter dest, F &amp;&amp;f)</argsstring>
+        <name>transform_binary_loop_n</name>
+        <param>
+          <type>InIter1</type>
+          <declname>first1</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>InIter2</type>
+          <declname>first2</declname>
+        </param>
+        <param>
+          <type>OutIter</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/util/transform_loop.hpp" line="180" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/transform_loop.hpp" bodystart="180" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="util_2loop_8hpp_1ab7144ea7259bda46498e8e27fecc15f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ExPolicy</type>
+          </param>
+          <param>
+            <type>typename VecOnly</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Iters</declname>
+            <defname>Iters</defname>
+          </param>
+        </templateparamlist>
+        <type>HPX_HOST_DEVICE std::enable_if&lt; !execution::is_vectorpack_execution_policy&lt; ExPolicy &gt;::value, typename hpx::util::invoke_result&lt; F, Iters... &gt;::type &gt;::type</type>
+        <definition>HPX_HOST_DEVICE std::enable_if&lt; !execution::is_vectorpack_execution_policy&lt;ExPolicy&gt;::value, typename hpx::util::invoke_result&lt;F, Iters...&gt;::type &gt;::type hpx::parallel::util::loop_step</definition>
+        <argsstring>(VecOnly, F &amp;&amp;f, Iters &amp;... its)</argsstring>
+        <name>loop_step</name>
+        <param>
+          <type>VecOnly</type>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Iters &amp;...</type>
+          <declname>its</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/util/loop.hpp" line="37" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/loop.hpp" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="util_2loop_8hpp_1aa57c176dc31629c8834e4978447ad2c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ExPolicy</type>
+          </param>
+          <param>
+            <type>typename Iter</type>
+          </param>
+        </templateparamlist>
+        <type>HPX_HOST_DEVICE std::enable_if&lt; !execution::is_vectorpack_execution_policy&lt; ExPolicy &gt;::value, bool &gt;::type</type>
+        <definition>HPX_HOST_DEVICE std::enable_if&lt; !execution::is_vectorpack_execution_policy&lt;ExPolicy&gt;::value, bool &gt;::type hpx::parallel::util::loop_optimization</definition>
+        <argsstring>(Iter, Iter)</argsstring>
+        <name>loop_optimization</name>
+        <param>
+          <type>Iter</type>
+        </param>
+        <param>
+          <type>Iter</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/util/loop.hpp" line="47" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/loop.hpp" bodystart="47" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="util_2loop_8hpp_1a1be66512c62f73660d17fcc47011e959" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ExPolicy</type>
+          </param>
+          <param>
+            <type>typename Begin</type>
+          </param>
+          <param>
+            <type>typename End</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type>HPX_HOST_DEVICE Begin</type>
+        <definition>HPX_HOST_DEVICE Begin hpx::parallel::util::loop</definition>
+        <argsstring>(ExPolicy &amp;&amp;, Begin begin, End end, F &amp;&amp;f)</argsstring>
+        <name>loop</name>
+        <param>
+          <type>ExPolicy &amp;&amp;</type>
+        </param>
+        <param>
+          <type>Begin</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>End</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/util/loop.hpp" line="90" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/loop.hpp" bodystart="90" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="util_2loop_8hpp_1a9b54875076230e886ec44c6032855171" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ExPolicy</type>
+          </param>
+          <param>
+            <type>typename Begin</type>
+          </param>
+          <param>
+            <type>typename End</type>
+          </param>
+          <param>
+            <type>typename CancelToken</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type>HPX_HOST_DEVICE Begin</type>
+        <definition>HPX_HOST_DEVICE Begin hpx::parallel::util::loop</definition>
+        <argsstring>(ExPolicy &amp;&amp;, Begin begin, End end, CancelToken &amp;tok, F &amp;&amp;f)</argsstring>
+        <name>loop</name>
+        <param>
+          <type>ExPolicy &amp;&amp;</type>
+        </param>
+        <param>
+          <type>Begin</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>End</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>CancelToken &amp;</type>
+          <declname>tok</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/util/loop.hpp" line="98" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/loop.hpp" bodystart="98" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="util_2loop_8hpp_1ac151d16af4bb11364399680414630859" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ExPolicy</type>
+          </param>
+          <param>
+            <type>typename VecOnly</type>
+          </param>
+          <param>
+            <type>typename Begin1</type>
+          </param>
+          <param>
+            <type>typename End1</type>
+          </param>
+          <param>
+            <type>typename Begin2</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type>HPX_HOST_DEVICE std::enable_if&lt; !execution::is_vectorpack_execution_policy&lt; ExPolicy &gt;::value, std::pair&lt; Begin1, Begin2 &gt; &gt;::type</type>
+        <definition>HPX_HOST_DEVICE std::enable_if&lt; !execution::is_vectorpack_execution_policy&lt;ExPolicy&gt;::value, std::pair&lt;Begin1, Begin2&gt; &gt;::type hpx::parallel::util::loop2</definition>
+        <argsstring>(VecOnly, Begin1 begin1, End1 end1, Begin2 begin2, F &amp;&amp;f)</argsstring>
+        <name>loop2</name>
+        <param>
+          <type>VecOnly</type>
+        </param>
+        <param>
+          <type>Begin1</type>
+          <declname>begin1</declname>
+        </param>
+        <param>
+          <type>End1</type>
+          <declname>end1</declname>
+        </param>
+        <param>
+          <type>Begin2</type>
+          <declname>begin2</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/util/loop.hpp" line="133" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/loop.hpp" bodystart="133" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="util_2loop_8hpp_1a0413c896567a2be502a78ad8e8fabb79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ExPolicy</type>
+          </param>
+          <param>
+            <type>typename Iter</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type>HPX_HOST_DEVICE std::enable_if&lt; !execution::is_vectorpack_execution_policy&lt; ExPolicy &gt;::value, Iter &gt;::type</type>
+        <definition>HPX_HOST_DEVICE std::enable_if&lt; !execution::is_vectorpack_execution_policy&lt;ExPolicy&gt;::value, Iter &gt;::type hpx::parallel::util::loop_n</definition>
+        <argsstring>(Iter it, std::size_t count, F &amp;&amp;f)</argsstring>
+        <name>loop_n</name>
+        <param>
+          <type>Iter</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/util/loop.hpp" line="227" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/loop.hpp" bodystart="227" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="util_2loop_8hpp_1a4e7008ee12c697a7f9e023121b987649" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ExPolicy</type>
+          </param>
+          <param>
+            <type>typename Iter</type>
+          </param>
+          <param>
+            <type>typename CancelToken</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type>HPX_HOST_DEVICE std::enable_if&lt; !execution::is_vectorpack_execution_policy&lt; ExPolicy &gt;::value, Iter &gt;::type</type>
+        <definition>HPX_HOST_DEVICE std::enable_if&lt; !execution::is_vectorpack_execution_policy&lt;ExPolicy&gt;::value, Iter &gt;::type hpx::parallel::util::loop_n</definition>
+        <argsstring>(Iter it, std::size_t count, CancelToken &amp;tok, F &amp;&amp;f)</argsstring>
+        <name>loop_n</name>
+        <param>
+          <type>Iter</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>CancelToken &amp;</type>
+          <declname>tok</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/util/loop.hpp" line="237" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/loop.hpp" bodystart="237" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="util_2loop_8hpp_1a8f281ce2e47a7fbaec26cd2b18149bce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Iter</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename Cleanup</type>
+          </param>
+        </templateparamlist>
+        <type>Iter</type>
+        <definition>Iter hpx::parallel::util::loop_with_cleanup</definition>
+        <argsstring>(Iter it, Iter last, F &amp;&amp;f, Cleanup &amp;&amp;cleanup)</argsstring>
+        <name>loop_with_cleanup</name>
+        <param>
+          <type>Iter</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>Iter</type>
+          <declname>last</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Cleanup &amp;&amp;</type>
+          <declname>cleanup</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/util/loop.hpp" line="323" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/loop.hpp" bodystart="323" bodyend="328"/>
+      </memberdef>
+      <memberdef kind="function" id="util_2loop_8hpp_1ad194c54b79cb6d055466f55565345849" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Iter</type>
+          </param>
+          <param>
+            <type>typename FwdIter</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename Cleanup</type>
+          </param>
+        </templateparamlist>
+        <type>FwdIter</type>
+        <definition>FwdIter hpx::parallel::util::loop_with_cleanup</definition>
+        <argsstring>(Iter it, Iter last, FwdIter dest, F &amp;&amp;f, Cleanup &amp;&amp;cleanup)</argsstring>
+        <name>loop_with_cleanup</name>
+        <param>
+          <type>Iter</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>Iter</type>
+          <declname>last</declname>
+        </param>
+        <param>
+          <type>FwdIter</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Cleanup &amp;&amp;</type>
+          <declname>cleanup</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/util/loop.hpp" line="332" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/loop.hpp" bodystart="332" bodyend="338"/>
+      </memberdef>
+      <memberdef kind="function" id="util_2loop_8hpp_1a459459833959a6f2c4a7b69f36c1521b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Iter</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename Cleanup</type>
+          </param>
+        </templateparamlist>
+        <type>Iter</type>
+        <definition>Iter hpx::parallel::util::loop_with_cleanup_n</definition>
+        <argsstring>(Iter it, std::size_t count, F &amp;&amp;f, Cleanup &amp;&amp;cleanup)</argsstring>
+        <name>loop_with_cleanup_n</name>
+        <param>
+          <type>Iter</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Cleanup &amp;&amp;</type>
+          <declname>cleanup</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/util/loop.hpp" line="436" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/loop.hpp" bodystart="436" bodyend="441"/>
+      </memberdef>
+      <memberdef kind="function" id="util_2loop_8hpp_1ac7b66c80b34f681e133696d57042fe70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Iter</type>
+          </param>
+          <param>
+            <type>typename FwdIter</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename Cleanup</type>
+          </param>
+        </templateparamlist>
+        <type>FwdIter</type>
+        <definition>FwdIter hpx::parallel::util::loop_with_cleanup_n</definition>
+        <argsstring>(Iter it, std::size_t count, FwdIter dest, F &amp;&amp;f, Cleanup &amp;&amp;cleanup)</argsstring>
+        <name>loop_with_cleanup_n</name>
+        <param>
+          <type>Iter</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>FwdIter</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Cleanup &amp;&amp;</type>
+          <declname>cleanup</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/util/loop.hpp" line="445" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/loop.hpp" bodystart="445" bodyend="451"/>
+      </memberdef>
+      <memberdef kind="function" id="util_2loop_8hpp_1adb9c098f0406ad056e7622a7f362506d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Iter</type>
+          </param>
+          <param>
+            <type>typename CancelToken</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename Cleanup</type>
+          </param>
+        </templateparamlist>
+        <type>Iter</type>
+        <definition>Iter hpx::parallel::util::loop_with_cleanup_n_with_token</definition>
+        <argsstring>(Iter it, std::size_t count, CancelToken &amp;tok, F &amp;&amp;f, Cleanup &amp;&amp;cleanup)</argsstring>
+        <name>loop_with_cleanup_n_with_token</name>
+        <param>
+          <type>Iter</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>CancelToken &amp;</type>
+          <declname>tok</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Cleanup &amp;&amp;</type>
+          <declname>cleanup</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/util/loop.hpp" line="455" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/loop.hpp" bodystart="455" bodyend="461"/>
+      </memberdef>
+      <memberdef kind="function" id="util_2loop_8hpp_1a62f100fbec38199c82eb65ad7a04749b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Iter</type>
+          </param>
+          <param>
+            <type>typename FwdIter</type>
+          </param>
+          <param>
+            <type>typename CancelToken</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename Cleanup</type>
+          </param>
+        </templateparamlist>
+        <type>FwdIter</type>
+        <definition>FwdIter hpx::parallel::util::loop_with_cleanup_n_with_token</definition>
+        <argsstring>(Iter it, std::size_t count, FwdIter dest, CancelToken &amp;tok, F &amp;&amp;f, Cleanup &amp;&amp;cleanup)</argsstring>
+        <name>loop_with_cleanup_n_with_token</name>
+        <param>
+          <type>Iter</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>FwdIter</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>CancelToken &amp;</type>
+          <declname>tok</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Cleanup &amp;&amp;</type>
+          <declname>cleanup</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/util/loop.hpp" line="466" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/loop.hpp" bodystart="466" bodyend="472"/>
+      </memberdef>
+      <memberdef kind="function" id="util_2loop_8hpp_1a1a2bf0faa87b1fc8b6ba004d5f508036" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Iter</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type>Iter</type>
+        <definition>Iter hpx::parallel::util::loop_idx_n</definition>
+        <argsstring>(std::size_t base_idx, Iter it, std::size_t count, F &amp;&amp;f)</argsstring>
+        <name>loop_idx_n</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>base_idx</declname>
+        </param>
+        <param>
+          <type>Iter</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/util/loop.hpp" line="513" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/loop.hpp" bodystart="513" bodyend="518"/>
+      </memberdef>
+      <memberdef kind="function" id="util_2loop_8hpp_1a53ec6b1dd767329dda8b5c8a2c8c9cdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Iter</type>
+          </param>
+          <param>
+            <type>typename CancelToken</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type>Iter</type>
+        <definition>Iter hpx::parallel::util::loop_idx_n</definition>
+        <argsstring>(std::size_t base_idx, Iter it, std::size_t count, CancelToken &amp;tok, F &amp;&amp;f)</argsstring>
+        <name>loop_idx_n</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>base_idx</declname>
+        </param>
+        <param>
+          <type>Iter</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>CancelToken &amp;</type>
+          <declname>tok</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/util/loop.hpp" line="522" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/loop.hpp" bodystart="522" bodyend="528"/>
+      </memberdef>
+      <memberdef kind="function" id="util_2loop_8hpp_1a97a6e181bdf0367165a7dc3162ee423e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Iter</type>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename Pred</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T hpx::parallel::util::accumulate_n</definition>
+        <argsstring>(Iter it, std::size_t count, T init, Pred &amp;&amp;f)</argsstring>
+        <name>accumulate_n</name>
+        <param>
+          <type>Iter</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>init</declname>
+        </param>
+        <param>
+          <type>Pred &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/util/loop.hpp" line="551" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/loop.hpp" bodystart="551" bodyend="556"/>
+      </memberdef>
+      <memberdef kind="function" id="util_2loop_8hpp_1ac7a4bcba305b04e79c5c1b5403dac7d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename Iter</type>
+          </param>
+          <param>
+            <type>typename Reduce</type>
+          </param>
+          <param>
+            <type>typename Conv</type>
+            <defval>util::projection_identity</defval>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T hpx::parallel::util::accumulate</definition>
+        <argsstring>(Iter first, Iter last, Reduce &amp;&amp;r, Conv &amp;&amp;conv=Conv())</argsstring>
+        <name>accumulate</name>
+        <param>
+          <type>Iter</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type>Iter</type>
+          <declname>last</declname>
+        </param>
+        <param>
+          <type>Reduce &amp;&amp;</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>Conv &amp;&amp;</type>
+          <declname>conv</declname>
+          <defval>Conv()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/util/loop.hpp" line="561" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/loop.hpp" bodystart="561" bodyend="571"/>
+      </memberdef>
+      <memberdef kind="function" id="util_2loop_8hpp_1ac290e8d1cf94291a61586366ee7cf509" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename Iter1</type>
+          </param>
+          <param>
+            <type>typename Iter2</type>
+          </param>
+          <param>
+            <type>typename Reduce</type>
+          </param>
+          <param>
+            <type>typename Conv</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T hpx::parallel::util::accumulate</definition>
+        <argsstring>(Iter1 first1, Iter1 last1, Iter2 first2, Reduce &amp;&amp;r, Conv &amp;&amp;conv)</argsstring>
+        <name>accumulate</name>
+        <param>
+          <type>Iter1</type>
+          <declname>first1</declname>
+        </param>
+        <param>
+          <type>Iter1</type>
+          <declname>last1</declname>
+        </param>
+        <param>
+          <type>Iter2</type>
+          <declname>first2</declname>
+        </param>
+        <param>
+          <type>Reduce &amp;&amp;</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>Conv &amp;&amp;</type>
+          <declname>conv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/util/loop.hpp" line="576" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/loop.hpp" bodystart="576" bodyend="588"/>
+      </memberdef>
+      <memberdef kind="function" id="prefetching_8hpp_1accb603d012cdc79d0a128f7e48688c1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Itr</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>detail::prefetcher_context&lt; Itr, Ts const ... &gt;</type>
+        <definition>detail::prefetcher_context&lt;Itr, Ts const...&gt; hpx::parallel::util::make_prefetcher_context</definition>
+        <argsstring>(Itr base_begin, Itr base_end, std::size_t p_factor, Ts const &amp;... rngs)</argsstring>
+        <name>make_prefetcher_context</name>
+        <param>
+          <type>Itr</type>
+          <declname>base_begin</declname>
+        </param>
+        <param>
+          <type>Itr</type>
+          <declname>base_end</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>p_factor</declname>
+        </param>
+        <param>
+          <type>Ts const &amp;...</type>
+          <declname>rngs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/util/prefetching.hpp" line="395" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/prefetching.hpp" bodystart="395" bodyend="410"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libs/algorithms/include/hpx/parallel/util/transfer.hpp" line="22" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,457 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classhpx_1_1util_1_1checkpoint" kind="class" language="C++" prot="public">
+    <compoundname>hpx::util::checkpoint</compoundname>
+    <includes refid="checkpoint_8hpp" local="no">checkpoint.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classhpx_1_1util_1_1checkpoint_1a82de877cacbb15cfdeee974d6f3c63af" prot="public" static="no">
+        <type>std::vector&lt; char &gt;::const_iterator</type>
+        <definition>using hpx::util::checkpoint::const_iterator =  std::vector&lt;char&gt;::const_iterator</definition>
+        <argsstring></argsstring>
+        <name>const_iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/checkpoint.hpp" line="119" column="1" bodyfile="hpx/util/checkpoint.hpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhpx_1_1util_1_1checkpoint_1ad8b2a1f0ca04c257c7a6b007ff6c802d" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; char &gt;</type>
+        <definition>std::vector&lt;char&gt; hpx::util::checkpoint::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/checkpoint.hpp" line="52" column="1" bodyfile="hpx/util/checkpoint.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classhpx_1_1util_1_1checkpoint_1add50dcae00a1300662d4d2f8c52c804f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class hpx::serialization::access</definition>
+        <argsstring></argsstring>
+        <name>hpx::serialization::access</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/checkpoint.hpp" line="58" column="1" bodyfile="hpx/util/checkpoint.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classhpx_1_1util_1_1checkpoint_1ae4abc2da95d873bfacce9b6f969c9319" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;ost, checkpoint const &amp;ckp)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>ost</declname>
+        </param>
+        <param>
+          <type><ref refid="classhpx_1_1util_1_1checkpoint" kindref="compound">checkpoint</ref> const &amp;</type>
+          <declname>ckp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Operator&lt;&lt; Overload</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ost</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream to write to.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ckp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Checkpoint to copy from.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+This overload is the main way to write data from a checkpoint to an object such as a file. Inside the function, the size of the checkpoint will be written to the stream before the checkpoint&apos;s data. The operator&gt;&gt; overload uses this to read the correct number of bytes. Be mindful of this additional write and read when you use different facilities to write out or read in data to a checkpoint!</para><para><simplesect kind="return"><para>Operator&lt;&lt; returns the ostream object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/checkpoint.hpp" line="54" column="1" bodyfile="hpx/util/checkpoint.hpp" bodystart="156" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="friend" id="classhpx_1_1util_1_1checkpoint_1a17563b5358dc4372447c4471e93d66f7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::istream &amp;</type>
+        <definition>std::istream&amp; operator&gt;&gt;</definition>
+        <argsstring>(std::istream &amp;ist, checkpoint &amp;ckp)</argsstring>
+        <name>operator&gt;&gt;</name>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>ist</declname>
+        </param>
+        <param>
+          <type><ref refid="classhpx_1_1util_1_1checkpoint" kindref="compound">checkpoint</ref> &amp;</type>
+          <declname>ckp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Operator&gt;&gt; Overload</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream to write from.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ckp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Checkpoint to write to.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+This overload is the main way to read in data from an object such as a file to a checkpoint. It is important to note that inside the function, the first variable to be read is the size of the checkpoint. This size variable is written to the stream before the checkpoint&apos;s data in the operator&lt;&lt; overload. Be mindful of this additional read and write when you use different facilities to read in or write out data from a checkpoint!</para><para><simplesect kind="return"><para>Operator&gt;&gt; returns the ostream object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/checkpoint.hpp" line="56" column="1" bodyfile="hpx/util/checkpoint.hpp" bodystart="187" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="friend" id="classhpx_1_1util_1_1checkpoint_1ad29203790e2102706b1394aa139ee4ef" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>friend void</type>
+        <definition>void restore_checkpoint</definition>
+        <argsstring>(checkpoint const &amp;c, T &amp;t, Ts &amp;... ts)</argsstring>
+        <name>restore_checkpoint</name>
+        <param>
+          <type><ref refid="classhpx_1_1util_1_1checkpoint" kindref="compound">checkpoint</ref> const &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>T &amp;</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>Ts &amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Resurrect</para><para>Restore_checkpoint takes a checkpoint object as a first argument and the containers which will be filled from the byte stream (in the same order as they were placed in save_checkpoint).</para><para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A container to restore.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Ts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Other containers to restore. Containers must be in the same order that they were inserted into the checkpoint.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The checkpoint to restore.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A container to restore.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Other containers to restore Containers must be in the same order that they were inserted into the checkpoint.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Restore_checkpoint returns void. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/checkpoint.hpp" line="66" column="1" bodyfile="hpx/util/checkpoint.hpp" bodystart="491" bodyend="501"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhpx_1_1util_1_1checkpoint_1a3a86f9af2c42be37deb07f9f88800c17" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Archive</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void hpx::util::checkpoint::serialize</definition>
+        <argsstring>(Archive &amp;arch, const unsigned int version)</argsstring>
+        <name>serialize</name>
+        <param>
+          <type>Archive &amp;</type>
+          <declname>arch</declname>
+        </param>
+        <param>
+          <type>const unsigned int</type>
+          <declname>version</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/checkpoint.hpp" line="60" column="1" bodyfile="hpx/util/checkpoint.hpp" bodystart="60" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhpx_1_1util_1_1checkpoint_1a73fa7ae72803c1595b90fa0b3c7415dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hpx::util::checkpoint::checkpoint</definition>
+        <argsstring>()=default</argsstring>
+        <name>checkpoint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/checkpoint.hpp" line="69" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1checkpoint_1a3d4919b754f7de5939121f2bb0281302" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::util::checkpoint::checkpoint</definition>
+        <argsstring>(checkpoint const &amp;c)</argsstring>
+        <name>checkpoint</name>
+        <param>
+          <type><ref refid="classhpx_1_1util_1_1checkpoint" kindref="compound">checkpoint</ref> const &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/checkpoint.hpp" line="70" column="1" bodyfile="hpx/util/checkpoint.hpp" bodystart="70" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1checkpoint_1ac46e515ed346c0b282cb3d41e87e7c0d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::util::checkpoint::checkpoint</definition>
+        <argsstring>(checkpoint &amp;&amp;c)</argsstring>
+        <name>checkpoint</name>
+        <param>
+          <type><ref refid="classhpx_1_1util_1_1checkpoint" kindref="compound">checkpoint</ref> &amp;&amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/checkpoint.hpp" line="74" column="1" bodyfile="hpx/util/checkpoint.hpp" bodystart="74" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1checkpoint_1a0b260023e856328d1b7d62bd291218ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hpx::util::checkpoint::~checkpoint</definition>
+        <argsstring>()=default</argsstring>
+        <name>~checkpoint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/checkpoint.hpp" line="78" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1checkpoint_1a203c02b31d67597ef996c38a5bdf58d1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::util::checkpoint::checkpoint</definition>
+        <argsstring>(std::vector&lt; char &gt; const &amp;vec)</argsstring>
+        <name>checkpoint</name>
+        <param>
+          <type>std::vector&lt; char &gt; const &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/checkpoint.hpp" line="81" column="1" bodyfile="hpx/util/checkpoint.hpp" bodystart="81" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1checkpoint_1a8f8d5808e06cdd6e0d47488c042b0417" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::util::checkpoint::checkpoint</definition>
+        <argsstring>(std::vector&lt; char &gt; &amp;&amp;vec)</argsstring>
+        <name>checkpoint</name>
+        <param>
+          <type>std::vector&lt; char &gt; &amp;&amp;</type>
+          <declname>vec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/checkpoint.hpp" line="85" column="1" bodyfile="hpx/util/checkpoint.hpp" bodystart="85" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1checkpoint_1a107d0a201a33a291a219696c33d57105" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classhpx_1_1util_1_1checkpoint" kindref="compound">checkpoint</ref> &amp;</type>
+        <definition>checkpoint&amp; hpx::util::checkpoint::operator=</definition>
+        <argsstring>(checkpoint const &amp;c)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classhpx_1_1util_1_1checkpoint" kindref="compound">checkpoint</ref> const &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/checkpoint.hpp" line="91" column="1" bodyfile="hpx/util/checkpoint.hpp" bodystart="91" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1checkpoint_1a86db36199979ad9d29ea902c6d168c37" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classhpx_1_1util_1_1checkpoint" kindref="compound">checkpoint</ref> &amp;</type>
+        <definition>checkpoint&amp; hpx::util::checkpoint::operator=</definition>
+        <argsstring>(checkpoint &amp;&amp;c)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classhpx_1_1util_1_1checkpoint" kindref="compound">checkpoint</ref> &amp;&amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/checkpoint.hpp" line="99" column="1" bodyfile="hpx/util/checkpoint.hpp" bodystart="99" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1checkpoint_1af9fef339d94767fb51f31e036649367b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hpx::util::checkpoint::operator==</definition>
+        <argsstring>(checkpoint const &amp;c) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type><ref refid="classhpx_1_1util_1_1checkpoint" kindref="compound">checkpoint</ref> const &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/checkpoint.hpp" line="108" column="1" bodyfile="hpx/util/checkpoint.hpp" bodystart="108" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1checkpoint_1a8ff15b7105a53ac0733bbbdc6e85b7d1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hpx::util::checkpoint::operator!=</definition>
+        <argsstring>(checkpoint const &amp;c) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type><ref refid="classhpx_1_1util_1_1checkpoint" kindref="compound">checkpoint</ref> const &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/checkpoint.hpp" line="112" column="1" bodyfile="hpx/util/checkpoint.hpp" bodystart="112" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1checkpoint_1a763e553bf23b0ebe3d79e887b734d2d4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const_iterator</type>
+        <definition>const_iterator hpx::util::checkpoint::begin</definition>
+        <argsstring>() const</argsstring>
+        <name>begin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/checkpoint.hpp" line="120" column="1" bodyfile="hpx/util/checkpoint.hpp" bodystart="120" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1checkpoint_1a7719f7ad1bfacb0f15b083d5b7b6c88e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const_iterator</type>
+        <definition>const_iterator hpx::util::checkpoint::end</definition>
+        <argsstring>() const</argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/checkpoint.hpp" line="124" column="1" bodyfile="hpx/util/checkpoint.hpp" bodystart="124" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1checkpoint_1ad33cab513f15c34bc56a8a0d2c82baca" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t hpx::util::checkpoint::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/checkpoint.hpp" line="130" column="1" bodyfile="hpx/util/checkpoint.hpp" bodystart="130" bodyend="133"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Checkpoint Object</para><para>Checkpoint is the container object which is produced by save_checkpoint and is consumed by a restore_checkpoint. A checkpoint may be moved into the save_checkpoint object to write the byte stream to the pre-created checkpoint object. </para>    </detaileddescription>
+    <location file="hpx/util/checkpoint.hpp" line="51" column="1" bodyfile="hpx/util/checkpoint.hpp" bodystart="50" bodyend="134"/>
+    <listofallmembers>
+      <member refid="classhpx_1_1util_1_1checkpoint_1a763e553bf23b0ebe3d79e887b734d2d4" prot="public" virt="non-virtual"><scope>hpx::util::checkpoint</scope><name>begin</name></member>
+      <member refid="classhpx_1_1util_1_1checkpoint_1a73fa7ae72803c1595b90fa0b3c7415dc" prot="public" virt="non-virtual"><scope>hpx::util::checkpoint</scope><name>checkpoint</name></member>
+      <member refid="classhpx_1_1util_1_1checkpoint_1a3d4919b754f7de5939121f2bb0281302" prot="public" virt="non-virtual"><scope>hpx::util::checkpoint</scope><name>checkpoint</name></member>
+      <member refid="classhpx_1_1util_1_1checkpoint_1ac46e515ed346c0b282cb3d41e87e7c0d" prot="public" virt="non-virtual"><scope>hpx::util::checkpoint</scope><name>checkpoint</name></member>
+      <member refid="classhpx_1_1util_1_1checkpoint_1a203c02b31d67597ef996c38a5bdf58d1" prot="public" virt="non-virtual"><scope>hpx::util::checkpoint</scope><name>checkpoint</name></member>
+      <member refid="classhpx_1_1util_1_1checkpoint_1a8f8d5808e06cdd6e0d47488c042b0417" prot="public" virt="non-virtual"><scope>hpx::util::checkpoint</scope><name>checkpoint</name></member>
+      <member refid="classhpx_1_1util_1_1checkpoint_1a82de877cacbb15cfdeee974d6f3c63af" prot="public" virt="non-virtual"><scope>hpx::util::checkpoint</scope><name>const_iterator</name></member>
+      <member refid="classhpx_1_1util_1_1checkpoint_1ad8b2a1f0ca04c257c7a6b007ff6c802d" prot="private" virt="non-virtual"><scope>hpx::util::checkpoint</scope><name>data</name></member>
+      <member refid="classhpx_1_1util_1_1checkpoint_1a7719f7ad1bfacb0f15b083d5b7b6c88e" prot="public" virt="non-virtual"><scope>hpx::util::checkpoint</scope><name>end</name></member>
+      <member refid="classhpx_1_1util_1_1checkpoint_1add50dcae00a1300662d4d2f8c52c804f" prot="public" virt="non-virtual"><scope>hpx::util::checkpoint</scope><name>hpx::serialization::access</name></member>
+      <member refid="classhpx_1_1util_1_1checkpoint_1a8ff15b7105a53ac0733bbbdc6e85b7d1" prot="public" virt="non-virtual"><scope>hpx::util::checkpoint</scope><name>operator!=</name></member>
+      <member refid="classhpx_1_1util_1_1checkpoint_1ae4abc2da95d873bfacce9b6f969c9319" prot="private" virt="non-virtual"><scope>hpx::util::checkpoint</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classhpx_1_1util_1_1checkpoint_1a107d0a201a33a291a219696c33d57105" prot="public" virt="non-virtual"><scope>hpx::util::checkpoint</scope><name>operator=</name></member>
+      <member refid="classhpx_1_1util_1_1checkpoint_1a86db36199979ad9d29ea902c6d168c37" prot="public" virt="non-virtual"><scope>hpx::util::checkpoint</scope><name>operator=</name></member>
+      <member refid="classhpx_1_1util_1_1checkpoint_1af9fef339d94767fb51f31e036649367b" prot="public" virt="non-virtual"><scope>hpx::util::checkpoint</scope><name>operator==</name></member>
+      <member refid="classhpx_1_1util_1_1checkpoint_1a17563b5358dc4372447c4471e93d66f7" prot="private" virt="non-virtual"><scope>hpx::util::checkpoint</scope><name>operator&gt;&gt;</name></member>
+      <member refid="classhpx_1_1util_1_1checkpoint_1ad29203790e2102706b1394aa139ee4ef" prot="private" virt="non-virtual"><scope>hpx::util::checkpoint</scope><name>restore_checkpoint</name></member>
+      <member refid="classhpx_1_1util_1_1checkpoint_1a3a86f9af2c42be37deb07f9f88800c17" prot="private" virt="non-virtual"><scope>hpx::util::checkpoint</scope><name>serialize</name></member>
+      <member refid="classhpx_1_1util_1_1checkpoint_1ad33cab513f15c34bc56a8a0d2c82baca" prot="public" virt="non-virtual"><scope>hpx::util::checkpoint</scope><name>size</name></member>
+      <member refid="classhpx_1_1util_1_1checkpoint_1a0b260023e856328d1b7d62bd291218ca" prot="public" virt="non-virtual"><scope>hpx::util::checkpoint</scope><name>~checkpoint</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

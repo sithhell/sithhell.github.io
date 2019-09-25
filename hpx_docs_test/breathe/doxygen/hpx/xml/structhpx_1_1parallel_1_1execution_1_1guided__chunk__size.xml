@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structhpx_1_1parallel_1_1execution_1_1guided__chunk__size" kind="struct" language="C++" prot="public">
+    <compoundname>hpx::parallel::execution::guided_chunk_size</compoundname>
+    <includes refid="guided__chunk__size_8hpp" local="no">guided_chunk_size.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structhpx_1_1parallel_1_1execution_1_1guided__chunk__size_1a33c3a0b0bbd08cf812dc0df826ba0dca" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::parallel::execution::guided_chunk_size::guided_chunk_size</definition>
+        <argsstring>(std::size_t min_chunk_size=1)</argsstring>
+        <name>guided_chunk_size</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>min_chunk_size</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct a <emphasis><ref refid="structhpx_1_1parallel_1_1execution_1_1guided__chunk__size" kindref="compound">guided_chunk_size</ref></emphasis> executor parameters object</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>min_chunk_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The optional minimal chunk size to use as the minimal number of loop iterations to schedule together. The default minimal chunk size is 1. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/parallel/executors/guided_chunk_size.hpp" line="45" column="1" bodyfile="hpx/parallel/executors/guided_chunk_size.hpp" bodystart="45" bodyend="47"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Iterations are dynamically assigned to threads in blocks as threads request them until no blocks remain to be assigned. Similar to <emphasis><ref refid="structhpx_1_1parallel_1_1execution_1_1dynamic__chunk__size" kindref="compound">dynamic_chunk_size</ref></emphasis> except that the block size decreases each time a number of loop iterations is given to a thread. The size of the initial block is proportional to <emphasis>number_of_iterations</emphasis> / <emphasis>number_of_cores</emphasis>. Subsequent blocks are proportional to <emphasis>number_of_iterations_remaining</emphasis> / <emphasis>number_of_cores</emphasis>. The optional chunk size parameter defines the minimum block size. The default chunk size is 1.</para><para><simplesect kind="note"><para>This executor parameters type is equivalent to OpenMP&apos;s GUIDED scheduling directive. </para></simplesect>
+</para>    </detaileddescription>
+    <location file="hpx/parallel/executors/guided_chunk_size.hpp" line="36" column="1" bodyfile="hpx/parallel/executors/guided_chunk_size.hpp" bodystart="35" bodyend="86"/>
+    <listofallmembers>
+      <member refid="structhpx_1_1parallel_1_1execution_1_1guided__chunk__size_1a33c3a0b0bbd08cf812dc0df826ba0dca" prot="public" virt="non-virtual"><scope>hpx::parallel::execution::guided_chunk_size</scope><name>guided_chunk_size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

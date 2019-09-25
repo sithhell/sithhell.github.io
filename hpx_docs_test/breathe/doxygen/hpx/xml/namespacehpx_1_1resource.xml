@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacehpx_1_1resource" kind="namespace" language="C++">
+    <compoundname>hpx::resource</compoundname>
+    <innerclass refid="classhpx_1_1resource_1_1core" prot="public">hpx::resource::core</innerclass>
+    <innerclass refid="classhpx_1_1resource_1_1numa__domain" prot="public">hpx::resource::numa_domain</innerclass>
+    <innerclass refid="classhpx_1_1resource_1_1partitioner" prot="public">hpx::resource::partitioner</innerclass>
+    <innerclass refid="classhpx_1_1resource_1_1pu" prot="public">hpx::resource::pu</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="partitioner__fwd_8hpp_1a6f61180f54b5c833bf76bf7651ee5e17" prot="public" static="no">
+        <name>partitioner_mode</name>
+        <enumvalue id="partitioner__fwd_8hpp_1a6f61180f54b5c833bf76bf7651ee5e17aecd54760e4c2642805f16b31aad818e0" prot="public">
+          <name>mode_default</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Default mode. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="partitioner__fwd_8hpp_1a6f61180f54b5c833bf76bf7651ee5e17a7a903af8bec1ef0cdd0978b8af71f352" prot="public">
+          <name>mode_allow_oversubscription</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Allow processing units to be oversubscribed, i.e. multiple worker threads to share a single processing unit. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="partitioner__fwd_8hpp_1a6f61180f54b5c833bf76bf7651ee5e17a390b02a8c5b07d6293b844fa8f459431" prot="public">
+          <name>mode_allow_dynamic_pools</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para>Allow worker threads to be added and removed from thread pools. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This enumeration describes the modes available when creating a resource partitioner. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/resource/partitioner_fwd.hpp" line="46" column="1" bodyfile="hpx/runtime/resource/partitioner_fwd.hpp" bodystart="45" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="enum" id="partitioner__fwd_8hpp_1a5a5a53174b67a94ce5249fa22f6d9b50" prot="public" static="no">
+        <name>scheduling_policy</name>
+        <enumvalue id="partitioner__fwd_8hpp_1a5a5a53174b67a94ce5249fa22f6d9b50ae7f5e4f7ce2920a53215324d5eb19a20" prot="public">
+          <name>user_defined</name>
+          <initializer>= -2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="partitioner__fwd_8hpp_1a5a5a53174b67a94ce5249fa22f6d9b50aaaa1db2d00638fe119ab1108290efbaa" prot="public">
+          <name>unspecified</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="partitioner__fwd_8hpp_1a5a5a53174b67a94ce5249fa22f6d9b50ab1576160f2dccb8e0e3ee8df403ab652" prot="public">
+          <name>local</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="partitioner__fwd_8hpp_1a5a5a53174b67a94ce5249fa22f6d9b50a5091f42000a2c161ecca1298f3e3f981" prot="public">
+          <name>local_priority_fifo</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="partitioner__fwd_8hpp_1a5a5a53174b67a94ce5249fa22f6d9b50a61d5c91c74c4ab67be1921469e32923b" prot="public">
+          <name>local_priority_lifo</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="partitioner__fwd_8hpp_1a5a5a53174b67a94ce5249fa22f6d9b50a7b8b21789851c7957beafdbfc9804773" prot="public">
+          <name>static_</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="partitioner__fwd_8hpp_1a5a5a53174b67a94ce5249fa22f6d9b50afdabcc9635bf8ac27c3d7810f3cc1d03" prot="public">
+          <name>static_priority</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="partitioner__fwd_8hpp_1a5a5a53174b67a94ce5249fa22f6d9b50a23d8e17519771e45c0b2200b687fcafa" prot="public">
+          <name>abp_priority_fifo</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="partitioner__fwd_8hpp_1a5a5a53174b67a94ce5249fa22f6d9b50a0fb77b319d1058d533412930cddce22a" prot="public">
+          <name>abp_priority_lifo</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="partitioner__fwd_8hpp_1a5a5a53174b67a94ce5249fa22f6d9b50a290e905215af96b8623f6083a65160da" prot="public">
+          <name>shared_priority</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This enumeration lists the available scheduling policies (or schedulers) when creating thread pools. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/resource/partitioner_fwd.hpp" line="67" column="1" bodyfile="hpx/runtime/resource/partitioner_fwd.hpp" bodystart="66" bodyend="78"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="partitioner__fwd_8hpp_1ae341b79156981aacbf5a6eeab573dddb" prot="public" static="no">
+        <type>util::function_nonser&lt; std::unique_ptr&lt; <ref refid="classhpx_1_1threads_1_1thread__pool__base" kindref="compound">hpx::threads::thread_pool_base</ref> &gt;(<ref refid="structhpx_1_1threads_1_1thread__pool__init__parameters" kindref="compound">hpx::threads::thread_pool_init_parameters</ref>, hpx::threads::policies::thread_queue_init_parameters)&gt;</type>
+        <definition>using hpx::resource::scheduler_function = typedef util::function_nonser&lt; std::unique_ptr&lt;hpx::threads::thread_pool_base&gt;( hpx::threads::thread_pool_init_parameters, hpx::threads::policies::thread_queue_init_parameters)&gt;</definition>
+        <argsstring></argsstring>
+        <name>scheduler_function</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/resource/partitioner_fwd.hpp" line="56" column="1" bodyfile="hpx/runtime/resource/partitioner_fwd.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="partitioner__fwd_8hpp_1af9f5edcd5a638906e9142b7ffbc297ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>detail::partitioner &amp;</type>
+        <definition>detail::partitioner&amp; hpx::resource::get_partitioner</definition>
+        <argsstring>()</argsstring>
+        <name>get_partitioner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>May be used anywhere in code and returns a reference to the single, global resource partitioner. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/resource/partitioner_fwd.hpp" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="partitioner__fwd_8hpp_1a074877fd09122474c614d3c58eefa606" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hpx::resource::is_partitioner_valid</definition>
+        <argsstring>()</argsstring>
+        <name>is_partitioner_valid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns true if the resource partitioner has been initialized. Returns false otherwise. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/resource/partitioner_fwd.hpp" line="41" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="hpx/runtime/resource/partitioner.hpp" line="24" column="1"/>
+  </compounddef>
+</doxygen>

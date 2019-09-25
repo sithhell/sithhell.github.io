@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structhpx_1_1parallel_1_1execution_1_1persistent__auto__chunk__size" kind="struct" language="C++" prot="public">
+    <compoundname>hpx::parallel::execution::persistent_auto_chunk_size</compoundname>
+    <includes refid="persistent__auto__chunk__size_8hpp" local="no">persistent_auto_chunk_size.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structhpx_1_1parallel_1_1execution_1_1persistent__auto__chunk__size_1ad88b81cde01f05f9693c2f4a823e2fbc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::parallel::execution::persistent_auto_chunk_size::persistent_auto_chunk_size</definition>
+        <argsstring>()</argsstring>
+        <name>persistent_auto_chunk_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct an <emphasis><ref refid="structhpx_1_1parallel_1_1execution_1_1persistent__auto__chunk__size" kindref="compound">persistent_auto_chunk_size</ref></emphasis> executor parameters object</para><para><simplesect kind="note"><para>Default constructed <emphasis><ref refid="structhpx_1_1parallel_1_1execution_1_1persistent__auto__chunk__size" kindref="compound">persistent_auto_chunk_size</ref></emphasis> executor parameter types will use 0 microseconds as the execution time for each chunk and 80 microseconds as the minimal time for which any of the scheduled chunks should run. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/executors/persistent_auto_chunk_size.hpp" line="42" column="1" bodyfile="libs/execution/include/hpx/parallel/executors/persistent_auto_chunk_size.hpp" bodystart="42" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1parallel_1_1execution_1_1persistent__auto__chunk__size_1a7e04ecbaae686b23a6fa735dfba7a554" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::parallel::execution::persistent_auto_chunk_size::persistent_auto_chunk_size</definition>
+        <argsstring>(hpx::util::steady_duration const &amp;time_cs)</argsstring>
+        <name>persistent_auto_chunk_size</name>
+        <param>
+          <type>hpx::util::steady_duration const &amp;</type>
+          <declname>time_cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct an <emphasis><ref refid="structhpx_1_1parallel_1_1execution_1_1persistent__auto__chunk__size" kindref="compound">persistent_auto_chunk_size</ref></emphasis> executor parameters object</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>time_cs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The execution time for each chunk. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/executors/persistent_auto_chunk_size.hpp" line="50" column="1" bodyfile="libs/execution/include/hpx/parallel/executors/persistent_auto_chunk_size.hpp" bodystart="50" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1parallel_1_1execution_1_1persistent__auto__chunk__size_1a3849ce5597b9a8be5a70389bb1935aeb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::parallel::execution::persistent_auto_chunk_size::persistent_auto_chunk_size</definition>
+        <argsstring>(hpx::util::steady_duration const &amp;time_cs, hpx::util::steady_duration const &amp;rel_time)</argsstring>
+        <name>persistent_auto_chunk_size</name>
+        <param>
+          <type>hpx::util::steady_duration const &amp;</type>
+          <declname>time_cs</declname>
+        </param>
+        <param>
+          <type>hpx::util::steady_duration const &amp;</type>
+          <declname>rel_time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct an <emphasis><ref refid="structhpx_1_1parallel_1_1execution_1_1persistent__auto__chunk__size" kindref="compound">persistent_auto_chunk_size</ref></emphasis> executor parameters object</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rel_time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The time duration to use as the minimum to decide how many loop iterations should be combined. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>time_cs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The execution time for each chunk. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/executors/persistent_auto_chunk_size.hpp" line="61" column="1" bodyfile="libs/execution/include/hpx/parallel/executors/persistent_auto_chunk_size.hpp" bodystart="61" bodyend="65"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Loop iterations are divided into pieces and then assigned to threads. The number of loop iterations combined is determined based on measurements of how long the execution of 1% of the overall number of iterations takes. This executor parameters type makes sure that as many loop iterations are combined as necessary to run for the amount of time specified. </para>    </detaileddescription>
+    <location file="libs/execution/include/hpx/parallel/executors/persistent_auto_chunk_size.hpp" line="33" column="1" bodyfile="libs/execution/include/hpx/parallel/executors/persistent_auto_chunk_size.hpp" bodystart="32" bodyend="120"/>
+    <listofallmembers>
+      <member refid="structhpx_1_1parallel_1_1execution_1_1persistent__auto__chunk__size_1ad88b81cde01f05f9693c2f4a823e2fbc" prot="public" virt="non-virtual"><scope>hpx::parallel::execution::persistent_auto_chunk_size</scope><name>persistent_auto_chunk_size</name></member>
+      <member refid="structhpx_1_1parallel_1_1execution_1_1persistent__auto__chunk__size_1a7e04ecbaae686b23a6fa735dfba7a554" prot="public" virt="non-virtual"><scope>hpx::parallel::execution::persistent_auto_chunk_size</scope><name>persistent_auto_chunk_size</name></member>
+      <member refid="structhpx_1_1parallel_1_1execution_1_1persistent__auto__chunk__size_1a3849ce5597b9a8be5a70389bb1935aeb" prot="public" virt="non-virtual"><scope>hpx::parallel::execution::persistent_auto_chunk_size</scope><name>persistent_auto_chunk_size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

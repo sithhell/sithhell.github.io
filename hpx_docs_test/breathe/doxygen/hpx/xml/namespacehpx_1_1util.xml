@@ -1,0 +1,1066 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacehpx_1_1util" kind="namespace" language="C++">
+    <compoundname>hpx::util</compoundname>
+    <innerclass refid="classhpx_1_1util_1_1checkpoint" prot="public">hpx::util::checkpoint</innerclass>
+    <innernamespace refid="namespacehpx_1_1util_1_1functional">hpx::util::functional</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="checkpoint_8hpp_1a1bd050426e811a324853146573d39c0b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream &amp; hpx::util::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;ost, checkpoint const &amp;ckp)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>ost</declname>
+        </param>
+        <param>
+          <type><ref refid="classhpx_1_1util_1_1checkpoint" kindref="compound">checkpoint</ref> const &amp;</type>
+          <declname>ckp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Operator&lt;&lt; Overload</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ost</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream to write to.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ckp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Checkpoint to copy from.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+This overload is the main way to write data from a checkpoint to an object such as a file. Inside the function, the size of the checkpoint will be written to the stream before the checkpoint&apos;s data. The operator&gt;&gt; overload uses this to read the correct number of bytes. Be mindful of this additional write and read when you use different facilities to write out or read in data to a checkpoint!</para><para><simplesect kind="return"><para>Operator&lt;&lt; returns the ostream object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/checkpoint.hpp" line="37" column="1" bodyfile="hpx/util/checkpoint.hpp" bodystart="156" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="checkpoint_8hpp_1a9f7d6820696ba0ccff45125664b1cebc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::istream &amp;</type>
+        <definition>std::istream &amp; hpx::util::operator&gt;&gt;</definition>
+        <argsstring>(std::istream &amp;ist, checkpoint &amp;ckp)</argsstring>
+        <name>operator&gt;&gt;</name>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>ist</declname>
+        </param>
+        <param>
+          <type><ref refid="classhpx_1_1util_1_1checkpoint" kindref="compound">checkpoint</ref> &amp;</type>
+          <declname>ckp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Operator&gt;&gt; Overload</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream to write from.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ckp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Checkpoint to write to.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+This overload is the main way to read in data from an object such as a file to a checkpoint. It is important to note that inside the function, the first variable to be read is the size of the checkpoint. This size variable is written to the stream before the checkpoint&apos;s data in the operator&lt;&lt; overload. Be mindful of this additional read and write when you use different facilities to read in or write out data from a checkpoint!</para><para><simplesect kind="return"><para>Operator&gt;&gt; returns the ostream object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/checkpoint.hpp" line="38" column="1" bodyfile="hpx/util/checkpoint.hpp" bodystart="187" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="checkpoint_8hpp_1a9026c6688d04d1a48068e32468036336" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+          <param>
+            <type>typename U</type>
+            <defval>typename std::enable_if&lt;!hpx::traits::is_launch_policy&lt;T&gt;::value &amp;&amp;                !std::is_same&lt;typename std::decay&lt;T&gt;::type,                    checkpoint&gt;::value&gt;::type</defval>
+          </param>
+        </templateparamlist>
+        <type>hpx::future&lt; <ref refid="classhpx_1_1util_1_1checkpoint" kindref="compound">checkpoint</ref> &gt;</type>
+        <definition>hpx::future&lt;checkpoint&gt; hpx::util::save_checkpoint</definition>
+        <argsstring>(T &amp;&amp;t, Ts &amp;&amp;... ts)</argsstring>
+        <name>save_checkpoint</name>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Save_checkpoint</para><para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Containers passed to save_checkpoint to be serialized and placed into a checkpoint object.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Ts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>More containers passed to save_checkpoint to be serialized and placed into a checkpoint object.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>U</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This parameter is used to make sure that T is not a launch policy or a checkpoint. This forces the compiler to choose the correct overload.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A container to restore.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Other containers to restore Containers must be in the same order that they were inserted into the checkpoint.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Save_checkpoint takes any number of objects which a user may wish to store and returns a future to a checkpoint object. Additionally the function can take a policy as a first object which changes its behavior depending on the policy passed to it. Most notably, if a sync policy is used save_checkpoint will simply return a checkpoint object.</para><para><simplesect kind="return"><para>Save_checkpoint returns a future to a checkpoint with one exception: if you pass <ref refid="structhpx_1_1launch_1a63234dfc5eb5ddbd51fe2d0de1ecfa3c" kindref="member">hpx::launch::sync</ref> as the first argument. In this case save_checkpoint will simply return a checkpoint. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/checkpoint.hpp" line="254" column="1" bodyfile="hpx/util/checkpoint.hpp" bodystart="254" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="checkpoint_8hpp_1a4f60d562081d278b87073dba958bef83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>hpx::future&lt; <ref refid="classhpx_1_1util_1_1checkpoint" kindref="compound">checkpoint</ref> &gt;</type>
+        <definition>hpx::future&lt;checkpoint&gt; hpx::util::save_checkpoint</definition>
+        <argsstring>(checkpoint &amp;&amp;c, T &amp;&amp;t, Ts &amp;&amp;... ts)</argsstring>
+        <name>save_checkpoint</name>
+        <param>
+          <type><ref refid="classhpx_1_1util_1_1checkpoint" kindref="compound">checkpoint</ref> &amp;&amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Save_checkpoint - Take a pre-initialized checkpoint</para><para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Containers passed to save_checkpoint to be serialized and placed into a checkpoint object.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Ts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>More containers passed to save_checkpoint to be serialized and placed into a checkpoint object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Takes a pre-initialized checkpoint to copy data into.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A container to restore.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Other containers to restore Containers must be in the same order that they were inserted into the checkpoint.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Save_checkpoint takes any number of objects which a user may wish to store and returns a future to a checkpoint object. Additionally the function can take a policy as a first object which changes its behavior depending on the policy passed to it. Most notably, if a sync policy is used save_checkpoint will simply return a checkpoint object.</para><para><simplesect kind="return"><para>Save_checkpoint returns a future to a checkpoint with one exception: if you pass <ref refid="structhpx_1_1launch_1a63234dfc5eb5ddbd51fe2d0de1ecfa3c" kindref="member">hpx::launch::sync</ref> as the first argument. In this case save_checkpoint will simply return a checkpoint. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/checkpoint.hpp" line="293" column="1" bodyfile="hpx/util/checkpoint.hpp" bodystart="293" bodyend="297"/>
+      </memberdef>
+      <memberdef kind="function" id="checkpoint_8hpp_1a1be65fd5914ba68bd22969b3da59ad4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>hpx::future&lt; <ref refid="classhpx_1_1util_1_1checkpoint" kindref="compound">checkpoint</ref> &gt;</type>
+        <definition>hpx::future&lt;checkpoint&gt; hpx::util::save_checkpoint</definition>
+        <argsstring>(hpx::launch p, T &amp;&amp;t, Ts &amp;&amp;... ts)</argsstring>
+        <name>save_checkpoint</name>
+        <param>
+          <type><ref refid="structhpx_1_1launch" kindref="compound">hpx::launch</ref></type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Save_checkpoint - Policy overload</para><para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Containers passed to save_checkpoint to be serialized and placed into a checkpoint object.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Ts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>More containers passed to save_checkpoint to be serialized and placed into a checkpoint object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Takes an HPX launch policy. Allows the user to change the way the function is launched i.e. async, sync, etc.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A container to restore.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Other containers to restore Containers must be in the same order that they were inserted into the checkpoint.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Save_checkpoint takes any number of objects which a user may wish to store and returns a future to a checkpoint object. Additionally the function can take a policy as a first object which changes its behavior depending on the policy passed to it. Most notably, if a sync policy is used save_checkpoint will simply return a checkpoint object.</para><para><simplesect kind="return"><para>Save_checkpoint returns a future to a checkpoint with one exception: if you pass <ref refid="structhpx_1_1launch_1a63234dfc5eb5ddbd51fe2d0de1ecfa3c" kindref="member">hpx::launch::sync</ref> as the first argument. In this case save_checkpoint will simply return a checkpoint. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/checkpoint.hpp" line="332" column="1" bodyfile="hpx/util/checkpoint.hpp" bodystart="332" bodyend="337"/>
+      </memberdef>
+      <memberdef kind="function" id="checkpoint_8hpp_1a094238683d20fda25fa5e5a961f8c81a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>hpx::future&lt; <ref refid="classhpx_1_1util_1_1checkpoint" kindref="compound">checkpoint</ref> &gt;</type>
+        <definition>hpx::future&lt;checkpoint&gt; hpx::util::save_checkpoint</definition>
+        <argsstring>(hpx::launch p, checkpoint &amp;&amp;c, T &amp;&amp;t, Ts &amp;&amp;... ts)</argsstring>
+        <name>save_checkpoint</name>
+        <param>
+          <type><ref refid="structhpx_1_1launch" kindref="compound">hpx::launch</ref></type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type><ref refid="classhpx_1_1util_1_1checkpoint" kindref="compound">checkpoint</ref> &amp;&amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Save_checkpoint - Policy overload &amp; pre-initialized checkpoint</para><para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Containers passed to save_checkpoint to be serialized and placed into a checkpoint object.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Ts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>More containers passed to save_checkpoint to be serialized and placed into a checkpoint object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Takes an HPX launch policy. Allows the user to change the way the function is launched i.e. async, sync, etc.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Takes a pre-initialized checkpoint to copy data into.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A container to restore.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Other containers to restore Containers must be in the same order that they were inserted into the checkpoint.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Save_checkpoint takes any number of objects which a user may wish to store and returns a future to a checkpoint object. Additionally the function can take a policy as a first object which changes its behavior depending on the policy passed to it. Most notably, if a sync policy is used save_checkpoint will simply return a checkpoint object.</para><para><simplesect kind="return"><para>Save_checkpoint returns a future to a checkpoint with one exception: if you pass <ref refid="structhpx_1_1launch_1a63234dfc5eb5ddbd51fe2d0de1ecfa3c" kindref="member">hpx::launch::sync</ref> as the first argument. In this case save_checkpoint will simply return a checkpoint. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/checkpoint.hpp" line="375" column="1" bodyfile="hpx/util/checkpoint.hpp" bodystart="375" bodyend="380"/>
+      </memberdef>
+      <memberdef kind="function" id="checkpoint_8hpp_1a07600540eecdc965db102235aa7c9935" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+          <param>
+            <type>typename U</type>
+            <defval>typename std::enable_if&lt;!std::is_same&lt;            typename std::decay&lt;T&gt;::type, checkpoint&gt;::value&gt;::type</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classhpx_1_1util_1_1checkpoint" kindref="compound">checkpoint</ref></type>
+        <definition>checkpoint hpx::util::save_checkpoint</definition>
+        <argsstring>(hpx::launch::sync_policy sync_p, T &amp;&amp;t, Ts &amp;&amp;... ts)</argsstring>
+        <name>save_checkpoint</name>
+        <param>
+          <type>hpx::launch::sync_policy</type>
+          <declname>sync_p</declname>
+        </param>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Save_checkpoint - Sync_policy overload</para><para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Containers passed to save_checkpoint to be serialized and placed into a checkpoint object.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Ts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>More containers passed to save_checkpoint to be serialized and placed into a checkpoint object.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>U</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This parameter is used to make sure that T is not a checkpoint. This forces the compiler to choose the correct overload.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sync_p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>hpx::launch::sync_policy</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A container to restore.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Other containers to restore Containers must be in the same order that they were inserted into the checkpoint.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Save_checkpoint takes any number of objects which a user may wish to store and returns a future to a checkpoint object. Additionally the function can take a policy as a first object which changes its behavior depending on the policy passed to it. Most notably, if a sync policy is used save_checkpoint will simply return a checkpoint object.</para><para><simplesect kind="return"><para>Save_checkpoint which is passed hpx::launch::sync_policy will return a checkpoint which contains the serialized values checkpoint. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/checkpoint.hpp" line="418" column="1" bodyfile="hpx/util/checkpoint.hpp" bodystart="418" bodyend="425"/>
+      </memberdef>
+      <memberdef kind="function" id="checkpoint_8hpp_1a2336322e49b8dc02c73d3b5234470d1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classhpx_1_1util_1_1checkpoint" kindref="compound">checkpoint</ref></type>
+        <definition>checkpoint hpx::util::save_checkpoint</definition>
+        <argsstring>(hpx::launch::sync_policy sync_p, checkpoint &amp;&amp;c, T &amp;&amp;t, Ts &amp;&amp;... ts)</argsstring>
+        <name>save_checkpoint</name>
+        <param>
+          <type>hpx::launch::sync_policy</type>
+          <declname>sync_p</declname>
+        </param>
+        <param>
+          <type><ref refid="classhpx_1_1util_1_1checkpoint" kindref="compound">checkpoint</ref> &amp;&amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Save_checkpoint - Sync_policy overload &amp; pre-init. checkpoint</para><para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Containers passed to save_checkpoint to be serialized and placed into a checkpoint object.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Ts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>More containers passed to save_checkpoint to be serialized and placed into a checkpoint object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sync_p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>hpx::launch::sync_policy</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Takes a pre-initialized checkpoint to copy data into.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A container to restore.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Other containers to restore Containers must be in the same order that they were inserted into the checkpoint.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Save_checkpoint takes any number of objects which a user may wish to store and returns a future to a checkpoint object. Additionally the function can take a policy as a first object which changes its behavior depending on the policy passed to it. Most notably, if a sync policy is used save_checkpoint will simply return a checkpoint object.</para><para><simplesect kind="return"><para>Save_checkpoint which is passed hpx::launch::sync_policy will return a checkpoint which contains the serialized values checkpoint. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/checkpoint.hpp" line="459" column="1" bodyfile="hpx/util/checkpoint.hpp" bodystart="459" bodyend="466"/>
+      </memberdef>
+      <memberdef kind="function" id="checkpoint_8hpp_1a5f1bc74c756dd18e238a61787cd067a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void hpx::util::restore_checkpoint</definition>
+        <argsstring>(checkpoint const &amp;c, T &amp;t, Ts &amp;... ts)</argsstring>
+        <name>restore_checkpoint</name>
+        <param>
+          <type><ref refid="classhpx_1_1util_1_1checkpoint" kindref="compound">checkpoint</ref> const &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>T &amp;</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>Ts &amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Resurrect</para><para>Restore_checkpoint takes a checkpoint object as a first argument and the containers which will be filled from the byte stream (in the same order as they were placed in save_checkpoint).</para><para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A container to restore.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Ts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Other containers to restore. Containers must be in the same order that they were inserted into the checkpoint.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The checkpoint to restore.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A container to restore.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Other containers to restore Containers must be in the same order that they were inserted into the checkpoint.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Restore_checkpoint returns void. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/checkpoint.hpp" line="491" column="1" bodyfile="hpx/util/checkpoint.hpp" bodystart="491" bodyend="501"/>
+      </memberdef>
+      <memberdef kind="function" id="debugging_8hpp_1a4d53a5f5c04d022a87d71b19af5d14f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpx::util::attach_debugger</definition>
+        <argsstring>()</argsstring>
+        <name>attach_debugger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tries to break an attached debugger, if not supported a loop is invoked which gives enough time to attach a debugger manually. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/debugging.hpp" line="17" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="debugging_8hpp_1af8c213d9673907ae1feda30f102ba359" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpx::util::may_attach_debugger</definition>
+        <argsstring>(std::string const &amp;category)</argsstring>
+        <name>may_attach_debugger</name>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>category</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Attaches a debugger if <computeroutput>category</computeroutput> is equal to the configuration entry hpx.attach-debugger. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/debugging.hpp" line="20" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pack__traversal_8hpp_1a00dc09958eb28cdf31d74de35cb54b68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Mapper</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+        </templateparamlist>
+        <type>&lt; unspecified &gt;</type>
+        <definition>&lt;unspecified&gt; hpx::util::map_pack</definition>
+        <argsstring>(Mapper &amp;&amp;mapper, T &amp;&amp;... pack)</argsstring>
+        <name>map_pack</name>
+        <param>
+          <type>Mapper &amp;&amp;</type>
+          <declname>mapper</declname>
+        </param>
+        <param>
+          <type>T &amp;&amp;...</type>
+          <declname>pack</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maps the pack with the given mapper.</para><para>This function tries to visit all plain elements which may be wrapped in:<itemizedlist>
+<listitem><para>homogeneous containers (<computeroutput>std::vector</computeroutput>, <computeroutput>std::list</computeroutput>)</para></listitem><listitem><para>heterogenous containers <computeroutput>(hpx::tuple</computeroutput>, <computeroutput>std::pair</computeroutput>, <computeroutput>std::array</computeroutput>) and re-assembles the pack with the result of the mapper. Mapping from one type to a different one is supported.</para></listitem></itemizedlist>
+</para><para>Elements that aren&apos;t accepted by the mapper are routed through and preserved through the hierarchy.</para><para><programlisting><codeline><highlight class="comment">//<sp/>Maps<sp/>all<sp/>integers<sp/>to<sp/>floats</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">map_pack([](</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>float(value);</highlight></codeline>
+<codeline><highlight class="normal">},</highlight></codeline>
+<codeline><highlight class="normal">1,<sp/>hpx::util::make_tuple(2,<sp/>std::vector&lt;int&gt;{3,<sp/>4}),<sp/>5);</highlight></codeline>
+</programlisting></para><para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>like objects which are thrown by an invocation to the mapper.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mapper</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A callable object, which accept an arbitrary type and maps it to another type or the same one.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An arbitrary variadic pack which may contain any type.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The mapped element or in case the pack contains multiple elements, the pack is wrapped into a <computeroutput>hpx::tuple</computeroutput>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/pack_traversal.hpp" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pack__traversal__async_8hpp_1a1f6868cf0eddd78ed96b2f12edf69624" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Visitor</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto hpx::util::traverse_pack_async</definition>
+        <argsstring>(Visitor &amp;&amp;visitor, T &amp;&amp;... pack) -&gt; decltype(detail::apply_pack_transform_async(std::forward&lt; Visitor &gt;(visitor), std::forward&lt; T &gt;(pack)...))</argsstring>
+        <name>traverse_pack_async</name>
+        <param>
+          <type>Visitor &amp;&amp;</type>
+          <declname>visitor</declname>
+        </param>
+        <param>
+          <type>T &amp;&amp;...</type>
+          <declname>pack</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Traverses the pack with the given visitor in an asynchronous way.</para><para>This function works in the same way as <computeroutput>traverse_pack</computeroutput>, however, we are able to suspend and continue the traversal at later time. Thus we require a visitor callable object which provides three <computeroutput>operator()</computeroutput> overloads as depicted by the code sample below: <programlisting><codeline><highlight class="keyword">struct<sp/></highlight><highlight class="normal">my_async_visitor</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>operator()(async_traverse_visit_tag,<sp/>T&amp;&amp;<sp/>element)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>N&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>operator()(async_traverse_detach_tag,<sp/>T&amp;&amp;<sp/>element,<sp/>N&amp;&amp;<sp/>next)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>operator()(async_traverse_complete_tag,<sp/>T&amp;&amp;<sp/>pack)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+</programlisting></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>visitor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A visitor object which provides the three <computeroutput>operator()</computeroutput> overloads that were described above. Additionally the visitor must be compatible for referencing it from a <computeroutput>boost::intrusive_ptr</computeroutput>. The visitor should must have a virtual destructor!</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The arbitrary parameter pack which is traversed asynchronously. Nested objects inside containers and tuple like types are traversed recursively.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A boost::intrusive_ptr that references an instance of the given visitor object.</para></simplesect>
+See <computeroutput>traverse_pack</computeroutput> for a detailed description about the traversal behavior and capabilities. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/pack_traversal_async.hpp" line="87" column="1" bodyfile="hpx/util/pack_traversal_async.hpp" bodystart="87" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="pack__traversal__async_8hpp_1aca39208be80bca9134517d844d412936" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Allocator</type>
+          </param>
+          <param>
+            <type>typename Visitor</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto hpx::util::traverse_pack_async_allocator</definition>
+        <argsstring>(Allocator const &amp;alloc, Visitor &amp;&amp;visitor, T &amp;&amp;... pack) -&gt; decltype(detail::apply_pack_transform_async_allocator(alloc, std::forward&lt; Visitor &gt;(visitor), std::forward&lt; T &gt;(pack)...))</argsstring>
+        <name>traverse_pack_async_allocator</name>
+        <param>
+          <type>Allocator const &amp;</type>
+          <declname>alloc</declname>
+        </param>
+        <param>
+          <type>Visitor &amp;&amp;</type>
+          <declname>visitor</declname>
+        </param>
+        <param>
+          <type>T &amp;&amp;...</type>
+          <declname>pack</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Traverses the pack with the given visitor in an asynchronous way.</para><para>This function works in the same way as <computeroutput>traverse_pack</computeroutput>, however, we are able to suspend and continue the traversal at later time. Thus we require a visitor callable object which provides three <computeroutput>operator()</computeroutput> overloads as depicted by the code sample below: <programlisting><codeline><highlight class="keyword">struct<sp/></highlight><highlight class="normal">my_async_visitor</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>operator()(async_traverse_visit_tag,<sp/>T&amp;&amp;<sp/>element)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>N&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>operator()(async_traverse_detach_tag,<sp/>T&amp;&amp;<sp/>element,<sp/>N&amp;&amp;<sp/>next)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>operator()(async_traverse_complete_tag,<sp/>T&amp;&amp;<sp/>pack)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+</programlisting></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>visitor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A visitor object which provides the three <computeroutput>operator()</computeroutput> overloads that were described above. Additionally the visitor must be compatible for referencing it from a <computeroutput>boost::intrusive_ptr</computeroutput>. The visitor should must have a virtual destructor!</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The arbitrary parameter pack which is traversed asynchronously. Nested objects inside containers and tuple like types are traversed recursively. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alloc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Allocator instance to use to create the traversal frame.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A boost::intrusive_ptr that references an instance of the given visitor object.</para></simplesect>
+See <computeroutput>traverse_pack</computeroutput> for a detailed description about the traversal behavior and capabilities. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/pack_traversal_async.hpp" line="155" column="1" bodyfile="hpx/util/pack_traversal_async.hpp" bodystart="155" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="unwrap_8hpp_1a687bc9b163ccbdaaa82764b171b7f0c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto hpx::util::unwrap</definition>
+        <argsstring>(Args &amp;&amp;... args) -&gt; decltype(detail::unwrap_depth_impl&lt; 1U &gt;(std::forward&lt; Args &gt;(args)...))</argsstring>
+        <name>unwrap</name>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A helper function for retrieving the actual result of any hpx::lcos::future like type which is wrapped in an arbitrary way.</para><para>Unwraps the given pack of arguments, so that any hpx::lcos::future object is replaced by its future result type in the argument pack:<itemizedlist>
+<listitem><para><computeroutput>hpx::future&lt;int&gt;</computeroutput> -&gt; <computeroutput>int</computeroutput></para></listitem><listitem><para><computeroutput>hpx::future&lt;std::vector&lt;float&gt;&gt;</computeroutput> -&gt; <computeroutput>std::vector&lt;float&gt;</computeroutput></para></listitem><listitem><para><computeroutput>std::vector&lt;future&lt;float&gt;&gt;</computeroutput> -&gt; <computeroutput>std::vector&lt;float&gt;</computeroutput></para></listitem></itemizedlist>
+</para><para>The function is capable of unwrapping hpx::lcos::future like objects that are wrapped inside any container or tuple like type, see hpx::util::map_pack() for a detailed description about which surrounding types are supported. Non hpx::lcos::future like types are permitted as arguments and passed through.</para><para><programlisting><codeline><highlight class="comment">//<sp/>Single<sp/>arguments</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i1<sp/>=<sp/><ref refid="namespacehpx" kindref="compound">hpx</ref>:util::unwrap(hpx::lcos::make_ready_future(0));</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Multiple<sp/>arguments</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">hpx::tuple&lt;int,<sp/>int&gt;<sp/>i2<sp/>=</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacehpx" kindref="compound">hpx</ref>:util::unwrap(hpx::lcos::make_ready_future(1),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::lcos::make_ready_future(2));</highlight></codeline>
+</programlisting></para><para><simplesect kind="note"><para>This function unwraps the given arguments until the first traversed nested hpx::lcos::future which corresponds to an unwrapping depth of one. See hpx::util::unwrap_n() for a function which unwraps the given arguments to a particular depth or hpx::util::unwrap_all() that unwraps all future like objects recursively which are contained in the arguments.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the arguments that are unwrapped which may contain any arbitrary future or non future type.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Depending on the count of arguments this function returns a hpx::util::tuple containing the unwrapped arguments if multiple arguments are given. In case the function is called with a single argument, the argument is unwrapped and returned.</para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>like objects in case any of the given wrapped hpx::lcos::future objects were resolved through an exception. See hpx::lcos::future::get() for details. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/unwrap.hpp" line="65" column="1" bodyfile="hpx/util/unwrap.hpp" bodystart="65" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="unwrap_8hpp_1a916ca91b9993c4f1e77feeed738631bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::size_t</type>
+            <declname>Depth</declname>
+            <defname>Depth</defname>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto hpx::util::unwrap_n</definition>
+        <argsstring>(Args &amp;&amp;... args) -&gt; decltype(detail::unwrap_depth_impl&lt; Depth &gt;(std::forward&lt; Args &gt;(args)...))</argsstring>
+        <name>unwrap_n</name>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>An alterntive version of hpx::util::unwrap(), which unwraps the given arguments to a certain depth of hpx::lcos::future like objects.</para><para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Depth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The count of hpx::lcos::future like objects which are unwrapped maximally.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+See unwrap for a detailed description. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/unwrap.hpp" line="98" column="1" bodyfile="hpx/util/unwrap.hpp" bodystart="98" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="unwrap_8hpp_1a72dc824c1b2fe406b75984d0f3c131d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto hpx::util::unwrap_all</definition>
+        <argsstring>(Args &amp;&amp;... args) -&gt; decltype(detail::unwrap_depth_impl&lt; 0U &gt;(std::forward&lt; Args &gt;(args)...))</argsstring>
+        <name>unwrap_all</name>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>An alterntive version of hpx::util::unwrap(), which unwraps the given arguments recursively so that all contained hpx::lcos::future like objects are replaced by their actual value.</para><para>See hpx::util::unwrap() for a detailed description. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/unwrap.hpp" line="131" column="1" bodyfile="hpx/util/unwrap.hpp" bodystart="131" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="unwrap_8hpp_1a7529d9ac687684c33403cdd1f9cef8e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto hpx::util::unwrapping</definition>
+        <argsstring>(T &amp;&amp;callable) -&gt; decltype(detail::functional_unwrap_depth_impl&lt; 1U &gt;(std::forward&lt; T &gt;(callable)))</argsstring>
+        <name>unwrapping</name>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>callable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a callable object which unwraps its arguments upon invocation using the hpx::util::unwrap() function and then passes the result to the given callable object.</para><para><programlisting><codeline><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>callable<sp/>=<sp/>hpx::util::unwrapping([](</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>left,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>right)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>left<sp/>+<sp/>right;</highlight></codeline>
+<codeline><highlight class="normal">});</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i1<sp/>=<sp/>callable(hpx::lcos::make_ready_future(1),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hpx::lcos::make_ready_future(2));</highlight></codeline>
+</programlisting></para><para>See hpx::util::unwrap() for a detailed description.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>callable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the callable object which which is called with the result of the corresponding unwrap function. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/unwrap.hpp" line="174" column="1" bodyfile="hpx/util/unwrap.hpp" bodystart="174" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="unwrap_8hpp_1a66e52fc8f88ccfb7d9215836eab5249e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::size_t</type>
+            <declname>Depth</declname>
+            <defname>Depth</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto hpx::util::unwrapping_n</definition>
+        <argsstring>(T &amp;&amp;callable) -&gt; decltype(detail::functional_unwrap_depth_impl&lt; Depth &gt;(std::forward&lt; T &gt;(callable)))</argsstring>
+        <name>unwrapping_n</name>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>callable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a callable object which unwraps its arguments upon invocation using the hpx::util::unwrap_n() function and then passes the result to the given callable object.</para><para>See hpx::util::unwrapping() for a detailed description. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/unwrap.hpp" line="188" column="1" bodyfile="hpx/util/unwrap.hpp" bodystart="188" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="unwrap_8hpp_1ad32bada7cd9794dcb256df84610733f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto hpx::util::unwrapping_all</definition>
+        <argsstring>(T &amp;&amp;callable) -&gt; decltype(detail::functional_unwrap_depth_impl&lt; 0U &gt;(std::forward&lt; T &gt;(callable)))</argsstring>
+        <name>unwrapping_all</name>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>callable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a callable object which unwraps its arguments upon invocation using the hpx::util::unwrap_all() function and then passes the result to the given callable object.</para><para>See hpx::util::unwrapping() for a detailed description. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/util/unwrap.hpp" line="203" column="1" bodyfile="hpx/util/unwrap.hpp" bodystart="203" bodyend="208"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="hpx/util/checkpoint.hpp" line="33" column="1"/>
+  </compounddef>
+</doxygen>

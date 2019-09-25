@@ -1,0 +1,854 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="sequenced__executor_8hpp" kind="file" language="C++">
+    <compoundname>sequenced_executor.hpp</compoundname>
+    <includes local="no">hpx/config.hpp</includes>
+    <includes local="no">hpx/async_launch_policy_dispatch.hpp</includes>
+    <includes local="no">hpx/lcos/future.hpp</includes>
+    <includes local="no">hpx/runtime/threads/thread_executor.hpp</includes>
+    <includes local="no">hpx/traits/is_executor.hpp</includes>
+    <includes local="no">hpx/util/deferred_call.hpp</includes>
+    <includes refid="invoke_8hpp" local="no">hpx/util/invoke.hpp</includes>
+    <includes refid="unwrap_8hpp" local="no">hpx/util/unwrap.hpp</includes>
+    <includes local="no">hpx/parallel/exception_list.hpp</includes>
+    <includes local="no">cstddef</includes>
+    <includes local="no">iterator</includes>
+    <includes local="no">type_traits</includes>
+    <includes local="no">utility</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="execution__policy_8hpp" local="no">hpx/parallel/execution_policy.hpp</includedby>
+    <incdepgraph>
+      <node id="8007">
+        <label>iterator</label>
+      </node>
+      <node id="7999">
+        <label>hpx/util/void_guard.hpp</label>
+      </node>
+      <node id="7998">
+        <label>hpx/util/result_of.hpp</label>
+      </node>
+      <node id="7991">
+        <label>hpx/config.hpp</label>
+      </node>
+      <node id="7990">
+        <label>hpx/parallel/executors/sequenced_executor.hpp</label>
+        <link refid="sequenced__executor_8hpp"/>
+        <childnode refid="7991" relation="include">
+        </childnode>
+        <childnode refid="7992" relation="include">
+        </childnode>
+        <childnode refid="7993" relation="include">
+        </childnode>
+        <childnode refid="7994" relation="include">
+        </childnode>
+        <childnode refid="7995" relation="include">
+        </childnode>
+        <childnode refid="7996" relation="include">
+        </childnode>
+        <childnode refid="7997" relation="include">
+        </childnode>
+        <childnode refid="8003" relation="include">
+        </childnode>
+        <childnode refid="8006" relation="include">
+        </childnode>
+        <childnode refid="8005" relation="include">
+        </childnode>
+        <childnode refid="8007" relation="include">
+        </childnode>
+        <childnode refid="8001" relation="include">
+        </childnode>
+        <childnode refid="8002" relation="include">
+        </childnode>
+        <childnode refid="8008" relation="include">
+        </childnode>
+      </node>
+      <node id="7996">
+        <label>hpx/util/deferred_call.hpp</label>
+      </node>
+      <node id="8004">
+        <label>hpx/util/detail/unwrap_impl.hpp</label>
+      </node>
+      <node id="8006">
+        <label>hpx/parallel/exception_list.hpp</label>
+      </node>
+      <node id="7994">
+        <label>hpx/runtime/threads/thread_executor.hpp</label>
+      </node>
+      <node id="7995">
+        <label>hpx/traits/is_executor.hpp</label>
+      </node>
+      <node id="8008">
+        <label>vector</label>
+      </node>
+      <node id="8002">
+        <label>utility</label>
+      </node>
+      <node id="8003">
+        <label>hpx/util/unwrap.hpp</label>
+        <link refid="unwrap_8hpp_source"/>
+        <childnode refid="7991" relation="include">
+        </childnode>
+        <childnode refid="8004" relation="include">
+        </childnode>
+        <childnode refid="8005" relation="include">
+        </childnode>
+        <childnode refid="8002" relation="include">
+        </childnode>
+      </node>
+      <node id="8000">
+        <label>boost/ref.hpp</label>
+      </node>
+      <node id="8005">
+        <label>cstddef</label>
+      </node>
+      <node id="7992">
+        <label>hpx/async_launch_policy_dispatch.hpp</label>
+      </node>
+      <node id="7997">
+        <label>hpx/util/invoke.hpp</label>
+        <link refid="invoke_8hpp_source"/>
+        <childnode refid="7991" relation="include">
+        </childnode>
+        <childnode refid="7998" relation="include">
+        </childnode>
+        <childnode refid="7999" relation="include">
+        </childnode>
+        <childnode refid="8000" relation="include">
+        </childnode>
+        <childnode refid="8001" relation="include">
+        </childnode>
+        <childnode refid="8002" relation="include">
+        </childnode>
+      </node>
+      <node id="7993">
+        <label>hpx/lcos/future.hpp</label>
+      </node>
+      <node id="8001">
+        <label>type_traits</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="8037">
+        <label>hpx/parallel/algorithms/find.hpp</label>
+        <link refid="algorithms_2find_8hpp"/>
+        <childnode refid="8014" relation="include">
+        </childnode>
+        <childnode refid="8038" relation="include">
+        </childnode>
+      </node>
+      <node id="8061">
+        <label>hpx/parallel/container_algorithms/minmax.hpp</label>
+        <link refid="container__algorithms_2minmax_8hpp"/>
+      </node>
+      <node id="8058">
+        <label>hpx/parallel/algorithms/merge.hpp</label>
+        <link refid="algorithms_2merge_8hpp_source"/>
+        <childnode refid="8014" relation="include">
+        </childnode>
+        <childnode refid="8059" relation="include">
+        </childnode>
+      </node>
+      <node id="8033">
+        <label>hpx/parallel/algorithms/equal.hpp</label>
+        <link refid="equal_8hpp"/>
+        <childnode refid="8014" relation="include">
+        </childnode>
+      </node>
+      <node id="8078">
+        <label>hpx/parallel/algorithms/uninitialized_fill.hpp</label>
+        <link refid="uninitialized__fill_8hpp"/>
+      </node>
+      <node id="8026">
+        <label>hpx/parallel/algorithms/set_intersection.hpp</label>
+        <link refid="set__intersection_8hpp"/>
+        <childnode refid="8014" relation="include">
+        </childnode>
+      </node>
+      <node id="8038">
+        <label>hpx/parallel/container_algorithms/find.hpp</label>
+        <link refid="container__algorithms_2find_8hpp"/>
+      </node>
+      <node id="8051">
+        <label>hpx/parallel/container_algorithms/is_heap.hpp</label>
+        <link refid="container__algorithms_2is__heap_8hpp"/>
+      </node>
+      <node id="8057">
+        <label>hpx/parallel/algorithms/is_sorted.hpp</label>
+        <link refid="is__sorted_8hpp"/>
+        <childnode refid="8014" relation="include">
+        </childnode>
+      </node>
+      <node id="8043">
+        <label>hpx/parallel/algorithms/replace.hpp</label>
+        <link refid="algorithms_2replace_8hpp"/>
+        <childnode refid="8014" relation="include">
+        </childnode>
+        <childnode refid="8044" relation="include">
+        </childnode>
+      </node>
+      <node id="8054">
+        <label>hpx/parallel/algorithms/transform_inclusive_scan.hpp</label>
+        <link refid="transform__inclusive__scan_8hpp"/>
+        <childnode refid="8055" relation="include">
+        </childnode>
+      </node>
+      <node id="8035">
+        <label>hpx/parallel/algorithms/fill.hpp</label>
+        <link refid="algorithms_2fill_8hpp"/>
+        <childnode refid="8014" relation="include">
+        </childnode>
+        <childnode refid="8036" relation="include">
+        </childnode>
+      </node>
+      <node id="8072">
+        <label>hpx/parallel/algorithms/transform.hpp</label>
+        <link refid="algorithms_2transform_8hpp"/>
+        <childnode refid="8073" relation="include">
+        </childnode>
+      </node>
+      <node id="8071">
+        <label>hpx/parallel/container_algorithms/sort.hpp</label>
+        <link refid="container__algorithms_2sort_8hpp"/>
+      </node>
+      <node id="8066">
+        <label>hpx/parallel/algorithms/reduce.hpp</label>
+        <link refid="parallel_2algorithms_2reduce_8hpp"/>
+      </node>
+      <node id="8045">
+        <label>hpx/parallel/algorithms/search.hpp</label>
+        <link refid="algorithms_2search_8hpp"/>
+        <childnode refid="8014" relation="include">
+        </childnode>
+        <childnode refid="8046" relation="include">
+        </childnode>
+      </node>
+      <node id="8014">
+        <label>hpx/parallel/algorithm.hpp</label>
+        <link refid="algorithm_8hpp_source"/>
+      </node>
+      <node id="8063">
+        <label>hpx/parallel/algorithms/move.hpp</label>
+        <link refid="move_8hpp"/>
+        <childnode refid="8014" relation="include">
+        </childnode>
+      </node>
+      <node id="8016">
+        <label>hpx/parallel/container_algorithms/all_any_none.hpp</label>
+        <link refid="container__algorithms_2all__any__none_8hpp"/>
+      </node>
+      <node id="8028">
+        <label>hpx/parallel/algorithms/set_union.hpp</label>
+        <link refid="set__union_8hpp"/>
+        <childnode refid="8014" relation="include">
+        </childnode>
+      </node>
+      <node id="8079">
+        <label>hpx/parallel/algorithms/uninitialized_move.hpp</label>
+        <link refid="uninitialized__move_8hpp"/>
+      </node>
+      <node id="8059">
+        <label>hpx/parallel/container_algorithms/merge.hpp</label>
+        <link refid="container__algorithms_2merge_8hpp"/>
+      </node>
+      <node id="8069">
+        <label>hpx/parallel/algorithms/sort.hpp</label>
+        <link refid="algorithms_2sort_8hpp_source"/>
+        <childnode refid="8014" relation="include">
+        </childnode>
+        <childnode refid="8018" relation="include">
+        </childnode>
+        <childnode refid="8070" relation="include">
+        </childnode>
+        <childnode refid="8071" relation="include">
+        </childnode>
+      </node>
+      <node id="8081">
+        <label>hpx/parallel/algorithms/unique.hpp</label>
+        <link refid="algorithms_2unique_8hpp_source"/>
+        <childnode refid="8014" relation="include">
+        </childnode>
+        <childnode refid="8082" relation="include">
+        </childnode>
+      </node>
+      <node id="8062">
+        <label>hpx/parallel/algorithms/mismatch.hpp</label>
+        <link refid="mismatch_8hpp"/>
+        <childnode refid="8014" relation="include">
+        </childnode>
+        <childnode refid="8042" relation="include">
+        </childnode>
+      </node>
+      <node id="8010">
+        <label>hpx/parallel/execution_policy.hpp</label>
+        <link refid="execution__policy_8hpp"/>
+        <childnode refid="8011" relation="include">
+        </childnode>
+        <childnode refid="8012" relation="include">
+        </childnode>
+        <childnode refid="8013" relation="include">
+        </childnode>
+        <childnode refid="8015" relation="include">
+        </childnode>
+        <childnode refid="8017" relation="include">
+        </childnode>
+        <childnode refid="8030" relation="include">
+        </childnode>
+        <childnode refid="8032" relation="include">
+        </childnode>
+        <childnode refid="8033" relation="include">
+        </childnode>
+        <childnode refid="8034" relation="include">
+        </childnode>
+        <childnode refid="8035" relation="include">
+        </childnode>
+        <childnode refid="8037" relation="include">
+        </childnode>
+        <childnode refid="8039" relation="include">
+        </childnode>
+        <childnode refid="8049" relation="include">
+        </childnode>
+        <childnode refid="8040" relation="include">
+        </childnode>
+        <childnode refid="8050" relation="include">
+        </childnode>
+        <childnode refid="8052" relation="include">
+        </childnode>
+        <childnode refid="8053" relation="include">
+        </childnode>
+        <childnode refid="8056" relation="include">
+        </childnode>
+        <childnode refid="8057" relation="include">
+        </childnode>
+        <childnode refid="8042" relation="include">
+        </childnode>
+        <childnode refid="8058" relation="include">
+        </childnode>
+        <childnode refid="8060" relation="include">
+        </childnode>
+        <childnode refid="8062" relation="include">
+        </childnode>
+        <childnode refid="8063" relation="include">
+        </childnode>
+        <childnode refid="8064" relation="include">
+        </childnode>
+        <childnode refid="8066" relation="include">
+        </childnode>
+        <childnode refid="8067" relation="include">
+        </childnode>
+        <childnode refid="8019" relation="include">
+        </childnode>
+        <childnode refid="8043" relation="include">
+        </childnode>
+        <childnode refid="8021" relation="include">
+        </childnode>
+        <childnode refid="8022" relation="include">
+        </childnode>
+        <childnode refid="8045" relation="include">
+        </childnode>
+        <childnode refid="8025" relation="include">
+        </childnode>
+        <childnode refid="8026" relation="include">
+        </childnode>
+        <childnode refid="8027" relation="include">
+        </childnode>
+        <childnode refid="8028" relation="include">
+        </childnode>
+        <childnode refid="8069" relation="include">
+        </childnode>
+        <childnode refid="8047" relation="include">
+        </childnode>
+        <childnode refid="8072" relation="include">
+        </childnode>
+        <childnode refid="8055" relation="include">
+        </childnode>
+        <childnode refid="8054" relation="include">
+        </childnode>
+        <childnode refid="8074" relation="include">
+        </childnode>
+        <childnode refid="8075" relation="include">
+        </childnode>
+        <childnode refid="8076" relation="include">
+        </childnode>
+        <childnode refid="8077" relation="include">
+        </childnode>
+        <childnode refid="8078" relation="include">
+        </childnode>
+        <childnode refid="8079" relation="include">
+        </childnode>
+        <childnode refid="8080" relation="include">
+        </childnode>
+        <childnode refid="8081" relation="include">
+        </childnode>
+      </node>
+      <node id="8074">
+        <label>hpx/parallel/algorithms/transform_reduce.hpp</label>
+        <link refid="transform__reduce_8hpp"/>
+      </node>
+      <node id="8021">
+        <label>hpx/parallel/algorithms/reverse.hpp</label>
+        <link refid="algorithms_2reverse_8hpp"/>
+        <childnode refid="8014" relation="include">
+        </childnode>
+        <childnode refid="8022" relation="include">
+        </childnode>
+        <childnode refid="8024" relation="include">
+        </childnode>
+      </node>
+      <node id="8018">
+        <label>hpx/parallel/algorithms/reduce_by_key.hpp</label>
+        <link refid="reduce__by__key_8hpp"/>
+      </node>
+      <node id="8011">
+        <label>hpx/parallel/task_block.hpp</label>
+        <link refid="task__block_8hpp"/>
+      </node>
+      <node id="8055">
+        <label>hpx/parallel/algorithms/transform_exclusive_scan.hpp</label>
+        <link refid="transform__exclusive__scan_8hpp"/>
+      </node>
+      <node id="8009">
+        <label>hpx/parallel/executors/sequenced_executor.hpp</label>
+        <link refid="sequenced__executor_8hpp"/>
+        <childnode refid="8010" relation="include">
+        </childnode>
+      </node>
+      <node id="8056">
+        <label>hpx/parallel/algorithms/is_partitioned.hpp</label>
+        <link refid="is__partitioned_8hpp"/>
+        <childnode refid="8014" relation="include">
+        </childnode>
+      </node>
+      <node id="8015">
+        <label>hpx/parallel/algorithms/all_any_none.hpp</label>
+        <link refid="algorithms_2all__any__none_8hpp"/>
+        <childnode refid="8014" relation="include">
+        </childnode>
+        <childnode refid="8016" relation="include">
+        </childnode>
+      </node>
+      <node id="8020">
+        <label>hpx/parallel/container_algorithms/remove_copy.hpp</label>
+        <link refid="container__algorithms_2remove__copy_8hpp"/>
+      </node>
+      <node id="8082">
+        <label>hpx/parallel/container_algorithms/unique.hpp</label>
+        <link refid="container__algorithms_2unique_8hpp"/>
+      </node>
+      <node id="8023">
+        <label>hpx/parallel/container_algorithms/rotate.hpp</label>
+        <link refid="container__algorithms_2rotate_8hpp"/>
+      </node>
+      <node id="8019">
+        <label>hpx/parallel/algorithms/remove_copy.hpp</label>
+        <link refid="algorithms_2remove__copy_8hpp"/>
+        <childnode refid="8014" relation="include">
+        </childnode>
+        <childnode refid="8020" relation="include">
+        </childnode>
+      </node>
+      <node id="8052">
+        <label>hpx/parallel/algorithms/includes.hpp</label>
+        <link refid="includes_8hpp"/>
+        <childnode refid="8014" relation="include">
+        </childnode>
+      </node>
+      <node id="8024">
+        <label>hpx/parallel/container_algorithms/reverse.hpp</label>
+        <link refid="container__algorithms_2reverse_8hpp"/>
+      </node>
+      <node id="8073">
+        <label>hpx/parallel/container_algorithms/transform.hpp</label>
+        <link refid="container__algorithms_2transform_8hpp"/>
+      </node>
+      <node id="8040">
+        <label>hpx/parallel/algorithms/generate.hpp</label>
+        <link refid="algorithms_2generate_8hpp"/>
+        <childnode refid="8014" relation="include">
+        </childnode>
+        <childnode refid="8041" relation="include">
+        </childnode>
+      </node>
+      <node id="8025">
+        <label>hpx/parallel/algorithms/set_difference.hpp</label>
+        <link refid="set__difference_8hpp"/>
+        <childnode refid="8014" relation="include">
+        </childnode>
+      </node>
+      <node id="8047">
+        <label>hpx/parallel/algorithms/swap_ranges.hpp</label>
+        <link refid="swap__ranges_8hpp"/>
+        <childnode refid="8014" relation="include">
+        </childnode>
+      </node>
+      <node id="8042">
+        <label>hpx/parallel/algorithms/lexicographical_compare.hpp</label>
+        <link refid="lexicographical__compare_8hpp"/>
+        <childnode refid="8014" relation="include">
+        </childnode>
+      </node>
+      <node id="8034">
+        <label>hpx/parallel/algorithms/exclusive_scan.hpp</label>
+        <link refid="exclusive__scan_8hpp"/>
+      </node>
+      <node id="8039">
+        <label>hpx/parallel/algorithms/for_each.hpp</label>
+        <link refid="algorithms_2for__each_8hpp"/>
+        <childnode refid="8014" relation="include">
+        </childnode>
+        <childnode refid="8035" relation="include">
+        </childnode>
+        <childnode refid="8040" relation="include">
+        </childnode>
+        <childnode refid="8042" relation="include">
+        </childnode>
+        <childnode refid="8018" relation="include">
+        </childnode>
+        <childnode refid="8043" relation="include">
+        </childnode>
+        <childnode refid="8021" relation="include">
+        </childnode>
+        <childnode refid="8045" relation="include">
+        </childnode>
+        <childnode refid="8047" relation="include">
+        </childnode>
+        <childnode refid="8048" relation="include">
+        </childnode>
+      </node>
+      <node id="8022">
+        <label>hpx/parallel/algorithms/rotate.hpp</label>
+        <link refid="algorithms_2rotate_8hpp"/>
+        <childnode refid="8014" relation="include">
+        </childnode>
+        <childnode refid="8023" relation="include">
+        </childnode>
+      </node>
+      <node id="8068">
+        <label>hpx/parallel/container_algorithms/remove.hpp</label>
+        <link refid="container__algorithms_2remove_8hpp"/>
+      </node>
+      <node id="8030">
+        <label>hpx/parallel/algorithms/count.hpp</label>
+        <link refid="algorithms_2count_8hpp"/>
+        <childnode refid="8014" relation="include">
+        </childnode>
+        <childnode refid="8031" relation="include">
+        </childnode>
+      </node>
+      <node id="8070">
+        <label>hpx/parallel/algorithms/sort_by_key.hpp</label>
+        <link refid="sort__by__key_8hpp_source"/>
+      </node>
+      <node id="8060">
+        <label>hpx/parallel/algorithms/minmax.hpp</label>
+        <link refid="algorithms_2minmax_8hpp"/>
+        <childnode refid="8014" relation="include">
+        </childnode>
+        <childnode refid="8061" relation="include">
+        </childnode>
+      </node>
+      <node id="8032">
+        <label>hpx/parallel/algorithms/destroy.hpp</label>
+        <link refid="destroy_8hpp"/>
+      </node>
+      <node id="8053">
+        <label>hpx/parallel/algorithms/inclusive_scan.hpp</label>
+        <link refid="inclusive__scan_8hpp"/>
+        <childnode refid="8034" relation="include">
+        </childnode>
+        <childnode refid="8018" relation="include">
+        </childnode>
+        <childnode refid="8054" relation="include">
+        </childnode>
+      </node>
+      <node id="8012">
+        <label>hpx/parallel/algorithms/adjacent_difference.hpp</label>
+        <link refid="adjacent__difference_8hpp"/>
+      </node>
+      <node id="8031">
+        <label>hpx/parallel/container_algorithms/count.hpp</label>
+        <link refid="container__algorithms_2count_8hpp"/>
+      </node>
+      <node id="8064">
+        <label>hpx/parallel/algorithms/partition.hpp</label>
+        <link refid="algorithms_2partition_8hpp_source"/>
+        <childnode refid="8014" relation="include">
+        </childnode>
+        <childnode refid="8065" relation="include">
+        </childnode>
+      </node>
+      <node id="8041">
+        <label>hpx/parallel/container_algorithms/generate.hpp</label>
+        <link refid="container__algorithms_2generate_8hpp"/>
+      </node>
+      <node id="8076">
+        <label>hpx/parallel/algorithms/uninitialized_copy.hpp</label>
+        <link refid="uninitialized__copy_8hpp"/>
+      </node>
+      <node id="8075">
+        <label>hpx/parallel/algorithms/transform_reduce_binary.hpp</label>
+        <link refid="transform__reduce__binary_8hpp"/>
+      </node>
+      <node id="8077">
+        <label>hpx/parallel/algorithms/uninitialized_default_construct.hpp</label>
+        <link refid="uninitialized__default__construct_8hpp"/>
+      </node>
+      <node id="8065">
+        <label>hpx/parallel/container_algorithms/partition.hpp</label>
+        <link refid="container__algorithms_2partition_8hpp"/>
+      </node>
+      <node id="8029">
+        <label>hpx/parallel/container_algorithms/copy.hpp</label>
+        <link refid="container__algorithms_2copy_8hpp"/>
+      </node>
+      <node id="8049">
+        <label>hpx/parallel/algorithms/for_loop.hpp</label>
+        <link refid="for__loop_8hpp"/>
+        <childnode refid="8014" relation="include">
+        </childnode>
+      </node>
+      <node id="8046">
+        <label>hpx/parallel/container_algorithms/search.hpp</label>
+        <link refid="container__algorithms_2search_8hpp"/>
+      </node>
+      <node id="8036">
+        <label>hpx/parallel/container_algorithms/fill.hpp</label>
+        <link refid="container__algorithms_2fill_8hpp"/>
+      </node>
+      <node id="8067">
+        <label>hpx/parallel/algorithms/remove.hpp</label>
+        <link refid="algorithms_2remove_8hpp"/>
+        <childnode refid="8014" relation="include">
+        </childnode>
+        <childnode refid="8068" relation="include">
+        </childnode>
+      </node>
+      <node id="8027">
+        <label>hpx/parallel/algorithms/set_symmetric_difference.hpp</label>
+        <link refid="set__symmetric__difference_8hpp"/>
+        <childnode refid="8014" relation="include">
+        </childnode>
+      </node>
+      <node id="8013">
+        <label>hpx/parallel/algorithms/adjacent_find.hpp</label>
+        <link refid="adjacent__find_8hpp"/>
+        <childnode refid="8014" relation="include">
+        </childnode>
+      </node>
+      <node id="8048">
+        <label>hpx/parallel/container_algorithms/for_each.hpp</label>
+        <link refid="container__algorithms_2for__each_8hpp"/>
+      </node>
+      <node id="8044">
+        <label>hpx/parallel/container_algorithms/replace.hpp</label>
+        <link refid="container__algorithms_2replace_8hpp"/>
+      </node>
+      <node id="8080">
+        <label>hpx/parallel/algorithms/uninitialized_value_construct.hpp</label>
+        <link refid="uninitialized__value__construct_8hpp"/>
+      </node>
+      <node id="8050">
+        <label>hpx/parallel/algorithms/is_heap.hpp</label>
+        <link refid="algorithms_2is__heap_8hpp_source"/>
+        <childnode refid="8014" relation="include">
+        </childnode>
+        <childnode refid="8051" relation="include">
+        </childnode>
+      </node>
+      <node id="8017">
+        <label>hpx/parallel/algorithms/copy.hpp</label>
+        <link refid="algorithms_2copy_8hpp"/>
+        <childnode refid="8014" relation="include">
+        </childnode>
+        <childnode refid="8018" relation="include">
+        </childnode>
+        <childnode refid="8019" relation="include">
+        </childnode>
+        <childnode refid="8021" relation="include">
+        </childnode>
+        <childnode refid="8022" relation="include">
+        </childnode>
+        <childnode refid="8025" relation="include">
+        </childnode>
+        <childnode refid="8026" relation="include">
+        </childnode>
+        <childnode refid="8027" relation="include">
+        </childnode>
+        <childnode refid="8028" relation="include">
+        </childnode>
+        <childnode refid="8029" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structhpx_1_1parallel_1_1execution_1_1sequenced__executor" prot="public">hpx::parallel::execution::sequenced_executor</innerclass>
+    <innernamespace refid="namespacehpx">hpx</innernamespace>
+    <innernamespace refid="namespacehpx_1_1parallel">hpx::parallel</innernamespace>
+    <innernamespace refid="namespacehpx_1_1parallel_1_1execution">hpx::parallel::execution</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2007-2017<sp/>Hartmut<sp/>Kaiser</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Distributed<sp/>under<sp/>the<sp/>Boost<sp/>Software<sp/>License,<sp/>Version<sp/>1.0.<sp/>(See<sp/>accompanying</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>file<sp/>LICENSE_1_0.txt<sp/>or<sp/>copy<sp/>at<sp/>http://www.boost.org/LICENSE_1_0.txt)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(HPX_PARALLEL_EXECUTORS_SEQUENTIAL_EXECUTOR_MAY_11_2015_1050AM)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPX_PARALLEL_EXECUTORS_SEQUENTIAL_EXECUTOR_MAY_11_2015_1050AM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/config.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/async_launch_policy_dispatch.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/lcos/future.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/runtime/threads/thread_executor.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/traits/is_executor.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/util/deferred_call.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/util/invoke.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/util/unwrap.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/parallel/exception_list.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iterator&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;type_traits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehpx" kindref="compound">hpx</ref><sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">parallel<sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">execution</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35" refid="structhpx_1_1parallel_1_1execution_1_1sequenced__executor" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhpx_1_1parallel_1_1execution_1_1sequenced__executor" kindref="compound">sequenced_executor</ref></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>operator==(<ref refid="structhpx_1_1parallel_1_1execution_1_1sequenced__executor" kindref="compound">sequenced_executor</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/></highlight><highlight class="comment">/*rhs*/</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>operator!=(<ref refid="structhpx_1_1parallel_1_1execution_1_1sequenced__executor" kindref="compound">sequenced_executor</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/></highlight><highlight class="comment">/*rhs*/</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structhpx_1_1parallel_1_1execution_1_1sequenced__executor" kindref="compound">sequenced_executor</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>context()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structhpx_1_1parallel_1_1execution_1_1sequenced__execution__tag" kindref="compound">sequenced_execution_tag</ref><sp/>execution_category;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>OneWayExecutor<sp/>interface</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>F,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>...<sp/>Ts&gt;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>hpx::util::detail::invoke_deferred_result&lt;F,<sp/>Ts...&gt;::type</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sync_execute(F<sp/>&amp;&amp;<sp/>f,<sp/>Ts<sp/>&amp;&amp;...<sp/>ts)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>hpx::util::invoke(</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::forward&lt;F&gt;(f),<sp/>std::forward&lt;Ts&gt;(ts)...);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(std::bad_alloc<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>ba)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>ba;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(...)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="classhpx_1_1exception__list" kindref="compound">exception_list</ref>(std::current_exception());</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TwoWayExecutor<sp/>interface</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>F,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>...<sp/>Ts&gt;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>hpx::future&lt;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>hpx::util::detail::invoke_deferred_result&lt;F,<sp/>Ts...&gt;::type</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>async_execute(F<sp/>&amp;&amp;<sp/>f,<sp/>Ts<sp/>&amp;&amp;...<sp/>ts)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>hpx::detail::async_launch_policy_dispatch&lt;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>launch::deferred_policy</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;::call(<ref refid="structhpx_1_1launch_1a5f584d23f74552da911e2dcd527bf70c" kindref="member">launch::deferred</ref>,<sp/>std::forward&lt;F&gt;(f),</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::forward&lt;Ts&gt;(ts)...);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>NonBlockingOneWayExecutor<sp/>(adapted)<sp/>interface</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>F,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>...<sp/>Ts&gt;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>post(F<sp/>&amp;&amp;<sp/>f,<sp/>Ts<sp/>&amp;&amp;...<sp/>ts)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sync_execute(std::forward&lt;F&gt;(f),<sp/>std::forward&lt;Ts&gt;(ts)...);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>BulkTwoWayExecutor<sp/>interface</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>F,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>S,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>...<sp/>Ts&gt;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::vector&lt;hpx::future&lt;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>detail::bulk_function_result&lt;F,<sp/>S,<sp/>Ts...&gt;::type</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;<sp/>&gt;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bulk_async_execute(F<sp/>&amp;&amp;<sp/>f,<sp/>S<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>shape,<sp/>Ts<sp/>&amp;&amp;...<sp/>ts)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>detail::bulk_function_result&lt;F,<sp/>S,<sp/>Ts...&gt;::type</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result_type;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;hpx::future&lt;result_type&gt;<sp/>&gt;<sp/>results;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>elem:<sp/>shape)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>results.push_back(async_execute(f,<sp/>elem,<sp/>ts...));</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(std::bad_alloc<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>ba)<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>ba;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(...)<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="classhpx_1_1exception__list" kindref="compound">exception_list</ref>(std::current_exception());</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::move(results);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>F,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>S,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>...<sp/>Ts&gt;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>detail::bulk_execute_result&lt;F,<sp/>S,<sp/>Ts...&gt;::type</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bulk_sync_execute(F<sp/>&amp;&amp;<sp/>f,<sp/>S<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>shape,<sp/>Ts<sp/>&amp;&amp;...<sp/>ts)</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>hpx::util::unwrap(</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bulk_async_execute(std::forward&lt;F&gt;(f),<sp/>shape,</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::forward&lt;Ts&gt;(ts)...));</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::size_t<sp/>processing_units_count()</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">hpx::serialization::access;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Archive&gt;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>serialize(Archive<sp/>&amp;<sp/>ar,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>version)</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">}}}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehpx" kindref="compound">hpx</ref><sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">parallel<sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">execution</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;&gt;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">is_one_way_executor&lt;parallel::<ref refid="structhpx_1_1parallel_1_1execution_1_1sequenced__executor" kindref="compound">execution::sequenced_executor</ref>&gt;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>std::true_type</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>{};</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;&gt;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">is_bulk_one_way_executor&lt;parallel::<ref refid="structhpx_1_1parallel_1_1execution_1_1sequenced__executor" kindref="compound">execution::sequenced_executor</ref>&gt;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>std::true_type</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>{};</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;&gt;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">is_two_way_executor&lt;parallel::<ref refid="structhpx_1_1parallel_1_1execution_1_1sequenced__executor" kindref="compound">execution::sequenced_executor</ref>&gt;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>std::true_type</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>{};</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;&gt;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">is_bulk_two_way_executor&lt;parallel::<ref refid="structhpx_1_1parallel_1_1execution_1_1sequenced__executor" kindref="compound">execution::sequenced_executor</ref>&gt;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>std::true_type</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>{};</highlight></codeline>
+<codeline lineno="170"><highlight class="normal">}}}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="hpx/parallel/executors/sequenced_executor.hpp"/>
+  </compounddef>
+</doxygen>

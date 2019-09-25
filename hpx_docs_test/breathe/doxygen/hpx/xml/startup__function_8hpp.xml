@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="startup__function_8hpp" kind="file" language="C++">
+    <compoundname>startup_function.hpp</compoundname>
+    <includes local="no">hpx/config.hpp</includes>
+    <includes local="no">hpx/functional/unique_function.hpp</includes>
+    <includedby refid="hpx__init_8hpp" local="no">hpx/hpx_init.hpp</includedby>
+    <includedby refid="hpx__start_8hpp" local="no">hpx/hpx_start.hpp</includedby>
+    <includedby refid="runtime__fwd_8hpp" local="no">hpx/runtime_fwd.hpp</includedby>
+    <incdepgraph>
+      <node id="1062">
+        <label>hpx/functional/unique_function.hpp</label>
+      </node>
+      <node id="1060">
+        <label>hpx/runtime/startup_function.hpp</label>
+        <link refid="startup__function_8hpp"/>
+        <childnode refid="1061" relation="include">
+        </childnode>
+        <childnode refid="1062" relation="include">
+        </childnode>
+      </node>
+      <node id="1061">
+        <label>hpx/config.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1072">
+        <label>hpx/runtime/components/migrate_component.hpp</label>
+        <link refid="migrate__component_8hpp"/>
+      </node>
+      <node id="1068">
+        <label>hpx/runtime/actions/basic_action.hpp</label>
+        <link refid="basic__action_8hpp"/>
+        <childnode refid="1069" relation="include">
+        </childnode>
+        <childnode refid="1070" relation="include">
+        </childnode>
+      </node>
+      <node id="1063">
+        <label>hpx/runtime/startup_function.hpp</label>
+        <link refid="startup__function_8hpp"/>
+        <childnode refid="1064" relation="include">
+        </childnode>
+        <childnode refid="1065" relation="include">
+        </childnode>
+        <childnode refid="1066" relation="include">
+        </childnode>
+      </node>
+      <node id="1064">
+        <label>hpx/hpx_init.hpp</label>
+        <link refid="hpx__init_8hpp"/>
+      </node>
+      <node id="1070">
+        <label>hpx/runtime/actions/plain_action.hpp</label>
+        <link refid="plain__action_8hpp"/>
+        <childnode refid="1071" relation="include">
+        </childnode>
+        <childnode refid="1072" relation="include">
+        </childnode>
+      </node>
+      <node id="1069">
+        <label>hpx/runtime/actions/component_action.hpp</label>
+        <link refid="component__action_8hpp"/>
+      </node>
+      <node id="1071">
+        <label>hpx/runtime/components/copy_component.hpp</label>
+        <link refid="copy__component_8hpp"/>
+      </node>
+      <node id="1067">
+        <label>hpx/runtime/get_ptr.hpp</label>
+        <link refid="get__ptr_8hpp"/>
+      </node>
+      <node id="1065">
+        <label>hpx/hpx_start.hpp</label>
+        <link refid="hpx__start_8hpp"/>
+      </node>
+      <node id="1066">
+        <label>hpx/runtime_fwd.hpp</label>
+        <link refid="runtime__fwd_8hpp"/>
+        <childnode refid="1067" relation="include">
+        </childnode>
+        <childnode refid="1068" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacehpx">hpx</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2007-2014<sp/>Hartmut<sp/>Kaiser</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2011<sp/><sp/><sp/><sp/><sp/><sp/>Bryce<sp/>Lelbach</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Distributed<sp/>under<sp/>the<sp/>Boost<sp/>Software<sp/>License,<sp/>Version<sp/>1.0.<sp/>(See<sp/>accompanying</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>file<sp/>LICENSE_1_0.txt<sp/>or<sp/>copy<sp/>at<sp/>http://www.boost.org/LICENSE_1_0.txt)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>HPX_RUNTIME_STARTUP_FUNCTION_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPX_RUNTIME_STARTUP_FUNCTION_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/config.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/functional/unique_function.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehpx" kindref="compound">hpx</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20" refid="startup__function_8hpp_1a182edb67dcfa1c3aa5fa9c30faaa43d7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>util::unique_function_nonser&lt;void()&gt;<sp/><ref refid="startup__function_8hpp_1a182edb67dcfa1c3aa5fa9c30faaa43d7" kindref="member">startup_function_type</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>HPX_API_EXPORT<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="startup__function_8hpp_1af4a89a9a8c4f3d8d4d256fcf5a9093fc" kindref="member">register_pre_startup_function</ref>(startup_function_type<sp/>f);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>HPX_API_EXPORT<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="startup__function_8hpp_1a606821ec55263e6dc0905e8ac9c47e7e" kindref="member">register_startup_function</ref>(startup_function_type<sp/>f);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="hpx/runtime/startup_function.hpp"/>
+  </compounddef>
+</doxygen>

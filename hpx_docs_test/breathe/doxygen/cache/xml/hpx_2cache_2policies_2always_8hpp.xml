@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="hpx_2cache_2policies_2always_8hpp" kind="file" language="C++">
+    <compoundname>always.hpp</compoundname>
+    <includes local="no">hpx/config.hpp</includes>
+    <includedby refid="hpx_2cache_2local__cache_8hpp" local="no">libs/cache/include/hpx/cache/local_cache.hpp</includedby>
+    <includedby refid="compatibility_2hpx_2util_2cache_2policies_2always_8hpp" local="no">libs/cache/include_compatibility/hpx/util/cache/policies/always.hpp</includedby>
+    <incdepgraph>
+      <node id="134">
+        <label>hpx/config.hpp</label>
+      </node>
+      <node id="133">
+        <label>libs/cache/include/hpx/cache/policies/always.hpp</label>
+        <link refid="hpx_2cache_2policies_2always_8hpp"/>
+        <childnode refid="134" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="137">
+        <label>libs/cache/include_compatibility/hpx/util/cache/local_cache.hpp</label>
+        <link refid="compatibility_2hpx_2util_2cache_2local__cache_8hpp_source"/>
+      </node>
+      <node id="136">
+        <label>libs/cache/include/hpx/cache/local_cache.hpp</label>
+        <link refid="hpx_2cache_2local__cache_8hpp_source"/>
+        <childnode refid="137" relation="include">
+        </childnode>
+      </node>
+      <node id="138">
+        <label>libs/cache/include_compatibility/hpx/util/cache/policies/always.hpp</label>
+        <link refid="compatibility_2hpx_2util_2cache_2policies_2always_8hpp_source"/>
+      </node>
+      <node id="135">
+        <label>libs/cache/include/hpx/cache/policies/always.hpp</label>
+        <link refid="hpx_2cache_2policies_2always_8hpp"/>
+        <childnode refid="136" relation="include">
+        </childnode>
+        <childnode refid="138" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structhpx_1_1util_1_1cache_1_1policies_1_1always" prot="public">hpx::util::cache::policies::always</innerclass>
+    <innernamespace refid="namespacehpx">hpx</innernamespace>
+    <innernamespace refid="namespacehpx_1_1util">hpx::util</innernamespace>
+    <innernamespace refid="namespacehpx_1_1util_1_1cache">hpx::util::cache</innernamespace>
+    <innernamespace refid="namespacehpx_1_1util_1_1cache_1_1policies">hpx::util::cache::policies</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2007-2016<sp/>Hartmut<sp/>Kaiser</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Distributed<sp/>under<sp/>the<sp/>Boost<sp/>Software<sp/>License,<sp/>Version<sp/>1.0.<sp/>(See<sp/>accompanying</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>file<sp/>LICENSE_1_0.txt<sp/>or<sp/>copy<sp/>at<sp/>http://www.boost.org/LICENSE_1_0.txt)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(HPX_UTIL_CACHE_POLICIES_ALWAYS_NOV_19_2008_0803AM)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPX_UTIL_CACHE_POLICIES_ALWAYS_NOV_19_2008_0803AM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/config.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehpx" kindref="compound">hpx</ref><sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">util<sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">cache<sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">policies</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Entry&gt;</highlight></codeline>
+<codeline lineno="16" refid="structhpx_1_1util_1_1cache_1_1policies_1_1always" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhpx_1_1util_1_1cache_1_1policies_1_1always" kindref="compound">always</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>operator()<sp/>(Entry<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>always<sp/>true</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}}}}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="libs/cache/include/hpx/cache/policies/always.hpp"/>
+  </compounddef>
+</doxygen>

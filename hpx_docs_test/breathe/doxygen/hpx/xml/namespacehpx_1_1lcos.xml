@@ -1,0 +1,984 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacehpx_1_1lcos" kind="namespace" language="C++">
+    <compoundname>hpx::lcos</compoundname>
+    <innerclass refid="classhpx_1_1lcos_1_1barrier" prot="public">hpx::lcos::barrier</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="broadcast_8hpp_1ab1777e42cca5d8179d0df0edd5c1048b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Action</type>
+          </param>
+          <param>
+            <type>typename ArgN</type>
+          </param>
+          <param>
+            <type>...</type>
+          </param>
+        </templateparamlist>
+        <type>hpx::future&lt; std::vector&lt; decltype(Action(hpx::id_type, ArgN,...))&gt; &gt;</type>
+        <definition>hpx::future&lt;std::vector&lt;decltype(Action(hpx::id_type, ArgN, ...))&gt; &gt; hpx::lcos::broadcast</definition>
+        <argsstring>(std::vector&lt; hpx::id_type &gt; const &amp;ids, ArgN argN,...)</argsstring>
+        <name>broadcast</name>
+        <param>
+          <type>std::vector&lt; hpx::id_type &gt; const &amp;</type>
+          <declname>ids</declname>
+        </param>
+        <param>
+          <type>ArgN</type>
+          <declname>argN</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+<para>Perform a distributed broadcast operation. </para>        </briefdescription>
+        <detaileddescription>
+<para>The function hpx::lcos::broadcast performs a distributed broadcast operation resulting in action invocations on a given set of global identifiers. The action can be either a plain action (in which case the global identifiers have to refer to localities) or a component action (in which case the global identifiers have to refer to instances of a component type which exposes the action.</para><para>The given action is invoked asynchronously on all given identifiers, and the arguments ArgN are passed along to those invocations.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ids</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] A list of global identifiers identifying the target objects for which the given action will be invoked. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argN</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] Any number of arbitrary arguments (passed by const reference) which will be forwarded to the action invocation.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function returns a future representing the result of the overall reduction operation.</para></simplesect>
+<simplesect kind="note"><para>If decltype(Action(...)) is void, then the result of this function is future&lt;void&gt;. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/lcos/broadcast.hpp" line="39" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="broadcast_8hpp_1a5f7754e260328904b12ff9a34df705e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Action</type>
+          </param>
+          <param>
+            <type>typename ArgN</type>
+          </param>
+          <param>
+            <type>...</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void hpx::lcos::broadcast_apply</definition>
+        <argsstring>(std::vector&lt; hpx::id_type &gt; const &amp;ids, ArgN argN,...)</argsstring>
+        <name>broadcast_apply</name>
+        <param>
+          <type>std::vector&lt; hpx::id_type &gt; const &amp;</type>
+          <declname>ids</declname>
+        </param>
+        <param>
+          <type>ArgN</type>
+          <declname>argN</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+<para>Perform an asynchronous (fire&amp;forget) distributed broadcast operation. </para>        </briefdescription>
+        <detaileddescription>
+<para>The function hpx::lcos::broadcast_apply performs an asynchronous (fire&amp;forget) distributed broadcast operation resulting in action invocations on a given set of global identifiers. The action can be either a plain action (in which case the global identifiers have to refer to localities) or a component action (in which case the global identifiers have to refer to instances of a component type which exposes the action.</para><para>The given action is invoked asynchronously on all given identifiers, and the arguments ArgN are passed along to those invocations.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ids</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] A list of global identifiers identifying the target objects for which the given action will be invoked. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argN</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] Any number of arbitrary arguments (passed by const reference) which will be forwarded to the action invocation. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/lcos/broadcast.hpp" line="65" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="broadcast_8hpp_1a1900e1c885e7a8599ece952ae2846e9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Action</type>
+          </param>
+          <param>
+            <type>typename ArgN</type>
+          </param>
+          <param>
+            <type>...</type>
+          </param>
+        </templateparamlist>
+        <type>hpx::future&lt; std::vector&lt; decltype(Action(hpx::id_type, ArgN,..., std::size_t))&gt; &gt;</type>
+        <definition>hpx::future&lt;std::vector&lt;decltype(Action(hpx::id_type, ArgN, ..., std::size_t))&gt; &gt; hpx::lcos::broadcast_with_index</definition>
+        <argsstring>(std::vector&lt; hpx::id_type &gt; const &amp;ids, ArgN argN,...)</argsstring>
+        <name>broadcast_with_index</name>
+        <param>
+          <type>std::vector&lt; hpx::id_type &gt; const &amp;</type>
+          <declname>ids</declname>
+        </param>
+        <param>
+          <type>ArgN</type>
+          <declname>argN</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+<para>Perform a distributed broadcast operation. </para>        </briefdescription>
+        <detaileddescription>
+<para>The function hpx::lcos::broadcast_with_index performs a distributed broadcast operation resulting in action invocations on a given set of global identifiers. The action can be either a plain action (in which case the global identifiers have to refer to localities) or a component action (in which case the global identifiers have to refer to instances of a component type which exposes the action.</para><para>The given action is invoked asynchronously on all given identifiers, and the arguments ArgN are passed along to those invocations.</para><para>The function passes the index of the global identifier in the given list of identifiers as the last argument to the action.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ids</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] A list of global identifiers identifying the target objects for which the given action will be invoked. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argN</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] Any number of arbitrary arguments (passed by const reference) which will be forwarded to the action invocation.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function returns a future representing the result of the overall reduction operation.</para></simplesect>
+<simplesect kind="note"><para>If decltype(Action(...)) is void, then the result of this function is future&lt;void&gt;. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/lcos/broadcast.hpp" line="99" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="broadcast_8hpp_1aabcbe03a5b761ce51255617d98f9ffc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Action</type>
+          </param>
+          <param>
+            <type>typename ArgN</type>
+          </param>
+          <param>
+            <type>...</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void hpx::lcos::broadcast_apply_with_index</definition>
+        <argsstring>(std::vector&lt; hpx::id_type &gt; const &amp;ids, ArgN argN,...)</argsstring>
+        <name>broadcast_apply_with_index</name>
+        <param>
+          <type>std::vector&lt; hpx::id_type &gt; const &amp;</type>
+          <declname>ids</declname>
+        </param>
+        <param>
+          <type>ArgN</type>
+          <declname>argN</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+<para>Perform an asynchronous (fire&amp;forget) distributed broadcast operation. </para>        </briefdescription>
+        <detaileddescription>
+<para>The function hpx::lcos::broadcast_apply_with_index performs an asynchronous (fire&amp;forget) distributed broadcast operation resulting in action invocations on a given set of global identifiers. The action can be either a plain action (in which case the global identifiers have to refer to localities) or a component action (in which case the global identifiers have to refer to instances of a component type which exposes the action.</para><para>The given action is invoked asynchronously on all given identifiers, and the arguments ArgN are passed along to those invocations.</para><para>The function passes the index of the global identifier in the given list of identifiers as the last argument to the action.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ids</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] A list of global identifiers identifying the target objects for which the given action will be invoked. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argN</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] Any number of arbitrary arguments (passed by const reference) which will be forwarded to the action invocation. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/lcos/broadcast.hpp" line="128" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="fold_8hpp_1a0264362a25694fb18c71b62cf47826ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Action</type>
+          </param>
+          <param>
+            <type>typename FoldOp</type>
+          </param>
+          <param>
+            <type>typename Init</type>
+          </param>
+          <param>
+            <type>typename ArgN</type>
+          </param>
+          <param>
+            <type>...</type>
+          </param>
+        </templateparamlist>
+        <type>hpx::future&lt; decltype(Action(hpx::id_type, ArgN,...))&gt;</type>
+        <definition>hpx::future&lt;decltype(Action(hpx::id_type, ArgN, ...))&gt; hpx::lcos::fold</definition>
+        <argsstring>(std::vector&lt; hpx::id_type &gt; const &amp;ids, FoldOp &amp;&amp;fold_op, Init &amp;&amp;init, ArgN argN,...)</argsstring>
+        <name>fold</name>
+        <param>
+          <type>std::vector&lt; hpx::id_type &gt; const &amp;</type>
+          <declname>ids</declname>
+        </param>
+        <param>
+          <type>FoldOp &amp;&amp;</type>
+          <declname>fold_op</declname>
+        </param>
+        <param>
+          <type>Init &amp;&amp;</type>
+          <declname>init</declname>
+        </param>
+        <param>
+          <type>ArgN</type>
+          <declname>argN</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+<para>Perform a distributed fold operation. </para>        </briefdescription>
+        <detaileddescription>
+<para>The function hpx::lcos::fold performs a distributed folding operation over results returned from action invocations on a given set of global identifiers. The action can be either a plain action (in which case the global identifiers have to refer to localities) or a component action (in which case the global identifiers have to refer to instances of a component type which exposes the action.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ids</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] A list of global identifiers identifying the target objects for which the given action will be invoked. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fold_op</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] A binary function expecting two results as returned from the action invocations. The function (or function object) is expected to return the result of the folding operation performed on its arguments. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>init</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The initial value to be used for the folding operation </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argN</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] Any number of arbitrary arguments (passed by value, by const reference or by rvalue reference) which will be forwarded to the action invocation.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The type of the initial value must be convertible to the result type returned from the invoked action.</para></simplesect>
+<simplesect kind="return"><para>This function returns a future representing the result of the overall folding operation. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/lcos/fold.hpp" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="fold_8hpp_1a28a571528cc387c0ff37af04cd26a4cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Action</type>
+          </param>
+          <param>
+            <type>typename FoldOp</type>
+          </param>
+          <param>
+            <type>typename Init</type>
+          </param>
+          <param>
+            <type>typename ArgN</type>
+          </param>
+          <param>
+            <type>...</type>
+          </param>
+        </templateparamlist>
+        <type>hpx::future&lt; decltype(Action(hpx::id_type, ArgN,..., std::size_t))&gt;</type>
+        <definition>hpx::future&lt;decltype(Action(hpx::id_type, ArgN, ..., std::size_t))&gt; hpx::lcos::fold_with_index</definition>
+        <argsstring>(std::vector&lt; hpx::id_type &gt; const &amp;ids, FoldOp &amp;&amp;fold_op, Init &amp;&amp;init, ArgN argN,...)</argsstring>
+        <name>fold_with_index</name>
+        <param>
+          <type>std::vector&lt; hpx::id_type &gt; const &amp;</type>
+          <declname>ids</declname>
+        </param>
+        <param>
+          <type>FoldOp &amp;&amp;</type>
+          <declname>fold_op</declname>
+        </param>
+        <param>
+          <type>Init &amp;&amp;</type>
+          <declname>init</declname>
+        </param>
+        <param>
+          <type>ArgN</type>
+          <declname>argN</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+<para>Perform a distributed folding operation. </para>        </briefdescription>
+        <detaileddescription>
+<para>The function hpx::lcos::fold_with_index performs a distributed folding operation over results returned from action invocations on a given set of global identifiers. The action can be either plain action (in which case the global identifiers have to refer to localities) or a component action (in which case the global identifiers have to refer to instances of a component type which exposes the action.</para><para>The function passes the index of the global identifier in the given list of identifiers as the last argument to the action.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ids</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] A list of global identifiers identifying the target objects for which the given action will be invoked. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fold_op</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] A binary function expecting two results as returned from the action invocations. The function (or function object) is expected to return the result of the folding operation performed on its arguments. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>init</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The initial value to be used for the folding operation </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argN</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] Any number of arbitrary arguments (passed by value, by const reference or by rvalue reference) which will be forwarded to the action invocation.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The type of the initial value must be convertible to the result type returned from the invoked action.</para></simplesect>
+<simplesect kind="return"><para>This function returns a future representing the result of the overall folding operation. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/lcos/fold.hpp" line="81" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="fold_8hpp_1a4722179d40b6ca8fc28474ff51166adc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Action</type>
+          </param>
+          <param>
+            <type>typename FoldOp</type>
+          </param>
+          <param>
+            <type>typename Init</type>
+          </param>
+          <param>
+            <type>typename ArgN</type>
+          </param>
+          <param>
+            <type>...</type>
+          </param>
+        </templateparamlist>
+        <type>hpx::future&lt; decltype(Action(hpx::id_type, ArgN,...))&gt;</type>
+        <definition>hpx::future&lt;decltype(Action(hpx::id_type, ArgN, ...))&gt; hpx::lcos::inverse_fold</definition>
+        <argsstring>(std::vector&lt; hpx::id_type &gt; const &amp;ids, FoldOp &amp;&amp;fold_op, Init &amp;&amp;init, ArgN argN,...)</argsstring>
+        <name>inverse_fold</name>
+        <param>
+          <type>std::vector&lt; hpx::id_type &gt; const &amp;</type>
+          <declname>ids</declname>
+        </param>
+        <param>
+          <type>FoldOp &amp;&amp;</type>
+          <declname>fold_op</declname>
+        </param>
+        <param>
+          <type>Init &amp;&amp;</type>
+          <declname>init</declname>
+        </param>
+        <param>
+          <type>ArgN</type>
+          <declname>argN</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+<para>Perform a distributed inverse folding operation. </para>        </briefdescription>
+        <detaileddescription>
+<para>The function hpx::lcos::inverse_fold performs an inverse distributed folding operation over results returned from action invocations on a given set of global identifiers. The action can be either a plain action (in which case the global identifiers have to refer to localities) or a component action (in which case the global identifiers have to refer to instances of a component type which exposes the action.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ids</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] A list of global identifiers identifying the target objects for which the given action will be invoked. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fold_op</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] A binary function expecting two results as returned from the action invocations. The function (or function object) is expected to return the result of the folding operation performed on its arguments. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>init</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The initial value to be used for the folding operation </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argN</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] Any number of arbitrary arguments (passed by value, by const reference or by rvalue reference) which will be forwarded to the action invocation.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The type of the initial value must be convertible to the result type returned from the invoked action.</para></simplesect>
+<simplesect kind="return"><para>This function returns a future representing the result of the overall folding operation. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/lcos/fold.hpp" line="117" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="fold_8hpp_1af6c63d9b714d7cce6542fc5bf01c68c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Action</type>
+          </param>
+          <param>
+            <type>typename FoldOp</type>
+          </param>
+          <param>
+            <type>typename Init</type>
+          </param>
+          <param>
+            <type>typename ArgN</type>
+          </param>
+          <param>
+            <type>...</type>
+          </param>
+        </templateparamlist>
+        <type>hpx::future&lt; decltype(Action(hpx::id_type, ArgN,..., std::size_t))&gt;</type>
+        <definition>hpx::future&lt;decltype(Action(hpx::id_type, ArgN, ..., std::size_t))&gt; hpx::lcos::inverse_fold_with_index</definition>
+        <argsstring>(std::vector&lt; hpx::id_type &gt; const &amp;ids, FoldOp &amp;&amp;fold_op, Init &amp;&amp;init, ArgN argN,...)</argsstring>
+        <name>inverse_fold_with_index</name>
+        <param>
+          <type>std::vector&lt; hpx::id_type &gt; const &amp;</type>
+          <declname>ids</declname>
+        </param>
+        <param>
+          <type>FoldOp &amp;&amp;</type>
+          <declname>fold_op</declname>
+        </param>
+        <param>
+          <type>Init &amp;&amp;</type>
+          <declname>init</declname>
+        </param>
+        <param>
+          <type>ArgN</type>
+          <declname>argN</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+<para>Perform a distributed inverse folding operation. </para>        </briefdescription>
+        <detaileddescription>
+<para>The function hpx::lcos::inverse_fold_with_index performs an inverse distributed folding operation over results returned from action invocations on a given set of global identifiers. The action can be either plain action (in which case the global identifiers have to refer to localities) or a component action (in which case the global identifiers have to refer to instances of a component type which exposes the action.</para><para>The function passes the index of the global identifier in the given list of identifiers as the last argument to the action.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ids</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] A list of global identifiers identifying the target objects for which the given action will be invoked. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fold_op</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] A binary function expecting two results as returned from the action invocations. The function (or function object) is expected to return the result of the folding operation performed on its arguments. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>init</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The initial value to be used for the folding operation </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argN</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] Any number of arbitrary arguments (passed by value, by const reference or by rvalue reference) which will be forwarded to the action invocation.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The type of the initial value must be convertible to the result type returned from the invoked action.</para></simplesect>
+<simplesect kind="return"><para>This function returns a future representing the result of the overall folding operation. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/lcos/fold.hpp" line="157" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="gather_8hpp_1aebc9313a9b521471ff489f783f568483" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>hpx::future&lt; std::vector&lt; T &gt; &gt;</type>
+        <definition>hpx::future&lt;std::vector&lt;T&gt; &gt; hpx::lcos::gather_here</definition>
+        <argsstring>(char const *basename, hpx::future&lt; T &gt; result, std::size_t num_sites=std::size_t(-1), std::size_t generation=std::size_t(-1), std::size_t this_site=std::size_t(-1))</argsstring>
+        <name>gather_here</name>
+        <param>
+          <type>char const *</type>
+          <declname>basename</declname>
+        </param>
+        <param>
+          <type>hpx::future&lt; T &gt;</type>
+          <declname>result</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>num_sites</declname>
+          <defval>std::size_t(-1)</defval>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>generation</declname>
+          <defval>std::size_t(-1)</defval>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>this_site</declname>
+          <defval>std::size_t(-1)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gather a set of values from different call sites</para><para>This function receives a set of values from all call sites operating on the given base name.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>basename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base name identifying the gather operation </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>result</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A future referring to the value to transmit to the central gather point from this call site. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_sites</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of participating sites (default: all localities). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>generation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The generational counter identifying the sequence number of the gather operation performed on the given base name. This is optional and needs to be supplied only if the gather operation on the given base name has to be performed more than once. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>this_site</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sequence number of this invocation (usually the locality id). This value is optional and defaults to whatever <ref refid="get__locality__id_8hpp_1a158d7c54a657bb364c1704033010697b" kindref="member">hpx::get_locality_id()</ref> returns.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>Each gather operation has to be accompanied with a unique usage of the <emphasis>HPX_REGISTER_GATHER</emphasis> macro to define the necessary internal facilities used by <emphasis>gather_here</emphasis> and <emphasis>gather_there</emphasis> </para></simplesect>
+<simplesect kind="return"><para>This function returns a future holding a vector with all gathered values. It will become ready once the gather operation has been completed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/lcos/gather.hpp" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="gather_8hpp_1acd461f27f5635ae7aa033ad9634c244e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>hpx::future&lt; void &gt;</type>
+        <definition>hpx::future&lt;void&gt; hpx::lcos::gather_there</definition>
+        <argsstring>(char const *basename, hpx::future&lt; T &gt; result, std::size_t generation=std::size_t(-1), std::size_t root_site=0, std::size_t this_site=std::size_t(-1))</argsstring>
+        <name>gather_there</name>
+        <param>
+          <type>char const *</type>
+          <declname>basename</declname>
+        </param>
+        <param>
+          <type>hpx::future&lt; T &gt;</type>
+          <declname>result</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>generation</declname>
+          <defval>std::size_t(-1)</defval>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>root_site</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>this_site</declname>
+          <defval>std::size_t(-1)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gather a given value at the given call site</para><para>This function transmits the value given by <emphasis>result</emphasis> to a central gather site (where the corresponding <emphasis>gather_here</emphasis> is executed)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>basename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base name identifying the gather operation </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>result</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A future referring to the value to transmit to the central gather point from this call site. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>generation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The generational counter identifying the sequence number of the gather operation performed on the given base name. This is optional and needs to be supplied only if the gather operation on the given base name has to be performed more than once. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>root_site</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sequence number of the central gather point (usually the locality id). This value is optional and defaults to 0. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>this_site</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sequence number of this invocation (usually the locality id). This value is optional and defaults to whatever <ref refid="get__locality__id_8hpp_1a158d7c54a657bb364c1704033010697b" kindref="member">hpx::get_locality_id()</ref> returns.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>Each gather operation has to be accompanied with a unique usage of the <emphasis>HPX_REGISTER_GATHER</emphasis> macro to define the necessary internal facilities used by <emphasis>gather_here</emphasis> and <emphasis>gather_there</emphasis> </para></simplesect>
+<simplesect kind="return"><para>This function returns a future which will become ready once the gather operation has been completed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/lcos/gather.hpp" line="79" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="gather_8hpp_1a6547d22730263a7d46b8f59e605a086e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>hpx::future&lt; std::vector&lt; typename std::decay&lt; T &gt;::type &gt; &gt;</type>
+        <definition>hpx::future&lt;std::vector&lt;typename std::decay&lt;T&gt;::type&gt; &gt; hpx::lcos::gather_here</definition>
+        <argsstring>(char const *basename, T &amp;&amp;result, std::size_t num_sites=std::size_t(-1), std::size_t generation=std::size_t(-1), std::size_t this_site=std::size_t(-1))</argsstring>
+        <name>gather_here</name>
+        <param>
+          <type>char const *</type>
+          <declname>basename</declname>
+        </param>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>result</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>num_sites</declname>
+          <defval>std::size_t(-1)</defval>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>generation</declname>
+          <defval>std::size_t(-1)</defval>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>this_site</declname>
+          <defval>std::size_t(-1)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gather a set of values from different call sites</para><para>This function receives a set of values from all call sites operating on the given base name.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>basename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base name identifying the gather operation </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>result</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to transmit to the central gather point from this call site. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_sites</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of participating sites (default: all localities). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>generation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The generational counter identifying the sequence number of the gather operation performed on the given base name. This is optional and needs to be supplied only if the gather operation on the given base name has to be performed more than once. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>this_site</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sequence number of this invocation (usually the locality id). This value is optional and defaults to whatever <ref refid="get__locality__id_8hpp_1a158d7c54a657bb364c1704033010697b" kindref="member">hpx::get_locality_id()</ref> returns.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>Each gather operation has to be accompanied with a unique usage of the <emphasis>HPX_REGISTER_GATHER</emphasis> macro to define the necessary internal facilities used by <emphasis>gather_here</emphasis> and <emphasis>gather_there</emphasis> </para></simplesect>
+<simplesect kind="return"><para>This function returns a future holding a vector with all gathered values. It will become ready once the gather operation has been completed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/lcos/gather.hpp" line="113" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="gather_8hpp_1acd15a01115b9c7a80e57da3dacfbcbb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>hpx::future&lt; void &gt;</type>
+        <definition>hpx::future&lt;void&gt; hpx::lcos::gather_there</definition>
+        <argsstring>(char const *basename, T &amp;&amp;result, std::size_t generation=std::size_t(-1), std::size_t root_site=0, std::size_t this_site=std::size_t(-1))</argsstring>
+        <name>gather_there</name>
+        <param>
+          <type>char const *</type>
+          <declname>basename</declname>
+        </param>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>result</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>generation</declname>
+          <defval>std::size_t(-1)</defval>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>root_site</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>this_site</declname>
+          <defval>std::size_t(-1)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gather a given value at the given call site</para><para>This function transmits the value given by <emphasis>result</emphasis> to a central gather site (where the corresponding <emphasis>gather_here</emphasis> is executed)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>basename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base name identifying the gather operation </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>result</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to transmit to the central gather point from this call site. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>generation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The generational counter identifying the sequence number of the gather operation performed on the given base name. This is optional and needs to be supplied only if the gather operation on the given base name has to be performed more than once. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>root_site</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sequence number of the central gather point (usually the locality id). This value is optional and defaults to 0. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>this_site</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sequence number of this invocation (usually the locality id). This value is optional and defaults to whatever <ref refid="get__locality__id_8hpp_1a158d7c54a657bb364c1704033010697b" kindref="member">hpx::get_locality_id()</ref> returns.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>Each gather operation has to be accompanied with a unique usage of the <emphasis>HPX_REGISTER_GATHER</emphasis> macro to define the necessary internal facilities used by <emphasis>gather_here</emphasis> and <emphasis>gather_there</emphasis> </para></simplesect>
+<simplesect kind="return"><para>This function returns a future which will become ready once the gather operation has been completed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/lcos/gather.hpp" line="148" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="reduce_8hpp_1a1f925cbd0929a3aef51364bf269e2ae5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Action</type>
+          </param>
+          <param>
+            <type>typename ReduceOp</type>
+          </param>
+          <param>
+            <type>typename ArgN</type>
+          </param>
+          <param>
+            <type>...</type>
+          </param>
+        </templateparamlist>
+        <type>hpx::future&lt; decltype(Action(hpx::id_type, ArgN,...))&gt;</type>
+        <definition>hpx::future&lt;decltype(Action(hpx::id_type, ArgN, ...))&gt; hpx::lcos::reduce</definition>
+        <argsstring>(std::vector&lt; hpx::id_type &gt; const &amp;ids, ReduceOp &amp;&amp;reduce_op, ArgN argN,...)</argsstring>
+        <name>reduce</name>
+        <param>
+          <type>std::vector&lt; hpx::id_type &gt; const &amp;</type>
+          <declname>ids</declname>
+        </param>
+        <param>
+          <type>ReduceOp &amp;&amp;</type>
+          <declname>reduce_op</declname>
+        </param>
+        <param>
+          <type>ArgN</type>
+          <declname>argN</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+<para>Perform a distributed reduction operation. </para>        </briefdescription>
+        <detaileddescription>
+<para>The function hpx::lcos::reduce performs a distributed reduction operation over results returned from action invocations on a given set of global identifiers. The action can be either a plain action (in which case the global identifiers have to refer to localities) or a component action (in which case the global identifiers have to refer to instances of a component type which exposes the action.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ids</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] A list of global identifiers identifying the target objects for which the given action will be invoked. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reduce_op</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] A binary function expecting two results as returned from the action invocations. The function (or function object) is expected to return the result of the reduction operation performed on its arguments. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argN</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] Any number of arbitrary arguments (passed by by const reference) which will be forwarded to the action invocation.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function returns a future representing the result of the overall reduction operation. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/lcos/reduce.hpp" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="reduce_8hpp_1a02cd4375bd21d729fc8dced3aac39767" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Action</type>
+          </param>
+          <param>
+            <type>typename ReduceOp</type>
+          </param>
+          <param>
+            <type>typename ArgN</type>
+          </param>
+          <param>
+            <type>...</type>
+          </param>
+        </templateparamlist>
+        <type>hpx::future&lt; decltype(Action(hpx::id_type, ArgN,..., std::size_t))&gt;</type>
+        <definition>hpx::future&lt;decltype(Action(hpx::id_type, ArgN, ..., std::size_t))&gt; hpx::lcos::reduce_with_index</definition>
+        <argsstring>(std::vector&lt; hpx::id_type &gt; const &amp;ids, ReduceOp &amp;&amp;reduce_op, ArgN argN,...)</argsstring>
+        <name>reduce_with_index</name>
+        <param>
+          <type>std::vector&lt; hpx::id_type &gt; const &amp;</type>
+          <declname>ids</declname>
+        </param>
+        <param>
+          <type>ReduceOp &amp;&amp;</type>
+          <declname>reduce_op</declname>
+        </param>
+        <param>
+          <type>ArgN</type>
+          <declname>argN</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+<para>Perform a distributed reduction operation. </para>        </briefdescription>
+        <detaileddescription>
+<para>The function hpx::lcos::reduce_with_index performs a distributed reduction operation over results returned from action invocations on a given set of global identifiers. The action can be either plain action (in which case the global identifiers have to refer to localities) or a component action (in which case the global identifiers have to refer to instances of a component type which exposes the action.</para><para>The function passes the index of the global identifier in the given list of identifiers as the last argument to the action.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ids</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] A list of global identifiers identifying the target objects for which the given action will be invoked. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reduce_op</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] A binary function expecting two results as returned from the action invocations. The function (or function object) is expected to return the result of the reduction operation performed on its arguments. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argN</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] Any number of arbitrary arguments (passed by by const reference) which will be forwarded to the action invocation.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function returns a future representing the result of the overall reduction operation. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/lcos/reduce.hpp" line="70" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="hpx/lcos/barrier.hpp" line="25" column="1"/>
+  </compounddef>
+</doxygen>

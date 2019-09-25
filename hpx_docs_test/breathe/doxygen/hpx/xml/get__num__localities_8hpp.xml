@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="get__num__localities_8hpp" kind="file" language="C++">
+    <compoundname>get_num_localities.hpp</compoundname>
+    <includes local="no">hpx/config.hpp</includes>
+    <includes local="no">hpx/errors.hpp</includes>
+    <includes local="no">hpx/lcos_fwd.hpp</includes>
+    <includes refid="launch__policy_8hpp" local="no">hpx/runtime/launch_policy.hpp</includes>
+    <includes local="no">hpx/runtime/components/component_type.hpp</includes>
+    <includes local="no">cstdint</includes>
+    <includedby refid="runtime__fwd_8hpp" local="no">hpx/runtime_fwd.hpp</includedby>
+    <incdepgraph>
+      <node id="790">
+        <label>cstdint</label>
+      </node>
+      <node id="782">
+        <label>hpx/runtime/get_num_localities.hpp</label>
+        <link refid="get__num__localities_8hpp"/>
+        <childnode refid="783" relation="include">
+        </childnode>
+        <childnode refid="784" relation="include">
+        </childnode>
+        <childnode refid="785" relation="include">
+        </childnode>
+        <childnode refid="786" relation="include">
+        </childnode>
+        <childnode refid="794" relation="include">
+        </childnode>
+        <childnode refid="790" relation="include">
+        </childnode>
+      </node>
+      <node id="786">
+        <label>hpx/runtime/launch_policy.hpp</label>
+        <link refid="launch__policy_8hpp"/>
+        <childnode refid="783" relation="include">
+        </childnode>
+        <childnode refid="787" relation="include">
+        </childnode>
+        <childnode refid="791" relation="include">
+        </childnode>
+        <childnode refid="792" relation="include">
+        </childnode>
+        <childnode refid="793" relation="include">
+        </childnode>
+      </node>
+      <node id="783">
+        <label>hpx/config.hpp</label>
+      </node>
+      <node id="794">
+        <label>hpx/runtime/components/component_type.hpp</label>
+      </node>
+      <node id="787">
+        <label>hpx/runtime/threads/thread_enums.hpp</label>
+        <link refid="thread__enums_8hpp"/>
+        <childnode refid="783" relation="include">
+        </childnode>
+        <childnode refid="788" relation="include">
+        </childnode>
+        <childnode refid="789" relation="include">
+        </childnode>
+        <childnode refid="790" relation="include">
+        </childnode>
+      </node>
+      <node id="793">
+        <label>utility</label>
+      </node>
+      <node id="784">
+        <label>hpx/errors.hpp</label>
+      </node>
+      <node id="788">
+        <label>hpx/runtime/threads/detail/combined_tagged_state.hpp</label>
+      </node>
+      <node id="789">
+        <label>cstddef</label>
+      </node>
+      <node id="785">
+        <label>hpx/lcos_fwd.hpp</label>
+      </node>
+      <node id="791">
+        <label>hpx/runtime/serialization/serialization_fwd.hpp</label>
+      </node>
+      <node id="792">
+        <label>type_traits</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="802">
+        <label>hpx/runtime/components/migrate_component.hpp</label>
+        <link refid="migrate__component_8hpp"/>
+      </node>
+      <node id="795">
+        <label>hpx/runtime/get_num_localities.hpp</label>
+        <link refid="get__num__localities_8hpp"/>
+        <childnode refid="796" relation="include">
+        </childnode>
+      </node>
+      <node id="798">
+        <label>hpx/runtime/actions/basic_action.hpp</label>
+        <link refid="basic__action_8hpp"/>
+        <childnode refid="799" relation="include">
+        </childnode>
+        <childnode refid="800" relation="include">
+        </childnode>
+      </node>
+      <node id="800">
+        <label>hpx/runtime/actions/plain_action.hpp</label>
+        <link refid="plain__action_8hpp"/>
+        <childnode refid="801" relation="include">
+        </childnode>
+        <childnode refid="802" relation="include">
+        </childnode>
+      </node>
+      <node id="799">
+        <label>hpx/runtime/actions/component_action.hpp</label>
+        <link refid="component__action_8hpp"/>
+      </node>
+      <node id="801">
+        <label>hpx/runtime/components/copy_component.hpp</label>
+        <link refid="copy__component_8hpp"/>
+      </node>
+      <node id="797">
+        <label>hpx/runtime/get_ptr.hpp</label>
+        <link refid="get__ptr_8hpp"/>
+      </node>
+      <node id="796">
+        <label>hpx/runtime_fwd.hpp</label>
+        <link refid="runtime__fwd_8hpp"/>
+        <childnode refid="797" relation="include">
+        </childnode>
+        <childnode refid="798" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacehpx">hpx</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2007-2014<sp/>Hartmut<sp/>Kaiser</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2011<sp/><sp/><sp/><sp/><sp/><sp/>Bryce<sp/>Lelbach</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Distributed<sp/>under<sp/>the<sp/>Boost<sp/>Software<sp/>License,<sp/>Version<sp/>1.0.<sp/>(See<sp/>accompanying</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>file<sp/>LICENSE_1_0.txt<sp/>or<sp/>copy<sp/>at<sp/>http://www.boost.org/LICENSE_1_0.txt)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(HPX_RUNTIME_GET_NUM_LOCALITIES_HPP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPX_RUNTIME_GET_NUM_LOCALITIES_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/config.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/errors.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/lcos_fwd.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="launch__policy_8hpp" kindref="compound">hpx/runtime/launch_policy.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/runtime/components/component_type.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehpx" kindref="compound">hpx</ref></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>HPX_API_EXPORT<sp/>std::uint32_t<sp/><ref refid="get__num__localities_8hpp_1a68d4aa44bb8e58c6b0a6aff2920fdd8d" kindref="member">get_initial_num_localities</ref>();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>HPX_API_EXPORT<sp/>lcos::future&lt;std::uint32_t&gt;<sp/><ref refid="get__num__localities_8hpp_1a4dd860f6c435319c019eed326455f646" kindref="member">get_num_localities</ref>();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>HPX_API_EXPORT<sp/>std::uint32_t<sp/><ref refid="get__num__localities_8hpp_1a4dd860f6c435319c019eed326455f646" kindref="member">get_num_localities</ref>(launch::sync_policy,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>error_code&amp;<sp/>ec<sp/>=<sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>HPX_API_EXPORT<sp/>lcos::future&lt;std::uint32_t&gt;<sp/><ref refid="get__num__localities_8hpp_1a4dd860f6c435319c019eed326455f646" kindref="member">get_num_localities</ref>(</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>components::component_type<sp/>t);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>HPX_API_EXPORT<sp/>std::uint32_t<sp/><ref refid="get__num__localities_8hpp_1a4dd860f6c435319c019eed326455f646" kindref="member">get_num_localities</ref>(launch::sync_policy,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>components::component_type<sp/>t,<sp/>error_code&amp;<sp/>ec<sp/>=<sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="hpx/runtime/get_num_localities.hpp"/>
+  </compounddef>
+</doxygen>

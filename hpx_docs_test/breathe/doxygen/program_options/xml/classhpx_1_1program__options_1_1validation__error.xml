@@ -1,0 +1,249 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classhpx_1_1program__options_1_1validation__error" kind="class" language="C++" prot="public">
+    <compoundname>hpx::program_options::validation_error</compoundname>
+    <basecompoundref refid="classhpx_1_1program__options_1_1error__with__option__name" prot="public" virt="non-virtual">hpx::program_options::error_with_option_name</basecompoundref>
+    <derivedcompoundref refid="classhpx_1_1program__options_1_1invalid__bool__value" prot="public" virt="non-virtual">hpx::program_options::invalid_bool_value</derivedcompoundref>
+    <derivedcompoundref refid="classhpx_1_1program__options_1_1invalid__option__value" prot="public" virt="non-virtual">hpx::program_options::invalid_option_value</derivedcompoundref>
+    <includes refid="errors_8hpp" local="no">errors.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classhpx_1_1program__options_1_1validation__error_1aff57b42f148e2374f7e07c4b056e66d1" prot="public" static="no">
+        <name>kind_t</name>
+        <enumvalue id="classhpx_1_1program__options_1_1validation__error_1aff57b42f148e2374f7e07c4b056e66d1add69740c2cbbb6de54511c01f3d4434d" prot="public">
+          <name>multiple_values_not_allowed</name>
+          <initializer>= 30</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classhpx_1_1program__options_1_1validation__error_1aff57b42f148e2374f7e07c4b056e66d1a11f5a6ac13efd417ef0839a360c268b0" prot="public">
+          <name>at_least_one_value_required</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classhpx_1_1program__options_1_1validation__error_1aff57b42f148e2374f7e07c4b056e66d1a14c8a869f1e7c62072c6bb52de9e2242" prot="public">
+          <name>invalid_bool_value</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classhpx_1_1program__options_1_1validation__error_1aff57b42f148e2374f7e07c4b056e66d1aa27f4e393f8b13438b93cc7a001454bd" prot="public">
+          <name>invalid_option_value</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classhpx_1_1program__options_1_1validation__error_1aff57b42f148e2374f7e07c4b056e66d1a9b1fb33affe54305264543ea05c3195a" prot="public">
+          <name>invalid_option</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/errors.hpp" line="424" column="1" bodyfile="libs/program_options/include/hpx/program_options/errors.hpp" bodystart="423" bodyend="430"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classhpx_1_1program__options_1_1validation__error_1a84b7f0c660e427b2892af75c64da308f" prot="protected" static="no" mutable="no">
+        <type>kind_t</type>
+        <definition>kind_t hpx::program_options::validation_error::m_kind</definition>
+        <argsstring></argsstring>
+        <name>m_kind</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/errors.hpp" line="451" column="1" bodyfile="libs/program_options/include/hpx/program_options/errors.hpp" bodystart="451" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1validation__error_1abaee8eed512d70d20457455c9483bee7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::program_options::validation_error::validation_error</definition>
+        <argsstring>(kind_t kind, const std::string &amp;option_name=&quot;&quot;, const std::string &amp;original_token=&quot;&quot;, int option_style=0)</argsstring>
+        <name>validation_error</name>
+        <param>
+          <type>kind_t</type>
+          <declname>kind</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>option_name</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>original_token</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>option_style</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/errors.hpp" line="433" column="1" bodyfile="libs/program_options/include/hpx/program_options/errors.hpp" bodystart="433" bodyend="439"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1validation__error_1adafd1bd214191f63fe6be2cf2b57dca9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::program_options::validation_error::~validation_error</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>~validation_error</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/errors.hpp" line="441" column="1" bodyfile="libs/program_options/include/hpx/program_options/errors.hpp" bodystart="441" bodyend="441"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1validation__error_1a26389249197356a445f56e4c5ed50a13" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>kind_t</type>
+        <definition>kind_t hpx::program_options::validation_error::kind</definition>
+        <argsstring>() const</argsstring>
+        <name>kind</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/errors.hpp" line="443" column="1" bodyfile="libs/program_options/include/hpx/program_options/errors.hpp" bodystart="443" bodyend="446"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1validation__error_1a4edc7415bc081820ad4258abe45211d1" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string hpx::program_options::validation_error::get_template</definition>
+        <argsstring>(kind_t kind)</argsstring>
+        <name>get_template</name>
+        <param>
+          <type>kind_t</type>
+          <declname>kind</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Used to convert kind_t to a related error text </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/errors.hpp" line="450" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class thrown when value of option is incorrect. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="225">
+        <label>hpx::program_options::invalid_bool_value</label>
+        <link refid="classhpx_1_1program__options_1_1invalid__bool__value"/>
+        <childnode refid="221" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="224">
+        <label>std::logic_error</label>
+      </node>
+      <node id="221">
+        <label>hpx::program_options::validation_error</label>
+        <link refid="classhpx_1_1program__options_1_1validation__error"/>
+        <childnode refid="222" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="223">
+        <label>hpx::program_options::error</label>
+        <link refid="classhpx_1_1program__options_1_1error"/>
+        <childnode refid="224" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="222">
+        <label>hpx::program_options::error_with_option_name</label>
+        <link refid="classhpx_1_1program__options_1_1error__with__option__name"/>
+        <childnode refid="223" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="226">
+        <label>hpx::program_options::invalid_option_value</label>
+        <link refid="classhpx_1_1program__options_1_1invalid__option__value"/>
+        <childnode refid="221" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="230">
+        <label>std::logic_error</label>
+      </node>
+      <node id="227">
+        <label>hpx::program_options::validation_error</label>
+        <link refid="classhpx_1_1program__options_1_1validation__error"/>
+        <childnode refid="228" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="229">
+        <label>hpx::program_options::error</label>
+        <link refid="classhpx_1_1program__options_1_1error"/>
+        <childnode refid="230" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="228">
+        <label>hpx::program_options::error_with_option_name</label>
+        <link refid="classhpx_1_1program__options_1_1error__with__option__name"/>
+        <childnode refid="229" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libs/program_options/include/hpx/program_options/errors.hpp" line="421" column="1" bodyfile="libs/program_options/include/hpx/program_options/errors.hpp" bodystart="420" bodyend="452"/>
+    <listofallmembers>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1a6fb7db39524adc2e646769a505fbd073" prot="public" virt="non-virtual"><scope>hpx::program_options::validation_error</scope><name>add_context</name></member>
+      <member refid="classhpx_1_1program__options_1_1validation__error_1aff57b42f148e2374f7e07c4b056e66d1a11f5a6ac13efd417ef0839a360c268b0" prot="public" virt="non-virtual"><scope>hpx::program_options::validation_error</scope><name>at_least_one_value_required</name></member>
+      <member refid="classhpx_1_1program__options_1_1error_1ab26c4ac8097f493326e797cb5e49ce60" prot="public" virt="non-virtual"><scope>hpx::program_options::validation_error</scope><name>error</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1ade012afab216c2fc9459acc43eaec793" prot="public" virt="non-virtual"><scope>hpx::program_options::validation_error</scope><name>error_with_option_name</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1a0b65fb289c649b71e52d0581173a0c8e" prot="protected" virt="non-virtual"><scope>hpx::program_options::validation_error</scope><name>get_canonical_option_name</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1ab62af4c0675cc19fbf04f6ac9b7402ff" prot="protected" virt="non-virtual"><scope>hpx::program_options::validation_error</scope><name>get_canonical_option_prefix</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1a8562ba15ccf457f4ac5e609337ff916d" prot="public" virt="non-virtual"><scope>hpx::program_options::validation_error</scope><name>get_option_name</name></member>
+      <member refid="classhpx_1_1program__options_1_1validation__error_1a4edc7415bc081820ad4258abe45211d1" prot="protected" virt="non-virtual"><scope>hpx::program_options::validation_error</scope><name>get_template</name></member>
+      <member refid="classhpx_1_1program__options_1_1validation__error_1aff57b42f148e2374f7e07c4b056e66d1a14c8a869f1e7c62072c6bb52de9e2242" prot="public" virt="non-virtual"><scope>hpx::program_options::validation_error</scope><name>invalid_bool_value</name></member>
+      <member refid="classhpx_1_1program__options_1_1validation__error_1aff57b42f148e2374f7e07c4b056e66d1a9b1fb33affe54305264543ea05c3195a" prot="public" virt="non-virtual"><scope>hpx::program_options::validation_error</scope><name>invalid_option</name></member>
+      <member refid="classhpx_1_1program__options_1_1validation__error_1aff57b42f148e2374f7e07c4b056e66d1aa27f4e393f8b13438b93cc7a001454bd" prot="public" virt="non-virtual"><scope>hpx::program_options::validation_error</scope><name>invalid_option_value</name></member>
+      <member refid="classhpx_1_1program__options_1_1validation__error_1a26389249197356a445f56e4c5ed50a13" prot="public" virt="non-virtual"><scope>hpx::program_options::validation_error</scope><name>kind</name></member>
+      <member refid="classhpx_1_1program__options_1_1validation__error_1aff57b42f148e2374f7e07c4b056e66d1" prot="public" virt="non-virtual"><scope>hpx::program_options::validation_error</scope><name>kind_t</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1a134f824d91347da4b0b2761e1297a0cd" prot="public" virt="non-virtual"><scope>hpx::program_options::validation_error</scope><name>m_error_template</name></member>
+      <member refid="classhpx_1_1program__options_1_1validation__error_1a84b7f0c660e427b2892af75c64da308f" prot="protected" virt="non-virtual"><scope>hpx::program_options::validation_error</scope><name>m_kind</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1ac8adc037b1f8683c8f2b97752d8417fa" prot="protected" virt="non-virtual"><scope>hpx::program_options::validation_error</scope><name>m_message</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1ad08d9687c8511639fd73615fb1c5c7e5" prot="protected" virt="non-virtual"><scope>hpx::program_options::validation_error</scope><name>m_option_style</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1a98f723108458e193563832e3df1f07ab" prot="protected" virt="non-virtual"><scope>hpx::program_options::validation_error</scope><name>m_substitution_defaults</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1a8d9c3efa92db291b0e0f8a22249e4864" prot="protected" virt="non-virtual"><scope>hpx::program_options::validation_error</scope><name>m_substitutions</name></member>
+      <member refid="classhpx_1_1program__options_1_1validation__error_1aff57b42f148e2374f7e07c4b056e66d1add69740c2cbbb6de54511c01f3d4434d" prot="public" virt="non-virtual"><scope>hpx::program_options::validation_error</scope><name>multiple_values_not_allowed</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1a8a8e92acfe74094edc3a09c57376974d" prot="protected" virt="non-virtual"><scope>hpx::program_options::validation_error</scope><name>replace_token</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1af6e1934eb1358195fe96fa37a5410b55" prot="public" virt="virtual"><scope>hpx::program_options::validation_error</scope><name>set_option_name</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1ad4b6ea7facfabaf9024568954ff1b46a" prot="public" virt="non-virtual"><scope>hpx::program_options::validation_error</scope><name>set_original_token</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1aafaa36fc2ddb43600cb5058b4cca8c64" prot="public" virt="non-virtual"><scope>hpx::program_options::validation_error</scope><name>set_prefix</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1ae31197640118ca6108a31b90a38b684e" prot="public" virt="non-virtual"><scope>hpx::program_options::validation_error</scope><name>set_substitute</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1a8fb32fc5333a833f7f2c2a0f8cec09de" prot="public" virt="non-virtual"><scope>hpx::program_options::validation_error</scope><name>set_substitute_default</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1ad3a23ca94f6fb77cab3e171afbe63e23" prot="protected" virt="non-virtual"><scope>hpx::program_options::validation_error</scope><name>string_pair</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1a372829ce0ee974d480b2cce57ea1db73" prot="protected" virt="virtual"><scope>hpx::program_options::validation_error</scope><name>substitute_placeholders</name></member>
+      <member refid="classhpx_1_1program__options_1_1validation__error_1abaee8eed512d70d20457455c9483bee7" prot="public" virt="non-virtual"><scope>hpx::program_options::validation_error</scope><name>validation_error</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1a0fcfa7271ddc04650f36445463ab23db" prot="public" virt="non-virtual"><scope>hpx::program_options::validation_error</scope><name>what</name></member>
+      <member refid="classhpx_1_1program__options_1_1error__with__option__name_1a9ad92bead5bb8545653682ad675fc1f0" prot="public" virt="non-virtual"><scope>hpx::program_options::validation_error</scope><name>~error_with_option_name</name></member>
+      <member refid="classhpx_1_1program__options_1_1validation__error_1adafd1bd214191f63fe6be2cf2b57dca9" prot="public" virt="non-virtual"><scope>hpx::program_options::validation_error</scope><name>~validation_error</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

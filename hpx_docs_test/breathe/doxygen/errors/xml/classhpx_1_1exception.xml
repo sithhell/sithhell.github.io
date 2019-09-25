@@ -1,0 +1,278 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classhpx_1_1exception" kind="class" language="C++" prot="public">
+    <compoundname>hpx::exception</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">system_error</basecompoundref>
+    <derivedcompoundref refid="classhpx_1_1exception__list" prot="public" virt="non-virtual">hpx::exception_list</derivedcompoundref>
+    <includes refid="hpx_2errors_2exception_8hpp" local="no">exception.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhpx_1_1exception_1a13610d02885fc91e014fdb58debe996b" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hpx::exception::exception</definition>
+        <argsstring>(error e=success)</argsstring>
+        <name>exception</name>
+        <param>
+          <type>error</type>
+          <declname>e</declname>
+          <defval>success</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct a <ref refid="classhpx_1_1exception" kindref="compound">hpx::exception</ref> from a <emphasis>hpx::error</emphasis>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameter <computeroutput>e</computeroutput> holds the hpx::error code the new exception should encapsulate. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/errors/include/hpx/errors/exception.hpp" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1exception_1afa51e14009dcdcd574b86794771314f3" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hpx::exception::exception</definition>
+        <argsstring>(boost::system::system_error const &amp;e)</argsstring>
+        <name>exception</name>
+        <param>
+          <type>boost::system::system_error const &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Construct a <ref refid="classhpx_1_1exception" kindref="compound">hpx::exception</ref> from a boost::system_error. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/errors/include/hpx/errors/exception.hpp" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1exception_1afbf231449a2ee653cb03ad3efed381e8" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hpx::exception::exception</definition>
+        <argsstring>(boost::system::error_code const &amp;e)</argsstring>
+        <name>exception</name>
+        <param>
+          <type>boost::system::error_code const &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct a <ref refid="classhpx_1_1exception" kindref="compound">hpx::exception</ref> from a boost::system::error_code (this is new for Boost V1.69). This constructor is required to compensate for the changes introduced as a resolution to LWG3162 (<ulink url="https://cplusplus.github.io/LWG/issue3162">https://cplusplus.github.io/LWG/issue3162</ulink>). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/errors/include/hpx/errors/exception.hpp" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1exception_1a06bc6239c2b0a4222d72e088a56c6146" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hpx::exception::exception</definition>
+        <argsstring>(error e, char const *msg, throwmode mode=plain)</argsstring>
+        <name>exception</name>
+        <param>
+          <type>error</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>throwmode</type>
+          <declname>mode</declname>
+          <defval>plain</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct a <ref refid="classhpx_1_1exception" kindref="compound">hpx::exception</ref> from a <emphasis>hpx::error</emphasis> and an error message.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameter <computeroutput>e</computeroutput> holds the hpx::error code the new exception should encapsulate. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameter <computeroutput>msg</computeroutput> holds the error message the new exception should encapsulate. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameter <computeroutput>mode</computeroutput> specifies whether the returned <ref refid="classhpx_1_1error__code" kindref="compound">hpx::error_code</ref> belongs to the error category <emphasis>hpx_category</emphasis> (if mode is <emphasis>plain</emphasis>, this is the default) or to the category <emphasis>hpx_category_rethrow</emphasis> (if mode is <emphasis>rethrow</emphasis>). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/errors/include/hpx/errors/exception.hpp" line="69" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1exception_1a25070a178aea9151b3ee9c853112a900" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hpx::exception::exception</definition>
+        <argsstring>(error e, std::string const &amp;msg, throwmode mode=plain)</argsstring>
+        <name>exception</name>
+        <param>
+          <type>error</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>throwmode</type>
+          <declname>mode</declname>
+          <defval>plain</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct a <ref refid="classhpx_1_1exception" kindref="compound">hpx::exception</ref> from a <emphasis>hpx::error</emphasis> and an error message.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameter <computeroutput>e</computeroutput> holds the hpx::error code the new exception should encapsulate. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameter <computeroutput>msg</computeroutput> holds the error message the new exception should encapsulate. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameter <computeroutput>mode</computeroutput> specifies whether the returned <ref refid="classhpx_1_1error__code" kindref="compound">hpx::error_code</ref> belongs to the error category <emphasis>hpx_category</emphasis> (if mode is <emphasis>plain</emphasis>, this is the default) or to the category <emphasis>hpx_category_rethrow</emphasis> (if mode is <emphasis>rethrow</emphasis>). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/errors/include/hpx/errors/exception.hpp" line="82" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1exception_1a46c5fc788045ba94e8e03d7d88db7440" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hpx::exception::~exception</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>~exception</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destruct a <ref refid="classhpx_1_1exception" kindref="compound">hpx::exception</ref></para><para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>nothing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/errors/include/hpx/errors/exception.hpp" line="87" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1exception_1a24a553bfeb6e4a31090d81cde1cd0834" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>error</type>
+        <definition>error hpx::exception::get_error</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>get_error</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The function <emphasis><ref refid="classhpx_1_1exception_1a24a553bfeb6e4a31090d81cde1cd0834" kindref="member">get_error()</ref></emphasis> returns the hpx::error code stored in the referenced instance of a <ref refid="classhpx_1_1exception" kindref="compound">hpx::exception</ref>. It returns the hpx::error code this exception instance was constructed from.</para><para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>nothing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/errors/include/hpx/errors/exception.hpp" line="95" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1exception_1af1e2fd7574114a23cb9cd4d366d5ad30" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classhpx_1_1error__code" kindref="compound">error_code</ref></type>
+        <definition>error_code hpx::exception::get_error_code</definition>
+        <argsstring>(throwmode mode=plain) const noexcept</argsstring>
+        <name>get_error_code</name>
+        <param>
+          <type>throwmode</type>
+          <declname>mode</declname>
+          <defval>plain</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The function <emphasis><ref refid="classhpx_1_1exception_1af1e2fd7574114a23cb9cd4d366d5ad30" kindref="member">get_error_code()</ref></emphasis> returns a <ref refid="classhpx_1_1error__code" kindref="compound">hpx::error_code</ref> which represents the same error condition as this <ref refid="classhpx_1_1exception" kindref="compound">hpx::exception</ref> instance.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameter <computeroutput>mode</computeroutput> specifies whether the returned <ref refid="classhpx_1_1error__code" kindref="compound">hpx::error_code</ref> belongs to the error category <emphasis>hpx_category</emphasis> (if mode is <emphasis>plain</emphasis>, this is the default) or to the category <emphasis>hpx_category_rethrow</emphasis> (if mode is <emphasis>rethrow</emphasis>). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/errors/include/hpx/errors/exception.hpp" line="105" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A <ref refid="classhpx_1_1exception" kindref="compound">hpx::exception</ref> is the main exception type used by HPX to report errors. </para>    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classhpx_1_1exception" kindref="compound">hpx::exception</ref> type is the main exception type used by HPX to report errors. Any exceptions thrown by functions in the HPX library are either of this type or of a type derived from it. This implies that it is always safe to use this type only in catch statements guarding HPX library calls. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="7">
+        <label>boost::system::system_error</label>
+      </node>
+      <node id="8">
+        <label>hpx::exception_list</label>
+        <link refid="classhpx_1_1exception__list"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>hpx::exception</label>
+        <link refid="classhpx_1_1exception"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="10">
+        <label>boost::system::system_error</label>
+      </node>
+      <node id="9">
+        <label>hpx::exception</label>
+        <link refid="classhpx_1_1exception"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libs/errors/include/hpx/errors/exception.hpp" line="41" column="1" bodyfile="libs/errors/include/hpx/errors/exception.hpp" bodystart="40" bodyend="106"/>
+    <listofallmembers>
+      <member refid="classhpx_1_1exception_1a13610d02885fc91e014fdb58debe996b" prot="public" virt="non-virtual"><scope>hpx::exception</scope><name>exception</name></member>
+      <member refid="classhpx_1_1exception_1afa51e14009dcdcd574b86794771314f3" prot="public" virt="non-virtual"><scope>hpx::exception</scope><name>exception</name></member>
+      <member refid="classhpx_1_1exception_1afbf231449a2ee653cb03ad3efed381e8" prot="public" virt="non-virtual"><scope>hpx::exception</scope><name>exception</name></member>
+      <member refid="classhpx_1_1exception_1a06bc6239c2b0a4222d72e088a56c6146" prot="public" virt="non-virtual"><scope>hpx::exception</scope><name>exception</name></member>
+      <member refid="classhpx_1_1exception_1a25070a178aea9151b3ee9c853112a900" prot="public" virt="non-virtual"><scope>hpx::exception</scope><name>exception</name></member>
+      <member refid="classhpx_1_1exception_1a24a553bfeb6e4a31090d81cde1cd0834" prot="public" virt="non-virtual"><scope>hpx::exception</scope><name>get_error</name></member>
+      <member refid="classhpx_1_1exception_1af1e2fd7574114a23cb9cd4d366d5ad30" prot="public" virt="non-virtual"><scope>hpx::exception</scope><name>get_error_code</name></member>
+      <member refid="classhpx_1_1exception_1a46c5fc788045ba94e8e03d7d88db7440" prot="public" virt="non-virtual"><scope>hpx::exception</scope><name>~exception</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

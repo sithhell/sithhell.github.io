@@ -1,0 +1,512 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structboost_1_1lockfree_1_1deque" kind="struct" language="C++" prot="public">
+    <compoundname>boost::lockfree::deque</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+      <param>
+        <type>typename freelist_t</type>
+        <defval>caching_freelist_t</defval>
+      </param>
+      <param>
+        <type>typename Alloc</type>
+        <defval>std::allocator&lt;T&gt;</defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structboost_1_1lockfree_1_1deque_1a689858686bc9af2ea8bc6533878ab0de" prot="public" static="no">
+        <type><ref refid="structboost_1_1lockfree_1_1deque__node" kindref="compound">deque_node</ref>&lt; T &gt;</type>
+        <definition>typedef deque_node&lt;T&gt; boost::lockfree::deque&lt; T, freelist_t, Alloc &gt;::node</definition>
+        <argsstring></argsstring>
+        <name>node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/deque.hpp" line="199" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/deque.hpp" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structboost_1_1lockfree_1_1deque_1ad0acc70512efb63b0599950fb6cf33d4" prot="public" static="no">
+        <type>node::pointer</type>
+        <definition>typedef node::pointer boost::lockfree::deque&lt; T, freelist_t, Alloc &gt;::node_pointer</definition>
+        <argsstring></argsstring>
+        <name>node_pointer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/deque.hpp" line="200" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/deque.hpp" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structboost_1_1lockfree_1_1deque_1abe8350bb91a98e260d06a2456f62e80a" prot="public" static="no">
+        <type>node::atomic_pointer</type>
+        <definition>typedef node::atomic_pointer boost::lockfree::deque&lt; T, freelist_t, Alloc &gt;::atomic_node_pointer</definition>
+        <argsstring></argsstring>
+        <name>atomic_node_pointer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/deque.hpp" line="201" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/deque.hpp" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structboost_1_1lockfree_1_1deque_1a4946e4b48e38e86b70a61bc9bbb6f101" prot="public" static="no">
+        <type>node::tag_t</type>
+        <definition>typedef node::tag_t boost::lockfree::deque&lt; T, freelist_t, Alloc &gt;::tag_t</definition>
+        <argsstring></argsstring>
+        <name>tag_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/deque.hpp" line="203" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/deque.hpp" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structboost_1_1lockfree_1_1deque_1a3e5d8350a0c5be9c38954094b79e6566" prot="public" static="no">
+        <type><ref refid="structboost_1_1lockfree_1_1deque__anchor" kindref="compound">deque_anchor</ref>&lt; T &gt;</type>
+        <definition>typedef deque_anchor&lt;T&gt; boost::lockfree::deque&lt; T, freelist_t, Alloc &gt;::anchor</definition>
+        <argsstring></argsstring>
+        <name>anchor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/deque.hpp" line="205" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/deque.hpp" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structboost_1_1lockfree_1_1deque_1abc9944f84e8a49b1fabf8207b6d2f59b" prot="public" static="no">
+        <type>anchor::pair</type>
+        <definition>typedef anchor::pair boost::lockfree::deque&lt; T, freelist_t, Alloc &gt;::anchor_pair</definition>
+        <argsstring></argsstring>
+        <name>anchor_pair</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/deque.hpp" line="206" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/deque.hpp" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structboost_1_1lockfree_1_1deque_1a62e728c602d350f5f8e9a60e7af4becd" prot="public" static="no">
+        <type>anchor::atomic_pair</type>
+        <definition>typedef anchor::atomic_pair boost::lockfree::deque&lt; T, freelist_t, Alloc &gt;::atomic_anchor_pair</definition>
+        <argsstring></argsstring>
+        <name>atomic_anchor_pair</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/deque.hpp" line="207" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/deque.hpp" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structboost_1_1lockfree_1_1deque_1a7fd7ce7392b7d083c481a7dfee46431f" prot="public" static="no">
+        <type>Alloc::template rebind&lt; <ref refid="structboost_1_1lockfree_1_1deque__node" kindref="compound">node</ref> &gt;::other</type>
+        <definition>typedef Alloc::template rebind&lt;node&gt;::other boost::lockfree::deque&lt; T, freelist_t, Alloc &gt;::node_allocator</definition>
+        <argsstring></argsstring>
+        <name>node_allocator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/deque.hpp" line="209" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/deque.hpp" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structboost_1_1lockfree_1_1deque_1ae05a6cd22638ba84bd62a29a5bbb760b" prot="public" static="no">
+        <type>std::conditional&lt; std::is_same&lt; freelist_t, caching_freelist_t &gt;::value, caching_freelist&lt; <ref refid="structboost_1_1lockfree_1_1deque__node" kindref="compound">node</ref>, node_allocator &gt;, static_freelist&lt; <ref refid="structboost_1_1lockfree_1_1deque__node" kindref="compound">node</ref>, node_allocator &gt; &gt;::type</type>
+        <definition>typedef std::conditional&lt; std::is_same&lt;freelist_t, caching_freelist_t&gt;::value, caching_freelist&lt;node, node_allocator&gt;, static_freelist&lt;node, node_allocator&gt; &gt;::type boost::lockfree::deque&lt; T, freelist_t, Alloc &gt;::pool</definition>
+        <argsstring></argsstring>
+        <name>pool</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/deque.hpp" line="214" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/deque.hpp" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structboost_1_1lockfree_1_1deque_1a4d05f2bbd68c010c5e33b006ee37ecb3" prot="private" static="no" mutable="no">
+        <type><ref refid="structboost_1_1lockfree_1_1deque__anchor" kindref="compound">anchor</ref></type>
+        <definition>anchor boost::lockfree::deque&lt; T, freelist_t, Alloc &gt;::anchor_</definition>
+        <argsstring></argsstring>
+        <name>anchor_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/deque.hpp" line="217" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/deque.hpp" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structboost_1_1lockfree_1_1deque_1a38004f8986a2cf0ae319208924a1953c" prot="private" static="no" mutable="no">
+        <type>pool</type>
+        <definition>pool boost::lockfree::deque&lt; T, freelist_t, Alloc &gt;::pool_</definition>
+        <argsstring></argsstring>
+        <name>pool_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/deque.hpp" line="218" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/deque.hpp" bodystart="218" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structboost_1_1lockfree_1_1deque_1a07256b5193217aebe5465896348d185f" prot="private" static="no" mutable="no">
+        <type>HPX_STATIC_CONSTEXPR int</type>
+        <definition>HPX_STATIC_CONSTEXPR int boost::lockfree::deque&lt; T, freelist_t, Alloc &gt;::padding_size</definition>
+        <argsstring></argsstring>
+        <name>padding_size</name>
+        <initializer>=
+            BOOST_LOCKFREE_CACHELINE_BYTES - sizeof(<ref refid="structboost_1_1lockfree_1_1deque__anchor" kindref="compound">anchor</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/deque.hpp" line="220" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/deque.hpp" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structboost_1_1lockfree_1_1deque_1ad4246d52c7139a38fbfa5797c57aa10c" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char boost::lockfree::deque&lt; T, freelist_t, Alloc &gt;::padding[padding_size]</definition>
+        <argsstring>[padding_size]</argsstring>
+        <name>padding</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/deque.hpp" line="222" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/deque.hpp" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structboost_1_1lockfree_1_1deque_1a0694898e584f2569edfb1b097fdf02e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>boost::lockfree::deque&lt; T, freelist_t, Alloc &gt;::HPX_NON_COPYABLE</definition>
+        <argsstring>(deque)</argsstring>
+        <name>HPX_NON_COPYABLE</name>
+        <param>
+          <type><ref refid="structboost_1_1lockfree_1_1deque" kindref="compound">deque</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/deque.hpp" line="196" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structboost_1_1lockfree_1_1deque_1a4c2f4b43f4895bd98bf6113b6b56a274" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>boost::lockfree::deque&lt; T, freelist_t, Alloc &gt;::deque</definition>
+        <argsstring>(std::size_t initial_nodes=128)</argsstring>
+        <name>deque</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>initial_nodes</declname>
+          <defval>128</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/deque.hpp" line="312" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/deque.hpp" bodystart="312" bodyend="316"/>
+      </memberdef>
+      <memberdef kind="function" id="structboost_1_1lockfree_1_1deque_1a63ef1525a2eaa54dd0761b54d3584587" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>boost::lockfree::deque&lt; T, freelist_t, Alloc &gt;::~deque</definition>
+        <argsstring>()</argsstring>
+        <name>~deque</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/deque.hpp" line="320" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/deque.hpp" bodystart="320" bodyend="331"/>
+      </memberdef>
+      <memberdef kind="function" id="structboost_1_1lockfree_1_1deque_1ac39330d93432c1412a9bb5a28d0e5694" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool boost::lockfree::deque&lt; T, freelist_t, Alloc &gt;::empty</definition>
+        <argsstring>() const</argsstring>
+        <name>empty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/deque.hpp" line="336" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/deque.hpp" bodystart="336" bodyend="339"/>
+      </memberdef>
+      <memberdef kind="function" id="structboost_1_1lockfree_1_1deque_1a5bfa62b88853c9f96fa74cc7a0534093" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool boost::lockfree::deque&lt; T, freelist_t, Alloc &gt;::is_lock_free</definition>
+        <argsstring>() const</argsstring>
+        <name>is_lock_free</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/deque.hpp" line="343" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/deque.hpp" bodystart="343" bodyend="346"/>
+      </memberdef>
+      <memberdef kind="function" id="structboost_1_1lockfree_1_1deque_1a147a01fa4cbf3aeec52f2c97794c33c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool boost::lockfree::deque&lt; T, freelist_t, Alloc &gt;::push_left</definition>
+        <argsstring>(T const &amp;data)</argsstring>
+        <name>push_left</name>
+        <param>
+          <type>T const &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/deque.hpp" line="352" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/deque.hpp" bodystart="352" bodyend="404"/>
+      </memberdef>
+      <memberdef kind="function" id="structboost_1_1lockfree_1_1deque_1a21762db2f08fd3a8b7cd9a3930d3c489" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool boost::lockfree::deque&lt; T, freelist_t, Alloc &gt;::push_right</definition>
+        <argsstring>(T const &amp;data)</argsstring>
+        <name>push_right</name>
+        <param>
+          <type>T const &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/deque.hpp" line="410" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/deque.hpp" bodystart="410" bodyend="462"/>
+      </memberdef>
+      <memberdef kind="function" id="structboost_1_1lockfree_1_1deque_1a95181038a3bfd70e1a14932a089c4360" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool boost::lockfree::deque&lt; T, freelist_t, Alloc &gt;::pop_left</definition>
+        <argsstring>(T &amp;r)</argsstring>
+        <name>pop_left</name>
+        <param>
+          <type>T &amp;</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/deque.hpp" line="466" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/deque.hpp" bodystart="466" bodyend="522"/>
+      </memberdef>
+      <memberdef kind="function" id="structboost_1_1lockfree_1_1deque_1a31b06dd263dcc9bbee6556ee69163c3a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool boost::lockfree::deque&lt; T, freelist_t, Alloc &gt;::pop_left</definition>
+        <argsstring>(T *r)</argsstring>
+        <name>pop_left</name>
+        <param>
+          <type>T *</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/deque.hpp" line="524" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/deque.hpp" bodystart="524" bodyend="527"/>
+      </memberdef>
+      <memberdef kind="function" id="structboost_1_1lockfree_1_1deque_1a6321d3e28747921aa97aea3d967d7dd8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool boost::lockfree::deque&lt; T, freelist_t, Alloc &gt;::pop_right</definition>
+        <argsstring>(T &amp;r)</argsstring>
+        <name>pop_right</name>
+        <param>
+          <type>T &amp;</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/deque.hpp" line="531" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/deque.hpp" bodystart="531" bodyend="587"/>
+      </memberdef>
+      <memberdef kind="function" id="structboost_1_1lockfree_1_1deque_1aebdde9c1207f5a576f9174b13e51556a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool boost::lockfree::deque&lt; T, freelist_t, Alloc &gt;::pop_right</definition>
+        <argsstring>(T *r)</argsstring>
+        <name>pop_right</name>
+        <param>
+          <type>T *</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/deque.hpp" line="589" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/deque.hpp" bodystart="589" bodyend="592"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="structboost_1_1lockfree_1_1deque_1a7181181e4b4097fc842f45d50842eacf" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structboost_1_1lockfree_1_1deque__node" kindref="compound">node</ref> *</type>
+        <definition>node* boost::lockfree::deque&lt; T, freelist_t, Alloc &gt;::alloc_node</definition>
+        <argsstring>(node *lptr, node *rptr, T const &amp;v, tag_t ltag=0, tag_t rtag=0)</argsstring>
+        <name>alloc_node</name>
+        <param>
+          <type><ref refid="structboost_1_1lockfree_1_1deque__node" kindref="compound">node</ref> *</type>
+          <declname>lptr</declname>
+        </param>
+        <param>
+          <type><ref refid="structboost_1_1lockfree_1_1deque__node" kindref="compound">node</ref> *</type>
+          <declname>rptr</declname>
+        </param>
+        <param>
+          <type>T const &amp;</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>tag_t</type>
+          <declname>ltag</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>tag_t</type>
+          <declname>rtag</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/deque.hpp" line="224" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/deque.hpp" bodystart="224" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="structboost_1_1lockfree_1_1deque_1a17cb4e42ad79fe67f349aafcdf5673d5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void boost::lockfree::deque&lt; T, freelist_t, Alloc &gt;::dealloc_node</definition>
+        <argsstring>(node *n)</argsstring>
+        <name>dealloc_node</name>
+        <param>
+          <type><ref refid="structboost_1_1lockfree_1_1deque__node" kindref="compound">node</ref> *</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/deque.hpp" line="232" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/deque.hpp" bodystart="232" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="structboost_1_1lockfree_1_1deque_1a190ffc3c64a14c5b1e12b7aba08b3cd5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void boost::lockfree::deque&lt; T, freelist_t, Alloc &gt;::stabilize_left</definition>
+        <argsstring>(anchor_pair &amp;lrs)</argsstring>
+        <name>stabilize_left</name>
+        <param>
+          <type>anchor_pair &amp;</type>
+          <declname>lrs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/deque.hpp" line="238" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/deque.hpp" bodystart="238" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="structboost_1_1lockfree_1_1deque_1a66c135bfffbba7e6c49830dfbf17490d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void boost::lockfree::deque&lt; T, freelist_t, Alloc &gt;::stabilize_right</definition>
+        <argsstring>(anchor_pair &amp;lrs)</argsstring>
+        <name>stabilize_right</name>
+        <param>
+          <type>anchor_pair &amp;</type>
+          <declname>lrs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/deque.hpp" line="270" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/deque.hpp" bodystart="270" bodyend="300"/>
+      </memberdef>
+      <memberdef kind="function" id="structboost_1_1lockfree_1_1deque_1a5f59c7a8c11cf9519d9fd0bcc08ce1c5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void boost::lockfree::deque&lt; T, freelist_t, Alloc &gt;::stabilize</definition>
+        <argsstring>(anchor_pair &amp;lrs)</argsstring>
+        <name>stabilize</name>
+        <param>
+          <type>anchor_pair &amp;</type>
+          <declname>lrs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/deque.hpp" line="302" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/deque.hpp" bodystart="302" bodyend="309"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libs/concurrency/include/hpx/concurrency/deque.hpp" line="194" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/deque.hpp" bodystart="193" bodyend="593"/>
+    <listofallmembers>
+      <member refid="structboost_1_1lockfree_1_1deque_1a7181181e4b4097fc842f45d50842eacf" prot="private" virt="non-virtual"><scope>boost::lockfree::deque</scope><name>alloc_node</name></member>
+      <member refid="structboost_1_1lockfree_1_1deque_1a3e5d8350a0c5be9c38954094b79e6566" prot="public" virt="non-virtual"><scope>boost::lockfree::deque</scope><name>anchor</name></member>
+      <member refid="structboost_1_1lockfree_1_1deque_1a4d05f2bbd68c010c5e33b006ee37ecb3" prot="private" virt="non-virtual"><scope>boost::lockfree::deque</scope><name>anchor_</name></member>
+      <member refid="structboost_1_1lockfree_1_1deque_1abc9944f84e8a49b1fabf8207b6d2f59b" prot="public" virt="non-virtual"><scope>boost::lockfree::deque</scope><name>anchor_pair</name></member>
+      <member refid="structboost_1_1lockfree_1_1deque_1a62e728c602d350f5f8e9a60e7af4becd" prot="public" virt="non-virtual"><scope>boost::lockfree::deque</scope><name>atomic_anchor_pair</name></member>
+      <member refid="structboost_1_1lockfree_1_1deque_1abe8350bb91a98e260d06a2456f62e80a" prot="public" virt="non-virtual"><scope>boost::lockfree::deque</scope><name>atomic_node_pointer</name></member>
+      <member refid="structboost_1_1lockfree_1_1deque_1a17cb4e42ad79fe67f349aafcdf5673d5" prot="private" virt="non-virtual"><scope>boost::lockfree::deque</scope><name>dealloc_node</name></member>
+      <member refid="structboost_1_1lockfree_1_1deque_1a4c2f4b43f4895bd98bf6113b6b56a274" prot="public" virt="non-virtual"><scope>boost::lockfree::deque</scope><name>deque</name></member>
+      <member refid="structboost_1_1lockfree_1_1deque_1ac39330d93432c1412a9bb5a28d0e5694" prot="public" virt="non-virtual"><scope>boost::lockfree::deque</scope><name>empty</name></member>
+      <member refid="structboost_1_1lockfree_1_1deque_1a0694898e584f2569edfb1b097fdf02e5" prot="public" virt="non-virtual"><scope>boost::lockfree::deque</scope><name>HPX_NON_COPYABLE</name></member>
+      <member refid="structboost_1_1lockfree_1_1deque_1a5bfa62b88853c9f96fa74cc7a0534093" prot="public" virt="non-virtual"><scope>boost::lockfree::deque</scope><name>is_lock_free</name></member>
+      <member refid="structboost_1_1lockfree_1_1deque_1a689858686bc9af2ea8bc6533878ab0de" prot="public" virt="non-virtual"><scope>boost::lockfree::deque</scope><name>node</name></member>
+      <member refid="structboost_1_1lockfree_1_1deque_1a7fd7ce7392b7d083c481a7dfee46431f" prot="public" virt="non-virtual"><scope>boost::lockfree::deque</scope><name>node_allocator</name></member>
+      <member refid="structboost_1_1lockfree_1_1deque_1ad0acc70512efb63b0599950fb6cf33d4" prot="public" virt="non-virtual"><scope>boost::lockfree::deque</scope><name>node_pointer</name></member>
+      <member refid="structboost_1_1lockfree_1_1deque_1ad4246d52c7139a38fbfa5797c57aa10c" prot="private" virt="non-virtual"><scope>boost::lockfree::deque</scope><name>padding</name></member>
+      <member refid="structboost_1_1lockfree_1_1deque_1a07256b5193217aebe5465896348d185f" prot="private" virt="non-virtual"><scope>boost::lockfree::deque</scope><name>padding_size</name></member>
+      <member refid="structboost_1_1lockfree_1_1deque_1ae05a6cd22638ba84bd62a29a5bbb760b" prot="public" virt="non-virtual"><scope>boost::lockfree::deque</scope><name>pool</name></member>
+      <member refid="structboost_1_1lockfree_1_1deque_1a38004f8986a2cf0ae319208924a1953c" prot="private" virt="non-virtual"><scope>boost::lockfree::deque</scope><name>pool_</name></member>
+      <member refid="structboost_1_1lockfree_1_1deque_1a95181038a3bfd70e1a14932a089c4360" prot="public" virt="non-virtual"><scope>boost::lockfree::deque</scope><name>pop_left</name></member>
+      <member refid="structboost_1_1lockfree_1_1deque_1a31b06dd263dcc9bbee6556ee69163c3a" prot="public" virt="non-virtual"><scope>boost::lockfree::deque</scope><name>pop_left</name></member>
+      <member refid="structboost_1_1lockfree_1_1deque_1a6321d3e28747921aa97aea3d967d7dd8" prot="public" virt="non-virtual"><scope>boost::lockfree::deque</scope><name>pop_right</name></member>
+      <member refid="structboost_1_1lockfree_1_1deque_1aebdde9c1207f5a576f9174b13e51556a" prot="public" virt="non-virtual"><scope>boost::lockfree::deque</scope><name>pop_right</name></member>
+      <member refid="structboost_1_1lockfree_1_1deque_1a147a01fa4cbf3aeec52f2c97794c33c0" prot="public" virt="non-virtual"><scope>boost::lockfree::deque</scope><name>push_left</name></member>
+      <member refid="structboost_1_1lockfree_1_1deque_1a21762db2f08fd3a8b7cd9a3930d3c489" prot="public" virt="non-virtual"><scope>boost::lockfree::deque</scope><name>push_right</name></member>
+      <member refid="structboost_1_1lockfree_1_1deque_1a5f59c7a8c11cf9519d9fd0bcc08ce1c5" prot="private" virt="non-virtual"><scope>boost::lockfree::deque</scope><name>stabilize</name></member>
+      <member refid="structboost_1_1lockfree_1_1deque_1a190ffc3c64a14c5b1e12b7aba08b3cd5" prot="private" virt="non-virtual"><scope>boost::lockfree::deque</scope><name>stabilize_left</name></member>
+      <member refid="structboost_1_1lockfree_1_1deque_1a66c135bfffbba7e6c49830dfbf17490d" prot="private" virt="non-virtual"><scope>boost::lockfree::deque</scope><name>stabilize_right</name></member>
+      <member refid="structboost_1_1lockfree_1_1deque_1a4946e4b48e38e86b70a61bc9bbb6f101" prot="public" virt="non-virtual"><scope>boost::lockfree::deque</scope><name>tag_t</name></member>
+      <member refid="structboost_1_1lockfree_1_1deque_1a63ef1525a2eaa54dd0761b54d3584587" prot="public" virt="non-virtual"><scope>boost::lockfree::deque</scope><name>~deque</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

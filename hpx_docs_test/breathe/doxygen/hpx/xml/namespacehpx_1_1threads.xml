@@ -1,0 +1,1598 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacehpx_1_1threads" kind="namespace" language="C++">
+    <compoundname>hpx::threads</compoundname>
+    <innerclass refid="classhpx_1_1threads_1_1thread__pool__base" prot="public">hpx::threads::thread_pool_base</innerclass>
+    <innerclass refid="structhpx_1_1threads_1_1thread__pool__init__parameters" prot="public">hpx::threads::thread_pool_init_parameters</innerclass>
+    <innerclass refid="structhpx_1_1threads_1_1thread__schedule__hint" prot="public">hpx::threads::thread_schedule_hint</innerclass>
+    <innernamespace refid="namespacehpx_1_1threads_1_1policies">hpx::threads::policies</innernamespace>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="thread__enums_8hpp_1a2b4f23e851fbe362ea23cbd39233ae48" prot="public" static="no">
+        <name>thread_state_enum</name>
+        <enumvalue id="thread__enums_8hpp_1a2b4f23e851fbe362ea23cbd39233ae48a2135a317d33934cd66ad0d96dba0f150" prot="public">
+          <name>unknown</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="thread__enums_8hpp_1a2b4f23e851fbe362ea23cbd39233ae48a922f599d07a942666c6d08b3cf99231f" prot="public">
+          <name>active</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>thread is currently active (running, has resources) </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="thread__enums_8hpp_1a2b4f23e851fbe362ea23cbd39233ae48a01123b12d896b13ced81cf85b67191e2" prot="public">
+          <name>pending</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>thread is pending (ready to run, but no hardware resource available) </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="thread__enums_8hpp_1a2b4f23e851fbe362ea23cbd39233ae48a85673dcf8be2d61669feaa92f606ffa9" prot="public">
+          <name>suspended</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>thread has been suspended (waiting for synchronization event, but still known and under control of the thread-manager) </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="thread__enums_8hpp_1a2b4f23e851fbe362ea23cbd39233ae48a93e1b8029202384f295ab5633639679c" prot="public">
+          <name>depleted</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>thread has been depleted (deeply suspended, it is not known to the thread-manager) </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="thread__enums_8hpp_1a2b4f23e851fbe362ea23cbd39233ae48a3ab34aedce40dce0acc6676ac803d63b" prot="public">
+          <name>terminated</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>thread has been stopped an may be garbage collected </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="thread__enums_8hpp_1a2b4f23e851fbe362ea23cbd39233ae48a8ae6ae113316304f00d965608f06d537" prot="public">
+          <name>staged</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>this is not a real thread state, but allows to reference staged task descriptions, which eventually will be converted into thread objects </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="thread__enums_8hpp_1a2b4f23e851fbe362ea23cbd39233ae48af71c5d1ed8040fc740b99a27632d3ede" prot="public">
+          <name>pending_do_not_schedule</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="thread__enums_8hpp_1a2b4f23e851fbe362ea23cbd39233ae48afc1ecfae2fd50a84bb0e9d753ff65b11" prot="public">
+          <name>pending_boost</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The <emphasis>thread_state_enum</emphasis> enumerator encodes the current state of a <emphasis>thread</emphasis> instance </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_enums.hpp" line="25" column="1" bodyfile="hpx/runtime/threads/thread_enums.hpp" bodystart="24" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="enum" id="thread__enums_8hpp_1ac9ea71df1a6e7c564da9d1724432790a" prot="public" static="no">
+        <name>thread_priority</name>
+        <enumvalue id="thread__enums_8hpp_1ac9ea71df1a6e7c564da9d1724432790aab2db1a3cde0ff35d502e08bb63b8084c" prot="public">
+          <name>thread_priority_unknown</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="thread__enums_8hpp_1ac9ea71df1a6e7c564da9d1724432790aae41645acc119ecf695886dbcf849e916" prot="public">
+          <name>thread_priority_default</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Will assign the priority of the task to the default (normal) priority. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="thread__enums_8hpp_1ac9ea71df1a6e7c564da9d1724432790aab5e93f0663cdaf0753451c9c2a529715" prot="public">
+          <name>thread_priority_low</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Task goes onto a special low priority queue and will not be executed until all high/normal priority tasks are done, even if they are added after the low priority task. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="thread__enums_8hpp_1ac9ea71df1a6e7c564da9d1724432790aa345d08359faca000dfb7cbe377a9b1c3" prot="public">
+          <name>thread_priority_normal</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Task will be executed when it is taken from the normal priority queue, this is usually a first in-first-out ordering of tasks (depending on scheduler choice). This is the default priority. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="thread__enums_8hpp_1ac9ea71df1a6e7c564da9d1724432790aa2b2cb407a0b3a67a9ff832508164e828" prot="public">
+          <name>thread_priority_high_recursive</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The task is a high priority task and any child tasks spawned by this task will be made high priority as well - unless they are specifically flagged as non default priority. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="thread__enums_8hpp_1ac9ea71df1a6e7c564da9d1724432790aae13b992c06fa1c29118be87a5890aa47" prot="public">
+          <name>thread_priority_boost</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Same as <emphasis>thread_priority_high</emphasis> except that the thread will fall back to <emphasis>thread_priority_normal</emphasis> if resumed after being suspended. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="thread__enums_8hpp_1ac9ea71df1a6e7c564da9d1724432790aa63c6ba6959ac255ab0723cdc4c74f035" prot="public">
+          <name>thread_priority_high</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Task goes onto a special high priority queue and will be executed before normal/low priority tasks are taken (some schedulers modify the behavior slightly and the documentation for those should be consulted). </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This enumeration lists all possible thread-priorities for HPX threads. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_enums.hpp" line="65" column="1" bodyfile="hpx/runtime/threads/thread_enums.hpp" bodystart="64" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="enum" id="thread__enums_8hpp_1aa55297caca57a2d7beaa2e818bf5f147" prot="public" static="no">
+        <name>thread_state_ex_enum</name>
+        <enumvalue id="thread__enums_8hpp_1aa55297caca57a2d7beaa2e818bf5f147a5643e425f64f406816265d381c98705a" prot="public">
+          <name>wait_unknown</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="thread__enums_8hpp_1aa55297caca57a2d7beaa2e818bf5f147afc84b95e86a3ccc7cde28f1447e97333" prot="public">
+          <name>wait_signaled</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>The thread has been signaled. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="thread__enums_8hpp_1aa55297caca57a2d7beaa2e818bf5f147aec03d6be9d8d622e06b7b446c68dbc7f" prot="public">
+          <name>wait_timeout</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para>The thread has been reactivated after a timeout. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="thread__enums_8hpp_1aa55297caca57a2d7beaa2e818bf5f147a0c3c663d8770b1023c0409bda54d15b2" prot="public">
+          <name>wait_terminate</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+<para>The thread needs to be terminated. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="thread__enums_8hpp_1aa55297caca57a2d7beaa2e818bf5f147a2f4fbf42015f5e18ee5c6e516afd6442" prot="public">
+          <name>wait_abort</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+<para>The thread needs to be aborted. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The <emphasis>thread_state_ex_enum</emphasis> enumerator encodes the reason why a thread is being restarted </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_enums.hpp" line="110" column="1" bodyfile="hpx/runtime/threads/thread_enums.hpp" bodystart="109" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="enum" id="thread__enums_8hpp_1a27eef609b06d5b8b1f47c9a7c33a3843" prot="public" static="no">
+        <name>thread_stacksize</name>
+        <enumvalue id="thread__enums_8hpp_1a27eef609b06d5b8b1f47c9a7c33a3843a604203d40547e54fb84e628808dac362" prot="public">
+          <name>thread_stacksize_unknown</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="thread__enums_8hpp_1a27eef609b06d5b8b1f47c9a7c33a3843aacc8bea53b4543a6f56403f3e210945b" prot="public">
+          <name>thread_stacksize_small</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>use small stack size </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="thread__enums_8hpp_1a27eef609b06d5b8b1f47c9a7c33a3843ad14cce033e7ed81272037e737af91096" prot="public">
+          <name>thread_stacksize_medium</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para>use medium sized stack size </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="thread__enums_8hpp_1a27eef609b06d5b8b1f47c9a7c33a3843aaac53c9592d3a5079ff8ee4fa5164e38" prot="public">
+          <name>thread_stacksize_large</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+<para>use large stack size </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="thread__enums_8hpp_1a27eef609b06d5b8b1f47c9a7c33a3843a724aa61b92e010079a83f2dc8e194b71" prot="public">
+          <name>thread_stacksize_huge</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+<para>use very large stack size </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="thread__enums_8hpp_1a27eef609b06d5b8b1f47c9a7c33a3843a5ca2fa74f7541ea321942fece4c91aa1" prot="public">
+          <name>thread_stacksize_current</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+<para>use size of current thread&apos;s stack </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="thread__enums_8hpp_1a27eef609b06d5b8b1f47c9a7c33a3843a3b7b00ec88e7e39e9db689b34d26d551" prot="public">
+          <name>thread_stacksize_default</name>
+          <initializer>= thread_stacksize_small</initializer>
+          <briefdescription>
+<para>use default stack size </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="thread__enums_8hpp_1a27eef609b06d5b8b1f47c9a7c33a3843a2293daddc8f3fae60371ca181a03703b" prot="public">
+          <name>thread_stacksize_minimal</name>
+          <initializer>= thread_stacksize_small</initializer>
+          <briefdescription>
+<para>use minimally stack size </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="thread__enums_8hpp_1a27eef609b06d5b8b1f47c9a7c33a3843ac7ee34b10ff26d61028f5d1abcf7a4b9" prot="public">
+          <name>thread_stacksize_maximal</name>
+          <initializer>= thread_stacksize_huge</initializer>
+          <briefdescription>
+<para>use maximally stack size </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A <emphasis>thread_stacksize</emphasis> references any of the possible stack-sizes for HPX threads. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_enums.hpp" line="139" column="1" bodyfile="hpx/runtime/threads/thread_enums.hpp" bodystart="138" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="enum" id="thread__enums_8hpp_1a74bebf9391ba5e2676a520fea30b90af" prot="public" static="no">
+        <name>thread_schedule_hint_mode</name>
+        <enumvalue id="thread__enums_8hpp_1a74bebf9391ba5e2676a520fea30b90afa351634c4b0688a2467c4fd5dfa4c8100" prot="public">
+          <name>thread_schedule_hint_mode_none</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="thread__enums_8hpp_1a74bebf9391ba5e2676a520fea30b90afaf8333ff101f76ef368cb11475086177b" prot="public">
+          <name>thread_schedule_hint_mode_thread</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="thread__enums_8hpp_1a74bebf9391ba5e2676a520fea30b90afa3537f33fec757e35f90dbd35a0a40999" prot="public">
+          <name>thread_schedule_hint_mode_numa</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The type of hint given when creating new tasks. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_enums.hpp" line="167" column="1" bodyfile="hpx/runtime/threads/thread_enums.hpp" bodystart="166" bodyend="171"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="thread__enums_8hpp_1aa4c18c4cf981c5c6817544b1097f98b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char const  *</type>
+        <definition>char const* hpx::threads::get_thread_state_name</definition>
+        <argsstring>(thread_state_enum state)</argsstring>
+        <name>get_thread_state_name</name>
+        <param>
+          <type><ref refid="thread__enums_8hpp_1a2b4f23e851fbe362ea23cbd39233ae48" kindref="member">thread_state_enum</ref></type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Returns the name of the given state. </para>        </briefdescription>
+        <detaileddescription>
+<para>Get the readable string representing the name of the given thread_state constant.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>this represents the thread state. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_enums.hpp" line="59" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__enums_8hpp_1a2681da0f43a6b72b8b15bf56fe201392" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char const  *</type>
+        <definition>char const* hpx::threads::get_thread_priority_name</definition>
+        <argsstring>(thread_priority priority)</argsstring>
+        <name>get_thread_priority_name</name>
+        <param>
+          <type><ref refid="thread__enums_8hpp_1ac9ea71df1a6e7c564da9d1724432790a" kindref="member">thread_priority</ref></type>
+          <declname>priority</declname>
+        </param>
+        <briefdescription>
+<para>Return the thread priority name. </para>        </briefdescription>
+        <detaileddescription>
+<para>Get the readable string representing the name of the given thread_priority constant.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>this</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>represents the thread priority. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_enums.hpp" line="102" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__enums_8hpp_1a58f56602091632657e6d73c7ffb040c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char const  *</type>
+        <definition>char const* hpx::threads::get_thread_state_ex_name</definition>
+        <argsstring>(thread_state_ex_enum state)</argsstring>
+        <name>get_thread_state_ex_name</name>
+        <param>
+          <type><ref refid="thread__enums_8hpp_1aa55297caca57a2d7beaa2e818bf5f147" kindref="member">thread_state_ex_enum</ref></type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the readable string representing the name of the given thread_state_ex_enum constant. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_enums.hpp" line="120" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__enums_8hpp_1ad53166e46d411744e5fccce9dfee4672" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char const  *</type>
+        <definition>char const* hpx::threads::get_thread_state_name</definition>
+        <argsstring>(thread_state state)</argsstring>
+        <name>get_thread_state_name</name>
+        <param>
+          <type>thread_state</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the readable string representing the name of the given thread_state constant. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_enums.hpp" line="131" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__enums_8hpp_1a1f3d452ebf962e499d2d86c8686bb455" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char const  *</type>
+        <definition>char const* hpx::threads::get_stack_size_name</definition>
+        <argsstring>(std::ptrdiff_t size)</argsstring>
+        <name>get_stack_size_name</name>
+        <param>
+          <type>std::ptrdiff_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Returns the stack size name. </para>        </briefdescription>
+        <detaileddescription>
+<para>Get the readable string representing the given stack size constant.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>this represents the stack size </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_enums.hpp" line="160" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__data__fwd_8hpp_1a77859d42e81ecf27277b6c7bc166ae49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>thread_self &amp;</type>
+        <definition>thread_self&amp; hpx::threads::get_self</definition>
+        <argsstring>()</argsstring>
+        <name>get_self</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The function <emphasis>get_self</emphasis> returns a reference to the (OS thread specific) self reference to the current HPX thread. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_data_fwd.hpp" line="60" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__data__fwd_8hpp_1a45510897ddaea6512f6c00bf89802a9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>thread_self *</type>
+        <definition>thread_self* hpx::threads::get_self_ptr</definition>
+        <argsstring>()</argsstring>
+        <name>get_self_ptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The function <emphasis>get_self_ptr</emphasis> returns a pointer to the (OS thread specific) self reference to the current HPX thread. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_data_fwd.hpp" line="64" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__data__fwd_8hpp_1a62107deb3ee8749e4cab29d7c657f47c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>thread_self_impl_type *</type>
+        <definition>thread_self_impl_type* hpx::threads::get_ctx_ptr</definition>
+        <argsstring>()</argsstring>
+        <name>get_ctx_ptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The function <emphasis>get_ctx_ptr</emphasis> returns a pointer to the internal data associated with each coroutine. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_data_fwd.hpp" line="68" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__data__fwd_8hpp_1a69fe8464ce5d183ccc0297b1f2345ad3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>thread_self *</type>
+        <definition>thread_self* hpx::threads::get_self_ptr_checked</definition>
+        <argsstring>(error_code &amp;ec=throws)</argsstring>
+        <name>get_self_ptr_checked</name>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The function <emphasis>get_self_ptr_checked</emphasis> returns a pointer to the (OS thread specific) self reference to the current HPX thread. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_data_fwd.hpp" line="72" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__data__fwd_8hpp_1afafe0f900b9fac3d4ed3c747625c1cfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>thread_id_type</type>
+        <definition>thread_id_type hpx::threads::get_self_id</definition>
+        <argsstring>()</argsstring>
+        <name>get_self_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The function <emphasis>get_self_id</emphasis> returns the HPX thread id of the current thread (or zero if the current thread is not a HPX thread). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_data_fwd.hpp" line="76" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__data__fwd_8hpp_1a3be8ab17cbcf2b2d1fe0df0be9b373dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>thread_id_type</type>
+        <definition>thread_id_type hpx::threads::get_parent_id</definition>
+        <argsstring>()</argsstring>
+        <name>get_parent_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The function <emphasis>get_parent_id</emphasis> returns the HPX thread id of the current thread&apos;s parent (or zero if the current thread is not a HPX thread).</para><para><simplesect kind="note"><para>This function will return a meaningful value only if the code was compiled with HPX_HAVE_THREAD_PARENT_REFERENCE being defined. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_data_fwd.hpp" line="85" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__data__fwd_8hpp_1a91fbafda8b0e7c377d349d8032078714" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t hpx::threads::get_parent_phase</definition>
+        <argsstring>()</argsstring>
+        <name>get_parent_phase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The function <emphasis>get_parent_phase</emphasis> returns the HPX phase of the current thread&apos;s parent (or zero if the current thread is not a HPX thread).</para><para><simplesect kind="note"><para>This function will return a meaningful value only if the code was compiled with HPX_HAVE_THREAD_PARENT_REFERENCE being defined. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_data_fwd.hpp" line="94" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__data__fwd_8hpp_1a151264fbf7d066507ef1a342309bd3a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t hpx::threads::get_self_stacksize</definition>
+        <argsstring>()</argsstring>
+        <name>get_self_stacksize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The function <emphasis>get_self_stacksize</emphasis> returns the stack size of the current thread (or zero if the current thread is not a HPX thread). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_data_fwd.hpp" line="98" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__data__fwd_8hpp_1a19fe383da3491eceac32720c89ae8f7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint32_t</type>
+        <definition>std::uint32_t hpx::threads::get_parent_locality_id</definition>
+        <argsstring>()</argsstring>
+        <name>get_parent_locality_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The function <emphasis>get_parent_locality_id</emphasis> returns the id of the locality of the current thread&apos;s parent (or zero if the current thread is not a HPX thread).</para><para><simplesect kind="note"><para>This function will return a meaningful value only if the code was compiled with HPX_HAVE_THREAD_PARENT_REFERENCE being defined. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_data_fwd.hpp" line="107" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__data__fwd_8hpp_1aaf3979d5ae152739784f946eaab044c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint64_t</type>
+        <definition>std::uint64_t hpx::threads::get_self_component_id</definition>
+        <argsstring>()</argsstring>
+        <name>get_self_component_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The function <emphasis>get_self_component_id</emphasis> returns the lva of the component the current thread is acting on</para><para><simplesect kind="note"><para>This function will return a meaningful value only if the code was compiled with HPX_HAVE_THREAD_TARGET_ADDRESS being defined. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_data_fwd.hpp" line="115" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__data__fwd_8hpp_1ae2b675b9517381442c7201c041033680" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::int64_t</type>
+        <definition>std::int64_t hpx::threads::get_thread_count</definition>
+        <argsstring>(thread_state_enum state=unknown)</argsstring>
+        <name>get_thread_count</name>
+        <param>
+          <type><ref refid="thread__enums_8hpp_1a2b4f23e851fbe362ea23cbd39233ae48" kindref="member">thread_state_enum</ref></type>
+          <declname>state</declname>
+          <defval>unknown</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The function <emphasis>get_thread_count</emphasis> returns the number of currently known threads.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] This specifies the thread-state for which the number of threads should be retrieved.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>If state == unknown this function will not only return the number of currently existing threads, but will add the number of registered task descriptions (which have not been converted into threads yet). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_data_fwd.hpp" line="133" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__data__fwd_8hpp_1ae68a0d7159b5722ede72602f38cc83cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::int64_t</type>
+        <definition>std::int64_t hpx::threads::get_thread_count</definition>
+        <argsstring>(thread_priority priority, thread_state_enum state=unknown)</argsstring>
+        <name>get_thread_count</name>
+        <param>
+          <type><ref refid="thread__enums_8hpp_1ac9ea71df1a6e7c564da9d1724432790a" kindref="member">thread_priority</ref></type>
+          <declname>priority</declname>
+        </param>
+        <param>
+          <type><ref refid="thread__enums_8hpp_1a2b4f23e851fbe362ea23cbd39233ae48" kindref="member">thread_state_enum</ref></type>
+          <declname>state</declname>
+          <defval>unknown</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The function <emphasis>get_thread_count</emphasis> returns the number of currently known threads.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>priority</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] This specifies the thread-priority for which the number of threads should be retrieved. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] This specifies the thread-state for which the number of threads should be retrieved.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>If state == unknown this function will not only return the number of currently existing threads, but will add the number of registered task descriptions (which have not been converted into threads yet). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_data_fwd.hpp" line="148" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__data__fwd_8hpp_1a5dd2cea272f81a19d4f61470851a29cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hpx::threads::enumerate_threads</definition>
+        <argsstring>(util::function_nonser&lt; bool(thread_id_type)&gt; const &amp;f, thread_state_enum state=unknown)</argsstring>
+        <name>enumerate_threads</name>
+        <param>
+          <type>util::function_nonser&lt; bool(thread_id_type)&gt; const &amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type><ref refid="thread__enums_8hpp_1a2b4f23e851fbe362ea23cbd39233ae48" kindref="member">thread_state_enum</ref></type>
+          <declname>state</declname>
+          <defval>unknown</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The function <emphasis>enumerate_threads</emphasis> will invoke the given function <emphasis>f</emphasis> for each thread with a matching thread state.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The function which should be called for each matching thread. Returning &apos;false&apos; from this function will stop the enumeration process. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] This specifies the thread-state for which the threads should be enumerated. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_data_fwd.hpp" line="159" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__helpers_8hpp_1accc89ddcf53c4e11963b410497ec7d56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>thread_state</type>
+        <definition>thread_state hpx::threads::set_thread_state</definition>
+        <argsstring>(thread_id_type const &amp;id, thread_state_enum state=pending, thread_state_ex_enum stateex=wait_signaled, thread_priority priority=thread_priority_normal, bool retry_on_active=true, hpx::error_code &amp;ec=throws)</argsstring>
+        <name>set_thread_state</name>
+        <param>
+          <type>thread_id_type const &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type><ref refid="thread__enums_8hpp_1a2b4f23e851fbe362ea23cbd39233ae48" kindref="member">thread_state_enum</ref></type>
+          <declname>state</declname>
+          <defval>pending</defval>
+        </param>
+        <param>
+          <type><ref refid="thread__enums_8hpp_1aa55297caca57a2d7beaa2e818bf5f147" kindref="member">thread_state_ex_enum</ref></type>
+          <declname>stateex</declname>
+          <defval>wait_signaled</defval>
+        </param>
+        <param>
+          <type><ref refid="thread__enums_8hpp_1ac9ea71df1a6e7c564da9d1724432790a" kindref="member">thread_priority</ref></type>
+          <declname>priority</declname>
+          <defval>thread_priority_normal</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>retry_on_active</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>hpx::error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+<para>Set the thread state of the <emphasis>thread</emphasis> referenced by the thread_id <emphasis>id</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The thread id of the thread the state should be modified for. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The new state to be set for the thread referenced by the <emphasis>id</emphasis> parameter. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stateex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The new extended state to be set for the thread referenced by the <emphasis>id</emphasis> parameter. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>priority</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in,out] this represents the error status on exit, if this is pre-initialized to <emphasis>hpx::throws</emphasis> the function will throw on error instead.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>If the thread referenced by the parameter <emphasis>id</emphasis> is in <emphasis>thread_state::active</emphasis> state this function schedules a new thread which will set the state of the thread as soon as its not active anymore. The function returns <emphasis>thread_state::active</emphasis> in this case.</para></simplesect>
+<simplesect kind="return"><para>This function returns the previous state of the thread referenced by the <emphasis>id</emphasis> parameter. It will return one of the values as defined by the <emphasis>thread_state</emphasis> enumeration. If the thread is not known to the thread-manager the return value will be <emphasis>thread_state::unknown</emphasis>.</para></simplesect>
+<simplesect kind="note"><para>As long as <emphasis>ec</emphasis> is not pre-initialized to <emphasis>hpx::throws</emphasis> this function doesn&apos;t throw but returns the result code using the parameter <emphasis>ec</emphasis>. Otherwise it throws an instance of hpx::exception. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_helpers.hpp" line="73" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__helpers_8hpp_1ace50bb955f3c075714d3d5f656b7be69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>thread_id_type</type>
+        <definition>thread_id_type hpx::threads::set_thread_state</definition>
+        <argsstring>(thread_id_type const &amp;id, util::steady_time_point const &amp;abs_time, std::atomic&lt; bool &gt; *started, thread_state_enum state=pending, thread_state_ex_enum stateex=wait_timeout, thread_priority priority=thread_priority_normal, bool retry_on_active=true, error_code &amp;ec=throws)</argsstring>
+        <name>set_thread_state</name>
+        <param>
+          <type>thread_id_type const &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>util::steady_time_point const &amp;</type>
+          <declname>abs_time</declname>
+        </param>
+        <param>
+          <type>std::atomic&lt; bool &gt; *</type>
+          <declname>started</declname>
+        </param>
+        <param>
+          <type><ref refid="thread__enums_8hpp_1a2b4f23e851fbe362ea23cbd39233ae48" kindref="member">thread_state_enum</ref></type>
+          <declname>state</declname>
+          <defval>pending</defval>
+        </param>
+        <param>
+          <type><ref refid="thread__enums_8hpp_1aa55297caca57a2d7beaa2e818bf5f147" kindref="member">thread_state_ex_enum</ref></type>
+          <declname>stateex</declname>
+          <defval>wait_timeout</defval>
+        </param>
+        <param>
+          <type><ref refid="thread__enums_8hpp_1ac9ea71df1a6e7c564da9d1724432790a" kindref="member">thread_priority</ref></type>
+          <declname>priority</declname>
+          <defval>thread_priority_normal</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>retry_on_active</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+<para>Set the thread state of the <emphasis>thread</emphasis> referenced by the thread_id <emphasis>id</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Set a timer to set the state of the given <emphasis>thread</emphasis> to the given new value after it expired (at the given time)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The thread id of the thread the state should be modified for. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>abs_time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] Absolute point in time for the new thread to be run </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>started</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in,out] A helper variable allowing to track the state of the timer helper thread </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The new state to be set for the thread referenced by the <emphasis>id</emphasis> parameter. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stateex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The new extended state to be set for the thread referenced by the <emphasis>id</emphasis> parameter. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>priority</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in,out] this represents the error status on exit, if this is pre-initialized to <emphasis>hpx::throws</emphasis> the function will throw on error instead.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+<simplesect kind="note"><para>As long as <emphasis>ec</emphasis> is not pre-initialized to <emphasis>hpx::throws</emphasis> this function doesn&apos;t throw but returns the result code using the parameter <emphasis>ec</emphasis>. Otherwise it throws an instance of hpx::exception. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_helpers.hpp" line="109" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__helpers_8hpp_1a0acb8b1b2ebae3049a4f62f60de73fc5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>thread_id_type</type>
+        <definition>thread_id_type hpx::threads::set_thread_state</definition>
+        <argsstring>(thread_id_type const &amp;id, util::steady_time_point const &amp;abs_time, thread_state_enum state=pending, thread_state_ex_enum stateex=wait_timeout, thread_priority priority=thread_priority_normal, bool retry_on_active=true, error_code &amp;=throws)</argsstring>
+        <name>set_thread_state</name>
+        <param>
+          <type>thread_id_type const &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>util::steady_time_point const &amp;</type>
+          <declname>abs_time</declname>
+        </param>
+        <param>
+          <type><ref refid="thread__enums_8hpp_1a2b4f23e851fbe362ea23cbd39233ae48" kindref="member">thread_state_enum</ref></type>
+          <declname>state</declname>
+          <defval>pending</defval>
+        </param>
+        <param>
+          <type><ref refid="thread__enums_8hpp_1aa55297caca57a2d7beaa2e818bf5f147" kindref="member">thread_state_ex_enum</ref></type>
+          <declname>stateex</declname>
+          <defval>wait_timeout</defval>
+        </param>
+        <param>
+          <type><ref refid="thread__enums_8hpp_1ac9ea71df1a6e7c564da9d1724432790a" kindref="member">thread_priority</ref></type>
+          <declname>priority</declname>
+          <defval>thread_priority_normal</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>retry_on_active</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_helpers.hpp" line="118" column="1" bodyfile="hpx/runtime/threads/thread_helpers.hpp" bodystart="118" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__helpers_8hpp_1a6120998f20a3e44647af21553f1e2fc7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>thread_id_type</type>
+        <definition>thread_id_type hpx::threads::set_thread_state</definition>
+        <argsstring>(thread_id_type const &amp;id, util::steady_duration const &amp;rel_time, thread_state_enum state=pending, thread_state_ex_enum stateex=wait_timeout, thread_priority priority=thread_priority_normal, bool retry_on_active=true, error_code &amp;ec=throws)</argsstring>
+        <name>set_thread_state</name>
+        <param>
+          <type>thread_id_type const &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>util::steady_duration const &amp;</type>
+          <declname>rel_time</declname>
+        </param>
+        <param>
+          <type><ref refid="thread__enums_8hpp_1a2b4f23e851fbe362ea23cbd39233ae48" kindref="member">thread_state_enum</ref></type>
+          <declname>state</declname>
+          <defval>pending</defval>
+        </param>
+        <param>
+          <type><ref refid="thread__enums_8hpp_1aa55297caca57a2d7beaa2e818bf5f147" kindref="member">thread_state_ex_enum</ref></type>
+          <declname>stateex</declname>
+          <defval>wait_timeout</defval>
+        </param>
+        <param>
+          <type><ref refid="thread__enums_8hpp_1ac9ea71df1a6e7c564da9d1724432790a" kindref="member">thread_priority</ref></type>
+          <declname>priority</declname>
+          <defval>thread_priority_normal</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>retry_on_active</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+<para>Set the thread state of the <emphasis>thread</emphasis> referenced by the thread_id <emphasis>id</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>Set a timer to set the state of the given <emphasis>thread</emphasis> to the given new value after it expired (after the given duration)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The thread id of the thread the state should be modified for. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rel_time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] Time duration after which the new thread should be run </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The new state to be set for the thread referenced by the <emphasis>id</emphasis> parameter. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stateex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The new extended state to be set for the thread referenced by the <emphasis>id</emphasis> parameter. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>priority</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in,out] this represents the error status on exit, if this is pre-initialized to <emphasis>hpx::throws</emphasis> the function will throw on error instead.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+<simplesect kind="note"><para>As long as <emphasis>ec</emphasis> is not pre-initialized to <emphasis>hpx::throws</emphasis> this function doesn&apos;t throw but returns the result code using the parameter <emphasis>ec</emphasis>. Otherwise it throws an instance of hpx::exception. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_helpers.hpp" line="157" column="1" bodyfile="hpx/runtime/threads/thread_helpers.hpp" bodystart="157" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__helpers_8hpp_1a42fc18a7a680f4e8bc633a4b4c956701" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>util::thread_description</type>
+        <definition>util::thread_description hpx::threads::get_thread_description</definition>
+        <argsstring>(thread_id_type const &amp;id, error_code &amp;ec=throws)</argsstring>
+        <name>get_thread_description</name>
+        <param>
+          <type>thread_id_type const &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The function get_thread_description is part of the thread related API allows to query the description of one of the threads known to the thread-manager.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The thread id of the thread being queried. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in,out] this represents the error status on exit, if this is pre-initialized to <emphasis>hpx::throws</emphasis> the function will throw on error instead.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function returns the description of the thread referenced by the <emphasis>id</emphasis> parameter. If the thread is not known to the thread-manager the return value will be the string &quot;&lt;unknown&gt;&quot;.</para></simplesect>
+<simplesect kind="note"><para>As long as <emphasis>ec</emphasis> is not pre-initialized to <emphasis>hpx::throws</emphasis> this function doesn&apos;t throw but returns the result code using the parameter <emphasis>ec</emphasis>. Otherwise it throws an instance of hpx::exception. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_helpers.hpp" line="189" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__helpers_8hpp_1a55d8618440b2770d27c9a3b0409cc458" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>util::thread_description</type>
+        <definition>util::thread_description hpx::threads::set_thread_description</definition>
+        <argsstring>(thread_id_type const &amp;id, util::thread_description const &amp;desc=util::thread_description(), error_code &amp;ec=throws)</argsstring>
+        <name>set_thread_description</name>
+        <param>
+          <type>thread_id_type const &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>util::thread_description const &amp;</type>
+          <declname>desc</declname>
+          <defval>util::thread_description()</defval>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_helpers.hpp" line="191" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__helpers_8hpp_1a8ceba68dc535c85cbbcee3c7813843c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>util::thread_description</type>
+        <definition>util::thread_description hpx::threads::get_thread_lco_description</definition>
+        <argsstring>(thread_id_type const &amp;id, error_code &amp;ec=throws)</argsstring>
+        <name>get_thread_lco_description</name>
+        <param>
+          <type>thread_id_type const &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_helpers.hpp" line="196" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__helpers_8hpp_1a8462132c85ffc9637f5df1a661fcd060" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>util::thread_description</type>
+        <definition>util::thread_description hpx::threads::set_thread_lco_description</definition>
+        <argsstring>(thread_id_type const &amp;id, util::thread_description const &amp;desc=util::thread_description(), error_code &amp;ec=throws)</argsstring>
+        <name>set_thread_lco_description</name>
+        <param>
+          <type>thread_id_type const &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>util::thread_description const &amp;</type>
+          <declname>desc</declname>
+          <defval>util::thread_description()</defval>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_helpers.hpp" line="198" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__helpers_8hpp_1ae9d77763cbd8ba11b92d7c4bc81fc218" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>thread_state</type>
+        <definition>thread_state hpx::threads::get_thread_state</definition>
+        <argsstring>(thread_id_type const &amp;id, error_code &amp;ec=throws)</argsstring>
+        <name>get_thread_state</name>
+        <param>
+          <type>thread_id_type const &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The function get_thread_backtrace is part of the thread related API allows to query the currently stored thread back trace (which is captured during thread suspension).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The thread id of the thread being queried. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in,out] this represents the error status on exit, if this is pre-initialized to <emphasis>hpx::throws</emphasis> the function will throw on error instead.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function returns the currently captured stack back trace of the thread referenced by the <emphasis>id</emphasis> parameter. If the thread is not known to the thread-manager the return value will be the zero.</para></simplesect>
+<simplesect kind="note"><para>As long as <emphasis>ec</emphasis> is not pre-initialized to <emphasis>hpx::throws</emphasis> this function doesn&apos;t throw but returns the result code using the parameter <emphasis>ec</emphasis>. Otherwise it throws an instance of hpx::exception. The function get_thread_state is part of the thread related API. It queries the state of one of the threads known to the thread-manager.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The thread id of the thread the state should be modified for. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in,out] this represents the error status on exit, if this is pre-initialized to <emphasis>hpx::throws</emphasis> the function will throw on error instead.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function returns the thread state of the thread referenced by the <emphasis>id</emphasis> parameter. If the thread is not known to the thread-manager the return value will be <emphasis>terminated</emphasis>.</para></simplesect>
+<simplesect kind="note"><para>As long as <emphasis>ec</emphasis> is not pre-initialized to <emphasis>hpx::throws</emphasis> this function doesn&apos;t throw but returns the result code using the parameter <emphasis>ec</emphasis>. Otherwise it throws an instance of hpx::exception. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_helpers.hpp" line="259" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__helpers_8hpp_1a3ce97cba2f2807d8ffe0eda6ade58b93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t hpx::threads::get_thread_phase</definition>
+        <argsstring>(thread_id_type const &amp;id, error_code &amp;ec=throws)</argsstring>
+        <name>get_thread_phase</name>
+        <param>
+          <type>thread_id_type const &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The function get_thread_phase is part of the thread related API. It queries the phase of one of the threads known to the thread-manager.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The thread id of the thread the phase should be modified for. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in,out] this represents the error status on exit, if this is pre-initialized to <emphasis>hpx::throws</emphasis> the function will throw on error instead.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function returns the thread phase of the thread referenced by the <emphasis>id</emphasis> parameter. If the thread is not known to the thread-manager the return value will be ~0.</para></simplesect>
+<simplesect kind="note"><para>As long as <emphasis>ec</emphasis> is not pre-initialized to <emphasis>hpx::throws</emphasis> this function doesn&apos;t throw but returns the result code using the parameter <emphasis>ec</emphasis>. Otherwise it throws an instance of hpx::exception. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_helpers.hpp" line="282" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__helpers_8hpp_1adebeb57ed3c254e6e8e4b381ce0fe9f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t hpx::threads::get_numa_node_number</definition>
+        <argsstring>()</argsstring>
+        <name>get_numa_node_number</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_helpers.hpp" line="287" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__helpers_8hpp_1a4d9791470b5f5e2d1b9c0a0157aa7cf1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hpx::threads::get_thread_interruption_enabled</definition>
+        <argsstring>(thread_id_type const &amp;id, error_code &amp;ec=throws)</argsstring>
+        <name>get_thread_interruption_enabled</name>
+        <param>
+          <type>thread_id_type const &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns whether the given thread can be interrupted at this point.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The thread id of the thread which should be queried. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in,out] this represents the error status on exit, if this is pre-initialized to <emphasis>hpx::throws</emphasis> the function will throw on error instead.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function returns <emphasis>true</emphasis> if the given thread can be interrupted at this point in time. It will return <emphasis>false</emphasis> otherwise.</para></simplesect>
+<simplesect kind="note"><para>As long as <emphasis>ec</emphasis> is not pre-initialized to <emphasis>hpx::throws</emphasis> this function doesn&apos;t throw but returns the result code using the parameter <emphasis>ec</emphasis>. Otherwise it throws an instance of hpx::exception. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_helpers.hpp" line="307" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__helpers_8hpp_1a75500847880b479bb6944f5a6bee64ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hpx::threads::set_thread_interruption_enabled</definition>
+        <argsstring>(thread_id_type const &amp;id, bool enable, error_code &amp;ec=throws)</argsstring>
+        <name>set_thread_interruption_enabled</name>
+        <param>
+          <type>thread_id_type const &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set whether the given thread can be interrupted at this point.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The thread id of the thread which should receive the new value. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] This value will determine the new interruption enabled status for the given thread. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in,out] this represents the error status on exit, if this is pre-initialized to <emphasis>hpx::throws</emphasis> the function will throw on error instead.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function returns the previous value of whether the given thread could have been interrupted.</para></simplesect>
+<simplesect kind="note"><para>As long as <emphasis>ec</emphasis> is not pre-initialized to <emphasis>hpx::throws</emphasis> this function doesn&apos;t throw but returns the result code using the parameter <emphasis>ec</emphasis>. Otherwise it throws an instance of hpx::exception. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_helpers.hpp" line="328" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__helpers_8hpp_1ae64a7fdb8b5c8bac7be0c8282672a03b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hpx::threads::get_thread_interruption_requested</definition>
+        <argsstring>(thread_id_type const &amp;id, error_code &amp;ec=throws)</argsstring>
+        <name>get_thread_interruption_requested</name>
+        <param>
+          <type>thread_id_type const &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns whether the given thread has been flagged for interruption.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The thread id of the thread which should be queried. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in,out] this represents the error status on exit, if this is pre-initialized to <emphasis>hpx::throws</emphasis> the function will throw on error instead.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function returns <emphasis>true</emphasis> if the given thread was flagged for interruption. It will return <emphasis>false</emphasis> otherwise.</para></simplesect>
+<simplesect kind="note"><para>As long as <emphasis>ec</emphasis> is not pre-initialized to <emphasis>hpx::throws</emphasis> this function doesn&apos;t throw but returns the result code using the parameter <emphasis>ec</emphasis>. Otherwise it throws an instance of hpx::exception. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_helpers.hpp" line="348" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__helpers_8hpp_1a6bdda1a2aab61b9b13d274b5155d7e73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpx::threads::interrupt_thread</definition>
+        <argsstring>(thread_id_type const &amp;id, bool flag, error_code &amp;ec=throws)</argsstring>
+        <name>interrupt_thread</name>
+        <param>
+          <type>thread_id_type const &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>flag</declname>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flag the given thread for interruption.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The thread id of the thread which should be interrupted. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The flag encodes whether the thread should be interrupted (if it is <emphasis>true</emphasis>), or &apos;uninterrupted&apos; (if it is <emphasis>false</emphasis>). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in,out] this represents the error status on exit, if this is pre-initialized to <emphasis>hpx::throws</emphasis> the function will throw on error instead.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>As long as <emphasis>ec</emphasis> is not pre-initialized to <emphasis>hpx::throws</emphasis> this function doesn&apos;t throw but returns the result code using the parameter <emphasis>ec</emphasis>. Otherwise it throws an instance of hpx::exception. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_helpers.hpp" line="367" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__helpers_8hpp_1ae3f683ad072d61249bf20c67134d604c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpx::threads::interrupt_thread</definition>
+        <argsstring>(thread_id_type const &amp;id, error_code &amp;ec=throws)</argsstring>
+        <name>interrupt_thread</name>
+        <param>
+          <type>thread_id_type const &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_helpers.hpp" line="370" column="1" bodyfile="hpx/runtime/threads/thread_helpers.hpp" bodystart="370" bodyend="373"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__helpers_8hpp_1ada6ec56a12b050707311d8c628089059" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpx::threads::interruption_point</definition>
+        <argsstring>(thread_id_type const &amp;id, error_code &amp;ec=throws)</argsstring>
+        <name>interruption_point</name>
+        <param>
+          <type>thread_id_type const &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Interrupt the current thread at this point if it was canceled. This will throw a thread_interrupted exception, which will cancel the thread.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The thread id of the thread which should be interrupted. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in,out] this represents the error status on exit, if this is pre-initialized to <emphasis>hpx::throws</emphasis> the function will throw on error instead.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>As long as <emphasis>ec</emphasis> is not pre-initialized to <emphasis>hpx::throws</emphasis> this function doesn&apos;t throw but returns the result code using the parameter <emphasis>ec</emphasis>. Otherwise it throws an instance of hpx::exception. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_helpers.hpp" line="390" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__helpers_8hpp_1ac200e4ded92585c732c4d8bd5a0c8d5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="thread__enums_8hpp_1ac9ea71df1a6e7c564da9d1724432790a" kindref="member">threads::thread_priority</ref></type>
+        <definition>threads::thread_priority hpx::threads::get_thread_priority</definition>
+        <argsstring>(thread_id_type const &amp;id, error_code &amp;ec=throws)</argsstring>
+        <name>get_thread_priority</name>
+        <param>
+          <type>thread_id_type const &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return priority of the given thread</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The thread id of the thread whose priority is queried. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in,out] this represents the error status on exit, if this is pre-initialized to <emphasis>hpx::throws</emphasis> the function will throw on error instead.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>As long as <emphasis>ec</emphasis> is not pre-initialized to <emphasis>hpx::throws</emphasis> this function doesn&apos;t throw but returns the result code using the parameter <emphasis>ec</emphasis>. Otherwise it throws an instance of hpx::exception. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_helpers.hpp" line="407" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__helpers_8hpp_1a3cd27631705ce7c218c7271005f13406" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ptrdiff_t</type>
+        <definition>std::ptrdiff_t hpx::threads::get_stack_size</definition>
+        <argsstring>(thread_id_type const &amp;id, error_code &amp;ec=throws)</argsstring>
+        <name>get_stack_size</name>
+        <param>
+          <type>thread_id_type const &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return stack size of the given thread</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The thread id of the thread whose priority is queried. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in,out] this represents the error status on exit, if this is pre-initialized to <emphasis>hpx::throws</emphasis> the function will throw on error instead.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>As long as <emphasis>ec</emphasis> is not pre-initialized to <emphasis>hpx::throws</emphasis> this function doesn&apos;t throw but returns the result code using the parameter <emphasis>ec</emphasis>. Otherwise it throws an instance of hpx::exception. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_helpers.hpp" line="424" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__helpers_8hpp_1acefa17e3769a7d725ecb410e88d96a49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>threads::executors::current_executor</type>
+        <definition>threads::executors::current_executor hpx::threads::get_executor</definition>
+        <argsstring>(thread_id_type const &amp;id, error_code &amp;ec=throws)</argsstring>
+        <name>get_executor</name>
+        <param>
+          <type>thread_id_type const &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a reference to the executor which was used to create the given thread.</para><para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>If</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>&amp;ec != &amp;throws</computeroutput>, never throws, but will set <emphasis>ec</emphasis> to an appropriate value when an error occurs. Otherwise, this function will throw an <emphasis>hpx::exception</emphasis> with an error code of <emphasis>hpx::yield_aborted</emphasis> if it is signaled with <emphasis>wait_aborted</emphasis>. If called outside of a HPX-thread, this function will throw an <emphasis>hpx::exception</emphasis> with an error code of <emphasis>hpx::null_thread_id</emphasis>. If this function is called while the thread-manager is not running, it will throw an <emphasis>hpx::exception</emphasis> with an error code of <emphasis>hpx::invalid_status</emphasis>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_helpers.hpp" line="463" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__helpers_8hpp_1af03daba94c6dcbce39dc2eeac3785c0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classhpx_1_1threads_1_1thread__pool__base" kindref="compound">threads::thread_pool_base</ref> *</type>
+        <definition>threads::thread_pool_base* hpx::threads::get_pool</definition>
+        <argsstring>(thread_id_type const &amp;id, error_code &amp;ec=throws)</argsstring>
+        <name>get_pool</name>
+        <param>
+          <type>thread_id_type const &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>error_code &amp;</type>
+          <declname>ec</declname>
+          <defval>throws</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a pointer to the pool that was used to run the current thread</para><para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>If</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>&amp;ec != &amp;throws</computeroutput>, never throws, but will set <emphasis>ec</emphasis> to an appropriate value when an error occurs. Otherwise, this function will throw an <emphasis>hpx::exception</emphasis> with an error code of <emphasis>hpx::yield_aborted</emphasis> if it is signaled with <emphasis>wait_aborted</emphasis>. If called outside of a HPX-thread, this function will throw an <emphasis>hpx::exception</emphasis> with an error code of <emphasis>hpx::null_thread_id</emphasis>. If this function is called while the thread-manager is not running, it will throw an <emphasis>hpx::exception</emphasis> with an error code of <emphasis>hpx::invalid_status</emphasis>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/threads/thread_helpers.hpp" line="477" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="hpx/runtime/threads/policies/scheduler_mode.hpp" line="9" column="1"/>
+  </compounddef>
+</doxygen>

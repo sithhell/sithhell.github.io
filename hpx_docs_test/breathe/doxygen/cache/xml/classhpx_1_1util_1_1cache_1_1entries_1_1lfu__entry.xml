@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classhpx_1_1util_1_1cache_1_1entries_1_1lfu__entry" kind="class" language="C++" prot="public">
+    <compoundname>hpx::util::cache::entries::lfu_entry</compoundname>
+    <basecompoundref refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry" prot="public" virt="non-virtual">hpx::util::cache::entries::entry&lt; Value, lfu_entry&lt; Value &gt; &gt;</basecompoundref>
+    <includes refid="compatibility_2hpx_2util_2cache_2entries_2lfu__entry_8hpp" local="no">hpx/cache/entries/lfu_entry.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Value</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classhpx_1_1util_1_1cache_1_1entries_1_1lfu__entry_1a3c8b9256eef2e6639ac98467415bd50d" prot="private" static="no">
+        <type><ref refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry" kindref="compound">entry</ref>&lt; Value, <ref refid="classhpx_1_1util_1_1cache_1_1entries_1_1lfu__entry" kindref="compound">lfu_entry</ref>&lt; Value &gt; &gt;</type>
+        <definition>typedef entry&lt;Value, lfu_entry&lt;Value&gt; &gt; hpx::util::cache::entries::lfu_entry&lt; Value &gt;::base_type</definition>
+        <argsstring></argsstring>
+        <name>base_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/entries/lfu_entry.hpp" line="35" column="1" bodyfile="libs/cache/include/hpx/cache/entries/lfu_entry.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhpx_1_1util_1_1cache_1_1entries_1_1lfu__entry_1a36b67645d24466f238a45e31168f7ee0" prot="private" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long hpx::util::cache::entries::lfu_entry&lt; Value &gt;::ref_count_</definition>
+        <argsstring></argsstring>
+        <name>ref_count_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/entries/lfu_entry.hpp" line="80" column="1" bodyfile="libs/cache/include/hpx/cache/entries/lfu_entry.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1entries_1_1lfu__entry_1abf512a32d376fa533a7644ac0bb6af4b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::util::cache::entries::lfu_entry&lt; Value &gt;::lfu_entry</definition>
+        <argsstring>()</argsstring>
+        <name>lfu_entry</name>
+        <briefdescription>
+<para>Any cache entry has to be default constructible. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/entries/lfu_entry.hpp" line="39" column="1" bodyfile="libs/cache/include/hpx/cache/entries/lfu_entry.hpp" bodystart="39" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1entries_1_1lfu__entry_1a22e9f1184944e58e0734b2885b526923" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::util::cache::entries::lfu_entry&lt; Value &gt;::lfu_entry</definition>
+        <argsstring>(Value const &amp;val)</argsstring>
+        <name>lfu_entry</name>
+        <param>
+          <type>Value const &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new instance of a cache entry holding the given value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/entries/lfu_entry.hpp" line="45" column="1" bodyfile="libs/cache/include/hpx/cache/entries/lfu_entry.hpp" bodystart="45" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1entries_1_1lfu__entry_1adfbb708018727ffa613f08086fbebe80" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hpx::util::cache::entries::lfu_entry&lt; Value &gt;::touch</definition>
+        <argsstring>()</argsstring>
+        <name>touch</name>
+        <briefdescription>
+<para>The function <emphasis>touch</emphasis> is called by a cache holding this instance whenever it has been requested (touched). </para>        </briefdescription>
+        <detaileddescription>
+<para>In the case of the LFU entry we store the reference count tracking the number of times this entry has been requested. This which will be used to compare the age of an entry during the invocation of the <ref refid="classhpx_1_1util_1_1cache_1_1entries_1_1lfu__entry_1a826c77224ce9fe6f015b955bcc0ff4c4" kindref="member">operator&lt;()</ref>.</para><para><simplesect kind="return"><para>This function should return true if the cache needs to update it&apos;s internal heap. Usually this is needed if the entry has been changed by <ref refid="classhpx_1_1util_1_1cache_1_1entries_1_1lfu__entry_1adfbb708018727ffa613f08086fbebe80" kindref="member">touch()</ref> in a way influencing the sort order as mandated by the cache&apos;s UpdatePolicy </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/entries/lfu_entry.hpp" line="61" column="1" bodyfile="libs/cache/include/hpx/cache/entries/lfu_entry.hpp" bodystart="61" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1entries_1_1lfu__entry_1a617f6dd05ab5c46f3cd71d1a1a2bca46" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned long const  &amp;</type>
+        <definition>unsigned long const&amp; hpx::util::cache::entries::lfu_entry&lt; Value &gt;::get_access_count</definition>
+        <argsstring>() const</argsstring>
+        <name>get_access_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/entries/lfu_entry.hpp" line="67" column="1" bodyfile="libs/cache/include/hpx/cache/entries/lfu_entry.hpp" bodystart="67" bodyend="70"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classhpx_1_1util_1_1cache_1_1entries_1_1lfu__entry_1a826c77224ce9fe6f015b955bcc0ff4c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>friend bool</type>
+        <definition>bool operator&lt;</definition>
+        <argsstring>(lfu_entry const &amp;lhs, lfu_entry const &amp;rhs)</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type><ref refid="classhpx_1_1util_1_1cache_1_1entries_1_1lfu__entry" kindref="compound">lfu_entry</ref> const &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type><ref refid="classhpx_1_1util_1_1cache_1_1entries_1_1lfu__entry" kindref="compound">lfu_entry</ref> const &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Compare the &apos;age&apos; of two entries. An entry is &apos;older&apos; than another entry if it has been accessed less frequently (LFU). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/entries/lfu_entry.hpp" line="74" column="1" bodyfile="libs/cache/include/hpx/cache/entries/lfu_entry.hpp" bodystart="74" bodyend="77"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <emphasis><ref refid="classhpx_1_1util_1_1cache_1_1entries_1_1lfu__entry" kindref="compound">lfu_entry</ref></emphasis> type can be used to store arbitrary values in a cache. Using this type as the cache&apos;s entry type makes sure that the least frequently used entries are discarded from the cache first.</para><para><simplesect kind="note"><para>The <emphasis><ref refid="classhpx_1_1util_1_1cache_1_1entries_1_1lfu__entry" kindref="compound">lfu_entry</ref></emphasis> conforms to the CacheEntry concept. </para></simplesect>
+<simplesect kind="note"><para>This type can be used to model a &apos;most frequently used&apos; cache policy if it is used with a std::greater as the caches&apos; UpdatePolicy (instead of the default std::less).</para></simplesect>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data type to be stored in a cache. It has to be default constructible, copy constructible and less_than_comparable. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="18">
+        <label>boost::less_than_comparable&lt; detail::derived&lt; Value, lfu_entry&lt; Value &gt; &gt;::type &gt;</label>
+      </node>
+      <node id="16">
+        <label>hpx::util::cache::entries::lfu_entry&lt; Value &gt;</label>
+        <link refid="classhpx_1_1util_1_1cache_1_1entries_1_1lfu__entry"/>
+        <childnode refid="17" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>hpx::util::cache::entries::entry&lt; Value, lfu_entry&lt; Value &gt; &gt;</label>
+        <link refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry"/>
+        <childnode refid="18" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="21">
+        <label>boost::less_than_comparable&lt; detail::derived&lt; Value, lfu_entry&lt; Value &gt; &gt;::type &gt;</label>
+      </node>
+      <node id="19">
+        <label>hpx::util::cache::entries::lfu_entry&lt; Value &gt;</label>
+        <link refid="classhpx_1_1util_1_1cache_1_1entries_1_1lfu__entry"/>
+        <childnode refid="20" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>hpx::util::cache::entries::entry&lt; Value, lfu_entry&lt; Value &gt; &gt;</label>
+        <link refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry"/>
+        <childnode refid="21" relation="private-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libs/cache/include/hpx/cache/entries/lfu_entry.hpp" line="33" column="1" bodyfile="libs/cache/include/hpx/cache/entries/lfu_entry.hpp" bodystart="32" bodyend="81"/>
+    <listofallmembers>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1lfu__entry_1a3c8b9256eef2e6639ac98467415bd50d" prot="private" virt="non-virtual"><scope>hpx::util::cache::entries::lfu_entry</scope><name>base_type</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1ad33554c8722a0fb843afb12e943609b7" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::lfu_entry</scope><name>entry</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1a405f37290c9f41020b08d2f24167ecfa" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::lfu_entry</scope><name>entry</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1a3261dc3551b8beb6a15d768da078309e" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::lfu_entry</scope><name>get</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1a2f225802808b6b9f6680fe089af8b1dd" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::lfu_entry</scope><name>get</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1lfu__entry_1a617f6dd05ab5c46f3cd71d1a1a2bca46" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::lfu_entry</scope><name>get_access_count</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1a52aaa2be737145552d7f045821db96c3" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::lfu_entry</scope><name>get_size</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1a026fd85734913784d85672bbcada8ead" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::lfu_entry</scope><name>insert</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1lfu__entry_1abf512a32d376fa533a7644ac0bb6af4b" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::lfu_entry</scope><name>lfu_entry</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1lfu__entry_1a22e9f1184944e58e0734b2885b526923" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::lfu_entry</scope><name>lfu_entry</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1lfu__entry_1a826c77224ce9fe6f015b955bcc0ff4c4" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::lfu_entry</scope><name>operator&lt;</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1lfu__entry_1a36b67645d24466f238a45e31168f7ee0" prot="private" virt="non-virtual"><scope>hpx::util::cache::entries::lfu_entry</scope><name>ref_count_</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1ad339d17e0b9f7b7b61d862fff48bd117" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::lfu_entry</scope><name>remove</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1lfu__entry_1adfbb708018727ffa613f08086fbebe80" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::lfu_entry</scope><name>touch</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1a10da7304c1370f938043761b34bbf2b1" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::lfu_entry</scope><name>value_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

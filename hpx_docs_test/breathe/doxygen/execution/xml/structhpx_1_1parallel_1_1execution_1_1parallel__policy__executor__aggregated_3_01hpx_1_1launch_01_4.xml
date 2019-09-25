@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structhpx_1_1parallel_1_1execution_1_1parallel__policy__executor__aggregated_3_01hpx_1_1launch_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>hpx::parallel::execution::parallel_policy_executor_aggregated&lt; hpx::launch &gt;</compoundname>
+    <templateparamlist>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structhpx_1_1parallel_1_1execution_1_1parallel__policy__executor__aggregated_3_01hpx_1_1launch_01_4_1a18b76708b49accfb0a1dce5416919270" prot="public" static="no">
+        <type><ref refid="structhpx_1_1parallel_1_1execution_1_1parallel__execution__tag" kindref="compound">parallel_execution_tag</ref></type>
+        <definition>using hpx::parallel::execution::parallel_policy_executor_aggregated&lt; hpx::launch &gt;::execution_category =  parallel_execution_tag</definition>
+        <argsstring></argsstring>
+        <name>execution_category</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Associate the <ref refid="structhpx_1_1parallel_1_1execution_1_1parallel__execution__tag" kindref="compound">parallel_execution_tag</ref> executor tag type as a default with this executor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/executors/parallel_executor_aggregated.hpp" line="246" column="1" bodyfile="libs/execution/include/hpx/parallel/executors/parallel_executor_aggregated.hpp" bodystart="246" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structhpx_1_1parallel_1_1execution_1_1parallel__policy__executor__aggregated_3_01hpx_1_1launch_01_4_1af2b499e65b8831006196703a7f414238" prot="public" static="no">
+        <type><ref refid="structhpx_1_1parallel_1_1execution_1_1static__chunk__size" kindref="compound">static_chunk_size</ref></type>
+        <definition>using hpx::parallel::execution::parallel_policy_executor_aggregated&lt; hpx::launch &gt;::executor_parameters_type =  static_chunk_size</definition>
+        <argsstring></argsstring>
+        <name>executor_parameters_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Associate the <ref refid="structhpx_1_1parallel_1_1execution_1_1static__chunk__size" kindref="compound">static_chunk_size</ref> executor parameters type as a default with this executor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/executors/parallel_executor_aggregated.hpp" line="250" column="1" bodyfile="libs/execution/include/hpx/parallel/executors/parallel_executor_aggregated.hpp" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structhpx_1_1parallel_1_1execution_1_1parallel__policy__executor__aggregated_3_01hpx_1_1launch_01_4_1aebc197715b257eb6a122cfd11930edbd" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::parallel::execution::parallel_policy_executor_aggregated&lt; hpx::launch &gt;::parallel_policy_executor_aggregated</definition>
+        <argsstring>(hpx::launch l=hpx::launch::async_policy{}, std::size_t spread=4, std::size_t tasks=std::size_t(-1))</argsstring>
+        <name>parallel_policy_executor_aggregated</name>
+        <param>
+          <type>hpx::launch</type>
+          <declname>l</declname>
+          <defval>hpx::launch::async_policy{}</defval>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>spread</declname>
+          <defval>4</defval>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>tasks</declname>
+          <defval>std::size_t(-1)</defval>
+        </param>
+        <briefdescription>
+<para>Create a new parallel executor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/executors/parallel_executor_aggregated.hpp" line="253" column="1" bodyfile="libs/execution/include/hpx/parallel/executors/parallel_executor_aggregated.hpp" bodystart="253" bodyend="257"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1parallel_1_1execution_1_1parallel__policy__executor__aggregated_3_01hpx_1_1launch_01_4_1ac05f61ca746164b4ff39583bba57bade" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename S</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; hpx::future&lt; void &gt; &gt;</type>
+        <definition>std::vector&lt;hpx::future&lt;void&gt; &gt; hpx::parallel::execution::parallel_policy_executor_aggregated&lt; hpx::launch &gt;::bulk_async_execute</definition>
+        <argsstring>(F &amp;&amp;f, S const &amp;shape, Ts &amp;&amp;... ts) const</argsstring>
+        <name>bulk_async_execute</name>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>S const &amp;</type>
+          <declname>shape</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/executors/parallel_executor_aggregated.hpp" line="418" column="1" bodyfile="libs/execution/include/hpx/parallel/executors/parallel_executor_aggregated.hpp" bodystart="418" bodyend="428"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libs/execution/include/hpx/parallel/executors/parallel_executor_aggregated.hpp" line="243" column="1" bodyfile="libs/execution/include/hpx/parallel/executors/parallel_executor_aggregated.hpp" bodystart="242" bodyend="447"/>
+    <listofallmembers>
+      <member refid="structhpx_1_1parallel_1_1execution_1_1parallel__policy__executor__aggregated_3_01hpx_1_1launch_01_4_1ac05f61ca746164b4ff39583bba57bade" prot="public" virt="non-virtual"><scope>hpx::parallel::execution::parallel_policy_executor_aggregated&lt; hpx::launch &gt;</scope><name>bulk_async_execute</name></member>
+      <member refid="structhpx_1_1parallel_1_1execution_1_1parallel__policy__executor__aggregated_3_01hpx_1_1launch_01_4_1a18b76708b49accfb0a1dce5416919270" prot="public" virt="non-virtual"><scope>hpx::parallel::execution::parallel_policy_executor_aggregated&lt; hpx::launch &gt;</scope><name>execution_category</name></member>
+      <member refid="structhpx_1_1parallel_1_1execution_1_1parallel__policy__executor__aggregated_3_01hpx_1_1launch_01_4_1af2b499e65b8831006196703a7f414238" prot="public" virt="non-virtual"><scope>hpx::parallel::execution::parallel_policy_executor_aggregated&lt; hpx::launch &gt;</scope><name>executor_parameters_type</name></member>
+      <member refid="structhpx_1_1parallel_1_1execution_1_1parallel__policy__executor__aggregated_3_01hpx_1_1launch_01_4_1aebc197715b257eb6a122cfd11930edbd" prot="public" virt="non-virtual"><scope>hpx::parallel::execution::parallel_policy_executor_aggregated&lt; hpx::launch &gt;</scope><name>parallel_policy_executor_aggregated</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacehpx_1_1parallel_1_1execution" kind="namespace" language="C++">
+    <compoundname>hpx::parallel::execution</compoundname>
+    <innerclass refid="structhpx_1_1parallel_1_1execution_1_1auto__chunk__size" prot="public">hpx::parallel::execution::auto_chunk_size</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1execution_1_1dynamic__chunk__size" prot="public">hpx::parallel::execution::dynamic_chunk_size</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1execution_1_1guided__chunk__size" prot="public">hpx::parallel::execution::guided_chunk_size</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1execution_1_1is__async__execution__policy" prot="public">hpx::parallel::execution::is_async_execution_policy</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1execution_1_1is__execution__policy" prot="public">hpx::parallel::execution::is_execution_policy</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1execution_1_1is__parallel__execution__policy" prot="public">hpx::parallel::execution::is_parallel_execution_policy</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1execution_1_1is__sequenced__execution__policy" prot="public">hpx::parallel::execution::is_sequenced_execution_policy</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1execution_1_1parallel__execution__tag" prot="public">hpx::parallel::execution::parallel_execution_tag</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1execution_1_1parallel__policy" prot="public">hpx::parallel::execution::parallel_policy</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1execution_1_1parallel__policy__executor" prot="public">hpx::parallel::execution::parallel_policy_executor</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1execution_1_1parallel__policy__shim" prot="public">hpx::parallel::execution::parallel_policy_shim</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy" prot="public">hpx::parallel::execution::parallel_task_policy</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy__shim" prot="public">hpx::parallel::execution::parallel_task_policy_shim</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1execution_1_1parallel__unsequenced__policy" prot="public">hpx::parallel::execution::parallel_unsequenced_policy</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1execution_1_1persistent__auto__chunk__size" prot="public">hpx::parallel::execution::persistent_auto_chunk_size</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1execution_1_1sequenced__execution__tag" prot="public">hpx::parallel::execution::sequenced_execution_tag</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1execution_1_1sequenced__executor" prot="public">hpx::parallel::execution::sequenced_executor</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1execution_1_1sequenced__policy" prot="public">hpx::parallel::execution::sequenced_policy</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1execution_1_1sequenced__policy__shim" prot="public">hpx::parallel::execution::sequenced_policy_shim</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1execution_1_1sequenced__task__policy" prot="public">hpx::parallel::execution::sequenced_task_policy</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1execution_1_1sequenced__task__policy__shim" prot="public">hpx::parallel::execution::sequenced_task_policy_shim</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1execution_1_1static__chunk__size" prot="public">hpx::parallel::execution::static_chunk_size</innerclass>
+    <innerclass refid="structhpx_1_1parallel_1_1execution_1_1unsequenced__execution__tag" prot="public">hpx::parallel::execution::unsequenced_execution_tag</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="parallel__executor_8hpp_1a145ed13953eab568938127679016af0b" prot="public" static="no">
+        <type><ref refid="structhpx_1_1parallel_1_1execution_1_1parallel__policy__executor" kindref="compound">parallel_policy_executor</ref>&lt; <ref refid="structhpx_1_1launch" kindref="compound">hpx::launch</ref> &gt;</type>
+        <definition>using hpx::parallel::execution::parallel_executor = typedef parallel_policy_executor&lt;hpx::launch&gt;</definition>
+        <argsstring></argsstring>
+        <name>parallel_executor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/parallel/executors/parallel_executor.hpp" line="234" column="1" bodyfile="hpx/parallel/executors/parallel_executor.hpp" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="service__executors_8hpp_1a29ce45fce2d059162a60eb04dcc135a5" prot="public" static="no">
+        <type>threads::executors::service_executor</type>
+        <definition>using hpx::parallel::execution::service_executor = typedef threads::executors::service_executor</definition>
+        <argsstring></argsstring>
+        <name>service_executor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A <emphasis>service_executor</emphasis> exposes one of the predefined HPX thread pools through an executor interface.</para><para><simplesect kind="note"><para>All tasks executed by one of these executors will run on one of the OS-threads dedicated for the given thread pool. The tasks will not run as HPX-threads. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/parallel/executors/service_executors.hpp" line="27" column="1" bodyfile="hpx/parallel/executors/service_executors.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="service__executors_8hpp_1a3b4e7d31d0b112d896d825f3e18ef88e" prot="public" static="no">
+        <type>threads::executors::io_pool_executor</type>
+        <definition>using hpx::parallel::execution::io_pool_executor = typedef threads::executors::io_pool_executor</definition>
+        <argsstring></argsstring>
+        <name>io_pool_executor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A <emphasis>io_pool_executor</emphasis> exposes the predefined HPX IO thread pool through an executor interface.</para><para><simplesect kind="note"><para>All tasks executed by one of these executors will run on one of the OS-threads dedicated for the IO thread pool. The tasks will not run as HPX-threads. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/parallel/executors/service_executors.hpp" line="36" column="1" bodyfile="hpx/parallel/executors/service_executors.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="service__executors_8hpp_1aaf699efe7451389c926b48ea5c23c58b" prot="public" static="no">
+        <type>threads::executors::parcel_pool_executor</type>
+        <definition>using hpx::parallel::execution::parcel_pool_executor = typedef threads::executors::parcel_pool_executor</definition>
+        <argsstring></argsstring>
+        <name>parcel_pool_executor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A <emphasis>io_pool_executor</emphasis> exposes the predefined HPX parcel thread pool through an executor interface.</para><para><simplesect kind="note"><para>All tasks executed by one of these executors will run on one of the OS-threads dedicated for the parcel thread pool. The tasks will not run as HPX-threads. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/parallel/executors/service_executors.hpp" line="45" column="1" bodyfile="hpx/parallel/executors/service_executors.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="service__executors_8hpp_1a15967cbd9cbc9a3897901b86e75a7d22" prot="public" static="no">
+        <type>threads::executors::timer_pool_executor</type>
+        <definition>using hpx::parallel::execution::timer_pool_executor = typedef threads::executors::timer_pool_executor</definition>
+        <argsstring></argsstring>
+        <name>timer_pool_executor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A <emphasis>io_pool_executor</emphasis> exposes the predefined HPX timer thread pool through an executor interface.</para><para><simplesect kind="note"><para>All tasks executed by one of these executors will run on one of the OS-threads dedicated for the timer thread pool. The tasks will not run as HPX-threads. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/parallel/executors/service_executors.hpp" line="54" column="1" bodyfile="hpx/parallel/executors/service_executors.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="service__executors_8hpp_1a7ab3f5bb60831868e7624e5faf6896a3" prot="public" static="no">
+        <type>threads::executors::main_pool_executor</type>
+        <definition>using hpx::parallel::execution::main_pool_executor = typedef threads::executors::main_pool_executor</definition>
+        <argsstring></argsstring>
+        <name>main_pool_executor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A <emphasis>io_pool_executor</emphasis> exposes the predefined HPX main thread pool through an executor interface.</para><para><simplesect kind="note"><para>All tasks executed by one of these executors will run on one of the OS-threads dedicated for the main thread pool. The tasks will not run as HPX-threads. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/parallel/executors/service_executors.hpp" line="63" column="1" bodyfile="hpx/parallel/executors/service_executors.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="thread__pool__executors_8hpp_1ac4d0cb953702c2b4d9227d8f750ec530" prot="public" static="no">
+        <type>threads::executors::local_priority_queue_executor</type>
+        <definition>using hpx::parallel::execution::local_priority_queue_executor = typedef threads::executors::local_priority_queue_executor</definition>
+        <argsstring></argsstring>
+        <name>local_priority_queue_executor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a new local_priority_queue_executor</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>max_punits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The maximum number of processing units to associate with the newly created executor. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min_punits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The minimum number of processing units to associate with the newly created executor (default: 1). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/parallel/executors/thread_pool_executors.hpp" line="54" column="1" bodyfile="hpx/parallel/executors/thread_pool_executors.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="execution__policy_8hpp_1a379ad4dc40ef57f1dfada5de37cba421" prot="public" static="yes" mutable="no">
+        <type>task_policy_tag HPX_CONSTEXPR_OR_CONST</type>
+        <definition>task_policy_tag HPX_CONSTEXPR_OR_CONST hpx::parallel::execution::task</definition>
+        <argsstring></argsstring>
+        <name>task</name>
+        <briefdescription>
+<para>Default sequential execution policy object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/parallel/execution_policy.hpp" line="36" column="1" bodyfile="hpx/parallel/execution_policy.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="execution__policy_8hpp_1aa42dc9cec2bf4586b8f5f236637db308" prot="public" static="no" mutable="no">
+        <type>HPX_STATIC_CONSTEXPR <ref refid="structhpx_1_1parallel_1_1execution_1_1sequenced__policy" kindref="compound">sequenced_policy</ref></type>
+        <definition>HPX_STATIC_CONSTEXPR sequenced_policy hpx::parallel::execution::seq</definition>
+        <argsstring></argsstring>
+        <name>seq</name>
+        <briefdescription>
+<para>Default sequential execution policy object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/parallel/execution_policy.hpp" line="478" column="1" bodyfile="hpx/parallel/execution_policy.hpp" bodystart="478" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="execution__policy_8hpp_1aff7612e112313e7279899522814adb22" prot="public" static="no" mutable="no">
+        <type>HPX_STATIC_CONSTEXPR <ref refid="structhpx_1_1parallel_1_1execution_1_1parallel__policy" kindref="compound">parallel_policy</ref></type>
+        <definition>HPX_STATIC_CONSTEXPR parallel_policy hpx::parallel::execution::par</definition>
+        <argsstring></argsstring>
+        <name>par</name>
+        <briefdescription>
+<para>Default parallel execution policy object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/parallel/execution_policy.hpp" line="1054" column="1" bodyfile="hpx/parallel/execution_policy.hpp" bodystart="1054" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="execution__policy_8hpp_1ad8c4bc27c0ce1912fa289d7164ef8b0a" prot="public" static="no" mutable="no">
+        <type>HPX_STATIC_CONSTEXPR <ref refid="structhpx_1_1parallel_1_1execution_1_1parallel__unsequenced__policy" kindref="compound">parallel_unsequenced_policy</ref></type>
+        <definition>HPX_STATIC_CONSTEXPR parallel_unsequenced_policy hpx::parallel::execution::par_unseq</definition>
+        <argsstring></argsstring>
+        <name>par_unseq</name>
+        <briefdescription>
+<para>Default vector execution policy object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/parallel/execution_policy.hpp" line="1268" column="1" bodyfile="hpx/parallel/execution_policy.hpp" bodystart="1268" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="hpx/parallel/execution_policy.hpp" line="33" column="1"/>
+  </compounddef>
+</doxygen>

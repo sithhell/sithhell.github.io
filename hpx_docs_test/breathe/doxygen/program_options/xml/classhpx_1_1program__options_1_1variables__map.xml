@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classhpx_1_1program__options_1_1variables__map" kind="class" language="C++" prot="public">
+    <compoundname>hpx::program_options::variables_map</compoundname>
+    <basecompoundref refid="classhpx_1_1program__options_1_1abstract__variables__map" prot="public" virt="non-virtual">hpx::program_options::abstract_variables_map</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">std::map&lt; std::string, variable_value &gt;</basecompoundref>
+    <includes refid="variables__map_8hpp" local="no">variables_map.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhpx_1_1program__options_1_1variables__map_1aca602e637fbb3801e1a4174ee6d75585" prot="private" static="no" mutable="no">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt;std::string&gt; hpx::program_options::variables_map::m_final</definition>
+        <argsstring></argsstring>
+        <name>m_final</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Names of option with &apos;final&apos; values -- which should not be changed by subsequence assignments. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/variables_map.hpp" line="196" column="1" bodyfile="libs/program_options/include/hpx/program_options/variables_map.hpp" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhpx_1_1program__options_1_1variables__map_1a9b87aef9620bcb3bf873a26a66ceb030" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt;std::string, std::string&gt; hpx::program_options::variables_map::m_required</definition>
+        <argsstring></argsstring>
+        <name>m_required</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Names of required options, filled by parser which has access to <ref refid="classhpx_1_1program__options_1_1options__description" kindref="compound">options_description</ref>. The map values are the &quot;canonical&quot; names for each corresponding option. This is useful in creating diagnostic messages when the option is absent. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/variables_map.hpp" line="205" column="1" bodyfile="libs/program_options/include/hpx/program_options/variables_map.hpp" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1variables__map_1af38ed2e384c4412b322da0acb54bb0bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hpx::program_options::variables_map::variables_map</definition>
+        <argsstring>()</argsstring>
+        <name>variables_map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/variables_map.hpp" line="175" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1variables__map_1a46ddbfd6bc4bece399b9e842a1646a04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hpx::program_options::variables_map::variables_map</definition>
+        <argsstring>(const abstract_variables_map *next)</argsstring>
+        <name>variables_map</name>
+        <param>
+          <type>const <ref refid="classhpx_1_1program__options_1_1abstract__variables__map" kindref="compound">abstract_variables_map</ref> *</type>
+          <declname>next</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/variables_map.hpp" line="176" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1variables__map_1aed34f969d3988b3231897fe76a1b9735" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classhpx_1_1program__options_1_1variable__value" kindref="compound">variable_value</ref> &amp;</type>
+        <definition>const variable_value&amp; hpx::program_options::variables_map::operator[]</definition>
+        <argsstring>(const std::string &amp;name) const</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/variables_map.hpp" line="179" column="1" bodyfile="libs/program_options/include/hpx/program_options/variables_map.hpp" bodystart="179" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1variables__map_1a4e6322aa3d56cbd3eea3ecff072d59db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpx::program_options::variables_map::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/variables_map.hpp" line="185" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1variables__map_1aaff0445b608bf9ac25e94fbbf76f2237" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpx::program_options::variables_map::notify</definition>
+        <argsstring>()</argsstring>
+        <name>notify</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/variables_map.hpp" line="187" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1variables__map_1af3c9786fb3e1a8e83126aec5663c41dd" prot="private" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="classhpx_1_1program__options_1_1variable__value" kindref="compound">variable_value</ref> &amp;</type>
+        <definition>const variable_value&amp; hpx::program_options::variables_map::get</definition>
+        <argsstring>(const std::string &amp;name) const override</argsstring>
+        <name>get</name>
+        <reimplements refid="classhpx_1_1program__options_1_1abstract__variables__map_1a76f2c0cb31ffdb24e6074bab437be5f6">get</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implementation of abstract_variables_map::get which does &apos;find&apos; in *this. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/variables_map.hpp" line="192" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classhpx_1_1program__options_1_1variables__map_1a28d5935738e4198889ba46c10ca40302" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend void</type>
+        <definition>void store</definition>
+        <argsstring>(const basic_parsed_options&lt; char &gt; &amp;options, variables_map &amp;xm, bool utf8)</argsstring>
+        <name>store</name>
+        <param>
+          <type>const <ref refid="classhpx_1_1program__options_1_1basic__parsed__options" kindref="compound">basic_parsed_options</ref>&lt; char &gt; &amp;</type>
+          <declname>options</declname>
+        </param>
+        <param>
+          <type><ref refid="classhpx_1_1program__options_1_1variables__map" kindref="compound">variables_map</ref> &amp;</type>
+          <declname>xm</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>utf8</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Stores in &apos;m&apos; all options that are defined in &apos;options&apos;. If &apos;m&apos; already has a non-defaulted value of an option, that value is not changed, even if &apos;options&apos; specify some value. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/variables_map.hpp" line="198" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Concrete variables map which store variables in real map.</para><para>This class is derived from std::map&lt;std::string, variable_value&gt;, so you can use all map operators to examine its content. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="251">
+        <label>hpx::program_options::abstract_variables_map</label>
+        <link refid="classhpx_1_1program__options_1_1abstract__variables__map"/>
+      </node>
+      <node id="250">
+        <label>hpx::program_options::variables_map</label>
+        <link refid="classhpx_1_1program__options_1_1variables__map"/>
+        <childnode refid="251" relation="public-inheritance">
+        </childnode>
+        <childnode refid="252" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="252">
+        <label>std::map&lt; std::string, variable_value &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="254">
+        <label>hpx::program_options::abstract_variables_map</label>
+        <link refid="classhpx_1_1program__options_1_1abstract__variables__map"/>
+      </node>
+      <node id="253">
+        <label>hpx::program_options::variables_map</label>
+        <link refid="classhpx_1_1program__options_1_1variables__map"/>
+        <childnode refid="254" relation="public-inheritance">
+        </childnode>
+        <childnode refid="255" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="255">
+        <label>std::map&lt; std::string, variable_value &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libs/program_options/include/hpx/program_options/variables_map.hpp" line="173" column="1" bodyfile="libs/program_options/include/hpx/program_options/variables_map.hpp" bodystart="170" bodyend="206"/>
+    <listofallmembers>
+      <member refid="classhpx_1_1program__options_1_1abstract__variables__map_1a6e1947f51bd46d328c808a9c215a58fa" prot="public" virt="non-virtual"><scope>hpx::program_options::variables_map</scope><name>abstract_variables_map</name></member>
+      <member refid="classhpx_1_1program__options_1_1abstract__variables__map_1ade4ca469628976c01b6ee000d87f3aab" prot="public" virt="non-virtual"><scope>hpx::program_options::variables_map</scope><name>abstract_variables_map</name></member>
+      <member refid="classhpx_1_1program__options_1_1variables__map_1a4e6322aa3d56cbd3eea3ecff072d59db" prot="public" virt="non-virtual"><scope>hpx::program_options::variables_map</scope><name>clear</name></member>
+      <member refid="classhpx_1_1program__options_1_1variables__map_1af3c9786fb3e1a8e83126aec5663c41dd" prot="private" virt="virtual"><scope>hpx::program_options::variables_map</scope><name>get</name></member>
+      <member refid="classhpx_1_1program__options_1_1variables__map_1aca602e637fbb3801e1a4174ee6d75585" prot="private" virt="non-virtual"><scope>hpx::program_options::variables_map</scope><name>m_final</name></member>
+      <member refid="classhpx_1_1program__options_1_1variables__map_1a9b87aef9620bcb3bf873a26a66ceb030" prot="private" virt="non-virtual"><scope>hpx::program_options::variables_map</scope><name>m_required</name></member>
+      <member refid="classhpx_1_1program__options_1_1abstract__variables__map_1a8fa1e04aa2248ebbcc7fd61dc89cbe52" prot="public" virt="non-virtual"><scope>hpx::program_options::variables_map</scope><name>next</name></member>
+      <member refid="classhpx_1_1program__options_1_1variables__map_1aaff0445b608bf9ac25e94fbbf76f2237" prot="public" virt="non-virtual"><scope>hpx::program_options::variables_map</scope><name>notify</name></member>
+      <member refid="classhpx_1_1program__options_1_1variables__map_1aed34f969d3988b3231897fe76a1b9735" prot="public" virt="non-virtual"><scope>hpx::program_options::variables_map</scope><name>operator[]</name></member>
+      <member refid="classhpx_1_1program__options_1_1variables__map_1a28d5935738e4198889ba46c10ca40302" prot="private" virt="non-virtual"><scope>hpx::program_options::variables_map</scope><name>store</name></member>
+      <member refid="classhpx_1_1program__options_1_1variables__map_1af38ed2e384c4412b322da0acb54bb0bc" prot="public" virt="non-virtual"><scope>hpx::program_options::variables_map</scope><name>variables_map</name></member>
+      <member refid="classhpx_1_1program__options_1_1variables__map_1a46ddbfd6bc4bece399b9e842a1646a04" prot="public" virt="non-virtual"><scope>hpx::program_options::variables_map</scope><name>variables_map</name></member>
+      <member refid="classhpx_1_1program__options_1_1abstract__variables__map_1a40b47cbe4888da40ec40a1a82f0197e8" prot="public" virt="virtual"><scope>hpx::program_options::variables_map</scope><name>~abstract_variables_map</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

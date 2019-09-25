@@ -1,0 +1,444 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacehpx_1_1components" kind="namespace" language="C++">
+    <compoundname>hpx::components</compoundname>
+    <innerclass refid="structhpx_1_1components_1_1binpacking__distribution__policy" prot="public">hpx::components::binpacking_distribution_policy</innerclass>
+    <innerclass refid="structhpx_1_1components_1_1colocating__distribution__policy" prot="public">hpx::components::colocating_distribution_policy</innerclass>
+    <innerclass refid="structhpx_1_1components_1_1default__distribution__policy" prot="public">hpx::components::default_distribution_policy</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="binpacking__distribution__policy_8hpp_1a66cbdfe3b4c6ce5df4ffee4c1ed3b403" prot="public" static="yes" mutable="no">
+        <type>char const  *const</type>
+        <definition>char const* const hpx::components::default_binpacking_counter_name</definition>
+        <argsstring></argsstring>
+        <name>default_binpacking_counter_name</name>
+        <initializer>=
+        &quot;/runtime{locality/total}/count/component@&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/components/binpacking_distribution_policy.hpp" line="39" column="1" bodyfile="hpx/runtime/components/binpacking_distribution_policy.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="binpacking__distribution__policy_8hpp_1a59e6eb1d1c50f0fe2915fe004aaaa3a8" prot="public" static="yes" mutable="no">
+        <type><ref refid="structhpx_1_1components_1_1binpacking__distribution__policy" kindref="compound">binpacking_distribution_policy</ref> const</type>
+        <definition>binpacking_distribution_policy const hpx::components::binpacked</definition>
+        <argsstring></argsstring>
+        <name>binpacked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A predefined instance of the binpacking <emphasis>distribution_policy</emphasis>. It will represent the local locality and will place all items to create here. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/components/binpacking_distribution_policy.hpp" line="363" column="1" bodyfile="hpx/runtime/components/binpacking_distribution_policy.hpp" bodystart="363" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="colocating__distribution__policy_8hpp_1a61a4bf8b4a51be1160eca7e26f48334f" prot="public" static="yes" mutable="no">
+        <type><ref refid="structhpx_1_1components_1_1colocating__distribution__policy" kindref="compound">colocating_distribution_policy</ref> const</type>
+        <definition>colocating_distribution_policy const hpx::components::colocated</definition>
+        <argsstring></argsstring>
+        <name>colocated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A predefined instance of the co-locating <emphasis>distribution_policy</emphasis>. It will represent the local locality and will place all items to create here. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/components/colocating_distribution_policy.hpp" line="292" column="1" bodyfile="hpx/runtime/components/colocating_distribution_policy.hpp" bodystart="292" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="default__distribution__policy_8hpp_1aeb87ca1feeacb8aeabed7e35f0b7a434" prot="public" static="yes" mutable="no">
+        <type><ref refid="structhpx_1_1components_1_1default__distribution__policy" kindref="compound">default_distribution_policy</ref> const</type>
+        <definition>default_distribution_policy const hpx::components::default_layout</definition>
+        <argsstring></argsstring>
+        <name>default_layout</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A predefined instance of the default <emphasis>distribution_policy</emphasis>. It will represent the local locality and will place all items to create here. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/components/default_distribution_policy.hpp" line="371" column="1" bodyfile="hpx/runtime/components/default_distribution_policy.hpp" bodystart="371" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="copy__component_8hpp_1a7c546317ebb5ae649f8abcd6249195c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Component</type>
+          </param>
+        </templateparamlist>
+        <type>future&lt; naming::id_type &gt;</type>
+        <definition>future&lt;naming::id_type&gt; hpx::components::copy</definition>
+        <argsstring>(naming::id_type const &amp;to_copy)</argsstring>
+        <name>copy</name>
+        <param>
+          <type>naming::id_type const &amp;</type>
+          <declname>to_copy</declname>
+        </param>
+        <briefdescription>
+<para>Copy given component to the specified target locality. </para>        </briefdescription>
+        <detaileddescription>
+<para>The function <emphasis>copy&lt;Component&gt;</emphasis> will create a copy of the component referenced by <emphasis>to_copy</emphasis> on the locality specified with <emphasis>target_locality</emphasis>. It returns a future referring to the newly created component instance.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>to_copy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The global id of the component to copy</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>only template argument specifies the component type to create.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A future representing the global id of the newly (copied) component instance.</para></simplesect>
+<simplesect kind="note"><para>The new component instance is created on the locality of the component instance which is to be copied. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/components/copy_component.hpp" line="50" column="1" bodyfile="hpx/runtime/components/copy_component.hpp" bodystart="50" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="copy__component_8hpp_1a1f96d037afe36fff147002345a3ac396" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Component</type>
+          </param>
+        </templateparamlist>
+        <type>future&lt; naming::id_type &gt;</type>
+        <definition>future&lt;naming::id_type&gt; hpx::components::copy</definition>
+        <argsstring>(naming::id_type const &amp;to_copy, naming::id_type const &amp;target_locality)</argsstring>
+        <name>copy</name>
+        <param>
+          <type>naming::id_type const &amp;</type>
+          <declname>to_copy</declname>
+        </param>
+        <param>
+          <type>naming::id_type const &amp;</type>
+          <declname>target_locality</declname>
+        </param>
+        <briefdescription>
+<para>Copy given component to the specified target locality. </para>        </briefdescription>
+        <detaileddescription>
+<para>The function <emphasis>copy&lt;Component&gt;</emphasis> will create a copy of the component referenced by <emphasis>to_copy</emphasis> on the locality specified with <emphasis>target_locality</emphasis>. It returns a future referring to the newly created component instance.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>to_copy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The global id of the component to copy </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>target_locality</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in ] The locality where the copy should be created.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>only template argument specifies the component type to create.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A future representing the global id of the newly (copied) component instance. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/components/copy_component.hpp" line="81" column="1" bodyfile="hpx/runtime/components/copy_component.hpp" bodystart="81" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="copy__component_8hpp_1a2ca635455c7ad7b6c71b4b75ad0a1095" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Derived</type>
+          </param>
+          <param>
+            <type>typename Stub</type>
+          </param>
+        </templateparamlist>
+        <type>Derived</type>
+        <definition>Derived hpx::components::copy</definition>
+        <argsstring>(client_base&lt; Derived, Stub &gt; const &amp;to_copy, naming::id_type const &amp;target_locality=naming::invalid_id)</argsstring>
+        <name>copy</name>
+        <param>
+          <type>client_base&lt; Derived, Stub &gt; const &amp;</type>
+          <declname>to_copy</declname>
+        </param>
+        <param>
+          <type>naming::id_type const &amp;</type>
+          <declname>target_locality</declname>
+          <defval>naming::invalid_id</defval>
+        </param>
+        <briefdescription>
+<para>Copy given component to the specified target locality. </para>        </briefdescription>
+        <detaileddescription>
+<para>The function <emphasis>copy</emphasis> will create a copy of the component referenced by the client side object <emphasis>to_copy</emphasis> on the locality specified with <emphasis>target_locality</emphasis>. It returns a new client side object future referring to the newly created component instance.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>to_copy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The client side object representing the component to copy </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>target_locality</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in, optional] The locality where the copy should be created (default is same locality as source).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>only template argument specifies the component type to create.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A future representing the global id of the newly (copied) component instance.</para></simplesect>
+<simplesect kind="note"><para>If the second argument is omitted (or is invalid_id) the new component instance is created on the locality of the component instance which is to be copied. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/components/copy_component.hpp" line="114" column="1" bodyfile="hpx/runtime/components/copy_component.hpp" bodystart="114" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="migrate__component_8hpp_1a7e2c5af829fbb9901c2405493a616d6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Component</type>
+          </param>
+          <param>
+            <type>typename DistPolicy</type>
+          </param>
+        </templateparamlist>
+        <type>future&lt; naming::id_type &gt;</type>
+        <definition>future&lt;naming::id_type&gt; hpx::components::migrate</definition>
+        <argsstring>(naming::id_type const &amp;to_migrate, DistPolicy const &amp;policy)</argsstring>
+        <name>migrate</name>
+        <param>
+          <type>naming::id_type const &amp;</type>
+          <declname>to_migrate</declname>
+        </param>
+        <param>
+          <type>DistPolicy const &amp;</type>
+          <declname>policy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Migrate the given component to the specified target locality</para><para>The function <emphasis>migrate&lt;Component&gt;</emphasis> will migrate the component referenced by <emphasis>to_migrate</emphasis> to the locality specified with <emphasis>target_locality</emphasis>. It returns a future referring to the migrated component instance.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>to_migrate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The client side representation of the component to migrate. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>policy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] A distribution policy which will be used to determine the locality to migrate this object to.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Component</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies the component type of the component to migrate. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>DistPolicy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies the distribution policy to use to determine the destination locality.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A future representing the global id of the migrated component instance. This should be the same as <emphasis>migrate_to</emphasis>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/components/migrate_component.hpp" line="57" column="1" bodyfile="hpx/runtime/components/migrate_component.hpp" bodystart="57" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="migrate__component_8hpp_1a68273f08ca4e312d977d563be6449853" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Derived</type>
+          </param>
+          <param>
+            <type>typename Stub</type>
+          </param>
+          <param>
+            <type>typename DistPolicy</type>
+          </param>
+        </templateparamlist>
+        <type>Derived</type>
+        <definition>Derived hpx::components::migrate</definition>
+        <argsstring>(client_base&lt; Derived, Stub &gt; const &amp;to_migrate, DistPolicy const &amp;policy)</argsstring>
+        <name>migrate</name>
+        <param>
+          <type>client_base&lt; Derived, Stub &gt; const &amp;</type>
+          <declname>to_migrate</declname>
+        </param>
+        <param>
+          <type>DistPolicy const &amp;</type>
+          <declname>policy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Migrate the given component to the specified target locality</para><para>The function <emphasis>migrate&lt;Component&gt;</emphasis> will migrate the component referenced by <emphasis>to_migrate</emphasis> to the locality specified with <emphasis>target_locality</emphasis>. It returns a future referring to the migrated component instance.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>to_migrate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The client side representation of the component to migrate. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>policy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] A distribution policy which will be used to determine the locality to migrate this object to.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Derived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies the component type of the component to migrate. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>DistPolicy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies the distribution policy to use to determine the destination locality.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A future representing the global id of the migrated component instance. This should be the same as <emphasis>migrate_to</emphasis>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/components/migrate_component.hpp" line="94" column="1" bodyfile="hpx/runtime/components/migrate_component.hpp" bodystart="94" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="migrate__component_8hpp_1a8f0f8f01c06a5336aec73d8a59d29a2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Component</type>
+          </param>
+        </templateparamlist>
+        <type>future&lt; naming::id_type &gt;</type>
+        <definition>future&lt;naming::id_type&gt; hpx::components::migrate</definition>
+        <argsstring>(naming::id_type const &amp;to_migrate, naming::id_type const &amp;target_locality)</argsstring>
+        <name>migrate</name>
+        <param>
+          <type>naming::id_type const &amp;</type>
+          <declname>to_migrate</declname>
+        </param>
+        <param>
+          <type>naming::id_type const &amp;</type>
+          <declname>target_locality</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Migrate the component with the given id to the specified target locality</para><para>The function <emphasis>migrate&lt;Component&gt;</emphasis> will migrate the component referenced by <emphasis>to_migrate</emphasis> to the locality specified with <emphasis>target_locality</emphasis>. It returns a future referring to the migrated component instance.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>to_migrate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The global id of the component to migrate. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>target_locality</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The locality where the component should be migrated to.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Component</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies the component type of the component to migrate.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A future representing the global id of the migrated component instance. This should be the same as <emphasis>migrate_to</emphasis>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/components/migrate_component.hpp" line="144" column="1" bodyfile="hpx/runtime/components/migrate_component.hpp" bodystart="144" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="migrate__component_8hpp_1a2a6edcf4641235d791e3862dfb6075bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Derived</type>
+          </param>
+          <param>
+            <type>typename Stub</type>
+          </param>
+        </templateparamlist>
+        <type>Derived</type>
+        <definition>Derived hpx::components::migrate</definition>
+        <argsstring>(client_base&lt; Derived, Stub &gt; const &amp;to_migrate, naming::id_type const &amp;target_locality)</argsstring>
+        <name>migrate</name>
+        <param>
+          <type>client_base&lt; Derived, Stub &gt; const &amp;</type>
+          <declname>to_migrate</declname>
+        </param>
+        <param>
+          <type>naming::id_type const &amp;</type>
+          <declname>target_locality</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Migrate the given component to the specified target locality</para><para>The function <emphasis>migrate&lt;Component&gt;</emphasis> will migrate the component referenced by <emphasis>to_migrate</emphasis> to the locality specified with <emphasis>target_locality</emphasis>. It returns a future referring to the migrated component instance.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>to_migrate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The client side representation of the component to migrate. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>target_locality</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The id of the locality to migrate this object to.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Derived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies the component type of the component to migrate.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A client side representation of representing of the migrated component instance. This should be the same as <emphasis>migrate_to</emphasis>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/components/migrate_component.hpp" line="170" column="1" bodyfile="hpx/runtime/components/migrate_component.hpp" bodystart="170" bodyend="177"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="hpx/runtime/components/binpacking_distribution_policy.hpp" line="38" column="1"/>
+  </compounddef>
+</doxygen>

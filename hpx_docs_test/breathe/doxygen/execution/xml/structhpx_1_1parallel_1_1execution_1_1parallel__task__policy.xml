@@ -1,0 +1,319 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy" kind="struct" language="C++" prot="public">
+    <compoundname>hpx::parallel::execution::parallel_task_policy</compoundname>
+    <derivedcompoundref refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy__shim" prot="public" virt="non-virtual">hpx::parallel::execution::parallel_task_policy_shim&lt; Executor, Parameters &gt;</derivedcompoundref>
+    <includes refid="execution__policy_8hpp" local="no">execution_policy.hpp</includes>
+    <innerclass refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1_1rebind" prot="public">hpx::parallel::execution::parallel_task_policy::rebind</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1a90a8f363f5525953e01265259f44cfc8" prot="public" static="no">
+        <type><ref refid="structhpx_1_1parallel_1_1execution_1_1parallel__policy__executor" kindref="compound">parallel_executor</ref></type>
+        <definition>typedef parallel_executor hpx::parallel::execution::parallel_task_policy::executor_type</definition>
+        <argsstring></argsstring>
+        <name>executor_type</name>
+        <briefdescription>
+<para>The type of the executor associated with this execution policy. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/execution_policy.hpp" line="642" column="1" bodyfile="libs/execution/include/hpx/parallel/execution_policy.hpp" bodystart="642" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1a400679ed2f2a71816e6830353c984893" prot="public" static="no">
+        <type><ref refid="structhpx_1_1parallel_1_1execution_1_1extract__executor__parameters" kindref="compound">execution::extract_executor_parameters</ref>&lt; <ref refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1a90a8f363f5525953e01265259f44cfc8" kindref="member">executor_type</ref> &gt;::type</type>
+        <definition>typedef execution::extract_executor_parameters&lt; executor_type &gt;::type hpx::parallel::execution::parallel_task_policy::executor_parameters_type</definition>
+        <argsstring></argsstring>
+        <name>executor_parameters_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The type of the associated executor parameters object which is associated with this execution policy </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/execution_policy.hpp" line="648" column="1" bodyfile="libs/execution/include/hpx/parallel/execution_policy.hpp" bodystart="648" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1a070a4b7d80ef286409fd8e8660e50e77" prot="public" static="no">
+        <type><ref refid="structhpx_1_1parallel_1_1execution_1_1parallel__execution__tag" kindref="compound">parallel_execution_tag</ref></type>
+        <definition>typedef parallel_execution_tag hpx::parallel::execution::parallel_task_policy::execution_category</definition>
+        <argsstring></argsstring>
+        <name>execution_category</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The category of the execution agents created by this execution policy. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/execution_policy.hpp" line="652" column="1" bodyfile="libs/execution/include/hpx/parallel/execution_policy.hpp" bodystart="652" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1add50dcae00a1300662d4d2f8c52c804f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class hpx::serialization::access</definition>
+        <argsstring></argsstring>
+        <name>hpx::serialization::access</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/execution_policy.hpp" line="759" column="1" bodyfile="libs/execution/include/hpx/parallel/execution_policy.hpp" bodystart="759" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1a951743c13bccc30151719f93c8fb235a" prot="private" static="no" mutable="no">
+        <type><ref refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1a90a8f363f5525953e01265259f44cfc8" kindref="member">executor_type</ref></type>
+        <definition>executor_type hpx::parallel::execution::parallel_task_policy::exec_</definition>
+        <argsstring></argsstring>
+        <name>exec_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/execution_policy.hpp" line="767" column="1" bodyfile="libs/execution/include/hpx/parallel/execution_policy.hpp" bodystart="767" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1afceb87f22b3b4ef9d0cdbc8664ca1eca" prot="private" static="no" mutable="no">
+        <type><ref refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1a400679ed2f2a71816e6830353c984893" kindref="member">executor_parameters_type</ref></type>
+        <definition>executor_parameters_type hpx::parallel::execution::parallel_task_policy::params_</definition>
+        <argsstring></argsstring>
+        <name>params_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/execution_policy.hpp" line="768" column="1" bodyfile="libs/execution/include/hpx/parallel/execution_policy.hpp" bodystart="768" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1af7a3416616c98e17b7722f792b3ab5e9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy" kindref="compound">parallel_task_policy</ref></type>
+        <definition>parallel_task_policy hpx::parallel::execution::parallel_task_policy::operator()</definition>
+        <argsstring>(task_policy_tag) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>task_policy_tag</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new <ref refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy" kindref="compound">parallel_task_policy</ref> from itself</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] Specify that the corresponding asynchronous execution policy should be used</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The new <ref refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy" kindref="compound">parallel_task_policy</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/execution_policy.hpp" line="677" column="1" bodyfile="libs/execution/include/hpx/parallel/execution_policy.hpp" bodystart="677" bodyend="681"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1a0cb10e7de3382338815d253e4fec1171" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Executor</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structhpx_1_1parallel_1_1execution_1_1rebind__executor" kindref="compound">rebind_executor</ref>&lt; <ref refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy" kindref="compound">parallel_task_policy</ref>, Executor, <ref refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1a400679ed2f2a71816e6830353c984893" kindref="member">executor_parameters_type</ref> &gt;::type</type>
+        <definition>rebind_executor&lt; parallel_task_policy, Executor, executor_parameters_type &gt;::type hpx::parallel::execution::parallel_task_policy::on</definition>
+        <argsstring>(Executor &amp;&amp;exec) const</argsstring>
+        <name>on</name>
+        <param>
+          <type>Executor &amp;&amp;</type>
+          <declname>exec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new <ref refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy" kindref="compound">parallel_task_policy</ref> from given executor</para><para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Executor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the executor to associate with this execution policy.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>exec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The executor to use for the execution of the parallel algorithm the returned execution policy is used with.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>Requires: is_executor&lt;Executor&gt;::value is true</para></simplesect>
+<simplesect kind="return"><para>The new <ref refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy" kindref="compound">parallel_task_policy</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/execution_policy.hpp" line="700" column="1" bodyfile="libs/execution/include/hpx/parallel/execution_policy.hpp" bodystart="700" bodyend="715"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1ad70edb446851d421e09f3bda6cea2a44" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Parameters</declname>
+            <defname>Parameters</defname>
+          </param>
+          <param>
+            <type>typename ParametersType</type>
+            <defval>typename <ref refid="structhpx_1_1parallel_1_1execution_1_1executor__parameters__join" kindref="compound">executor_parameters_join</ref>&lt;Parameters...&gt;::type</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structhpx_1_1parallel_1_1execution_1_1rebind__executor" kindref="compound">rebind_executor</ref>&lt; <ref refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy" kindref="compound">parallel_task_policy</ref>, <ref refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1a90a8f363f5525953e01265259f44cfc8" kindref="member">executor_type</ref>, ParametersType &gt;::type</type>
+        <definition>rebind_executor&lt; parallel_task_policy, executor_type, ParametersType &gt;::type hpx::parallel::execution::parallel_task_policy::with</definition>
+        <argsstring>(Parameters &amp;&amp;... params) const</argsstring>
+        <name>with</name>
+        <param>
+          <type>Parameters &amp;&amp;...</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new <ref refid="structhpx_1_1parallel_1_1execution_1_1parallel__policy__shim" kindref="compound">parallel_policy_shim</ref> from the given execution parameters</para><para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Parameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the executor parameters to associate with this execution policy.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The executor parameters to use for the execution of the parallel algorithm the returned execution policy is used with.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>Requires: all parameters are executor_parameters, different parameter types can&apos;t be duplicated</para></simplesect>
+<simplesect kind="return"><para>The new <ref refid="structhpx_1_1parallel_1_1execution_1_1parallel__policy__shim" kindref="compound">parallel_policy_shim</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/execution_policy.hpp" line="737" column="1" bodyfile="libs/execution/include/hpx/parallel/execution_policy.hpp" bodystart="737" bodyend="744"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1ab2fa7e8f12eb1cf3cf72c4140f7b3f81" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1a90a8f363f5525953e01265259f44cfc8" kindref="member">executor_type</ref> &amp;</type>
+        <definition>executor_type&amp; hpx::parallel::execution::parallel_task_policy::executor</definition>
+        <argsstring>()</argsstring>
+        <name>executor</name>
+        <briefdescription>
+<para>Return the associated executor object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/execution_policy.hpp" line="748" column="1" bodyfile="libs/execution/include/hpx/parallel/execution_policy.hpp" bodystart="748" bodyend="748"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1acb665040c7b290f7a89f9812dca8d170" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1a90a8f363f5525953e01265259f44cfc8" kindref="member">executor_type</ref> const  &amp;</type>
+        <definition>executor_type const&amp; hpx::parallel::execution::parallel_task_policy::executor</definition>
+        <argsstring>() const</argsstring>
+        <name>executor</name>
+        <briefdescription>
+<para>Return the associated executor object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/execution_policy.hpp" line="750" column="1" bodyfile="libs/execution/include/hpx/parallel/execution_policy.hpp" bodystart="750" bodyend="750"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1a78c7f25d5f65dd76b4656ff3ebf25135" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1a400679ed2f2a71816e6830353c984893" kindref="member">executor_parameters_type</ref> &amp;</type>
+        <definition>executor_parameters_type&amp; hpx::parallel::execution::parallel_task_policy::parameters</definition>
+        <argsstring>()</argsstring>
+        <name>parameters</name>
+        <briefdescription>
+<para>Return the associated executor parameters object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/execution_policy.hpp" line="753" column="1" bodyfile="libs/execution/include/hpx/parallel/execution_policy.hpp" bodystart="753" bodyend="753"/>
+      </memberdef>
+      <memberdef kind="function" id="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1a816eafc81e922f1920b0c11ad0cebfa5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1a400679ed2f2a71816e6830353c984893" kindref="member">executor_parameters_type</ref> const  &amp;</type>
+        <definition>executor_parameters_type const&amp; hpx::parallel::execution::parallel_task_policy::parameters</definition>
+        <argsstring>() const</argsstring>
+        <name>parameters</name>
+        <briefdescription>
+<para>Return the associated executor parameters object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/execution_policy.hpp" line="755" column="1" bodyfile="libs/execution/include/hpx/parallel/execution_policy.hpp" bodystart="755" bodyend="756"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1ac07aa4f080f8a3723b541042f5cf3e9f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Archive</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void hpx::parallel::execution::parallel_task_policy::serialize</definition>
+        <argsstring>(Archive &amp;ar, const unsigned int version)</argsstring>
+        <name>serialize</name>
+        <param>
+          <type>Archive &amp;</type>
+          <declname>ar</declname>
+        </param>
+        <param>
+          <type>const unsigned int</type>
+          <declname>version</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/execution_policy.hpp" line="762" column="1" bodyfile="libs/execution/include/hpx/parallel/execution_policy.hpp" bodystart="762" bodyend="764"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Extension: The class <ref refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy" kindref="compound">parallel_task_policy</ref> is an execution policy type used as a unique type to disambiguate parallel algorithm overloading and indicate that a parallel algorithm&apos;s execution may be parallelized.</para><para>The algorithm returns a future representing the result of the corresponding algorithm when invoked with the <ref refid="structhpx_1_1parallel_1_1execution_1_1parallel__policy" kindref="compound">parallel_policy</ref>. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="245">
+        <label>hpx::parallel::execution::parallel_task_policy</label>
+        <link refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy"/>
+      </node>
+      <node id="246">
+        <label>hpx::parallel::execution::parallel_task_policy_shim&lt; Executor, Parameters &gt;</label>
+        <link refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy__shim"/>
+        <childnode refid="245" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="libs/execution/include/hpx/parallel/execution_policy.hpp" line="640" column="1" bodyfile="libs/execution/include/hpx/parallel/execution_policy.hpp" bodystart="639" bodyend="769"/>
+    <listofallmembers>
+      <member refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1a951743c13bccc30151719f93c8fb235a" prot="private" virt="non-virtual"><scope>hpx::parallel::execution::parallel_task_policy</scope><name>exec_</name></member>
+      <member refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1a070a4b7d80ef286409fd8e8660e50e77" prot="public" virt="non-virtual"><scope>hpx::parallel::execution::parallel_task_policy</scope><name>execution_category</name></member>
+      <member refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1ab2fa7e8f12eb1cf3cf72c4140f7b3f81" prot="public" virt="non-virtual"><scope>hpx::parallel::execution::parallel_task_policy</scope><name>executor</name></member>
+      <member refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1acb665040c7b290f7a89f9812dca8d170" prot="public" virt="non-virtual"><scope>hpx::parallel::execution::parallel_task_policy</scope><name>executor</name></member>
+      <member refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1a400679ed2f2a71816e6830353c984893" prot="public" virt="non-virtual"><scope>hpx::parallel::execution::parallel_task_policy</scope><name>executor_parameters_type</name></member>
+      <member refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1a90a8f363f5525953e01265259f44cfc8" prot="public" virt="non-virtual"><scope>hpx::parallel::execution::parallel_task_policy</scope><name>executor_type</name></member>
+      <member refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1add50dcae00a1300662d4d2f8c52c804f" prot="public" virt="non-virtual"><scope>hpx::parallel::execution::parallel_task_policy</scope><name>hpx::serialization::access</name></member>
+      <member refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1a0cb10e7de3382338815d253e4fec1171" prot="public" virt="non-virtual"><scope>hpx::parallel::execution::parallel_task_policy</scope><name>on</name></member>
+      <member refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1af7a3416616c98e17b7722f792b3ab5e9" prot="public" virt="non-virtual"><scope>hpx::parallel::execution::parallel_task_policy</scope><name>operator()</name></member>
+      <member refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1a78c7f25d5f65dd76b4656ff3ebf25135" prot="public" virt="non-virtual"><scope>hpx::parallel::execution::parallel_task_policy</scope><name>parameters</name></member>
+      <member refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1a816eafc81e922f1920b0c11ad0cebfa5" prot="public" virt="non-virtual"><scope>hpx::parallel::execution::parallel_task_policy</scope><name>parameters</name></member>
+      <member refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1afceb87f22b3b4ef9d0cdbc8664ca1eca" prot="private" virt="non-virtual"><scope>hpx::parallel::execution::parallel_task_policy</scope><name>params_</name></member>
+      <member refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1ac07aa4f080f8a3723b541042f5cf3e9f" prot="private" virt="non-virtual"><scope>hpx::parallel::execution::parallel_task_policy</scope><name>serialize</name></member>
+      <member refid="structhpx_1_1parallel_1_1execution_1_1parallel__task__policy_1ad70edb446851d421e09f3bda6cea2a44" prot="public" virt="non-virtual"><scope>hpx::parallel::execution::parallel_task_policy</scope><name>with</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

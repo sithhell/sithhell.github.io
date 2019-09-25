@@ -1,0 +1,741 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacehpx_1_1threads" kind="namespace" language="C++">
+    <compoundname>hpx::threads</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="execution__information_8hpp_1a70dd3ab10b6fcc03f8425986e22d7ec1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>threads::mask_cref_type</type>
+        <definition>threads::mask_cref_type hpx::threads::get_pu_mask</definition>
+        <argsstring>(threads::topology &amp;topo, std::size_t thread_num)</argsstring>
+        <name>get_pu_mask</name>
+        <param>
+          <type>threads::topology &amp;</type>
+          <declname>topo</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>thread_num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/executors/execution_information.hpp" line="27" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__execution_8hpp_1ae4a97b00a13ee927c02ab3f8766ed341" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Executor</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; hpx::traits::is_threads_executor&lt; Executor &gt;::value, hpx::lcos::future&lt; typename hpx::util::detail::invoke_deferred_result&lt; F, Ts... &gt;::type &gt; &gt;::type</type>
+        <definition>std::enable_if&lt; hpx::traits::is_threads_executor&lt;Executor&gt;::value, hpx::lcos::future&lt;typename hpx::util::detail::invoke_deferred_result&lt;F, Ts...&gt;::type&gt; &gt;::type hpx::threads::async_execute</definition>
+        <argsstring>(Executor &amp;&amp;exec, F &amp;&amp;f, Ts &amp;&amp;... ts)</argsstring>
+        <name>async_execute</name>
+        <param>
+          <type>Executor &amp;&amp;</type>
+          <declname>exec</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/executors/thread_execution.hpp" line="47" column="1" bodyfile="libs/execution/include/hpx/parallel/executors/thread_execution.hpp" bodystart="47" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__execution_8hpp_1a62221550c886437a2e66b51ffa807fa1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Executor</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; hpx::traits::is_threads_executor&lt; Executor &gt;::value, typename hpx::util::detail::invoke_deferred_result&lt; F, Ts... &gt;::type &gt;::type</type>
+        <definition>std::enable_if&lt; hpx::traits::is_threads_executor&lt;Executor&gt;::value, typename hpx::util::detail::invoke_deferred_result&lt;F, Ts...&gt;::type&gt;::type hpx::threads::sync_execute</definition>
+        <argsstring>(Executor &amp;&amp;exec, F &amp;&amp;f, Ts &amp;&amp;... ts)</argsstring>
+        <name>sync_execute</name>
+        <param>
+          <type>Executor &amp;&amp;</type>
+          <declname>exec</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/executors/thread_execution.hpp" line="66" column="1" bodyfile="libs/execution/include/hpx/parallel/executors/thread_execution.hpp" bodystart="66" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__execution_8hpp_1a0a171da22ea9243c218fa86bf5298676" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Executor</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename Future</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; hpx::traits::is_threads_executor&lt; Executor &gt;::value, hpx::lcos::future&lt; typename hpx::util::detail::invoke_deferred_result&lt; F, Future, Ts... &gt;::type &gt; &gt;::type</type>
+        <definition>std::enable_if&lt; hpx::traits::is_threads_executor&lt;Executor&gt;::value, hpx::lcos::future&lt;typename hpx::util::detail::invoke_deferred_result&lt;F, Future, Ts...&gt;::type&gt; &gt;::type hpx::threads::then_execute</definition>
+        <argsstring>(Executor &amp;&amp;exec, F &amp;&amp;f, Future &amp;&amp;predecessor, Ts &amp;&amp;... ts)</argsstring>
+        <name>then_execute</name>
+        <param>
+          <type>Executor &amp;&amp;</type>
+          <declname>exec</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Future &amp;&amp;</type>
+          <declname>predecessor</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/executors/thread_execution.hpp" line="80" column="1" bodyfile="libs/execution/include/hpx/parallel/executors/thread_execution.hpp" bodystart="80" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__execution_8hpp_1acf7919b7155634069f705b8c34591d66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Executor</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; hpx::traits::is_threads_executor&lt; Executor &gt;::value &gt;::type</type>
+        <definition>std::enable_if&lt; hpx::traits::is_threads_executor&lt;Executor&gt;::value&gt;::type hpx::threads::post</definition>
+        <argsstring>(Executor &amp;&amp;exec, F &amp;&amp;f, Ts &amp;&amp;... ts)</argsstring>
+        <name>post</name>
+        <param>
+          <type>Executor &amp;&amp;</type>
+          <declname>exec</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/executors/thread_execution.hpp" line="102" column="1" bodyfile="libs/execution/include/hpx/parallel/executors/thread_execution.hpp" bodystart="102" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__execution_8hpp_1a34cd3536254fadc21ff31f394726054f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Executor</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename Hint</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; hpx::traits::is_threads_executor&lt; Executor &gt;::value &amp;&amp;std::is_same&lt; typename hpx::util::decay&lt; Hint &gt;::type, hpx::threads::thread_schedule_hint &gt;::value &gt;::type</type>
+        <definition>std::enable_if&lt; hpx::traits::is_threads_executor&lt;Executor&gt;::value &amp;&amp; std::is_same&lt;typename hpx::util::decay&lt;Hint&gt;::type, hpx::threads::thread_schedule_hint&gt;::value&gt;::type hpx::threads::post</definition>
+        <argsstring>(Executor &amp;&amp;exec, F &amp;&amp;f, Hint &amp;&amp;hint, Ts &amp;&amp;... ts)</argsstring>
+        <name>post</name>
+        <param>
+          <type>Executor &amp;&amp;</type>
+          <declname>exec</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Hint &amp;&amp;</type>
+          <declname>hint</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/executors/thread_execution.hpp" line="116" column="1" bodyfile="libs/execution/include/hpx/parallel/executors/thread_execution.hpp" bodystart="116" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__execution_8hpp_1ab8d20d83893a54ec0849814f92b61242" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Executor</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename Shape</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; hpx::traits::is_threads_executor&lt; Executor &gt;::value, std::vector&lt; hpx::lcos::future&lt; typename parallel::execution::detail::bulk_function_result&lt; F, Shape, Ts... &gt;::type &gt; &gt; &gt;::type</type>
+        <definition>std::enable_if&lt;hpx::traits::is_threads_executor&lt;Executor&gt;::value, std::vector&lt;hpx::lcos::future&lt;typename parallel::execution::detail:: bulk_function_result&lt;F, Shape, Ts...&gt;::type&gt; &gt; &gt;::type hpx::threads::bulk_async_execute</definition>
+        <argsstring>(Executor &amp;&amp;exec, F &amp;&amp;f, Shape const &amp;shape, Ts &amp;&amp;... ts)</argsstring>
+        <name>bulk_async_execute</name>
+        <param>
+          <type>Executor &amp;&amp;</type>
+          <declname>exec</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Shape const &amp;</type>
+          <declname>shape</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/executors/thread_execution.hpp" line="130" column="1" bodyfile="libs/execution/include/hpx/parallel/executors/thread_execution.hpp" bodystart="130" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__execution_8hpp_1aae17be75391bb95bc95352be6465f524" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Executor</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename Shape</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; hpx::traits::is_threads_executor&lt; Executor &gt;::value, typename parallel::execution::detail::bulk_execute_result&lt; F, Shape, Ts... &gt;::type &gt;::type</type>
+        <definition>std::enable_if&lt;hpx::traits::is_threads_executor&lt;Executor&gt;::value, typename parallel::execution::detail::bulk_execute_result&lt;F, Shape, Ts...&gt;::type&gt;::type hpx::threads::bulk_sync_execute</definition>
+        <argsstring>(Executor &amp;&amp;exec, F &amp;&amp;f, Shape const &amp;shape, Ts &amp;&amp;... ts)</argsstring>
+        <name>bulk_sync_execute</name>
+        <param>
+          <type>Executor &amp;&amp;</type>
+          <declname>exec</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Shape const &amp;</type>
+          <declname>shape</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/executors/thread_execution.hpp" line="152" column="1" bodyfile="libs/execution/include/hpx/parallel/executors/thread_execution.hpp" bodystart="152" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__execution_8hpp_1a8cf4047097f3d19c5dba841bbf5b30ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Executor</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename Shape</type>
+          </param>
+          <param>
+            <type>typename Future</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; hpx::traits::is_threads_executor&lt; Executor &gt;::value, hpx::future&lt; typename parallel::execution::detail::bulk_then_execute_result&lt; F, Shape, Future, Ts... &gt;::type &gt; &gt;::type</type>
+        <definition>std::enable_if&lt; hpx::traits::is_threads_executor&lt;Executor&gt;::value, hpx::future&lt;typename parallel::execution::detail:: bulk_then_execute_result&lt;F, Shape, Future, Ts...&gt;::type&gt; &gt;::type hpx::threads::bulk_then_execute</definition>
+        <argsstring>(Executor &amp;&amp;exec, F &amp;&amp;f, Shape const &amp;shape, Future &amp;&amp;predecessor, Ts &amp;&amp;... ts)</argsstring>
+        <name>bulk_then_execute</name>
+        <param>
+          <type>Executor &amp;&amp;</type>
+          <declname>exec</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Shape const &amp;</type>
+          <declname>shape</declname>
+        </param>
+        <param>
+          <type>Future &amp;&amp;</type>
+          <declname>predecessor</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/executors/thread_execution.hpp" line="176" column="1" bodyfile="libs/execution/include/hpx/parallel/executors/thread_execution.hpp" bodystart="176" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__timed__execution_8hpp_1a3efc2b0289a97f93ab9fec02a5f5bcb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Executor</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; hpx::traits::is_threads_executor&lt; Executor &gt;::value &gt;::type</type>
+        <definition>std::enable_if&lt; hpx::traits::is_threads_executor&lt;Executor&gt;::value &gt;::type hpx::threads::post_at</definition>
+        <argsstring>(Executor &amp;&amp;exec, hpx::util::steady_time_point const &amp;abs_time, F &amp;&amp;f, Ts &amp;&amp;... ts)</argsstring>
+        <name>post_at</name>
+        <param>
+          <type>Executor &amp;&amp;</type>
+          <declname>exec</declname>
+        </param>
+        <param>
+          <type>hpx::util::steady_time_point const &amp;</type>
+          <declname>abs_time</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/executors/thread_timed_execution.hpp" line="29" column="1" bodyfile="libs/execution/include/hpx/parallel/executors/thread_timed_execution.hpp" bodystart="29" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__timed__execution_8hpp_1a9ad0acafc18bd7b1a31ad68292167450" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Executor</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; hpx::traits::is_threads_executor&lt; Executor &gt;::value &gt;::type</type>
+        <definition>std::enable_if&lt; hpx::traits::is_threads_executor&lt;Executor&gt;::value &gt;::type hpx::threads::post_after</definition>
+        <argsstring>(Executor &amp;&amp;exec, hpx::util::steady_duration const &amp;rel_time, F &amp;&amp;f, Ts &amp;&amp;... ts)</argsstring>
+        <name>post_after</name>
+        <param>
+          <type>Executor &amp;&amp;</type>
+          <declname>exec</declname>
+        </param>
+        <param>
+          <type>hpx::util::steady_duration const &amp;</type>
+          <declname>rel_time</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/executors/thread_timed_execution.hpp" line="42" column="1" bodyfile="libs/execution/include/hpx/parallel/executors/thread_timed_execution.hpp" bodystart="42" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__timed__execution_8hpp_1ab03024583d7b7f167cd798ec451603f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Executor</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; hpx::traits::is_threads_executor&lt; Executor &gt;::value, hpx::future&lt; typename hpx::util::detail::invoke_deferred_result&lt; F, Ts... &gt;::type &gt; &gt;::type</type>
+        <definition>std::enable_if&lt; hpx::traits::is_threads_executor&lt;Executor&gt;::value, hpx::future&lt; typename hpx::util::detail::invoke_deferred_result&lt;F, Ts...&gt;::type &gt; &gt;::type hpx::threads::async_execute_at</definition>
+        <argsstring>(Executor &amp;&amp;exec, hpx::util::steady_time_point const &amp;abs_time, F &amp;&amp;f, Ts &amp;&amp;... ts)</argsstring>
+        <name>async_execute_at</name>
+        <param>
+          <type>Executor &amp;&amp;</type>
+          <declname>exec</declname>
+        </param>
+        <param>
+          <type>hpx::util::steady_time_point const &amp;</type>
+          <declname>abs_time</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/executors/thread_timed_execution.hpp" line="59" column="1" bodyfile="libs/execution/include/hpx/parallel/executors/thread_timed_execution.hpp" bodystart="59" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__timed__execution_8hpp_1a3ae6d73518d334631678aefa86c96d22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Executor</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; hpx::traits::is_threads_executor&lt; Executor &gt;::value, hpx::future&lt; typename hpx::util::detail::invoke_deferred_result&lt; F, Ts... &gt;::type &gt; &gt;::type</type>
+        <definition>std::enable_if&lt; hpx::traits::is_threads_executor&lt;Executor&gt;::value, hpx::future&lt; typename hpx::util::detail::invoke_deferred_result&lt;F, Ts...&gt;::type &gt; &gt;::type hpx::threads::async_execute_after</definition>
+        <argsstring>(Executor &amp;&amp;exec, hpx::util::steady_duration const &amp;rel_time, F &amp;&amp;f, Ts &amp;&amp;... ts)</argsstring>
+        <name>async_execute_after</name>
+        <param>
+          <type>Executor &amp;&amp;</type>
+          <declname>exec</declname>
+        </param>
+        <param>
+          <type>hpx::util::steady_duration const &amp;</type>
+          <declname>rel_time</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/executors/thread_timed_execution.hpp" line="87" column="1" bodyfile="libs/execution/include/hpx/parallel/executors/thread_timed_execution.hpp" bodystart="87" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__timed__execution_8hpp_1a924291c5bb2dd10432a9d3d9dc937770" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Executor</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; hpx::traits::is_threads_executor&lt; Executor &gt;::value, typename hpx::util::detail::invoke_deferred_result&lt; F, Ts... &gt;::type &gt;::type</type>
+        <definition>std::enable_if&lt; hpx::traits::is_threads_executor&lt;Executor&gt;::value, typename hpx::util::detail::invoke_deferred_result&lt;F, Ts...&gt;::type &gt;::type hpx::threads::sync_execute_at</definition>
+        <argsstring>(Executor &amp;&amp;exec, hpx::util::steady_time_point const &amp;abs_time, F &amp;&amp;f, Ts &amp;&amp;... ts)</argsstring>
+        <name>sync_execute_at</name>
+        <param>
+          <type>Executor &amp;&amp;</type>
+          <declname>exec</declname>
+        </param>
+        <param>
+          <type>hpx::util::steady_time_point const &amp;</type>
+          <declname>abs_time</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/executors/thread_timed_execution.hpp" line="113" column="1" bodyfile="libs/execution/include/hpx/parallel/executors/thread_timed_execution.hpp" bodystart="113" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__timed__execution_8hpp_1af6c9ff94a7199d54b06f4a91d8a76964" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Executor</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; hpx::traits::is_threads_executor&lt; Executor &gt;::value, typename hpx::util::detail::invoke_deferred_result&lt; F, Ts... &gt;::type &gt;::type</type>
+        <definition>std::enable_if&lt; hpx::traits::is_threads_executor&lt;Executor&gt;::value, typename hpx::util::detail::invoke_deferred_result&lt;F, Ts...&gt;::type &gt;::type hpx::threads::sync_execute_after</definition>
+        <argsstring>(Executor &amp;&amp;exec, hpx::util::steady_duration const &amp;rel_time, F &amp;&amp;f, Ts &amp;&amp;... ts)</argsstring>
+        <name>sync_execute_after</name>
+        <param>
+          <type>Executor &amp;&amp;</type>
+          <declname>exec</declname>
+        </param>
+        <param>
+          <type>hpx::util::steady_duration const &amp;</type>
+          <declname>rel_time</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/executors/thread_timed_execution.hpp" line="125" column="1" bodyfile="libs/execution/include/hpx/parallel/executors/thread_timed_execution.hpp" bodystart="125" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__execution__information_8hpp_1a8baa304ee8c40efd53d734d18c1e4d15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Executor</type>
+          </param>
+          <param>
+            <type>typename Parameters</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; hpx::traits::is_threads_executor&lt; Executor &gt;::value, std::size_t &gt;::type</type>
+        <definition>std::enable_if&lt; hpx::traits::is_threads_executor&lt;Executor&gt;::value, std::size_t &gt;::type hpx::threads::processing_units_count</definition>
+        <argsstring>(Executor &amp;&amp;exec, Parameters &amp;)</argsstring>
+        <name>processing_units_count</name>
+        <param>
+          <type>Executor &amp;&amp;</type>
+          <declname>exec</declname>
+        </param>
+        <param>
+          <type>Parameters &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/executors/thread_execution_information.hpp" line="30" column="1" bodyfile="libs/execution/include/hpx/parallel/executors/thread_execution_information.hpp" bodystart="30" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__execution__information_8hpp_1ab1325b0e734561312de5f6353d6238e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Executor</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; hpx::traits::is_threads_executor&lt; Executor &gt;::value, bool &gt;::type</type>
+        <definition>std::enable_if&lt; hpx::traits::is_threads_executor&lt;Executor&gt;::value, bool &gt;::type hpx::threads::has_pending_closures</definition>
+        <argsstring>(Executor &amp;&amp;exec)</argsstring>
+        <name>has_pending_closures</name>
+        <param>
+          <type>Executor &amp;&amp;</type>
+          <declname>exec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/executors/thread_execution_information.hpp" line="40" column="1" bodyfile="libs/execution/include/hpx/parallel/executors/thread_execution_information.hpp" bodystart="40" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__execution__information_8hpp_1aa2fc202db0dd085a80d789451c8f83df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Executor</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; hpx::traits::is_threads_executor&lt; Executor &gt;::value, threads::mask_cref_type &gt;::type</type>
+        <definition>std::enable_if&lt; hpx::traits::is_threads_executor&lt;Executor&gt;::value, threads::mask_cref_type &gt;::type hpx::threads::get_pu_mask</definition>
+        <argsstring>(Executor &amp;&amp;exec, threads::topology &amp;topo, std::size_t thread_num)</argsstring>
+        <name>get_pu_mask</name>
+        <param>
+          <type>Executor &amp;&amp;</type>
+          <declname>exec</declname>
+        </param>
+        <param>
+          <type>threads::topology &amp;</type>
+          <declname>topo</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>thread_num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/executors/thread_execution_information.hpp" line="50" column="1" bodyfile="libs/execution/include/hpx/parallel/executors/thread_execution_information.hpp" bodystart="50" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="thread__execution__information_8hpp_1a32648986b59b0436a94a2b723068b693" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Executor</type>
+          </param>
+          <param>
+            <type>typename Mode</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; hpx::traits::is_threads_executor&lt; Executor &gt;::value &gt;::type</type>
+        <definition>std::enable_if&lt; hpx::traits::is_threads_executor&lt;Executor&gt;::value &gt;::type hpx::threads::set_scheduler_mode</definition>
+        <argsstring>(Executor &amp;&amp;exec, Mode mode)</argsstring>
+        <name>set_scheduler_mode</name>
+        <param>
+          <type>Executor &amp;&amp;</type>
+          <declname>exec</declname>
+        </param>
+        <param>
+          <type>Mode</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/execution/include/hpx/parallel/executors/thread_execution_information.hpp" line="60" column="1" bodyfile="libs/execution/include/hpx/parallel/executors/thread_execution_information.hpp" bodystart="60" bodyend="65"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libs/execution/include/hpx/parallel/executors/execution_information.hpp" line="26" column="1"/>
+  </compounddef>
+</doxygen>

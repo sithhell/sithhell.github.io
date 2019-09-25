@@ -1,0 +1,744 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="cancellation__token_8hpp" kind="file" language="C++">
+    <compoundname>cancellation_token.hpp</compoundname>
+    <includes local="no">hpx/config.hpp</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">atomic</includes>
+    <includes local="no">functional</includes>
+    <includes local="no">memory</includes>
+    <includedby refid="util_2transform__loop_8hpp" local="no">libs/algorithms/include/hpx/parallel/util/transform_loop.hpp</includedby>
+    <includedby refid="util_2loop_8hpp" local="no">libs/algorithms/include/hpx/parallel/util/loop.hpp</includedby>
+    <includedby refid="is__sorted_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/is_sorted.hpp</includedby>
+    <includedby refid="is__partitioned_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/is_partitioned.hpp</includedby>
+    <includedby refid="includes_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/includes.hpp</includedby>
+    <incdepgraph>
+      <node id="4535">
+        <label>atomic</label>
+      </node>
+      <node id="4536">
+        <label>functional</label>
+      </node>
+      <node id="4533">
+        <label>hpx/config.hpp</label>
+      </node>
+      <node id="4534">
+        <label>algorithm</label>
+      </node>
+      <node id="4532">
+        <label>libs/algorithms/include/hpx/parallel/util/cancellation_token.hpp</label>
+        <link refid="cancellation__token_8hpp"/>
+        <childnode refid="4533" relation="include">
+        </childnode>
+        <childnode refid="4534" relation="include">
+        </childnode>
+        <childnode refid="4535" relation="include">
+        </childnode>
+        <childnode refid="4536" relation="include">
+        </childnode>
+        <childnode refid="4537" relation="include">
+        </childnode>
+      </node>
+      <node id="4537">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4602">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/partition.hpp</label>
+        <link refid="container__algorithms_2partition_8hpp"/>
+        <childnode refid="4542" relation="include">
+        </childnode>
+      </node>
+      <node id="4557">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/lexicographical_compare.hpp</label>
+        <link refid="lexicographical__compare_8hpp"/>
+        <childnode refid="4546" relation="include">
+        </childnode>
+      </node>
+      <node id="4549">
+        <label>libs/algorithms/include/hpx/parallel/memory.hpp</label>
+        <link refid="memory_8hpp_source"/>
+      </node>
+      <node id="4586">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/set_symmetric_difference.hpp</label>
+        <link refid="set__symmetric__difference_8hpp"/>
+        <childnode refid="4546" relation="include">
+        </childnode>
+      </node>
+      <node id="4562">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/fill.hpp</label>
+        <link refid="algorithms_2fill_8hpp"/>
+        <childnode refid="4546" relation="include">
+        </childnode>
+        <childnode refid="4563" relation="include">
+        </childnode>
+      </node>
+      <node id="4590">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/remove.hpp</label>
+        <link refid="container__algorithms_2remove_8hpp"/>
+        <childnode refid="4542" relation="include">
+        </childnode>
+      </node>
+      <node id="4545">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/is_sorted.hpp</label>
+        <link refid="is__sorted_8hpp"/>
+        <childnode refid="4546" relation="include">
+        </childnode>
+      </node>
+      <node id="4551">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/all_any_none.hpp</label>
+        <link refid="algorithms_2all__any__none_8hpp"/>
+        <childnode refid="4546" relation="include">
+        </childnode>
+        <childnode refid="4552" relation="include">
+        </childnode>
+      </node>
+      <node id="4597">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/count.hpp</label>
+        <link refid="algorithms_2count_8hpp"/>
+        <childnode refid="4546" relation="include">
+        </childnode>
+        <childnode refid="4598" relation="include">
+        </childnode>
+      </node>
+      <node id="4610">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/transform_reduce_binary.hpp</label>
+        <link refid="transform__reduce__binary_8hpp"/>
+        <childnode refid="4576" relation="include">
+        </childnode>
+      </node>
+      <node id="4595">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/adjacent_difference.hpp</label>
+        <link refid="adjacent__difference_8hpp"/>
+        <childnode refid="4576" relation="include">
+        </childnode>
+      </node>
+      <node id="4579">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/equal.hpp</label>
+        <link refid="equal_8hpp"/>
+        <childnode refid="4546" relation="include">
+        </childnode>
+      </node>
+      <node id="4592">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/find.hpp</label>
+        <link refid="algorithms_2find_8hpp"/>
+        <childnode refid="4546" relation="include">
+        </childnode>
+        <childnode refid="4593" relation="include">
+        </childnode>
+      </node>
+      <node id="4591">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/set_difference.hpp</label>
+        <link refid="set__difference_8hpp"/>
+        <childnode refid="4546" relation="include">
+        </childnode>
+      </node>
+      <node id="4577">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/minmax.hpp</label>
+        <link refid="algorithms_2minmax_8hpp"/>
+        <childnode refid="4546" relation="include">
+        </childnode>
+        <childnode refid="4578" relation="include">
+        </childnode>
+      </node>
+      <node id="4571">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/rotate.hpp</label>
+        <link refid="container__algorithms_2rotate_8hpp"/>
+        <childnode refid="4542" relation="include">
+        </childnode>
+      </node>
+      <node id="4556">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/mismatch.hpp</label>
+        <link refid="mismatch_8hpp"/>
+        <childnode refid="4546" relation="include">
+        </childnode>
+        <childnode refid="4557" relation="include">
+        </childnode>
+      </node>
+      <node id="4564">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/reduce_by_key.hpp</label>
+        <link refid="reduce__by__key_8hpp"/>
+      </node>
+      <node id="4584">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/transform_inclusive_scan.hpp</label>
+        <link refid="transform__inclusive__scan_8hpp"/>
+        <childnode refid="4576" relation="include">
+        </childnode>
+        <childnode refid="4575" relation="include">
+        </childnode>
+      </node>
+      <node id="4541">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/transform.hpp</label>
+        <link refid="container__algorithms_2transform_8hpp"/>
+        <childnode refid="4542" relation="include">
+        </childnode>
+      </node>
+      <node id="4544">
+        <label>libs/algorithms/include/hpx/parallel/util/prefetching.hpp</label>
+        <link refid="prefetching_8hpp_source"/>
+      </node>
+      <node id="4546">
+        <label>libs/algorithms/include/hpx/parallel/algorithm.hpp</label>
+        <link refid="algorithm_8hpp_source"/>
+        <childnode refid="4542" relation="include">
+        </childnode>
+      </node>
+      <node id="4578">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/minmax.hpp</label>
+        <link refid="container__algorithms_2minmax_8hpp"/>
+        <childnode refid="4542" relation="include">
+        </childnode>
+      </node>
+      <node id="4539">
+        <label>libs/algorithms/include/hpx/parallel/util/transform_loop.hpp</label>
+        <link refid="util_2transform__loop_8hpp_source"/>
+        <childnode refid="4540" relation="include">
+        </childnode>
+      </node>
+      <node id="4582">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/uninitialized_copy.hpp</label>
+        <link refid="uninitialized__copy_8hpp"/>
+        <childnode refid="4549" relation="include">
+        </childnode>
+      </node>
+      <node id="4576">
+        <label>libs/algorithms/include/hpx/parallel/numeric.hpp</label>
+        <link refid="numeric_8hpp_source"/>
+      </node>
+      <node id="4565">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/search.hpp</label>
+        <link refid="algorithms_2search_8hpp"/>
+        <childnode refid="4546" relation="include">
+        </childnode>
+        <childnode refid="4566" relation="include">
+        </childnode>
+      </node>
+      <node id="4589">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/remove.hpp</label>
+        <link refid="algorithms_2remove_8hpp"/>
+        <childnode refid="4546" relation="include">
+        </childnode>
+        <childnode refid="4590" relation="include">
+        </childnode>
+      </node>
+      <node id="4550">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/uninitialized_move.hpp</label>
+        <link refid="uninitialized__move_8hpp"/>
+        <childnode refid="4549" relation="include">
+        </childnode>
+      </node>
+      <node id="4598">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/count.hpp</label>
+        <link refid="container__algorithms_2count_8hpp"/>
+        <childnode refid="4542" relation="include">
+        </childnode>
+      </node>
+      <node id="4568">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/reverse.hpp</label>
+        <link refid="algorithms_2reverse_8hpp"/>
+        <childnode refid="4546" relation="include">
+        </childnode>
+        <childnode refid="4569" relation="include">
+        </childnode>
+        <childnode refid="4570" relation="include">
+        </childnode>
+      </node>
+      <node id="4555">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/adjacent_find.hpp</label>
+        <link refid="adjacent__find_8hpp"/>
+        <childnode refid="4546" relation="include">
+        </childnode>
+      </node>
+      <node id="4606">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/remove_copy.hpp</label>
+        <link refid="algorithms_2remove__copy_8hpp"/>
+        <childnode refid="4546" relation="include">
+        </childnode>
+        <childnode refid="4607" relation="include">
+        </childnode>
+      </node>
+      <node id="4593">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/find.hpp</label>
+        <link refid="container__algorithms_2find_8hpp"/>
+        <childnode refid="4542" relation="include">
+        </childnode>
+      </node>
+      <node id="4588">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/is_heap.hpp</label>
+        <link refid="container__algorithms_2is__heap_8hpp"/>
+        <childnode refid="4542" relation="include">
+        </childnode>
+      </node>
+      <node id="4609">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/unique.hpp</label>
+        <link refid="container__algorithms_2unique_8hpp"/>
+        <childnode refid="4542" relation="include">
+        </childnode>
+      </node>
+      <node id="4563">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/fill.hpp</label>
+        <link refid="container__algorithms_2fill_8hpp"/>
+        <childnode refid="4542" relation="include">
+        </childnode>
+      </node>
+      <node id="4566">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/search.hpp</label>
+        <link refid="container__algorithms_2search_8hpp"/>
+        <childnode refid="4542" relation="include">
+        </childnode>
+      </node>
+      <node id="4560">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/generate.hpp</label>
+        <link refid="algorithms_2generate_8hpp"/>
+        <childnode refid="4546" relation="include">
+        </childnode>
+        <childnode refid="4561" relation="include">
+        </childnode>
+      </node>
+      <node id="4548">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/uninitialized_fill.hpp</label>
+        <link refid="uninitialized__fill_8hpp"/>
+        <childnode refid="4549" relation="include">
+        </childnode>
+      </node>
+      <node id="4583">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/inclusive_scan.hpp</label>
+        <link refid="inclusive__scan_8hpp"/>
+        <childnode refid="4576" relation="include">
+        </childnode>
+        <childnode refid="4564" relation="include">
+        </childnode>
+        <childnode refid="4584" relation="include">
+        </childnode>
+        <childnode refid="4585" relation="include">
+        </childnode>
+      </node>
+      <node id="4573">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/replace.hpp</label>
+        <link refid="container__algorithms_2replace_8hpp"/>
+        <childnode refid="4542" relation="include">
+        </childnode>
+      </node>
+      <node id="4611">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/includes.hpp</label>
+        <link refid="includes_8hpp"/>
+        <childnode refid="4546" relation="include">
+        </childnode>
+      </node>
+      <node id="4599">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/destroy.hpp</label>
+        <link refid="destroy_8hpp"/>
+        <childnode refid="4549" relation="include">
+        </childnode>
+      </node>
+      <node id="4540">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/transform.hpp</label>
+        <link refid="algorithms_2transform_8hpp"/>
+        <childnode refid="4541" relation="include">
+        </childnode>
+      </node>
+      <node id="4553">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/merge.hpp</label>
+        <link refid="algorithms_2merge_8hpp_source"/>
+        <childnode refid="4546" relation="include">
+        </childnode>
+        <childnode refid="4554" relation="include">
+        </childnode>
+      </node>
+      <node id="4604">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/copy.hpp</label>
+        <link refid="container__algorithms_2copy_8hpp"/>
+        <childnode refid="4542" relation="include">
+        </childnode>
+      </node>
+      <node id="4547">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/is_partitioned.hpp</label>
+        <link refid="is__partitioned_8hpp"/>
+        <childnode refid="4546" relation="include">
+        </childnode>
+      </node>
+      <node id="4575">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/transform_exclusive_scan.hpp</label>
+        <link refid="transform__exclusive__scan_8hpp"/>
+        <childnode refid="4576" relation="include">
+        </childnode>
+      </node>
+      <node id="4603">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/copy.hpp</label>
+        <link refid="algorithms_2copy_8hpp"/>
+        <childnode refid="4546" relation="include">
+        </childnode>
+        <childnode refid="4604" relation="include">
+        </childnode>
+        <childnode refid="4570" relation="include">
+        </childnode>
+        <childnode refid="4574" relation="include">
+        </childnode>
+        <childnode refid="4564" relation="include">
+        </childnode>
+        <childnode refid="4586" relation="include">
+        </childnode>
+        <childnode refid="4591" relation="include">
+        </childnode>
+        <childnode refid="4568" relation="include">
+        </childnode>
+        <childnode refid="4605" relation="include">
+        </childnode>
+        <childnode refid="4606" relation="include">
+        </childnode>
+      </node>
+      <node id="4570">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/rotate.hpp</label>
+        <link refid="algorithms_2rotate_8hpp"/>
+        <childnode refid="4546" relation="include">
+        </childnode>
+        <childnode refid="4571" relation="include">
+        </childnode>
+      </node>
+      <node id="4601">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/partition.hpp</label>
+        <link refid="algorithms_2partition_8hpp_source"/>
+        <childnode refid="4546" relation="include">
+        </childnode>
+        <childnode refid="4602" relation="include">
+        </childnode>
+      </node>
+      <node id="4572">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/replace.hpp</label>
+        <link refid="algorithms_2replace_8hpp"/>
+        <childnode refid="4546" relation="include">
+        </childnode>
+        <childnode refid="4573" relation="include">
+        </childnode>
+      </node>
+      <node id="4580">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/transform_reduce.hpp</label>
+        <link refid="transform__reduce_8hpp"/>
+        <childnode refid="4576" relation="include">
+        </childnode>
+      </node>
+      <node id="4569">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/reverse.hpp</label>
+        <link refid="container__algorithms_2reverse_8hpp"/>
+        <childnode refid="4542" relation="include">
+        </childnode>
+      </node>
+      <node id="4608">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/unique.hpp</label>
+        <link refid="algorithms_2unique_8hpp_source"/>
+        <childnode refid="4546" relation="include">
+        </childnode>
+        <childnode refid="4609" relation="include">
+        </childnode>
+      </node>
+      <node id="4605">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/set_intersection.hpp</label>
+        <link refid="set__intersection_8hpp"/>
+        <childnode refid="4546" relation="include">
+        </childnode>
+      </node>
+      <node id="4559">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/for_each.hpp</label>
+        <link refid="container__algorithms_2for__each_8hpp"/>
+        <childnode refid="4542" relation="include">
+        </childnode>
+      </node>
+      <node id="4581">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/reduce.hpp</label>
+        <link refid="reduce_8hpp"/>
+        <childnode refid="4576" relation="include">
+        </childnode>
+      </node>
+      <node id="4558">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/for_each.hpp</label>
+        <link refid="algorithms_2for__each_8hpp"/>
+        <childnode refid="4546" relation="include">
+        </childnode>
+        <childnode refid="4559" relation="include">
+        </childnode>
+        <childnode refid="4560" relation="include">
+        </childnode>
+        <childnode refid="4562" relation="include">
+        </childnode>
+        <childnode refid="4564" relation="include">
+        </childnode>
+        <childnode refid="4565" relation="include">
+        </childnode>
+        <childnode refid="4557" relation="include">
+        </childnode>
+        <childnode refid="4567" relation="include">
+        </childnode>
+        <childnode refid="4568" relation="include">
+        </childnode>
+        <childnode refid="4572" relation="include">
+        </childnode>
+      </node>
+      <node id="4561">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/generate.hpp</label>
+        <link refid="container__algorithms_2generate_8hpp"/>
+        <childnode refid="4542" relation="include">
+        </childnode>
+      </node>
+      <node id="4542">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms.hpp</label>
+        <link refid="container__algorithms_8hpp_source"/>
+      </node>
+      <node id="4600">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/for_loop.hpp</label>
+        <link refid="for__loop_8hpp"/>
+        <childnode refid="4546" relation="include">
+        </childnode>
+      </node>
+      <node id="4567">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/swap_ranges.hpp</label>
+        <link refid="swap__ranges_8hpp"/>
+        <childnode refid="4546" relation="include">
+        </childnode>
+      </node>
+      <node id="4594">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/uninitialized_value_construct.hpp</label>
+        <link refid="uninitialized__value__construct_8hpp"/>
+        <childnode refid="4549" relation="include">
+        </childnode>
+      </node>
+      <node id="4596">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/uninitialized_default_construct.hpp</label>
+        <link refid="uninitialized__default__construct_8hpp"/>
+        <childnode refid="4549" relation="include">
+        </childnode>
+      </node>
+      <node id="4554">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/merge.hpp</label>
+        <link refid="container__algorithms_2merge_8hpp"/>
+        <childnode refid="4542" relation="include">
+        </childnode>
+      </node>
+      <node id="4585">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/exclusive_scan.hpp</label>
+        <link refid="exclusive__scan_8hpp"/>
+        <childnode refid="4576" relation="include">
+        </childnode>
+      </node>
+      <node id="4543">
+        <label>libs/algorithms/include/hpx/parallel/util/loop.hpp</label>
+        <link refid="util_2loop_8hpp_source"/>
+        <childnode refid="4544" relation="include">
+        </childnode>
+        <childnode refid="4545" relation="include">
+        </childnode>
+        <childnode refid="4547" relation="include">
+        </childnode>
+        <childnode refid="4548" relation="include">
+        </childnode>
+        <childnode refid="4550" relation="include">
+        </childnode>
+        <childnode refid="4551" relation="include">
+        </childnode>
+        <childnode refid="4553" relation="include">
+        </childnode>
+        <childnode refid="4555" relation="include">
+        </childnode>
+        <childnode refid="4556" relation="include">
+        </childnode>
+        <childnode refid="4558" relation="include">
+        </childnode>
+        <childnode refid="4574" relation="include">
+        </childnode>
+        <childnode refid="4575" relation="include">
+        </childnode>
+        <childnode refid="4565" relation="include">
+        </childnode>
+        <childnode refid="4577" relation="include">
+        </childnode>
+        <childnode refid="4579" relation="include">
+        </childnode>
+        <childnode refid="4557" relation="include">
+        </childnode>
+        <childnode refid="4580" relation="include">
+        </childnode>
+        <childnode refid="4581" relation="include">
+        </childnode>
+        <childnode refid="4582" relation="include">
+        </childnode>
+        <childnode refid="4583" relation="include">
+        </childnode>
+        <childnode refid="4586" relation="include">
+        </childnode>
+        <childnode refid="4587" relation="include">
+        </childnode>
+        <childnode refid="4589" relation="include">
+        </childnode>
+        <childnode refid="4591" relation="include">
+        </childnode>
+        <childnode refid="4592" relation="include">
+        </childnode>
+        <childnode refid="4584" relation="include">
+        </childnode>
+        <childnode refid="4594" relation="include">
+        </childnode>
+        <childnode refid="4595" relation="include">
+        </childnode>
+        <childnode refid="4596" relation="include">
+        </childnode>
+        <childnode refid="4597" relation="include">
+        </childnode>
+        <childnode refid="4599" relation="include">
+        </childnode>
+        <childnode refid="4600" relation="include">
+        </childnode>
+        <childnode refid="4601" relation="include">
+        </childnode>
+        <childnode refid="4603" relation="include">
+        </childnode>
+        <childnode refid="4585" relation="include">
+        </childnode>
+        <childnode refid="4605" relation="include">
+        </childnode>
+        <childnode refid="4608" relation="include">
+        </childnode>
+        <childnode refid="4610" relation="include">
+        </childnode>
+      </node>
+      <node id="4607">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/remove_copy.hpp</label>
+        <link refid="container__algorithms_2remove__copy_8hpp"/>
+        <childnode refid="4542" relation="include">
+        </childnode>
+      </node>
+      <node id="4552">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/all_any_none.hpp</label>
+        <link refid="container__algorithms_2all__any__none_8hpp"/>
+        <childnode refid="4542" relation="include">
+        </childnode>
+      </node>
+      <node id="4538">
+        <label>libs/algorithms/include/hpx/parallel/util/cancellation_token.hpp</label>
+        <link refid="cancellation__token_8hpp"/>
+        <childnode refid="4539" relation="include">
+        </childnode>
+        <childnode refid="4543" relation="include">
+        </childnode>
+        <childnode refid="4545" relation="include">
+        </childnode>
+        <childnode refid="4547" relation="include">
+        </childnode>
+        <childnode refid="4611" relation="include">
+        </childnode>
+      </node>
+      <node id="4574">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/set_union.hpp</label>
+        <link refid="set__union_8hpp"/>
+        <childnode refid="4546" relation="include">
+        </childnode>
+      </node>
+      <node id="4587">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/is_heap.hpp</label>
+        <link refid="algorithms_2is__heap_8hpp_source"/>
+        <childnode refid="4546" relation="include">
+        </childnode>
+        <childnode refid="4588" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classhpx_1_1parallel_1_1util_1_1cancellation__token" prot="public">hpx::parallel::util::cancellation_token</innerclass>
+    <innernamespace refid="namespacehpx">hpx</innernamespace>
+    <innernamespace refid="namespacehpx_1_1parallel">hpx::parallel</innernamespace>
+    <innernamespace refid="namespacehpx_1_1parallel_1_1util">hpx::parallel::util</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2007-2016<sp/>Hartmut<sp/>Kaiser</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Distributed<sp/>under<sp/>the<sp/>Boost<sp/>Software<sp/>License,<sp/>Version<sp/>1.0.<sp/>(See<sp/>accompanying</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>file<sp/>LICENSE_1_0.txt<sp/>or<sp/>copy<sp/>at<sp/>http://www.boost.org/LICENSE_1_0.txt)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(HPX_PARALLEL_UTIL_CANCELLATION_TOKEN_OCT_05_1205PM)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPX_PARALLEL_UTIL_CANCELLATION_TOKEN_OCT_05_1205PM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/config.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;atomic&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehpx" kindref="compound">hpx</ref><sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">parallel<sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">util</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">detail</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">no_data</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>operator&lt;=<sp/>(no_data)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>cancellation_token<sp/>is<sp/>used<sp/>for<sp/>premature<sp/>cancellation<sp/>of<sp/>algorithms</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T<sp/>=<sp/>detail::no_data,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Pred<sp/>=<sp/>std::less_equal&lt;T&gt;<sp/>&gt;</highlight></codeline>
+<codeline lineno="29" refid="classhpx_1_1parallel_1_1util_1_1cancellation__token" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhpx_1_1parallel_1_1util_1_1cancellation__token" kindref="compound">cancellation_token</ref></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::atomic&lt;T&gt;<sp/>flag_type;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;flag_type&gt;<sp/>was_cancelled_;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhpx_1_1parallel_1_1util_1_1cancellation__token" kindref="compound">cancellation_token</ref>(T<sp/>data)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>was_cancelled_(std::make_shared&lt;flag_type&gt;(data))</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>was_cancelled(T<sp/>data)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Pred()(was_cancelled_-&gt;load(std::memory_order_relaxed),<sp/>data);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cancel(T<sp/>data)<sp/>noexcept</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T<sp/>old_data<sp/>=<sp/>was_cancelled_-&gt;load(std::memory_order_relaxed);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Pred()(old_data,<sp/>data))</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>we<sp/>already<sp/>have<sp/>a<sp/>closer<sp/>one,<sp/>break</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!was_cancelled_-&gt;compare_exchange_strong(old_data,<sp/>data,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memory_order_relaxed));</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T<sp/>get_data()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>was_cancelled_-&gt;load(std::memory_order_relaxed);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>special<sp/>case<sp/>for<sp/>when<sp/>no<sp/>additional<sp/>data<sp/>needs<sp/>to<sp/>be<sp/>stored<sp/>at<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>cancellation<sp/>point</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;&gt;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhpx_1_1parallel_1_1util_1_1cancellation__token" kindref="compound">cancellation_token</ref>&lt;detail::no_data,<sp/>std::less_equal&lt;detail::no_data&gt;<sp/>&gt;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::atomic&lt;bool&gt;<sp/>flag_type;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;flag_type&gt;<sp/>was_cancelled_;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classhpx_1_1parallel_1_1util_1_1cancellation__token" kindref="compound">cancellation_token</ref>()</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>was_cancelled_(std::make_shared&lt;flag_type&gt;(</highlight><highlight class="keyword">false</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>was_cancelled()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>was_cancelled_-&gt;load(std::memory_order_relaxed);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cancel()<sp/>noexcept</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>was_cancelled_-&gt;store(</highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/>std::memory_order_relaxed);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}}}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="libs/algorithms/include/hpx/parallel/util/cancellation_token.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,217 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classhpx_1_1program__options_1_1basic__command__line__parser" kind="class" language="C++" prot="public">
+    <compoundname>hpx::program_options::basic_command_line_parser</compoundname>
+    <basecompoundref prot="private" virt="non-virtual">cmdline</basecompoundref>
+    <includes refid="parsers_8hpp" local="no">parsers.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>class Char</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhpx_1_1program__options_1_1basic__command__line__parser_1a04740117ad6708d7da01e8d64be1198a" prot="private" static="no" mutable="no">
+        <type>const <ref refid="classhpx_1_1program__options_1_1options__description" kindref="compound">options_description</ref> *</type>
+        <definition>const options_description* hpx::program_options::basic_command_line_parser&lt; Char &gt;::m_desc</definition>
+        <argsstring></argsstring>
+        <name>m_desc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/parsers.hpp" line="198" column="1" bodyfile="libs/program_options/include/hpx/program_options/parsers.hpp" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1basic__command__line__parser_1a3e57efb1ded73506227398fac67dc6b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hpx::program_options::basic_command_line_parser&lt; Char &gt;::basic_command_line_parser</definition>
+        <argsstring>(const std::vector&lt; std::basic_string&lt; Char &gt;&gt; &amp;args)</argsstring>
+        <name>basic_command_line_parser</name>
+        <param>
+          <type>const std::vector&lt; std::basic_string&lt; Char &gt;&gt; &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a command line parser for the specified arguments list. The &apos;args&apos; parameter should not include program name. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/parsers.hpp" line="160" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1basic__command__line__parser_1a2558c39591f3261fe79947f1b92be013" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hpx::program_options::basic_command_line_parser&lt; Char &gt;::basic_command_line_parser</definition>
+        <argsstring>(int argc, const Char *const argv[])</argsstring>
+        <name>basic_command_line_parser</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>const Char *const</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a command line parser for the specified arguments list. The parameters should be the same as passed to &apos;main&apos;. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/parsers.hpp" line="165" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1basic__command__line__parser_1a5d6eddd08f9f26bd517382e522c5be97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classhpx_1_1program__options_1_1basic__command__line__parser" kindref="compound">basic_command_line_parser</ref> &amp;</type>
+        <definition>basic_command_line_parser&amp; hpx::program_options::basic_command_line_parser&lt; Char &gt;::options</definition>
+        <argsstring>(const options_description &amp;desc)</argsstring>
+        <name>options</name>
+        <param>
+          <type>const <ref refid="classhpx_1_1program__options_1_1options__description" kindref="compound">options_description</ref> &amp;</type>
+          <declname>desc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets options descriptions to use. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/parsers.hpp" line="168" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1basic__command__line__parser_1a43455e26416a2d0ab64847e73e52a37e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classhpx_1_1program__options_1_1basic__command__line__parser" kindref="compound">basic_command_line_parser</ref> &amp;</type>
+        <definition>basic_command_line_parser&amp; hpx::program_options::basic_command_line_parser&lt; Char &gt;::positional</definition>
+        <argsstring>(const positional_options_description &amp;desc)</argsstring>
+        <name>positional</name>
+        <param>
+          <type>const <ref refid="classhpx_1_1program__options_1_1positional__options__description" kindref="compound">positional_options_description</ref> &amp;</type>
+          <declname>desc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets positional options description to use. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/parsers.hpp" line="170" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1basic__command__line__parser_1a8eba5db55251b3c3f8f693318d687b56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classhpx_1_1program__options_1_1basic__command__line__parser" kindref="compound">basic_command_line_parser</ref> &amp;</type>
+        <definition>basic_command_line_parser&amp; hpx::program_options::basic_command_line_parser&lt; Char &gt;::style</definition>
+        <argsstring>(int)</argsstring>
+        <name>style</name>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the command line style. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/parsers.hpp" line="174" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1basic__command__line__parser_1af912e74dbc519f042ff148461195a51d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classhpx_1_1program__options_1_1basic__command__line__parser" kindref="compound">basic_command_line_parser</ref> &amp;</type>
+        <definition>basic_command_line_parser&amp; hpx::program_options::basic_command_line_parser&lt; Char &gt;::extra_parser</definition>
+        <argsstring>(ext_parser)</argsstring>
+        <name>extra_parser</name>
+        <param>
+          <type>ext_parser</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the extra parsers. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/parsers.hpp" line="176" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1basic__command__line__parser_1ab515fa35c3944a9cc5aadf7cd4699f08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classhpx_1_1program__options_1_1basic__parsed__options" kindref="compound">basic_parsed_options</ref>&lt; Char &gt;</type>
+        <definition>basic_parsed_options&lt;Char&gt; hpx::program_options::basic_command_line_parser&lt; Char &gt;::run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parses the options and returns the result of parsing. Throws on error. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/parsers.hpp" line="181" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1basic__command__line__parser_1a5025c7bcc5bb721e60b15ac968bd251b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classhpx_1_1program__options_1_1basic__command__line__parser" kindref="compound">basic_command_line_parser</ref> &amp;</type>
+        <definition>basic_command_line_parser&amp; hpx::program_options::basic_command_line_parser&lt; Char &gt;::allow_unregistered</definition>
+        <argsstring>()</argsstring>
+        <name>allow_unregistered</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Specifies that unregistered options are allowed and should be passed though. For each command like token that looks like an option but does not contain a recognized name, an instance of basic_option&lt;charT&gt; will be added to result, with &apos;unrecognized&apos; field set to &apos;true&apos;. It&apos;s possible to collect all unrecognized options with the &apos;collect_unrecognized&apos; function. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/parsers.hpp" line="191" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1basic__command__line__parser_1a2c692d512dc10367e4408e4ff2ad0cba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classhpx_1_1program__options_1_1basic__command__line__parser" kindref="compound">basic_command_line_parser</ref> &amp;</type>
+        <definition>basic_command_line_parser&amp; hpx::program_options::basic_command_line_parser&lt; Char &gt;::extra_style_parser</definition>
+        <argsstring>(style_parser s)</argsstring>
+        <name>extra_style_parser</name>
+        <param>
+          <type>style_parser</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/parsers.hpp" line="195" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Command line parser.</para><para>The class allows one to specify all the information needed for parsing and to parse the command line. It is primarily needed to emulate named function parameters -- a regular function with 5 parameters will be hard to use and creating overloads with a smaller number of parameters will be confusing.</para><para>For the most common case, the function parse_command_line is a better alternative.</para><para>There are two typedefs -- command_line_parser and wcommand_line_parser, for charT == char and charT == wchar_t cases. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="13">
+        <label>hpx::program_options::basic_command_line_parser&lt; Char &gt;</label>
+        <link refid="classhpx_1_1program__options_1_1basic__command__line__parser"/>
+        <childnode refid="14" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>detail::cmdline</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="15">
+        <label>hpx::program_options::basic_command_line_parser&lt; Char &gt;</label>
+        <link refid="classhpx_1_1program__options_1_1basic__command__line__parser"/>
+        <childnode refid="16" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>detail::cmdline</label>
+      </node>
+    </collaborationgraph>
+    <location file="libs/program_options/include/hpx/program_options/parsers.hpp" line="155" column="1" bodyfile="libs/program_options/include/hpx/program_options/parsers.hpp" bodystart="154" bodyend="199"/>
+    <listofallmembers>
+      <member refid="classhpx_1_1program__options_1_1basic__command__line__parser_1a5025c7bcc5bb721e60b15ac968bd251b" prot="public" virt="non-virtual"><scope>hpx::program_options::basic_command_line_parser</scope><name>allow_unregistered</name></member>
+      <member refid="classhpx_1_1program__options_1_1basic__command__line__parser_1a3e57efb1ded73506227398fac67dc6b8" prot="public" virt="non-virtual"><scope>hpx::program_options::basic_command_line_parser</scope><name>basic_command_line_parser</name></member>
+      <member refid="classhpx_1_1program__options_1_1basic__command__line__parser_1a2558c39591f3261fe79947f1b92be013" prot="public" virt="non-virtual"><scope>hpx::program_options::basic_command_line_parser</scope><name>basic_command_line_parser</name></member>
+      <member refid="classhpx_1_1program__options_1_1basic__command__line__parser_1af912e74dbc519f042ff148461195a51d" prot="public" virt="non-virtual"><scope>hpx::program_options::basic_command_line_parser</scope><name>extra_parser</name></member>
+      <member refid="classhpx_1_1program__options_1_1basic__command__line__parser_1a2c692d512dc10367e4408e4ff2ad0cba" prot="public" virt="non-virtual"><scope>hpx::program_options::basic_command_line_parser</scope><name>extra_style_parser</name></member>
+      <member refid="classhpx_1_1program__options_1_1basic__command__line__parser_1a04740117ad6708d7da01e8d64be1198a" prot="private" virt="non-virtual"><scope>hpx::program_options::basic_command_line_parser</scope><name>m_desc</name></member>
+      <member refid="classhpx_1_1program__options_1_1basic__command__line__parser_1a5d6eddd08f9f26bd517382e522c5be97" prot="public" virt="non-virtual"><scope>hpx::program_options::basic_command_line_parser</scope><name>options</name></member>
+      <member refid="classhpx_1_1program__options_1_1basic__command__line__parser_1a43455e26416a2d0ab64847e73e52a37e" prot="public" virt="non-virtual"><scope>hpx::program_options::basic_command_line_parser</scope><name>positional</name></member>
+      <member refid="classhpx_1_1program__options_1_1basic__command__line__parser_1ab515fa35c3944a9cc5aadf7cd4699f08" prot="public" virt="non-virtual"><scope>hpx::program_options::basic_command_line_parser</scope><name>run</name></member>
+      <member refid="classhpx_1_1program__options_1_1basic__command__line__parser_1a8eba5db55251b3c3f8f693318d687b56" prot="public" virt="non-virtual"><scope>hpx::program_options::basic_command_line_parser</scope><name>style</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

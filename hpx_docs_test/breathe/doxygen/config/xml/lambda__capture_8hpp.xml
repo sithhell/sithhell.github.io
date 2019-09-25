@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="lambda__capture_8hpp" kind="file" language="C++">
+    <compoundname>lambda_capture.hpp</compoundname>
+    <includes local="no">hpx/config/defines.hpp</includes>
+    <includedby refid="config_8hpp" local="no">libs/config/include/hpx/config.hpp</includedby>
+    <incdepgraph>
+      <node id="76">
+        <label>hpx/config/defines.hpp</label>
+      </node>
+      <node id="75">
+        <label>libs/config/include/hpx/config/lambda_capture.hpp</label>
+        <link refid="lambda__capture_8hpp"/>
+        <childnode refid="76" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="78">
+        <label>libs/config/include/hpx/config.hpp</label>
+        <link refid="config_8hpp_source"/>
+      </node>
+      <node id="77">
+        <label>libs/config/include/hpx/config/lambda_capture.hpp</label>
+        <link refid="lambda__capture_8hpp"/>
+        <childnode refid="78" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="lambda__capture_8hpp_1ac9b3f911f31fc3a8297d9a6cb80c7615" prot="public" static="no">
+        <name>HPX_CAPTURE_FORWARD</name>
+        <param><defname>var</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Evaluates to <computeroutput>var = std::forward&lt;decltype(var)&gt;(var)</computeroutput> if the compiler supports C++14 Lambdas. Defaults to <computeroutput>var</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/config/include/hpx/config/lambda_capture.hpp" line="14" column="9" bodyfile="libs/config/include/hpx/config/lambda_capture.hpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lambda__capture_8hpp_1a8d4568ba5bc2e83e17c56c97bfe77532" prot="public" static="no">
+        <name>HPX_CAPTURE_MOVE</name>
+        <param><defname>var</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Evaluates to <computeroutput>var = std::move(var)</computeroutput> if the compiler supports C++14 Lambdas. Defaults to <computeroutput>var</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/config/include/hpx/config/lambda_capture.hpp" line="17" column="9" bodyfile="libs/config/include/hpx/config/lambda_capture.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2018<sp/>Hartmut<sp/>Kaiser</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Distributed<sp/>under<sp/>the<sp/>Boost<sp/>Software<sp/>License,<sp/>Version<sp/>1.0.<sp/>(See<sp/>accompanying</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>file<sp/>LICENSE_1_0.txt<sp/>or<sp/>copy<sp/>at<sp/>http://www.boost.org/LICENSE_1_0.txt)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>HPX_CONFIG_LAMBDA_CAPTURE_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPX_CONFIG_LAMBDA_CAPTURE_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/config/defines.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(DOXYGEN)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPX_CAPTURE_FORWARD(var)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPX_CAPTURE_MOVE(var)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(HPX_HAVE_CXX14_LAMBDAS)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPX_CAPTURE_FORWARD(var)<sp/><sp/>var<sp/>=<sp/>std::forward&lt;decltype(var)&gt;(var)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPX_CAPTURE_MOVE(var)<sp/><sp/><sp/><sp/><sp/>var<sp/>=<sp/>std::move(var)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPX_CAPTURE_FORWARD(var)<sp/><sp/>var</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPX_CAPTURE_MOVE(var)<sp/><sp/><sp/><sp/><sp/>var</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="libs/config/include/hpx/config/lambda_capture.hpp"/>
+  </compounddef>
+</doxygen>

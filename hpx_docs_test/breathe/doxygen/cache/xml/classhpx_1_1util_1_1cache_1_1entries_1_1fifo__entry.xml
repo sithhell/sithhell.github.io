@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classhpx_1_1util_1_1cache_1_1entries_1_1fifo__entry" kind="class" language="C++" prot="public">
+    <compoundname>hpx::util::cache::entries::fifo_entry</compoundname>
+    <basecompoundref refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry" prot="public" virt="non-virtual">hpx::util::cache::entries::entry&lt; Value, fifo_entry&lt; Value &gt; &gt;</basecompoundref>
+    <includes refid="compatibility_2hpx_2util_2cache_2entries_2fifo__entry_8hpp" local="no">hpx/cache/entries/fifo_entry.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Value</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classhpx_1_1util_1_1cache_1_1entries_1_1fifo__entry_1a77d7c89754dc1a9ac18bd1d224091260" prot="private" static="no">
+        <type><ref refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry" kindref="compound">entry</ref>&lt; Value, <ref refid="classhpx_1_1util_1_1cache_1_1entries_1_1fifo__entry" kindref="compound">fifo_entry</ref>&lt; Value &gt; &gt;</type>
+        <definition>typedef entry&lt;Value, fifo_entry&lt;Value&gt; &gt; hpx::util::cache::entries::fifo_entry&lt; Value &gt;::base_type</definition>
+        <argsstring></argsstring>
+        <name>base_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/entries/fifo_entry.hpp" line="37" column="1" bodyfile="libs/cache/include/hpx/cache/entries/fifo_entry.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhpx_1_1util_1_1cache_1_1entries_1_1fifo__entry_1afb846407675d70212c964fbd1f0b0c96" prot="private" static="no" mutable="no">
+        <type>std::chrono::steady_clock::time_point</type>
+        <definition>std::chrono::steady_clock::time_point hpx::util::cache::entries::fifo_entry&lt; Value &gt;::insertion_time_</definition>
+        <argsstring></argsstring>
+        <name>insertion_time_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/entries/fifo_entry.hpp" line="77" column="1" bodyfile="libs/cache/include/hpx/cache/entries/fifo_entry.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1entries_1_1fifo__entry_1ada2154dff6b753b78bcb73b67135a538" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::util::cache::entries::fifo_entry&lt; Value &gt;::fifo_entry</definition>
+        <argsstring>()</argsstring>
+        <name>fifo_entry</name>
+        <briefdescription>
+<para>Any cache entry has to be default constructible. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/entries/fifo_entry.hpp" line="41" column="1" bodyfile="libs/cache/include/hpx/cache/entries/fifo_entry.hpp" bodystart="41" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1entries_1_1fifo__entry_1a6eb72c331d1fe2b8155d80bf19445a23" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::util::cache::entries::fifo_entry&lt; Value &gt;::fifo_entry</definition>
+        <argsstring>(Value const &amp;val)</argsstring>
+        <name>fifo_entry</name>
+        <param>
+          <type>Value const &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new instance of a cache entry holding the given value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/entries/fifo_entry.hpp" line="46" column="1" bodyfile="libs/cache/include/hpx/cache/entries/fifo_entry.hpp" bodystart="46" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1entries_1_1fifo__entry_1ae13b2cd0a2d6c0bd85989f4ba9dbfba5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hpx::util::cache::entries::fifo_entry&lt; Value &gt;::insert</definition>
+        <argsstring>()</argsstring>
+        <name>insert</name>
+        <briefdescription>
+<para>The function <emphasis>insert</emphasis> is called by a cache whenever it is about to be inserted into the cache. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function is part of the CacheEntry concept</para></simplesect>
+<simplesect kind="return"><para>This function should return <emphasis>true</emphasis> if the entry should be added to the cache, otherwise it should return <emphasis>false</emphasis>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/entries/fifo_entry.hpp" line="58" column="1" bodyfile="libs/cache/include/hpx/cache/entries/fifo_entry.hpp" bodystart="58" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1entries_1_1fifo__entry_1a1f2e707fb288931d90e72ec32799f545" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::chrono::steady_clock::time_point const  &amp;</type>
+        <definition>std::chrono::steady_clock::time_point const&amp; hpx::util::cache::entries::fifo_entry&lt; Value &gt;::get_creation_time</definition>
+        <argsstring>() const</argsstring>
+        <name>get_creation_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/entries/fifo_entry.hpp" line="64" column="1" bodyfile="libs/cache/include/hpx/cache/entries/fifo_entry.hpp" bodystart="64" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classhpx_1_1util_1_1cache_1_1entries_1_1fifo__entry_1a40aaab873c93614b5eed775aa8dfc7bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>friend bool</type>
+        <definition>bool operator&lt;</definition>
+        <argsstring>(fifo_entry const &amp;lhs, fifo_entry const &amp;rhs)</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type><ref refid="classhpx_1_1util_1_1cache_1_1entries_1_1fifo__entry" kindref="compound">fifo_entry</ref> const &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type><ref refid="classhpx_1_1util_1_1cache_1_1entries_1_1fifo__entry" kindref="compound">fifo_entry</ref> const &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Compare the &apos;age&apos; of two entries. An entry is &apos;older&apos; than another entry if it has been created earlier (FIFO). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/entries/fifo_entry.hpp" line="71" column="1" bodyfile="libs/cache/include/hpx/cache/entries/fifo_entry.hpp" bodystart="71" bodyend="74"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <emphasis><ref refid="classhpx_1_1util_1_1cache_1_1entries_1_1fifo__entry" kindref="compound">fifo_entry</ref></emphasis> type can be used to store arbitrary values in a cache. Using this type as the cache&apos;s entry type makes sure that the least recently inserted entries are discarded from the cache first.</para><para><simplesect kind="note"><para>The <emphasis><ref refid="classhpx_1_1util_1_1cache_1_1entries_1_1fifo__entry" kindref="compound">fifo_entry</ref></emphasis> conforms to the CacheEntry concept. </para></simplesect>
+<simplesect kind="note"><para>This type can be used to model a &apos;last in first out&apos; cache policy if it is used with a std::greater as the caches&apos; UpdatePolicy (instead of the default std::less).</para></simplesect>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data type to be stored in a cache. It has to be default constructible, copy constructible and less_than_comparable. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="12">
+        <label>boost::less_than_comparable&lt; detail::derived&lt; Value, fifo_entry&lt; Value &gt; &gt;::type &gt;</label>
+      </node>
+      <node id="11">
+        <label>hpx::util::cache::entries::entry&lt; Value, fifo_entry&lt; Value &gt; &gt;</label>
+        <link refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry"/>
+        <childnode refid="12" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>hpx::util::cache::entries::fifo_entry&lt; Value &gt;</label>
+        <link refid="classhpx_1_1util_1_1cache_1_1entries_1_1fifo__entry"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="15">
+        <label>boost::less_than_comparable&lt; detail::derived&lt; Value, fifo_entry&lt; Value &gt; &gt;::type &gt;</label>
+      </node>
+      <node id="14">
+        <label>hpx::util::cache::entries::entry&lt; Value, fifo_entry&lt; Value &gt; &gt;</label>
+        <link refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry"/>
+        <childnode refid="15" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>hpx::util::cache::entries::fifo_entry&lt; Value &gt;</label>
+        <link refid="classhpx_1_1util_1_1cache_1_1entries_1_1fifo__entry"/>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libs/cache/include/hpx/cache/entries/fifo_entry.hpp" line="35" column="1" bodyfile="libs/cache/include/hpx/cache/entries/fifo_entry.hpp" bodystart="34" bodyend="78"/>
+    <listofallmembers>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1fifo__entry_1a77d7c89754dc1a9ac18bd1d224091260" prot="private" virt="non-virtual"><scope>hpx::util::cache::entries::fifo_entry</scope><name>base_type</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1ad33554c8722a0fb843afb12e943609b7" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::fifo_entry</scope><name>entry</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1a405f37290c9f41020b08d2f24167ecfa" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::fifo_entry</scope><name>entry</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1fifo__entry_1ada2154dff6b753b78bcb73b67135a538" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::fifo_entry</scope><name>fifo_entry</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1fifo__entry_1a6eb72c331d1fe2b8155d80bf19445a23" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::fifo_entry</scope><name>fifo_entry</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1a3261dc3551b8beb6a15d768da078309e" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::fifo_entry</scope><name>get</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1a2f225802808b6b9f6680fe089af8b1dd" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::fifo_entry</scope><name>get</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1fifo__entry_1a1f2e707fb288931d90e72ec32799f545" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::fifo_entry</scope><name>get_creation_time</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1a52aaa2be737145552d7f045821db96c3" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::fifo_entry</scope><name>get_size</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1fifo__entry_1ae13b2cd0a2d6c0bd85989f4ba9dbfba5" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::fifo_entry</scope><name>insert</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1fifo__entry_1afb846407675d70212c964fbd1f0b0c96" prot="private" virt="non-virtual"><scope>hpx::util::cache::entries::fifo_entry</scope><name>insertion_time_</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1fifo__entry_1a40aaab873c93614b5eed775aa8dfc7bb" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::fifo_entry</scope><name>operator&lt;</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1ad339d17e0b9f7b7b61d862fff48bd117" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::fifo_entry</scope><name>remove</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1a6a848ae96ddd2658215209a8b03a63f4" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::fifo_entry</scope><name>touch</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1a10da7304c1370f938043761b34bbf2b1" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::fifo_entry</scope><name>value_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

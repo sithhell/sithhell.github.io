@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classhpx_1_1util_1_1barrier" kind="class" language="C++" prot="public">
+    <compoundname>hpx::util::barrier</compoundname>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classhpx_1_1util_1_1barrier_1a5ec23ab72c37e7520573d7a59894fc2d" prot="private" static="no">
+        <type>std::mutex</type>
+        <definition>typedef std::mutex hpx::util::barrier::mutex_type</definition>
+        <argsstring></argsstring>
+        <name>mutex_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/barrier.hpp" line="24" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/barrier.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhpx_1_1util_1_1barrier_1a2ad6897ab214691baaff32880ccfbf4c" prot="private" static="no" mutable="no">
+        <type>HPX_STATIC_CONSTEXPR std::size_t</type>
+        <definition>HPX_STATIC_CONSTEXPR std::size_t hpx::util::barrier::barrier_flag</definition>
+        <argsstring></argsstring>
+        <name>barrier_flag</name>
+        <initializer>=
+            static_cast&lt;std::size_t&gt;(1) &lt;&lt; (CHAR_BIT * sizeof(std::size_t) - 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/barrier.hpp" line="26" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/barrier.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhpx_1_1util_1_1barrier_1af25f7780c03a4761f9f4d5b6a18e4e30" prot="private" static="no" mutable="no">
+        <type>std::size_t const</type>
+        <definition>std::size_t const hpx::util::barrier::number_of_threads_</definition>
+        <argsstring></argsstring>
+        <name>number_of_threads_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/barrier.hpp" line="36" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/barrier.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhpx_1_1util_1_1barrier_1a3297031e9d8f6fdbd5be57ed80134432" prot="private" static="no" mutable="no">
+        <type>std::size_t</type>
+        <definition>std::size_t hpx::util::barrier::total_</definition>
+        <argsstring></argsstring>
+        <name>total_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/barrier.hpp" line="37" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/barrier.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhpx_1_1util_1_1barrier_1aea3e4f9296f690d2bfb7c7e7570dbb26" prot="private" static="no" mutable="yes">
+        <type>mutex_type</type>
+        <definition>mutex_type hpx::util::barrier::mtx_</definition>
+        <argsstring></argsstring>
+        <name>mtx_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/barrier.hpp" line="39" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/barrier.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhpx_1_1util_1_1barrier_1a9001b5862cac37186c7e1ec6a9285463" prot="private" static="no" mutable="no">
+        <type>std::condition_variable</type>
+        <definition>std::condition_variable hpx::util::barrier::cond_</definition>
+        <argsstring></argsstring>
+        <name>cond_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/barrier.hpp" line="40" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/barrier.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhpx_1_1util_1_1barrier_1a6441b807fa65e233e13f54e4c2cc1043" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hpx::util::barrier::barrier</definition>
+        <argsstring>(std::size_t number_of_threads)</argsstring>
+        <name>barrier</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>number_of_threads</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/barrier.hpp" line="30" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1barrier_1afa239499fc3dc8a6643698b42444400d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hpx::util::barrier::~barrier</definition>
+        <argsstring>()</argsstring>
+        <name>~barrier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/barrier.hpp" line="31" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1barrier_1aeb894a6202af165ab5fd7911db59d74d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpx::util::barrier::wait</definition>
+        <argsstring>()</argsstring>
+        <name>wait</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/concurrency/include/hpx/concurrency/barrier.hpp" line="33" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libs/concurrency/include/hpx/concurrency/barrier.hpp" line="22" column="1" bodyfile="libs/concurrency/include/hpx/concurrency/barrier.hpp" bodystart="21" bodyend="41"/>
+    <listofallmembers>
+      <member refid="classhpx_1_1util_1_1barrier_1a6441b807fa65e233e13f54e4c2cc1043" prot="public" virt="non-virtual"><scope>hpx::util::barrier</scope><name>barrier</name></member>
+      <member refid="classhpx_1_1util_1_1barrier_1a2ad6897ab214691baaff32880ccfbf4c" prot="private" virt="non-virtual"><scope>hpx::util::barrier</scope><name>barrier_flag</name></member>
+      <member refid="classhpx_1_1util_1_1barrier_1a9001b5862cac37186c7e1ec6a9285463" prot="private" virt="non-virtual"><scope>hpx::util::barrier</scope><name>cond_</name></member>
+      <member refid="classhpx_1_1util_1_1barrier_1aea3e4f9296f690d2bfb7c7e7570dbb26" prot="private" virt="non-virtual"><scope>hpx::util::barrier</scope><name>mtx_</name></member>
+      <member refid="classhpx_1_1util_1_1barrier_1a5ec23ab72c37e7520573d7a59894fc2d" prot="private" virt="non-virtual"><scope>hpx::util::barrier</scope><name>mutex_type</name></member>
+      <member refid="classhpx_1_1util_1_1barrier_1af25f7780c03a4761f9f4d5b6a18e4e30" prot="private" virt="non-virtual"><scope>hpx::util::barrier</scope><name>number_of_threads_</name></member>
+      <member refid="classhpx_1_1util_1_1barrier_1a3297031e9d8f6fdbd5be57ed80134432" prot="private" virt="non-virtual"><scope>hpx::util::barrier</scope><name>total_</name></member>
+      <member refid="classhpx_1_1util_1_1barrier_1aeb894a6202af165ab5fd7911db59d74d" prot="public" virt="non-virtual"><scope>hpx::util::barrier</scope><name>wait</name></member>
+      <member refid="classhpx_1_1util_1_1barrier_1afa239499fc3dc8a6643698b42444400d" prot="public" virt="non-virtual"><scope>hpx::util::barrier</scope><name>~barrier</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

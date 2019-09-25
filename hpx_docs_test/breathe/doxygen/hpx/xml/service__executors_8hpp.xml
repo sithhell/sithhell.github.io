@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="service__executors_8hpp" kind="file" language="C++">
+    <compoundname>service_executors.hpp</compoundname>
+    <includes local="no">hpx/config.hpp</includes>
+    <includes local="no">hpx/lcos/future.hpp</includes>
+    <includes refid="static__chunk__size_8hpp" local="no">hpx/parallel/executors/static_chunk_size.hpp</includes>
+    <includes local="no">hpx/parallel/executors/thread_execution.hpp</includes>
+    <includes local="no">hpx/runtime/threads/executors/service_executors.hpp</includes>
+    <includes local="no">hpx/traits/executor_traits.hpp</includes>
+    <incdepgraph>
+      <node id="8083">
+        <label>hpx/parallel/executors/service_executors.hpp</label>
+        <link refid="service__executors_8hpp"/>
+        <childnode refid="8084" relation="include">
+        </childnode>
+        <childnode refid="8085" relation="include">
+        </childnode>
+        <childnode refid="8086" relation="include">
+        </childnode>
+        <childnode refid="8092" relation="include">
+        </childnode>
+        <childnode refid="8093" relation="include">
+        </childnode>
+        <childnode refid="8094" relation="include">
+        </childnode>
+      </node>
+      <node id="8093">
+        <label>hpx/runtime/threads/executors/service_executors.hpp</label>
+      </node>
+      <node id="8084">
+        <label>hpx/config.hpp</label>
+      </node>
+      <node id="8086">
+        <label>hpx/parallel/executors/static_chunk_size.hpp</label>
+        <link refid="static__chunk__size_8hpp"/>
+        <childnode refid="8084" relation="include">
+        </childnode>
+        <childnode refid="8087" relation="include">
+        </childnode>
+        <childnode refid="8088" relation="include">
+        </childnode>
+        <childnode refid="8089" relation="include">
+        </childnode>
+        <childnode refid="8090" relation="include">
+        </childnode>
+        <childnode refid="8091" relation="include">
+        </childnode>
+      </node>
+      <node id="8092">
+        <label>hpx/parallel/executors/thread_execution.hpp</label>
+      </node>
+      <node id="8089">
+        <label>hpx/parallel/executors/execution_parameters_fwd.hpp</label>
+      </node>
+      <node id="8090">
+        <label>cstddef</label>
+      </node>
+      <node id="8085">
+        <label>hpx/lcos/future.hpp</label>
+      </node>
+      <node id="8091">
+        <label>type_traits</label>
+      </node>
+      <node id="8094">
+        <label>hpx/traits/executor_traits.hpp</label>
+      </node>
+      <node id="8088">
+        <label>hpx/traits/is_executor_parameters.hpp</label>
+      </node>
+      <node id="8087">
+        <label>hpx/runtime/serialization/serialize.hpp</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacehpx">hpx</innernamespace>
+    <innernamespace refid="namespacehpx_1_1parallel">hpx::parallel</innernamespace>
+    <innernamespace refid="namespacehpx_1_1parallel_1_1execution">hpx::parallel::execution</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2007-2016<sp/>Hartmut<sp/>Kaiser</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Distributed<sp/>under<sp/>the<sp/>Boost<sp/>Software<sp/>License,<sp/>Version<sp/>1.0.<sp/>(See<sp/>accompanying</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>file<sp/>LICENSE_1_0.txt<sp/>or<sp/>copy<sp/>at<sp/>http://www.boost.org/LICENSE_1_0.txt)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(HPX_PARALLEL_EXECUTORS_SERVICE_EXECUTORS_MAY_15_2015_0548PM)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPX_PARALLEL_EXECUTORS_SERVICE_EXECUTORS_MAY_15_2015_0548PM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/config.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/lcos/future.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="static__chunk__size_8hpp" kindref="compound">hpx/parallel/executors/static_chunk_size.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/parallel/executors/thread_execution.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/runtime/threads/executors/service_executors.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/traits/executor_traits.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehpx" kindref="compound">hpx</ref><sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">parallel<sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">execution</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27" refid="service__executors_8hpp_1a29ce45fce2d059162a60eb04dcc135a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="service__executors_8hpp_1a29ce45fce2d059162a60eb04dcc135a5" kindref="member">service_executor</ref><sp/>=<sp/>threads::executors::service_executor;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="service__executors_8hpp_1a3b4e7d31d0b112d896d825f3e18ef88e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="service__executors_8hpp_1a3b4e7d31d0b112d896d825f3e18ef88e" kindref="member">io_pool_executor</ref><sp/>=<sp/>threads::executors::io_pool_executor;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="service__executors_8hpp_1aaf699efe7451389c926b48ea5c23c58b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="service__executors_8hpp_1aaf699efe7451389c926b48ea5c23c58b" kindref="member">parcel_pool_executor</ref><sp/>=<sp/>threads::executors::parcel_pool_executor;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="service__executors_8hpp_1a15967cbd9cbc9a3897901b86e75a7d22" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="service__executors_8hpp_1a15967cbd9cbc9a3897901b86e75a7d22" kindref="member">timer_pool_executor</ref><sp/>=<sp/>threads::executors::timer_pool_executor;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="service__executors_8hpp_1a7ab3f5bb60831868e7624e5faf6896a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="service__executors_8hpp_1a7ab3f5bb60831868e7624e5faf6896a3" kindref="member">main_pool_executor</ref><sp/>=<sp/>threads::executors::main_pool_executor;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}}}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="hpx/parallel/executors/service_executors.hpp"/>
+  </compounddef>
+</doxygen>

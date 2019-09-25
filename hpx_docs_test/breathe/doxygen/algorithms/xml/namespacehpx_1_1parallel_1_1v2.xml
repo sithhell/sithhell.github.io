@@ -1,0 +1,973 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacehpx_1_1parallel_1_1v2" kind="namespace" language="C++">
+    <compoundname>hpx::parallel::v2</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="for__loop__reduction_8hpp_1a91790c50467a62ae722eb502621f84dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename Op</type>
+          </param>
+        </templateparamlist>
+        <type>detail::reduction_helper&lt; T, typename std::decay&lt; Op &gt;::type &gt;</type>
+        <definition>detail::reduction_helper&lt;T, typename std::decay&lt;Op&gt;::type&gt; hpx::parallel::v2::reduction</definition>
+        <argsstring>(T &amp;var, T const &amp;identity, Op &amp;&amp;combiner)</argsstring>
+        <name>reduction</name>
+        <param>
+          <type>T &amp;</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type>T const &amp;</type>
+          <declname>identity</declname>
+        </param>
+        <param>
+          <type>Op &amp;&amp;</type>
+          <declname>combiner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The function template returns a reduction object of unspecified type having a value type and encapsulating an identity value for the reduction, a combiner function object, and a live-out object from which the initial value is obtained and into which the final value is stored.</para><para>A parallel algorithm uses reduction objects by allocating an unspecified number of instances, called views, of the reduction&apos;s value type. Each view is initialized with the reduction object&apos;s identity value, except that the live-out object (which was initialized by the caller) comprises one of the views. The algorithm passes a reference to a view to each application of an element-access function, ensuring that no two concurrently-executing invocations share the same view. A view can be shared between two applications that do not execute concurrently, but initialization is performed only once per view.</para><para>Modifications to the view by the application of element access functions accumulate as partial results. At some point before the algorithm returns, the partial results are combined, two at a time, using the reduction object&apos;s combiner operation until a single value remains, which is then assigned back to the live-out object.</para><para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value type to be used by the induction object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Op</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the binary function (object) used to perform the reduction operation.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>var</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in,out] The life-out value to use for the reduction object. This will hold the reduced value after the algorithm is finished executing. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>identity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The identity value to use for the reduction operation. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>combiner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The binary function (object) used to perform a pairwise reduction on the elements.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+T shall meet the requirements of CopyConstructible and MoveAssignable. The expression var = combiner(var, var) shall be well formed.</para><para><simplesect kind="note"><para>In order to produce useful results, modifications to the view should be limited to commutative operations closely related to the combiner operation. For example if the combiner is plus&lt;T&gt;, incrementing the view would be consistent with the combiner but doubling it or assigning to it would not.</para></simplesect>
+<simplesect kind="return"><para>This returns a reduction object of unspecified type having a value type of <emphasis>T</emphasis>. When the return value is used by an algorithm, the reference to <emphasis>var</emphasis> is used as the live-out object, new views are initialized to a copy of identity, and views are combined by invoking the copy of combiner, passing it the two views to be combined. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/algorithms/for_loop_reduction.hpp" line="127" column="1" bodyfile="libs/algorithms/include/hpx/parallel/algorithms/for_loop_reduction.hpp" bodystart="127" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="for__loop__induction_8hpp_1a98dd8d7295299a30ba869b782d6bd1f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>detail::induction_stride_helper&lt; T &gt;</type>
+        <definition>detail::induction_stride_helper&lt;T&gt; hpx::parallel::v2::induction</definition>
+        <argsstring>(T &amp;&amp;value, std::size_t stride)</argsstring>
+        <name>induction</name>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>stride</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The function template returns an induction object of unspecified type having a value type and encapsulating an initial value <emphasis>value</emphasis> of that type and, optionally, a stride.</para><para>For each element in the input range, a looping algorithm over input sequence <emphasis>S</emphasis> computes an induction value from an induction variable and ordinal position <emphasis>p</emphasis> within <emphasis>S</emphasis> by the formula i + p * stride if a stride was specified or i + p otherwise. This induction value is passed to the element access function.</para><para>If the <emphasis>value</emphasis> argument to <emphasis>induction</emphasis> is a non-const lvalue, then that lvalue becomes the live-out object for the returned induction object. For each induction object that has a live-out object, the looping algorithm assigns the value of i + n * stride to the live-out object upon return, where <emphasis>n</emphasis> is the number of elements in the input range.</para><para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value type to be used by the induction object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The initial value to use for the induction object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stride</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The (optional) stride to use for the induction object (default: 1)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This returns an induction object with value type <emphasis>T</emphasis>, initial value <emphasis>value</emphasis>, and (if specified) stride <emphasis>stride</emphasis>. If <emphasis>T</emphasis> is an lvalue of non-const type, <emphasis>value</emphasis> is used as the live-out object for the induction object; otherwise there is no live-out object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/algorithms/for_loop_induction.hpp" line="211" column="1" bodyfile="libs/algorithms/include/hpx/parallel/algorithms/for_loop_induction.hpp" bodystart="211" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="for__loop_8hpp_1a2e881d0376708a91f56835a1aa010f38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ExPolicy</type>
+          </param>
+          <param>
+            <type>typename I</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>util::detail::algorithm_result&lt; ExPolicy &gt;::type</type>
+        <definition>util::detail::algorithm_result&lt;ExPolicy&gt;::type hpx::parallel::v2::for_loop</definition>
+        <argsstring>(ExPolicy &amp;&amp;policy, typename std::decay&lt; I &gt;::type first, I last, Args &amp;&amp;... args)</argsstring>
+        <name>for_loop</name>
+        <param>
+          <type>ExPolicy &amp;&amp;</type>
+          <declname>policy</declname>
+        </param>
+        <param>
+          <type>typename std::decay&lt; I &gt;::type</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type>I</type>
+          <declname>last</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The for_loop implements loop functionality over a range specified by integral or iterator bounds. For the iterator case, these algorithms resemble for_each from the Parallelism TS, but leave to the programmer when and if to dereference the iterator.</para><para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>ExPolicy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the execution policy to use (deduced). It describes the manner in which the execution of the algorithm may be parallelized and the manner in which it applies user-provided function objects. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>I</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the iteration variable. This could be an (forward) iterator type or an integral type. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A parameter pack, it&apos;s last element is a function object to be invoked for each iteration, the others have to be either conforming to the induction or reduction concept.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>policy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The execution policy to use for the scheduling of the iterations. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>first</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Refers to the beginning of the sequence of elements the algorithm will be applied to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>last</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Refers to the end of the sequence of elements the algorithm will be applied to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The last element of this parameter pack is the function (object) to invoke, while the remaining elements of the parameter pack are instances of either induction or reduction objects. The function (or function object) which will be invoked for each of the elements in the sequence specified by [first, last) should expose a signature equivalent to: <programlisting><codeline><highlight class="normal">&lt;ignored&gt;<sp/>pred(I<sp/>const&amp;<sp/>a,<sp/>...);</highlight></codeline>
+</programlisting> <linebreak/>
+ The signature does not need to have const&amp;. It will receive the current value of the iteration variable and one argument for each of the induction or reduction objects passed to the algorithms, representing their current values.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Requires: <emphasis>I</emphasis> shall be an integral type or meet the requirements of an input iterator type. The <emphasis>args</emphasis> parameter pack shall have at least one element, comprising objects returned by invocations of <emphasis>reduction</emphasis> and/or <emphasis>induction</emphasis> function templates followed by exactly one element invocable element-access function, <emphasis>f</emphasis>. <emphasis>f</emphasis> shall meet the requirements of MoveConstructible.</para><para>Effects: Applies <emphasis>f</emphasis> to each element in the input sequence, with additional arguments corresponding to the reductions and inductions in the <emphasis>args</emphasis> parameter pack. The length of the input sequence is last - first.</para><para>The first element in the input sequence is specified by <emphasis>first</emphasis>. Each subsequent element is generated by incrementing the previous element.</para><para><simplesect kind="note"><para>As described in the C++ standard, arithmetic on non-random-access iterators is performed using advance and distance.</para></simplesect>
+<simplesect kind="note"><para>The order of the elements of the input sequence is important for determining ordinal position of an application of <emphasis>f</emphasis>, even though the applications themselves may be unordered.</para></simplesect>
+Along with an element from the input sequence, for each member of the <emphasis>args</emphasis> parameter pack excluding <emphasis>f</emphasis>, an additional argument is passed to each application of <emphasis>f</emphasis> as follows:</para><para>If the pack member is an object returned by a call to a reduction function listed in section, then the additional argument is a reference to a view of that reduction object. If the pack member is an object returned by a call to induction, then the additional argument is the induction value for that induction object corresponding to the position of the application of <emphasis>f</emphasis> in the input sequence.</para><para>Complexity: Applies <emphasis>f</emphasis> exactly once for each element of the input sequence.</para><para>Remarks: If <emphasis>f</emphasis> returns a result, the result is ignored.</para><para><simplesect kind="return"><para>The <emphasis>for_loop</emphasis> algorithm returns a <emphasis>hpx::future&lt;void&gt;</emphasis> if the execution policy is of type <emphasis>sequenced_task_policy</emphasis> or <emphasis>parallel_task_policy</emphasis> and returns <emphasis>void</emphasis> otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/algorithms/for_loop.hpp" line="403" column="1" bodyfile="libs/algorithms/include/hpx/parallel/algorithms/for_loop.hpp" bodystart="403" bodyend="414"/>
+      </memberdef>
+      <memberdef kind="function" id="for__loop_8hpp_1ae8a4d624a15eba516f03df8d84df9215" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename I</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void hpx::parallel::v2::for_loop</definition>
+        <argsstring>(typename std::decay&lt; I &gt;::type first, I last, Args &amp;&amp;... args)</argsstring>
+        <name>for_loop</name>
+        <param>
+          <type>typename std::decay&lt; I &gt;::type</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type>I</type>
+          <declname>last</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The for_loop implements loop functionality over a range specified by integral or iterator bounds. For the iterator case, these algorithms resemble for_each from the Parallelism TS, but leave to the programmer when and if to dereference the iterator.</para><para>The execution of for_loop without specifying an execution policy is equivalent to specifying <emphasis>parallel::execution::seq</emphasis> as the execution policy.</para><para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>I</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the iteration variable. This could be an (forward) iterator type or an integral type. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A parameter pack, it&apos;s last element is a function object to be invoked for each iteration, the others have to be either conforming to the induction or reduction concept.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>first</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Refers to the beginning of the sequence of elements the algorithm will be applied to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>last</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Refers to the end of the sequence of elements the algorithm will be applied to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The last element of this parameter pack is the function (object) to invoke, while the remaining elements of the parameter pack are instances of either induction or reduction objects. The function (or function object) which will be invoked for each of the elements in the sequence specified by [first, last) should expose a signature equivalent to: <programlisting><codeline><highlight class="normal">&lt;ignored&gt;<sp/>pred(I<sp/>const&amp;<sp/>a,<sp/>...);</highlight></codeline>
+</programlisting> <linebreak/>
+ The signature does not need to have const&amp;. It will receive the current value of the iteration variable and one argument for each of the induction or reduction objects passed to the algorithms, representing their current values.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Requires: <emphasis>I</emphasis> shall be an integral type or meet the requirements of an input iterator type. The <emphasis>args</emphasis> parameter pack shall have at least one element, comprising objects returned by invocations of <emphasis>reduction</emphasis> and/or <emphasis>induction</emphasis> function templates followed by exactly one element invocable element-access function, <emphasis>f</emphasis>. <emphasis>f</emphasis> shall meet the requirements of MoveConstructible.</para><para>Effects: Applies <emphasis>f</emphasis> to each element in the input sequence, with additional arguments corresponding to the reductions and inductions in the <emphasis>args</emphasis> parameter pack. The length of the input sequence is last - first.</para><para>The first element in the input sequence is specified by <emphasis>first</emphasis>. Each subsequent element is generated by incrementing the previous element.</para><para><simplesect kind="note"><para>As described in the C++ standard, arithmetic on non-random-access iterators is performed using advance and distance.</para></simplesect>
+<simplesect kind="note"><para>The order of the elements of the input sequence is important for determining ordinal position of an application of <emphasis>f</emphasis>, even though the applications themselves may be unordered.</para></simplesect>
+Along with an element from the input sequence, for each member of the <emphasis>args</emphasis> parameter pack excluding <emphasis>f</emphasis>, an additional argument is passed to each application of <emphasis>f</emphasis> as follows:</para><para>If the pack member is an object returned by a call to a reduction function listed in section, then the additional argument is a reference to a view of that reduction object. If the pack member is an object returned by a call to induction, then the additional argument is the induction value for that induction object corresponding to the position of the application of <emphasis>f</emphasis> in the input sequence.</para><para>Complexity: Applies <emphasis>f</emphasis> exactly once for each element of the input sequence.</para><para>Remarks: If <emphasis>f</emphasis> returns a result, the result is ignored. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/algorithms/for_loop.hpp" line="496" column="1" bodyfile="libs/algorithms/include/hpx/parallel/algorithms/for_loop.hpp" bodystart="496" bodyend="504"/>
+      </memberdef>
+      <memberdef kind="function" id="for__loop_8hpp_1ad463dfcd2eb83e031cc403402a0d91e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ExPolicy</type>
+          </param>
+          <param>
+            <type>typename I</type>
+          </param>
+          <param>
+            <type>typename S</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+          <param>
+            <type>&amp;&amp;std::is_integral&lt; S &gt;::value</type>
+          </param>
+        </templateparamlist>
+        <type>util::detail::algorithm_result&lt; ExPolicy &gt;::type</type>
+        <definition>util::detail::algorithm_result&lt;ExPolicy&gt;::type hpx::parallel::v2::for_loop_strided</definition>
+        <argsstring>(ExPolicy &amp;&amp;policy, typename std::decay&lt; I &gt;::type first, I last, S stride, Args &amp;&amp;... args)</argsstring>
+        <name>for_loop_strided</name>
+        <param>
+          <type>ExPolicy &amp;&amp;</type>
+          <declname>policy</declname>
+        </param>
+        <param>
+          <type>typename std::decay&lt; I &gt;::type</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type>I</type>
+          <declname>last</declname>
+        </param>
+        <param>
+          <type>S</type>
+          <declname>stride</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The for_loop_strided implements loop functionality over a range specified by integral or iterator bounds. For the iterator case, these algorithms resemble for_each from the Parallelism TS, but leave to the programmer when and if to dereference the iterator.</para><para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>ExPolicy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the execution policy to use (deduced). It describes the manner in which the execution of the algorithm may be parallelized and the manner in which it applies user-provided function objects. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>I</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the iteration variable. This could be an (forward) iterator type or an integral type. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>S</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the stride variable. This should be an integral type. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A parameter pack, it&apos;s last element is a function object to be invoked for each iteration, the others have to be either conforming to the induction or reduction concept.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>policy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The execution policy to use for the scheduling of the iterations. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>first</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Refers to the beginning of the sequence of elements the algorithm will be applied to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>last</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Refers to the end of the sequence of elements the algorithm will be applied to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stride</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Refers to the stride of the iteration steps. This shall have non-zero value and shall be negative only if I has integral type or meets the requirements of a bidirectional iterator. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The last element of this parameter pack is the function (object) to invoke, while the remaining elements of the parameter pack are instances of either induction or reduction objects. The function (or function object) which will be invoked for each of the elements in the sequence specified by [first, last) should expose a signature equivalent to: <programlisting><codeline><highlight class="normal">&lt;ignored&gt;<sp/>pred(I<sp/>const&amp;<sp/>a,<sp/>...);</highlight></codeline>
+</programlisting> <linebreak/>
+ The signature does not need to have const&amp;. It will receive the current value of the iteration variable and one argument for each of the induction or reduction objects passed to the algorithms, representing their current values.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Requires: <emphasis>I</emphasis> shall be an integral type or meet the requirements of an input iterator type. The <emphasis>args</emphasis> parameter pack shall have at least one element, comprising objects returned by invocations of <emphasis>reduction</emphasis> and/or <emphasis>induction</emphasis> function templates followed by exactly one element invocable element-access function, <emphasis>f</emphasis>. <emphasis>f</emphasis> shall meet the requirements of MoveConstructible.</para><para>Effects: Applies <emphasis>f</emphasis> to each element in the input sequence, with additional arguments corresponding to the reductions and inductions in the <emphasis>args</emphasis> parameter pack. The length of the input sequence is last - first.</para><para>The first element in the input sequence is specified by <emphasis>first</emphasis>. Each subsequent element is generated by incrementing the previous element.</para><para><simplesect kind="note"><para>As described in the C++ standard, arithmetic on non-random-access iterators is performed using advance and distance.</para></simplesect>
+<simplesect kind="note"><para>The order of the elements of the input sequence is important for determining ordinal position of an application of <emphasis>f</emphasis>, even though the applications themselves may be unordered.</para></simplesect>
+Along with an element from the input sequence, for each member of the <emphasis>args</emphasis> parameter pack excluding <emphasis>f</emphasis>, an additional argument is passed to each application of <emphasis>f</emphasis> as follows:</para><para>If the pack member is an object returned by a call to a reduction function listed in section, then the additional argument is a reference to a view of that reduction object. If the pack member is an object returned by a call to induction, then the additional argument is the induction value for that induction object corresponding to the position of the application of <emphasis>f</emphasis> in the input sequence.</para><para>Complexity: Applies <emphasis>f</emphasis> exactly once for each element of the input sequence.</para><para>Remarks: If <emphasis>f</emphasis> returns a result, the result is ignored.</para><para><simplesect kind="return"><para>The <emphasis>for_loop_strided</emphasis> algorithm returns a <emphasis>hpx::future&lt;void&gt;</emphasis> if the execution policy is of type <emphasis>sequenced_task_policy</emphasis> or <emphasis>parallel_task_policy</emphasis> and returns <emphasis>void</emphasis> otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/algorithms/for_loop.hpp" line="604" column="1" bodyfile="libs/algorithms/include/hpx/parallel/algorithms/for_loop.hpp" bodystart="604" bodyend="615"/>
+      </memberdef>
+      <memberdef kind="function" id="for__loop_8hpp_1a1f410bcfe5d10f47c397e8676758d1b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename I</type>
+          </param>
+          <param>
+            <type>typename S</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+          <param>
+            <type>&amp;&amp;std::is_integral&lt; S &gt;::value</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void hpx::parallel::v2::for_loop_strided</definition>
+        <argsstring>(typename std::decay&lt; I &gt;::type first, I last, S stride, Args &amp;&amp;... args)</argsstring>
+        <name>for_loop_strided</name>
+        <param>
+          <type>typename std::decay&lt; I &gt;::type</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type>I</type>
+          <declname>last</declname>
+        </param>
+        <param>
+          <type>S</type>
+          <declname>stride</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The for_loop_strided implements loop functionality over a range specified by integral or iterator bounds. For the iterator case, these algorithms resemble for_each from the Parallelism TS, but leave to the programmer when and if to dereference the iterator.</para><para>The execution of for_loop without specifying an execution policy is equivalent to specifying <emphasis>parallel::execution::seq</emphasis> as the execution policy.</para><para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>I</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the iteration variable. This could be an (forward) iterator type or an integral type. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>S</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the stride variable. This should be an integral type. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A parameter pack, it&apos;s last element is a function object to be invoked for each iteration, the others have to be either conforming to the induction or reduction concept.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>first</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Refers to the beginning of the sequence of elements the algorithm will be applied to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>last</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Refers to the end of the sequence of elements the algorithm will be applied to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stride</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Refers to the stride of the iteration steps. This shall have non-zero value and shall be negative only if I has integral type or meets the requirements of a bidirectional iterator. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The last element of this parameter pack is the function (object) to invoke, while the remaining elements of the parameter pack are instances of either induction or reduction objects. The function (or function object) which will be invoked for each of the elements in the sequence specified by [first, last) should expose a signature equivalent to: <programlisting><codeline><highlight class="normal">&lt;ignored&gt;<sp/>pred(I<sp/>const&amp;<sp/>a,<sp/>...);</highlight></codeline>
+</programlisting> <linebreak/>
+ The signature does not need to have const&amp;. It will receive the current value of the iteration variable and one argument for each of the induction or reduction objects passed to the algorithms, representing their current values.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Requires: <emphasis>I</emphasis> shall be an integral type or meet the requirements of an input iterator type. The <emphasis>args</emphasis> parameter pack shall have at least one element, comprising objects returned by invocations of <emphasis>reduction</emphasis> and/or <emphasis>induction</emphasis> function templates followed by exactly one element invocable element-access function, <emphasis>f</emphasis>. <emphasis>f</emphasis> shall meet the requirements of MoveConstructible.</para><para>Effects: Applies <emphasis>f</emphasis> to each element in the input sequence, with additional arguments corresponding to the reductions and inductions in the <emphasis>args</emphasis> parameter pack. The length of the input sequence is last - first.</para><para>The first element in the input sequence is specified by <emphasis>first</emphasis>. Each subsequent element is generated by incrementing the previous element.</para><para><simplesect kind="note"><para>As described in the C++ standard, arithmetic on non-random-access iterators is performed using advance and distance.</para></simplesect>
+<simplesect kind="note"><para>The order of the elements of the input sequence is important for determining ordinal position of an application of <emphasis>f</emphasis>, even though the applications themselves may be unordered.</para></simplesect>
+Along with an element from the input sequence, for each member of the <emphasis>args</emphasis> parameter pack excluding <emphasis>f</emphasis>, an additional argument is passed to each application of <emphasis>f</emphasis> as follows:</para><para>If the pack member is an object returned by a call to a reduction function listed in section, then the additional argument is a reference to a view of that reduction object. If the pack member is an object returned by a call to induction, then the additional argument is the induction value for that induction object corresponding to the position of the application of <emphasis>f</emphasis> in the input sequence.</para><para>Complexity: Applies <emphasis>f</emphasis> exactly once for each element of the input sequence.</para><para>Remarks: If <emphasis>f</emphasis> returns a result, the result is ignored. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/algorithms/for_loop.hpp" line="704" column="1" bodyfile="libs/algorithms/include/hpx/parallel/algorithms/for_loop.hpp" bodystart="704" bodyend="712"/>
+      </memberdef>
+      <memberdef kind="function" id="for__loop_8hpp_1a752b271ba967b563d9541c26e8758734" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ExPolicy</type>
+          </param>
+          <param>
+            <type>typename I</type>
+          </param>
+          <param>
+            <type>typename Size</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+          <param>
+            <type>&amp;&amp;std::is_integral&lt; Size &gt;::value</type>
+          </param>
+        </templateparamlist>
+        <type>util::detail::algorithm_result&lt; ExPolicy &gt;::type</type>
+        <definition>util::detail::algorithm_result&lt;ExPolicy&gt;::type hpx::parallel::v2::for_loop_n</definition>
+        <argsstring>(ExPolicy &amp;&amp;policy, I first, Size size, Args &amp;&amp;... args)</argsstring>
+        <name>for_loop_n</name>
+        <param>
+          <type>ExPolicy &amp;&amp;</type>
+          <declname>policy</declname>
+        </param>
+        <param>
+          <type>I</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type>Size</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The for_loop_n implements loop functionality over a range specified by integral or iterator bounds. For the iterator case, these algorithms resemble for_each from the Parallelism TS, but leave to the programmer when and if to dereference the iterator.</para><para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>ExPolicy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the execution policy to use (deduced). It describes the manner in which the execution of the algorithm may be parallelized and the manner in which it applies user-provided function objects. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>I</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the iteration variable. This could be an (forward) iterator type or an integral type. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of a non-negative integral value specifying the number of items to iterate over. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A parameter pack, it&apos;s last element is a function object to be invoked for each iteration, the others have to be either conforming to the induction or reduction concept.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>policy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The execution policy to use for the scheduling of the iterations. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>first</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Refers to the beginning of the sequence of elements the algorithm will be applied to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Refers to the number of items the algorithm will be applied to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The last element of this parameter pack is the function (object) to invoke, while the remaining elements of the parameter pack are instances of either induction or reduction objects. The function (or function object) which will be invoked for each of the elements in the sequence specified by [first, last) should expose a signature equivalent to: <programlisting><codeline><highlight class="normal">&lt;ignored&gt;<sp/>pred(I<sp/>const&amp;<sp/>a,<sp/>...);</highlight></codeline>
+</programlisting> <linebreak/>
+ The signature does not need to have const&amp;. It will receive the current value of the iteration variable and one argument for each of the induction or reduction objects passed to the algorithms, representing their current values.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Requires: <emphasis>I</emphasis> shall be an integral type or meet the requirements of an input iterator type. The <emphasis>args</emphasis> parameter pack shall have at least one element, comprising objects returned by invocations of <emphasis>reduction</emphasis> and/or <emphasis>induction</emphasis> function templates followed by exactly one element invocable element-access function, <emphasis>f</emphasis>. <emphasis>f</emphasis> shall meet the requirements of MoveConstructible.</para><para>Effects: Applies <emphasis>f</emphasis> to each element in the input sequence, with additional arguments corresponding to the reductions and inductions in the <emphasis>args</emphasis> parameter pack. The length of the input sequence is last - first.</para><para>The first element in the input sequence is specified by <emphasis>first</emphasis>. Each subsequent element is generated by incrementing the previous element.</para><para><simplesect kind="note"><para>As described in the C++ standard, arithmetic on non-random-access iterators is performed using advance and distance.</para></simplesect>
+<simplesect kind="note"><para>The order of the elements of the input sequence is important for determining ordinal position of an application of <emphasis>f</emphasis>, even though the applications themselves may be unordered.</para></simplesect>
+Along with an element from the input sequence, for each member of the <emphasis>args</emphasis> parameter pack excluding <emphasis>f</emphasis>, an additional argument is passed to each application of <emphasis>f</emphasis> as follows:</para><para>If the pack member is an object returned by a call to a reduction function listed in section, then the additional argument is a reference to a view of that reduction object. If the pack member is an object returned by a call to induction, then the additional argument is the induction value for that induction object corresponding to the position of the application of <emphasis>f</emphasis> in the input sequence.</para><para>Complexity: Applies <emphasis>f</emphasis> exactly once for each element of the input sequence.</para><para>Remarks: If <emphasis>f</emphasis> returns a result, the result is ignored.</para><para><simplesect kind="return"><para>The <emphasis>for_loop_n</emphasis> algorithm returns a <emphasis>hpx::future&lt;void&gt;</emphasis> if the execution policy is of type <emphasis>sequenced_task_policy</emphasis> or <emphasis>parallel_task_policy</emphasis> and returns <emphasis>void</emphasis> otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/algorithms/for_loop.hpp" line="808" column="1" bodyfile="libs/algorithms/include/hpx/parallel/algorithms/for_loop.hpp" bodystart="808" bodyend="818"/>
+      </memberdef>
+      <memberdef kind="function" id="for__loop_8hpp_1a7e65fb50c96e09d2f9ba296726d9f82d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename I</type>
+          </param>
+          <param>
+            <type>typename Size</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+          <param>
+            <type>&amp;&amp;std::is_integral&lt; Size &gt;::value</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void hpx::parallel::v2::for_loop_n</definition>
+        <argsstring>(I first, Size size, Args &amp;&amp;... args)</argsstring>
+        <name>for_loop_n</name>
+        <param>
+          <type>I</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type>Size</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The for_loop implements loop functionality over a range specified by integral or iterator bounds. For the iterator case, these algorithms resemble for_each from the Parallelism TS, but leave to the programmer when and if to dereference the iterator.</para><para>The execution of for_loop without specifying an execution policy is equivalent to specifying <emphasis>parallel::execution::seq</emphasis> as the execution policy.</para><para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>I</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the iteration variable. This could be an (forward) iterator type or an integral type. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of a non-negative integral value specifying the number of items to iterate over. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A parameter pack, it&apos;s last element is a function object to be invoked for each iteration, the others have to be either conforming to the induction or reduction concept.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>first</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Refers to the beginning of the sequence of elements the algorithm will be applied to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Refers to the number of items the algorithm will be applied to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The last element of this parameter pack is the function (object) to invoke, while the remaining elements of the parameter pack are instances of either induction or reduction objects. The function (or function object) which will be invoked for each of the elements in the sequence specified by [first, last) should expose a signature equivalent to: <programlisting><codeline><highlight class="normal">&lt;ignored&gt;<sp/>pred(I<sp/>const&amp;<sp/>a,<sp/>...);</highlight></codeline>
+</programlisting> <linebreak/>
+ The signature does not need to have const&amp;. It will receive the current value of the iteration variable and one argument for each of the induction or reduction objects passed to the algorithms, representing their current values.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Requires: <emphasis>I</emphasis> shall be an integral type or meet the requirements of an input iterator type. The <emphasis>args</emphasis> parameter pack shall have at least one element, comprising objects returned by invocations of <emphasis>reduction</emphasis> and/or <emphasis>induction</emphasis> function templates followed by exactly one element invocable element-access function, <emphasis>f</emphasis>. <emphasis>f</emphasis> shall meet the requirements of MoveConstructible.</para><para>Effects: Applies <emphasis>f</emphasis> to each element in the input sequence, with additional arguments corresponding to the reductions and inductions in the <emphasis>args</emphasis> parameter pack. The length of the input sequence is last - first.</para><para>The first element in the input sequence is specified by <emphasis>first</emphasis>. Each subsequent element is generated by incrementing the previous element.</para><para><simplesect kind="note"><para>As described in the C++ standard, arithmetic on non-random-access iterators is performed using advance and distance.</para></simplesect>
+<simplesect kind="note"><para>The order of the elements of the input sequence is important for determining ordinal position of an application of <emphasis>f</emphasis>, even though the applications themselves may be unordered.</para></simplesect>
+Along with an element from the input sequence, for each member of the <emphasis>args</emphasis> parameter pack excluding <emphasis>f</emphasis>, an additional argument is passed to each application of <emphasis>f</emphasis> as follows:</para><para>If the pack member is an object returned by a call to a reduction function listed in section, then the additional argument is a reference to a view of that reduction object. If the pack member is an object returned by a call to induction, then the additional argument is the induction value for that induction object corresponding to the position of the application of <emphasis>f</emphasis> in the input sequence.</para><para>Complexity: Applies <emphasis>f</emphasis> exactly once for each element of the input sequence.</para><para>Remarks: If <emphasis>f</emphasis> returns a result, the result is ignored. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/algorithms/for_loop.hpp" line="903" column="1" bodyfile="libs/algorithms/include/hpx/parallel/algorithms/for_loop.hpp" bodystart="903" bodyend="910"/>
+      </memberdef>
+      <memberdef kind="function" id="for__loop_8hpp_1aa4c8b229a961f9161b1dfd818309f59a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ExPolicy</type>
+          </param>
+          <param>
+            <type>typename I</type>
+          </param>
+          <param>
+            <type>typename Size</type>
+          </param>
+          <param>
+            <type>typename S</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+          <param>
+            <type>&amp;&amp;std::is_integral&lt; Size &gt;::value &amp;&amp;std::is_integral&lt; S &gt;::value</type>
+          </param>
+        </templateparamlist>
+        <type>util::detail::algorithm_result&lt; ExPolicy &gt;::type</type>
+        <definition>util::detail::algorithm_result&lt;ExPolicy&gt;::type hpx::parallel::v2::for_loop_n_strided</definition>
+        <argsstring>(ExPolicy &amp;&amp;policy, I first, Size size, S stride, Args &amp;&amp;... args)</argsstring>
+        <name>for_loop_n_strided</name>
+        <param>
+          <type>ExPolicy &amp;&amp;</type>
+          <declname>policy</declname>
+        </param>
+        <param>
+          <type>I</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type>Size</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>S</type>
+          <declname>stride</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The for_loop_n_strided implements loop functionality over a range specified by integral or iterator bounds. For the iterator case, these algorithms resemble for_each from the Parallelism TS, but leave to the programmer when and if to dereference the iterator.</para><para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>ExPolicy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the execution policy to use (deduced). It describes the manner in which the execution of the algorithm may be parallelized and the manner in which it applies user-provided function objects. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>I</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the iteration variable. This could be an (forward) iterator type or an integral type. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of a non-negative integral value specifying the number of items to iterate over. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>S</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the stride variable. This should be an integral type. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A parameter pack, it&apos;s last element is a function object to be invoked for each iteration, the others have to be either conforming to the induction or reduction concept.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>policy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The execution policy to use for the scheduling of the iterations. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>first</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Refers to the beginning of the sequence of elements the algorithm will be applied to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Refers to the number of items the algorithm will be applied to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stride</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Refers to the stride of the iteration steps. This shall have non-zero value and shall be negative only if I has integral type or meets the requirements of a bidirectional iterator. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The last element of this parameter pack is the function (object) to invoke, while the remaining elements of the parameter pack are instances of either induction or reduction objects. The function (or function object) which will be invoked for each of the elements in the sequence specified by [first, last) should expose a signature equivalent to: <programlisting><codeline><highlight class="normal">&lt;ignored&gt;<sp/>pred(I<sp/>const&amp;<sp/>a,<sp/>...);</highlight></codeline>
+</programlisting> <linebreak/>
+ The signature does not need to have const&amp;. It will receive the current value of the iteration variable and one argument for each of the induction or reduction objects passed to the algorithms, representing their current values.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Requires: <emphasis>I</emphasis> shall be an integral type or meet the requirements of an input iterator type. The <emphasis>args</emphasis> parameter pack shall have at least one element, comprising objects returned by invocations of <emphasis>reduction</emphasis> and/or <emphasis>induction</emphasis> function templates followed by exactly one element invocable element-access function, <emphasis>f</emphasis>. <emphasis>f</emphasis> shall meet the requirements of MoveConstructible.</para><para>Effects: Applies <emphasis>f</emphasis> to each element in the input sequence, with additional arguments corresponding to the reductions and inductions in the <emphasis>args</emphasis> parameter pack. The length of the input sequence is last - first.</para><para>The first element in the input sequence is specified by <emphasis>first</emphasis>. Each subsequent element is generated by incrementing the previous element.</para><para><simplesect kind="note"><para>As described in the C++ standard, arithmetic on non-random-access iterators is performed using advance and distance.</para></simplesect>
+<simplesect kind="note"><para>The order of the elements of the input sequence is important for determining ordinal position of an application of <emphasis>f</emphasis>, even though the applications themselves may be unordered.</para></simplesect>
+Along with an element from the input sequence, for each member of the <emphasis>args</emphasis> parameter pack excluding <emphasis>f</emphasis>, an additional argument is passed to each application of <emphasis>f</emphasis> as follows:</para><para>If the pack member is an object returned by a call to a reduction function listed in section, then the additional argument is a reference to a view of that reduction object. If the pack member is an object returned by a call to induction, then the additional argument is the induction value for that induction object corresponding to the position of the application of <emphasis>f</emphasis> in the input sequence.</para><para>Complexity: Applies <emphasis>f</emphasis> exactly once for each element of the input sequence.</para><para>Remarks: If <emphasis>f</emphasis> returns a result, the result is ignored.</para><para><simplesect kind="return"><para>The <emphasis>for_loop_n_strided</emphasis> algorithm returns a <emphasis>hpx::future&lt;void&gt;</emphasis> if the execution policy is of type <emphasis>sequenced_task_policy</emphasis> or <emphasis>parallel_task_policy</emphasis> and returns <emphasis>void</emphasis> otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/algorithms/for_loop.hpp" line="1014" column="1" bodyfile="libs/algorithms/include/hpx/parallel/algorithms/for_loop.hpp" bodystart="1014" bodyend="1025"/>
+      </memberdef>
+      <memberdef kind="function" id="for__loop_8hpp_1ab632abf48b39fa6e2e90c588277a41d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename I</type>
+          </param>
+          <param>
+            <type>typename Size</type>
+          </param>
+          <param>
+            <type>typename S</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+          <param>
+            <type>&amp;&amp;std::is_integral&lt; Size &gt;::value &amp;&amp;std::is_integral&lt; S &gt;::value</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void hpx::parallel::v2::for_loop_n_strided</definition>
+        <argsstring>(I first, Size size, S stride, Args &amp;&amp;... args)</argsstring>
+        <name>for_loop_n_strided</name>
+        <param>
+          <type>I</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type>Size</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>S</type>
+          <declname>stride</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The for_loop_n_strided implements loop functionality over a range specified by integral or iterator bounds. For the iterator case, these algorithms resemble for_each from the Parallelism TS, but leave to the programmer when and if to dereference the iterator.</para><para>The execution of for_loop without specifying an execution policy is equivalent to specifying <emphasis>parallel::execution::seq</emphasis> as the execution policy.</para><para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>I</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the iteration variable. This could be an (forward) iterator type or an integral type. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of a non-negative integral value specifying the number of items to iterate over. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>S</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the stride variable. This should be an integral type. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A parameter pack, it&apos;s last element is a function object to be invoked for each iteration, the others have to be either conforming to the induction or reduction concept.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>first</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Refers to the beginning of the sequence of elements the algorithm will be applied to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Refers to the number of items the algorithm will be applied to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stride</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Refers to the stride of the iteration steps. This shall have non-zero value and shall be negative only if I has integral type or meets the requirements of a bidirectional iterator. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The last element of this parameter pack is the function (object) to invoke, while the remaining elements of the parameter pack are instances of either induction or reduction objects. The function (or function object) which will be invoked for each of the elements in the sequence specified by [first, last) should expose a signature equivalent to: <programlisting><codeline><highlight class="normal">&lt;ignored&gt;<sp/>pred(I<sp/>const&amp;<sp/>a,<sp/>...);</highlight></codeline>
+</programlisting> <linebreak/>
+ The signature does not need to have const&amp;. It will receive the current value of the iteration variable and one argument for each of the induction or reduction objects passed to the algorithms, representing their current values.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Requires: <emphasis>I</emphasis> shall be an integral type or meet the requirements of an input iterator type. The <emphasis>args</emphasis> parameter pack shall have at least one element, comprising objects returned by invocations of <emphasis>reduction</emphasis> and/or <emphasis>induction</emphasis> function templates followed by exactly one element invocable element-access function, <emphasis>f</emphasis>. <emphasis>f</emphasis> shall meet the requirements of MoveConstructible.</para><para>Effects: Applies <emphasis>f</emphasis> to each element in the input sequence, with additional arguments corresponding to the reductions and inductions in the <emphasis>args</emphasis> parameter pack. The length of the input sequence is last - first.</para><para>The first element in the input sequence is specified by <emphasis>first</emphasis>. Each subsequent element is generated by incrementing the previous element.</para><para><simplesect kind="note"><para>As described in the C++ standard, arithmetic on non-random-access iterators is performed using advance and distance.</para></simplesect>
+<simplesect kind="note"><para>The order of the elements of the input sequence is important for determining ordinal position of an application of <emphasis>f</emphasis>, even though the applications themselves may be unordered.</para></simplesect>
+Along with an element from the input sequence, for each member of the <emphasis>args</emphasis> parameter pack excluding <emphasis>f</emphasis>, an additional argument is passed to each application of <emphasis>f</emphasis> as follows:</para><para>If the pack member is an object returned by a call to a reduction function listed in section, then the additional argument is a reference to a view of that reduction object. If the pack member is an object returned by a call to induction, then the additional argument is the induction value for that induction object corresponding to the position of the application of <emphasis>f</emphasis> in the input sequence.</para><para>Complexity: Applies <emphasis>f</emphasis> exactly once for each element of the input sequence.</para><para>Remarks: If <emphasis>f</emphasis> returns a result, the result is ignored. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/algorithms/for_loop.hpp" line="1117" column="1" bodyfile="libs/algorithms/include/hpx/parallel/algorithms/for_loop.hpp" bodystart="1117" bodyend="1123"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libs/algorithms/include/hpx/parallel/algorithms/for_loop_reduction.hpp" line="29" column="1"/>
+  </compounddef>
+</doxygen>

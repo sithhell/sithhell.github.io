@@ -1,0 +1,377 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacehpx_1_1lcos" kind="namespace" language="C++">
+    <compoundname>hpx::lcos</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="all__reduce_8hpp_1a30b8df3db6823b22b47f96eb77ac6b42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type>hpx::future&lt; T &gt;</type>
+        <definition>hpx::future&lt;T&gt; hpx::lcos::all_reduce</definition>
+        <argsstring>(char const *basename, hpx::future&lt; T &gt; result, F &amp;&amp;op, std::size_t num_sites=std::size_t(-1), std::size_t generation=std::size_t(-1), std::size_t this_site=std::size_t(-1), std::size_t root_site=0)</argsstring>
+        <name>all_reduce</name>
+        <param>
+          <type>char const *</type>
+          <declname>basename</declname>
+        </param>
+        <param>
+          <type>hpx::future&lt; T &gt;</type>
+          <declname>result</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>op</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>num_sites</declname>
+          <defval>std::size_t(-1)</defval>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>generation</declname>
+          <defval>std::size_t(-1)</defval>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>this_site</declname>
+          <defval>std::size_t(-1)</defval>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>root_site</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>AllReduce a set of values from different call sites</para><para>This function receives a set of values that are the result of applying a given operator on values supplied from all call sites operating on the given base name.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>basename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base name identifying the all_reduce operation </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>local_result</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A future referring to the value to transmit to all participating sites from this call site. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>op</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reduction operation to apply to all values supplied from all participating sites </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_sites</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of participating sites (default: all localities). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>generation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The generational counter identifying the sequence number of the all_reduce operation performed on the given base name. This is optional and needs to be supplied only if the all_reduce operation on the given base name has to be performed more than once. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>this_site</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sequence number of this invocation (usually the locality id). This value is optional and defaults to whatever hpx::get_locality_id() returns.  root_site The site that is responsible for creating the all_reduce support object. This value is optional and defaults to &apos;0&apos; (zero).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>Each all_reduce operation has to be accompanied with a unique usage of the <emphasis>HPX_REGISTER_ALLREDUCE</emphasis> macro to define the necessary internal facilities used by <emphasis>all_reduce</emphasis>.</para></simplesect>
+<simplesect kind="return"><para>This function returns a future holding a vector with all values send by all participating sites. It will become ready once the all_reduce operation has been completed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/collectives/include/hpx/collectives/all_reduce.hpp" line="49" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="all__reduce_8hpp_1ae3b21b7b5d7405ce306ff6da651119ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type>hpx::future&lt; std::decay_t&lt; T &gt; &gt;</type>
+        <definition>hpx::future&lt;std::decay_t&lt;T&gt; &gt; hpx::lcos::all_reduce</definition>
+        <argsstring>(char const *basename, T &amp;&amp;result, F &amp;&amp;op, std::size_t num_sites=std::size_t(-1), std::size_t generation=std::size_t(-1), std::size_t this_site=std::size_t(-1), std::size_t root_site=0)</argsstring>
+        <name>all_reduce</name>
+        <param>
+          <type>char const *</type>
+          <declname>basename</declname>
+        </param>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>result</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>op</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>num_sites</declname>
+          <defval>std::size_t(-1)</defval>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>generation</declname>
+          <defval>std::size_t(-1)</defval>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>this_site</declname>
+          <defval>std::size_t(-1)</defval>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>root_site</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>AllReduce a set of values from different call sites</para><para>This function receives a set of values from all call sites operating on the given base name.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>basename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base name identifying the all_reduce operation </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>local_result</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to transmit to all participating sites from this call site. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>op</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reduction operation to apply to all values supplied from all participating sites </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_sites</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of participating sites (default: all localities). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>generation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The generational counter identifying the sequence number of the all_reduce operation performed on the given base name. This is optional and needs to be supplied only if the all_reduce operation on the given base name has to be performed more than once. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>this_site</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sequence number of this invocation (usually the locality id). This value is optional and defaults to whatever hpx::get_locality_id() returns.  root_site The site that is responsible for creating the all_reduce support object. This value is optional and defaults to &apos;0&apos; (zero).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>Each all_reduce operation has to be accompanied with a unique usage of the <emphasis>HPX_REGISTER_ALLREDUCE</emphasis> macro to define the necessary internal facilities used by <emphasis>all_reduce</emphasis>.</para></simplesect>
+<simplesect kind="return"><para>This function returns a future holding a vector with all values send by all participating sites. It will become ready once the all_reduce operation has been completed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/collectives/include/hpx/collectives/all_reduce.hpp" line="89" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="all__to__all_8hpp_1a9cbae81981cd40beff75ff937a8f3dbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>hpx::future&lt; std::vector&lt; T &gt; &gt;</type>
+        <definition>hpx::future&lt;std::vector&lt;T&gt; &gt; hpx::lcos::all_to_all</definition>
+        <argsstring>(char const *basename, hpx::future&lt; T &gt; result, std::size_t num_sites=std::size_t(-1), std::size_t generation=std::size_t(-1), std::size_t this_site=std::size_t(-1), std::size_t root_site=0)</argsstring>
+        <name>all_to_all</name>
+        <param>
+          <type>char const *</type>
+          <declname>basename</declname>
+        </param>
+        <param>
+          <type>hpx::future&lt; T &gt;</type>
+          <declname>result</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>num_sites</declname>
+          <defval>std::size_t(-1)</defval>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>generation</declname>
+          <defval>std::size_t(-1)</defval>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>this_site</declname>
+          <defval>std::size_t(-1)</defval>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>root_site</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>AllToAll a set of values from different call sites</para><para>This function receives a set of values from all call sites operating on the given base name.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>basename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base name identifying the all_to_all operation </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>local_result</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A future referring to the value to transmit to all participating sites from this call site. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_sites</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of participating sites (default: all localities). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>generation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The generational counter identifying the sequence number of the all_to_all operation performed on the given base name. This is optional and needs to be supplied only if the all_to_all operation on the given base name has to be performed more than once. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>this_site</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sequence number of this invocation (usually the locality id). This value is optional and defaults to whatever hpx::get_locality_id() returns.  root_site The site that is responsible for creating the all_to_all support object. This value is optional and defaults to &apos;0&apos; (zero).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>Each all_to_all operation has to be accompanied with a unique usage of the <emphasis>HPX_REGISTER_ALLTOALL</emphasis> macro to define the necessary internal facilities used by <emphasis>all_to_all</emphasis>.</para></simplesect>
+<simplesect kind="return"><para>This function returns a future holding a vector with all values send by all participating sites. It will become ready once the all_to_all operation has been completed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/collectives/include/hpx/collectives/all_to_all.hpp" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="all__to__all_8hpp_1a0289c3c315d67597fe2ad4ddf14cbc20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>hpx::future&lt; std::vector&lt; typename std::decay&lt; T &gt;::type &gt; &gt;</type>
+        <definition>hpx::future&lt;std::vector&lt;typename std::decay&lt;T&gt;::type&gt; &gt; hpx::lcos::all_to_all</definition>
+        <argsstring>(char const *basename, T &amp;&amp;result, std::size_t num_sites=std::size_t(-1), std::size_t generation=std::size_t(-1), std::size_t this_site=std::size_t(-1), std::size_t root_site=0)</argsstring>
+        <name>all_to_all</name>
+        <param>
+          <type>char const *</type>
+          <declname>basename</declname>
+        </param>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>result</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>num_sites</declname>
+          <defval>std::size_t(-1)</defval>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>generation</declname>
+          <defval>std::size_t(-1)</defval>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>this_site</declname>
+          <defval>std::size_t(-1)</defval>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>root_site</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>AllToAll a set of values from different call sites</para><para>This function receives a set of values from all call sites operating on the given base name.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>basename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base name identifying the all_to_all operation </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>local_result</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to transmit to all participating sites from this call site. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_sites</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of participating sites (default: all localities). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>generation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The generational counter identifying the sequence number of the all_to_all operation performed on the given base name. This is optional and needs to be supplied only if the all_to_all operation on the given base name has to be performed more than once. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>this_site</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sequence number of this invocation (usually the locality id). This value is optional and defaults to whatever hpx::get_locality_id() returns.  root_site The site that is responsible for creating the all_to_all support object. This value is optional and defaults to &apos;0&apos; (zero).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>Each all_to_all operation has to be accompanied with a unique usage of the <emphasis>HPX_REGISTER_ALLTOALL</emphasis> macro to define the necessary internal facilities used by <emphasis>all_to_all</emphasis>.</para></simplesect>
+<simplesect kind="return"><para>This function returns a future holding a vector with all values send by all participating sites. It will become ready once the all_to_all operation has been completed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/collectives/include/hpx/collectives/all_to_all.hpp" line="84" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libs/collectives/include/hpx/collectives/all_reduce.hpp" line="13" column="1"/>
+  </compounddef>
+</doxygen>

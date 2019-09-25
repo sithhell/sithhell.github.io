@@ -1,0 +1,806 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>CMake toolchains shipped with HPX &mdash; HPX 1.3.0-dev documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> HPX
+          
+
+          
+            
+            <img src="../_static/HPX_STELLAR.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../why_hpx.html">Why <em>HPX</em>?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../terminology.html">Terminology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual.html">Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../additional_material.html">Additional material</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Modules</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../libs/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libs/all_modules.html">All modules</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing to <em>HPX</em></a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../releases.html">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about_hpx.html">About <em>HPX</em></a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HPX</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>CMake toolchains shipped with <em>HPX</em></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/STEllAR-GROUP/hpx/blob/master/docs/sphinx/manual/cmake_toolchains.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cmake-toolchains-shipped-with-hpx">
+<span id="cmake-toolchains"></span><h1>CMake toolchains shipped with <em>HPX</em><a class="headerlink" href="#cmake-toolchains-shipped-with-hpx" title="Permalink to this headline">¶</a></h1>
+<p>In order to compile HPX for various platforms, we provide a variety of toolchain
+files that take care of setting up various CMake variables like compilers etc.
+They are located in the <code class="docutils literal notranslate"><span class="pre">cmake/toolchains</span></code> directory:</p>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#crayknl" id="id2">CrayKNL</a></p></li>
+<li><p><a class="reference internal" href="#crayknlstatic" id="id3">CrayKNLStatic</a></p></li>
+<li><p><a class="reference internal" href="#arm-gcc" id="id4">ARM-gcc</a></p></li>
+<li><p><a class="reference internal" href="#bgion-gcc" id="id5">BGION-gcc</a></p></li>
+<li><p><a class="reference internal" href="#bgq" id="id6">BGQ</a></p></li>
+<li><p><a class="reference internal" href="#cray" id="id7">Cray</a></p></li>
+<li><p><a class="reference internal" href="#xeonphi" id="id8">XeonPhi</a></p></li>
+<li><p><a class="reference internal" href="#craystatic" id="id9">CrayStatic</a></p></li>
+</ul>
+</div>
+<p>To use them pass the <code class="docutils literal notranslate"><span class="pre">-DCMAKE_TOOLCHAIN_FILE=&lt;toolchain&gt;</span></code> argument to the
+cmake invocation.</p>
+<div class="section" id="crayknl">
+<h2><a class="toc-backref" href="#contents">CrayKNL</a><a class="headerlink" href="#crayknl" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="c"># Copyright (c) 2014 Thomas Heller</span>
+<span class="c">#</span>
+<span class="c"># Distributed under the Boost Software License, Version 1.0. (See accompanying</span>
+<span class="c"># file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span>
+<span class="c">#</span>
+<span class="c"># This is the default toolchain file to be used with Intel Xeon PHIs. It sets</span>
+<span class="c"># the appropriate compile flags and compiler such that HPX will compile.</span>
+<span class="c"># Note that you still need to provide Boost, hwloc and other utility libraries</span>
+<span class="c"># like a custom allocator yourself.</span>
+<span class="c">#</span>
+
+<span class="nb">if</span><span class="p">(</span><span class="s">HPX_WITH_STATIC_LINKING</span><span class="p">)</span>
+  <span class="nb">set_property</span><span class="p">(</span><span class="s">GLOBAL</span> <span class="s">PROPERTY</span> <span class="s">TARGET_SUPPORTS_SHARED_LIBS</span> <span class="s">FALSE</span><span class="p">)</span>
+<span class="nb">else</span><span class="p">()</span>
+<span class="nb">endif</span><span class="p">()</span>
+
+<span class="c"># Set the Cray Compiler Wrapper</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_COMPILER</span> <span class="s">CC</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_COMPILER</span> <span class="s">cc</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_Fortran_COMPILER</span> <span class="s">ftn</span><span class="p">)</span>
+
+<span class="nb">if</span> <span class="p">(</span><span class="s">CMAKE_VERSION</span> <span class="s">VERSION_GREATER</span> <span class="s">3.3.9</span><span class="p">)</span>
+  <span class="nb">set</span><span class="p">(</span><span class="s">__includes</span> <span class="s2">&quot;&lt;INCLUDES&gt;&quot;</span><span class="p">)</span>
+<span class="nb">endif</span><span class="p">()</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_FLAGS_INIT</span> <span class="s2">&quot;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_SHARED_LIBRARY_C_FLAGS</span> <span class="s2">&quot;-fPIC -shared&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_SHARED_LIBRARY_CREATE_C_FLAGS</span> <span class="s2">&quot;-fPIC -shared&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_COMPILE_OBJECT</span> <span class="s2">&quot;&lt;CMAKE_C_COMPILER&gt; -shared -fPIC &lt;DEFINES&gt; ${__includes} &lt;FLAGS&gt; -o &lt;OBJECT&gt; -c &lt;SOURCE&gt;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_LINK_EXECUTABLE</span> <span class="s2">&quot;&lt;CMAKE_C_COMPILER&gt; -fPIC &lt;FLAGS&gt; &lt;CMAKE_C_LINK_FLAGS&gt; &lt;LINK_FLAGS&gt; &lt;OBJECTS&gt; -o &lt;TARGET&gt; &lt;LINK_LIBRARIES&gt;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_CREATE_SHARED_LIBRARY</span> <span class="s2">&quot;&lt;CMAKE_C_COMPILER&gt; -fPIC -shared &lt;CMAKE_SHARED_LIBRARY_CXX_FLAGS&gt; &lt;LANGUAGE_COMPILE_FLAGS&gt; &lt;LINK_FLAGS&gt; &lt;CMAKE_SHARED_LIBRARY_CREATE_CXX_FLAGS&gt; &lt;SONAME_FLAG&gt;&lt;TARGET_SONAME&gt; -o &lt;TARGET&gt; &lt;OBJECTS&gt; &lt;LINK_LIBRARIES&gt; &quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="c">#</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_FLAGS_INIT</span> <span class="s2">&quot;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_SHARED_LIBRARY_CXX_FLAGS</span> <span class="s2">&quot;-fPIC -shared&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_SHARED_LIBRARY_CREATE_CXX_FLAGS</span> <span class="s2">&quot;-fPIC -shared&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_SHARED_LIBRARY_CREATE_CXX_FLAGS</span> <span class="s2">&quot;-fPIC -shared&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_COMPILE_OBJECT</span> <span class="s2">&quot;&lt;CMAKE_CXX_COMPILER&gt; -shared -fPIC &lt;DEFINES&gt; ${__includes} &lt;FLAGS&gt; -o &lt;OBJECT&gt; -c &lt;SOURCE&gt;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_LINK_EXECUTABLE</span> <span class="s2">&quot;&lt;CMAKE_CXX_COMPILER&gt; -fPIC -dynamic &lt;FLAGS&gt; &lt;CMAKE_CXX_LINK_FLAGS&gt; &lt;LINK_FLAGS&gt; &lt;OBJECTS&gt; -o &lt;TARGET&gt; &lt;LINK_LIBRARIES&gt;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_CREATE_SHARED_LIBRARY</span> <span class="s2">&quot;&lt;CMAKE_CXX_COMPILER&gt; -fPIC -shared &lt;CMAKE_SHARED_LIBRARY_CXX_FLAGS&gt; &lt;LANGUAGE_COMPILE_FLAGS&gt; &lt;LINK_FLAGS&gt; &lt;CMAKE_SHARED_LIBRARY_CREATE_CXX_FLAGS&gt; &lt;SONAME_FLAG&gt;&lt;TARGET_SONAME&gt; -o &lt;TARGET&gt; &lt;OBJECTS&gt; &lt;LINK_LIBRARIES&gt;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="c">#</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_Fortran_FLAGS_INIT</span> <span class="s2">&quot;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_SHARED_LIBRARY_Fortran_FLAGS</span> <span class="s2">&quot;-fPIC&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_SHARED_LIBRARY_CREATE_Fortran_FLAGS</span> <span class="s2">&quot;-shared&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_Fortran_COMPILE_OBJECT</span> <span class="s2">&quot;&lt;CMAKE_Fortran_COMPILER&gt; -shared -fPIC &lt;DEFINES&gt; ${__includes} &lt;FLAGS&gt; -o &lt;OBJECT&gt; -c &lt;SOURCE&gt;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_Fortran_LINK_EXECUTABLE</span> <span class="s2">&quot;&lt;CMAKE_Fortran_COMPILER&gt; -fPIC &lt;FLAGS&gt; &lt;CMAKE_Fortran_LINK_FLAGS&gt; &lt;LINK_FLAGS&gt; &lt;OBJECTS&gt; -o &lt;TARGET&gt; &lt;LINK_LIBRARIES&gt;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_Fortran_CREATE_SHARED_LIBRARY</span> <span class="s2">&quot;&lt;CMAKE_Fortran_COMPILER&gt; -fPIC -shared &lt;CMAKE_SHARED_LIBRARY_Fortran_FLAGS&gt; &lt;LANGUAGE_COMPILE_FLAGS&gt; &lt;LINK_FLAGS&gt; &lt;CMAKE_SHARED_LIBRARY_CREATE_Fortran_FLAGS&gt; &lt;SONAME_FLAG&gt;&lt;TARGET_SONAME&gt; -o &lt;TARGET&gt; &lt;OBJECTS&gt; &lt;LINK_LIBRARIES&gt; &quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="c">#</span>
+<span class="c"># Disable searches in the default system paths. We are cross compiling after all</span>
+<span class="c"># and cmake might pick up wrong libraries that way</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_FIND_ROOT_PATH_MODE_PROGRAM</span> <span class="s">BOTH</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_FIND_ROOT_PATH_MODE_LIBRARY</span> <span class="s">ONLY</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_FIND_ROOT_PATH_MODE_INCLUDE</span> <span class="s">ONLY</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_FIND_ROOT_PATH_MODE_PACKAGE</span> <span class="s">ONLY</span><span class="p">)</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_PARCELPORT_TCP</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_PARCELPORT_MPI</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_PARCELPORT_MPI_MULTITHREADED</span> <span class="s">OFF</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_PARCELPORT_LIBFABRIC</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_PARCELPORT_LIBFABRIC_PROVIDER</span> <span class="s2">&quot;gni&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span>
+  <span class="s2">&quot;See libfabric docs for details, gni,verbs,psm2 etc etc&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_PARCELPORT_LIBFABRIC_THROTTLE_SENDS</span> <span class="s2">&quot;256&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span>
+  <span class="s2">&quot;Max number of messages in flight at once&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_PARCELPORT_LIBFABRIC_WITH_DEV_MODE</span> <span class="s">OFF</span> <span class="s">CACHE</span> <span class="s">BOOL</span>
+  <span class="s2">&quot;Custom libfabric logging flag&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_PARCELPORT_LIBFABRIC_WITH_LOGGING</span>  <span class="s">OFF</span> <span class="s">CACHE</span> <span class="s">BOOL</span>
+  <span class="s2">&quot;Libfabric parcelport logging on/off flag&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_ZERO_COPY_SERIALIZATION_THRESHOLD</span> <span class="s2">&quot;4096&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span>
+  <span class="s2">&quot;The threshhold in bytes to when perform zero copy optimizations (default: 128)&quot;</span><span class="p">)</span>
+
+<span class="c"># Set the TBBMALLOC_PLATFORM correctly so that find_package(TBBMalloc) sets the</span>
+<span class="c"># right hints</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">TBBMALLOC_PLATFORM</span> <span class="s2">&quot;mic-knl&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="c"># We have a bunch of cores on the MIC ... increase the default</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_MAX_CPU_COUNT</span> <span class="s2">&quot;512&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="c"># We do a cross compilation here ...</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CROSSCOMPILING</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="c"># RDTSCP is available on Xeon/Phis</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_RDTSCP</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="crayknlstatic">
+<h2><a class="toc-backref" href="#contents">CrayKNLStatic</a><a class="headerlink" href="#crayknlstatic" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="c"># Copyright (c) 2014-2017 Thomas Heller</span>
+<span class="c"># Copyright (c) 2017      Bryce Adelstein Lelbach </span>
+<span class="c">#</span>
+<span class="c"># Distributed under the Boost Software License, Version 1.0. (See accompanying</span>
+<span class="c"># file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_STATIC_LINKING</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_STATIC_EXE_LINKING</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set_property</span><span class="p">(</span><span class="s">GLOBAL</span> <span class="s">PROPERTY</span> <span class="s">TARGET_SUPPORTS_SHARED_LIBS</span> <span class="s">FALSE</span><span class="p">)</span>
+
+<span class="c"># Set the Cray Compiler Wrapper</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_COMPILER</span> <span class="s">CC</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_COMPILER</span> <span class="s">cc</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_Fortran_COMPILER</span> <span class="s">ftn</span><span class="p">)</span>
+
+<span class="nb">if</span> <span class="p">(</span><span class="s">CMAKE_VERSION</span> <span class="s">VERSION_GREATER</span> <span class="s">3.3.9</span><span class="p">)</span>
+  <span class="nb">set</span><span class="p">(</span><span class="s">__includes</span> <span class="s2">&quot;&lt;INCLUDES&gt;&quot;</span><span class="p">)</span>
+<span class="nb">endif</span><span class="p">()</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_FLAGS_INIT</span> <span class="s2">&quot;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_COMPILE_OBJECT</span> <span class="s2">&quot;&lt;CMAKE_C_COMPILER&gt; -static -fPIC &lt;DEFINES&gt; ${__includes} &lt;FLAGS&gt; -o &lt;OBJECT&gt; -c &lt;SOURCE&gt;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_LINK_EXECUTABLE</span> <span class="s2">&quot;&lt;CMAKE_C_COMPILER&gt; -fPIC &lt;FLAGS&gt; &lt;CMAKE_C_LINK_FLAGS&gt; &lt;LINK_FLAGS&gt; &lt;OBJECTS&gt; -o &lt;TARGET&gt; &lt;LINK_LIBRARIES&gt;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_FLAGS_INIT</span> <span class="s2">&quot;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_COMPILE_OBJECT</span> <span class="s2">&quot;&lt;CMAKE_CXX_COMPILER&gt; -static -fPIC &lt;DEFINES&gt; ${__includes} &lt;FLAGS&gt; -o &lt;OBJECT&gt; -c &lt;SOURCE&gt;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_LINK_EXECUTABLE</span> <span class="s2">&quot;&lt;CMAKE_CXX_COMPILER&gt; -fPIC &lt;FLAGS&gt; &lt;CMAKE_CXX_LINK_FLAGS&gt; &lt;LINK_FLAGS&gt; &lt;OBJECTS&gt; -o &lt;TARGET&gt; &lt;LINK_LIBRARIES&gt;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_Fortran_FLAGS_INIT</span> <span class="s2">&quot;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_Fortran_COMPILE_OBJECT</span> <span class="s2">&quot;&lt;CMAKE_Fortran_COMPILER&gt; -static -fPIC &lt;DEFINES&gt; ${__includes} &lt;FLAGS&gt; -o &lt;OBJECT&gt; -c &lt;SOURCE&gt;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_Fortran_LINK_EXECUTABLE</span> <span class="s2">&quot;&lt;CMAKE_Fortran_COMPILER&gt; -fPIC &lt;FLAGS&gt; &lt;CMAKE_Fortran_LINK_FLAGS&gt; &lt;LINK_FLAGS&gt; &lt;OBJECTS&gt; -o &lt;TARGET&gt; &lt;LINK_LIBRARIES&gt;&quot;</span><span class="p">)</span>
+
+<span class="c"># Disable searches in the default system paths. We are cross compiling after all</span>
+<span class="c"># and cmake might pick up wrong libraries that way</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_FIND_ROOT_PATH_MODE_PROGRAM</span> <span class="s">BOTH</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_FIND_ROOT_PATH_MODE_LIBRARY</span> <span class="s">ONLY</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_FIND_ROOT_PATH_MODE_INCLUDE</span> <span class="s">ONLY</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_FIND_ROOT_PATH_MODE_PACKAGE</span> <span class="s">ONLY</span><span class="p">)</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_PARCELPORT_TCP</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_PARCELPORT_MPI</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_PARCELPORT_MPI_MULTITHREADED</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_PARCELPORT_LIBFABRIC</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_PARCELPORT_LIBFABRIC_PROVIDER</span> <span class="s2">&quot;gni&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span>
+  <span class="s2">&quot;See libfabric docs for details, gni,verbs,psm2 etc etc&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_PARCELPORT_LIBFABRIC_THROTTLE_SENDS</span> <span class="s2">&quot;256&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span>
+  <span class="s2">&quot;Max number of messages in flight at once&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_PARCELPORT_LIBFABRIC_WITH_DEV_MODE</span> <span class="s">OFF</span> <span class="s">CACHE</span> <span class="s">BOOL</span>
+  <span class="s2">&quot;Custom libfabric logging flag&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_PARCELPORT_LIBFABRIC_WITH_LOGGING</span>  <span class="s">OFF</span> <span class="s">CACHE</span> <span class="s">BOOL</span>
+  <span class="s2">&quot;Libfabric parcelport logging on/off flag&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_ZERO_COPY_SERIALIZATION_THRESHOLD</span> <span class="s2">&quot;4096&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span>
+  <span class="s2">&quot;The threshhold in bytes to when perform zero copy optimizations (default: 128)&quot;</span><span class="p">)</span>
+
+<span class="c"># Set the TBBMALLOC_PLATFORM correctly so that find_package(TBBMalloc) sets the</span>
+<span class="c"># right hints</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">TBBMALLOC_PLATFORM</span> <span class="s2">&quot;mic-knl&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="c"># We have a bunch of cores on the MIC ... increase the default</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_MAX_CPU_COUNT</span> <span class="s2">&quot;512&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="c"># We do a cross compilation here ...</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CROSSCOMPILING</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="c"># RDTSCP is available on Xeon/Phis</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_RDTSCP</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="arm-gcc">
+<h2><a class="toc-backref" href="#contents">ARM-gcc</a><a class="headerlink" href="#arm-gcc" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="c"># Copyright (c) 2015 Thomas Heller</span>
+<span class="c">#</span>
+<span class="c"># Distributed under the Boost Software License, Version 1.0. (See accompanying</span>
+<span class="c"># file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_SYSTEM_NAME</span> <span class="s">Linux</span><span class="p">)</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CROSSCOMPILING</span> <span class="s">ON</span><span class="p">)</span>
+
+<span class="c"># Set the gcc Compiler</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_COMPILER</span> <span class="s">arm-linux-gnueabihf-g++-4.8</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_COMPILER</span> <span class="s">arm-linux-gnueabihf-gcc-4.8</span><span class="p">)</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_GENERIC_CONTEXT_COROUTINES</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;enable generic coroutines&quot;</span><span class="p">)</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_FIND_ROOT_PATH_MODE_PROGRAM</span> <span class="s">NEVER</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_FIND_ROOT_PATH_MODE_LIBRARY</span> <span class="s">ONLY</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_FIND_ROOT_PATH_MODE_INCLUDE</span> <span class="s">ONLY</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_FIND_ROOT_PATH_MODE_PACKAGE</span> <span class="s">ONLY</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="bgion-gcc">
+<h2><a class="toc-backref" href="#contents">BGION-gcc</a><a class="headerlink" href="#bgion-gcc" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="c"># Copyright (c) 2014 John Biddiscombe</span>
+<span class="c">#</span>
+<span class="c"># Distributed under the Boost Software License, Version 1.0. (See accompanying</span>
+<span class="c"># file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span>
+
+<span class="c"># This is the default toolchain file to be used with CNK on a BlueGene/Q. It sets</span>
+<span class="c"># the appropriate compile flags and compiler such that HPX will compile.</span>
+<span class="c"># Note that you still need to provide Boost, hwloc and other utility libraries</span>
+<span class="c"># like a custom allocator yourself.</span>
+
+<span class="c">#</span>
+<span class="c"># Usage : cmake -DCMAKE_TOOLCHAIN_FILE=~/src/hpx/cmake/toolchains/BGION-gcc.cmake ~/src/hpx</span>
+<span class="c">#</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_SYSTEM_NAME</span> <span class="s">Linux</span><span class="p">)</span>
+
+<span class="c"># Set the gcc Compiler</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_COMPILER</span> <span class="s">g++</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_COMPILER</span> <span class="s">gcc</span><span class="p">)</span>
+<span class="c">#set(CMAKE_Fortran_COMPILER)</span>
+
+<span class="c"># Add flags we need for BGAS compilation</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_FLAGS_INIT</span>
+  <span class="s2">&quot;-D__powerpc__ -D__bgion__ -I/gpfs/bbp.cscs.ch/home/biddisco/src/bgas/rdmahelper &quot;</span>
+  <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;Initial compiler flags used to compile for BGAS&quot;</span>
+<span class="p">)</span>
+<span class="c"># the V1R2M2 includes are necessary for some hardware specific features</span>
+<span class="c">#-DHPX_SMALL_STACK_SIZE=0x200000 -DHPX_MEDIUM_STACK_SIZE=0x200000 -DHPX_LARGE_STACK_SIZE=0x200000 -DHPX_HUGE_STACK_SIZE=0x200000</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_EXE_LINKER_FLAGS_INIT</span> <span class="s2">&quot;-L/gpfs/bbp.cscs.ch/apps/bgas/tools/gcc/gcc-4.8.2/install/lib64 -latomic -lrt&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;BGAS flags&quot;</span><span class="p">)</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_FLAGS_INIT</span> <span class="s2">&quot;-D__powerpc__ -I/gpfs/bbp.cscs.ch/home/biddisco/src/bgas/rdmahelper&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;BGAS flags&quot;</span><span class="p">)</span>
+
+<span class="c"># We do not perform cross compilation here ...</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CROSSCOMPILING</span> <span class="s">OFF</span><span class="p">)</span>
+
+<span class="c"># Set our platform name</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_PLATFORM</span> <span class="s2">&quot;native&quot;</span><span class="p">)</span>
+
+<span class="c"># Disable generic coroutines (and use posix version)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_GENERIC_CONTEXT_COROUTINES</span> <span class="s">OFF</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;disable generic coroutines&quot;</span><span class="p">)</span>
+
+<span class="c"># BGAS nodes support ibverbs</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_PARCELPORT_IBVERBS</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="c"># Always disable the tcp parcelport as it is non-functional on the BGQ.</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_PARCELPORT_TCP</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="c"># Always enable the tcp parcelport as it is currently the only way to communicate on the BGQ.</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_PARCELPORT_MPI</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="c"># We have a bunch of cores on the A2 processor ...</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_MAX_CPU_COUNT</span> <span class="s2">&quot;64&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="c"># We have no custom malloc yet</span>
+<span class="nb">if</span><span class="p">(</span><span class="s">NOT</span> <span class="s">DEFINED</span> <span class="s">HPX_WITH_MALLOC</span><span class="p">)</span>
+  <span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_MALLOC</span> <span class="s2">&quot;system&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">endif</span><span class="p">()</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_HIDDEN_VISIBILITY</span> <span class="s">OFF</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="c">#</span>
+<span class="c"># Convenience setup for jb @ bbpbg2.cscs.ch</span>
+<span class="c">#</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">BOOST_ROOT</span> <span class="s2">&quot;/gpfs/bbp.cscs.ch/home/biddisco/apps/gcc-4.8.2/boost_1_56_0&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HWLOC_ROOT</span> <span class="s2">&quot;/gpfs/bbp.cscs.ch/home/biddisco/apps/gcc-4.8.2/hwloc-1.8.1&quot;</span><span class="p">)</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_BUILD_TYPE</span> <span class="s2">&quot;Debug&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;Default build&quot;</span><span class="p">)</span>
+
+<span class="c">#</span>
+<span class="c"># Testing flags</span>
+<span class="c">#</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">BUILD_TESTING</span>                  <span class="s">ON</span>  <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;Testing enabled by default&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_TESTS</span>                <span class="s">ON</span>  <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;Testing enabled by default&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_TESTS_BENCHMARKS</span>     <span class="s">ON</span>  <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;Testing enabled by default&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_TESTS_REGRESSIONS</span>    <span class="s">ON</span>  <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;Testing enabled by default&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_TESTS_UNIT</span>           <span class="s">ON</span>  <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;Testing enabled by default&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_TESTS_EXAMPLES</span>       <span class="s">ON</span>  <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;Testing enabled by default&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_TESTS_EXTERNAL_BUILD</span> <span class="s">OFF</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;Turn off build of cmake build tests&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">DART_TESTING_TIMEOUT</span>           <span class="s">45</span>  <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;Life is too short&quot;</span><span class="p">)</span>
+
+<span class="c"># HPX_WITH_STATIC_LINKING</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="bgq">
+<h2><a class="toc-backref" href="#contents">BGQ</a><a class="headerlink" href="#bgq" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="c"># Copyright (c) 2014 Thomas Heller</span>
+<span class="c">#</span>
+<span class="c"># Distributed under the Boost Software License, Version 1.0. (See accompanying</span>
+<span class="c"># file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span>
+<span class="c">#</span>
+<span class="c"># This is the default toolchain file to be used with CNK on a BlueGene/Q. It sets</span>
+<span class="c"># the appropriate compile flags and compiler such that HPX will compile.</span>
+<span class="c"># Note that you still need to provide Boost, hwloc and other utility libraries</span>
+<span class="c"># like a custom allocator yourself.</span>
+<span class="c">#</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_SYSTEM_NAME</span> <span class="s">Linux</span><span class="p">)</span>
+
+<span class="c"># Set the Intel Compiler</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_COMPILER</span> <span class="s">bgclang++11</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_COMPILER</span> <span class="s">bgclang</span><span class="p">)</span>
+<span class="c">#set(CMAKE_Fortran_COMPILER)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">MPI_CXX_COMPILER</span> <span class="s">mpiclang++11</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">MPI_C_COMPILER</span> <span class="s">mpiclang</span><span class="p">)</span>
+<span class="c">#set(MPI_Fortran_COMPILER)</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_FLAGS_INIT</span> <span class="s2">&quot;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_COMPILE_OBJECT</span> <span class="s2">&quot;&lt;CMAKE_C_COMPILER&gt; -fPIC &lt;DEFINES&gt; &lt;FLAGS&gt; -o &lt;OBJECT&gt; -c &lt;SOURCE&gt;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_LINK_EXECUTABLE</span> <span class="s2">&quot;&lt;CMAKE_C_COMPILER&gt; -fPIC -dynamic &lt;FLAGS&gt; &lt;CMAKE_C_LINK_FLAGS&gt; &lt;LINK_FLAGS&gt; &lt;OBJECTS&gt; -o &lt;TARGET&gt; &lt;LINK_LIBRARIES&gt;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_CREATE_SHARED_LIBRARY</span> <span class="s2">&quot;&lt;CMAKE_C_COMPILER&gt; -fPIC -shared &lt;CMAKE_SHARED_LIBRARY_CXX_FLAGS&gt; &lt;LANGUAGE_COMPILE_FLAGS&gt; &lt;LINK_FLAGS&gt; &lt;CMAKE_SHARED_LIBRARY_CREATE_CXX_FLAGS&gt; &lt;SONAME_FLAG&gt;&lt;TARGET_SONAME&gt; -o &lt;TARGET&gt; &lt;OBJECTS&gt; &lt;LINK_LIBRARIES&gt; &quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_FLAGS_INIT</span> <span class="s2">&quot;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_COMPILE_OBJECT</span> <span class="s2">&quot;&lt;CMAKE_CXX_COMPILER&gt; -fPIC &lt;DEFINES&gt; &lt;FLAGS&gt; -o &lt;OBJECT&gt; -c &lt;SOURCE&gt;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_LINK_EXECUTABLE</span> <span class="s2">&quot;&lt;CMAKE_CXX_COMPILER&gt; -fPIC -dynamic &lt;FLAGS&gt; &lt;CMAKE_CXX_LINK_FLAGS&gt; &lt;LINK_FLAGS&gt; &lt;OBJECTS&gt; -o &lt;TARGET&gt; &lt;LINK_LIBRARIES&gt;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_CREATE_SHARED_LIBRARY</span> <span class="s2">&quot;&lt;CMAKE_CXX_COMPILER&gt; -fPIC -shared &lt;CMAKE_SHARED_LIBRARY_CXX_FLAGS&gt; &lt;LANGUAGE_COMPILE_FLAGS&gt; &lt;LINK_FLAGS&gt; &lt;CMAKE_SHARED_LIBRARY_CREATE_CXX_FLAGS&gt; &lt;SONAME_FLAG&gt;&lt;TARGET_SONAME&gt; -o &lt;TARGET&gt; &lt;OBJECTS&gt; &lt;LINK_LIBRARIES&gt;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_Fortran_FLAGS_INIT</span> <span class="s2">&quot;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_Fortran_COMPILE_OBJECT</span> <span class="s2">&quot;&lt;CMAKE_Fortran_COMPILER&gt; -fPIC &lt;DEFINES&gt; &lt;FLAGS&gt; -o &lt;OBJECT&gt; -c &lt;SOURCE&gt;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_Fortran_LINK_EXECUTABLE</span> <span class="s2">&quot;&lt;CMAKE_Fortran_COMPILER&gt; -fPIC -dynamic &lt;FLAGS&gt; &lt;CMAKE_Fortran_LINK_FLAGS&gt; &lt;LINK_FLAGS&gt; &lt;OBJECTS&gt; -o &lt;TARGET&gt; &lt;LINK_LIBRARIES&gt;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_Fortran_CREATE_SHARED_LIBRARY</span> <span class="s2">&quot;&lt;CMAKE_Fortran_COMPILER&gt; -fPIC -shared &lt;CMAKE_SHARED_LIBRARY_Fortran_FLAGS&gt; &lt;LANGUAGE_COMPILE_FLAGS&gt; &lt;LINK_FLAGS&gt; &lt;CMAKE_SHARED_LIBRARY_CREATE_Fortran_FLAGS&gt; &lt;SONAME_FLAG&gt;&lt;TARGET_SONAME&gt; -o &lt;TARGET&gt; &lt;OBJECTS&gt; &lt;LINK_LIBRARIES&gt; &quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="c"># Disable searches in the default system paths. We are cross compiling after all</span>
+<span class="c"># and cmake might pick up wrong libraries that way</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_FIND_ROOT_PATH_MODE_PROGRAM</span> <span class="s">BOTH</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_FIND_ROOT_PATH_MODE_LIBRARY</span> <span class="s">ONLY</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_FIND_ROOT_PATH_MODE_INCLUDE</span> <span class="s">ONLY</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_FIND_ROOT_PATH_MODE_PACKAGE</span> <span class="s">ONLY</span><span class="p">)</span>
+
+<span class="c"># We do a cross compilation here ...</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CROSSCOMPILING</span> <span class="s">ON</span><span class="p">)</span>
+
+<span class="c"># Set our platform name</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_PLATFORM</span> <span class="s2">&quot;BlueGeneQ&quot;</span><span class="p">)</span>
+
+<span class="c"># Always disable the ibverbs parcelport as it is non-functional on the BGQ.</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_IBVERBS_PARCELPORT</span> <span class="s">OFF</span><span class="p">)</span>
+
+<span class="c"># Always disable the tcp parcelport as it is non-functional on the BGQ.</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_TCP_PARCELPORT</span> <span class="s">OFF</span><span class="p">)</span>
+
+<span class="c"># Always enable the tcp parcelport as it is currently the only way to communicate on the BGQ.</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_MPI_PARCELPORT</span> <span class="s">ON</span><span class="p">)</span>
+
+<span class="c"># We have a bunch of cores on the BGQ ...</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_MAX_CPU_COUNT</span> <span class="s2">&quot;64&quot;</span><span class="p">)</span>
+
+<span class="c"># We default to tbbmalloc as our allocator on the MIC</span>
+<span class="nb">if</span><span class="p">(</span><span class="s">NOT</span> <span class="s">DEFINED</span> <span class="s">HPX_WITH_MALLOC</span><span class="p">)</span>
+  <span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_MALLOC</span> <span class="s2">&quot;system&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">endif</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="cray">
+<h2><a class="toc-backref" href="#contents">Cray</a><a class="headerlink" href="#cray" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="c"># Copyright (c) 2014 Thomas Heller</span>
+<span class="c">#</span>
+<span class="c"># Distributed under the Boost Software License, Version 1.0. (See accompanying</span>
+<span class="c"># file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span>
+<span class="c">#</span>
+<span class="c"># This is the default toolchain file to be used with Intel Xeon PHIs. It sets</span>
+<span class="c"># the appropriate compile flags and compiler such that HPX will compile.</span>
+<span class="c"># Note that you still need to provide Boost, hwloc and other utility libraries</span>
+<span class="c"># like a custom allocator yourself.</span>
+<span class="c">#</span>
+
+<span class="c">#set(CMAKE_SYSTEM_NAME Cray-CNK-Intel)</span>
+
+<span class="nb">if</span><span class="p">(</span><span class="s">HPX_WITH_STATIC_LINKING</span><span class="p">)</span>
+  <span class="nb">set_property</span><span class="p">(</span><span class="s">GLOBAL</span> <span class="s">PROPERTY</span> <span class="s">TARGET_SUPPORTS_SHARED_LIBS</span> <span class="s">FALSE</span><span class="p">)</span>
+<span class="nb">else</span><span class="p">()</span>
+<span class="nb">endif</span><span class="p">()</span>
+
+<span class="c"># Set the Cray Compiler Wrapper</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_COMPILER</span> <span class="s">CC</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_COMPILER</span> <span class="s">cc</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_Fortran_COMPILER</span> <span class="s">ftn</span><span class="p">)</span>
+
+<span class="nb">if</span> <span class="p">(</span><span class="s">CMAKE_VERSION</span> <span class="s">VERSION_GREATER</span> <span class="s">3.3.9</span><span class="p">)</span>
+  <span class="nb">set</span><span class="p">(</span><span class="s">__includes</span> <span class="s2">&quot;&lt;INCLUDES&gt;&quot;</span><span class="p">)</span>
+<span class="nb">endif</span><span class="p">()</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_FLAGS_INIT</span> <span class="s2">&quot;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_SHARED_LIBRARY_C_FLAGS</span> <span class="s2">&quot;-fPIC -shared&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_SHARED_LIBRARY_CREATE_C_FLAGS</span> <span class="s2">&quot;-fPIC -shared&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_COMPILE_OBJECT</span> <span class="s2">&quot;&lt;CMAKE_C_COMPILER&gt; -shared -fPIC &lt;DEFINES&gt; ${__includes} &lt;FLAGS&gt; -o &lt;OBJECT&gt; -c &lt;SOURCE&gt;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_LINK_EXECUTABLE</span> <span class="s2">&quot;&lt;CMAKE_C_COMPILER&gt; -fPIC -dynamic &lt;FLAGS&gt; &lt;CMAKE_C_LINK_FLAGS&gt; &lt;LINK_FLAGS&gt; &lt;OBJECTS&gt; -o &lt;TARGET&gt; &lt;LINK_LIBRARIES&gt;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_CREATE_SHARED_LIBRARY</span> <span class="s2">&quot;&lt;CMAKE_C_COMPILER&gt; -fPIC -shared &lt;CMAKE_SHARED_LIBRARY_CXX_FLAGS&gt; &lt;LANGUAGE_COMPILE_FLAGS&gt; &lt;LINK_FLAGS&gt; &lt;CMAKE_SHARED_LIBRARY_CREATE_CXX_FLAGS&gt; &lt;SONAME_FLAG&gt;&lt;TARGET_SONAME&gt; -o &lt;TARGET&gt; &lt;OBJECTS&gt; &lt;LINK_LIBRARIES&gt; &quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_FLAGS_INIT</span> <span class="s2">&quot;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_SHARED_LIBRARY_CXX_FLAGS</span> <span class="s2">&quot;-fPIC -shared&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_SHARED_LIBRARY_CREATE_CXX_FLAGS</span> <span class="s2">&quot;-fPIC -shared&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_SHARED_LIBRARY_CREATE_CXX_FLAGS</span> <span class="s2">&quot;-fPIC -shared&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_COMPILE_OBJECT</span> <span class="s2">&quot;&lt;CMAKE_CXX_COMPILER&gt; -shared -fPIC &lt;DEFINES&gt; ${__includes} &lt;FLAGS&gt; -o &lt;OBJECT&gt; -c &lt;SOURCE&gt;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_LINK_EXECUTABLE</span> <span class="s2">&quot;&lt;CMAKE_CXX_COMPILER&gt; -fPIC -dynamic &lt;FLAGS&gt; &lt;CMAKE_CXX_LINK_FLAGS&gt; &lt;LINK_FLAGS&gt; &lt;OBJECTS&gt; -o &lt;TARGET&gt; &lt;LINK_LIBRARIES&gt;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_CREATE_SHARED_LIBRARY</span> <span class="s2">&quot;&lt;CMAKE_CXX_COMPILER&gt; -fPIC -shared &lt;CMAKE_SHARED_LIBRARY_CXX_FLAGS&gt; &lt;LANGUAGE_COMPILE_FLAGS&gt; &lt;LINK_FLAGS&gt; &lt;CMAKE_SHARED_LIBRARY_CREATE_CXX_FLAGS&gt; &lt;SONAME_FLAG&gt;&lt;TARGET_SONAME&gt; -o &lt;TARGET&gt; &lt;OBJECTS&gt; &lt;LINK_LIBRARIES&gt;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_Fortran_FLAGS_INIT</span> <span class="s2">&quot;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_SHARED_LIBRARY_Fortran_FLAGS</span> <span class="s2">&quot;-fPIC&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_SHARED_LIBRARY_CREATE_Fortran_FLAGS</span> <span class="s2">&quot;-shared&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_Fortran_COMPILE_OBJECT</span> <span class="s2">&quot;&lt;CMAKE_Fortran_COMPILER&gt; -shared -fPIC &lt;DEFINES&gt; ${__includes} &lt;FLAGS&gt; -o &lt;OBJECT&gt; -c &lt;SOURCE&gt;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_Fortran_LINK_EXECUTABLE</span> <span class="s2">&quot;&lt;CMAKE_Fortran_COMPILER&gt; -fPIC -dynamic &lt;FLAGS&gt; &lt;CMAKE_Fortran_LINK_FLAGS&gt; &lt;LINK_FLAGS&gt; &lt;OBJECTS&gt; -o &lt;TARGET&gt; &lt;LINK_LIBRARIES&gt;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_Fortran_CREATE_SHARED_LIBRARY</span> <span class="s2">&quot;&lt;CMAKE_Fortran_COMPILER&gt; -fPIC -shared &lt;CMAKE_SHARED_LIBRARY_Fortran_FLAGS&gt; &lt;LANGUAGE_COMPILE_FLAGS&gt; &lt;LINK_FLAGS&gt; &lt;CMAKE_SHARED_LIBRARY_CREATE_Fortran_FLAGS&gt; &lt;SONAME_FLAG&gt;&lt;TARGET_SONAME&gt; -o &lt;TARGET&gt; &lt;OBJECTS&gt; &lt;LINK_LIBRARIES&gt; &quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="c"># Disable searches in the default system paths. We are cross compiling after all</span>
+<span class="c"># and cmake might pick up wrong libraries that way</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_FIND_ROOT_PATH_MODE_PROGRAM</span> <span class="s">BOTH</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_FIND_ROOT_PATH_MODE_LIBRARY</span> <span class="s">ONLY</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_FIND_ROOT_PATH_MODE_INCLUDE</span> <span class="s">ONLY</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_FIND_ROOT_PATH_MODE_PACKAGE</span> <span class="s">ONLY</span><span class="p">)</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_PARCELPORT_TCP</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_PARCELPORT_MPI</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_PARCELPORT_MPI_MULTITHREADED</span> <span class="s">OFF</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_PARCELPORT_LIBFABRIC</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_PARCELPORT_LIBFABRIC_PROVIDER</span> <span class="s2">&quot;gni&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span>
+  <span class="s2">&quot;See libfabric docs for details, gni,verbs,psm2 etc etc&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_PARCELPORT_LIBFABRIC_THROTTLE_SENDS</span> <span class="s2">&quot;256&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span>
+  <span class="s2">&quot;Max number of messages in flight at once&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_PARCELPORT_LIBFABRIC_WITH_DEV_MODE</span> <span class="s">OFF</span> <span class="s">CACHE</span> <span class="s">BOOL</span>
+  <span class="s2">&quot;Custom libfabric logging flag&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_PARCELPORT_LIBFABRIC_WITH_LOGGING</span>  <span class="s">OFF</span> <span class="s">CACHE</span> <span class="s">BOOL</span>
+  <span class="s2">&quot;Libfabric parcelport logging on/off flag&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_ZERO_COPY_SERIALIZATION_THRESHOLD</span> <span class="s2">&quot;4096&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span>
+  <span class="s2">&quot;The threshhold in bytes to when perform zero copy optimizations (default: 128)&quot;</span><span class="p">)</span>
+
+<span class="c"># We do a cross compilation here ...</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CROSSCOMPILING</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="xeonphi">
+<h2><a class="toc-backref" href="#contents">XeonPhi</a><a class="headerlink" href="#xeonphi" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="c"># Copyright (c) 2014 Thomas Heller</span>
+<span class="c">#</span>
+<span class="c"># Distributed under the Boost Software License, Version 1.0. (See accompanying</span>
+<span class="c"># file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span>
+<span class="c">#</span>
+<span class="c"># This is the default toolchain file to be used with Intel Xeon PHIs. It sets</span>
+<span class="c"># the appropriate compile flags and compiler such that HPX will compile.</span>
+<span class="c"># Note that you still need to provide Boost, hwloc and other utility libraries</span>
+<span class="c"># like a custom allocator yourself.</span>
+<span class="c">#</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_SYSTEM_NAME</span> <span class="s">Linux</span><span class="p">)</span>
+
+<span class="c"># Set the Intel Compiler</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_COMPILER</span> <span class="s">icpc</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_COMPILER</span> <span class="s">icc</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_Fortran_COMPILER</span> <span class="s">ifort</span><span class="p">)</span>
+
+<span class="c"># Add the -mmic compile flag such that everything will be compiled for the correct</span>
+<span class="c"># platform</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_FLAGS_INIT</span> <span class="s2">&quot;-mmic&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;Initial compiler flags used to compile for the Xeon Phi&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_FLAGS_INIT</span> <span class="s2">&quot;-mmic&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;Initial compiler flags used to compile for the Xeon Phi&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_Fortran_FLAGS_INIT</span> <span class="s2">&quot;-mmic&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;Initial compiler flags used to compile for the Xeon Phi&quot;</span><span class="p">)</span>
+
+<span class="c"># Disable searches in the default system paths. We are cross compiling after all</span>
+<span class="c"># and cmake might pick up wrong libraries that way</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_FIND_ROOT_PATH_MODE_PROGRAM</span> <span class="s">BOTH</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_FIND_ROOT_PATH_MODE_LIBRARY</span> <span class="s">ONLY</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_FIND_ROOT_PATH_MODE_INCLUDE</span> <span class="s">ONLY</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_FIND_ROOT_PATH_MODE_PACKAGE</span> <span class="s">ONLY</span><span class="p">)</span>
+
+<span class="c"># We do a cross compilation here ...</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CROSSCOMPILING</span> <span class="s">ON</span><span class="p">)</span>
+
+<span class="c"># Set our platform name</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_PLATFORM</span> <span class="s2">&quot;XeonPhi&quot;</span><span class="p">)</span>
+
+<span class="c"># Always disable the ibverbs parcelport as it is non-functional on the BGQ.</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_PARCELPORT_IBVERBS</span> <span class="s">OFF</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;Enable the ibverbs based parcelport. This is currently an experimental feature&quot;</span><span class="p">)</span>
+
+<span class="c"># We have a bunch of cores on the MIC ... increase the default</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_MAX_CPU_COUNT</span> <span class="s2">&quot;256&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="c"># We default to tbbmalloc as our allocator on the MIC</span>
+<span class="nb">if</span><span class="p">(</span><span class="s">NOT</span> <span class="s">DEFINED</span> <span class="s">HPX_WITH_MALLOC</span><span class="p">)</span>
+  <span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_MALLOC</span> <span class="s2">&quot;tbbmalloc&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">endif</span><span class="p">()</span>
+
+<span class="c"># Set the TBBMALLOC_PLATFORM correctly so that find_package(TBBMalloc) sets the</span>
+<span class="c"># right hints</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">TBBMALLOC_PLATFORM</span> <span class="s2">&quot;mic&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_HIDDEN_VISIBILITY</span> <span class="s">OFF</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;Use -fvisibility=hidden for builds on platforms which support it&quot;</span><span class="p">)</span>
+
+<span class="c"># RDTSC is available on Xeon/Phis</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_RDTSC</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="craystatic">
+<h2><a class="toc-backref" href="#contents">CrayStatic</a><a class="headerlink" href="#craystatic" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="c"># Copyright (c) 2014-2017 Thomas Heller</span>
+<span class="c"># Copyright (c) 2017      Bryce Adelstein Lelbach</span>
+<span class="c">#</span>
+<span class="c"># Distributed under the Boost Software License, Version 1.0. (See accompanying</span>
+<span class="c"># file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_STATIC_LINKING</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_STATIC_EXE_LINKING</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set_property</span><span class="p">(</span><span class="s">GLOBAL</span> <span class="s">PROPERTY</span> <span class="s">TARGET_SUPPORTS_SHARED_LIBS</span> <span class="s">FALSE</span><span class="p">)</span>
+
+<span class="c"># Set the Cray Compiler Wrapper</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_COMPILER</span> <span class="s">CC</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_COMPILER</span> <span class="s">cc</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_Fortran_COMPILER</span> <span class="s">ftn</span><span class="p">)</span>
+
+<span class="nb">if</span> <span class="p">(</span><span class="s">CMAKE_VERSION</span> <span class="s">VERSION_GREATER</span> <span class="s">3.3.9</span><span class="p">)</span>
+  <span class="nb">set</span><span class="p">(</span><span class="s">__includes</span> <span class="s2">&quot;&lt;INCLUDES&gt;&quot;</span><span class="p">)</span>
+<span class="nb">endif</span><span class="p">()</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_FLAGS_INIT</span> <span class="s2">&quot;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_COMPILE_OBJECT</span> <span class="s2">&quot;&lt;CMAKE_C_COMPILER&gt; -static -fPIC &lt;DEFINES&gt; ${__includes} &lt;FLAGS&gt; -o &lt;OBJECT&gt; -c &lt;SOURCE&gt;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_LINK_EXECUTABLE</span> <span class="s2">&quot;&lt;CMAKE_C_COMPILER&gt; -fPIC &lt;FLAGS&gt; &lt;CMAKE_C_LINK_FLAGS&gt; &lt;LINK_FLAGS&gt; &lt;OBJECTS&gt; -o &lt;TARGET&gt; &lt;LINK_LIBRARIES&gt;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_FLAGS_INIT</span> <span class="s2">&quot;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_COMPILE_OBJECT</span> <span class="s2">&quot;&lt;CMAKE_CXX_COMPILER&gt; -static -fPIC &lt;DEFINES&gt; ${__includes} &lt;FLAGS&gt; -o &lt;OBJECT&gt; -c &lt;SOURCE&gt;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_LINK_EXECUTABLE</span> <span class="s2">&quot;&lt;CMAKE_CXX_COMPILER&gt; -fPIC &lt;FLAGS&gt; &lt;CMAKE_CXX_LINK_FLAGS&gt; &lt;LINK_FLAGS&gt; &lt;OBJECTS&gt; -o &lt;TARGET&gt; &lt;LINK_LIBRARIES&gt;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_Fortran_FLAGS_INIT</span> <span class="s2">&quot;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_Fortran_COMPILE_OBJECT</span> <span class="s2">&quot;&lt;CMAKE_Fortran_COMPILER&gt; -static -fPIC &lt;DEFINES&gt; ${__includes} &lt;FLAGS&gt; -o &lt;OBJECT&gt; -c &lt;SOURCE&gt;&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_Fortran_LINK_EXECUTABLE</span> <span class="s2">&quot;&lt;CMAKE_Fortran_COMPILER&gt; -fPIC &lt;FLAGS&gt; &lt;CMAKE_Fortran_LINK_FLAGS&gt; &lt;LINK_FLAGS&gt; &lt;OBJECTS&gt; -o &lt;TARGET&gt; &lt;LINK_LIBRARIES&gt;&quot;</span><span class="p">)</span>
+
+<span class="c"># Disable searches in the default system paths. We are cross compiling after all</span>
+<span class="c"># and cmake might pick up wrong libraries that way</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_FIND_ROOT_PATH_MODE_PROGRAM</span> <span class="s">BOTH</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_FIND_ROOT_PATH_MODE_LIBRARY</span> <span class="s">ONLY</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_FIND_ROOT_PATH_MODE_INCLUDE</span> <span class="s">ONLY</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_FIND_ROOT_PATH_MODE_PACKAGE</span> <span class="s">ONLY</span><span class="p">)</span>
+
+<span class="c"># We do a cross compilation here ...</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CROSSCOMPILING</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="c"># RDTSCP is available on Xeon/Phis</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_RDTSCP</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_PARCELPORT_TCP</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_PARCELPORT_MPI</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_PARCELPORT_MPI_MULTITHREADED</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_PARCELPORT_LIBFABRIC</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">BOOL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_PARCELPORT_LIBFABRIC_PROVIDER</span> <span class="s2">&quot;gni&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span>
+  <span class="s2">&quot;See libfabric docs for details, gni,verbs,psm2 etc etc&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_PARCELPORT_LIBFABRIC_THROTTLE_SENDS</span> <span class="s2">&quot;256&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span>
+  <span class="s2">&quot;Max number of messages in flight at once&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_PARCELPORT_LIBFABRIC_WITH_DEV_MODE</span> <span class="s">OFF</span> <span class="s">CACHE</span> <span class="s">BOOL</span>
+  <span class="s2">&quot;Custom libfabric logging flag&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_PARCELPORT_LIBFABRIC_WITH_LOGGING</span>  <span class="s">OFF</span> <span class="s">CACHE</span> <span class="s">BOOL</span>
+  <span class="s2">&quot;Libfabric parcelport logging on/off flag&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">HPX_WITH_ZERO_COPY_SERIALIZATION_THRESHOLD</span> <span class="s2">&quot;4096&quot;</span> <span class="s">CACHE</span> <span class="s">STRING</span>
+  <span class="s2">&quot;The threshhold in bytes to when perform zero copy optimizations (default: 128)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <!-- Copyright (c) 2018 Mikael Simberg
+
+     Distributed under the Boost Software License, Version 1.0. (See accompanying
+     file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt) -->
+<!-- Make HPX inspect tool happy: hpxinspect:nounlinked -->
+
+<footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2008-2019, The STE||AR Group
+      
+        <span class="commit">
+          Revision <code>dcaf16b81ac</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+ 
+
+Distributed under the Boost Software License, Version 1.0. (See accompanying file
+LICENSE_1_0.txt or copy at
+<a href="http://www.boost.org/LICENSE_1_0.txt">http://www.boost.org/LICENSE_1_0.txt</a>)
+
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

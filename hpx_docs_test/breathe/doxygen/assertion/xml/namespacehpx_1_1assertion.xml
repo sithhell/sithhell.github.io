@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacehpx_1_1assertion" kind="namespace" language="C++">
+    <compoundname>hpx::assertion</compoundname>
+    <innerclass refid="structhpx_1_1assertion_1_1force__linking__helper" prot="public">hpx::assertion::force_linking_helper</innerclass>
+    <innerclass refid="structhpx_1_1assertion_1_1source__location" prot="public">hpx::assertion::source_location</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="assertion_8hpp_1af6d210c01c4e2706fd331f0074e8beb5" prot="public" static="no">
+        <type>void(*)(<ref refid="structhpx_1_1assertion_1_1source__location" kindref="compound">source_location</ref> const  &amp;loc, const char *expr, std::string const  &amp;msg)</type>
+        <definition>using hpx::assertion::assertion_handler = typedef void (*)( source_location const&amp; loc, const char* expr, std::string const&amp; msg)</definition>
+        <argsstring></argsstring>
+        <name>assertion_handler</name>
+        <briefdescription>
+<para>The signature for an assertion handler. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/assertion/include/hpx/assertion.hpp" line="23" column="1" bodyfile="libs/assertion/include/hpx/assertion.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="assertion_8hpp_1a9a87ef3d53009656d30509726d1f70ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpx::assertion::set_assertion_handler</definition>
+        <argsstring>(assertion_handler handler)</argsstring>
+        <name>set_assertion_handler</name>
+        <param>
+          <type>assertion_handler</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the assertion handler to be used within a program. If the handler has been set already once, the call to this function will be ignored. <simplesect kind="note"><para>This function is not thread safe </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/assertion/include/hpx/assertion.hpp" line="29" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="force__linking_8hpp_1af29ecf0182739d8ec694623bec95af6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structhpx_1_1assertion_1_1force__linking__helper" kindref="compound">force_linking_helper</ref> &amp;</type>
+        <definition>force_linking_helper&amp; hpx::assertion::force_linking</definition>
+        <argsstring>()</argsstring>
+        <name>force_linking</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/assertion/include/hpx/assertion/force_linking.hpp" line="23" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="source__location_8hpp_1acc3983f20c71225cc74c0564531d3d43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; hpx::assertion::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, source_location const &amp;loc)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type><ref refid="structhpx_1_1assertion_1_1source__location" kindref="compound">source_location</ref> const &amp;</type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/assertion/include/hpx/assertion/source_location.hpp" line="22" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libs/assertion/include/hpx/assertion.hpp" line="21" column="1"/>
+  </compounddef>
+</doxygen>

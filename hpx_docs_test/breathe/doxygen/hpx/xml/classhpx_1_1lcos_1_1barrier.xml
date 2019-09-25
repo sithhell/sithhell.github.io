@@ -1,0 +1,226 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classhpx_1_1lcos_1_1barrier" kind="class" language="C++" prot="public">
+    <compoundname>hpx::lcos::barrier</compoundname>
+    <includes refid="barrier_8hpp" local="no">barrier.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhpx_1_1lcos_1_1barrier_1ae8e5bad1b2828970404b5d280137d579" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hpx::lcos::barrier::barrier</definition>
+        <argsstring>(std::string const &amp;base_name)</argsstring>
+        <name>barrier</name>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>base_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a barrier, rank is locality id, size is number of localities</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>base_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the barrier</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+A barrier <emphasis>base_name</emphasis> is created. It expects that <ref refid="get__num__localities_8hpp_1a4dd860f6c435319c019eed326455f646" kindref="member">hpx::get_num_localities()</ref> participate and the local rank is <ref refid="get__locality__id_8hpp_1a158d7c54a657bb364c1704033010697b" kindref="member">hpx::get_locality_id()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/lcos/barrier.hpp" line="53" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1lcos_1_1barrier_1ab7bd797e9f804496b537f2fc8be9ee76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hpx::lcos::barrier::barrier</definition>
+        <argsstring>(std::string const &amp;base_name, std::size_t num)</argsstring>
+        <name>barrier</name>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>base_name</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a barrier with a given size, rank is locality id</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>base_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the barrier </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of participating threads</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+A barrier <emphasis>base_name</emphasis> is created. It expects that <emphasis>num</emphasis> participate and the local rank is <ref refid="get__locality__id_8hpp_1a158d7c54a657bb364c1704033010697b" kindref="member">hpx::get_locality_id()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/lcos/barrier.hpp" line="62" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1lcos_1_1barrier_1a8a9fc05508fad7cd1d8014bee0e1d221" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hpx::lcos::barrier::barrier</definition>
+        <argsstring>(std::string const &amp;base_name, std::size_t num, std::size_t rank)</argsstring>
+        <name>barrier</name>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>base_name</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>num</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>rank</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a barrier with a given size and rank</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>base_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the barrier </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of participating threads </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rank</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rank of the calling site for this invocation</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+A barrier <emphasis>base_name</emphasis> is created. It expects that <emphasis>num</emphasis> participate and the local rank is <emphasis>rank</emphasis>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/lcos/barrier.hpp" line="72" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1lcos_1_1barrier_1a942f31a03451178c7f1cabfbd91970ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hpx::lcos::barrier::barrier</definition>
+        <argsstring>(std::string const &amp;base_name, std::vector&lt; std::size_t &gt; const &amp;ranks, std::size_t rank)</argsstring>
+        <name>barrier</name>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>base_name</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::size_t &gt; const &amp;</type>
+          <declname>ranks</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>rank</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a barrier with a vector of ranks</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>base_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the barrier </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ranks</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gives a list of participating ranks (this could be derived from a list of locality ids </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rank</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rank of the calling site for this invocation</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+A barrier <emphasis>base_name</emphasis> is created. It expects that ranks.size() and the local rank is <emphasis>rank</emphasis> (must be contained in <emphasis>ranks</emphasis>). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/lcos/barrier.hpp" line="83" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1lcos_1_1barrier_1af0e09dd00764a182081cf2e356bfa824" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpx::lcos::barrier::wait</definition>
+        <argsstring>()</argsstring>
+        <name>wait</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wait until each participant entered the barrier. Must be called by all participants</para><para><simplesect kind="return"><para>This function returns once all participants have entered the barrier (have called <emphasis>wait</emphasis>). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/lcos/barrier.hpp" line="99" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1lcos_1_1barrier_1ad2a33feb18de78e8aefd3aaf0068fe02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hpx::future&lt; void &gt;</type>
+        <definition>hpx::future&lt;void&gt; hpx::lcos::barrier::wait</definition>
+        <argsstring>(hpx::launch::async_policy)</argsstring>
+        <name>wait</name>
+        <param>
+          <type>hpx::launch::async_policy</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wait until each participant entered the barrier. Must be called by all participants</para><para><simplesect kind="return"><para>a future that becomes ready once all participants have entered the barrier (have called <emphasis>wait</emphasis>). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/lcos/barrier.hpp" line="106" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classhpx_1_1lcos_1_1barrier_1a76bb0453cded0cb3d3d9f8fd3d2ccbbd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void hpx::lcos::barrier::synchronize</definition>
+        <argsstring>()</argsstring>
+        <name>synchronize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Perform a global synchronization using the default global barrier The barrier is created once at startup and can be reused throughout the lifetime of an HPX application.</para><para><simplesect kind="note"><para>This function currently does not support dynamic connection and disconnection of localities. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/lcos/barrier.hpp" line="125" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The barrier is an implementation performing a barrier over a number of participating threads. The different threads don&apos;t have to be on the same locality. This barrier can be invoked in a distributed application.</para><para>For a local only barrier <simplesect kind="see"><para>hpx::lcos::local::barrier. </para></simplesect>
+</para>    </detaileddescription>
+    <location file="hpx/lcos/barrier.hpp" line="39" column="1" bodyfile="hpx/lcos/barrier.hpp" bodystart="38" bodyend="133"/>
+    <listofallmembers>
+      <member refid="classhpx_1_1lcos_1_1barrier_1ae8e5bad1b2828970404b5d280137d579" prot="public" virt="non-virtual"><scope>hpx::lcos::barrier</scope><name>barrier</name></member>
+      <member refid="classhpx_1_1lcos_1_1barrier_1ab7bd797e9f804496b537f2fc8be9ee76" prot="public" virt="non-virtual"><scope>hpx::lcos::barrier</scope><name>barrier</name></member>
+      <member refid="classhpx_1_1lcos_1_1barrier_1a8a9fc05508fad7cd1d8014bee0e1d221" prot="public" virt="non-virtual"><scope>hpx::lcos::barrier</scope><name>barrier</name></member>
+      <member refid="classhpx_1_1lcos_1_1barrier_1a942f31a03451178c7f1cabfbd91970ab" prot="public" virt="non-virtual"><scope>hpx::lcos::barrier</scope><name>barrier</name></member>
+      <member refid="classhpx_1_1lcos_1_1barrier_1a76bb0453cded0cb3d3d9f8fd3d2ccbbd" prot="public" virt="non-virtual"><scope>hpx::lcos::barrier</scope><name>synchronize</name></member>
+      <member refid="classhpx_1_1lcos_1_1barrier_1af0e09dd00764a182081cf2e356bfa824" prot="public" virt="non-virtual"><scope>hpx::lcos::barrier</scope><name>wait</name></member>
+      <member refid="classhpx_1_1lcos_1_1barrier_1ad2a33feb18de78e8aefd3aaf0068fe02" prot="public" virt="non-virtual"><scope>hpx::lcos::barrier</scope><name>wait</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

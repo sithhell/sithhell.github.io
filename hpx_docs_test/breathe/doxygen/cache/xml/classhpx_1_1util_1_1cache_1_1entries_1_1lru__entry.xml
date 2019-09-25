@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classhpx_1_1util_1_1cache_1_1entries_1_1lru__entry" kind="class" language="C++" prot="public">
+    <compoundname>hpx::util::cache::entries::lru_entry</compoundname>
+    <basecompoundref refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry" prot="public" virt="non-virtual">hpx::util::cache::entries::entry&lt; Value, lru_entry&lt; Value &gt; &gt;</basecompoundref>
+    <includes refid="compatibility_2hpx_2util_2cache_2entries_2lru__entry_8hpp" local="no">hpx/cache/entries/lru_entry.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Value</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classhpx_1_1util_1_1cache_1_1entries_1_1lru__entry_1ac7f0e5f3382963533a25e7cbc8915589" prot="private" static="no">
+        <type><ref refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry" kindref="compound">entry</ref>&lt; Value, <ref refid="classhpx_1_1util_1_1cache_1_1entries_1_1lru__entry" kindref="compound">lru_entry</ref>&lt; Value &gt; &gt;</type>
+        <definition>typedef entry&lt;Value, lru_entry&lt;Value&gt; &gt; hpx::util::cache::entries::lru_entry&lt; Value &gt;::base_type</definition>
+        <argsstring></argsstring>
+        <name>base_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/entries/lru_entry.hpp" line="37" column="1" bodyfile="libs/cache/include/hpx/cache/entries/lru_entry.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhpx_1_1util_1_1cache_1_1entries_1_1lru__entry_1aced1c255f0c218bb0840ca6c16ce6c99" prot="private" static="no" mutable="no">
+        <type>std::chrono::steady_clock::time_point</type>
+        <definition>std::chrono::steady_clock::time_point hpx::util::cache::entries::lru_entry&lt; Value &gt;::access_time_</definition>
+        <argsstring></argsstring>
+        <name>access_time_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/entries/lru_entry.hpp" line="83" column="1" bodyfile="libs/cache/include/hpx/cache/entries/lru_entry.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1entries_1_1lru__entry_1a8f28da322b303d24d4d7084aa43a5e1c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::util::cache::entries::lru_entry&lt; Value &gt;::lru_entry</definition>
+        <argsstring>()</argsstring>
+        <name>lru_entry</name>
+        <briefdescription>
+<para>Any cache entry has to be default constructible. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/entries/lru_entry.hpp" line="41" column="1" bodyfile="libs/cache/include/hpx/cache/entries/lru_entry.hpp" bodystart="41" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1entries_1_1lru__entry_1aa8ce6adf85fae9687b45ea1e6cbe8882" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::util::cache::entries::lru_entry&lt; Value &gt;::lru_entry</definition>
+        <argsstring>(Value const &amp;val)</argsstring>
+        <name>lru_entry</name>
+        <param>
+          <type>Value const &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new instance of a cache entry holding the given value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/entries/lru_entry.hpp" line="47" column="1" bodyfile="libs/cache/include/hpx/cache/entries/lru_entry.hpp" bodystart="47" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1entries_1_1lru__entry_1a3b049663a1dad9174749b919e76d02e1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hpx::util::cache::entries::lru_entry&lt; Value &gt;::touch</definition>
+        <argsstring>()</argsstring>
+        <name>touch</name>
+        <briefdescription>
+<para>The function <emphasis>touch</emphasis> is called by a cache holding this instance whenever it has been requested (touched). </para>        </briefdescription>
+        <detaileddescription>
+<para>In the case of the LRU entry we store the time of the last access which will be used to compare the age of an entry during the invocation of the <ref refid="classhpx_1_1util_1_1cache_1_1entries_1_1lru__entry_1aafdbb84a6c5baf0f7b9e117e197c242e" kindref="member">operator&lt;()</ref>.</para><para><simplesect kind="return"><para>This function should return true if the cache needs to update it&apos;s internal heap. Usually this is needed if the entry has been changed by <ref refid="classhpx_1_1util_1_1cache_1_1entries_1_1lru__entry_1a3b049663a1dad9174749b919e76d02e1" kindref="member">touch()</ref> in a way influencing the sort order as mandated by the cache&apos;s UpdatePolicy </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/entries/lru_entry.hpp" line="63" column="1" bodyfile="libs/cache/include/hpx/cache/entries/lru_entry.hpp" bodystart="63" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1cache_1_1entries_1_1lru__entry_1a4d2d358e41ec7bddf872c50eafcb2214" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::chrono::steady_clock::time_point const  &amp;</type>
+        <definition>std::chrono::steady_clock::time_point const&amp; hpx::util::cache::entries::lru_entry&lt; Value &gt;::get_access_time</definition>
+        <argsstring>() const</argsstring>
+        <name>get_access_time</name>
+        <briefdescription>
+<para>Returns the last access time of the entry. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/entries/lru_entry.hpp" line="70" column="1" bodyfile="libs/cache/include/hpx/cache/entries/lru_entry.hpp" bodystart="70" bodyend="73"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classhpx_1_1util_1_1cache_1_1entries_1_1lru__entry_1aafdbb84a6c5baf0f7b9e117e197c242e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>friend bool</type>
+        <definition>bool operator&lt;</definition>
+        <argsstring>(lru_entry const &amp;lhs, lru_entry const &amp;rhs)</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type><ref refid="classhpx_1_1util_1_1cache_1_1entries_1_1lru__entry" kindref="compound">lru_entry</ref> const &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type><ref refid="classhpx_1_1util_1_1cache_1_1entries_1_1lru__entry" kindref="compound">lru_entry</ref> const &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Compare the &apos;age&apos; of two entries. An entry is &apos;older&apos; than another entry if it has been accessed less recently (LRU). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/cache/include/hpx/cache/entries/lru_entry.hpp" line="77" column="1" bodyfile="libs/cache/include/hpx/cache/entries/lru_entry.hpp" bodystart="77" bodyend="80"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <emphasis><ref refid="classhpx_1_1util_1_1cache_1_1entries_1_1lru__entry" kindref="compound">lru_entry</ref></emphasis> type can be used to store arbitrary values in a cache. Using this type as the cache&apos;s entry type makes sure that the least recently used entries are discarded from the cache first.</para><para><simplesect kind="note"><para>The <emphasis><ref refid="classhpx_1_1util_1_1cache_1_1entries_1_1lru__entry" kindref="compound">lru_entry</ref></emphasis> conforms to the CacheEntry concept. </para></simplesect>
+<simplesect kind="note"><para>This type can be used to model a &apos;most recently used&apos; cache policy if it is used with a std::greater as the caches&apos; UpdatePolicy (instead of the default std::less).</para></simplesect>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data type to be stored in a cache. It has to be default constructible, copy constructible and less_than_comparable. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="37">
+        <label>hpx::util::cache::entries::lru_entry&lt; Value &gt;</label>
+        <link refid="classhpx_1_1util_1_1cache_1_1entries_1_1lru__entry"/>
+        <childnode refid="38" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>boost::less_than_comparable&lt; detail::derived&lt; Value, lru_entry&lt; Value &gt; &gt;::type &gt;</label>
+      </node>
+      <node id="38">
+        <label>hpx::util::cache::entries::entry&lt; Value, lru_entry&lt; Value &gt; &gt;</label>
+        <link refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry"/>
+        <childnode refid="39" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="40">
+        <label>hpx::util::cache::entries::lru_entry&lt; Value &gt;</label>
+        <link refid="classhpx_1_1util_1_1cache_1_1entries_1_1lru__entry"/>
+        <childnode refid="41" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>boost::less_than_comparable&lt; detail::derived&lt; Value, lru_entry&lt; Value &gt; &gt;::type &gt;</label>
+      </node>
+      <node id="41">
+        <label>hpx::util::cache::entries::entry&lt; Value, lru_entry&lt; Value &gt; &gt;</label>
+        <link refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry"/>
+        <childnode refid="42" relation="private-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libs/cache/include/hpx/cache/entries/lru_entry.hpp" line="35" column="1" bodyfile="libs/cache/include/hpx/cache/entries/lru_entry.hpp" bodystart="34" bodyend="84"/>
+    <listofallmembers>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1lru__entry_1aced1c255f0c218bb0840ca6c16ce6c99" prot="private" virt="non-virtual"><scope>hpx::util::cache::entries::lru_entry</scope><name>access_time_</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1lru__entry_1ac7f0e5f3382963533a25e7cbc8915589" prot="private" virt="non-virtual"><scope>hpx::util::cache::entries::lru_entry</scope><name>base_type</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1ad33554c8722a0fb843afb12e943609b7" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::lru_entry</scope><name>entry</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1a405f37290c9f41020b08d2f24167ecfa" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::lru_entry</scope><name>entry</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1a3261dc3551b8beb6a15d768da078309e" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::lru_entry</scope><name>get</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1a2f225802808b6b9f6680fe089af8b1dd" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::lru_entry</scope><name>get</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1lru__entry_1a4d2d358e41ec7bddf872c50eafcb2214" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::lru_entry</scope><name>get_access_time</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1a52aaa2be737145552d7f045821db96c3" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::lru_entry</scope><name>get_size</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1a026fd85734913784d85672bbcada8ead" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::lru_entry</scope><name>insert</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1lru__entry_1a8f28da322b303d24d4d7084aa43a5e1c" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::lru_entry</scope><name>lru_entry</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1lru__entry_1aa8ce6adf85fae9687b45ea1e6cbe8882" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::lru_entry</scope><name>lru_entry</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1lru__entry_1aafdbb84a6c5baf0f7b9e117e197c242e" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::lru_entry</scope><name>operator&lt;</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1ad339d17e0b9f7b7b61d862fff48bd117" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::lru_entry</scope><name>remove</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1lru__entry_1a3b049663a1dad9174749b919e76d02e1" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::lru_entry</scope><name>touch</name></member>
+      <member refid="classhpx_1_1util_1_1cache_1_1entries_1_1entry_1a10da7304c1370f938043761b34bbf2b1" prot="public" virt="non-virtual"><scope>hpx::util::cache::entries::lru_entry</scope><name>value_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

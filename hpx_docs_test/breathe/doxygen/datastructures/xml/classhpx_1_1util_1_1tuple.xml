@@ -1,0 +1,266 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classhpx_1_1util_1_1tuple" kind="class" language="C++" prot="public">
+    <compoundname>hpx::util::tuple</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename...</type>
+        <declname>Ts</declname>
+        <defname>Ts</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classhpx_1_1util_1_1tuple_1a1929a7fdefb8ff242ab87aad724a7358" prot="public" static="no" mutable="no">
+        <type>detail::tuple_impl&lt; typename detail::make_index_pack&lt; sizeof...(Ts)&gt;::type, Ts... &gt;</type>
+        <definition>detail::tuple_impl&lt; typename detail::make_index_pack&lt;sizeof...(Ts)&gt;::type, Ts...&gt; hpx::util::tuple&lt; Ts &gt;::_impl</definition>
+        <argsstring></argsstring>
+        <name>_impl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/datastructures/include/hpx/datastructures/tuple.hpp" line="372" column="1" bodyfile="libs/datastructures/include/hpx/datastructures/tuple.hpp" bodystart="372" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhpx_1_1util_1_1tuple_1a87b50cf9123891ae36cb709fe168c0c5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Dependent</type>
+            <defval>void</defval>
+          </param>
+          <param>
+            <type>typename Enable</type>
+            <defval>typename std::enable_if&lt;                hpx::util::detail::all_of&lt;std::is_constructible&lt;Ts&gt;...&gt;::value,                Dependent&gt;::type</defval>
+          </param>
+        </templateparamlist>
+        <type>HPX_HOST_DEVICE</type>
+        <definition>HPX_HOST_DEVICE hpx::util::tuple&lt; Ts &gt;::tuple</definition>
+        <argsstring>()</argsstring>
+        <name>tuple</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/datastructures/include/hpx/datastructures/tuple.hpp" line="383" column="1" bodyfile="libs/datastructures/include/hpx/datastructures/tuple.hpp" bodystart="383" bodyend="386"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1tuple_1a3b8822221392b1b9b8d6e65e1bd32651" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type>HPX_HOST_DEVICE</type>
+        <definition>HPX_HOST_DEVICE hpx::util::tuple&lt; Ts &gt;::tuple</definition>
+        <argsstring>(Ts const &amp;... vs)</argsstring>
+        <name>tuple</name>
+        <param>
+          <type>Ts const &amp;...</type>
+          <declname>vs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/datastructures/include/hpx/datastructures/tuple.hpp" line="391" column="1" bodyfile="libs/datastructures/include/hpx/datastructures/tuple.hpp" bodystart="391" bodyend="394"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1tuple_1ac970016b1dc399c53d5605a367a8d786" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename U</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Us</declname>
+            <defname>Us</defname>
+          </param>
+          <param>
+            <type>typename Enable</type>
+            <defval>typename std::enable_if&lt;                detail::pack&lt;U, Us...&gt;::size == detail::pack&lt;Ts...&gt;::size &amp;&amp;                std::conditional&lt;detail::pack&lt;Us...&gt;::size == 0,                    typename std::enable_if&lt;                        !std::is_same&lt;<ref refid="classhpx_1_1util_1_1tuple" kindref="compound">tuple</ref>,                            typename std::decay&lt;U&gt;::type&gt;::value &amp;&amp;                            !detail::are_tuples_compatible_not_same&lt;<ref refid="classhpx_1_1util_1_1tuple" kindref="compound">tuple</ref>,                                U&amp;&amp;&gt;::value,                        detail::are_tuples_compatible&lt;<ref refid="classhpx_1_1util_1_1tuple" kindref="compound">tuple</ref>, <ref refid="classhpx_1_1util_1_1tuple" kindref="compound">tuple</ref>&lt;U&gt;&amp;&amp;&gt;&gt;::type,                    detail::are_tuples_compatible&lt;<ref refid="classhpx_1_1util_1_1tuple" kindref="compound">tuple</ref>,                        <ref refid="classhpx_1_1util_1_1tuple" kindref="compound">tuple</ref>&lt;U, Us...&gt;&amp;&amp;&gt;&gt;::type::value&gt;::type</defval>
+          </param>
+        </templateparamlist>
+        <type>HPX_HOST_DEVICE</type>
+        <definition>HPX_HOST_DEVICE hpx::util::tuple&lt; Ts &gt;::tuple</definition>
+        <argsstring>(U &amp;&amp;v, Us &amp;&amp;... vs)</argsstring>
+        <name>tuple</name>
+        <param>
+          <type>U &amp;&amp;</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>Us &amp;&amp;...</type>
+          <declname>vs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/datastructures/include/hpx/datastructures/tuple.hpp" line="415" column="1" bodyfile="libs/datastructures/include/hpx/datastructures/tuple.hpp" bodystart="415" bodyend="418"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1tuple_1a2ad5d83bed05c33b384115a7c5ba32a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hpx::util::tuple&lt; Ts &gt;::tuple</definition>
+        <argsstring>(tuple const &amp;)=default</argsstring>
+        <name>tuple</name>
+        <param>
+          <type><ref refid="classhpx_1_1util_1_1tuple" kindref="compound">tuple</ref> const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/datastructures/include/hpx/datastructures/tuple.hpp" line="424" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1tuple_1af929d249132b2f0b70021338ac10708d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hpx::util::tuple&lt; Ts &gt;::tuple</definition>
+        <argsstring>(tuple &amp;&amp;)=default</argsstring>
+        <name>tuple</name>
+        <param>
+          <type><ref refid="classhpx_1_1util_1_1tuple" kindref="compound">tuple</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/datastructures/include/hpx/datastructures/tuple.hpp" line="429" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1tuple_1a17922a3f1b2495e42a282f4ba063c8f7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename UTuple</type>
+          </param>
+          <param>
+            <type>typename Enable</type>
+            <defval>typename std::enable_if&lt;detail::are_tuples_compatible_not_same&lt;                    <ref refid="classhpx_1_1util_1_1tuple" kindref="compound">tuple</ref>, UTuple&amp;&amp;&gt;::value&gt;::type</defval>
+          </param>
+        </templateparamlist>
+        <type>HPX_HOST_DEVICE</type>
+        <definition>HPX_HOST_DEVICE hpx::util::tuple&lt; Ts &gt;::tuple</definition>
+        <argsstring>(UTuple &amp;&amp;other)</argsstring>
+        <name>tuple</name>
+        <param>
+          <type>UTuple &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/datastructures/include/hpx/datastructures/tuple.hpp" line="459" column="1" bodyfile="libs/datastructures/include/hpx/datastructures/tuple.hpp" bodystart="459" bodyend="462"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1tuple_1af792e4319fe56a460d04ba85c8e8d099" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>HPX_HOST_DEVICE <ref refid="classhpx_1_1util_1_1tuple" kindref="compound">tuple</ref> &amp;</type>
+        <definition>HPX_HOST_DEVICE tuple&amp; hpx::util::tuple&lt; Ts &gt;::operator=</definition>
+        <argsstring>(tuple const &amp;other)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classhpx_1_1util_1_1tuple" kindref="compound">tuple</ref> const &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/datastructures/include/hpx/datastructures/tuple.hpp" line="468" column="1" bodyfile="libs/datastructures/include/hpx/datastructures/tuple.hpp" bodystart="468" bodyend="472"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1tuple_1ad88f09dd41f2d4f41217f45ed3823128" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>HPX_HOST_DEVICE <ref refid="classhpx_1_1util_1_1tuple" kindref="compound">tuple</ref> &amp;</type>
+        <definition>HPX_HOST_DEVICE tuple&amp; hpx::util::tuple&lt; Ts &gt;::operator=</definition>
+        <argsstring>(tuple &amp;&amp;other)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classhpx_1_1util_1_1tuple" kindref="compound">tuple</ref> &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/datastructures/include/hpx/datastructures/tuple.hpp" line="476" column="1" bodyfile="libs/datastructures/include/hpx/datastructures/tuple.hpp" bodystart="476" bodyend="480"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1tuple_1a0d571acc83416d2122814bbd2a98dde5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename UTuple</type>
+          </param>
+        </templateparamlist>
+        <type>HPX_HOST_DEVICE std::enable_if&lt; <ref refid="structhpx_1_1util_1_1tuple__size" kindref="compound">tuple_size</ref>&lt; typename std::decay&lt; UTuple &gt;::type &gt;::value==detail::pack&lt; Ts... &gt;::size, <ref refid="classhpx_1_1util_1_1tuple" kindref="compound">tuple</ref> &amp; &gt;::type</type>
+        <definition>HPX_HOST_DEVICE std::enable_if&lt; tuple_size&lt;typename std::decay&lt;UTuple&gt;::type&gt;::value == detail::pack&lt;Ts...&gt;::size, tuple&amp;&gt;::type hpx::util::tuple&lt; Ts &gt;::operator=</definition>
+        <argsstring>(UTuple &amp;&amp;other)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>UTuple &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/datastructures/include/hpx/datastructures/tuple.hpp" line="490" column="1" bodyfile="libs/datastructures/include/hpx/datastructures/tuple.hpp" bodystart="490" bodyend="494"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1tuple_1a2b420d3519d376dc2c2703c07abf0943" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>HPX_HOST_DEVICE void</type>
+        <definition>HPX_HOST_DEVICE void hpx::util::tuple&lt; Ts &gt;::swap</definition>
+        <argsstring>(tuple &amp;other)</argsstring>
+        <name>swap</name>
+        <param>
+          <type><ref refid="classhpx_1_1util_1_1tuple" kindref="compound">tuple</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/datastructures/include/hpx/datastructures/tuple.hpp" line="501" column="1" bodyfile="libs/datastructures/include/hpx/datastructures/tuple.hpp" bodystart="501" bodyend="504"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="31">
+        <label>hpx::util::tuple&lt; Ts &gt;</label>
+        <link refid="classhpx_1_1util_1_1tuple"/>
+        <childnode refid="32" relation="usage">
+          <edgelabel>_impl</edgelabel>
+        </childnode>
+      </node>
+      <node id="32">
+        <label>hpx::util::detail::tuple_impl&lt; typename detail::make_index_pack&lt; sizeof...(Ts)&gt;::type, Ts... &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libs/datastructures/include/hpx/datastructures/tuple.hpp" line="30" column="1" bodyfile="libs/datastructures/include/hpx/datastructures/tuple.hpp" bodystart="30" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="classhpx_1_1util_1_1tuple_1a1929a7fdefb8ff242ab87aad724a7358" prot="public" virt="non-virtual"><scope>hpx::util::tuple</scope><name>_impl</name></member>
+      <member refid="classhpx_1_1util_1_1tuple_1af792e4319fe56a460d04ba85c8e8d099" prot="public" virt="non-virtual"><scope>hpx::util::tuple</scope><name>operator=</name></member>
+      <member refid="classhpx_1_1util_1_1tuple_1ad88f09dd41f2d4f41217f45ed3823128" prot="public" virt="non-virtual"><scope>hpx::util::tuple</scope><name>operator=</name></member>
+      <member refid="classhpx_1_1util_1_1tuple_1a0d571acc83416d2122814bbd2a98dde5" prot="public" virt="non-virtual"><scope>hpx::util::tuple</scope><name>operator=</name></member>
+      <member refid="classhpx_1_1util_1_1tuple_1a2b420d3519d376dc2c2703c07abf0943" prot="public" virt="non-virtual"><scope>hpx::util::tuple</scope><name>swap</name></member>
+      <member refid="classhpx_1_1util_1_1tuple_1a87b50cf9123891ae36cb709fe168c0c5" prot="public" virt="non-virtual"><scope>hpx::util::tuple</scope><name>tuple</name></member>
+      <member refid="classhpx_1_1util_1_1tuple_1a3b8822221392b1b9b8d6e65e1bd32651" prot="public" virt="non-virtual"><scope>hpx::util::tuple</scope><name>tuple</name></member>
+      <member refid="classhpx_1_1util_1_1tuple_1ac970016b1dc399c53d5605a367a8d786" prot="public" virt="non-virtual"><scope>hpx::util::tuple</scope><name>tuple</name></member>
+      <member refid="classhpx_1_1util_1_1tuple_1a2ad5d83bed05c33b384115a7c5ba32a2" prot="public" virt="non-virtual"><scope>hpx::util::tuple</scope><name>tuple</name></member>
+      <member refid="classhpx_1_1util_1_1tuple_1af929d249132b2f0b70021338ac10708d" prot="public" virt="non-virtual"><scope>hpx::util::tuple</scope><name>tuple</name></member>
+      <member refid="classhpx_1_1util_1_1tuple_1a17922a3f1b2495e42a282f4ba063c8f7" prot="public" virt="non-virtual"><scope>hpx::util::tuple</scope><name>tuple</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classhpx_1_1program__options_1_1basic__parsed__options" kind="class" language="C++" prot="public">
+    <compoundname>hpx::program_options::basic_parsed_options</compoundname>
+    <includes refid="parsers_8hpp" local="no">parsers.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>Char</declname>
+        <defname>Char</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classhpx_1_1program__options_1_1basic__parsed__options_1a35c749e666711b8bbcc974cc568b77d3" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classhpx_1_1program__options_1_1basic__option" kindref="compound">basic_option</ref>&lt; Char &gt; &gt;</type>
+        <definition>std::vector&lt;basic_option&lt;Char&gt; &gt; hpx::program_options::basic_parsed_options&lt; Char &gt;::options</definition>
+        <argsstring></argsstring>
+        <name>options</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Options found in the source. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/parsers.hpp" line="80" column="1" bodyfile="libs/program_options/include/hpx/program_options/parsers.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhpx_1_1program__options_1_1basic__parsed__options_1ad32ac1f185b1ce46410f935a51b95476" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classhpx_1_1program__options_1_1options__description" kindref="compound">options_description</ref> *</type>
+        <definition>const options_description* hpx::program_options::basic_parsed_options&lt; Char &gt;::description</definition>
+        <argsstring></argsstring>
+        <name>description</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Options description that was used for parsing. Parsers should return pointer to the instance of <ref refid="classhpx_1_1program__options_1_1option__description" kindref="compound">option_description</ref> passed to them, and issues of lifetime are up to the caller. Can be NULL. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/parsers.hpp" line="86" column="1" bodyfile="libs/program_options/include/hpx/program_options/parsers.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhpx_1_1program__options_1_1basic__parsed__options_1a77ce2abacc82a20144e5a4fdf3e5f44d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int hpx::program_options::basic_parsed_options&lt; Char &gt;::m_options_prefix</definition>
+        <argsstring></argsstring>
+        <name>m_options_prefix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mainly used for the diagnostic messages in exceptions. The canonical option prefix for the parser which generated these results, depending on the settings for <ref refid="classhpx_1_1program__options_1_1basic__command__line__parser_1a8eba5db55251b3c3f8f693318d687b56" kindref="member">basic_command_line_parser::style()</ref> or cmdline::style(). In order of precedence of command_line_style enums: allow_long allow_long_disguise allow_dash_for_short allow_slash_for_short </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/parsers.hpp" line="97" column="1" bodyfile="libs/program_options/include/hpx/program_options/parsers.hpp" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1basic__parsed__options_1a3870bec75e14ed9b059f2a30266c4a7f" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::program_options::basic_parsed_options&lt; Char &gt;::basic_parsed_options</definition>
+        <argsstring>(const options_description *xdescription, int options_prefix=0)</argsstring>
+        <name>basic_parsed_options</name>
+        <param>
+          <type>const <ref refid="classhpx_1_1program__options_1_1options__description" kindref="compound">options_description</ref> *</type>
+          <declname>xdescription</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>options_prefix</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/parsers.hpp" line="73" column="1" bodyfile="libs/program_options/include/hpx/program_options/parsers.hpp" bodystart="73" bodyend="78"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Results of parsing an input source. The primary use of this class is passing information from parsers component to value storage component. This class does not makes much sense itself. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="21">
+        <label>hpx::program_options::options_description</label>
+        <link refid="classhpx_1_1program__options_1_1options__description"/>
+      </node>
+      <node id="20">
+        <label>hpx::program_options::basic_parsed_options&lt; Char &gt;</label>
+        <link refid="classhpx_1_1program__options_1_1basic__parsed__options"/>
+        <childnode refid="21" relation="usage">
+          <edgelabel>description</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libs/program_options/include/hpx/program_options/parsers.hpp" line="71" column="1" bodyfile="libs/program_options/include/hpx/program_options/parsers.hpp" bodystart="70" bodyend="98"/>
+    <listofallmembers>
+      <member refid="classhpx_1_1program__options_1_1basic__parsed__options_1a3870bec75e14ed9b059f2a30266c4a7f" prot="public" virt="non-virtual"><scope>hpx::program_options::basic_parsed_options</scope><name>basic_parsed_options</name></member>
+      <member refid="classhpx_1_1program__options_1_1basic__parsed__options_1ad32ac1f185b1ce46410f935a51b95476" prot="public" virt="non-virtual"><scope>hpx::program_options::basic_parsed_options</scope><name>description</name></member>
+      <member refid="classhpx_1_1program__options_1_1basic__parsed__options_1a77ce2abacc82a20144e5a4fdf3e5f44d" prot="public" virt="non-virtual"><scope>hpx::program_options::basic_parsed_options</scope><name>m_options_prefix</name></member>
+      <member refid="classhpx_1_1program__options_1_1basic__parsed__options_1a35c749e666711b8bbcc974cc568b77d3" prot="public" virt="non-virtual"><scope>hpx::program_options::basic_parsed_options</scope><name>options</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,585 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacehpx_1_1util" kind="namespace" language="C++">
+    <compoundname>hpx::util</compoundname>
+    <innerclass refid="classhpx_1_1util_1_1function" prot="public">hpx::util::function</innerclass>
+    <innerclass refid="classhpx_1_1util_1_1function_3_01_r_07_ts_8_8_8_08_00_01_serializable_01_4" prot="public">hpx::util::function&lt; R(Ts...), Serializable &gt;</innerclass>
+    <innerclass refid="classhpx_1_1util_1_1function__ref" prot="public">hpx::util::function_ref</innerclass>
+    <innerclass refid="classhpx_1_1util_1_1function__ref_3_01_r_07_ts_8_8_8_08_4" prot="public">hpx::util::function_ref&lt; R(Ts...)&gt;</innerclass>
+    <innerclass refid="structhpx_1_1util_1_1invoke__result" prot="public">hpx::util::invoke_result</innerclass>
+    <innerclass refid="structhpx_1_1util_1_1result__of" prot="public">hpx::util::result_of</innerclass>
+    <innerclass refid="structhpx_1_1util_1_1result__of_3_01_f_07_ts_8_8_8_08_4" prot="public">hpx::util::result_of&lt; F(Ts...)&gt;</innerclass>
+    <innerclass refid="classhpx_1_1util_1_1unique__function" prot="public">hpx::util::unique_function</innerclass>
+    <innerclass refid="classhpx_1_1util_1_1unique__function_3_01_r_07_ts_8_8_8_08_00_01_serializable_01_4" prot="public">hpx::util::unique_function&lt; R(Ts...), Serializable &gt;</innerclass>
+    <innernamespace refid="namespacehpx_1_1util_1_1functional">hpx::util::functional</innernamespace>
+    <innernamespace refid="namespacehpx_1_1util_1_1placeholders">hpx::util::placeholders</innernamespace>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="hpx_2functional_2function_8hpp_1a2a8c6a0cfe7a9e88d70ad808646a18cd" prot="public" static="no">
+        <type><ref refid="classhpx_1_1util_1_1function" kindref="compound">function</ref>&lt; Sig, false &gt;</type>
+        <definition>using hpx::util::function_nonser = typedef function&lt;Sig, false&gt;</definition>
+        <argsstring></argsstring>
+        <name>function_nonser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/functional/include/hpx/functional/function.hpp" line="74" column="1" bodyfile="libs/functional/include/hpx/functional/function.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="hpx_2functional_2unique__function_8hpp_1abda264b5341bf68c44860beede9d880a" prot="public" static="no">
+        <type><ref refid="classhpx_1_1util_1_1unique__function" kindref="compound">unique_function</ref>&lt; Sig, false &gt;</type>
+        <definition>using hpx::util::unique_function_nonser = typedef unique_function&lt;Sig, false&gt;</definition>
+        <argsstring></argsstring>
+        <name>unique_function_nonser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/functional/include/hpx/functional/unique_function.hpp" line="72" column="1" bodyfile="libs/functional/include/hpx/functional/unique_function.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="hpx_2functional_2protect_8hpp_1a4ada16c1a9d6139cf250b763e9f9c4a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>HPX_HOST_DEVICE std::enable_if&lt; <ref refid="structhpx_1_1traits_1_1is__bind__expression" kindref="compound">traits::is_bind_expression</ref>&lt; typename std::decay&lt; T &gt;::type &gt;::value, detail::protected_bind&lt; typename std::decay&lt; T &gt;::type &gt; &gt;::type</type>
+        <definition>HPX_HOST_DEVICE std::enable_if&lt; traits::is_bind_expression&lt;typename std::decay&lt;T&gt;::type&gt;::value, detail::protected_bind&lt;typename std::decay&lt;T&gt;::type&gt; &gt;::type hpx::util::protect</definition>
+        <argsstring>(T &amp;&amp;f)</argsstring>
+        <name>protect</name>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/functional/include/hpx/functional/protect.hpp" line="59" column="1" bodyfile="libs/functional/include/hpx/functional/protect.hpp" bodystart="59" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="hpx_2functional_2protect_8hpp_1a9dc0872fdad8dd35092ae75f9361e687" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>HPX_HOST_DEVICE std::enable_if&lt; !<ref refid="structhpx_1_1traits_1_1is__bind__expression" kindref="compound">traits::is_bind_expression</ref>&lt; typename std::decay&lt; T &gt;::type &gt;::value, T &gt;::type</type>
+        <definition>HPX_HOST_DEVICE std::enable_if&lt; !traits::is_bind_expression&lt;typename std::decay&lt;T&gt;::type&gt;::value, T&gt;::type hpx::util::protect</definition>
+        <argsstring>(T &amp;&amp;v)</argsstring>
+        <name>protect</name>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/functional/include/hpx/functional/protect.hpp" line="70" column="1" bodyfile="libs/functional/include/hpx/functional/protect.hpp" bodystart="70" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="hpx_2functional_2invoke__fused_8hpp_1a67ca97209fcad96869b3efcd1ccc7aa8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename Tuple</type>
+          </param>
+        </templateparamlist>
+        <type>HPX_HOST_DEVICE detail::invoke_fused_result&lt; F, Tuple &gt;::type</type>
+        <definition>HPX_HOST_DEVICE detail::invoke_fused_result&lt;F, Tuple&gt;::type hpx::util::invoke_fused</definition>
+        <argsstring>(F &amp;&amp;f, Tuple &amp;&amp;t)</argsstring>
+        <name>invoke_fused</name>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Tuple &amp;&amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Invokes the given callable object f with the content of the sequenced type t (tuples, pairs)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Must be a callable object. If f is a member function pointer, the first argument in the sequenced type will be treated as the callee (this object).</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A type which is content accessible through a call to hpx::util::get.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the callable object when it&apos;s called with the content of the given sequenced type.</para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>like objects thrown by call to object f with the arguments contained in the sequenceable type t.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This function is similar to <computeroutput>std::apply</computeroutput> (C++17) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/functional/include/hpx/functional/invoke_fused.hpp" line="98" column="1" bodyfile="libs/functional/include/hpx/functional/invoke_fused.hpp" bodystart="98" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="hpx_2functional_2invoke__fused_8hpp_1aaa8145b7927372b51d28c87f29cea994" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename R</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename Tuple</type>
+          </param>
+        </templateparamlist>
+        <type>HPX_HOST_DEVICE R</type>
+        <definition>HPX_HOST_DEVICE R hpx::util::invoke_fused_r</definition>
+        <argsstring>(F &amp;&amp;f, Tuple &amp;&amp;t)</argsstring>
+        <name>invoke_fused_r</name>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Tuple &amp;&amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>R</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The result type of the function when it&apos;s called with the content of the given sequenced type. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/functional/include/hpx/functional/invoke_fused.hpp" line="110" column="1" bodyfile="libs/functional/include/hpx/functional/invoke_fused.hpp" bodystart="110" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="hpx_2functional_2mem__fn_8hpp_1a8a2f407efcdf13fbc62e9d879e8e8bd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename M</type>
+          </param>
+          <param>
+            <type>typename C</type>
+          </param>
+        </templateparamlist>
+        <type>detail::mem_fn&lt; M C::* &gt;</type>
+        <definition>detail::mem_fn&lt;M C::*&gt; hpx::util::mem_fn</definition>
+        <argsstring>(M C::*pm)</argsstring>
+        <name>mem_fn</name>
+        <param>
+          <type>M C::*</type>
+          <declname>pm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/functional/include/hpx/functional/mem_fn.hpp" line="44" column="1" bodyfile="libs/functional/include/hpx/functional/mem_fn.hpp" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="hpx_2functional_2mem__fn_8hpp_1ad7943fd3f441f9e7eaeed0d1ea01127a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename R</type>
+          </param>
+          <param>
+            <type>typename C</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ps</declname>
+            <defname>Ps</defname>
+          </param>
+        </templateparamlist>
+        <type>detail::mem_fn&lt; R(C::*)(Ps...)&gt;</type>
+        <definition>detail::mem_fn&lt;R (C::*)(Ps...)&gt; hpx::util::mem_fn</definition>
+        <argsstring>(R(C::*pm)(Ps...))</argsstring>
+        <name>mem_fn</name>
+        <param>
+          <type>R(C::*)(Ps...)</type>
+          <declname>pm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/functional/include/hpx/functional/mem_fn.hpp" line="50" column="1" bodyfile="libs/functional/include/hpx/functional/mem_fn.hpp" bodystart="50" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="hpx_2functional_2mem__fn_8hpp_1a3480c507f282fad7a56347b144e145af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename R</type>
+          </param>
+          <param>
+            <type>typename C</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ps</declname>
+            <defname>Ps</defname>
+          </param>
+        </templateparamlist>
+        <type>detail::mem_fn&lt; R(C::*)(Ps...) const  &gt;</type>
+        <definition>detail::mem_fn&lt;R (C::*)(Ps...) const&gt; hpx::util::mem_fn</definition>
+        <argsstring>(R(C::*pm)(Ps...) const)</argsstring>
+        <name>mem_fn</name>
+        <param>
+          <type>R(C::*)(Ps...) const</type>
+          <declname>pm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/functional/include/hpx/functional/mem_fn.hpp" line="56" column="1" bodyfile="libs/functional/include/hpx/functional/mem_fn.hpp" bodystart="56" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="hpx_2functional_2bind__front_8hpp_1ad15d5c29b10f5f28800a5d0af5cf0db5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>detail::bound_front&lt; typename std::decay&lt; F &gt;::type, typename std::decay&lt; Ts &gt;::type... &gt;</type>
+        <definition>detail::bound_front&lt;typename std::decay&lt;F&gt;::type, typename std::decay&lt;Ts&gt;::type...&gt; hpx::util::bind_front</definition>
+        <argsstring>(F &amp;&amp;f, Ts &amp;&amp;... vs)</argsstring>
+        <name>bind_front</name>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>vs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/functional/include/hpx/functional/bind_front.hpp" line="170" column="1" bodyfile="libs/functional/include/hpx/functional/bind_front.hpp" bodystart="170" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="hpx_2functional_2bind__front_8hpp_1afcc713ca1a36596575677d5a36ff09c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type>std::decay&lt; F &gt;::type</type>
+        <definition>std::decay&lt;F&gt;::type hpx::util::bind_front</definition>
+        <argsstring>(F &amp;&amp;f)</argsstring>
+        <name>bind_front</name>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/functional/include/hpx/functional/bind_front.hpp" line="181" column="1" bodyfile="libs/functional/include/hpx/functional/bind_front.hpp" bodystart="181" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="hpx_2functional_2deferred__call_8hpp_1a8d285d9d37af9b52e3ac3daf7a73b769" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>detail::deferred&lt; typename std::decay&lt; F &gt;::type, typename std::decay&lt; Ts &gt;::type... &gt;</type>
+        <definition>detail::deferred&lt;typename std::decay&lt;F&gt;::type, typename std::decay&lt;Ts&gt;::type...&gt; hpx::util::deferred_call</definition>
+        <argsstring>(F &amp;&amp;f, Ts &amp;&amp;... vs)</argsstring>
+        <name>deferred_call</name>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>vs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/functional/include/hpx/functional/deferred_call.hpp" line="166" column="1" bodyfile="libs/functional/include/hpx/functional/deferred_call.hpp" bodystart="166" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="hpx_2functional_2deferred__call_8hpp_1aeffd35ca6a6685ebba9eca651e9530af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type>std::decay&lt; F &gt;::type</type>
+        <definition>std::decay&lt;F&gt;::type hpx::util::deferred_call</definition>
+        <argsstring>(F &amp;&amp;f)</argsstring>
+        <name>deferred_call</name>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/functional/include/hpx/functional/deferred_call.hpp" line="181" column="1" bodyfile="libs/functional/include/hpx/functional/deferred_call.hpp" bodystart="181" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="hpx_2functional_2bind_8hpp_1ab5bf471e361fa0377f5ce7e0ed51a3a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; !<ref refid="structhpx_1_1traits_1_1is__action" kindref="compound">traits::is_action</ref>&lt; typename std::decay&lt; F &gt;::type &gt;::value, detail::bound&lt; typename std::decay&lt; F &gt;::type, typename std::decay&lt; Ts &gt;::type... &gt; &gt;::type</type>
+        <definition>std::enable_if&lt; !traits::is_action&lt;typename std::decay&lt;F&gt;::type&gt;::value, detail::bound&lt;typename std::decay&lt;F&gt;::type, typename std::decay&lt;Ts&gt;::type...&gt; &gt;::type hpx::util::bind</definition>
+        <argsstring>(F &amp;&amp;f, Ts &amp;&amp;... vs)</argsstring>
+        <name>bind</name>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>vs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/functional/include/hpx/functional/bind.hpp" line="256" column="1" bodyfile="libs/functional/include/hpx/functional/bind.hpp" bodystart="256" bodyend="263"/>
+      </memberdef>
+      <memberdef kind="function" id="hpx_2functional_2invoke_8hpp_1a2cf4b0f46eb58f6eb21dc3905236b981" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>HPX_HOST_DEVICE <ref refid="structhpx_1_1util_1_1invoke__result" kindref="compound">util::invoke_result</ref>&lt; F, Ts... &gt;::type</type>
+        <definition>HPX_HOST_DEVICE util::invoke_result&lt;F, Ts...&gt;::type hpx::util::invoke</definition>
+        <argsstring>(F &amp;&amp;f, Ts &amp;&amp;... vs)</argsstring>
+        <name>invoke</name>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>vs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Invokes the given callable object f with the content of the argument pack vs</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Requires to be a callable object. If f is a member function pointer, the first argument in the pack will be treated as the callee (this object).</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An arbitrary pack of arguments</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the callable object when it&apos;s called with the given argument types.</para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>like objects thrown by call to object f with the argument types vs.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This function is similar to <computeroutput>std::invoke</computeroutput> (C++17) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/functional/include/hpx/functional/invoke.hpp" line="145" column="1" bodyfile="libs/functional/include/hpx/functional/invoke.hpp" bodystart="145" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="hpx_2functional_2invoke_8hpp_1a57d910197ceaa23d9255affae39bc8a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename R</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>HPX_HOST_DEVICE R</type>
+        <definition>HPX_HOST_DEVICE R hpx::util::invoke_r</definition>
+        <argsstring>(F &amp;&amp;f, Ts &amp;&amp;... vs)</argsstring>
+        <name>invoke_r</name>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>vs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>R</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The result type of the function when it&apos;s called with the content of the given argument types vs. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/functional/include/hpx/functional/invoke.hpp" line="156" column="1" bodyfile="libs/functional/include/hpx/functional/invoke.hpp" bodystart="156" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="hpx_2functional_2bind__back_8hpp_1a5a7722101621ead709cc0c9a450bf136" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>detail::bound_back&lt; typename std::decay&lt; F &gt;::type, typename std::decay&lt; Ts &gt;::type... &gt;</type>
+        <definition>detail::bound_back&lt;typename std::decay&lt;F&gt;::type, typename std::decay&lt;Ts&gt;::type...&gt; hpx::util::bind_back</definition>
+        <argsstring>(F &amp;&amp;f, Ts &amp;&amp;... vs)</argsstring>
+        <name>bind_back</name>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>vs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/functional/include/hpx/functional/bind_back.hpp" line="168" column="1" bodyfile="libs/functional/include/hpx/functional/bind_back.hpp" bodystart="168" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="hpx_2functional_2bind__back_8hpp_1a552a92c1793fa0b46cb65f2493aa5b9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type>std::decay&lt; F &gt;::type</type>
+        <definition>std::decay&lt;F&gt;::type hpx::util::bind_back</definition>
+        <argsstring>(F &amp;&amp;f)</argsstring>
+        <name>bind_back</name>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/functional/include/hpx/functional/bind_back.hpp" line="179" column="1" bodyfile="libs/functional/include/hpx/functional/bind_back.hpp" bodystart="179" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="hpx_2functional_2one__shot_8hpp_1a3b3541f176082bcdee778477dcbf9ccf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type>detail::one_shot_wrapper&lt; typename std::decay&lt; F &gt;::type &gt;</type>
+        <definition>detail::one_shot_wrapper&lt;typename std::decay&lt;F&gt;::type&gt; hpx::util::one_shot</definition>
+        <argsstring>(F &amp;&amp;f)</argsstring>
+        <name>one_shot</name>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/functional/include/hpx/functional/one_shot.hpp" line="129" column="1" bodyfile="libs/functional/include/hpx/functional/one_shot.hpp" bodystart="129" bodyend="135"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libs/functional/include/hpx/functional/protect.hpp" line="19" column="1"/>
+  </compounddef>
+</doxygen>

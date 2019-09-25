@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classhpx_1_1resource_1_1core" kind="class" language="C++" prot="public">
+    <compoundname>hpx::resource::core</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classhpx_1_1resource_1_1core_1abaa4bbf29ca17417b14951e393907694" prot="private" static="yes" mutable="no">
+        <type>const std::size_t</type>
+        <definition>const std::size_t hpx::resource::core::invalid_core_id</definition>
+        <argsstring></argsstring>
+        <name>invalid_core_id</name>
+        <initializer>= std::size_t(-1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/resource/partitioner.hpp" line="68" column="1" bodyfile="hpx/runtime/resource/partitioner.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classhpx_1_1resource_1_1core_1a3d1082481a9a21aecb71d04b3fe4f657" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class pu</definition>
+        <argsstring></argsstring>
+        <name>pu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/resource/partitioner.hpp" line="90" column="1" bodyfile="hpx/runtime/resource/partitioner.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classhpx_1_1resource_1_1core_1a2cd848189ba1a47ca3c3150ad45e974c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class numa_domain</definition>
+        <argsstring></argsstring>
+        <name>numa_domain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/resource/partitioner.hpp" line="91" column="1" bodyfile="hpx/runtime/resource/partitioner.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhpx_1_1resource_1_1core_1ab0b9747641fdb76d6be9aadd67cd0007" prot="private" static="no" mutable="no">
+        <type>std::size_t</type>
+        <definition>std::size_t hpx::resource::core::id_</definition>
+        <argsstring></argsstring>
+        <name>id_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/resource/partitioner.hpp" line="94" column="1" bodyfile="hpx/runtime/resource/partitioner.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhpx_1_1resource_1_1core_1ae397ca48f982e79146ba27650385b624" prot="private" static="no" mutable="no">
+        <type><ref refid="classhpx_1_1resource_1_1numa__domain" kindref="compound">numa_domain</ref> *</type>
+        <definition>numa_domain* hpx::resource::core::domain_</definition>
+        <argsstring></argsstring>
+        <name>domain_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/resource/partitioner.hpp" line="95" column="1" bodyfile="hpx/runtime/resource/partitioner.hpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhpx_1_1resource_1_1core_1a7afdab94ea3a5c58b612ae5623c8f7d3" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classhpx_1_1resource_1_1pu" kindref="compound">pu</ref> &gt;</type>
+        <definition>std::vector&lt;pu&gt; hpx::resource::core::pus_</definition>
+        <argsstring></argsstring>
+        <name>pus_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/resource/partitioner.hpp" line="96" column="1" bodyfile="hpx/runtime/resource/partitioner.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhpx_1_1resource_1_1core_1aee20d4928d153287fe597eb4d56043a9" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::resource::core::core</definition>
+        <argsstring>(std::size_t id=invalid_core_id, numa_domain *domain=nullptr)</argsstring>
+        <name>core</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>id</declname>
+          <defval>invalid_core_id</defval>
+        </param>
+        <param>
+          <type><ref refid="classhpx_1_1resource_1_1numa__domain" kindref="compound">numa_domain</ref> *</type>
+          <declname>domain</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/resource/partitioner.hpp" line="71" column="1" bodyfile="hpx/runtime/resource/partitioner.hpp" bodystart="71" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1resource_1_1core_1aff875466d87a989eec14c465892c6bba" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classhpx_1_1resource_1_1pu" kindref="compound">pu</ref> &gt; const  &amp;</type>
+        <definition>std::vector&lt;pu&gt; const&amp; hpx::resource::core::pus</definition>
+        <argsstring>() const</argsstring>
+        <name>pus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/resource/partitioner.hpp" line="78" column="1" bodyfile="hpx/runtime/resource/partitioner.hpp" bodystart="78" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1resource_1_1core_1aed0e7517a61415910ae7d35c9afa837e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t hpx::resource::core::id</definition>
+        <argsstring>() const</argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/resource/partitioner.hpp" line="82" column="1" bodyfile="hpx/runtime/resource/partitioner.hpp" bodystart="82" bodyend="85"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classhpx_1_1resource_1_1core_1a3d2f1913d546c4a5ea956f747249ba83" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classhpx_1_1resource_1_1core" kindref="compound">core</ref> &gt;</type>
+        <definition>std::vector&lt;core&gt; hpx::resource::core::cores_sharing_numa_domain</definition>
+        <argsstring>()</argsstring>
+        <name>cores_sharing_numa_domain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hpx/runtime/resource/partitioner.hpp" line="88" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="hpx/runtime/resource/partitioner.hpp" line="67" column="1" bodyfile="hpx/runtime/resource/partitioner.hpp" bodystart="66" bodyend="97"/>
+    <listofallmembers>
+      <member refid="classhpx_1_1resource_1_1core_1aee20d4928d153287fe597eb4d56043a9" prot="public" virt="non-virtual"><scope>hpx::resource::core</scope><name>core</name></member>
+      <member refid="classhpx_1_1resource_1_1core_1a3d2f1913d546c4a5ea956f747249ba83" prot="private" virt="non-virtual"><scope>hpx::resource::core</scope><name>cores_sharing_numa_domain</name></member>
+      <member refid="classhpx_1_1resource_1_1core_1ae397ca48f982e79146ba27650385b624" prot="private" virt="non-virtual"><scope>hpx::resource::core</scope><name>domain_</name></member>
+      <member refid="classhpx_1_1resource_1_1core_1aed0e7517a61415910ae7d35c9afa837e" prot="public" virt="non-virtual"><scope>hpx::resource::core</scope><name>id</name></member>
+      <member refid="classhpx_1_1resource_1_1core_1ab0b9747641fdb76d6be9aadd67cd0007" prot="private" virt="non-virtual"><scope>hpx::resource::core</scope><name>id_</name></member>
+      <member refid="classhpx_1_1resource_1_1core_1abaa4bbf29ca17417b14951e393907694" prot="private" virt="non-virtual"><scope>hpx::resource::core</scope><name>invalid_core_id</name></member>
+      <member refid="classhpx_1_1resource_1_1core_1a2cd848189ba1a47ca3c3150ad45e974c" prot="private" virt="non-virtual"><scope>hpx::resource::core</scope><name>numa_domain</name></member>
+      <member refid="classhpx_1_1resource_1_1core_1a3d1082481a9a21aecb71d04b3fe4f657" prot="private" virt="non-virtual"><scope>hpx::resource::core</scope><name>pu</name></member>
+      <member refid="classhpx_1_1resource_1_1core_1aff875466d87a989eec14c465892c6bba" prot="public" virt="non-virtual"><scope>hpx::resource::core</scope><name>pus</name></member>
+      <member refid="classhpx_1_1resource_1_1core_1a7afdab94ea3a5c58b612ae5623c8f7d3" prot="private" virt="non-virtual"><scope>hpx::resource::core</scope><name>pus_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

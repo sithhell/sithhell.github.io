@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacehpx_1_1util_1_1logging_1_1formatter" kind="namespace" language="C++">
+    <compoundname>hpx::util::logging::formatter</compoundname>
+    <innerclass refid="structhpx_1_1util_1_1logging_1_1formatter_1_1append__newline__if__needed__t" prot="public">hpx::util::logging::formatter::append_newline_if_needed_t</innerclass>
+    <innerclass refid="structhpx_1_1util_1_1logging_1_1formatter_1_1append__newline__t" prot="public">hpx::util::logging::formatter::append_newline_t</innerclass>
+    <innerclass refid="structhpx_1_1util_1_1logging_1_1formatter_1_1do__convert__format" prot="public">hpx::util::logging::formatter::do_convert_format</innerclass>
+    <innerclass refid="structhpx_1_1util_1_1logging_1_1formatter_1_1high__precision__time__t" prot="public">hpx::util::logging::formatter::high_precision_time_t</innerclass>
+    <innerclass refid="structhpx_1_1util_1_1logging_1_1formatter_1_1idx__t" prot="public">hpx::util::logging::formatter::idx_t</innerclass>
+    <innerclass refid="structhpx_1_1util_1_1logging_1_1formatter_1_1named__spacer__t" prot="public">hpx::util::logging::formatter::named_spacer_t</innerclass>
+    <innerclass refid="structhpx_1_1util_1_1logging_1_1formatter_1_1spacer__t" prot="public">hpx::util::logging::formatter::spacer_t</innerclass>
+    <innerclass refid="structhpx_1_1util_1_1logging_1_1formatter_1_1spacer__t_3_01convert_00_01original__formatter_00_01true_01_4" prot="public">hpx::util::logging::formatter::spacer_t&lt; convert, original_formatter, true &gt;</innerclass>
+    <innerclass refid="structhpx_1_1util_1_1logging_1_1formatter_1_1thread__id__t" prot="public">hpx::util::logging::formatter::thread_id_t</innerclass>
+    <innerclass refid="structhpx_1_1util_1_1logging_1_1formatter_1_1time__strf__t" prot="public">hpx::util::logging::formatter::time_strf_t</innerclass>
+    <innerclass refid="structhpx_1_1util_1_1logging_1_1formatter_1_1time__t" prot="public">hpx::util::logging::formatter::time_t</innerclass>
+    <innernamespace refid="namespacehpx_1_1util_1_1logging_1_1formatter_1_1convert">hpx::util::logging::formatter::convert</innernamespace>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="hpx_2logging_2format_2formatter_2time_8hpp_1a9b33a7044dc445dc9d250425f8ceaf58" prot="public" static="no">
+        <type><ref refid="structhpx_1_1util_1_1logging_1_1formatter_1_1time__t" kindref="compound">time_t</ref></type>
+        <definition>typedef time_t hpx::util::logging::formatter::time</definition>
+        <argsstring></argsstring>
+        <name>time</name>
+        <briefdescription>
+<para><ref refid="structhpx_1_1util_1_1logging_1_1formatter_1_1time__t" kindref="compound">time_t</ref> with default values. See <ref refid="structhpx_1_1util_1_1logging_1_1formatter_1_1time__t" kindref="compound">time_t</ref> </para>        </briefdescription>
+        <detaileddescription>
+<para>Prefixes the message with the time. You pass the format string at construction. It&apos;s friendlier than write_time_strf (which uses strftime).</para><para>The format can contain escape sequences: $dd - day, 2 digits $MM - month, 2 digits $yy - year, 2 digits $yyyy - year, 4 digits $hh - hour, 2 digits $mm - minute, 2 digits $ss - second, 2 digits</para><para>Example: time(&quot;Today is $dd/$MM/$yyyy&quot;);</para><para>Note: for a high precision clock, try high_precision_time (uses hpx::util::date_time)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>convert</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[optional] In case there needs to be a conversion between std::(w)string and the string that holds your logged message. See convert_format. For instance, you might use <ref refid="structhpx_1_1util_1_1logging_1_1optimize_1_1cache__string__one__str" kindref="compound">a cached_string class</ref> (see <ref refid="namespacehpx_1_1util_1_1logging_1_1optimize" kindref="compound">optimize namespace</ref>). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging/format/formatter/time.hpp" line="108" column="1" bodyfile="libs/logging/include/hpx/logging/format/formatter/time.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="hpx_2logging_2format_2formatter_2thread__id_8hpp_1a753699e3dc7e67798879948bd13bd66b" prot="public" static="no">
+        <type><ref refid="structhpx_1_1util_1_1logging_1_1formatter_1_1thread__id__t" kindref="compound">thread_id_t</ref></type>
+        <definition>typedef thread_id_t hpx::util::logging::formatter::thread_id</definition>
+        <argsstring></argsstring>
+        <name>thread_id</name>
+        <briefdescription>
+<para><ref refid="structhpx_1_1util_1_1logging_1_1formatter_1_1thread__id__t" kindref="compound">thread_id_t</ref> with default values. See <ref refid="structhpx_1_1util_1_1logging_1_1formatter_1_1thread__id__t" kindref="compound">thread_id_t</ref> </para>        </briefdescription>
+        <detaileddescription>
+<para>Writes the thread_id to the log. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>convert</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[optional] In case there needs to be a conversion between std::(w)string and the string that holds your logged message. See convert_format. For instance, you might use <ref refid="structhpx_1_1util_1_1logging_1_1optimize_1_1cache__string__one__str" kindref="compound">a cached_string class</ref> (see <ref refid="namespacehpx_1_1util_1_1logging_1_1optimize" kindref="compound">optimize namespace</ref>). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging/format/formatter/thread_id.hpp" line="64" column="1" bodyfile="libs/logging/include/hpx/logging/format/formatter/thread_id.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="hpx_2logging_2format_2formatter_2defaults_8hpp_1a089bf4c0ea068dbb3ac1df50495355c3" prot="public" static="no">
+        <type><ref refid="structhpx_1_1util_1_1logging_1_1formatter_1_1idx__t" kindref="compound">idx_t</ref></type>
+        <definition>typedef idx_t hpx::util::logging::formatter::idx</definition>
+        <argsstring></argsstring>
+        <name>idx</name>
+        <briefdescription>
+<para><ref refid="structhpx_1_1util_1_1logging_1_1formatter_1_1idx__t" kindref="compound">idx_t</ref> with default values. See <ref refid="structhpx_1_1util_1_1logging_1_1formatter_1_1idx__t" kindref="compound">idx_t</ref> </para>        </briefdescription>
+        <detaileddescription>
+<para>prefixes each message with an index. Example: <programlisting><codeline><highlight class="normal">L_<sp/>&lt;&lt;<sp/>&quot;my<sp/>message&quot;;</highlight></codeline>
+<codeline><highlight class="normal">L_<sp/>&lt;&lt;<sp/>&quot;my<sp/>2nd<sp/>message&quot;;</highlight></codeline>
+</programlisting></para><para>This will output something similar to:</para><para><programlisting><codeline><highlight class="normal">[1]<sp/>my<sp/>message</highlight></codeline>
+<codeline><highlight class="normal">[2]<sp/>my<sp/>2nd<sp/>message</highlight></codeline>
+</programlisting></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>convert</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[optional] In case there needs to be a conversion between std::(w)string and the string that holds your logged message. See convert_format. For instance, you might use <ref refid="structhpx_1_1util_1_1logging_1_1optimize_1_1cache__string__one__str" kindref="compound">a cached_string class</ref> (see <ref refid="namespacehpx_1_1util_1_1logging_1_1optimize" kindref="compound">optimize namespace</ref>). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging/format/formatter/defaults.hpp" line="143" column="1" bodyfile="libs/logging/include/hpx/logging/format/formatter/defaults.hpp" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="hpx_2logging_2format_2formatter_2defaults_8hpp_1a3c9c8c3ce6f757b66d5200d6028a75cd" prot="public" static="no">
+        <type><ref refid="structhpx_1_1util_1_1logging_1_1formatter_1_1append__newline__t" kindref="compound">append_newline_t</ref></type>
+        <definition>typedef append_newline_t hpx::util::logging::formatter::append_newline</definition>
+        <argsstring></argsstring>
+        <name>append_newline</name>
+        <briefdescription>
+<para><ref refid="structhpx_1_1util_1_1logging_1_1formatter_1_1append__newline__t" kindref="compound">append_newline_t</ref> with default values. See <ref refid="structhpx_1_1util_1_1logging_1_1formatter_1_1append__newline__t" kindref="compound">append_newline_t</ref> </para>        </briefdescription>
+        <detaileddescription>
+<para>Appends a new line. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>convert</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[optional] In case there needs to be a conversion between std::(w)string and the string that holds your logged message. See convert_format. For instance, you might use <ref refid="structhpx_1_1util_1_1logging_1_1optimize_1_1cache__string__one__str" kindref="compound">a cached_string class</ref> (see <ref refid="namespacehpx_1_1util_1_1logging_1_1optimize" kindref="compound">optimize namespace</ref>). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging/format/formatter/defaults.hpp" line="149" column="1" bodyfile="libs/logging/include/hpx/logging/format/formatter/defaults.hpp" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="hpx_2logging_2format_2formatter_2defaults_8hpp_1a16144d1fe8dca086438ca0b5faa8f765" prot="public" static="no">
+        <type><ref refid="structhpx_1_1util_1_1logging_1_1formatter_1_1append__newline__if__needed__t" kindref="compound">append_newline_if_needed_t</ref></type>
+        <definition>typedef append_newline_if_needed_t hpx::util::logging::formatter::append_newline_if_needed</definition>
+        <argsstring></argsstring>
+        <name>append_newline_if_needed</name>
+        <briefdescription>
+<para><ref refid="structhpx_1_1util_1_1logging_1_1formatter_1_1append__newline__if__needed__t" kindref="compound">append_newline_if_needed_t</ref> with default values. See <ref refid="structhpx_1_1util_1_1logging_1_1formatter_1_1append__newline__if__needed__t" kindref="compound">append_newline_if_needed_t</ref> </para>        </briefdescription>
+        <detaileddescription>
+<para>Appends a new line, if not already there. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>convert</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[optional] In case there needs to be a conversion between std::(w)string and the string that holds your logged message. See convert_format. For instance, you might use <ref refid="structhpx_1_1util_1_1logging_1_1optimize_1_1cache__string__one__str" kindref="compound">a cached_string class</ref> (see <ref refid="namespacehpx_1_1util_1_1logging_1_1optimize" kindref="compound">optimize namespace</ref>). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging/format/formatter/defaults.hpp" line="156" column="1" bodyfile="libs/logging/include/hpx/logging/format/formatter/defaults.hpp" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="hpx_2logging_2format_2formatter_2high__precision__time_8hpp_1a9f560e51d82151af4092b6b369854d78" prot="public" static="no">
+        <type><ref refid="structhpx_1_1util_1_1logging_1_1formatter_1_1high__precision__time__t" kindref="compound">high_precision_time_t</ref></type>
+        <definition>typedef high_precision_time_t hpx::util::logging::formatter::high_precision_time</definition>
+        <argsstring></argsstring>
+        <name>high_precision_time</name>
+        <briefdescription>
+<para><ref refid="structhpx_1_1util_1_1logging_1_1formatter_1_1high__precision__time__t" kindref="compound">high_precision_time_t</ref> with default values. See <ref refid="structhpx_1_1util_1_1logging_1_1formatter_1_1high__precision__time__t" kindref="compound">high_precision_time_t</ref> </para>        </briefdescription>
+        <detaileddescription>
+<para>Prefixes the message with a high-precision time (. You pass the format string at construction. <programlisting><codeline><highlight class="normal">#include<sp/>&lt;hpx/logging/format/formatter/high_precision_time.hpp&gt;</highlight></codeline>
+</programlisting></para><para>Internally, it uses hpx::util::date_time::microsec_time_clock. So, our precision matches this class.</para><para>The format can contain escape sequences: $dd - day, 2 digits $MM - month, 2 digits $yy - year, 2 digits $yyyy - year, 4 digits $hh - hour, 2 digits $mm - minute, 2 digits $ss - second, 2 digits $mili - milliseconds $micro - microseconds (if the high precision clock allows; otherwise, it pads zeros) $nano - nanoseconds (if the high precision clock allows; otherwise, it pads zeros)</para><para>Example:</para><para><programlisting><codeline><highlight class="normal">high_precision_time(&quot;$mm:$ss:$micro&quot;);</highlight></codeline>
+</programlisting></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>convert</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[optional] In case there needs to be a conversion between std::(w)string and the string that holds your logged message. See convert_format. For instance, you might use <ref refid="structhpx_1_1util_1_1logging_1_1optimize_1_1cache__string__one__str" kindref="compound">a cached_string class</ref> (see <ref refid="namespacehpx_1_1util_1_1logging_1_1optimize" kindref="compound">optimize namespace</ref>). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging/format/formatter/high_precision_time.hpp" line="161" column="1" bodyfile="libs/logging/include/hpx/logging/format/formatter/high_precision_time.hpp" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="hpx_2logging_2format_2formatter_2time__strf_8hpp_1ae65ef817c561e358e826a9ec54f344f1" prot="public" static="no">
+        <type><ref refid="structhpx_1_1util_1_1logging_1_1formatter_1_1time__strf__t" kindref="compound">time_strf_t</ref></type>
+        <definition>typedef time_strf_t hpx::util::logging::formatter::time_strf</definition>
+        <argsstring></argsstring>
+        <name>time_strf</name>
+        <briefdescription>
+<para><ref refid="structhpx_1_1util_1_1logging_1_1formatter_1_1time__strf__t" kindref="compound">time_strf_t</ref> with default values. See <ref refid="structhpx_1_1util_1_1logging_1_1formatter_1_1time__strf__t" kindref="compound">time_strf_t</ref> </para>        </briefdescription>
+        <detaileddescription>
+<para>Prefixes the message with the time, by using strftime function. You pass the format string at construction. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type that holds your logged message.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>convert</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[optional] In case there needs to be a conversion between std::(w)string and the string that holds your logged message. See convert_format. For instance, you might use <ref refid="structhpx_1_1util_1_1logging_1_1optimize_1_1cache__string__one__str" kindref="compound">a cached_string class</ref> (see <ref refid="namespacehpx_1_1util_1_1logging_1_1optimize" kindref="compound">optimize namespace</ref>). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging/format/formatter/time_strf.hpp" line="80" column="1" bodyfile="libs/logging/include/hpx/logging/format/formatter/time_strf.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="hpx_2logging_2format_2formatter_2spacer_8hpp_1a21710b221199c44dbfbd3e9fea24aee9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class original_formatter</type>
+          </param>
+        </templateparamlist>
+        <type>detail::find_spacer&lt; original_formatter &gt;::type</type>
+        <definition>detail::find_spacer&lt;original_formatter&gt;::type hpx::util::logging::formatter::spacer</definition>
+        <argsstring>(const original_formatter &amp;fmt, const char *format_str)</argsstring>
+        <name>spacer</name>
+        <param>
+          <type>const original_formatter &amp;</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>format_str</declname>
+        </param>
+        <briefdescription>
+<para>Prepends some info, and appends some info to an existing formatter. </para>        </briefdescription>
+        <detaileddescription>
+<para>The syntax is simple: construct a spacer by passing the original formatter, and the text to space (prepend and append). Use:<itemizedlist>
+<listitem><para><computeroutput>%</computeroutput> to mean the original formatter text</para></listitem><listitem><para>anything before <computeroutput>&quot;%&quot;</computeroutput> is prepended before</para></listitem><listitem><para>anything after <computeroutput>&quot;%&quot;</computeroutput> is appended after</para></listitem></itemizedlist>
+</para><para>Examples:</para><para><programlisting><codeline><highlight class="normal">//<sp/>prefix<sp/>&quot;[&quot;<sp/>before<sp/>index,<sp/>and<sp/>append<sp/>&quot;]<sp/>&quot;<sp/>after<sp/>it.</highlight></codeline>
+<codeline><highlight class="normal">formatter::spacer(<sp/>formatter::idx(),<sp/>&quot;[%]<sp/>&quot;);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>prefix<sp/>&quot;{T&quot;<sp/>before<sp/>thread_id,<sp/>and<sp/>append<sp/>&quot;}<sp/>&quot;<sp/>after<sp/>it</highlight></codeline>
+<codeline><highlight class="normal">formatter::spacer(<sp/>formatter::thread_id(),<sp/>&quot;{T%}<sp/>&quot;);</highlight></codeline>
+</programlisting></para><para>When adding a spacer formatter, you&apos;ll do something similar to:</para><para><programlisting><codeline><highlight class="normal">g_l()-&gt;writer().add_formatter(<sp/>formatter::spacer(<sp/>formatter::idx(),<sp/>&quot;[%]<sp/>&quot;)<sp/>);</highlight></codeline>
+</programlisting></para><para>However, to make this even simpler, I allow an ever easier syntax:</para><para><programlisting><codeline><highlight class="normal">//<sp/>equivalent<sp/>to<sp/>the<sp/>above</highlight></codeline>
+<codeline><highlight class="normal">g_l()-&gt;writer().add_formatter(<sp/>formatter::idx(),<sp/>&quot;[%]<sp/>&quot;<sp/>);</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/logging/include/hpx/logging/format/formatter/spacer.hpp" line="216" column="1" bodyfile="libs/logging/include/hpx/logging/format/formatter/spacer.hpp" bodystart="216" bodyend="222"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libs/logging/include/hpx/logging/format/formatter/named_spacer.hpp" line="31" column="1"/>
+  </compounddef>
+</doxygen>

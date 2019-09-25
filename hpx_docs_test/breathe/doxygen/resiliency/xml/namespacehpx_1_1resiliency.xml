@@ -1,0 +1,585 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacehpx_1_1resiliency" kind="namespace" language="C++">
+    <compoundname>hpx::resiliency</compoundname>
+    <innerclass refid="structhpx_1_1resiliency_1_1abort__replay__exception" prot="public">hpx::resiliency::abort_replay_exception</innerclass>
+    <innerclass refid="structhpx_1_1resiliency_1_1abort__replicate__exception" prot="public">hpx::resiliency::abort_replicate_exception</innerclass>
+    <innerclass refid="structhpx_1_1resiliency_1_1force__linking__helper" prot="public">hpx::resiliency::force_linking_helper</innerclass>
+    <innernamespace refid="namespacehpx_1_1resiliency_1_1functional">hpx::resiliency::functional</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="async__replicate_8hpp_1a7ae0afa5d53e1b76af6b1a1d62e6b665" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Vote</type>
+          </param>
+          <param>
+            <type>typename Pred</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>hpx::future&lt; typename hpx::util::detail::invoke_deferred_result&lt; F, Ts... &gt;::type &gt;</type>
+        <definition>hpx::future&lt; typename hpx::util::detail::invoke_deferred_result&lt;F, Ts...&gt;::type&gt; hpx::resiliency::async_replicate_vote_validate</definition>
+        <argsstring>(std::size_t n, Vote &amp;&amp;vote, Pred &amp;&amp;pred, F &amp;&amp;f, Ts &amp;&amp;... ts)</argsstring>
+        <name>async_replicate_vote_validate</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>Vote &amp;&amp;</type>
+          <declname>vote</declname>
+        </param>
+        <param>
+          <type>Pred &amp;&amp;</type>
+          <declname>pred</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Asynchronously launch given function <emphasis>f</emphasis> exactly <emphasis>n</emphasis> times. Verify the result of those invocations using the given predicate <emphasis>pred</emphasis>. Run all the valid results against a user provided voting function. Return the valid output. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/resiliency/include/hpx/resiliency/async_replicate.hpp" line="83" column="1" bodyfile="libs/resiliency/include/hpx/resiliency/async_replicate.hpp" bodystart="83" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="async__replicate_8hpp_1af72a27be949ed129425410508653e0aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Vote</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>hpx::future&lt; typename hpx::util::detail::invoke_deferred_result&lt; F, Ts... &gt;::type &gt;</type>
+        <definition>hpx::future&lt; typename hpx::util::detail::invoke_deferred_result&lt;F, Ts...&gt;::type&gt; hpx::resiliency::async_replicate_vote</definition>
+        <argsstring>(std::size_t n, Vote &amp;&amp;vote, F &amp;&amp;f, Ts &amp;&amp;... ts)</argsstring>
+        <name>async_replicate_vote</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>Vote &amp;&amp;</type>
+          <declname>vote</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Asynchronously launch given function <emphasis>f</emphasis> exactly <emphasis>n</emphasis> times. Verify the result of those invocations using the given predicate <emphasis>pred</emphasis>. Run all the valid results against a user provided voting function. Return the valid output. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/resiliency/include/hpx/resiliency/async_replicate.hpp" line="151" column="1" bodyfile="libs/resiliency/include/hpx/resiliency/async_replicate.hpp" bodystart="151" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="async__replicate_8hpp_1a32cfa90fee65c0aa67b5aa9cb5057ef5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Pred</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>hpx::future&lt; typename hpx::util::detail::invoke_deferred_result&lt; F, Ts... &gt;::type &gt;</type>
+        <definition>hpx::future&lt; typename hpx::util::detail::invoke_deferred_result&lt;F, Ts...&gt;::type&gt; hpx::resiliency::async_replicate_validate</definition>
+        <argsstring>(std::size_t n, Pred &amp;&amp;pred, F &amp;&amp;f, Ts &amp;&amp;... ts)</argsstring>
+        <name>async_replicate_validate</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>Pred &amp;&amp;</type>
+          <declname>pred</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Asynchronously launch given function <emphasis>f</emphasis> exactly <emphasis>n</emphasis> times. Verify the result of those invocations using the given predicate <emphasis>pred</emphasis>. Return the first valid result. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/resiliency/include/hpx/resiliency/async_replicate.hpp" line="165" column="1" bodyfile="libs/resiliency/include/hpx/resiliency/async_replicate.hpp" bodystart="165" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="async__replicate_8hpp_1acb8f41870e03ef502ca274e413a07e33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>hpx::future&lt; typename hpx::util::detail::invoke_deferred_result&lt; F, Ts... &gt;::type &gt;</type>
+        <definition>hpx::future&lt; typename hpx::util::detail::invoke_deferred_result&lt;F, Ts...&gt;::type&gt; hpx::resiliency::async_replicate</definition>
+        <argsstring>(std::size_t n, F &amp;&amp;f, Ts &amp;&amp;... ts)</argsstring>
+        <name>async_replicate</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Asynchronously launch given function <emphasis>f</emphasis> exactly <emphasis>n</emphasis> times. Verify the result of those invocations by checking for exception. Return the first valid result. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/resiliency/include/hpx/resiliency/async_replicate.hpp" line="179" column="1" bodyfile="libs/resiliency/include/hpx/resiliency/async_replicate.hpp" bodystart="179" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="version_8hpp_1aec58b750b29886c2067ecc76289a36fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int hpx::resiliency::major_version</definition>
+        <argsstring>()</argsstring>
+        <name>major_version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/resiliency/include/hpx/resiliency/version.hpp" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="version_8hpp_1a6d3d752f5ebbc26a224055a4a51714d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int hpx::resiliency::minor_version</definition>
+        <argsstring>()</argsstring>
+        <name>minor_version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/resiliency/include/hpx/resiliency/version.hpp" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="version_8hpp_1a5f8fbd541b923742828989aa04b65cdd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int hpx::resiliency::subminor_version</definition>
+        <argsstring>()</argsstring>
+        <name>subminor_version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/resiliency/include/hpx/resiliency/version.hpp" line="38" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="version_8hpp_1a19031bf08f2bccbed286211fd6f9c9fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned long</type>
+        <definition>unsigned long hpx::resiliency::full_version</definition>
+        <argsstring>()</argsstring>
+        <name>full_version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/resiliency/include/hpx/resiliency/version.hpp" line="39" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="version_8hpp_1ad46e5f594e5c5273d49c0e0e26b007e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string hpx::resiliency::full_version_str</definition>
+        <argsstring>()</argsstring>
+        <name>full_version_str</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/resiliency/include/hpx/resiliency/version.hpp" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="async__replay_8hpp_1abd661f9ddfec18a8bf575cbdb8f88fd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Pred</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>hpx::future&lt; typename hpx::util::detail::invoke_deferred_result&lt; F, Ts... &gt;::type &gt;</type>
+        <definition>hpx::future&lt; typename hpx::util::detail::invoke_deferred_result&lt;F, Ts...&gt;::type&gt; hpx::resiliency::async_replay_validate</definition>
+        <argsstring>(std::size_t n, Pred &amp;&amp;pred, F &amp;&amp;f, Ts &amp;&amp;... ts)</argsstring>
+        <name>async_replay_validate</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>Pred &amp;&amp;</type>
+          <declname>pred</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Asynchronously launch given function <emphasis>f</emphasis>. Verify the result of those invocations using the given predicate <emphasis>pred</emphasis>. Repeat launching on error exactly <emphasis>n</emphasis> times (except if <ref refid="structhpx_1_1resiliency_1_1abort__replay__exception" kindref="compound">abort_replay_exception</ref> is thrown). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/resiliency/include/hpx/resiliency/async_replay.hpp" line="176" column="1" bodyfile="libs/resiliency/include/hpx/resiliency/async_replay.hpp" bodystart="176" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="async__replay_8hpp_1abd96148f7b4d8736e4c7de8fd2f1cbc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>hpx::future&lt; typename hpx::util::detail::invoke_deferred_result&lt; F, Ts... &gt;::type &gt;</type>
+        <definition>hpx::future&lt; typename hpx::util::detail::invoke_deferred_result&lt;F, Ts...&gt;::type&gt; hpx::resiliency::async_replay</definition>
+        <argsstring>(std::size_t n, F &amp;&amp;f, Ts &amp;&amp;... ts)</argsstring>
+        <name>async_replay</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Asynchronously launch given function <emphasis>f</emphasis>. Repeat launching on error exactly <emphasis>n</emphasis> times (except if <ref refid="structhpx_1_1resiliency_1_1abort__replay__exception" kindref="compound">abort_replay_exception</ref> is thrown). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/resiliency/include/hpx/resiliency/async_replay.hpp" line="194" column="1" bodyfile="libs/resiliency/include/hpx/resiliency/async_replay.hpp" bodystart="194" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="dataflow__replay_8hpp_1afc704d74aa2ecea1e8d020d12d7fdf83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Pred</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>hpx::future&lt; typename hpx::util::detail::invoke_deferred_result&lt; F, Ts... &gt;::type &gt;</type>
+        <definition>hpx::future&lt; typename hpx::util::detail::invoke_deferred_result&lt;F, Ts...&gt;::type&gt; hpx::resiliency::dataflow_replay_validate</definition>
+        <argsstring>(std::size_t n, Pred &amp;&amp;pred, F &amp;&amp;f, Ts &amp;&amp;... ts)</argsstring>
+        <name>dataflow_replay_validate</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>Pred &amp;&amp;</type>
+          <declname>pred</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Asynchronously launch given function <emphasis>f</emphasis>. Verify the result of those invocations using the given predicate <emphasis>pred</emphasis>. Repeat launching on error exactly <emphasis>n</emphasis> times.</para><para>Delay the invocation of <emphasis>f</emphasis> if any of the arguments to <emphasis>f</emphasis> are futures. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/resiliency/include/hpx/resiliency/dataflow_replay.hpp" line="33" column="1" bodyfile="libs/resiliency/include/hpx/resiliency/dataflow_replay.hpp" bodystart="33" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="dataflow__replay_8hpp_1ae841d39a64a7c95b8b3c4b99a6bcab6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>hpx::future&lt; typename hpx::util::detail::invoke_deferred_result&lt; F, Ts... &gt;::type &gt;</type>
+        <definition>hpx::future&lt; typename hpx::util::detail::invoke_deferred_result&lt;F, Ts...&gt;::type&gt; hpx::resiliency::dataflow_replay</definition>
+        <argsstring>(std::size_t n, F &amp;&amp;f, Ts &amp;&amp;... ts)</argsstring>
+        <name>dataflow_replay</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Asynchronously launch given function <emphasis>f</emphasis>. Repeat launching on error exactly <emphasis>n</emphasis> times.</para><para>Delay the invocation of <emphasis>f</emphasis> if any of the arguments to <emphasis>f</emphasis> are futures. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/resiliency/include/hpx/resiliency/dataflow_replay.hpp" line="49" column="1" bodyfile="libs/resiliency/include/hpx/resiliency/dataflow_replay.hpp" bodystart="49" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="dataflow__replicate_8hpp_1ad39583bfc5ce2e400edb3f4257dba6df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Vote</type>
+          </param>
+          <param>
+            <type>typename Pred</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>hpx::future&lt; typename hpx::util::detail::invoke_deferred_result&lt; F, Ts... &gt;::type &gt;</type>
+        <definition>hpx::future&lt; typename hpx::util::detail::invoke_deferred_result&lt;F, Ts...&gt;::type&gt; hpx::resiliency::dataflow_replicate_vote_validate</definition>
+        <argsstring>(std::size_t n, Vote &amp;&amp;vote, Pred &amp;&amp;pred, F &amp;&amp;f, Ts &amp;&amp;... ts)</argsstring>
+        <name>dataflow_replicate_vote_validate</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>Vote &amp;&amp;</type>
+          <declname>vote</declname>
+        </param>
+        <param>
+          <type>Pred &amp;&amp;</type>
+          <declname>pred</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Launch given function <emphasis>f</emphasis> exactly <emphasis>n</emphasis> times. Run all the valid results against a user provided voting function. Return the valid output.</para><para>Delay the invocation of <emphasis>f</emphasis> if any of the arguments to <emphasis>f</emphasis> are futures. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/resiliency/include/hpx/resiliency/dataflow_replicate.hpp" line="34" column="1" bodyfile="libs/resiliency/include/hpx/resiliency/dataflow_replicate.hpp" bodystart="34" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="dataflow__replicate_8hpp_1ac7d86dd33eb999677feb05fa25257519" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Vote</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>hpx::future&lt; typename hpx::util::detail::invoke_deferred_result&lt; F, Ts... &gt;::type &gt;</type>
+        <definition>hpx::future&lt; typename hpx::util::detail::invoke_deferred_result&lt;F, Ts...&gt;::type&gt; hpx::resiliency::dataflow_replicate_vote</definition>
+        <argsstring>(std::size_t n, Vote &amp;&amp;vote, F &amp;&amp;f, Ts &amp;&amp;... ts)</argsstring>
+        <name>dataflow_replicate_vote</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>Vote &amp;&amp;</type>
+          <declname>vote</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Launch given function <emphasis>f</emphasis> exactly <emphasis>n</emphasis> times. Run all the valid results against a user provided voting function. Return the valid output.</para><para>Delay the invocation of <emphasis>f</emphasis> if any of the arguments to <emphasis>f</emphasis> are futures. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/resiliency/include/hpx/resiliency/dataflow_replicate.hpp" line="52" column="1" bodyfile="libs/resiliency/include/hpx/resiliency/dataflow_replicate.hpp" bodystart="52" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="dataflow__replicate_8hpp_1ab22c5c06f649ccf2f1fa46c83bf56973" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Pred</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>hpx::future&lt; typename hpx::util::detail::invoke_deferred_result&lt; F, Ts... &gt;::type &gt;</type>
+        <definition>hpx::future&lt; typename hpx::util::detail::invoke_deferred_result&lt;F, Ts...&gt;::type&gt; hpx::resiliency::dataflow_replicate_validate</definition>
+        <argsstring>(std::size_t n, Pred &amp;&amp;pred, F &amp;&amp;f, Ts &amp;&amp;... ts)</argsstring>
+        <name>dataflow_replicate_validate</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>Pred &amp;&amp;</type>
+          <declname>pred</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Launch given function <emphasis>f</emphasis> exactly <emphasis>n</emphasis> times. Verify the result of those invocations using the given predicate <emphasis>pred</emphasis>. Return the first valid result.</para><para>Delay the invocation of <emphasis>f</emphasis> if any of the arguments to <emphasis>f</emphasis> are futures. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/resiliency/include/hpx/resiliency/dataflow_replicate.hpp" line="69" column="1" bodyfile="libs/resiliency/include/hpx/resiliency/dataflow_replicate.hpp" bodystart="69" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="dataflow__replicate_8hpp_1a25fcb2584aff2d005249d8bc8fb84bb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>hpx::future&lt; typename hpx::util::detail::invoke_deferred_result&lt; F, Ts... &gt;::type &gt;</type>
+        <definition>hpx::future&lt; typename hpx::util::detail::invoke_deferred_result&lt;F, Ts...&gt;::type&gt; hpx::resiliency::dataflow_replicate</definition>
+        <argsstring>(std::size_t n, F &amp;&amp;f, Ts &amp;&amp;... ts)</argsstring>
+        <name>dataflow_replicate</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Launch given function <emphasis>f</emphasis> exactly <emphasis>n</emphasis> times. Return the first valid result.</para><para>Delay the invocation of <emphasis>f</emphasis> if any of the arguments to <emphasis>f</emphasis> are futures. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/resiliency/include/hpx/resiliency/dataflow_replicate.hpp" line="85" column="1" bodyfile="libs/resiliency/include/hpx/resiliency/dataflow_replicate.hpp" bodystart="85" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="force__linking_8hpp_1a2d2c07e34953fd792ea789867fa3247c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structhpx_1_1resiliency_1_1force__linking__helper" kindref="compound">force_linking_helper</ref> &amp;</type>
+        <definition>force_linking_helper&amp; hpx::resiliency::force_linking</definition>
+        <argsstring>()</argsstring>
+        <name>force_linking</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/resiliency/include/hpx/resiliency/force_linking.hpp" line="22" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libs/resiliency/include/hpx/resiliency/async_replicate.hpp" line="25" column="1"/>
+  </compounddef>
+</doxygen>

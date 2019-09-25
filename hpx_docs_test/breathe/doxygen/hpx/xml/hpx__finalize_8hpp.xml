@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="hpx__finalize_8hpp" kind="file" language="C++">
+    <compoundname>hpx_finalize.hpp</compoundname>
+    <includes local="no">hpx/config.hpp</includes>
+    <includes local="no">hpx/errors.hpp</includes>
+    <includedby refid="hpx__init_8hpp" local="no">hpx/hpx_init.hpp</includedby>
+    <includedby refid="hpx__start_8hpp" local="no">hpx/hpx_start.hpp</includedby>
+    <incdepgraph>
+      <node id="0">
+        <label>hpx/hpx_finalize.hpp</label>
+        <link refid="hpx__finalize_8hpp"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>hpx/config.hpp</label>
+      </node>
+      <node id="2">
+        <label>hpx/errors.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>hpx/hpx_finalize.hpp</label>
+        <link refid="hpx__finalize_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>hpx/hpx_init.hpp</label>
+        <link refid="hpx__init_8hpp"/>
+      </node>
+      <node id="5">
+        <label>hpx/hpx_start.hpp</label>
+        <link refid="hpx__start_8hpp"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacehpx">hpx</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2007-2012<sp/>Hartmut<sp/>Kaiser</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Distributed<sp/>under<sp/>the<sp/>Boost<sp/>Software<sp/>License,<sp/>Version<sp/>1.0.<sp/>(See<sp/>accompanying</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>file<sp/>LICENSE_1_0.txt<sp/>or<sp/>copy<sp/>at<sp/>http://www.boost.org/LICENSE_1_0.txt)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>HPX_HPX_FINALIZE_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPX_HPX_FINALIZE_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/config.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/errors.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehpx" kindref="compound">hpx</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>HPX_EXPORT<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hpx__finalize_8hpp_1ab7eb159cb77997b366b5d79e65f04cd0" kindref="member">finalize</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>shutdown_timeout,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>localwait<sp/>=<sp/>-1.0,<sp/>error_code&amp;<sp/>ec<sp/>=<sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="hpx__finalize_8hpp_1adadfe0973783fa126afca52feda59529" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hpx__finalize_8hpp_1ab7eb159cb77997b366b5d79e65f04cd0" kindref="member">finalize</ref>(error_code&amp;<sp/>ec<sp/>=<sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="hpx__finalize_8hpp_1ab7eb159cb77997b366b5d79e65f04cd0" kindref="member">finalize</ref>(-1.0,<sp/>-1.0,<sp/>ec);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>HPX_NORETURN<sp/>HPX_EXPORT<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hpx__finalize_8hpp_1a460472f748021ade829cca393930d1a2" kindref="member">terminate</ref>();</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight></codeline>
+<codeline lineno="164"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>HPX_EXPORT<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hpx__finalize_8hpp_1a33db29f916f1591d6b37c6b6d76886d3" kindref="member">disconnect</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>shutdown_timeout,</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>localwait<sp/>=<sp/>-1.0,<sp/>error_code&amp;<sp/>ec<sp/>=<sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190" refid="hpx__finalize_8hpp_1ad05607f97e7977530074039d29ca0512" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>disconnect(error_code&amp;<sp/>ec<sp/>=<sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>disconnect(-1.0,<sp/>-1.0,<sp/>ec);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>HPX_EXPORT<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hpx__finalize_8hpp_1a1b4c2c4851fcae7c6c01617b6181d44f" kindref="member">stop</ref>(error_code&amp;<sp/>ec<sp/>=<sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*HPX_HPX_FINALIZE_HPP*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="hpx/hpx_finalize.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,293 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacehpx_1_1util" kind="namespace" language="C++">
+    <compoundname>hpx::util</compoundname>
+    <innerclass refid="structhpx_1_1util_1_1manage__config" prot="public">hpx::util::manage_config</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="insert__checked_8hpp_1a7e8176e33cff23ca51892155d4b29baa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Iterator</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool hpx::util::insert_checked</definition>
+        <argsstring>(std::pair&lt; Iterator, bool &gt; const &amp;r)</argsstring>
+        <name>insert_checked</name>
+        <param>
+          <type>std::pair&lt; Iterator, bool &gt; const &amp;</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+<para>Helper function for writing predicates that test whether an std::map insertion succeeded. This inline template function negates the need to explicitly write the sometimes lengthy std::pair&lt;Iterator, bool&gt; type. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The return value of a std::map insert operation.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function returns <bold>r.second</bold>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/util/include/hpx/util/insert_checked.hpp" line="25" column="1" bodyfile="libs/util/include/hpx/util/insert_checked.hpp" bodystart="25" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="insert__checked_8hpp_1aba9a5421803efd6e2cb8cdd24cef8579" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Iterator</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool hpx::util::insert_checked</definition>
+        <argsstring>(std::pair&lt; Iterator, bool &gt; const &amp;r, Iterator &amp;it)</argsstring>
+        <name>insert_checked</name>
+        <param>
+          <type>std::pair&lt; Iterator, bool &gt; const &amp;</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>Iterator &amp;</type>
+          <declname>it</declname>
+        </param>
+        <briefdescription>
+<para>Helper function for writing predicates that test whether an std::map insertion succeeded. This inline template function negates the need to explicitly write the sometimes lengthy std::pair&lt;Iterator, bool&gt; type. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in] The return value of a std::map insert operation.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[out] A reference to an Iterator, which is set to <bold>r.first</bold>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function returns <bold>r.second</bold>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/util/include/hpx/util/insert_checked.hpp" line="42" column="1" bodyfile="libs/util/include/hpx/util/insert_checked.hpp" bodystart="42" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="safe__lexical__cast_8hpp_1aca0372e368b829ebac21ebfb2f50a82b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename DestType</type>
+          </param>
+          <param>
+            <type>typename SrcType</type>
+          </param>
+        </templateparamlist>
+        <type>DestType</type>
+        <definition>DestType hpx::util::safe_lexical_cast</definition>
+        <argsstring>(SrcType const &amp;value, DestType const &amp;dflt=DestType())</argsstring>
+        <name>safe_lexical_cast</name>
+        <param>
+          <type>SrcType const &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>DestType const &amp;</type>
+          <declname>dflt</declname>
+          <defval>DestType()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/util/include/hpx/util/safe_lexical_cast.hpp" line="19" column="1" bodyfile="libs/util/include/hpx/util/safe_lexical_cast.hpp" bodystart="19" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="safe__lexical__cast_8hpp_1a786aff4f21524d5849bcfe24742765e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename DestType</type>
+          </param>
+          <param>
+            <type>typename Config</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; std::is_integral&lt; DestType &gt;::value, DestType &gt;::type</type>
+        <definition>std::enable_if&lt;std::is_integral&lt;DestType&gt;::value, DestType&gt;::type hpx::util::get_entry_as</definition>
+        <argsstring>(Config const &amp;config, std::string const &amp;key, DestType const &amp;dflt)</argsstring>
+        <name>get_entry_as</name>
+        <param>
+          <type>Config const &amp;</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>DestType const &amp;</type>
+          <declname>dflt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/util/include/hpx/util/safe_lexical_cast.hpp" line="35" column="1" bodyfile="libs/util/include/hpx/util/safe_lexical_cast.hpp" bodystart="35" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="safe__lexical__cast_8hpp_1a1a74569deb533fedc229fe406f86e0bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename DestType</type>
+          </param>
+          <param>
+            <type>typename Config</type>
+          </param>
+        </templateparamlist>
+        <type>DestType</type>
+        <definition>DestType hpx::util::get_entry_as</definition>
+        <argsstring>(Config const &amp;config, std::string const &amp;key, std::string const &amp;dflt)</argsstring>
+        <name>get_entry_as</name>
+        <param>
+          <type>Config const &amp;</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>dflt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/util/include/hpx/util/safe_lexical_cast.hpp" line="42" column="1" bodyfile="libs/util/include/hpx/util/safe_lexical_cast.hpp" bodystart="42" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="calculate__fanout_8hpp_1a157728aa727aaa0200e26e5992fc504a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t hpx::util::calculate_fanout</definition>
+        <argsstring>(std::size_t size, std::size_t local_fanout)</argsstring>
+        <name>calculate_fanout</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>local_fanout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/util/include/hpx/util/calculate_fanout.hpp" line="12" column="1" bodyfile="libs/util/include/hpx/util/calculate_fanout.hpp" bodystart="12" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="get__and__reset__value_8hpp_1a3952d735872e35623076f5a690a9579c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::uint64_t</type>
+        <definition>std::uint64_t hpx::util::get_and_reset_value</definition>
+        <argsstring>(std::uint64_t &amp;value, bool reset) noexcept</argsstring>
+        <name>get_and_reset_value</name>
+        <param>
+          <type>std::uint64_t &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>reset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/util/include/hpx/util/get_and_reset_value.hpp" line="15" column="1" bodyfile="libs/util/include/hpx/util/get_and_reset_value.hpp" bodystart="15" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="get__and__reset__value_8hpp_1af93bbbaf0b6acce0d65c70243b1ea7eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::int64_t</type>
+        <definition>std::int64_t hpx::util::get_and_reset_value</definition>
+        <argsstring>(std::int64_t &amp;value, bool reset) noexcept</argsstring>
+        <name>get_and_reset_value</name>
+        <param>
+          <type>std::int64_t &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>reset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/util/include/hpx/util/get_and_reset_value.hpp" line="24" column="1" bodyfile="libs/util/include/hpx/util/get_and_reset_value.hpp" bodystart="24" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="get__and__reset__value_8hpp_1a2be5fb3db25bedeeb7338b5397846a5b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T hpx::util::get_and_reset_value</definition>
+        <argsstring>(std::atomic&lt; T &gt; &amp;value, bool reset) noexcept</argsstring>
+        <name>get_and_reset_value</name>
+        <param>
+          <type>std::atomic&lt; T &gt; &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>reset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/util/include/hpx/util/get_and_reset_value.hpp" line="34" column="1" bodyfile="libs/util/include/hpx/util/get_and_reset_value.hpp" bodystart="34" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="get__and__reset__value_8hpp_1a5728175bda40266257d6ad9be2350473" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; std::int64_t &gt;</type>
+        <definition>std::vector&lt;std::int64_t&gt; hpx::util::get_and_reset_value</definition>
+        <argsstring>(std::vector&lt; std::int64_t &gt; &amp;value, bool reset) noexcept</argsstring>
+        <name>get_and_reset_value</name>
+        <param>
+          <type>std::vector&lt; std::int64_t &gt; &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>reset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/util/include/hpx/util/get_and_reset_value.hpp" line="41" column="1" bodyfile="libs/util/include/hpx/util/get_and_reset_value.hpp" bodystart="41" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libs/util/include/hpx/util/insert_checked.hpp" line="13" column="1"/>
+  </compounddef>
+</doxygen>

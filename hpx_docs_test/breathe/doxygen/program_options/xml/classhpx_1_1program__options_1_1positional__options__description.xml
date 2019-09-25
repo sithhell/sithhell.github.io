@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classhpx_1_1program__options_1_1positional__options__description" kind="class" language="C++" prot="public">
+    <compoundname>hpx::program_options::positional_options_description</compoundname>
+    <includes refid="positional__options_8hpp" local="no">positional_options.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhpx_1_1program__options_1_1positional__options__description_1a8bf530e83b2f4e2429d755f818b871fa" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; hpx::program_options::positional_options_description::m_names</definition>
+        <argsstring></argsstring>
+        <name>m_names</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/positional_options.hpp" line="73" column="1" bodyfile="libs/program_options/include/hpx/program_options/positional_options.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhpx_1_1program__options_1_1positional__options__description_1ac8a0bb5d7b8ec5637f3816871f79cdee" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string hpx::program_options::positional_options_description::m_trailing</definition>
+        <argsstring></argsstring>
+        <name>m_trailing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/positional_options.hpp" line="74" column="1" bodyfile="libs/program_options/include/hpx/program_options/positional_options.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1positional__options__description_1a4c89e6d52d10c48196f7d217274b8e76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hpx::program_options::positional_options_description::positional_options_description</definition>
+        <argsstring>()</argsstring>
+        <name>positional_options_description</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/positional_options.hpp" line="49" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1positional__options__description_1aeeaa4e20dac34878a3b93ba1f3dfd16b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classhpx_1_1program__options_1_1positional__options__description" kindref="compound">positional_options_description</ref> &amp;</type>
+        <definition>positional_options_description&amp; hpx::program_options::positional_options_description::add</definition>
+        <argsstring>(const char *name, int max_count)</argsstring>
+        <name>add</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Species that up to &apos;max_count&apos; next positional options should be given the &apos;name&apos;. The value of &apos;-1&apos; means &apos;unlimited&apos;. No calls to &apos;add&apos; can be made after call with &apos;max_value&apos; equal to &apos;-1&apos;. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/positional_options.hpp" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1positional__options__description_1a3ed3f1b3e2eff1661d1bf3fb8d248ea0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned</type>
+        <definition>unsigned hpx::program_options::positional_options_description::max_total_count</definition>
+        <argsstring>() const</argsstring>
+        <name>max_total_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the maximum number of positional options that can be present. Can return (numeric_limits&lt;unsigned&gt;::max)() to indicate unlimited number. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/positional_options.hpp" line="61" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1program__options_1_1positional__options__description_1a972e19957bd818b366defb39e07803c3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string&amp; hpx::program_options::positional_options_description::name_for_position</definition>
+        <argsstring>(unsigned position) const</argsstring>
+        <name>name_for_position</name>
+        <param>
+          <type>unsigned</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the name that should be associated with positional options at &apos;position&apos;. Precondition: position &lt; <ref refid="classhpx_1_1program__options_1_1positional__options__description_1a3ed3f1b3e2eff1661d1bf3fb8d248ea0" kindref="member">max_total_count()</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/program_options/include/hpx/program_options/positional_options.hpp" line="67" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Describes positional options.</para><para>The class allows to guess option names for positional options, which are specified on the command line and are identified by the position. The class uses the information provided by the user to associate a name with every positional option, or tell that no name is known.</para><para>The primary assumption is that only the relative order of the positional options themselves matters, and that any interleaving ordinary options don&apos;t affect interpretation of positional options.</para><para>The user initializes the class by specifying that first N positional options should be given the name X1, following M options should be given the name X2 and so on. </para>    </detaileddescription>
+    <location file="libs/program_options/include/hpx/program_options/positional_options.hpp" line="47" column="1" bodyfile="libs/program_options/include/hpx/program_options/positional_options.hpp" bodystart="46" bodyend="75"/>
+    <listofallmembers>
+      <member refid="classhpx_1_1program__options_1_1positional__options__description_1aeeaa4e20dac34878a3b93ba1f3dfd16b" prot="public" virt="non-virtual"><scope>hpx::program_options::positional_options_description</scope><name>add</name></member>
+      <member refid="classhpx_1_1program__options_1_1positional__options__description_1a8bf530e83b2f4e2429d755f818b871fa" prot="private" virt="non-virtual"><scope>hpx::program_options::positional_options_description</scope><name>m_names</name></member>
+      <member refid="classhpx_1_1program__options_1_1positional__options__description_1ac8a0bb5d7b8ec5637f3816871f79cdee" prot="private" virt="non-virtual"><scope>hpx::program_options::positional_options_description</scope><name>m_trailing</name></member>
+      <member refid="classhpx_1_1program__options_1_1positional__options__description_1a3ed3f1b3e2eff1661d1bf3fb8d248ea0" prot="public" virt="non-virtual"><scope>hpx::program_options::positional_options_description</scope><name>max_total_count</name></member>
+      <member refid="classhpx_1_1program__options_1_1positional__options__description_1a972e19957bd818b366defb39e07803c3" prot="public" virt="non-virtual"><scope>hpx::program_options::positional_options_description</scope><name>name_for_position</name></member>
+      <member refid="classhpx_1_1program__options_1_1positional__options__description_1a4c89e6d52d10c48196f7d217274b8e76" prot="public" virt="non-virtual"><scope>hpx::program_options::positional_options_description</scope><name>positional_options_description</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,641 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="segmented__iterator__traits_8hpp" kind="file" language="C++">
+    <compoundname>segmented_iterator_traits.hpp</compoundname>
+    <includes local="no">hpx/config.hpp</includes>
+    <includes local="no">hpx/iterator_support/is_iterator.hpp</includes>
+    <includes local="no">hpx/type_support/decay.hpp</includes>
+    <includes local="no">type_traits</includes>
+    <includes local="no">utility</includes>
+    <includedby refid="algorithms_2generate_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/generate.hpp</includedby>
+    <includedby refid="algorithms_2move_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/move.hpp</includedby>
+    <includedby refid="algorithms_2for__each_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/for_each.hpp</includedby>
+    <includedby refid="algorithms_2minmax_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/minmax.hpp</includedby>
+    <includedby refid="transform__reduce_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/transform_reduce.hpp</includedby>
+    <includedby refid="algorithms_2transform_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/transform.hpp</includedby>
+    <includedby refid="algorithms_2count_8hpp" local="no">libs/algorithms/include/hpx/parallel/algorithms/count.hpp</includedby>
+    <includedby refid="projected_8hpp" local="no">libs/algorithms/include/hpx/parallel/traits/projected.hpp</includedby>
+    <incdepgraph>
+      <node id="5185">
+        <label>hpx/type_support/decay.hpp</label>
+      </node>
+      <node id="5182">
+        <label>libs/algorithms/include/hpx/traits/segmented_iterator_traits.hpp</label>
+        <link refid="segmented__iterator__traits_8hpp"/>
+        <childnode refid="5183" relation="include">
+        </childnode>
+        <childnode refid="5184" relation="include">
+        </childnode>
+        <childnode refid="5185" relation="include">
+        </childnode>
+        <childnode refid="5186" relation="include">
+        </childnode>
+        <childnode refid="5187" relation="include">
+        </childnode>
+      </node>
+      <node id="5183">
+        <label>hpx/config.hpp</label>
+      </node>
+      <node id="5184">
+        <label>hpx/iterator_support/is_iterator.hpp</label>
+      </node>
+      <node id="5187">
+        <label>utility</label>
+      </node>
+      <node id="5186">
+        <label>type_traits</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5222">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/partition.hpp</label>
+        <link refid="container__algorithms_2partition_8hpp"/>
+        <childnode refid="5191" relation="include">
+        </childnode>
+      </node>
+      <node id="5202">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/lexicographical_compare.hpp</label>
+        <link refid="lexicographical__compare_8hpp"/>
+        <childnode refid="5190" relation="include">
+        </childnode>
+      </node>
+      <node id="5239">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/set_symmetric_difference.hpp</label>
+        <link refid="set__symmetric__difference_8hpp"/>
+        <childnode refid="5190" relation="include">
+        </childnode>
+      </node>
+      <node id="5197">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/fill.hpp</label>
+        <link refid="algorithms_2fill_8hpp"/>
+        <childnode refid="5190" relation="include">
+        </childnode>
+        <childnode refid="5198" relation="include">
+        </childnode>
+      </node>
+      <node id="5220">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/remove.hpp</label>
+        <link refid="container__algorithms_2remove_8hpp"/>
+        <childnode refid="5191" relation="include">
+        </childnode>
+      </node>
+      <node id="5226">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/all_any_none.hpp</label>
+        <link refid="algorithms_2all__any__none_8hpp"/>
+        <childnode refid="5190" relation="include">
+        </childnode>
+        <childnode refid="5227" relation="include">
+        </childnode>
+      </node>
+      <node id="5216">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/count.hpp</label>
+        <link refid="algorithms_2count_8hpp"/>
+        <childnode refid="5190" relation="include">
+        </childnode>
+        <childnode refid="5217" relation="include">
+        </childnode>
+      </node>
+      <node id="5235">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/find.hpp</label>
+        <link refid="algorithms_2find_8hpp"/>
+        <childnode refid="5190" relation="include">
+        </childnode>
+        <childnode refid="5221" relation="include">
+        </childnode>
+      </node>
+      <node id="5240">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/set_difference.hpp</label>
+        <link refid="set__difference_8hpp"/>
+        <childnode refid="5190" relation="include">
+        </childnode>
+      </node>
+      <node id="5210">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/minmax.hpp</label>
+        <link refid="algorithms_2minmax_8hpp"/>
+        <childnode refid="5190" relation="include">
+        </childnode>
+        <childnode refid="5211" relation="include">
+        </childnode>
+      </node>
+      <node id="5207">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/rotate.hpp</label>
+        <link refid="container__algorithms_2rotate_8hpp"/>
+        <childnode refid="5191" relation="include">
+        </childnode>
+      </node>
+      <node id="5232">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/sort.hpp</label>
+        <link refid="algorithms_2sort_8hpp_source"/>
+        <childnode refid="5190" relation="include">
+        </childnode>
+        <childnode refid="5233" relation="include">
+        </childnode>
+        <childnode refid="5199" relation="include">
+        </childnode>
+        <childnode refid="5234" relation="include">
+        </childnode>
+      </node>
+      <node id="5194">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/move.hpp</label>
+        <link refid="container__algorithms_2move_8hpp"/>
+        <childnode refid="5191" relation="include">
+        </childnode>
+      </node>
+      <node id="5199">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/reduce_by_key.hpp</label>
+        <link refid="reduce__by__key_8hpp"/>
+      </node>
+      <node id="5215">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/transform.hpp</label>
+        <link refid="container__algorithms_2transform_8hpp"/>
+        <childnode refid="5191" relation="include">
+        </childnode>
+      </node>
+      <node id="5190">
+        <label>libs/algorithms/include/hpx/parallel/algorithm.hpp</label>
+        <link refid="algorithm_8hpp_source"/>
+        <childnode refid="5191" relation="include">
+        </childnode>
+      </node>
+      <node id="5211">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/minmax.hpp</label>
+        <link refid="container__algorithms_2minmax_8hpp"/>
+        <childnode refid="5191" relation="include">
+        </childnode>
+      </node>
+      <node id="5234">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/sort_by_key.hpp</label>
+        <link refid="sort__by__key_8hpp_source"/>
+      </node>
+      <node id="5188">
+        <label>libs/algorithms/include/hpx/traits/segmented_iterator_traits.hpp</label>
+        <link refid="segmented__iterator__traits_8hpp"/>
+        <childnode refid="5189" relation="include">
+        </childnode>
+        <childnode refid="5193" relation="include">
+        </childnode>
+        <childnode refid="5195" relation="include">
+        </childnode>
+        <childnode refid="5210" relation="include">
+        </childnode>
+        <childnode refid="5212" relation="include">
+        </childnode>
+        <childnode refid="5214" relation="include">
+        </childnode>
+        <childnode refid="5216" relation="include">
+        </childnode>
+        <childnode refid="5218" relation="include">
+        </childnode>
+      </node>
+      <node id="5213">
+        <label>libs/algorithms/include/hpx/parallel/numeric.hpp</label>
+        <link refid="numeric_8hpp_source"/>
+      </node>
+      <node id="5200">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/search.hpp</label>
+        <link refid="algorithms_2search_8hpp"/>
+        <childnode refid="5190" relation="include">
+        </childnode>
+        <childnode refid="5201" relation="include">
+        </childnode>
+      </node>
+      <node id="5231">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/remove.hpp</label>
+        <link refid="algorithms_2remove_8hpp"/>
+        <childnode refid="5190" relation="include">
+        </childnode>
+        <childnode refid="5220" relation="include">
+        </childnode>
+      </node>
+      <node id="5217">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/count.hpp</label>
+        <link refid="container__algorithms_2count_8hpp"/>
+        <childnode refid="5191" relation="include">
+        </childnode>
+      </node>
+      <node id="5204">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/reverse.hpp</label>
+        <link refid="algorithms_2reverse_8hpp"/>
+        <childnode refid="5190" relation="include">
+        </childnode>
+        <childnode refid="5205" relation="include">
+        </childnode>
+        <childnode refid="5206" relation="include">
+        </childnode>
+      </node>
+      <node id="5242">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/remove_copy.hpp</label>
+        <link refid="algorithms_2remove__copy_8hpp"/>
+        <childnode refid="5190" relation="include">
+        </childnode>
+        <childnode refid="5225" relation="include">
+        </childnode>
+      </node>
+      <node id="5221">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/find.hpp</label>
+        <link refid="container__algorithms_2find_8hpp"/>
+        <childnode refid="5191" relation="include">
+        </childnode>
+      </node>
+      <node id="5230">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/is_heap.hpp</label>
+        <link refid="container__algorithms_2is__heap_8hpp"/>
+        <childnode refid="5191" relation="include">
+        </childnode>
+      </node>
+      <node id="5224">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/unique.hpp</label>
+        <link refid="container__algorithms_2unique_8hpp"/>
+        <childnode refid="5191" relation="include">
+        </childnode>
+      </node>
+      <node id="5198">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/fill.hpp</label>
+        <link refid="container__algorithms_2fill_8hpp"/>
+        <childnode refid="5191" relation="include">
+        </childnode>
+      </node>
+      <node id="5201">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/search.hpp</label>
+        <link refid="container__algorithms_2search_8hpp"/>
+        <childnode refid="5191" relation="include">
+        </childnode>
+      </node>
+      <node id="5189">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/generate.hpp</label>
+        <link refid="algorithms_2generate_8hpp"/>
+        <childnode refid="5190" relation="include">
+        </childnode>
+        <childnode refid="5192" relation="include">
+        </childnode>
+      </node>
+      <node id="5244">
+        <label>libs/algorithms/include/hpx/parallel/traits/projected_range.hpp</label>
+        <link refid="projected__range_8hpp_source"/>
+        <childnode refid="5192" relation="include">
+        </childnode>
+        <childnode refid="5227" relation="include">
+        </childnode>
+        <childnode refid="5207" relation="include">
+        </childnode>
+        <childnode refid="5219" relation="include">
+        </childnode>
+        <childnode refid="5196" relation="include">
+        </childnode>
+        <childnode refid="5201" relation="include">
+        </childnode>
+        <childnode refid="5211" relation="include">
+        </childnode>
+        <childnode refid="5215" relation="include">
+        </childnode>
+        <childnode refid="5230" relation="include">
+        </childnode>
+        <childnode refid="5220" relation="include">
+        </childnode>
+        <childnode refid="5233" relation="include">
+        </childnode>
+        <childnode refid="5221" relation="include">
+        </childnode>
+        <childnode refid="5205" relation="include">
+        </childnode>
+        <childnode refid="5217" relation="include">
+        </childnode>
+        <childnode refid="5222" relation="include">
+        </childnode>
+        <childnode refid="5223" relation="include">
+        </childnode>
+        <childnode refid="5224" relation="include">
+        </childnode>
+        <childnode refid="5209" relation="include">
+        </childnode>
+        <childnode refid="5225" relation="include">
+        </childnode>
+      </node>
+      <node id="5209">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/replace.hpp</label>
+        <link refid="container__algorithms_2replace_8hpp"/>
+        <childnode refid="5191" relation="include">
+        </childnode>
+      </node>
+      <node id="5214">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/transform.hpp</label>
+        <link refid="algorithms_2transform_8hpp"/>
+        <childnode refid="5215" relation="include">
+        </childnode>
+      </node>
+      <node id="5228">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/merge.hpp</label>
+        <link refid="algorithms_2merge_8hpp_source"/>
+        <childnode refid="5190" relation="include">
+        </childnode>
+        <childnode refid="5219" relation="include">
+        </childnode>
+      </node>
+      <node id="5223">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/copy.hpp</label>
+        <link refid="container__algorithms_2copy_8hpp"/>
+        <childnode refid="5191" relation="include">
+        </childnode>
+      </node>
+      <node id="5218">
+        <label>libs/algorithms/include/hpx/parallel/traits/projected.hpp</label>
+        <link refid="projected_8hpp_source"/>
+        <childnode refid="5219" relation="include">
+        </childnode>
+        <childnode refid="5201" relation="include">
+        </childnode>
+        <childnode refid="5211" relation="include">
+        </childnode>
+        <childnode refid="5220" relation="include">
+        </childnode>
+        <childnode refid="5221" relation="include">
+        </childnode>
+        <childnode refid="5222" relation="include">
+        </childnode>
+        <childnode refid="5223" relation="include">
+        </childnode>
+        <childnode refid="5224" relation="include">
+        </childnode>
+        <childnode refid="5225" relation="include">
+        </childnode>
+        <childnode refid="5226" relation="include">
+        </childnode>
+        <childnode refid="5228" relation="include">
+        </childnode>
+        <childnode refid="5195" relation="include">
+        </childnode>
+        <childnode refid="5210" relation="include">
+        </childnode>
+        <childnode refid="5214" relation="include">
+        </childnode>
+        <childnode refid="5229" relation="include">
+        </childnode>
+        <childnode refid="5231" relation="include">
+        </childnode>
+        <childnode refid="5232" relation="include">
+        </childnode>
+        <childnode refid="5235" relation="include">
+        </childnode>
+        <childnode refid="5216" relation="include">
+        </childnode>
+        <childnode refid="5236" relation="include">
+        </childnode>
+        <childnode refid="5237" relation="include">
+        </childnode>
+        <childnode refid="5243" relation="include">
+        </childnode>
+        <childnode refid="5208" relation="include">
+        </childnode>
+        <childnode refid="5244" relation="include">
+        </childnode>
+      </node>
+      <node id="5237">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/copy.hpp</label>
+        <link refid="algorithms_2copy_8hpp"/>
+        <childnode refid="5190" relation="include">
+        </childnode>
+        <childnode refid="5223" relation="include">
+        </childnode>
+        <childnode refid="5206" relation="include">
+        </childnode>
+        <childnode refid="5238" relation="include">
+        </childnode>
+        <childnode refid="5199" relation="include">
+        </childnode>
+        <childnode refid="5239" relation="include">
+        </childnode>
+        <childnode refid="5240" relation="include">
+        </childnode>
+        <childnode refid="5204" relation="include">
+        </childnode>
+        <childnode refid="5241" relation="include">
+        </childnode>
+        <childnode refid="5242" relation="include">
+        </childnode>
+      </node>
+      <node id="5206">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/rotate.hpp</label>
+        <link refid="algorithms_2rotate_8hpp"/>
+        <childnode refid="5190" relation="include">
+        </childnode>
+        <childnode refid="5207" relation="include">
+        </childnode>
+      </node>
+      <node id="5236">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/partition.hpp</label>
+        <link refid="algorithms_2partition_8hpp_source"/>
+        <childnode refid="5190" relation="include">
+        </childnode>
+        <childnode refid="5222" relation="include">
+        </childnode>
+      </node>
+      <node id="5193">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/move.hpp</label>
+        <link refid="algorithms_2move_8hpp"/>
+        <childnode refid="5190" relation="include">
+        </childnode>
+        <childnode refid="5194" relation="include">
+        </childnode>
+      </node>
+      <node id="5208">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/replace.hpp</label>
+        <link refid="algorithms_2replace_8hpp"/>
+        <childnode refid="5190" relation="include">
+        </childnode>
+        <childnode refid="5209" relation="include">
+        </childnode>
+      </node>
+      <node id="5212">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/transform_reduce.hpp</label>
+        <link refid="transform__reduce_8hpp"/>
+        <childnode refid="5213" relation="include">
+        </childnode>
+      </node>
+      <node id="5205">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/reverse.hpp</label>
+        <link refid="container__algorithms_2reverse_8hpp"/>
+        <childnode refid="5191" relation="include">
+        </childnode>
+      </node>
+      <node id="5243">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/unique.hpp</label>
+        <link refid="algorithms_2unique_8hpp_source"/>
+        <childnode refid="5190" relation="include">
+        </childnode>
+        <childnode refid="5224" relation="include">
+        </childnode>
+      </node>
+      <node id="5241">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/set_intersection.hpp</label>
+        <link refid="set__intersection_8hpp"/>
+        <childnode refid="5190" relation="include">
+        </childnode>
+      </node>
+      <node id="5196">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/for_each.hpp</label>
+        <link refid="container__algorithms_2for__each_8hpp"/>
+        <childnode refid="5191" relation="include">
+        </childnode>
+      </node>
+      <node id="5233">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/sort.hpp</label>
+        <link refid="container__algorithms_2sort_8hpp"/>
+        <childnode refid="5191" relation="include">
+        </childnode>
+      </node>
+      <node id="5195">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/for_each.hpp</label>
+        <link refid="algorithms_2for__each_8hpp"/>
+        <childnode refid="5190" relation="include">
+        </childnode>
+        <childnode refid="5196" relation="include">
+        </childnode>
+        <childnode refid="5189" relation="include">
+        </childnode>
+        <childnode refid="5197" relation="include">
+        </childnode>
+        <childnode refid="5199" relation="include">
+        </childnode>
+        <childnode refid="5200" relation="include">
+        </childnode>
+        <childnode refid="5202" relation="include">
+        </childnode>
+        <childnode refid="5203" relation="include">
+        </childnode>
+        <childnode refid="5204" relation="include">
+        </childnode>
+        <childnode refid="5208" relation="include">
+        </childnode>
+      </node>
+      <node id="5192">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/generate.hpp</label>
+        <link refid="container__algorithms_2generate_8hpp"/>
+        <childnode refid="5191" relation="include">
+        </childnode>
+      </node>
+      <node id="5191">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms.hpp</label>
+        <link refid="container__algorithms_8hpp_source"/>
+      </node>
+      <node id="5203">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/swap_ranges.hpp</label>
+        <link refid="swap__ranges_8hpp"/>
+        <childnode refid="5190" relation="include">
+        </childnode>
+      </node>
+      <node id="5219">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/merge.hpp</label>
+        <link refid="container__algorithms_2merge_8hpp"/>
+        <childnode refid="5191" relation="include">
+        </childnode>
+      </node>
+      <node id="5227">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/all_any_none.hpp</label>
+        <link refid="container__algorithms_2all__any__none_8hpp"/>
+        <childnode refid="5191" relation="include">
+        </childnode>
+      </node>
+      <node id="5225">
+        <label>libs/algorithms/include/hpx/parallel/container_algorithms/remove_copy.hpp</label>
+        <link refid="container__algorithms_2remove__copy_8hpp"/>
+        <childnode refid="5191" relation="include">
+        </childnode>
+      </node>
+      <node id="5238">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/set_union.hpp</label>
+        <link refid="set__union_8hpp"/>
+        <childnode refid="5190" relation="include">
+        </childnode>
+      </node>
+      <node id="5229">
+        <label>libs/algorithms/include/hpx/parallel/algorithms/is_heap.hpp</label>
+        <link refid="algorithms_2is__heap_8hpp_source"/>
+        <childnode refid="5190" relation="include">
+        </childnode>
+        <childnode refid="5230" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structhpx_1_1traits_1_1segmented__iterator__traits" prot="public">hpx::traits::segmented_iterator_traits</innerclass>
+    <innerclass refid="structhpx_1_1traits_1_1is__segmented__iterator" prot="public">hpx::traits::is_segmented_iterator</innerclass>
+    <innerclass refid="structhpx_1_1traits_1_1segmented__local__iterator__traits" prot="public">hpx::traits::segmented_local_iterator_traits</innerclass>
+    <innerclass refid="structhpx_1_1traits_1_1is__segmented__local__iterator" prot="public">hpx::traits::is_segmented_local_iterator</innerclass>
+    <innernamespace refid="namespacehpx">hpx</innernamespace>
+    <innernamespace refid="namespacehpx_1_1traits">hpx::traits</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/>Copyright<sp/>(c)<sp/>2007-2015<sp/>Hartmut<sp/>Kaiser</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Distributed<sp/>under<sp/>the<sp/>Boost<sp/>Software<sp/>License,<sp/>Version<sp/>1.0.<sp/>(See<sp/>accompanying</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>file<sp/>LICENSE_1_0.txt<sp/>or<sp/>copy<sp/>at<sp/>http://www.boost.org/LICENSE_1_0.txt)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(HPX_SEGMENTED_ITERATOR_TRAITS_OCT_14_2014_0229PM)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HPX_SEGMENTED_ITERATOR_TRAITS_OCT_14_2014_0229PM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/config.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/iterator_support/is_iterator.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hpx/type_support/decay.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;type_traits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehpx" kindref="compound">hpx</ref><sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">traits</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Iterator,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Enable<sp/>=<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="20" refid="structhpx_1_1traits_1_1segmented__iterator__traits" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhpx_1_1traits_1_1segmented__iterator__traits" kindref="compound">segmented_iterator_traits</ref></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::false_type<sp/>is_segmented_iterator;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Iterator,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Enable&gt;</highlight></codeline>
+<codeline lineno="26" refid="structhpx_1_1traits_1_1is__segmented__iterator" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhpx_1_1traits_1_1is__segmented__iterator" kindref="compound">is_segmented_iterator</ref></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="structhpx_1_1traits_1_1segmented__iterator__traits" kindref="compound">segmented_iterator_traits</ref>&lt;Iterator&gt;<ref refid="structhpx_1_1traits_1_1is__segmented__iterator" kindref="compound">::is_segmented_iterator</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>traits<sp/>allowing<sp/>to<sp/>distinguish<sp/>iterators<sp/>which<sp/>have<sp/>a<sp/>purely<sp/>local</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>representation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Iterator,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Enable<sp/>=<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="34" refid="structhpx_1_1traits_1_1segmented__local__iterator__traits" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhpx_1_1traits_1_1segmented__local__iterator__traits" kindref="compound">segmented_local_iterator_traits</ref></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::false_type<sp/>is_segmented_local_iterator;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>Iterator<sp/>iterator;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>Iterator<sp/>local_iterator;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>Iterator<sp/>local_raw_iterator;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>local_raw_iterator<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>local(local_iterator<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>it)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>it;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>local_iterator<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>remote(local_raw_iterator<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>it)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>it;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>local_raw_iterator<sp/>local(local_iterator&amp;&amp;<sp/>it)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::move(it);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>local_iterator<sp/>remote(local_raw_iterator&amp;&amp;<sp/>it)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::move(it);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Iterator,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Enable&gt;</highlight></codeline>
+<codeline lineno="65" refid="structhpx_1_1traits_1_1is__segmented__local__iterator" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhpx_1_1traits_1_1is__segmented__local__iterator" kindref="compound">is_segmented_local_iterator</ref></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="structhpx_1_1traits_1_1segmented__local__iterator__traits" kindref="compound">segmented_local_iterator_traits</ref>&lt;Iterator&gt;<ref refid="structhpx_1_1traits_1_1is__segmented__local__iterator" kindref="compound">::is_segmented_local_iterator</ref></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>{};</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="libs/algorithms/include/hpx/traits/segmented_iterator_traits.hpp"/>
+  </compounddef>
+</doxygen>

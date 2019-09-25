@@ -1,0 +1,345 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classhpx_1_1util_1_1function__ref_3_01_r_07_ts_8_8_8_08_4" kind="class" language="C++" prot="public">
+    <compoundname>hpx::util::function_ref&lt; R(Ts...)&gt;</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename R</type>
+      </param>
+      <param>
+        <type>typename...</type>
+        <declname>Ts</declname>
+        <defname>Ts</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classhpx_1_1util_1_1function__ref_3_01_r_07_ts_8_8_8_08_4_1afd314668235ac220ff441febba0d969e" prot="private" static="no">
+        <type>detail::function_ref_vtable&lt; R(Ts...)&gt;</type>
+        <definition>using hpx::util::function_ref&lt; R(Ts...)&gt;::VTable =  detail::function_ref_vtable&lt;R(Ts...)&gt;</definition>
+        <argsstring></argsstring>
+        <name>VTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/functional/include/hpx/functional/function_ref.hpp" line="69" column="1" bodyfile="libs/functional/include/hpx/functional/function_ref.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classhpx_1_1util_1_1function__ref_3_01_r_07_ts_8_8_8_08_4_1a6892525e3060df3e502c8926f5ced892" prot="protected" static="no" mutable="no">
+        <type>R(*</type>
+        <definition>R(* hpx::util::function_ref&lt; R(Ts...)&gt;::vptr) (void *, Ts &amp;&amp;...)</definition>
+        <argsstring>)(void *, Ts &amp;&amp;...)</argsstring>
+        <name>vptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/functional/include/hpx/functional/function_ref.hpp" line="197" column="1" bodyfile="libs/functional/include/hpx/functional/function_ref.hpp" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhpx_1_1util_1_1function__ref_3_01_r_07_ts_8_8_8_08_4_1a4566a325c923c85f171606050b728212" prot="protected" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* hpx::util::function_ref&lt; R(Ts...)&gt;::object</definition>
+        <argsstring></argsstring>
+        <name>object</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/functional/include/hpx/functional/function_ref.hpp" line="199" column="1" bodyfile="libs/functional/include/hpx/functional/function_ref.hpp" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhpx_1_1util_1_1function__ref_3_01_r_07_ts_8_8_8_08_4_1ae2b10bdc26b19d27c8a0a91a78ed0102" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename FD</type>
+            <defval>typename std::decay&lt;F&gt;::type</defval>
+          </param>
+          <param>
+            <type>typename Enable</type>
+            <defval>typename std::enable_if&lt;                !std::is_same&lt;FD, <ref refid="classhpx_1_1util_1_1function__ref" kindref="compound">function_ref</ref>&gt;::value &amp;&amp;                <ref refid="structhpx_1_1traits_1_1is__invocable__r" kindref="compound">traits::is_invocable_r</ref>&lt;R, F&amp;, Ts...&gt;::value&gt;::type</defval>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>hpx::util::function_ref&lt; R(Ts...)&gt;::function_ref</definition>
+        <argsstring>(F &amp;&amp;f)</argsstring>
+        <name>function_ref</name>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/functional/include/hpx/functional/function_ref.hpp" line="76" column="1" bodyfile="libs/functional/include/hpx/functional/function_ref.hpp" bodystart="76" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1function__ref_3_01_r_07_ts_8_8_8_08_4_1ae6a0e6725232b1ec6454a37097ba2717" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::util::function_ref&lt; R(Ts...)&gt;::function_ref</definition>
+        <argsstring>(function_ref const &amp;other) noexcept</argsstring>
+        <name>function_ref</name>
+        <param>
+          <type><ref refid="classhpx_1_1util_1_1function__ref" kindref="compound">function_ref</ref> const &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/functional/include/hpx/functional/function_ref.hpp" line="82" column="1" bodyfile="libs/functional/include/hpx/functional/function_ref.hpp" bodystart="82" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1function__ref_3_01_r_07_ts_8_8_8_08_4_1a43102ec94d2818bf09e914b6e3a05458" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename FD</type>
+            <defval>typename std::decay&lt;F&gt;::type</defval>
+          </param>
+          <param>
+            <type>typename Enable</type>
+            <defval>typename std::enable_if&lt;                !std::is_same&lt;FD, <ref refid="classhpx_1_1util_1_1function__ref" kindref="compound">function_ref</ref>&gt;::value &amp;&amp;                <ref refid="structhpx_1_1traits_1_1is__invocable__r" kindref="compound">traits::is_invocable_r</ref>&lt;R, F&amp;, Ts...&gt;::value&gt;::type</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classhpx_1_1util_1_1function__ref" kindref="compound">function_ref</ref> &amp;</type>
+        <definition>function_ref&amp; hpx::util::function_ref&lt; R(Ts...)&gt;::operator=</definition>
+        <argsstring>(F &amp;&amp;f)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/functional/include/hpx/functional/function_ref.hpp" line="92" column="1" bodyfile="libs/functional/include/hpx/functional/function_ref.hpp" bodystart="92" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1function__ref_3_01_r_07_ts_8_8_8_08_4_1a945b43e5a7454061281a1a50cf0ce9f3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classhpx_1_1util_1_1function__ref" kindref="compound">function_ref</ref> &amp;</type>
+        <definition>function_ref&amp; hpx::util::function_ref&lt; R(Ts...)&gt;::operator=</definition>
+        <argsstring>(function_ref const &amp;other) noexcept</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classhpx_1_1util_1_1function__ref" kindref="compound">function_ref</ref> const &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/functional/include/hpx/functional/function_ref.hpp" line="98" column="1" bodyfile="libs/functional/include/hpx/functional/function_ref.hpp" bodystart="98" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1function__ref_3_01_r_07_ts_8_8_8_08_4_1a12dabed5b5853bed7c321ef8bca77396" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename T</type>
+            <defval>typename std::remove_reference&lt;F&gt;::type</defval>
+          </param>
+          <param>
+            <type>typename Enable</type>
+            <defval>typename std::enable_if&lt;!std::is_pointer&lt;T&gt;::value&gt;::type</defval>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void hpx::util::function_ref&lt; R(Ts...)&gt;::assign</definition>
+        <argsstring>(F &amp;&amp;f)</argsstring>
+        <name>assign</name>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/functional/include/hpx/functional/function_ref.hpp" line="109" column="1" bodyfile="libs/functional/include/hpx/functional/function_ref.hpp" bodystart="109" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1function__ref_3_01_r_07_ts_8_8_8_08_4_1a068bcac30977bc29c475b3ab230e23b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void hpx::util::function_ref&lt; R(Ts...)&gt;::assign</definition>
+        <argsstring>(std::reference_wrapper&lt; T &gt; f_ref) noexcept</argsstring>
+        <name>assign</name>
+        <param>
+          <type>std::reference_wrapper&lt; T &gt;</type>
+          <declname>f_ref</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/functional/include/hpx/functional/function_ref.hpp" line="121" column="1" bodyfile="libs/functional/include/hpx/functional/function_ref.hpp" bodystart="121" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1function__ref_3_01_r_07_ts_8_8_8_08_4_1acba78dfd3973af726bf7f809b080452d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void hpx::util::function_ref&lt; R(Ts...)&gt;::assign</definition>
+        <argsstring>(T *f_ptr) noexcept</argsstring>
+        <name>assign</name>
+        <param>
+          <type>T *</type>
+          <declname>f_ptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/functional/include/hpx/functional/function_ref.hpp" line="132" column="1" bodyfile="libs/functional/include/hpx/functional/function_ref.hpp" bodystart="132" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1function__ref_3_01_r_07_ts_8_8_8_08_4_1a7371f899f2964936ee120dded6577430" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpx::util::function_ref&lt; R(Ts...)&gt;::swap</definition>
+        <argsstring>(function_ref &amp;f) noexcept</argsstring>
+        <name>swap</name>
+        <param>
+          <type><ref refid="classhpx_1_1util_1_1function__ref" kindref="compound">function_ref</ref> &amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/functional/include/hpx/functional/function_ref.hpp" line="143" column="1" bodyfile="libs/functional/include/hpx/functional/function_ref.hpp" bodystart="143" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1function__ref_3_01_r_07_ts_8_8_8_08_4_1a12d62c02aeb7959f9f463ff0b9a3a48c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>R</type>
+        <definition>R hpx::util::function_ref&lt; R(Ts...)&gt;::operator()</definition>
+        <argsstring>(Ts... vs) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>Ts...</type>
+          <declname>vs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/functional/include/hpx/functional/function_ref.hpp" line="149" column="1" bodyfile="libs/functional/include/hpx/functional/function_ref.hpp" bodystart="149" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1function__ref_3_01_r_07_ts_8_8_8_08_4_1ac04234f8b0e7d258997a8c44a9c792d7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t hpx::util::function_ref&lt; R(Ts...)&gt;::get_function_address</definition>
+        <argsstring>() const</argsstring>
+        <name>get_function_address</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/functional/include/hpx/functional/function_ref.hpp" line="158" column="1" bodyfile="libs/functional/include/hpx/functional/function_ref.hpp" bodystart="158" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1function__ref_3_01_r_07_ts_8_8_8_08_4_1a92835cc7cd59506e79cc66c6f50b4400" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>char const  *</type>
+        <definition>char const* hpx::util::function_ref&lt; R(Ts...)&gt;::get_function_annotation</definition>
+        <argsstring>() const</argsstring>
+        <name>get_function_annotation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/functional/include/hpx/functional/function_ref.hpp" line="167" column="1" bodyfile="libs/functional/include/hpx/functional/function_ref.hpp" bodystart="167" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1util_1_1function__ref_3_01_r_07_ts_8_8_8_08_4_1a01282130c0b2827d555e6f293f9dabcd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>util::itt::string_handle</type>
+        <definition>util::itt::string_handle hpx::util::function_ref&lt; R(Ts...)&gt;::get_function_annotation_itt</definition>
+        <argsstring>() const</argsstring>
+        <name>get_function_annotation_itt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/functional/include/hpx/functional/function_ref.hpp" line="176" column="1" bodyfile="libs/functional/include/hpx/functional/function_ref.hpp" bodystart="176" bodyend="184"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classhpx_1_1util_1_1function__ref_3_01_r_07_ts_8_8_8_08_4_1aeb2d53f6d081fdcc3748d8e3fe06e69c" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>VTable const  *</type>
+        <definition>static VTable const* hpx::util::function_ref&lt; R(Ts...)&gt;::get_vtable</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>get_vtable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/functional/include/hpx/functional/function_ref.hpp" line="188" column="1" bodyfile="libs/functional/include/hpx/functional/function_ref.hpp" bodystart="188" bodyend="191"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libs/functional/include/hpx/functional/function_ref.hpp" line="68" column="1" bodyfile="libs/functional/include/hpx/functional/function_ref.hpp" bodystart="67" bodyend="200"/>
+    <listofallmembers>
+      <member refid="classhpx_1_1util_1_1function__ref_3_01_r_07_ts_8_8_8_08_4_1a12dabed5b5853bed7c321ef8bca77396" prot="public" virt="non-virtual"><scope>hpx::util::function_ref&lt; R(Ts...)&gt;</scope><name>assign</name></member>
+      <member refid="classhpx_1_1util_1_1function__ref_3_01_r_07_ts_8_8_8_08_4_1a068bcac30977bc29c475b3ab230e23b1" prot="public" virt="non-virtual"><scope>hpx::util::function_ref&lt; R(Ts...)&gt;</scope><name>assign</name></member>
+      <member refid="classhpx_1_1util_1_1function__ref_3_01_r_07_ts_8_8_8_08_4_1acba78dfd3973af726bf7f809b080452d" prot="public" virt="non-virtual"><scope>hpx::util::function_ref&lt; R(Ts...)&gt;</scope><name>assign</name></member>
+      <member refid="classhpx_1_1util_1_1function__ref_3_01_r_07_ts_8_8_8_08_4_1ae2b10bdc26b19d27c8a0a91a78ed0102" prot="public" virt="non-virtual"><scope>hpx::util::function_ref&lt; R(Ts...)&gt;</scope><name>function_ref</name></member>
+      <member refid="classhpx_1_1util_1_1function__ref_3_01_r_07_ts_8_8_8_08_4_1ae6a0e6725232b1ec6454a37097ba2717" prot="public" virt="non-virtual"><scope>hpx::util::function_ref&lt; R(Ts...)&gt;</scope><name>function_ref</name></member>
+      <member refid="classhpx_1_1util_1_1function__ref_3_01_r_07_ts_8_8_8_08_4_1ac04234f8b0e7d258997a8c44a9c792d7" prot="public" virt="non-virtual"><scope>hpx::util::function_ref&lt; R(Ts...)&gt;</scope><name>get_function_address</name></member>
+      <member refid="classhpx_1_1util_1_1function__ref_3_01_r_07_ts_8_8_8_08_4_1a92835cc7cd59506e79cc66c6f50b4400" prot="public" virt="non-virtual"><scope>hpx::util::function_ref&lt; R(Ts...)&gt;</scope><name>get_function_annotation</name></member>
+      <member refid="classhpx_1_1util_1_1function__ref_3_01_r_07_ts_8_8_8_08_4_1a01282130c0b2827d555e6f293f9dabcd" prot="public" virt="non-virtual"><scope>hpx::util::function_ref&lt; R(Ts...)&gt;</scope><name>get_function_annotation_itt</name></member>
+      <member refid="classhpx_1_1util_1_1function__ref_3_01_r_07_ts_8_8_8_08_4_1aeb2d53f6d081fdcc3748d8e3fe06e69c" prot="private" virt="non-virtual"><scope>hpx::util::function_ref&lt; R(Ts...)&gt;</scope><name>get_vtable</name></member>
+      <member refid="classhpx_1_1util_1_1function__ref_3_01_r_07_ts_8_8_8_08_4_1a4566a325c923c85f171606050b728212" prot="protected" virt="non-virtual"><scope>hpx::util::function_ref&lt; R(Ts...)&gt;</scope><name>object</name></member>
+      <member refid="classhpx_1_1util_1_1function__ref_3_01_r_07_ts_8_8_8_08_4_1a12d62c02aeb7959f9f463ff0b9a3a48c" prot="public" virt="non-virtual"><scope>hpx::util::function_ref&lt; R(Ts...)&gt;</scope><name>operator()</name></member>
+      <member refid="classhpx_1_1util_1_1function__ref_3_01_r_07_ts_8_8_8_08_4_1a43102ec94d2818bf09e914b6e3a05458" prot="public" virt="non-virtual"><scope>hpx::util::function_ref&lt; R(Ts...)&gt;</scope><name>operator=</name></member>
+      <member refid="classhpx_1_1util_1_1function__ref_3_01_r_07_ts_8_8_8_08_4_1a945b43e5a7454061281a1a50cf0ce9f3" prot="public" virt="non-virtual"><scope>hpx::util::function_ref&lt; R(Ts...)&gt;</scope><name>operator=</name></member>
+      <member refid="classhpx_1_1util_1_1function__ref_3_01_r_07_ts_8_8_8_08_4_1a7371f899f2964936ee120dded6577430" prot="public" virt="non-virtual"><scope>hpx::util::function_ref&lt; R(Ts...)&gt;</scope><name>swap</name></member>
+      <member refid="classhpx_1_1util_1_1function__ref_3_01_r_07_ts_8_8_8_08_4_1a6892525e3060df3e502c8926f5ced892" prot="protected" virt="non-virtual"><scope>hpx::util::function_ref&lt; R(Ts...)&gt;</scope><name>vptr</name></member>
+      <member refid="classhpx_1_1util_1_1function__ref_3_01_r_07_ts_8_8_8_08_4_1afd314668235ac220ff441febba0d969e" prot="private" virt="non-virtual"><scope>hpx::util::function_ref&lt; R(Ts...)&gt;</scope><name>VTable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

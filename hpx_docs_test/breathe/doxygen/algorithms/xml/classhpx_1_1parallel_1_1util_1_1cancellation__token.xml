@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classhpx_1_1parallel_1_1util_1_1cancellation__token" kind="class" language="C++" prot="public">
+    <compoundname>hpx::parallel::util::cancellation_token</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>T</declname>
+        <defname>T</defname>
+        <defval>detail::no_data</defval>
+      </param>
+      <param>
+        <type>typename</type>
+        <declname>Pred</declname>
+        <defname>Pred</defname>
+        <defval>std::less_equal&lt;T&gt;</defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classhpx_1_1parallel_1_1util_1_1cancellation__token_1a7b2d76d85f59f06834b84899593d973d" prot="private" static="no">
+        <type>std::atomic&lt; T &gt;</type>
+        <definition>typedef std::atomic&lt;T&gt; hpx::parallel::util::cancellation_token&lt; T, Pred &gt;::flag_type</definition>
+        <argsstring></argsstring>
+        <name>flag_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/util/cancellation_token.hpp" line="32" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/cancellation_token.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classhpx_1_1parallel_1_1util_1_1cancellation__token_1a04d80c8ce540692e636217a6aad78228" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; flag_type &gt;</type>
+        <definition>std::shared_ptr&lt;flag_type&gt; hpx::parallel::util::cancellation_token&lt; T, Pred &gt;::was_cancelled_</definition>
+        <argsstring></argsstring>
+        <name>was_cancelled_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/util/cancellation_token.hpp" line="33" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/cancellation_token.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhpx_1_1parallel_1_1util_1_1cancellation__token_1a5be3aa31eda38adad07dc94621266a94" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>hpx::parallel::util::cancellation_token&lt; T, Pred &gt;::cancellation_token</definition>
+        <argsstring>(T data)</argsstring>
+        <name>cancellation_token</name>
+        <param>
+          <type>T</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/util/cancellation_token.hpp" line="36" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/cancellation_token.hpp" bodystart="36" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1parallel_1_1util_1_1cancellation__token_1af8f983a164f838f10d5a6f9b795fd266" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hpx::parallel::util::cancellation_token&lt; T, Pred &gt;::was_cancelled</definition>
+        <argsstring>(T data) const noexcept</argsstring>
+        <name>was_cancelled</name>
+        <param>
+          <type>T</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/util/cancellation_token.hpp" line="40" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/cancellation_token.hpp" bodystart="40" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1parallel_1_1util_1_1cancellation__token_1a7c04c9ed73eaa872cfd6b72b52922796" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hpx::parallel::util::cancellation_token&lt; T, Pred &gt;::cancel</definition>
+        <argsstring>(T data) noexcept</argsstring>
+        <name>cancel</name>
+        <param>
+          <type>T</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/util/cancellation_token.hpp" line="45" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/cancellation_token.hpp" bodystart="45" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classhpx_1_1parallel_1_1util_1_1cancellation__token_1a63ec3c9e5287d23c9e9d4ce1777e49d2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>T hpx::parallel::util::cancellation_token&lt; T, Pred &gt;::get_data</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>get_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libs/algorithms/include/hpx/parallel/util/cancellation_token.hpp" line="57" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/cancellation_token.hpp" bodystart="57" bodyend="60"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libs/algorithms/include/hpx/parallel/util/cancellation_token.hpp" line="30" column="1" bodyfile="libs/algorithms/include/hpx/parallel/util/cancellation_token.hpp" bodystart="29" bodyend="61"/>
+    <listofallmembers>
+      <member refid="classhpx_1_1parallel_1_1util_1_1cancellation__token_1a7c04c9ed73eaa872cfd6b72b52922796" prot="public" virt="non-virtual"><scope>hpx::parallel::util::cancellation_token</scope><name>cancel</name></member>
+      <member refid="classhpx_1_1parallel_1_1util_1_1cancellation__token_1a5be3aa31eda38adad07dc94621266a94" prot="public" virt="non-virtual"><scope>hpx::parallel::util::cancellation_token</scope><name>cancellation_token</name></member>
+      <member refid="classhpx_1_1parallel_1_1util_1_1cancellation__token_1a7b2d76d85f59f06834b84899593d973d" prot="private" virt="non-virtual"><scope>hpx::parallel::util::cancellation_token</scope><name>flag_type</name></member>
+      <member refid="classhpx_1_1parallel_1_1util_1_1cancellation__token_1a63ec3c9e5287d23c9e9d4ce1777e49d2" prot="public" virt="non-virtual"><scope>hpx::parallel::util::cancellation_token</scope><name>get_data</name></member>
+      <member refid="classhpx_1_1parallel_1_1util_1_1cancellation__token_1af8f983a164f838f10d5a6f9b795fd266" prot="public" virt="non-virtual"><scope>hpx::parallel::util::cancellation_token</scope><name>was_cancelled</name></member>
+      <member refid="classhpx_1_1parallel_1_1util_1_1cancellation__token_1a04d80c8ce540692e636217a6aad78228" prot="private" virt="non-virtual"><scope>hpx::parallel::util::cancellation_token</scope><name>was_cancelled_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
